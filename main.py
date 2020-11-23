@@ -5,16 +5,16 @@ import os
 import json
 
 def main():
-    RuoffCrawler("http://muhlenberg.edu/")
-
+    #RuoffCrawler("http://muhlenberg.edu/")
+    getInvertedIndex()
 
 def getInvertedIndex():
     invertedIndex = {}
     i = 1
-    for files in os.listdir(os.path.join("..","Final Project", "sites")):
+    for files in os.listdir(os.path.join("..","Bergle", "sites")):
         words = cleaner.cleanFile(files)
         #For each word in the text file
-        
+        print(i)
         wordCount = {}
         for w in words:
             if w not in wordCount.keys():
