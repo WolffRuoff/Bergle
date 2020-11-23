@@ -1,0 +1,908 @@
+http://sportsinfo.blogs.muhlenberg.edu/category/football/page/5/
+104
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+football | Sports Information Blog | Page 5	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; football Category Feed" href="http://sportsinfo.blogs.muhlenberg.edu/category/football/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=DF6E8CE8AF6381346B74C9EDFABCB7AC');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive paged category category-football category-7842 admin-bar no-customize-support wp-embed-responsive paged-5 category-paged-5 single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<section id="primary">
+			<div id="content" role="main">
+
+			
+				<header class="page-header">
+					<h1 class="page-title">
+					Category Archives: <span>football</span>					</h1>
+
+									</header>
+
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/page/6/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/page/4/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-1767" class="post-1767 post type-post status-publish format-standard hentry category-field-hockey category-football category-soccer">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/05/29/the-year-in-senior-profiles-part-1/" rel="bookmark">The Year in &#8230; Senior Profiles, Part 1</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/05/29/the-year-in-senior-profiles-part-1/" title="1:33 pm" rel="bookmark"><time class="entry-date" datetime="2013-05-29T13:33:57-04:00">May 29, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Profiles of senior Muhlenberg athletes are published in game programs in the sports of field hockey, football, soccer, volleyball, basketball, wrestling, baseball, softball, lacrosse and tennis, usually on that sport&#8217;s Senior Day.</em></p>
+<p><em>As part of the Year in Review, here are some of the best responses in the Q&amp;A profiles from the fall athletes. Tomorrow: winter and spring athletes.</em></p>
+<p><strong>Chris Galletta, Football</strong></p>
+<p><strong>How did you get started playing football and what’s your first memory of playing? </strong>I began playing football when I was in third grade, and my earliest memory was when I got called for a holding penalty during a game and began crying.</p>
+<p><strong>Ryan Murphy, Football</strong></p>
+<p><strong>What’s it like being teammates with Chris Galletta? </strong>It’s been interesting to say the least. He’s the only person I know who, within five minutes of meeting him, will ask if you want him to help you with your resume. He stands by all of his opinions 100%, and it is impossible to even try to win an argument with him. But in all seriousness, he is very smart and will be very successful after the season. I wish him the very best.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/bisbing_yir.jpg"><img class="alignright size-full wp-image-1771" title="Garrett Bisbing" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/bisbing_yir.jpg" alt="" width="300" height="386" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/bisbing_yir.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/bisbing_yir-233x300.jpg 233w" sizes="(max-width: 300px) 100vw, 300px" /></a>Garrett Bisbing, Football</strong></p>
+<p><strong>Your dad played as a lineman for Muhlenberg. Did you always want to follow in his footsteps? </strong>My dad was an all-conference player for the Mules and was a part of a Centennial Conference championship himself. I grew up coming to Muhlenberg on Saturdays for football games. I never really thought about coming here until my senior year. It’s nice to be able to say that we both were a part of championship teams at the same school.</p>
+<p><strong>Tim Vogel, Football</strong></p>
+<p><strong>Who has had the biggest influence on you throughout your life? </strong>My grandparents have easily been my biggest influence throughout my life. My grandparents came over from Ireland to create a new and better life for their family. This taught me that if you have a dream and work as hard as you can to achieve that dream, anything is possible. </p>
+<p><strong>Dan Deighan, Football</strong></p>
+<p><strong>What’s one thing on your bucket list? </strong>I want to learn how to play guitar. Ryan Murphy tells me he taught Carlos Santana everything he knows, so I’m looking forward to taking lessons from him.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/wilson_yir.jpg"><img class="alignright size-full wp-image-1772" title="Bryan Wilson" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/wilson_yir.jpg" alt="" width="261" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/wilson_yir.jpg 261w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/wilson_yir-223x300.jpg 223w" sizes="(max-width: 261px) 100vw, 261px" /></a>Bryan Wilson, Football</strong></p>
+<p><strong>Do you have anything embarrassing on your iPod? </strong>I have to admit that I mix it up sometimes and have Justin Bieber on my iPod. Many people would consider this embarrassing, but I am a full-fledged Belieber.</p>
+<p><strong>Shane O&#8217;Connor, Football</strong></p>
+<p><strong>What’s the most memorable game you’ve played in during your Muhlenberg career? </strong>Beating Gettysburg in overtime during my sophomore year as well as clinching the conference championship against Ursinus at home were great games to be a part of. However, I would have to say the Franklin &amp; Marshall game this year for Duke’s 100<sup>th</sup> win was the most memorable. He is an amazing coach and experiencing that with him is something I will remember forever.</p>
+<p><strong>John Merklinger, Football</strong></p>
+<p><strong>What’s it like being teammates with Shane O’Connor? </strong>“Shane-O” is more than just a teammate to me. He is more like a brother – someone who I can always count on. Shane is one of the most talented ball players I’ve ever played with or seen. He was a quarterback in high school and had never played defense, but his transition to safety really shows how gifted he is. Since making the move to the dark side, he’s become one of the best defensive backs in the Centennial Conference. He also saves lives during the summer down at the Jersey Shore as a lifeguard. He puts David Hasselhoff to shame with his killer good looks and “Dude, I’m such a beach bro,” attitude.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/dornenburg_yir.jpg"><img class="alignright size-full wp-image-1769" title="Kristen Dornenburg" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/dornenburg_yir.jpg" alt="" width="294" height="385" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/dornenburg_yir.jpg 294w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/dornenburg_yir-229x300.jpg 229w" sizes="(max-width: 294px) 100vw, 294px" /></a>Kristen Dornenburg, Field Hockey</strong></p>
+<p><strong>How did you get started playing field hockey and what’s your first memory of playing? </strong>I started playing in fourth grade because my sister played and obviously I wanted to be just like her. I don’t know if this is my first memory, but one of my earlier ones is losing to one of our elementary school rivals, Chatham Park, and vowing never to play goalie again to my coach and parents. Obviously, I took that vow very seriously.</p>
+<p><strong>Nate Squire, Men&#8217;s Soccer</strong></p>
+<p><strong>Tell us about your internship with Lehigh Valley Animal Hospital. </strong>Coach Topping got me in touch with Dr. Ervin, the Moravian soccer coach’s wife, and I’ve been shadowing at Lehigh Valley Animal Hospital ever since. It’s been a great experience – I’m not only getting to learn a lot but I’m also enjoying it immensely. As I’m writing this, I’m about to head in to see Topper’s dog get neutered &#8230; a little revenge for those preseason fitness workouts!</p>
+<p><strong>Kyle Plifka, Men&#8217;s Soccer</strong></p>
+<p><strong>What’s one possession you couldn’t live without? </strong>Jon Majoros.<strong></strong></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/moretto_yir.jpg"><img class="alignright size-full wp-image-1770" title="Jillian Moretto" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/moretto_yir.jpg" alt="" width="297" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/moretto_yir.jpg 297w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/moretto_yir-254x300.jpg 254w" sizes="(max-width: 297px) 100vw, 297px" /></a>Jillian Moretto, Women&#8217;s Soccer</strong></p>
+<p><strong>How did you get started playing soccer and what’s your first memory of playing? </strong>Kicking balls at my older brother was always a hobby of mine, so when I discovered it was an actual sport, I was all for it. One of my earliest memories of playing is running around aimlessly on the field in a recreational league, where the thrill of scoring a goal and orange slices during halftime were the highlight to every Saturday. </p>
+<p><strong>Alyssa Meola, Women&#8217;s Soccer</strong></p>
+<p><strong>How do you get pumped up before a game? </strong>I usually listen to music and I like to jump around a lot and sing the lyrics during warmups.  When I’m on the bus listening to my iPod, I always listen to Al Pacino’s speech from “Any Given Sunday” and Kenny Chesney’s song “The Boys of Fall,” which includes inspirational speeches from many different coaches. Both of these speeches remind me that being a college athlete is not only a privilege that I am lucky enough to have, but also that one day I will no longer have the opportunity to play, so I need to take advantage of what I have left.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1767 -->
+
+				
+					
+	<article id="post-1667" class="post-1667 post type-post status-publish format-standard hentry category-field-hockey category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/02/01/super-bowl-preview-2/" rel="bookmark">Super Bowl Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/02/01/super-bowl-preview-2/" title="5:00 pm" rel="bookmark"><time class="entry-date" datetime="2013-02-01T17:00:41-04:00">February 1, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/02/beiserhs.jpg"><img class="alignleft size-full wp-image-1668" title="Dani Beiser" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/02/beiserhs.jpg" alt="" width="100" height="150" /></a><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/02/dandridgehs.jpg"><img class="alignright size-full wp-image-1669" title="Terrence Dandridge" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/02/dandridgehs.jpg" alt="" width="100" height="150" /></a>For the third straight year, we asked Muhlenberg athletes with a local rooting interest to break down the Super Bowl. This year, Dani Beiser, a freshman on the field hockey team from Cupertino, Calif., takes the 49ers side, and Terrence Dandridge, a senior on the football team from Baltimore, represents the Ravens.</p>
+<p>It&#8217;s worth noting that the first two times we did this, the female athletes&#8217;s team won:</p>
+<div>2012 Giants vs. Patriots <a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/05/super-bowl-preview/">http://sportsinfo.blogs.muhlenberg.edu/2012/02/05/super-bowl-preview/</a></div>
+<div>2011 Packers vs. Steelers <a href="http://www.muhlenberg.edu/main/athletics/winter11/0204.html">http://www.muhlenberg.edu/main/athletics/winter11/0204.html</a></div>
+<div><strong></strong> </div>
+<div><strong>How far do you live from your team’s home stadium?</strong></div>
+<div>DB: About a half hour south of Candlestick Park.</div>
+<div>TD: 25 minutes.</div>
+<div> </div>
+<div><strong>How many games have you gone to?</strong></div>
+<div>DB: A few every season, tickets are hard to get.</div>
+<div>TD: 4.</div>
+<div> </div>
+<div><strong>On a scale of 1 to 10, how big of a fan are you?</strong></div>
+<div>DB: Probably an 8. Love watching and love the team but I know there are many more diehard fans.</div>
+<div>TD: 10.</div>
+<div> </div>
+<div><strong>How do you feel about Colin Kaepernick and Ray Lewis?</strong></div>
+<div>DB: Colin Kaepernick is a young new leader for the Niners and brings an element of surprise and great energy to the team. He also is talented at reading the field which makes him really hard to defend.</div>
+<div>TD: I would rather have a veteran almost-retired linebacker like Ray Lewis because he has an in-depth analysis of the game and is such a great motivator on the team to help other players perform well at the professional level.</div>
+<div> </div>
+<div><strong>Are you doing anything special for the game?</strong></div>
+<div>DB: Hanging out and watching with friends.</div>
+<div>TD: I’m having a Super Bowl party with my friends at school.</div>
+<div> </div>
+<div><strong>Who wins and what’s the score?</strong></div>
+<div>DB: Niners obviously win 28-24!</div>
+<div>TD: 24-20 Ravens win.</div>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1667 -->
+
+				
+					
+	<article id="post-1564" class="post-1564 post type-post status-publish format-standard hentry category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/12/12/from-yard-lines-to-bass-lines/" rel="bookmark">From Yard Lines to Bass Lines</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/12/12/from-yard-lines-to-bass-lines/" title="5:44 pm" rel="bookmark"><time class="entry-date" datetime="2012-12-12T17:44:16-04:00">December 12, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Whether he’s rushing a passer, tackling a running back or<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_headshot.jpg"><img class="alignright size-full wp-image-1567" title="Ryan Murphy" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_headshot.jpg" alt="" width="100" height="150" /></a> playing an instrument, rhythm and coordination are important for senior defensive end Ryan Murphy of the Muhlenberg football team.</p>
+<p>Murphy didn’t start playing for a football team until high school but he got his first instrument, a bass guitar, when he was in fourth grade. Prior to that, he had played in his school band.</p>
+<p>“Ever since I was a kid, my dad was always listening to music,” said Murphy. “My uncle also played guitar and bass. When I was little, I saw him play bass in his band and it seemed like a lot of fun so, from then on, I really wanted to do it.</p>
+<p>“Since I started on bass, that’s always what I’ll revert back to as my favorite,” explained Murphy, who also plays guitar and would like to learn how to play other instruments as soon as he has the time. “No matter what, I will always refer to myself as a bassist.”</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_picture1.jpg"><img class="alignleft size-full wp-image-1570" title="Ryan Murphy playing the bass guitar." src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_picture1.jpg" alt="" width="350" height="504" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_picture1.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_picture1-208x300.jpg 208w" sizes="(max-width: 350px) 100vw, 350px" /></a>Murphy, who says he always has his headphones on (except for on the football field of course) uses music as a stress reliever and a respite from life’s challenges.</p>
+<p>Although the double major in music and business administration came into Muhlenberg undeclared, he knew he wanted music to play a role in his higher education, whether it was through involvement in musical groups or by studying it.</p>
+<p>“I took an introduction to music class in the spring of my freshman year as a general academic requirement,” stated Murphy. “It reminded me how much I love music, so I decided to enroll in more music classes and see where they took me.</p>
+<p>“Jazz improv ensemble may have been my favorite,” added Murphy, who has taken classes ranging from bass and guitar performance to multiple levels of music theory. “I finally got a chance to get together with a group of some really talented musicians and play for fun.”</p>
+<p>He finds musical inspiration in a number of different styles from hard rock to hip-hop to jazz, but his favorite style to play is funk. He says his classes at Muhlenberg are what really opened his eyes to classical music and artists such as Beethoven and Mozart.</p>
+<p>“My classes really showed me how intricate their music was and how ahead of their time they were. I feel like, as a music major, I should be able to write something like that at some point in my life,” he laughed.</p>
+<p>He says the writing side of music <a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_action.jpg"><img class="alignright size-medium wp-image-1569" title="Murphy rushing the F&amp;M quarterback." src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_action-300x293.jpg" alt="" width="300" height="293" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_action-300x293.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_action-1024x1002.jpg 1024w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/murphy_action-306x300.jpg 306w" sizes="(max-width: 300px) 100vw, 300px" /></a>is definitely something he would like to explore. But don’t expect “Murphy’s Musical Masterpiece” to be on sale anytime soon.</p>
+<p>While he currently has all the necessary musical knowledge from his theory classes, as a student-athlete, he lacks the free time required to write a piece of music.</p>
+<p>And as for his future plans, he hopes to combine aspects of each of his two majors.</p>
+<p>“Well, if I’m not touring the world in a famous band,” he quipped, “I would like to have my own music shop where I can teach lessons and sell and rent instruments. But that is a little further down the road.”</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1564 -->
+
+				
+					
+	<article id="post-1484" class="post-1484 post type-post status-publish format-standard hentry category-cross-country category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/12/03/athletes-of-the-month-3/" rel="bookmark">Athletes of the Month</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/12/03/athletes-of-the-month-3/" title="4:45 pm" rel="bookmark"><time class="entry-date" datetime="2012-12-03T16:45:17-04:00">December 3, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Muhlenberg&#8217;s top athletes for November 2012:</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/maydenhs.jpg"><img class="alignleft size-full wp-image-53" title="Samantha Mayden" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/maydenhs.jpg" alt="" width="100" height="150" /></a>Female Athlete of the Month – Samantha Mayden, Cross Country</strong></p>
+<p>Mayden wins the award for the second time in three months after enjoying success at the highest levels in her two November races. She earned all-region honors for the third straight year by finishing seventh at the NCAA Mideast Regional, then traveled to Indiana and posted the highest finish ever by a Muhlenberg runner (67th place) at the NCAA Championships.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/vaughnhs.jpg"><img class="alignleft size-full wp-image-1485" title="Isaiah Vaughn" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/vaughnhs.jpg" alt="" width="100" height="150" /></a>Male Athlete of the Month – Isaiah Vaughn, Football</strong></p>
+<p>Vaughn closed out his football career with three big games to help the Mules finish 8-3 and earn a postseason berth. He caught 12 passes for 257 yards (a 21.4 average) and two touchdowns in the three games. Among his key receptions that didn&#8217;t go for scores, two were inside the 10, setting up TDs against Moravian, and he caught back-to-back passes for first downs on the game-tying drive against Ursinus. Vaughn also returned a kickoff 96 yards for a touchdown in the ECAC bowl game against Delaware Valley, in which he set a school record by averaging 43.6 yards per touch.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/mulebig_MB120312.jpg"><img class="aligncenter size-full wp-image-1488" title="athletes of the month" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/mulebig_MB120312.jpg" alt="" width="780" height="444" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/mulebig_MB120312.jpg 780w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/mulebig_MB120312-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/12/mulebig_MB120312-500x284.jpg 500w" sizes="(max-width: 780px) 100vw, 780px" /></a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1484 -->
+
+				
+					
+	<article id="post-1468" class="post-1468 post type-post status-publish format-standard hentry category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/11/04/a-break-in-the-storm/" rel="bookmark">A Break in the Storm</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/11/04/a-break-in-the-storm/" title="10:35 am" rel="bookmark"><time class="entry-date" datetime="2012-11-04T10:35:26-04:00">November 4, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Shane O’Connor knew it wasn’t going to be good when he saw TV weatherman Al Roker reporting from his hometown of Point Pleasant Beach, N.J.</p>
+<p>It wasn’t good, of course. The Jersey shore was pummeled by Hurricane Sandy this week, resulting in unprecedented destruction.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_732.jpg"><img class="alignright size-full wp-image-1469" title="Shane O'Connor" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_732.jpg" alt="" width="260" height="469" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_732.jpg 260w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_732-166x300.jpg 166w" sizes="(max-width: 260px) 100vw, 260px" /></a>Even though O’Connor’s house was spared significant damage, many of his friends weren’t so fortunate. And Bay Head Beach, where the senior co-captain on the Muhlenberg football team works as a lifeguard in the summer, was among the hardest hit.</p>
+<p>“It’s just sad,” said O’Connor, shaking his head in disbelief. “It’s where I grew up. It’s my childhood.”</p>
+<p>O’Connor got a welcome respite from the horrible news from home yesterday when he helped the Mules beat Ursinus, 24-17, on Senior Day at Scotty Wood Stadium. He said it was like a “sigh of relief” at the end of a harrowing week.</p>
+<p>“Concentrating on football and schoolwork were tough,” he said. “I was calling friends here and there, seeing whose house got damaged. I knew how bad it was, but I didn’t know who it affected.”</p>
+<p>Getting even that information proved to be challenging and frustrating.</p>
+<p>“Cell service was down for a few days after the storm hit,” O’Connor said. “I couldn’t get in touch with my parents.</p>
+<p>“A lot of my friends went home,” he added. “I saw the news and the pictures and it was tough being here and not being able to help out.”</p>
+<p>O’Connor’s other family, the Muhlenberg football team, helped ease his anxiety. Known as “Shane-O,” the three-year starting safety is popular among his teammates. Wrote fellow co-captain John Merklinger, “He puts David Hasselhoff to shame with his killer good looks and ‘Dude, I’m such a beach bro’ attitude. Having Shane as both a teammate and friend is something I’ll always treasure.”</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_uc.jpg"><img class="alignleft size-full wp-image-1470" title="Shane O'Connor" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_uc.jpg" alt="" width="425" height="289" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_uc.jpg 425w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/oconnor_uc-300x204.jpg 300w" sizes="(max-width: 425px) 100vw, 425px" /></a>“I had a lot of help to take my mind off of it,” said O’Connor with a nod to the locker room. “These guys are great, and I know they’re there for me no matter what.”</p>
+<p>For a few hours yesterday, it was Saturday business as usual for O’Connor. He smiled for pictures with his family during Senior Day ceremonies and went out for the coin tosses prior to the game and the overtime.</p>
+<p>Proudly wearing “732” – his home area code – on his wrist, O’Connor played his customary solid defense as the Mules held the most prolific passing attack in the Centennial Conference in check, with the exception of a few big plays. He recorded three tackles and had a near-interception in the second quarter. He hammed it up on the field with his fellow seniors following the game, their last at home.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/fbseniors_uc.jpg"><img class="aligncenter size-full wp-image-1471" title="football seniors" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/fbseniors_uc.jpg" alt="" width="600" height="329" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/fbseniors_uc.jpg 600w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/fbseniors_uc-300x164.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/fbseniors_uc-500x274.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>“It just brightened my day,” said O’Connor. “I’m able to look past everything for just a little bit.”</p>
+<p>There will be tougher days ahead when he goes home and the reality sets in. But even though Bay Head Beach will be off limits for a while due to gas leaks, O’Connor is confident it will bounce back.</p>
+<p>“I know we’ll rebuild the shore and get it back to the way it was,” he said.</p>
+<p><em>photos by Lisa Youngentob &#8217;12</em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1468 -->
+
+				
+					
+	<article id="post-1462" class="post-1462 post type-post status-publish format-standard hentry category-football category-soccer">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/11/01/athletes-of-the-month-2/" rel="bookmark">Athletes of the Month</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/11/01/athletes-of-the-month-2/" title="10:30 am" rel="bookmark"><time class="entry-date" datetime="2012-11-01T10:30:47-04:00">November 1, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The new month begins with All Saints&#8217; Day, and while these two athletes might not qualify for sainthood just yet, their performances in October earned them recognition as Muhlenberg athletes of the month.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/nearymhs.jpg"><img class="alignleft size-full wp-image-1463" title="Maggie Neary" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/nearymhs.jpg" alt="" width="100" height="150" /></a>Female Athlete of the Month &#8211; Maggie Neary, Soccer</strong></p>
+<p>Muhlenberg&#8217;s improbable run to the Centennial Conference playoffs &#8211; which begin tonight with a first-round home game against Swarthmore &#8211; was built on defense, and its defense is built around Neary. A rock at center back, Neary anchored a back four that allowed only two goals in seven October games. That&#8217;s two goals in 650 minutes &#8211; a goals-against average of 0.28. The Mules went 4-2-1 in October, clinching the fourth seed in the CC playoffs after starting out 0-2 in league play. A four-year starter and two-time (likely to be three-time) All-CC selection, Neary also helped out the offense with her free kicks, recording an assist against Washington College.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/deighanhs.jpg"><img class="alignleft size-full wp-image-1464" title="Dan Deighan" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/deighanhs.jpg" alt="" width="100" height="150" /></a>Male Athlete of the Month &#8211; Dan Deighan, Football</strong></p>
+<p>The football team entered October on the heels of a 17-0 loss to Susquehanna that broke a long streak of not getting shut out in a Centennial Conference game. After a week off, the Mule offense returned in full force, averaging 457.7 yards and 43.7 points in three October games. At the helm was senior quarterback Deighan, who passed for 650 yards and five touchdowns while rushing for 178 and another score in the three games. He became the first QB in program history to record a 100-yard rushing game and a 300-yard passing game, and he did it in back-to-back weeks, running for 105 vs. Juniata and passing for 313 at Dickinson. He also broke the school record for career rushing yards by a quarterback (1,254 and counting) and moved into the top 10 in CC history in total offense.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/mulebig_MB110112.jpg"><img class="aligncenter size-full wp-image-1465" title="Athletes of the Month" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/mulebig_MB110112.jpg" alt="" width="780" height="444" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/mulebig_MB110112.jpg 780w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/mulebig_MB110112-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/11/mulebig_MB110112-500x284.jpg 500w" sizes="(max-width: 780px) 100vw, 780px" /></a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1462 -->
+
+				
+					
+	<article id="post-1450" class="post-1450 post type-post status-publish format-standard hentry category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/28/pop-in-the-dvd/" rel="bookmark">Pop in the DVD</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/28/pop-in-the-dvd/" title="3:09 pm" rel="bookmark"><time class="entry-date" datetime="2012-10-28T15:09:48-04:00">October 28, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The Muhlenberg football team&#8217;s offense is available on DVD. And it comes with plenty of added features and bonuses.</p>
+<p>The DVD is the senior trio of running back Terrence <strong>D</strong>andridge, wide receiver Isaiah <strong>V</strong>aughn and quarterback Dan <strong>D</strong>eighan. For the last three years, the three players have been the top threats on the Mule offense.</p>
+<p>Yesterday at Dickinson, the D-V-D package was full of highlights. Dandridge rushed for 110 yards, Vaughn caught passes for 149 yards, and Deighan threw for 313 yards. It was the eighth time in program history that the Mules had a 100-yard rusher, 100-yard receiver and 300-yard passer in the same game. The others (listed in order of rusher-receiver-passer):</p>
+<ul>
+<li>2008 vs. Wilkes: John DeLuca-Phil Cresta-Eric Santagato</li>
+<li>2000 vs. Hartwick: Matt Bernardo-Joshua Carter-Michael McCabe</li>
+<li>2000 vs. Johns Hopkins: Anthony Wolfsohn-Carter-McCabe</li>
+<li>2000 vs. Dickinson: Wolfsohn-Alfredo Mercuri-McCabe</li>
+<li>1998 vs. Grove City: Jason Brader-Carter-McCabe</li>
+<li>1998 vs. Gettysburg: Brader-Kenyamo McFarlane-McCabe</li>
+<li>1997 vs. Gettysburg: Brader-Kevin Cannon-George Fosdick</li>
+</ul>
+<p>All three of the D-V-D players are climbing Muhlenberg&#8217;s all-time lists, and two are prominent in the Centennial Conference record book. Here&#8217;s a quick look:</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dandridge_dvd.jpg"><img class="alignright size-medium wp-image-1452" title="Terrence Dandridge" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dandridge_dvd-175x300.jpg" alt="" width="175" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dandridge_dvd-175x300.jpg 175w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dandridge_dvd.jpg 275w" sizes="(max-width: 175px) 100vw, 175px" /></a>With his 110 yards yesterday, Dandridge became the 11th player in CC history to rush for more than 3,000 yards. His total stands at 3,053 with two games remaining in the regular season, 214 yards away from cracking the top 10. He is third in Muhlenberg history in career rushing yards and also ranks fourth with 3,624 all-purpose yards. The 100-yard rushing game yesterday was the 14th of his career, which is tops among active CC players. &#8220;TD&#8221; has rushed for 31 career TDs, four away from second place on the Mules&#8217; all-time list.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The &#8220;burner&#8221; in the <a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/vaughn_dvd.jpg"><img class="alignleft size-medium wp-image-1451" title="Isaiah Vaughn" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/vaughn_dvd-175x300.jpg" alt="" width="175" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/vaughn_dvd-175x300.jpg 175w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/vaughn_dvd.jpg 275w" sizes="(max-width: 175px) 100vw, 175px" /></a>D-V-D trio, Vaughn played on the defensive side as a freshman, so his impact on the all-time charts comes in only three seasons. He is in 11th place on Muhlenberg&#8217;s receiving yards list with 1,393 and needs 77 more to make the top 10. He also ranks 15th with 81 receptions for a career average of 17.2 yards per catch. Vaughn&#8217;s average of 20.9 yards per catch this season leads the CC. His touchdown catch yesterday covered 65 yards; he also caught a school-record 95-yard TD last and a 56-yard bomb in 2010. That makes him the first Mule receiver to catch a touchdown pass of at least 50 yards in three straight seasons since Alfredo Mercuri (2000-02).</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/deighan_dvd.jpg"><img class="alignright size-medium wp-image-1453" title="Dan Deighan" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/deighan_dvd-175x300.jpg" alt="" width="175" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/deighan_dvd-175x300.jpg 175w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/deighan_dvd.jpg 275w" sizes="(max-width: 175px) 100vw, 175px" /></a>Deighan moved close to a major career milestone yesterday with his first career 300-yard game. Deighan has 4,945 yards, good for third in Muhlenberg history and just 55 yards away from becoming the 15th CC quarterback to throw for 5,000 yards. Already the school record-holder for rushing yards by a quarterback, Deighan added 29 to his total yesterday, and with 1,254, he needs just 10 more to move into fifth place all-time in CC history. Deighan also moved into the CC&#8217;s top 10 in total offense yesterday with 6,199 yards; he is only the third CC QB to pass for 4,000 yards and rush for 1,200.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1450 -->
+
+				
+					
+	<article id="post-1445" class="post-1445 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/26/weekend-preview-29/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/26/weekend-preview-29/" title="4:25 pm" rel="bookmark"><time class="entry-date" datetime="2012-10-26T16:25:27-04:00">October 26, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The last weekend of October means falling leaves, Halloween, nasty weather in the forecast &#8211; and the fall sports seasons winding down. Two Muhlenberg teams will end their seasons tomorrow, while two others hope to continue theirs.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg"><img class="alignright size-full wp-image-104" title="Mule Marquee Matchup" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg" alt="" width="350" height="237" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg 300w" sizes="(max-width: 350px) 100vw, 350px" /></a>Women&#8217;s Soccer at Ursinus (7:30)</strong></p>
+<p>This is the only game in which a Muhlenberg team can chart its own playoff course. With a win, the Mules are in &#8211; although, since the only team that can catch them (Dickinson) plays at noon, by the time this game kicks off they might be in already!</p>
+<p>Muhlenberg (7-8-2, 5-3-1) is in fifth place in the Centennial Conference. Dickinson (11-5, 5-4) needs a win against Franklin &amp; Marshall and a Mule loss or tie to snatch away the final playoff spot. If the Mules win, they will face the loser of the Haverford-Swarthmore game in the first round (or Swarthmore if that game ends in a tie).</p>
+<p>Although Ursinus (3-8-4, 0-5-4) is winless in CC play, it did take Haverford and Dickinson to double overtime.</p>
+<p>Muhlenberg leads the all-time series, 13-6, but the Bears have won the last two meetings &#8211; including a 2010 game in Collegeville in which the Mules needed a win to stay alive in the playoff race.</p>
+<p>Live stats: <a href="http://livestats.prestosports.com/ursinus/">http://livestats.prestosports.com/ursinus/</a></p>
+<p><strong>Cross Country at Haverford for Centennial Conference Championships (men, 11:00; women, 12:00)</strong></p>
+<p>The Mules compete at the 20th CC Championships. For a preview, <a href="http://www.muhlenberg.edu/main/athletics/fall12/1026.html">click here</a>.</p>
+<p><strong>Field Hockey at Ursinus (12:00)</strong></p>
+<p>Muhlenberg (9-6, 4-5) closes out a season of great improvement with a chance to beat eight-time defending champion Ursinus (9-7, 5-4) for the first time ever. The Bears need a win and help to make the playoffs.</p>
+<p>Live stats: <a href="http://livestats.prestosports.com/ursinus/">http://livestats.prestosports.com/ursinus/</a></p>
+<p><strong>Volleyball at Ursinus (12:00)</strong></p>
+<p>It&#8217;s the last match of the season for the Mules (16-11, 3-6), who have a chance to reach 17 wins for the first time since 2008. They won a total of 16 matches the last two years. Ursinus (7-16, 2-7) has lost to Muhlenberg eight straight times.</p>
+<p><strong>Football at Dickinson (1:00)</strong></p>
+<p>Muhlenberg (5-2, 4-2) plays a road game for the first time in almost a month against a Red Devil team coming off a comeback overtime win against McDaniel. It&#8217;s been feast or famine for Dickinson (3-4, 3-3): It lost big to to nationally ranked Hobart (31-0) and Johns Hopkins (49-0), but its other five games were all decided by eight points or fewer.</p>
+<p>The Mules lead the all-time series, 40-25-2, and have won four of the last five meetings, including last season&#8217;s 12-0 &#8220;Snowtober&#8221; game.</p>
+<p>Live stats: <a href="http://www2.dickinson.edu/sports/statistics/mfb/livestats/XLIVE.HTM">http://www2.dickinson.edu/sports/statistics/mfb/livestats/XLIVE.HTM</a></p>
+<p>Live video: <a href="http://www.ustream.tv/channel/reddevilsportsnetwork">http://www.ustream.tv/channel/reddevilsportsnetwork</a></p>
+<p><strong>Men&#8217;s Soccer at Ursinus, 5:00</strong></p>
+<p>The Mules (10-5, 5-4) enter the final day of the regular season needing a win or tie and a Johns Hopkins loss OR a win and a JHU draw to make the playoff field. The Blue Jays play at Washington at 7:00.</p>
+<p>Ursinus (5-11, 1-7) has lost seven straight CC contests since opening with a win against Gettysburg and has allowed a league-worst 24 goals in conference play.</p>
+<p>Muhlenberg has an all-time record of 18-0-1 against Ursinus in CC play. The tie, however, came in Collegeville in 2006 when the Mules needed a win to secure a home playoff game.</p>
+<p>Live stats: <a href="http://livestats.prestosports.com/ursinus/">http://livestats.prestosports.com/ursinus/</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1445 -->
+
+				
+					
+	<article id="post-1432" class="post-1432 post type-post status-publish format-standard hentry category-field-hockey category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/22/plays-of-the-week-3/" rel="bookmark">Plays of the Week</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/22/plays-of-the-week-3/" title="12:52 pm" rel="bookmark"><time class="entry-date" datetime="2012-10-22T12:52:49-04:00">October 22, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Offense wins reputation, defense wins championships &#8211; and sometimes defense wins recognition. Check out these spectacular defensive plays by Mule athletes last week.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dornenburghs.jpg"><img class="alignleft size-full wp-image-1433" title="Kristen Dornenburg" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dornenburghs.jpg" alt="" width="100" height="150" /></a>Female Play of the Week &#8211; Kristen Dornenburg saves of penalty strokes</strong></p>
+<p>Dornenburg, the senior goalie for the Muhlenberg field hockey team, faced four penalty strokes in two games last week and saved three of them &#8211; including two in a 15-second span against Swarthmore. The stops came in the first 10 minutes of the game and prevented the Garnet from taking an early lead, which would prove crucial when the Mules went on to win, 1-0.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/dornenburg_saves.wmv">Click here for video of Dornenburg&#8217;s saves</a>.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/johnsonhs.jpg"><img class="alignleft size-full wp-image-1434" title="Matt Johnson" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/johnsonhs.jpg" alt="" width="100" height="150" /></a>Male Play of the Week &#8211; Matt Johnson interception</strong></p>
+<p>Johnson, a senior inside linebacker, showed incredible reflexes in the third quarter of Saturday&#8217;s football game against Juniata. The Eagles trailed 28-7 and were driving for a touchdown when they faced a third-and-10 at the Muhlenberg 27. They set up a screen pass to the right, but Johnson, who was getting blocked just a few yards away from the quarterback, leaped and somehow caught the ball for his second interception of the season. Ten plays later, the Mules scored a touchdown, and they went on to win, 35-14.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/johnson_pick.wmv">Click here for video with two views of Johnson&#8217;s interception</a>.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1432 -->
+
+				
+					
+	<article id="post-1427" class="post-1427 post type-post status-publish format-standard hentry category-field-hockey category-football category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/19/weekend-preview-28/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/19/weekend-preview-28/" title="3:00 pm" rel="bookmark"><time class="entry-date" datetime="2012-10-19T15:00:17-04:00">October 19, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The last busy fall Saturday of the fall sports season at Muhlenberg is a big one for several teams. Of the five teams at home, four are playing Gettysburg in contests that have playoff implications for the Mules. It&#8217;s hard to single out just one as the Marquee Matchup, but we&#8217;ll try &#8230;</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg"><img class="alignright size-full wp-image-104" title="Mule Marquee Matchup" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg" alt="" width="350" height="237" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg 300w" sizes="(max-width: 350px) 100vw, 350px" /></a>Women&#8217;s Soccer vs. Gettysburg (4:00)</strong></p>
+<p>This game pits two teams that are in great position for making the Centennial Conference playoffs. Gettysburg (10-4, 6-1) is tied for first place with Johns Hopkins, and Muhlenberg (7-6-2, 5-2-1) is right behind in third place.</p>
+<p>The Bullets clinch a playoff berth with a win or a tie, and the Mules secure a postseason spot with a win.</p>
+<p>Gettysburg leads the Conference with 21 goals scored in league matches, while Muhlenberg has allowed only two goals to CC opponents &#8211; none in the last 470 minutes.</p>
+<p>The Bullets are ranked fourth in the region by the NSCAA and seventh in the region by the NCAA. When the final horn blows, the Mules will have played seven of the 10 teams in this week’s NSCAA Mid-Atlantic rankings: Messiah (1), Johns Hopkins (3), Gettysburg (4), Swarthmore (5), Haverford (6), Dickinson (8) and Wilkes (10). Muhlenberg is 3-3 against these ranked opponents, with two of the losses coming by one goal.</p>
+<p align="left">Gettysburg won at home the last two years to extend its series lead to 14-7-2, although since 2001 Muhlenberg has the upper hand, 7-5-1. The Bullets have not won at Varsity Field since 2005.</p>
+<p align="left">Live stats: <a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">http://www.muhlenberg.edu/sports/wsoclive/xlive.htm</a></p>
+<p align="left">Live video: <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p align="left"><strong>Volleyball vs. Gettysburg (12:00); vs. York (4:00)</strong></p>
+<p align="left">Muhlenberg&#8217;s last home appearance of the season features an important match against Gettysburg, which the Mules (15-9, 3-5) must win if they are to have a shot at making the playoffs. The Bullets (14-10, 5-2), who lost to Washington in five sets, still have to play CC co-leaders Franklin &amp; Marshall and Johns Hopkins.</p>
+<p align="left">Gettysburg has won 25 of 27 all-time meetings against Muhlenberg. The Mules’ lone wins came in their playoff seasons of 2001 and 2009.</p>
+<p align="left">Muhlenberg is 2-6 all-time against York (6-23). The teams last met in 2009.</p>
+<p align="left">Live stats (Gettysburg match only): <a href="http://www.muhlenberg.edu/sports/vblive/topview.htm">http://www.muhlenberg.edu/sports/vblive/topview.htm</a></p>
+<p align="left"><strong>Football vs. Juniata (1:00)</strong></p>
+<p align="left">The Mules (4-2, 3-2) are playing CC home games in back-to-back weeks for the first time ever, and following last week&#8217;s dramatic win against previously undefeated Gettysburg, they will try to avoid a letdown against an improving Juniata (1-5, 0-5) squad.</p>
+<p align="left">Muhlenberg is 7-0 all-time against Juniata and has not allowed an offensive touchdown to the Eagles since they joined the CC in 2007.</p>
+<p align="left">Senior Terrence Dandridge needs 121 yards to become the 11th player in CC history to rush for 3,000.</p>
+<p align="left">Live stats: <a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm">http://www.muhlenberg.edu/sports/livestats/xlive.htm</a></p>
+<p align="left">Live video: <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p align="left"><strong>Field Hockey vs. Gettysburg (6:00)</strong></p>
+<p align="left">Gettysburg and Muhlenberg are two of the eight teams still mathematically alive for the four remaining CC playoff berths. (First-place Franklin &amp; Marshall has clinched.) Gettysburg (10-3, 5-2), Washington and Haverford have two losses apiece, and then there are four teams with four losses, including Muhlenberg (9-5, 4-4).</p>
+<p align="left">The Mules have four shutouts in their last seven games, including one Wednesday against Swarthmore (a team to which the Bullets lost), and have allowed more than one goal in a half just twice this season. They are second in the CC in goals-against average (1.27).</p>
+<p align="left">Gettysburg has won four straight meetings to extend its series lead to 16-6. Last year, the Mules came back from a 2-0 deficit to tie the game, but the Bullets scored a disputed goal with 6:22 remaining for a 3-2 win.</p>
+<p align="left">Live stats: <a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">http://www.muhlenberg.edu/sports/fhlive/xlive.htm</a></p>
+<p align="left"><strong>Men&#8217;s Soccer vs. Gettysburg (7:00)</strong></p>
+<p align="left">The final contest of the day features a Muhlenberg team that is in a dogfight for a playoff berth. With three games left to play, the Mules (9-4, 3-3) are currently tied for the fifth and final spot with Franklin &amp; Marshall and Washington.</p>
+<p align="left">After beginning its CC season with a loss to Ursinus (the Bears’ lone CC win to date), Gettysburg (6-7-1, 1-4-1) has shown better of late, taking first-place Swarthmore to double overtime two weeks ago and snapping Haverford’s five-game winning streak with a 2-1 victory last Saturday.</p>
+<p align="left">Muhlenberg holds a 34-18-6 series lead, including a 13-4-2 mark in CC contests. The Mules are undefeated (7-0-1) in their last eight meetings with the Bullets, a streak that began in the 2005 CC championship game.</p>
+<p align="left">Live stats: <a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">http://www.muhlenberg.edu/sports/msoclive/xlive.htm</a></p>
+<p align="left">Live video: <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1427 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/page/6/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/page/4/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/11/'>November 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/10/'>October 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/09/'>September 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/07/'>July 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/05/'>May 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/04/'>April 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/03/'>March 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/02/'>February 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/01/'>January 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/12/'>December 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/11/'>November 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/10/'>October 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/06/'>June 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/05/'>May 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/04/'>April 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/03/'>March 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/'>February 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/'>January 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/12/'>December 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/11/'>November 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/10/'>October 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/09/'>September 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/'>August 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/'>July 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/06/'>June 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/'>May 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/04/'>April 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/03/'>March 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/02/'>February 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/01/'>January 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/'>December 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/11/'>November 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/08/'>August 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://sportsinfo.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2Fcategory%2Ffootball%2Fpage%2F5%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

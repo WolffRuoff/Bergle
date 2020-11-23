@@ -1,0 +1,989 @@
+http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/
+144
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+cross country | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; cross country Category Feed" href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=0C76D0E01144997F6C49EE312754CFCA');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive category category-cross-country category-7847 admin-bar no-customize-support wp-embed-responsive single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<section id="primary">
+			<div id="content" role="main">
+
+			
+				<header class="page-header">
+					<h1 class="page-title">
+					Category Archives: <span>cross country</span>					</h1>
+
+									</header>
+
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-2490" class="post-2490 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-soccer category-volleyball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/31/weekend-preview-november-1-2014/" rel="bookmark">Weekend Preview &#8211; November 1, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/31/weekend-preview-november-1-2014/" title="9:04 am" rel="bookmark"><time class="entry-date" datetime="2014-10-31T09:04:10-04:00">October 31, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" alt="weekend preview" width="264" height="150" /></a><em>The first day of the 11th month brings the start of fall championship season, the last day of the regular season for four playoff-bound teams and the beginning of the winter season.</em></p>
+<p><strong>Women&#8217;s Soccer vs. Ursinus (Saturday, 1:00)</strong></p>
+<p>Playoff positioning is on the line for both teams in this game. The Mules (11-4-2, 6-3) have already clinched a playoff berth and can secure a first-round bye with a win or a Dickinson loss at Franklin &amp; Marshall. A tie and a Dickinson win makes the Mules the fourth seed and gives them a home playoff game on Wednesday, while a loss could drop them to the fifth seed.</p>
+<p>Ursinus (8-6-2, 5-2-2) gets in the playoffs with a win. The Bears can also claim a berth with a tie and help.</p>
+<p>Muhlenberg, ranked ninth in the region by the NCAA, has won five of its last six, while Ursinus has rebounded from a 5-0 loss at Swarthmore to win its last three.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/wsocsrs14.jpg"><img class="aligncenter size-full wp-image-2494" src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/wsocsrs14.jpg" alt="women's soccer seniors" width="500" height="193" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/wsocsrs14.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/wsocsrs14-300x115.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>The Mules, who will honor seniors Colleen Touhey, Krissy Fioretti, Leah Messler, Anna Martens and Audrey Zamichow, lead the all-time series, 14-7, but Ursinus has won three of the last four meetings.</p>
+<p><a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Men&#8217;s Soccer vs. Ursinus (Saturday, 6:00)</strong></p>
+<p>Muhlenberg has already nailed down a spot in the CC semifinals and a rematch with Dickinson next Saturday. The 11th-ranked Mules (11-1-2, 6-1-1) will try to stay sharp against an Ursinus (6-7-3, 3-4-1) squad that needs a win and some help to earn its first-ever CC playoff berth.</p>
+<p>The Bears are a tough team to figure out. They are in contention for a spot despite being second from the bottom in goals allowed in CC play (17). They led first-place Franklin &amp; Marshall 1-0 at the half before falling 2-1 but they also lost 4-1 to a Gettysburg team that has only one other CC win.</p>
+<p>The Mules are undefeated (9-0-1) at Varsity Field this season and will try to send off seniors Travis Wantchekon, Lance Dotzman, Oliver Katz, Joe Adams, Danny Pinto, Joey Roberts, Colin Maehler and Bryan Attanasio with another home win.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/msocsrs14.jpg"><img class="aligncenter size-full wp-image-2493" src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/msocsrs14.jpg" alt="men's soccer seniors" width="500" height="154" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/msocsrs14.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/msocsrs14-300x92.jpg 300w" sizes="(max-width: 500px) 100vw, 500px" /></a>Muhlenberg holds a commanding 48-10-5 series lead, including a 20-0-1 mark since the start of CC play in 1993. The tie came in 2006, and Ursinus’ last series win was in 1984. Oddly, the teams have not played in Allentown since 2009. They were scheduled to in 2011 but the game was moved to the Bears’ turf field after the “Snow-tober” storm.</p>
+<p><a href="http://www.muhlenberg.edu/sports/msoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Cross Country at Centennial Conference Championships (Saturday, 11:00)</strong></p>
+<p>The Muhlenberg teams travel to Haverford to compete in the 22nd CC meet. The CC is typically highly competitive in cross country, and this year should be no different. The top three men&#8217;s teams in the regional rankings are all from the CC, and on the women&#8217;s side, four of the top five teams in the region are CC squads.</p>
+<p>Both Mule teams finished fifth at the CC meet last year.</p>
+<p><a href="http://www.haverfordathletics.com/sports/mxc/xc_championship_2014">Meet site</a></p>
+<p><strong>Field Hockey at Ursinus (Saturday, 12:00)</strong></p>
+<p>Both teams are locked into their CC playoff spots: Ursinus, ranked sixth in Division III, is the top seed and host for the tournament, while Muhlenberg is the third seed and will face Franklin &amp; Marshall in a semifinal game.</p>
+<p>Both teams are ranked in the South Region &#8211; Ursinus second and Muhlenberg fourth &#8211; and can use this game to strengthen their chances for one of the few available at-large bids should they fail to win the championship.</p>
+<p>The Bears (13-3, 9-0) are third in Division III in scoring, averaging 5.13 goals per game, while the Mules (12-3, 7-2) are 11th nationally in goals-against average (0.98).</p>
+<p>Muhlenberg defeated Ursinus for the first time since 1980 last year, overcoming a 2-0 deficit for a 3-2 win.</p>
+<p><a href="http://www.ursinusathletics.com/sports/fh/2014-15/boxscores/20141101_50so.xml">Live stats</a> | <a href="http://portal.stretchinternet.com/ursinus/">Live video</a></p>
+<p><strong>Football at Dickinson (Saturday, 1:00)</strong></p>
+<p>Muhlenberg (6-1, 5-1) goes for its fourth win in a row in a game that features the top two running backs in the CC. Dickinson junior Cedric Madden averages 108.3 yards per game, while Mule freshman Max Cepeda is at 98.3 and has rushed for 100 yards or more in five of his six starts.</p>
+<p>Defensively, the Red Devils (3-4, 3-3) give up over 400 yards per game. The Mule defense, on the other hand, is 12th in Division III against the run. This game caps a three-week stretch in which the Mules have faced a quarterback who ranks in the top 10 in the CC in carries. They held the first two to a combined 4 yards on 29 carries, forcing both teams to pass.</p>
+<p>Muhlenberg did not force any turnovers in last week&#8217;s 42-13 win against Juniata and will try to grab some loose balls against Dickinson, which is a CC-worst minus-8 in turnover margin.</p>
+<p>Muhlenberg leads the all-time series, 42-25-2, and has won the last four meetings, the last two by a combined scored of 103-24.</p>
+<p><a href="http://portal.stretchinternet.com/dickinson/">Live stats/video</a></p>
+<p><strong>Volleyball at Stevenson (Saturday, 12:00); vs. Lynchburg (Saturday, 2:00)</strong></p>
+<p>While its playoff fate will be determined by the Swarthmore-Haverford and Gettysburg-Johns Hopkins matches, Muhlenberg (24-5) travels to Maryland for a pair of non-CC contests.</p>
+<p>Stevenson (25-5) is ranked fourth in the Mid-Atlantic Region. Lynchburg is 16-11.</p>
+<p><a href="http://portal.stretchinternet.com/stevenson/">Live stats/video </a>(both matches)</p>
+<p><strong>Wrestling at King&#8217;s Monarch Invitational (Saturday, 9:00)</strong></p>
+<p>Muhlenberg opens up its season at a 16-team tournament.</p>
+<p><a href="http://www.eztourns.com/2014results.php">Results page</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2490 -->
+
+				
+					
+	<article id="post-2462" class="post-2462 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/17/weekend-preview-october-18-2014/" rel="bookmark">Weekend Preview &#8211; October 18, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/17/weekend-preview-october-18-2014/" title="12:52 pm" rel="bookmark"><time class="entry-date" datetime="2014-10-17T12:52:03-04:00">October 17, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" alt="weekend preview" width="264" height="150" /></a>All seven Muhlenberg fall sports teams are in action tomorrow, with two returning home after long breaks and another going on the road to face a top-10 team.</em></p>
+<p><strong>Football vs. Gettysburg (Saturday, 1:00)</strong></p>
+<p>Muhlenberg (4-1, 3-1) returns from its bye week for its first home in three weeks. Its opponent? A red-hot Gettysburg team that has averaged 36.3 points and 501.3 yards in winning its last three games.</p>
+<p>The Bullets (3-2, 3-1) have also been strong on defense; they rank 18th in Division III in rushing defense and have held their last three opponents under 100 yards.</p>
+<p>Gettysburg leads the all-time series, 43-34-1, but Muhlenberg has won three of the last four meetings overall and the last eight at Scotty Wood Stadium. The last two series meetings in Allentown were memorable, with the Mules winning 33-27 in overtime in 2010 and 35-31 on a fake field goal in 2012.</p>
+<p>Muhlenberg is 7-1 following its bye since 2006 and is one win away from 500 all-time. <span style="font-size: 12pt; font-family: 'Times New Roman','serif';"><br />
+</span></p>
+<p><a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Women&#8217;s Soccer vs. Franklin &amp; Marshall (Saturday, 1:30)</strong></p>
+<p>Coming off a win against two-time defending Centennial Conference finalist Haverford, the Mules (8-3-2, 4-2) look to improve their playoff chances with another home win.</p>
+<p>Franklin &amp; Marshall (1-11, 0-6) has lost 10 in a row, but its record is a bit deceiving due to a very strong schedule. The Diplomats have had a bit of trouble finding the back of the net, scoring only four goals all season. Muhlenberg has seven shutouts in 13 games this season and has blanked its last two opponents.</p>
+<p>Muhlenberg leads the all-time series, 17-4-1, but is only 4-3-1 in the last eight years. The Mules won last year&#8217;s game, 1-0.</p>
+<p><a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Men&#8217;s Soccer vs. Haverford (Saturday, 7:00)</strong></p>
+<p>Two regionally ranked teams eying playoff berths should make for a competitive game.</p>
+<p>Haverford (8-4, 3-2), ranked sixth in the Mid-Atlantic Region, was the top seed in the Centennial Conference playoffs last year. The Fords have played the sixth-toughest schedule in Division III.</p>
+<p>Muhlenberg (8-1-2, 3-1-1), ranked fourth in the region and 17th nationally by D3soccer.com, will be playing at home for the first time in 18 days. The Mules rank 15th in Division III in goals-against average (0.52) and are one of 17 teams in Division III with fewer than two losses.</p>
+<p>Muhlenberg leads the all-time series, 22-14-4, including a 17-2-2 margin since the start of CC play. One of the two losses (1-0 in 2012) and one of the two ties (scoreless last year) have come in the last two seasons, however. The Mules have not lost at home to the Fords since 1969.</p>
+<p><a href="http://www.muhlenberg.edu/sports/msoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong> Field Hockey at Franklin &amp; Marshall (Saturday, 12:00)</strong></p>
+<p>Muhlenberg puts its five-game winning streak on the line against a Franklin &amp; Marshall team that is ranked sixth in Division III.The winner of this game moves into sole possession of second place in the CC.</p>
+<p>The Diplomats (12-1, 5-1) have won four in a row since a 5-2 setback to Ursinus, their lone loss of the season. F&amp;M ranks ninth in Division III in goals per game (4.67) and will present a big test for a Muhlenberg defense that ranks 17th with a 0.98 goals-against average.</p>
+<p>The Mules (9-2, 5-1) need one more win to reach double digits for the first time since 2007.</p>
+<p>F&amp;M has won the last five meetings to extend its all-time series lead to 15-6-1. The Mules have played the Diplomats close the last three years, losing 3-1 in both 2011 and 2012 and 2-1 last year when F&amp;M came in ranked No. 1 in Division III.</p>
+<p><a href="http://portal.stretchinternet.com/fandm/">Live stats/video</a></p>
+<p><strong>Volleyball vs. Marymount (Saturday, 3:00); at York (Saturday, 5:00)</strong></p>
+<p>Muhlenberg (20-3) steps out of CC play for a trimatch at York. Marymount is 22-5 and York is 9-16.</p>
+<p><a href="http://portal.stretchinternet.com/ycp/">Live video</a></p>
+<p><strong>Cross Country at Gettysburg Invitational (Saturday, 11:00)</strong></p>
+<p>The Mules&#8217; final tuneup for the CC Championships will be at one of the largest collegiate meets in the region, with 39 teams scheduled to compete.</p>
+<p><a href="http://gettysburgsports.com/news/2014/10/16/WXC_1016142416.aspx">Preview</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2462 -->
+
+				
+					
+	<article id="post-2430" class="post-2430 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-golf category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/03/weekend-preview-october-3-5-2014/" rel="bookmark">Weekend Preview &#8211; October 3-5, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/10/03/weekend-preview-october-3-5-2014/" title="9:24 am" rel="bookmark"><time class="entry-date" datetime="2014-10-03T09:24:01-04:00">October 3, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" alt="weekend preview" width="264" height="150" /></a>Most Muhlenberg students are going home for Fall Break this weekend, to be replaced on campus by a bunch of Devils, some of them nationally ranked. Plus, a soccer showdown between ranked teams.<br />
+</em></p>
+<p><strong>Men&#8217;s Soccer at Franklin &amp; Marshall (Friday, 4:00)</strong></p>
+<p>Two of the remaining 14 undefeated teams in Division III meet in a matchup that could shape the race for the top seed in the Centennial Conference playoffs. Franklin &amp; Marshall (9-0-1, 3-0), which reached the NCAA quarterfinals last year, is ranked third by D3soccer.com and eighth by the NSCAA. Muhlenberg (7-0-2, 2-0-1) is 21st in both polls.</p>
+<p>In the CC standings, F&amp;M is tied with Dickinson for first place, with Muhlenberg two points back.</p>
+<p>The two teams are tied for the fewest goals allowed in the CC. The Diplomats have outscored their opponents 23-5, the Mules 22-5.</p>
+<p>Muhlenberg&#8217;s last game against a top-10 team was a 2-1 loss to No. 9 Swarthmore in the 2010 CC championship game. Its last win against a top-10 team was a 1-0 defeat of No. 10 Dickinson in 2009. The Mules haven&#8217;t played a team ranked in the top five since 2001 and haven&#8217;t beaten one since 1999 (3-2 vs. third-ranked Johns Hopkins).</p>
+<p>Franklin &amp; Marshall leads the all-time series, 30-28-5, but the Mules lead in CC play, 12-7-2. Last year, Muhlenberg won 1-0 in a game the Diplomats came into ranked 14th in Division III, undefeated and unscored-upon.</p>
+<p><a href="http://www.godiplomats.com/sports/m-soccer/2014-15/boxscores/20141003_nes1.xml">Live stats</a> | <a href="http://portal.stretchinternet.com/fandm/">Live video</a></p>
+<p><strong>Field Hockey vs. Dickinson (Saturday, 11:30)</strong></p>
+<p>So far, Muhlenberg (6-2, 2-1) has played three CC games this season, and the result of all three was the opposite of what it was last year. The Mules hope that trend continues against Dickinson, a team they lost to in 2013.</p>
+<p>The Red Devils (9-1, 3-0) are ranked 20th in Division III and have won nine in a row since a season-opening loss to Juniata. They have allowed a CC-low seven goals in their 10 games.</p>
+<p>Muhlenberg holds an 18-13-1 series lead and has won two of the last three meetings. The Mules have taken six of the last seven meetings in Allentown, including a 4-3 thriller in 2011.</p>
+<p><a href="http://www.muhlenberg.edu/sports/fhlive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Volleyball vs. Dickinson (Saturday, 2:00)</strong></p>
+<p>Muhlenberg (16-2, 3-0) will be playing for its 10th straight win, its first 4-0 CC start since 1993 (the first year of the league) &#8230; and a little bit more. This is the annual &#8220;Dig for a Cure&#8221; <a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/tannerstouch2013.jpg"><img class="alignleft size-medium wp-image-2431" src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/tannerstouch2013-300x134.jpg" alt="Tanner's Touch" width="300" height="134" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/tannerstouch2013-300x134.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/tannerstouch2013-500x223.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/10/tannerstouch2013.jpg 900w" sizes="(max-width: 300px) 100vw, 300px" /></a>match, and the Mules and Red Devils will be raising money for Tanner&#8217;s Touch, a foundation that raises money for pediatric cancer research at Johns Hopkins Hospital and also for families of children with cancer to offset the cost of medical treatment.</p>
+<p>Both teams will collect donations and pledges from friends, families and team supporters for each dig they record in the match. To contribute, please contact Alexa Keckler at akeckler@muhlenberg.edu.</p>
+<p>Dickinson comes in at 4-8 overall, 0-2 in the CC. Muhlenberg holds a 19-14 lead in a series in which five of the last 11 meetings, inlcuding the last two, have gone to five sets. Last year in Carlisle, the Mules pulled out a 15-12 win in the fifth set.</p>
+<p><a href="http://www.muhlenberg.edu/sports/vblive/topview.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Women&#8217;s Soccer vs. Dickinson (Saturday, 2:00)</strong></p>
+<p>Muhlenberg (6-2-2, 2-1) will look to snap its three-game winless streak against a Dickinson squad that is ranked 22nd in Division III by D3soccer.com. The lone loss for the Red Devils (8-1, 2-0) came to top-ranked Messiah.</p>
+<p>Muhlenberg holds a 15-7-2 lead in a series that has seen the last four games end with a score of 1-0. The Mules won the last two, both in Carlisle and both on late goals: Two years ago, the lone score came with nine minutes left, and last year with just 15 seconds remaining. The result proved to be the difference in Muhlenberg making the playoffs as the fifth seed and Dickinson staying home.</p>
+<p><a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Football at Susquehanna (Saturday, 1:00)</strong></p>
+<p>Muhlenberg (3-1, 2-1) looks to bounce back from its first loss of the season against a Susquehanna (0-4, 0-3) squad hungry for its first win. The Crusaders&#8217; last three losses were by a total of 18 points.</p>
+<p>The Mules will try to avoid a repeat of 2012, when they were shut out at Susquehanna a week after losing at home to Johns Hopkins. They will try to take advantage of a Crusader defense that is allowing 267.0 rushing yards per game &#8211; 233rd out of 242 Division III teams. Susquehanna does rank among the Division III leaders in fumbles recovered, however.</p>
+<p>Muhlenberg leads the all-time series, 12-10. Last year, the Mules allowed 144 total yards and no offensive touchdowns in a 38-18 win.</p>
+<p><a href="http://www.gosusqu.com/sports/fball/2014-15/boxscores/20141004_86g7.xml">Live stats</a> | <a href="http://portal.stretchinternet.com/susquehanna/">Live video</a></p>
+<p><strong>Cross Country at Paul Short Run (Saturday)<br />
+</strong></p>
+<p>The Mules return to action after a week off at one of the largest cross country meets in the nation, with more than 5,500 runners from over 400 teams competing at the all-day event.</p>
+<p><a href="http://lehighsports.com/index.aspx?path=paulshort">Meet page</a></p>
+<p><strong>Men&#8217;s Golf at Mason-Dixon Classic (Saturday-Sunday)</strong></p>
+<p>Muhlenberg travels to McDaniel for a two-day tournament.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/golf/" rel="category tag">golf</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2430 -->
+
+				
+					
+	<article id="post-2359" class="post-2359 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-golf category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/09/12/weekend-preview-september-12-14-2014/" rel="bookmark">Weekend Preview &#8211; September 12-14, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/09/12/weekend-preview-september-12-14-2014/" title="12:15 am" rel="bookmark"><time class="entry-date" datetime="2014-09-12T00:15:26-04:00">September 12, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" alt="weekend preview" width="264" height="150" /></a>An early Homecoming weekend features home games in field hockey, football and men&#8217;s soccer and the closest thing the cross country teams have to a home meet. Plus, volleyball competes in a tournament for the third straight weekend and men&#8217;s tennis opens its year with a home tournament.</em></p>
+<p><strong>Field Hockey vs. Drew (Friday, 7:00)</strong></p>
+<p>Muhlenberg (2-1) plays its fourth straight home game to start the season against a Drew team that was 16-4 last year but is winless in four games so far this fall.</p>
+<p>Defense has been the key for both teams: The Mules have allowed only two goals, the only one in the last 204 minutes coming on a penalty stroke. The Rangers, on the other hand, have allowed 18 goals in four games, the most coming in a 7-1 loss to Montclair State, which was undoubtedly eager to take out its anger on someone after losing to Muhlenberg.</p>
+<p>Drew holds a 15-13-1 series lead, including a 6-1 win last year, but the home team has won the last five meetings.</p>
+<p><a href="http://www.muhlenberg.edu/sports/fhlive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong style="color: #373737;">Volleyball at Knights Invitational: vs. Eastern (Friday, 6:00); vs. Neumann (Friday, 8:00); vs. Moravian (Saturday, 1:00); vs. Widener (Saturday, 3:00)</strong></p>
+<p>After going 7-1 at Gettysburg and in its own tournament the last two weekends, Muhlenberg travels to Neumann for another tournament. The Mules&#8217; first opponent, Eastern, reached the NCAA semifinals in 2011 and the quarterfinals last year and is currently ranked 12th in Division III.</p>
+<p>Host Neumann is 4-0, Moravian is 5-5, and Widener is 1-6.</p>
+<p><strong>Cross Country Co-Hosts Cedar Crest/Muhlenberg Invitational (Saturday, 10:00)</strong></p>
+<p>The Mules, running a short distance from campus, will aim for a repeat of last year, when they swept both the team and individual titles. Senior Luke Munyan is the defending men&#8217;s champion.</p>
+<p><strong>Football vs. Franklin &amp; Marshall (Saturday, 1:00)</strong></p>
+<p>The Centennial Conference opener for both teams could turn out to be one of the key games of the year. Muhlenberg and F&amp;M, both of which opened the season with wins last week, have received ECAC bowl bids each of the last two years and have their sights set on unseating five-time defending champion Johns Hopkins.</p>
+<p>In the CC preseason poll, Muhlenberg was picked second (with six first-place votes) and Franklin &amp; Marshall was tabbed fourth.</p>
+<p>Franklin &amp; Marshall leads the all-time series, 53-43-1. Since 2005, the teams have traded two-game series winning streaks, with Muhlenberg winning in 2007-08 and 2011-12 and the Diplomats prevailing in 2005-06 and 2009-10. F&amp;M won last year, 28-21.</p>
+<p>The Mules come into the game with an all-time record of 496-497-41. With a win, they will climb to .500 for the first time since 1931.</p>
+<p><a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p>The live video will feature highlights from the Mules&#8217; win vs. Wilkes at halftime.</p>
+<p><strong>Men&#8217;s Soccer vs. Stevens (Saturday, 7:00)</strong></p>
+<p>The biggest win for the Muhlenberg men’s soccer team in recent years came at the expense of Stevens. In the second round of the 2010 NCAA Tournament, the Mules won 2-1 in double-overtime, handing the Ducks their first NCAA loss (other than by shootout) since 2005 and snapping their 34-game home unbeaten streak.</p>
+<p>None of the players from that game and only one of the head coaches will take part in this year&#8217;s Homecoming rematch (only the second regular-season meeting between the two teams since 1973), but the memory will linger on in both programs for years to come.</p>
+<p>Muhlenberg is 3-0 for the first time since 2011 and receiving votes in the national Division III poll. Stevens, which has won at least 15 games for the last 12 years, is off to an uncharacteristic 2-2 start after losing only one regular-season game all of last season.</p>
+<p><a href="http://www.muhlenberg.edu/sports/msoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Men&#8217;s Tennis hosts Mule Fall Classic (Sunday, 9:00)</strong></p>
+<p>The Mules welcome Drew, Moravian and Oneonta State for their first competition of the year.</p>
+<p><strong>Men&#8217;s Golf at Allegheny&#8217;s Guy W. Kuhn Memorial Invitational (Sunday and Monday)</strong></p>
+<p>Fresh off their win at Moravian, the Mules travel to western Pennsylvania for a two-day tournament.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/golf/" rel="category tag">golf</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2359 -->
+
+				
+					
+	<article id="post-2350" class="post-2350 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/08/29/weekend-preview-august-29-30-2014/" rel="bookmark">Weekend Preview &#8211; August 29-30, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/08/29/weekend-preview-august-29-30-2014/" title="9:51 am" rel="bookmark"><time class="entry-date" datetime="2014-08-29T09:51:34-04:00">August 29, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" alt="weekend preview" width="264" height="150" /></a>It’s opening weekend of the 2014-15 school year, with six of the seven Mule fall teams in action and all facing some tough competition.<br />
+</em></p>
+<p><strong>Women’s Soccer vs. Wilkes (Friday, 4:00) and vs. Marywood (Saturday, 4:00)</strong></p>
+<p>Three teams that qualified for their conference playoffs last year will compete on Varsity Field this weekend. Muhlenberg (7-11-2) advanced to the semifinals of the Centennial Conference playoffs, winning a shootout at McDaniel in the first round. Wilkes (9-7-4) was on the other end of penalty kicks, falling in heartbreaking fashion to crosstown rival King’s in a Freedom Conference semifinal. Marywood (6-8-4) earned its seventh consecutive conference playoff berth, losing to Centenary in the Colonial States Athletic Conference quarterfinals.</p>
+<p>Muhlenberg has won 14 of 16 all-time meetings with Wilkes, but the Colonels’ two wins came in the last two years, both 2-1. Saturday’s game will be Muhlenberg’s first against Marywood.</p>
+<p><a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a> (both games)</p>
+<p><strong>Men’s Soccer vs. William Paterson (Friday, 7:00)<br />
+</strong></p>
+<p>The first game of the 72nd season of men&#8217;s soccer at Muhlenberg pairs two teams that earned postseason invitations last year. The Mules (10-8-1) advanced to the ECAC South semifinals, while William Paterson (9-9-3) reached the ECAC Metro championship match.</p>
+<p>Muhlenberg will hope to reverse a recent trend: Its three Opening Day losses since 2005 have all come to New Jersey Athletic Conference schools &#8211; William Paterson in 2008, Richard Stockton in 2009 and Rutgers-Camden last year.</p>
+<p>The road team has won both meetings in the series, William Paterson 3-2 at Varsity Field in 2008 and Muhlenberg 2-1 in Jersey two years ago.</p>
+<p><a href="http://www.muhlenberg.edu/sports/msoclive/xlive.htm">Live stats</a> | <a href="http://portal.stretchinternet.com/muhlenberg/">Live video</a></p>
+<p><strong>Field Hockey vs. Scranton (Friday, 7:00)</strong></p>
+<p>This game opens the 56th season of field hockey at Muhlenberg and matches up two solid programs that both reached their conference playoffs last year. The Mules (8-10) earned their first Centennial Conference playoff berth since 2007, and Scranton (14-6) advanced to the Landmark Conference final in its best season since 1998.</p>
+<p>Scranton leads off a challenging early schedule: Muhlenberg&#8217;s first four opponents (all at home) – Scranton (14-6), Montclair State (21-2), Elizabethtown (14-6) and Drew (16-4) – all had outstanding records last year.</p>
+<p>Muhlenberg holds a 7-5 lead in a series in which the home team has won every meeting but two. Last year, Scranton broke a 1-1 tie on a penalty stroke with 2:37 left to avenge a 2-1 overtime loss in Allentown in the 2012 season opener.</p>
+<p><a href="http://www.muhlenberg.edu/sports/fhlive/xlive.htm">Live stats</a></p>
+<p><strong>Volleyball at Battlefield Classic: vs. Alfred (Friday, 3:00); vs. Salve Regina (Friday, 7:00); vs. Carnegie Mellon (Saturday, 10:00); vs. Gallaudet (Saturday, 2:00)</strong></p>
+<p>Muhlenberg travels to Gettysburg to open its season at a highly competitive tournament. Alfred struggled last year, going only 3-27, but Salve Regina was 26-5 and earned an ECAC Tournament bid, and Carnegie Mellon (25-10) and Gallaudet (23-14) both played in the NCAA Tournament.</p>
+<p>The Mules are coming off an outstanding season of their own. They finished with a record of 20-12 and reached the Centennial Conference championship match.</p>
+<p><a href="http://www.gettysburgsports.com/sports/2014/7/28/VB_0728140937.aspx?id=1395">Tournament site</a></p>
+<p><strong>Cross Country at Lehigh Invitational (Friday, 5:30)</strong></p>
+<p>The Muhlenberg teams open their season at a meet that includes Division I teams Lehigh, Delaware, LIU-Brooklyn and West Virginia. The Mules will also get to test their abilities vs. local Division III rivals DeSales and Moravian as well as Centennial Conference foe Ursinus. At last year&#8217;s Lehigh Invitational, Muhlenberg&#8217;s men and women placed fourth and sixth, respectively, both finishing ahead of Division I squads.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2350 -->
+
+				
+					
+	<article id="post-2227" class="post-2227 post type-post status-publish format-standard hentry category-cross-country category-track-field">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/04/17/marathon-of-the-mind/" rel="bookmark">Marathon of the Mind</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/04/17/marathon-of-the-mind/" title="10:15 am" rel="bookmark"><time class="entry-date" datetime="2014-04-17T10:15:38-04:00">April 17, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>It’s hardly unusual for a college cross country runner to compete in a marathon. But what  made Jarrett Felix’ first marathon different was that he did it while sitting in a classroom.</p>
+<p>It was less about Prefontaine and more about pre-calc.</p>
+<div id="attachment_2228" style="width: 245px" class="wp-caption alignright"><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/felix_MB.jpg"><img aria-describedby="caption-attachment-2228" class="size-full wp-image-2228" alt="Felix is a nine-time placewinner on relay teams at Centennial Conference track and field championship meets. He earned a bronze medal with the indoor 4x800 team in 2011." src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/felix_MB.jpg" width="235" height="544" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/felix_MB.jpg 235w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/felix_MB-129x300.jpg 129w" sizes="(max-width: 235px) 100vw, 235px" /></a><p id="caption-attachment-2228" class="wp-caption-text">Felix is a nine-time placewinner on relay teams at Centennial Conference track and field championship meets. He earned a bronze medal with the indoor 4&#215;800 team in 2011.</p></div>
+<p>Felix, a two-year co-captain on the Muhlenberg cross country team and a member of the track and field team, “ran” in the William Lowell Putnam Mathematical Competition in December. Administered by the Mathematical Association of America every year since 1938, the Putnam is a 12-question, six-hour test generally considered to be the most difficult math exam in the world.</p>
+<p>And when the results came in a couple of weeks ago, Felix got some good news: Out of about 4,000 undergrads who took the test in the United States and Canada, he finished in the top third.</p>
+<p>“It was a little intimidating because the median score is zero,” he said. (For those not as mathematically inclined, that means that more than half the people who take the test fail to score any points.) “I just wanted to do a little better, and I got a double-digit score.”</p>
+<p>The whole process started with Dr. Daniel File, a visiting assistant professor of mathematics, who had taken the Putnam exam as an undergraduate at Ohio State. It had been a while since anyone at Muhlenberg had taken it, so File asked his colleagues for names of people who might be willing to try. Felix, a double major in mathematics and economics, was recommended.</p>
+<p>Felix has competed in many races as a Mule, but his only previous foray into competitive mathematics had been with the LVAIC math team – a group of students who compete against other schools in the Lehigh Valley once each fall – the last two years. He did some practice sessions with File, and on “race day,” he sat alone in a classroom in Trumbower Hall for three hours, then took a lunch break before returning for three more hours.</p>
+<p>“It’s not a specific type of math on the test – it’s problem-solving questions where you have to use the skills you’ve developed,” he said. “There was some probability, one of my better areas, some set theory, some really complicated uses of calculus.”</p>
+<div id="attachment_2229" style="width: 410px" class="wp-caption alignleft"><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/putnamquestion.jpg"><img aria-describedby="caption-attachment-2229" class="size-full wp-image-2229" alt="This is one of the questions on the exam Felix took, reprinted here with permission of the Mathematical Association of America. Please submit answers in the comments section below - first correct one gets a free yearly subscription to Mule Sports Daily!" src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/putnamquestion.jpg" width="400" height="121" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/putnamquestion.jpg 400w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/putnamquestion-300x90.jpg 300w" sizes="(max-width: 400px) 100vw, 400px" /></a><p id="caption-attachment-2229" class="wp-caption-text">This is one of the questions on the exam Felix took, reprinted here with permission of the Mathematical Association of America. Please submit answers in the comments section below &#8211; first correct one gets a free yearly subscription to Mule Sports Daily!</p></div>
+<p>The test is divided into two sections, A and B, with six questions apiece. The first question in each is usually the “easiest,” and they get increasingly more difficult after that. There are some questions that no one gets full credit on (each question is worth 10 points, with 10 for a complete solution and one for the beginning of a solution).</p>
+<p>“I really focused on A1 and B1, and pretty much spent as much time as I wanted on those to write out the answers as best as I could,” said Felix, an eight-time (soon to be nine-time) member of the Centennial Conference Academic Honor Roll and Phi Beta Kappa inductee. “After that I just picked out ones I thought I might be able to solve. I read all the questions at least to see if I could work them out.”</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/trkbig_MB041714.jpg"><img class="alignright size-medium wp-image-2230" alt="Jarrett Felix" src="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/trkbig_MB041714-300x169.jpg" width="300" height="169" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/trkbig_MB041714-300x169.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/trkbig_MB041714-500x282.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2014/04/trkbig_MB041714.jpg 780w" sizes="(max-width: 300px) 100vw, 300px" /></a>Felix, who plans to pursue a career in actuarial sciences following graduation, hopes that he will be a pacesetter for future Muhlenberg students.</p>
+<p>“It was a cool experience,” he said. “I wish I had gotten started a little earlier, because the more I was practicing and the more different types of things I saw, the more confident I got. I really liked it – it was unlike anything I’ve done in the classroom. After taking the actual test, I was mentally exhausted.</p>
+<p>“Now that I’ve done this, hopefully others in the department will take the test in the future.”</p>
+<p><em>For more information on the Putnam Competition, please visit this site: <a href="http://math.scu.edu/putnam/index.html">http://math.scu.edu/putnam/index.html</a></em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2227 -->
+
+				
+					
+	<article id="post-2113" class="post-2113 post type-post status-publish format-standard hentry category-cross-country category-football category-mens-basketball category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/22/weekend-preview-november-23-2013/" rel="bookmark">Weekend Preview – November 23, 2013</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/22/weekend-preview-november-23-2013/" title="5:36 pm" rel="bookmark"><time class="entry-date" datetime="2013-11-22T17:36:31-04:00">November 22, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The fall season officially comes to an end on Saturday with the football team and a cross country runner in the postseason, while the basketball seasons start to pick up steam.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ncaaxc13_hanover.png"><img class="alignright size-thumbnail wp-image-2115" alt="NCAA XC" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ncaaxc13_hanover-150x150.png" width="150" height="150" /></a>NCAA Cross Country (Saturday, 11:00)</strong></p>
+<p>Senior Nicki Cronin represents Muhlenberg at the NCAA Division III Championships.</p>
+<p><a href="http://www.muhlenberg.edu/main/athletics/fall13/1121.html">preview</a> | <a href="http://www.hanover.edu/athletics/crosscountry/championships">meet site</a> | <a href="http://www.ncaa.com/liveschedule/2013/11/23">live video</a></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ECAC75th.jpg"><img class="alignleft size-thumbnail wp-image-2114" alt="ECAC75th" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ECAC75th-150x150.jpg" width="150" height="150" /></a>Football vs. Salisbury (Saturday, 1:00)</strong></p>
+<p>Muhlenberg (8-2) hosts the ECAC South Atlantic Bowl for the second straight year, welcoming a Salisbury (6-4) squad that was nationally ranked for most of the season.</p>
+<p><a href="http://www.muhlenberg.edu/main/athletics/fall13/1122.html">preview</a> | <a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm">live stats</a> | <a href="http://www.livestream.com/muhlenberg">live video</a></p>
+<p><strong>Basketball at Washington College (Saturday, women at 2:00; men at 4:00)</strong></p>
+<p>Both Muhlenberg teams are off to a hot start, with three wins and a Scotty Wood Tournament title under their belts. Although this is the third time in the last four years that both Mule squads started 3-0, it&#8217;s never happened that both started 4-0.</p>
+<p>It also had never happened that both teams won a one-point game this early in the season, but the men edged Gwynedd Mercy, 81-80, in the Scotty Wood final, and the women outlasted Swarthmore, 75-74, in their overtime Centennial Conference opener.</p>
+<p>This is the 21st time in the last 21 years that the Muhlenberg teams aren&#8217;t quite sure what to expect from their trip to Chestertown. Traditionally one of the hardest places in the CC for the Mules to play, the men won there last year but are only 5-16 at Washington since the start of CC play. The women have fared better, going 16-4, but it hasn&#8217;t been easy; two years ago, they <a href="http://www.muhlenberg.edu/main/athletics/winter12/0121.html">overcame a 17-point deficit</a> to win by three.</p>
+<p>Both Washington teams are 0-2.</p>
+<p><a href="http://washingtoncollegesports.com/sports/wbkb/live_stats">live stats (women)</a> | <a href="http://washingtoncollegesports.com/sports/mbkb/live_stats">live stats (men)</a> | <a href="http://client.stretchinternet.com/client/washcoll.portal#">live video</a></p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2113 -->
+
+				
+					
+	<article id="post-2088" class="post-2088 post type-post status-publish format-standard hentry category-cross-country category-football category-mens-basketball category-soccer category-womens-basketball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/15/weekend-preview-november-15-17-2013/" rel="bookmark">Weekend Preview &#8211; November 15-17, 2013</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/15/weekend-preview-november-15-17-2013/" title="10:50 am" rel="bookmark"><time class="entry-date" datetime="2013-11-15T10:50:17-04:00">November 15, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Not much going on in Muhlenberg athletics this weekend &#8211; except for an eight-team basketball tournament, a rivalry football game, an NCAA cross country meet, a postseason soccer tournament and four wrestling matches. It&#8217;s one of the biggest weekends of the year!</em></p>
+<p><strong>Basketball hosts Scotty Wood Tournament (Friday and Saturday, 1, 3, 6, and 8)</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/swtlogo_new.jpg"><img class="alignright size-medium wp-image-2090" alt="Scotty Wood Tournament" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/swtlogo_new-300x230.jpg" width="300" height="230" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/swtlogo_new-300x230.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/swtlogo_new-390x300.jpg 390w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/swtlogo_new.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a>The Scotty Wood Tournament tips off the Muhlenberg basketball season for the 32nd year. The Mule women open up against Rowan on Friday at 6:00, followed by the men against Bryn Athyn. Both Muhlenberg teams are trying to recapture the titles they won in 2011 after falling in the championship games last year.</p>
+<p><a href="http://www.muhlenberg.edu/main/athletics/fall13/1112page3.html" target="_blank">preview</a> | <a href="http://www.muhlenberg.edu/sports/wbblive/xlive.htm">live stats for Mule women&#8217;s games</a> | <a href="http://www.muhlenberg.edu/sports/mbblive/xlive.htm">live stats for Mule men&#8217;s games</a> | <a href="http://www.livestream.com/muhlenberg" target="_blank">live video</a></p>
+<p><strong>Cross Country hosts NCAA Mideast Regional (Saturday, women at 11:00, men at 12:30)</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ncaaxcsquare.jpg"><img class="alignright size-full wp-image-2092" alt="NCAA cross country" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ncaaxcsquare.jpg" width="203" height="211" /></a>Nearly 1,000 runners from 60 schools are scheduled to line up on Lehigh&#8217;s Goodman Campus in one of eight qualifier meets for the NCAA Championships (slated for next Saturday at Hanover, Ind.). Haverford has won the men&#8217;s meet the last three years, while Johns Hopkins brings in a streak of five straight regional championships.</p>
+<p>The top two teams in each race automatically qualify for the NCAA Championships, and there are also 16 at-large berths available to fill out the 32-team national field. After the team bids have been determined, the top seven individuals in each region not on a qualifying team are selected to run in the national meet.</p>
+<p>Muhlenberg, which is hosting the regional meet for the fourth time since 2001, has sent at least one runner to the NCAA Championships for the last eight seasons. Senior Nicki Cronin, who earned all-region honors by placing in the top 35 in both 2011 and 2012 and narrowly missed an NCAA berth last year, is the top candidate to continue that streak.</p>
+<p><a href="http://www.muhlenberg.edu/main/athletics/men/crosscountry/NCAAregional2013.html" target="_blank">meet central</a></p>
+<p><strong>Football vs. Moravian (Saturday, 1:00)</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/moraviantrophy.jpg"><img class="alignright size-full wp-image-2089" alt="football trophy" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/moraviantrophy.jpg" width="250" height="539" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/moraviantrophy.jpg 250w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/moraviantrophy-139x300.jpg 139w" sizes="(max-width: 250px) 100vw, 250px" /></a>In addition to all the reasons Moravian and Muhlenberg football players have anticipated this rivalry game for more than 50 years &#8211; local bragging rights, one last win for the seniors, etc. &#8211; there is now something else: A gleaming new trophy, donated by Sodexo, will go to the winner.</p>
+<p>The Mules (7-2, 6-2) come in on a historic roll, having beaten five straight opponents by at least 20 points for the first time in program history. The Greyhounds (2-7, 2-6) are on a surge of their own, with two wins in their last three games following on 0-6 start.</p>
+<p>Moravian has topped the 40-point mark three times in its last five games and boasts the top freshman runner and top rushing quarterback in the Centennial Conference. Muhlenberg has allowed only one offensive touchdown at home this season and ranks in the top 30 in Division III in scoring defense (20th), pass efficiency defense (24th), total defense (26th) and rushing defense (28th). The Mules have given up only three offensive touchdowns in their five-game winning streak.</p>
+<p>Two Mule milestones are possible: Nick Palladino needs 141 yards to break the CC mark for passing yards by a freshman, and Cody Geyer needs 88 receiving yards to record the fourth 1,000-yard season in program history.</p>
+<p>Moravian leads the all-time series, 33-26-2, but Muhlenberg has won eight of the last 11 meetings. The Mules have not allowed an offensive touchdown in taking the last two meetings.</p>
+<p><a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm" target="_blank">live stats</a> | <a href="http://www.livestream.com/muhlenberg" target="_blank">live video</a></p>
+<p><strong>Men&#8217;s Soccer at Swarthmore (Saturday, 7:00)</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ecacclr.jpg"><img class="alignright size-medium wp-image-2091" alt="ECAC logo" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ecacclr-300x93.jpg" width="300" height="93" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ecacclr-300x93.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/11/ecacclr.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a>The Mules (10-7-1) look to extend their season with an ECAC South semifinal game against CC rival Swarthmore (10-5-4). The winner faces the winners of the other semi between Frostburg State and Lebanon Valley in Sunday&#8217;s championship match.</p>
+<p>Muhlenberg hasn&#8217;t beaten Swarthmore since 2007, but all the meetings since have been close: a scoreless tie, two 1-0 games and four 2-1 games. The last time the teams faced each other in the postseason was the 2010 CC championship game, a thriller that the Garnet won in double overtime.</p>
+<p>The Mules went on to advance to the NCAA &#8220;Sweet 16&#8221; that year, which was the last time they won two postseason games in a season. Muhlenberg reached the ECAC championship game in both 1999 and 2000; its last ECAC title came in 1988.</p>
+<p><a href="http://www.sidearmstats.com/swarthmore/msoc/" target="_blank">live stats</a> | <a href="http://client.stretchinternet.com/client/swarthmore.portal#" target="_blank">live video</a></p>
+<p><strong>Wrestling at Penn Tech with Lafayette (Saturday, 12:00); at Scranton with Yeshiva (Sunday, 11:00)</strong></p>
+<p>After winning a dual meet at Mount St. Vincent last weekend, the Mules will try to pick up some more wins. Muhlenberg outscored Scranton in contested bouts, 25-3, the last two years, but lost the matches due to forfeits. The Mules defeated Yeshiva, 24-15, when the teams last met in 2011.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2088 -->
+
+				
+					
+	<article id="post-2035" class="post-2035 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-soccer category-volleyball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/01/weekend-preview-november-2-2013/" rel="bookmark">Weekend Preview &#8211; November 2, 2013</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/11/01/weekend-preview-november-2-2013/" title="7:27 am" rel="bookmark"><time class="entry-date" datetime="2013-11-01T07:27:25-04:00">November 1, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Two Muhlenberg teams will be competing for the Centennial Conference championships, two others have already qualified to do so, and two more will try to play their way in. Plus, football&#8217;s Homecoming and the start of winter sports.</em></p>
+<p><strong>Cross Country at McDaniel for Centennial Conference Championships (Saturday, 11:00 and 12:00)</strong></p>
+<p>The Mules will face strong competition at the conference meet, including several nationally ranked teams in both the men&#8217;s and women&#8217;s races. Last year, the women finished fourth and the men fifth.</p>
+<p>Complete preview: <a href="http://www.muhlenberg.edu/main/athletics/fall13/1031.html">http://www.muhlenberg.edu/main/athletics/fall13/1031.html</a></p>
+<p>Meet site: <a href="http://www.mcdanielathletics.com/sports/wxc/2013-14/cc-champs/index">http://www.mcdanielathletics.com/sports/wxc/2013-14/cc-champs/index</a></p>
+<p><strong>Volleyball vs. Swarthmore (Saturday, 12:00); vs. Moravian (Saturday, 4:00)</strong></p>
+<p>Muhlenberg (18-10, 7-2) hosts two important matches &#8211; for different reasons &#8211; on the final day of the regular season. The Mules have clinched a CC playoff berth and can land a bye to the semifinals (where they would face McDaniel) if they can beat Swarthmore (15-11, 3-6). A loss could drop Muhlenberg to the 4-5 match, which it would host on Wednesday.</p>
+<p>In the second match, the Mules will be playing for school pride (and possibly its first 20-win season since 2001) against a 10-20 Greyhound squad that had lost nine in a row heading into a Friday night match. Moravian took a 3-2 lead in the Matte Award race with a women&#8217;s soccer win on Wednesday, and the volleyball team has a chance to even the standings up.</p>
+<p>Muhlenberg trails the all-time series against both Swarthmore (17-16) and Moravian (40-9) and has lost five straight to both.</p>
+<p>Live stats (both Muhlenberg matches): <a href="http://www.muhlenberg.edu/sports/vblive/topview.htm">http://www.muhlenberg.edu/sports/vblive/topview.htm</a></p>
+<p><strong>Football vs. Dickinson (Saturday, 1:00)</strong></p>
+<p>Although it&#8217;s Family Weekend at Muhlenberg, it&#8217;s homecoming weekend for the football team, which has not played a home game in almost a month. The Mules (5-2, 4-2) have won each of their last three games by at least 20 points and will look to continue their roll.</p>
+<p>Dickinson (3-4, 3-3) has the third-best rushing attack in the CC and attempted only seven passes in last week&#8217;s 38-31 win against McDaniel. But the Devils&#8217; starting quarterback, who ranks second among CC QBs in rushing yards, was injured last week. Muhlenberg is second in the CC against the run, allowing only 114.4 yards per game.</p>
+<p>The Mules lead the all-time series, 41-25-2, and have taken 12 of the last 14 meetings, including a 61-21 win last year and a 12-0 shutout in the snow two years ago.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/livestats/xlive.htm">http://www.muhlenberg.edu/sports/livestats/xlive.htm</a></p>
+<p><strong>Women&#8217;s Soccer vs. Bryn Mawr (Saturday, 1:00)</strong></p>
+<p>Despite losing four in a row, Muhlenberg (6-10-1, 4-5) can clinch a CC playoff berth for the second straight year by defeating Bryn Mawr in its regular-season finale. If the Mules win, they will travel to either McDaniel or Dickinson for a first-round game on Wednesday.</p>
+<p>The Owls (2-14, 0-9) are winless in their last 17 CC contests and have scored only four goals all season, but they recently snapped a 13-game losing streak with an overtime win against Moravian, a team Muhlenberg just lost to.</p>
+<p>Muhlenberg has won 19 straight meetings against Bryn Mawr to take a 20-2 series lead. The Owls have been shut out in their last eight trips to Allentown, dating back to 1996.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">http://www.muhlenberg.edu/sports/wsoclive/xlive.htm</a></p>
+<p><strong>Field Hockey vs. Haverford (Saturday, 6:00)</strong></p>
+<p>Muhlenberg (8-8, 6-3) is in the CC playoffs for the first time since 2007 and, unless nationally ranked Ursinus unexpectedly loses to last-place Swarthmore, will face Haverford in a first-round game on Wednesday. The winner of this contest will get to host the rematch.</p>
+<p>The Fords (9-7, 5-4) have clinched their fifth straight playoff berth; they reached the CC championship game in 2010 and last year. A Mule defense that is second in the CC in fewest goals allowed in league games (11) faces a Haverford offense has scored 14 goals in its last three games.</p>
+<p>Muhlenberg leads the all-time series, 15-11, but Haverford has won four of the last five meetings.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/fhlive/xlive.htm">http://www.muhlenberg.edu/sports/fhlive/xlive.htm</a></p>
+<p><strong>Men&#8217;s Soccer at McDaniel (Saturday, 3:30)</strong></p>
+<p>Muhlenberg (8-7-1, 3-4-1) needs a win and lots of help to make the CC playoffs. But in such a competitive league, almost every game is close and anything is possible.</p>
+<p>First and foremost, the Mules must defeat last-place McDaniel (7-6-3, 1-5-2). The Green Terror started off the season with five straight wins, earned a regional ranking and was 6-1-3 a month ago but has lost five of its last six.</p>
+<p>Muhlenberg leads the all-time series, 32-7-1, and has never lost to McDaniel: The Mules&#8217; last series loss came in 2001 when the school was still known as Western Maryland. In 11 meetings since, Muhlenberg is 10-0-1 with a 18-1 scoring margin.</p>
+<p>Live stats: <a href="http://www.mcdanielathletics.com/livestats/landing">http://www.mcdanielathletics.com/livestats/landing</a></p>
+<p><strong>Wrestling at Monarch Invitational (Saturday, 9:00)</strong></p>
+<p>Muhlenberg opens its 2013-14 season with its annual trip to King&#8217;s for a 12-team tournament.</p>
+<p>Results (to be updated throughout the day): <a href="http://eztourns.com/2013listings.php">http://eztourns.com/2013listings.php</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2035 -->
+
+				
+					
+	<article id="post-1979" class="post-1979 post type-post status-publish format-standard hentry category-cross-country category-field-hockey category-football category-golf category-soccer category-volleyball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/10/17/weekend-preview-october-18-19-2013/" rel="bookmark">Weekend Preview – October 18-19, 2013</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/10/17/weekend-preview-october-18-19-2013/" title="10:25 pm" rel="bookmark"><time class="entry-date" datetime="2013-10-17T22:25:53-04:00">October 17, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignleft size-full wp-image-1812" alt="weekend preview" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" width="264" height="150" /></a>Football and cross country return to action after a week off, and the other fall teams gear up for a playoff push two weeks before the end of the regular season.</em></p>
+<p><strong>Field Hockey at Gettysburg (Friday, 3:30)</strong></p>
+<p>The Mules have it all in front of them as they seek to earn a postseason berth. Muhlenberg (5-7, 4-3) and Gettysburg (8-4, 3-3) are tied in the loss column (along with 3-3 Haverford) for fourth place in the Centennial Conference, two games behind third-place Ursinus. The last three CC opponents for the Mules? Gettysburg, Haverford and Ursinus.</p>
+<p>Gettysburg is second in the CC in scoring, averaging 3.8 goals per game, and has scored at least four in every game of its current five-game winning streak. Muhlenberg has allowed only 12 goals in its last 10 games, with three shutouts in the last four.</p>
+<p>Gettysburg leads the all-time series, 17-6, and has won the last five meetings since Muhlenberg&#8217;s 2-1 overtime victory in the last game of the 2007 regular season. Three of those five games were decided by one goal.</p>
+<p>Live stats/video: <a href="http://client.stretchinternet.com/client/gettysburg.portal#">http://client.stretchinternet.com/client/gettysburg.portal#</a></p>
+<p><strong>Volleyball vs. Gettysburg (Saturday, 12:00); vs. St. Lawrence (Saturday, 4:00)</strong></p>
+<p>Muhlenberg (15-7, 5-1) and Gettysburg (12-10, 5-1) are tied for second place in the CC. If Johns Hopkins beats Haverford Friday night, that will become a three-way tie. The Mules have won nine of their last 11 matches, while the Bullets bring in a three-match winning streak.</p>
+<p>Gettysburg holds a 26-2 series lead. The Mules’ lone wins came in their two playoff seasons. In 2001, they defeated the Bullets in the regular season but lost to them in the CC championship match, and in 2009, they pulled out a five-set win in the regular-season finale.</p>
+<p>The second match has less riding on it but is interesting for the fact that Muhlenberg will take on St. Lawrence (located in Canton, N.Y., near the Candadian border) exactly one week after facing Millsaps (located in Jackson, Miss.). To drive from one school to the other would take about 22 hours.</p>
+<p>Live stats (both matches): <a href="http://www.muhlenberg.edu/sports/vblive/topview.htm">http://www.muhlenberg.edu/sports/vblive/topview.htm</a></p>
+<p><strong>Women&#8217;s Soccer vs. Gettysburg (Saturday, 1:00)</strong></p>
+<p>Even though the Mules (6-7-1, 4-3) lost to Swarthmore on Wednesday night, they should be in good position for a playoff berth if they can win two of their last three games. The first one won&#8217;t be easy: Gettysburg (10-1-3, 5-1-1) has outscored its opponents by a 31-5 margin this year and received two votes in this week&#8217;s D3soccer.com poll.</p>
+<p>Gettysburg holds a 15-7-2 series lead and has won the last three meetings, all by shutout. Muhlenberg’s last series win was a 2-1 home victory in 2009.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/wsoclive/xlive.htm">http://www.muhlenberg.edu/sports/wsoclive/xlive.htm</a></p>
+<p><strong>Men&#8217;s Soccer vs. Johns Hopkins (Saturday, 7:00)</strong></p>
+<p>Far and away the top two programs in the 21-year history of the CC, Muhlenberg (7-5-1, 2-2-1) and Johns Hopkins (5-6-2, 2-2-1) are two of the five teams in a logjam in the middle of the CC standings. The Mules, playing their final home game of the season, are coming off a stretch in which they went 3-1-1 while playing four teams that were regionally ranked at the time of the game.</p>
+<p>These two teams are no strangers to each other. The Blue Jays lead 15-10-4 in a series that includes eight postseason meetings. All but one of the Mules’ 10 wins have come in Allentown, including a 2-0 shutout last year.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/msoclive/xlive.htm">http://www.muhlenberg.edu/sports/msoclive/xlive.htm</a></p>
+<p><strong></strong><strong>Football at Gettysburg (Saturday, 1:00)</strong></p>
+<p>All 10 CC teams return to action after the league-wide bye, and Muhlenberg will try to repeat its second-half effort of last year, when it averaged 40.0 points a game in winning its last five regular-season contests.</p>
+<p>On the surface, it looks like the Mules (3-2, 2-2) have a good chance to put up a lot of points against a Gettysburg (3-2, 2-2) defense that is allowing 35.0 points and 504.2 yards per game. But Muhlenberg, which is averaging 37.8 points per game, has had notorious trouble offensively at the Battlefield, scoring only 30 points in its last four visits.</p>
+<p>Gettysburg leads the all-time series, 43-33-1, but Muhlenberg has won 10 of the last 13 meetings.</p>
+<p>Live stats/video: <a href="http://client.stretchinternet.com/client/gettysburg.portal#">http://client.stretchinternet.com/client/gettysburg.portal#</a></p>
+<p><strong>Cross Country at Gettysburg Invitational (Saturday, 11:00)</strong></p>
+<p>This will be the first race in two weeks for the men&#8217;s team and the first in nearly a month for the women. For both teams, it will be the final tuneup for the November 2 CC Championship meet.</p>
+<p><strong>Men&#8217;s Golf at RU-Camden Scarlet Raptors Fall Invitational (Friday, 12:30)</strong></p>
+<p>Muhlenberg closes out its fall season with a trip to South Jersey. Last month, Rutgers-Camden won the Muhlenberg Invitational.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/" rel="category tag">cross country</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/golf/" rel="category tag">golf</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1979 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/cross-country/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/11/'>November 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/10/'>October 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/09/'>September 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/07/'>July 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/05/'>May 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/04/'>April 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/03/'>March 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/02/'>February 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/01/'>January 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/12/'>December 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/11/'>November 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/10/'>October 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/06/'>June 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/05/'>May 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/04/'>April 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/03/'>March 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/'>February 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/'>January 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/12/'>December 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/11/'>November 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/10/'>October 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/09/'>September 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/'>August 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/'>July 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/06/'>June 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/'>May 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/04/'>April 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/03/'>March 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/02/'>February 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/01/'>January 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/'>December 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/11/'>November 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/08/'>August 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://sportsinfo.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2Fcategory%2Fcross-country%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

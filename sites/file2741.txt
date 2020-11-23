@@ -1,0 +1,586 @@
+http://mediacom.internship.blogs.muhlenberg.edu/?p=1060/
+44
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head profile="http://gmpg.org/xfn/11">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+																		
+		<title>Center for Responsive Politics | Media &amp; Communication Internships</title>
+		 
+		<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Media &amp; Communication Internships &raquo; Feed" href="http://mediacom.internship.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Media &amp; Communication Internships &raquo; Comments Feed" href="http://mediacom.internship.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mediacom.internship.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mediacom.internship.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wilson_googleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic%7CRaleway%3A400%2C700&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wilson_style-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/themes/wilson-child/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://mediacom.internship.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediacom.internship.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The National Coalition Against Censorship (NCAC)' href='http://mediacom.internship.blogs.muhlenberg.edu/?p=1013' />
+<link rel='next' title='Sunlight foundation, Google journalism fellowship' href='http://mediacom.internship.blogs.muhlenberg.edu/?p=1075' />
+
+<link rel="canonical" href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1060" />
+<link rel='shortlink' href='http://mediacom.internship.blogs.muhlenberg.edu/?p=1060' />
+<link rel="alternate" type="application/json+oembed" href="http://mediacom.internship.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fmediacom.internship.blogs.muhlenberg.edu%2F%3Fp%3D1060" />
+<link rel="alternate" type="text/xml+oembed" href="http://mediacom.internship.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fmediacom.internship.blogs.muhlenberg.edu%2F%3Fp%3D1060&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://mediacom.internship.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mediacom.internship.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mediacom.internship.blogs.muhlenberg.edu/?wordfence_lh=1&hid=247CF4490B51AC60422348779B0B1399');
+</script>      
+	      <!--Customizer CSS--> 
+	      
+	      <style type="text/css">
+	           .blog-title a:hover { color:#ce2d48; }	           .blog-menu a:hover { color:#ce2d48; }	           .featured-media .sticky-post { background-color:#ce2d48; }	           .post-title a:hover { color:#ce2d48; }	           .post-meta a:hover { color:#ce2d48; }	           .post-content a { color:#ce2d48; }	           .post-content a:hover { color:#ce2d48; }	           .blog .format-quote blockquote cite a:hover { color:#ce2d48; }	           .post-content a.more-link:hover { background-color:#ce2d48; }	           .post-content fieldset legend { background-color:#ce2d48; }	           .post-content input[type="submit"]:hover { background-color:#ce2d48; }	           .post-content input[type="reset"]:hover { background-color:#ce2d48; }	           .post-content input[type="button"]:hover { background-color:#ce2d48; }	           .content .button:hover { background-color:#ce2d48; }	           .post-cat-tags a { color:#ce2d48; }	           .post-cat-tags a:hover { color:#ce2d48; }	           .archive-nav a:hover { background-color:#ce2d48; }	           .logged-in-as a { color:#ce2d48; }	           .logged-in-as a:hover { color:#ce2d48; }	           .content #respond input[type="submit"]:hover { background-color:#ce2d48; }	           .comment-meta-content cite a:hover { color:#ce2d48; }	           .comment-meta-content p a:hover { color:#ce2d48; }	           .comment-actions a:hover { color:#ce2d48; }	           #cancel-comment-reply-link { color:#ce2d48; }	           #cancel-comment-reply-link:hover { color:#ce2d48; }	           .comment-nav-below a:hover { color:#ce2d48; }	           .widget-title a { color:#ce2d48; }	           .widget-title a:hover { color:#ce2d48; }	           .widget_text a { color:#ce2d48; }	           .widget_text a:hover { color:#ce2d48; }	           .widget_rss a { color:#ce2d48; }	           .widget_rss a:hover { color:#ce2d48; }	           .widget_archive a { color:#ce2d48; }	           .widget_archive a:hover { color:#ce2d48; }	           .widget_links a { color:#ce2d48; }	           .widget_links a:hover { color:#ce2d48; }	           .widget_recent_comments a { color:#ce2d48; }	           .widget_recent_comments a:hover { color:#ce2d48; }	           .widget_recent_entries a { color:#ce2d48; }	           .widget_recent_entries a:hover { color:#ce2d48; }	           .widget_categories a { color:#ce2d48; }	           .widget_categories a:hover { color:#ce2d48; }	           .widget_meta a { color:#ce2d48; }	           .widget_meta a:hover { color:#ce2d48; }	           .widget_recent_comments a { color:#ce2d48; }	           .widget_pages a { color:#ce2d48; }	           .widget_pages a:hover { color:#ce2d48; }	           #wp-calendar a { color:#ce2d48; }	           #wp-calendar a:hover { color:#ce2d48; }	           #wp-calendar tfoot a:hover { color:#ce2d48; }	           .dribbble-shot:hover { background:#ce2d48; }	           .widgetmore a { color:#ce2d48; }	           .widgetmore a:hover { color:#ce2d48; }	           .flickr_badge_image a:hover img { background:#ce2d48; }	           .tagcloud a:hover { background:#ce2d48; }	           .credits a:hover { color:#ce2d48; }	           .mobile-menu a:hover { background:#ce2d48; }	      </style> 
+	      
+	      <!--/Customizer CSS-->
+	      
+      <style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+		
+	</head>
+	
+	<body class="bp-legacy post-template-default single single-post postid-1060 single-format-standard admin-bar no-customize-support no-js">
+	
+		<div class="wrapper">
+	
+			<div class="sidebar">
+							
+				<div class="blog-header">
+				
+									
+						<h1 class="blog-title">
+							<a href="http://mediacom.internship.blogs.muhlenberg.edu" title="Media &amp; Communication Internships &mdash; Get the Right Internship, Right Away!" rel="home">Media &amp; Communication Internships</a>
+						</h1>
+						
+						<h3 class="blog-description">Get the Right Internship, Right Away!</h3>
+					
+					
+				</div> <!-- /blog-header -->
+				
+				<div class="nav-toggle toggle">
+				
+					<p>
+						<span class="show">Show menu</span>
+						<span class="hide">Hide menu</span>
+					</p>
+				
+					<div class="bars">
+							
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						
+						<div class="clear"></div>
+						
+					</div>
+				
+				</div> <!-- /nav-toggle -->
+				
+				<div class="blog-menu">
+			
+					<ul class="navigation">
+					
+						<li class="page_item page-item-138"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=138">MediaCom Home</a></li>
+<li class="page_item page-item-1085"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1085">Summer internships</a></li>
+<li class="page_item page-item-2"><a href="http://mediacom.internship.blogs.muhlenberg.edu/">Welcome!</a></li>
+<li class="page_item page-item-739"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=739">Internship vs. Practicum</a></li>
+<li class="page_item page-item-70"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=70">How To Register</a></li>
+<li class="page_item page-item-11 current_page_parent"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=11">Opportunities (Updated)</a></li>
+<li class="page_item page-item-767"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=767">Student endorsements</a></li>
+<li class="page_item page-item-832"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=832">Career Connections</a></li>
+<li class="page_item page-item-1121"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1121">Forms</a></li>
+<li class="page_item page-item-1168"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1168">Faculty recommendations</a></li>
+												
+					 </ul>
+					 
+					 <div class="clear"></div>
+					 
+				</div> <!-- /blog-menu -->
+				
+				<div class="mobile-menu">
+						 
+					 <ul class="navigation">
+					
+						<li class="page_item page-item-138"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=138">MediaCom Home</a></li>
+<li class="page_item page-item-1085"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1085">Summer internships</a></li>
+<li class="page_item page-item-2"><a href="http://mediacom.internship.blogs.muhlenberg.edu/">Welcome!</a></li>
+<li class="page_item page-item-739"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=739">Internship vs. Practicum</a></li>
+<li class="page_item page-item-70"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=70">How To Register</a></li>
+<li class="page_item page-item-11 current_page_parent"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=11">Opportunities (Updated)</a></li>
+<li class="page_item page-item-767"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=767">Student endorsements</a></li>
+<li class="page_item page-item-832"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=832">Career Connections</a></li>
+<li class="page_item page-item-1121"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1121">Forms</a></li>
+<li class="page_item page-item-1168"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1168">Faculty recommendations</a></li>
+						
+					 </ul>
+					 
+				</div> <!-- /mobile-menu -->
+				
+				
+					<div class="widgets" role="complementary">
+					
+								<div class="widget widget_recent_entries"><div class="widget-content">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1924">Muhlenberg (Intern)Yearbook Content Manager</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1922">PR summer internship at The Lippin Group</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1920">PR Summer Internship (BCW Harold Internship Program) (paid!)</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1913">Summer Internship- Multimedia/Video Production &#8211; Information Technology Services (Paid)</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1908">Summer Internship Stipend Application &#8211; Alumni Board Career Scholarship</a>
+									</li>
+					</ul>
+		</div><div class="clear"></div></div>						
+					</div><!-- /widgets -->
+					
+													
+			</div> <!-- /sidebar -->
+<div class="content">
+											        
+		
+		<div class="posts">
+	
+			<div id="post-1060" class="post-1060 post type-post status-publish format-standard hentry category-public-interest category-uncategorized">
+			
+									
+								
+				<div class="post-inner">
+
+				<div class="post-header">
+					
+				    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1060" rel="bookmark" title="Center for Responsive Politics">Center for Responsive Politics</a></h2>
+				    
+				    <div class="post-meta">
+					
+						<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1060" title="Center for Responsive Politics">November 24, 2013</a></span>
+						
+						<span class="date-sep"> / </span>
+							
+						<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+						
+						<span class="date-sep"> / </span>
+						
+						<span>Comments Off<span class="screen-reader-text"> on Center for Responsive Politics</span></span>						
+																		
+					</div> <!-- /post-meta -->
+				    
+				</div> <!-- /post-header -->
+													                                    	    
+				<div class="post-content">
+					    		            			            	                                                                                            
+					<p><a href="http://mediacom.internship.blogs.muhlenberg.edu/files/2013/11/os_logo_home.png"><img class="alignnone size-full wp-image-1061" alt="os_logo_home" src="http://mediacom.internship.blogs.muhlenberg.edu/files/2013/11/os_logo_home.png" width="300" height="97" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The Center for Responsive Politics offers challenging public interest internships for students in Washington, DC.</p>
+<p>As described on their website, &#8220;we track the money and other behind-the-scenes forces shaping the government policies that affect each of us every day. Which members of congressional finance committees have benefited the most from contributions from the companies looking for relief from new regulations? How much money are lobbyists spending to bend legislation in their favor, and which industries do they represent? How much personal money do our lawmakers have invested in companies that do tens of millions of dollars worth of business with the government itself? As an intern at the Center, you&#8217;ll help us answer questions like these to inform voters and keep our politicians honest.&#8221;</p>
+<p>There are several different internships posted on its website, including news reporting, research, advocacy, and &#8216;it.&#8217; See their website for details on how to apply and on each position: http://www.opensecrets.org/about/intern.php.  There are possibilities of lodging in Washington, DC that I can talk to you about that would make this a reasonable possibility.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+							
+													        
+				</div> <!-- /post-content -->
+				            
+				<div class="clear"></div>
+				
+			</div> <!-- /post-inner -->
+			
+		</div> <!-- /post -->
+		
+	</div> <!-- /posts -->
+								
+	<div class="post-meta-bottom">
+	
+		<div class="post-cat-tags">
+														
+			<p class="post-categories"><span>Categories:</span> <a href="http://mediacom.internship.blogs.muhlenberg.edu/?cat=866" rel="category">Public Interest</a>, <a href="http://mediacom.internship.blogs.muhlenberg.edu/?cat=1" rel="category">Uncategorized</a></p>
+			
+					
+		</div> <!-- /post-cat-tags -->
+										
+		<div class="archive-nav post-nav">
+									
+						
+				<a class="post-nav-older" title="Previous post: The National Coalition Against Censorship (NCAC)" href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1013">
+				
+				&laquo; The National Coalition Against Censorship (NCAC)				
+				</a>
+		
+						
+							
+				<a class="post-nav-newer" title="Next post: Sunlight foundation, Google journalism fellowship" href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1075">
+				
+				Sunlight foundation, Google journalism fellowship &raquo;
+				
+				</a>
+		
+													
+			<div class="clear"></div>
+		
+		</div> <!-- /post-nav -->
+							
+	</div> <!-- /post-meta-bottom -->
+	
+	
+		
+		
+		<p class="nocomments">Comments are closed.</p>
+		
+		
+	 
+				
+	   
+
+  	<div class="credits">
+		
+			<div class="credits-inner">
+			
+				<p class="credits-left">
+				
+					<p> &copy; 2020 <a href="http://mediacom.internship.blogs.muhlenberg.edu" title="Media &amp; Communication Internships">Media &amp; Communication Internships</a></p>
+				
+<p><a href="http://www.muhlenberg.edu" target="_blank">Muhlenberg College</a></p>
+          <p>2400 Chew St. Allentown, PA 18104-5586</p>
+          <p>484-664-3100 -- 484-664-3623 (TTY)</p>
+				
+				<div class="clear"></div>
+			
+			</div> <!-- /credits-inner -->
+			
+		</div> <!-- /credits -->
+	
+	</div> <!-- /content -->
+	
+	<div class="clear"></div>
+	
+</div> <!-- /wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/themes/wilson-child/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mediacom.internship.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediacom.internship.blogs.muhlenberg.edu%2F%3Fp%3D1060%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mediacom.internship.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

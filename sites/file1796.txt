@@ -1,0 +1,2377 @@
+http://fys142f16.blogs.muhlenberg.edu/syllabus/
+160
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Schedule and Topic Outline | </title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<title>Schedule and Topic Outline</title>
+<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://fys142f16.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://fys142f16.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Schedule and Topic Outline Comments Feed" href="http://fys142f16.blogs.muhlenberg.edu/syllabus/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-fonts-css'  href='//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700%7CDroid+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-style-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/style.css?ver=2013-10-21' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f16.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f16.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="canonical" href="http://fys142f16.blogs.muhlenberg.edu/syllabus/" />
+<link rel='shortlink' href='http://fys142f16.blogs.muhlenberg.edu/?p=2343' />
+<link rel="alternate" type="application/json+oembed" href="http://fys142f16.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fsyllabus%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://fys142f16.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fsyllabus%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://fys142f16.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f16.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f16.blogs.muhlenberg.edu/?wordfence_lh=1&hid=1830B7E93219588EDE2190AD29E1AF47');
+</script>	<style type="text/css" id="yoko-themeoptions-css">
+		a {color: #3284ff;}
+		#content .single-entry-header h1.entry-title {color: #3284ff!important;}
+		input#submit:hover {background-color: #3284ff!important;}
+		#content .page-entry-header h1.entry-title {color: #3284ff!important;}
+		.searchsubmit:hover {background-color: #3284ff!important;}
+	</style>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy page-template-default page page-id-2343 admin-bar no-customize-support no-js">
+<div id="page" class="clearfix">
+	<header id="branding">
+		<nav id="mainnav" class="clearfix">
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-3074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3074"><a href="http://fys142f16.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-3075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3075"><a href="http://fys142f16.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-3076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3076"><a href="http://fys142f16.blogs.muhlenberg.edu/info-assign-grading/">Info/Assignment/Grading</a></li>
+<li id="menu-item-3077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3077"><a href="http://fys142f16.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-3078" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2343 current_page_item menu-item-3078"><a href="http://fys142f16.blogs.muhlenberg.edu/syllabus/" aria-current="page">Schedule and Topic Outline</a></li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-5"><a href="http://fys142f16.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>		</nav><!-- end mainnav -->
+
+		
+		<hgroup id="site-title">
+					<h1><a href="http://fys142f16.blogs.muhlenberg.edu/" title=""></a></h1>
+				<h2 id="site-description"></h2>
+				</hgroup><!-- end site-title -->
+
+								<img alt="" src="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/cropped-Screen-Shot-2016-09-01-at-9.20.53-AM-1.png" class="headerimage" width="1102" height="350">
+			
+		<nav id="subnav">
+					</nav><!-- end subnav -->
+</header><!-- end header -->
+
+<div id="wrap">
+<div id="main">
+
+	<div id="content">
+
+				
+				
+<article id="post-2343" class="post-2343 page type-page status-publish hentry">
+
+	<header class="page-entry-header">
+		<h1 class="entry-title">Schedule and Topic Outline</h1>
+	</header><!--end page-entry-hader-->
+
+	<div class="single-entry-content">
+		<p><a title="Downloadable PDF of syllabus" href="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/FYS142DigitalWorldF16Final.pdf">Downloadable PDF of syllabus</a>.</p>
+<h2>Week 1:  Introduction / Reading, Writing, Analyzing, Citing</h2>
+<p><a name="aug30"></a></p>
+<h3>August 30</h3>
+<ul>
+<li>Course Overview</li>
+<li>Syllabus Review</li>
+<li>Class Expectations</li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/da1-create-blogs-acct/" target="_blank">Digital Activity #1</a>, Due before class on September 1</li>
+</ul>
+<p><a name="sep01"></a></p>
+<h3>September 1</h3>
+<ul>
+<li>Information types, how to find information, reading and writing, citing information</li>
+<li>Readings
+<ul>
+<li>Chapters 1 and 8 of <i>Writing Analytically</i></li>
+</ul>
+</li>
+<li>In Class:
+<ul>
+<li>Exercise for using the Five Analytical Moves: <a href="https://href.li/?http://www.huffingtonpost.com/mike-hanski/read-more_b_5192754.html" rel="noreferrer">http://www.huffingtonpost.com/mike-hanski/read-more_b_5192754.html</a></li>
+<li>Sign up for writing session with Megan: <a href="https://docs.google.com/spreadsheets/d/1phJEQvCwO0Ein6UnCqpCK_7AUVeJxpWH_uXusvDFPsM/edit?usp=sharing">Google Sign Up Sheet</a></li>
+</ul>
+</li>
+<li>Assignment:
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Post #1</a></li>
+<li><span style="color: #ff0000;">DUE: <span style="color: #000000;">posted to <a href="http://fys142f16.blogs.muhlenberg.edu/">http://fys142f16.blogs.muhlenberg.edu/</a> by 11:59pm Sunday, September 4. </span></span></li>
+</ul>
+</li>
+</ul>
+<h2>Week 2: History of the Internet / Writing Process Meetings</h2>
+<p><a name="sep06"></a></p>
+<p>Meetings with Megan: Sign up on this <a href="https://docs.google.com/spreadsheets/d/1phJEQvCwO0Ein6UnCqpCK_7AUVeJxpWH_uXusvDFPsM/edit?usp=sharing">Google Sheet</a></p>
+<h3>September 6</h3>
+<ul>
+<li> Readings:
+<ul>
+<li>Bush, V. (1945, July).  As we may think. <em>Atlantic Monthly. </em> Retrieved from <a href="http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/">http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/</a></li>
+</ul>
+</li>
+<li>Multimedia:
+<ul>
+<li>Uberflip. (2014, May 28). A Day In The Life Of The Internet [Infographic]. Retrieved from <a href="http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic" target="_blank">http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</a>.</li>
+<li>Vizzuality, Hyperakt, &amp; Google Chrome. (n.d.). The evolution of the web [Infographic]. Retrieved from <a href="http://www.evolutionoftheweb.com/" target="_blank">http://www.evolutionoftheweb.com/</a>.</li>
+</ul>
+</li>
+<li>Digital Activity #2: <a href="http://fys142f16.blogs.muhlenberg.edu/da-zotero/">Zotero</a>, Due before class September 8.</li>
+<li>Assignment:
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Assignment #2</a></li>
+<li><span style="color: #ff0000;">DUE</span>: <span style="color: #ff0000;"><span style="color: #000000;">posted to <a href="http://fys142f16.blogs.muhlenberg.edu/">http://fys142f16.blogs.muhlenberg.edu/</a> by 11:59pm Monday, September 12. </span></span></li>
+</ul>
+</li>
+</ul>
+<p><a name="sep08"></a></p>
+<h3>September 8</h3>
+<ul>
+<li>Readings:
+<ul>
+<li>Chapters 2 and 3 of <i>Writing Analytically</i>; Skim Chapter 11</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">PEW Research Center. (2014, March 11). World Wide Web Timeline. Retrieved from <a href="http://www.pewinternet.org/2014/03/11/world-wide-web-timeline/">http://www.pewinternet.org/2014/03/11/world-wide-web-timeline/.</a></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Week 3: Your Digital World</h2>
+<p><a name="sep13"></a></p>
+<h3>September 13</h3>
+<ul>
+<li> Readings:
+<ul>
+<li>Lenhart, A. (2015, April 9). Teens, social media &amp; technology overview 2015. Retrieved from <a href="http://www.pewinternet.org/2015/04/09/teens-social-media-technology-2015/" target="_blank">http://www.pewinternet.org/2015/04/09/teens-social-media-technology-2015/</a>.</li>
+<li>Rosen, C. (2016, August 25). Teens Who Say No to Social Media. Wall Street Journal. Retrieved from <a href="http://www.wsj.com/articles/teens-who-say-no-to-social-media-1472136877" target="_blank">http://www.wsj.com/articles/teens-who-say-no-to-social-media-1472136877</a>.
+<ul>
+<li>Alternate Link through Trexler Library access: <a href="https://muhlenberg.idm.oclc.org/login?url=http://search.proquest.com.muhlenberg.idm.oclc.org/docview/1814282390?accountid=40980">https://muhlenberg.idm.oclc.org/login?url=http://search.proquest.com.muhlenberg.idm.oclc.org/docview/1814282390?accountid=40980 </a></li>
+<li>Alternate Link: <a href="https://t.co/LIBqJCBMnR">https://t.co/LIBqJCBMnR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Digital Activity #3: <a href="http://fys142f16.blogs.muhlenberg.edu/da3-tech-profile/">Technology Survey</a>, due by noon on September 15</li>
+<li>Assignment: <a href="http://fys142f16.blogs.muhlenberg.edu/technology-autobiography/">Technology Autobiography</a>, due by 11:59pm, Wednesday September 21</li>
+</ul>
+<p><a name="sep15"></a></p>
+<h3>September 15</h3>
+<ul>
+<li>Readings:
+<ul>
+<li>Chapter 4 of <i>Writing Analytically</i>; Skim Chapter 10</li>
+</ul>
+</li>
+<li>Survey Results: <a href="https://www.surveymonkey.com/results/SM-DCG8WW8X/">https://www.surveymonkey.com/results/SM-DCG8WW8X/</a></li>
+<li>Digital Activity #4: <a href="http://fys142f16.blogs.muhlenberg.edu/da4-twitter/">Twitter</a>, first tweet due by noon, Thursday September 22</li>
+</ul>
+<h2>Week 4: Learning, Reading, Writing</h2>
+<p><a name="sep20"></a></p>
+<h3>September 20</h3>
+<ul>
+<li> Readings:
+<ul>
+<li>Chapter 5 of <i>Writing Analytically</i></li>
+<li>Everyone: Chapter 7 on literacy from (available online: <a href="http://www.danah.org/books/ItsComplicated.pdf" target="_blank">http://www.danah.org/books/ItsComplicated.pdf</a>):
+<ul>
+<li>boyd, d. (2014). <em><span class="st">It&#8217;s complicated: The social lives of networked teens. </span></em><span class="st">New Haven: Yale University Press. </span></li>
+</ul>
+</li>
+<li>Abbey, Chris, Jamie, Lauren, Melissa, Michael, Ricky, Zhijiang:
+<ul>
+<li>Purcell, K., Rainie, L., Heaps, A., Buchanan, J., Friedrich, L., Jacklin, A., … Zickuhr, K. (2012, November 1). <em>How teens do research in a digital world</em>. Retrieved from: <a href="http://pewinternet.org/Reports/2012/Student-Research.aspx" target="_blank">http://pewinternet.org/Reports/2012/Student-Research.aspx</a>.</li>
+</ul>
+</li>
+<li>Caroline, Heather, Jiahui, Justin, Matt, Rosie, Sarah:
+<ul>
+<li>Head, A.J. &amp; Eisenberg, M.B. (2010, November 1). <em>Truth be told: How college students evaluate and use information in the digital age. </em>Retrieved from: <a href="http://projectinfolit.org/images/pdfs/pil_fall2010_survey_fullreport1.pdf">http://projectinfolit.org/images/pdfs/pil_fall2010_survey_fullreport1.pdf</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a name="sep22"></a></p>
+<h3>September 22</h3>
+<ul>
+<li> Readings:
+<ul>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Pot, J. (2015, August 19). The 4 Worst Arguments for Teaching Cursive in Schools. Retrieved from <a href="http://www.makeuseof.com/tag/4-worst-arguments-teaching-cursive-schools/" target="_blank">http://www.makeuseof.com/tag/4-worst-arguments-teaching-cursive-schools/</a></div>
+</div>
+</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Rosenwald, M. S. (2015, February 22). Why digital natives prefer reading in print. Yes, you read that right. <i>The Washington Post</i>. Retrieved from <a href="https://www.washingtonpost.com/local/why-digital-natives-prefer-reading-in-print-yes-you-read-that-right/2015/02/22/8596ca86-b871-11e4-9423-f3d0a1ec335c_story.html" target="_blank">https://www.washingtonpost.com/local/why-digital-natives-prefer-reading-in-print-yes-you-read-that-right/2015/02/22/8596ca86-b871-11e4-9423-f3d0a1ec335c_story.html</a></div>
+</div>
+</li>
+</ul>
+</li>
+<li>Skim <a href="https://www.mccormick.northwestern.edu/career-development/documents/getting-started/job-search/NACE%20Job%20Outlook%202016.pdf">NACE Job Outlook 2016</a></li>
+<li>Digital Activity: <a href="http://fys142f16.blogs.muhlenberg.edu/da5-linkedin-profile/">LinkedIn</a>, <span style="color: #ff0000;">DUE</span> by start of class, September 29</li>
+<li>Assignment:
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Post #3</a></li>
+<li><span style="color: #ff0000;">DUE</span>: by 11:59pm, Monday, September 26</li>
+</ul>
+</li>
+<li>Introduction of <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a> assignment.
+<div class="csl-bib-body"></div>
+</li>
+</ul>
+<h2>Week 5: Identity</h2>
+<p><a name="sep27"></a></p>
+<h3>September 27</h3>
+<ul>
+<li>Readings:
+<ul>
+<li><span style="color: #0000ff;"><span style="color: #0000ff;">Blue <span style="color: #000000;">(blue): Sarah, Jiahui, Michael, Abbey<br />
+</span></span></span></p>
+<ul>
+<li>Chapter 1 on identity <span style="line-height: 24px;">(available online: </span><a style="line-height: 24px;" href="http://muhlenberg.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;db=nlebk&amp;AN=698181&amp;site=ehost-live&amp;scope=site" target="_blank">http://muhlenberg.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;db=nlebk&amp;AN=698181&amp;site=ehost-live&amp;scope=site</a><span style="line-height: 24px;">)</span>: boyd, d. (2014). <em><span class="st">It&#8217;s complicated: The social lives of networked teens. </span></em><span class="st">New Haven: Yale University Press. </span></li>
+</ul>
+</li>
+<li><span style="color: #ffff00;">Yellow <span style="color: #000000;">(yellow): Chris, Ricky, Justin, Rosey<br />
+</span></span></p>
+<ul>
+<li>Chapter 4 on Personal Identity in the Age of the App: Gardner, H. &amp; Davis, K. (2013). <em>The app generation : how today&#8217;s youth navigate identity, intimacy, and imagination in a digital world</em><em><span class="st">. </span></em><span class="st">New Haven: Yale University Press. </span></li>
+</ul>
+</li>
+<li><span style="color: #008000;">Green <span style="color: #000000;">(green): Zhijiang, Lauren, Matt, Jamie<br />
+</span></span></p>
+<ul>
+<li>Article via library database (<a href="http://muhlenberg.worldcat.org/oclc/615509018" target="_blank">http://muhlenberg.worldcat.org/oclc/615509018</a>): Goode, J. (January 01, 2010). The digital identity divide: how technology knowledge impacts college students. <i>New Media &amp; Society, </i><i>12, </i>3, 497-513.</li>
+</ul>
+</li>
+<li><span style="color: #ff0000;">Red <span style="color: #000000;">(red): Heather, Melissa, Caroline<br />
+</span></span></p>
+<ul>
+<li>Two multimedia resources:</li>
+<li>Tranberg, P. [TEDxTalks]. (2013, April 10).  <em>Fake It – to control your digital identity: Pernille Tranberg at TEDxOxford</em> [Video file].  Retrieved from <a href="http://www.youtube.com/watch?v=cRrgD-4-D8s">http://www.youtube.com/watch?v=cRrgD-4-D8s</a>.</li>
+<li>Wainmaring, S. (2011, October 10).  <em>Sherry Turkle of MIT: How social media impacts to your identity (Part 2)</em> [Blog post].  Retrieved from <a href="http://simonmainwaring.com/social-networking/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/">http://simonmainwaring.com/social-networking/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>In Class: <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a> meeting</li>
+</ul>
+<p><a name="sep29"></a></p>
+<h3>September 29</h3>
+<ul>
+<li>Group Facilitations from assigned groupings from Tuesday&#8217;s resources (~15 minutes each group)</li>
+<li><span style="color: #ff0000;"><span style="color: #ff0000;"><span style="color: #000000;">Assignment:</span></span></span>
+<ul>
+<li>Continue with <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a> ; have resource selections made by September 30</li>
+<li>Final resource list to Tina by October 11 to post to course schedule outline.</li>
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #4</a>
+<ul>
+<li>Meetings with Megan during the week of October 2</li>
+<li><span style="color: #ff0000;">DUE</span>: by start of class on October 13</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Week 6: Your (Digital) Identity &amp; Literacies</h2>
+<p><a name="oct04"></a></p>
+<h3>October 4</h3>
+<ul>
+<li>Readings:
+<ul>
+<li>Tim Chambers, Who Owns the Digital You? in <em>Huffington Post:</em>
+<ul>
+<li><a href="http://www.huffingtonpost.com/tim-chambers/who-owns-the-digital-you_b_789348.html?">Part 1</a></li>
+<li><a href="http://www.huffingtonpost.com/tim-chambers/who-owns-the-digital-you-_b_826662.html?">Part 2</a></li>
+<li><a href="http://www.huffingtonpost.com/tim-chambers/part-three-who-owns-the-d_b_846385.html?">Part 3</a></li>
+</ul>
+</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Watters, A. (2016, August 23). A domain of one’s own in a post-ownership society. Retrieved from <a href="http://hackeducation.com/2016/08/23/domains">http://hackeducation.com/2016/08/23/domains.</a></div>
+</div>
+</li>
+</ul>
+</li>
+<li>Continue with <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a> work</li>
+<li>Meetings with Megan on Blog Post #4</li>
+<li>Digital Activity #6: <a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">Google Yourself</a>
+<ul>
+<li>Due by the start of class, Tuesday, October 11.</li>
+</ul>
+</li>
+</ul>
+<p><a name="oct06"></a></p>
+<h3>October 6</h3>
+<ul>
+<li>Chapter 7 on literacy <span style="line-height: 24px;">(available online: </span><a style="line-height: 24px;" href="http://muhlenberg.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;db=nlebk&amp;AN=698181&amp;site=ehost-live&amp;scope=site" target="_blank">http://muhlenberg.idm.oclc.org/login?url=http://search.ebscohost.com/login.aspx?direct=true&amp;db=nlebk&amp;AN=698181&amp;site=ehost-live&amp;scope=site</a><span style="line-height: 24px;">)</span>: boyd, d. (2014). <em><span class="st">It&#8217;s complicated: The social lives of networked teens. </span></em><span class="st">New Haven: Yale University Press. </span>
+<ul>
+<li><a href="http://www.danah.org/books/ItsComplicated.pdf">alternate link</a></li>
+</ul>
+</li>
+<li><span style="color: #ff0000;"><span style="color: #000000;">Continue with assignment:</span></span>
+<ul>
+<li>Continue with <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a></li>
+<li>Final resource list to Tina by October 11 to post to course schedule outline.</li>
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #4</a>
+<ul>
+<li>Meetings with Megan</li>
+<li><span style="color: #ff0000;">DUE</span>: by start of class on October 13</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><span style="color: #800080;">EXTRA CREDIT OPPORTUNITIES</span></h3>
+<ul>
+<li>Live tweet from the event using #fys142. Can earn up to 15 points for each session:
+<ul>
+<li>October 13: Jim Groom talk; 7:30 in Trexler Library A-level Concourse
+<ul>
+<li>&#8220;A Pandora&#8217;s Box: for Teaching, Scholarship, and Identity&#8221;</li>
+</ul>
+</li>
+<li>October 19: Adrienne Shaw talk; 7:00 in Miller Forum
+<ul>
+<li>&#8220;Representation Matters: Reframing Arguments for Diversity in Digital Games&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="csl-bib-body">
+<h2>Week 7: Your (Digital) Identity &amp; Control</h2>
+<p><a name="oct11"></a></p>
+<h3>October 11</h3>
+<ul>
+<li>Readings:
+<ul>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Watters, A. (2016, August 23). A domain of one’s own in a post-ownership society. Retrieved from <a href="http://hackeducation.com/2016/08/23/domains">http://hackeducation.com/2016/08/23/domains.</a></div>
+</div>
+</li>
+</ul>
+</li>
+<li>Online Discussion (in lieu of class meeting):
+<ul>
+<li>Discussion Posts:
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/10/ownership-domain-writing-education/">Ownership Part 1</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/10/ownership-continued/">Ownership Part 2</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="color: #ff0000;"><span style="color: #000000;">Continue with assignment:</span></span>
+<ul>
+<li>Continue with <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a>
+<ul>
+<li>Final resource list to Tina by October 11 to post to course schedule outline.</li>
+</ul>
+</li>
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #4</a>
+<ul>
+<li>Meetings with Megan</li>
+<li><span style="color: #ff0000;">DUE</span>: by start of class on October 13</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Digital Activity #6: <a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">Google Yourself</a>
+<ul>
+<li>Due by the start of class, Tuesday, October 11.</li>
+</ul>
+</li>
+</ul>
+<p><a name="oct13"></a></p>
+<h3>October 13</h3>
+<ul>
+<li>Guest lecturer: Jim Groom (<a href="http://jimgroom.net/about/">About</a> Jim Groom)</li>
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #5</a>
+<ul>
+<li>Post a blog post about our class discussion with Jim Groom.</li>
+<li><span style="color: #ff0000;">DUE</span>: by start of class on October 20</li>
+</ul>
+</li>
+</ul>
+<h3><span style="color: #800080;">EXTRA CREDIT OPPORTUNITIES</span></h3>
+<ul>
+<li>Live tweet from the event using #fys142. Can earn up to 15 points for each session:
+<ul>
+<li>October 13: Jim Groom talk; 7:30 in Trexler Library A-level Concourse
+<ul>
+<li>&#8220;A Pandora&#8217;s Box: for Teaching, Scholarship, and Identity&#8221;</li>
+</ul>
+</li>
+<li>October 19: Adrienne Shaw talk; 7:00 in Miller Forum
+<ul>
+<li>&#8220;Representation Matters: Reframing Arguments for Diversity in Digital Games&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Week 8: Peer Facilitation</h2>
+<p><a name="oct18"></a></p>
+<h3>October 18</h3>
+<p>We will not meet as a class on October 18. Each group should meet to plan out your <a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/" target="_blank">peer facilitation</a> discussion. Your group can decide where to meet. This is your class time to prepare for your group&#8217;s topic presentation and how you will facilitate the discussion in class.</p>
+<h3><span style="color: #800080;">EXTRA CREDIT OPPORTUNITY</span></h3>
+<ul>
+<li>Live tweet from the event using #fys142. Can earn up to 15 points:
+<ul>
+<li>October 19: Adrienne Shaw talk; 7:00 in Miller Forum
+<ul>
+<li>&#8220;Representation Matters: Reframing Arguments for Diversity in Digital Games&#8221;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><a name="oct20"></a></p>
+<h3>October 20</h3>
+<ul>
+<li><strong><span style="color: #0000ff;">Networks &amp; Social Media</span></strong>: Abbey, Sarah, Lauren
+<ul>
+<li>Readings/Resources:
+<ul>
+<li>Winter, J., &amp; Martinelli, M. (2013, July 23). Selfie-Loathing. Slate. Retrieved from <a href="http://www.slate.com/articles/technology/technology/2013/07/instagram_and_self_esteem_why_the_photo_sharing_network_is_even_more_depressing.html">http://www.slate.com/articles/technology/technology/2013/07/instagram_and_self_esteem_why_the_photo_sharing_network_is_even_more_depressing.html</a></li>
+<li>BuzzFeedBlue. (2015, November 4). Instagram Star Reveals The Truth Behind Her Photos. Retrieved from <a href="https://www.youtube.com/watch?v=zsxSMdFC20E">https://www.youtube.com/watch?v=zsxSMdFC20E</a></li>
+<li>Social. (2016, July 25). Instagram By The Numbers  [Infographic]. Retrieved from <a href="http://www.socialmediatoday.com/social-networks/instagram-numbers-infographic">http://www.socialmediatoday.com/social-networks/instagram-numbers-infographic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span style="color: #0000ff;"><strong>Cyberbullying</strong></span>: Rosie, Melissa, Jamie
+<ul>
+<li>Readings/Resources:
+<ul>
+<li>Cyberbullying in general:
+<ul>
+<li>Amanda Lenhart. “Cyberbullying.” <i>Pew Research Center: Internet, Science &amp; Tech</i>, June 27, 2007. <a href="http://www.pewinternet.org/2007/06/27/cyberbullying/">http://www.pewinternet.org/2007/06/27/cyberbullying/</a>.</li>
+</ul>
+</li>
+<li>Cyberbullying vs. Traditional bullying
+<ul>
+<li>“Differences between Cyberbullying and Traditional Bullying &#8211; Student Resources in Context.” Accessed October 8, 2016. <a href="http://ic.galegroup.com/ic/suic/ReferenceDetailsPage/DocumentToolsPortletWindow?displayGroupName=Reference&amp;u=groves&amp;p=SUIC&amp;action=2&amp;catId=&amp;documentId=GALE%7CEJ2181500310&amp;zid=6fd20aaf5793389959fde88575ac3810">http://ic.galegroup.com/ic/suic/ReferenceDetailsPage/DocumentToolsPortletWindow?displayGroupName=Reference&amp;u=groves&amp;p=SUIC&amp;action=2&amp;catId=&amp;documentId=GALE%7CEJ2181500310&amp;zid=6fd20aaf5793389959fde88575ac3810</a>.</li>
+</ul>
+</li>
+<li>The effects of cyberbullying:
+<ul>
+<li>ASPA. “What Is Cyberbullying,” March 7, 2012. <a href="https://www.stopbullying.gov/cyberbullying/what-is-it/">https://www.stopbullying.gov/cyberbullying/what-is-it/</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><span style="color: #0000ff;">Copyright</span></strong>: Justin, Ricky, Zhijiang
+<ul>
+<li>Readings/Resources:
+<ul>
+<li><a href="http://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us">http://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us</a></li>
+<li><a href="https://www.plagiarismtoday.com/2015/04/23/6-current-copyright-cases-more-important-than-blurred-lines/">https://www.plagiarismtoday.com/2015/04/23/6-current-copyright-cases-more-important-than-blurred-lines/</a></li>
+<li><a href="https://www.plagiarismtoday.com/2013/10/23/youtubes-copyright-problem/">https://www.plagiarismtoday.com/2013/10/23/youtubes-copyright-problem/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2>Week 9: Peer Facilitation / Library Research</h2>
+<p><a name="oct25"></a></p>
+<h3>October 25</h3>
+<ul>
+<li><strong><span style="color: #0000ff;">Copyright</span></strong>: Justin, Ricky, Zhijiang (if we need to extend over two days)
+<ul>
+<li>Readings/Resources:
+<ul>
+<li><a href="http://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us">http://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us</a></li>
+<li><a href="https://www.plagiarismtoday.com/2015/04/23/6-current-copyright-cases-more-important-than-blurred-lines/">https://www.plagiarismtoday.com/2015/04/23/6-current-copyright-cases-more-important-than-blurred-lines/</a></li>
+<li><a href="https://www.plagiarismtoday.com/2013/10/23/youtubes-copyright-problem/">https://www.plagiarismtoday.com/2013/10/23/youtubes-copyright-problem/</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><span style="color: #0000ff;">Gaming</span></strong>: Jiahui, Heather, Matt
+<ul>
+<li>Readings/Resources:
+<ul>
+<li>
+<div class="csl-entry">Chikhani, R. (2015, October 31). The history of gaming: An evolving community. Retrieved from <a class="" href="http://social.techcrunch.com/2015/10/31/the-history-of-gaming-an-evolving-community/">http://social.techcrunch.com/2015/10/31/the-history-of-gaming-an-evolving-community/</a></div>
+</li>
+<li>
+<div class="csl-entry">Duggan, M. (2015, December 15). Gaming and gamers. Retrieved from <a class="" href="http://www.pewinternet.org/2015/12/15/gaming-and-gamers/">http://www.pewinternet.org/2015/12/15/gaming-and-gamers/</a></div>
+</li>
+<li>
+<div class="csl-entry">The biggest trends in social gaming right now. (2014, May 20). Retrieved October 1, 2016, from <a class="" href="http://www.adweek.com/socialtimes/the-biggest-trends-in-social-gaming-right-now/610866">http://www.adweek.com/socialtimes/the-biggest-trends-in-social-gaming-right-now/610866</a></div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong><span style="color: #0000ff;">Power &amp; Politics</span></strong>: Caroline, Michael, Chris
+<ul>
+<li>Readings/Resources:
+<ul>
+<li>Anderson, M. (2015, May 19). More Americans are using social media to connect with politicians. Retrieved October 4, 2016, from <a href="http://www.pewresearch.org/fact-tank/2015/05/19/more-americans-are-using-social-media-to-connect-with-politicians/">http://www.pewresearch.org/fact-tank/2015/05/19/more-americans-are-using-social-media-to-connect-with-politicians/</a></li>
+<li>Carr, B. N., Graff, B. G., &amp; Kruse, B. M. (2015, September 2). How social media is ruining politics. Retrieved October 4, 2016, from <a href="http://www.politico.com/magazine/story/2015/09/2016-election-social-media-ruining-politics-213104">http://www.politico.com/magazine/story/2015/09/2016-election-social-media-ruining-politics-213104</a></li>
+<li>Housley, S. (n.d.). Influence of technology on politics. Retrieved October 4, 2016, from <a href="http://www.feedforall.com/influence-of-technology.htm">http://www.feedforall.com/influence-of-technology.htm</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><span style="color: #ff0000;">Upcoming Assignments:</span></p>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper </a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a></li>
+</ul>
+<p><a name="oct27"></a></p>
+<h3>October 27</h3>
+<ul>
+<li><span style="color: #000000;">Library Research Class: <span style="color: #ff0000;">Meet in Information Commons (in library on A-Level at the end of the main concourse) </span><br />
+</span></li>
+<li><span style="color: #000000;"><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a>: Topic Ideas and Assignment Details.</span></li>
+</ul>
+<h2>Week 10: Privacy</h2>
+<p><a name="oct25"></a></p>
+<h3>November 1</h3>
+<ul>
+<li>Readings/Resource Review
+<ul>
+<li>Rainie, L. (2016, September 21). The state of privacy in post-Snowden America. Retrieved from http://www.pewresearch.org/fact-tank/2016/09/21/the-state-of-privacy-in-america/</li>
+<li>Talbott, A. (2016, March 7). Privacy Laws: How the US, EU and others protect IoT data (or don’t). Retrieved October 27, 2016, from http://www.zdnet.com/article/privacy-laws-how-the-us-eu-and-others-protect-iot-data-or-dont/</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">TED Talks:</div>
+<div class="csl-entry"><em><span style="color: #ff0000;">PICK ONE FROM THE FOLLOWING LINK. POST YOUR SELECTION TO THE BLOG (in APA format) using the CATEGORY of &#8216;TED Talk&#8217;<br />
+</span></em></div>
+<div class="csl-entry">There are 8 videos on this playlist, you only need to watch one. However, only two people may select the same video, so be sure to check the blog (you can narrow by using the category of <a href="http://fys142f16.blogs.muhlenberg.edu/category/ted-talk/">TED Talk</a>.  Be prepared to discuss in class.</div>
+<div class="csl-entry"><a href="https://www.ted.com/playlists/374/what_your_data_reveals_about_y">https://www.ted.com/playlists/374/what_your_data_reveals_about_y</a></div>
+</div>
+</li>
+</ul>
+</li>
+<li><span style="color: #000000;">Continue work on these assignments:<br />
+</span></p>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper </a></li>
+</ul>
+<div class="csl-entry"></div>
+</li>
+</ul>
+<h3>November 3</h3>
+<ul>
+<li>Readings/Resource Review
+<ul>
+<li>Select a resource about privacy. You can use a source of your choosing.</li>
+<li>Here are a few options to find a resource (using tags!):
+<ul>
+<li>Twitter: <a href="https://twitter.com/hashtag/privacy">https://twitter.com/hashtag/privacy</a></li>
+<li>NPR: <a href="http://www.npr.org/tags/126394606/privacy">http://www.npr.org/tags/126394606/privacy</a></li>
+<li>NY Times: <a href="http://www.nytimes.com/topic/subject/privacy">http://www.nytimes.com/topic/subject/privacy</a></li>
+<li>Wall Street Journal: <a href="https://muhlenberg.idm.oclc.org/login?url=http://search.proquest.com.muhlenberg.idm.oclc.org/search/1130736?accountid=40980">https://muhlenberg.idm.oclc.org/login?url=http://search.proquest.com.muhlenberg.idm.oclc.org/search/1130736?accountid=40980</a></li>
+</ul>
+</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry"><em><span style="color: #ff0000;">POST YOUR SELECTION TO THE BLOG (in APA format) using the CATEGORY of &#8216;Resource Recommendation&#8217; and a tag of &#8216;privacy&#8217; and another tag describing your resource. No resource can be used twice.<br />
+</span></em></div>
+</div>
+</li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Be prepared to discuss your resource in class.</div>
+</div>
+</li>
+</ul>
+</li>
+<li><span style="color: #000000;">Continue work on these assignments:<br />
+</span></p>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper</a>.
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #6</a> is due today by midnight.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Signup for advising: <a href="https://docs.google.com/spreadsheets/d/1--D1pnDOOPuQmclWYzV9RpD7WuGLqW8DCL9TgmWaqz4/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1&#8211;D1pnDOOPuQmclWYzV9RpD7WuGLqW8DCL9TgmWaqz4/edit?usp=sharing</a></li>
+</ul>
+<h2>Week 11: Research / Thesis Development</h2>
+<p><a name="oct25"></a></p>
+<h3>November 8</h3>
+<ul>
+<li>Research Day. <span style="color: #ff0000;">We will NOT meet as a class</span>.</li>
+<li><span style="color: #000000;">Continue work on these assignments:<br />
+</span></p>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper</a></li>
+</ul>
+</li>
+</ul>
+<h3>November 10</h3>
+<ul>
+<li>Guest: Debbie Tamte-Horan on registration.</li>
+<li>Developing your thesis with Megan.
+<ul>
+<li>Read: <em>Writing Analytically, Ch. 6</em></li>
+</ul>
+</li>
+<li><span style="color: #000000;">Continue work on these assignments:<br />
+</span></p>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper</a></li>
+</ul>
+</li>
+</ul>
+<h2>Week 12: Photo Essay Presentations</h2>
+<h3>November 15 and 17: Presentations</h3>
+<h3>November 16: Extra Credit Opportunity</h3>
+<ul>
+<li>Transcribaton!</li>
+<li>Wednesday November 16 4-7pm (stay for one letter or stay longer)</li>
+<li>B-01 Computer Lab</li>
+<li><a href="https://www.facebook.com/muhlenbergtrexlerlibrary/photos/a.10150895188335621.762701.231498790620/10157697959175621/?type=3&amp;theater">https://www.facebook.com/muhlenbergtrexlerlibrary/photos/a.10150895188335621.762701.231498790620/10157697959175621/?type=3&amp;theater</a></li>
+</ul>
+<h2>Week 13: Grammar / Thanksgiving</h2>
+<h3>November 22: Gettin&#8217; Good with Grammar</h3>
+<ul>
+<li>no need to read or prepare in advance, but some good tools:</li>
+<li><em>Writing Analytically, </em>Chapter 11</li>
+<li>Purdue Online Writing Lab on <a href="https://owl.english.purdue.edu/owl/section/1/5/">Grammar</a></li>
+<li>Grammar Girl: <a href="https://twitter.com/GrammarGirl">Twitter</a> &amp; <a href="http://www.quickanddirtytips.com/grammar-girl">Website</a></li>
+</ul>
+<h3>November 24: <span style="color: #993300;">Happy Thanksgiving!</span></h3>
+<p style="padding-left: 30px;"><strong><em><span style="color: #993300;">Enjoy your break!</span> </em></strong></p>
+<h2>Week 14: Googlization</h2>
+<p>Meetings with Megan to review final drafts of your paper.</p>
+<h3>November 29:</h3>
+<ul>
+<li>Readings:
+<ul>
+<li>Carr, N. (2008, July 1). Is Google making us stupid? <em>The Atlantic</em>. Retrieved from <a href="https://href.li/?http://www.theatlantic.com/magazine/archive/2008/07/is-google-making-us-stupid/306868/" target="_blank" rel="noreferrer">http://www.theatlantic.com/magazine/archive/2008/07/is-google-making-us-stupid/306868/</a></li>
+<li>
+<div class="csl-bib-body">
+<div class="csl-entry">Estes, A. C. (2011, July 15). Google is making us stupid and smart at the same time? Retrieved from <a href="http://www.theatlanticwire.com/technology/2011/07/google-making-us-stupid-and-smart-same-time/40007/" target="_blank">http://www.theatlanticwire.com/technology/2011/07/google-making-us-stupid-and-smart-same-time/40007/</a></div>
+</div>
+<div class="csl-entry"></div>
+</li>
+<li>
+<div class="csl-entry">In Class: <a href="http://www.npr.org/sections/alltechconsidered/2016/02/05/465699380/ok-google-where-did-i-put-my-thinking-cap">http://www.npr.org/sections/alltechconsidered/2016/02/05/465699380/ok-google-where-did-i-put-my-thinking-cap</a></div>
+</li>
+</ul>
+</li>
+</ul>
+<h3>December 1:</h3>
+<ul>
+<ul>
+<li>Readings:
+<ul>
+<li>Vaidhyanathan, S. (2012). The Googlization of memory: Information overload, filters, and the fracturing of knowledge. <em>Googlization of Everything : (And why we should worry) </em>(pp.174-198). Berkely: University of California Press. Retrieved from <a href="https://href.li/?http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=189&amp;docID=10537975&amp;tm=1414511786957" target="_blank" rel="noreferrer">http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=189&amp;docID=10537975&amp;tm=1414511786957</a></li>
+</ul>
+</li>
+<li>Digital Activity: <a href="http://fys142f16.blogs.muhlenberg.edu/da9-google-docs/" target="_blank">Google Docs</a></li>
+</ul>
+</ul>
+<h2>Week 15: The Future of Technology</h2>
+<h3>December 6:</h3>
+<ul>
+<li>Readings:
+<ul>
+<li><a href="http://reports.weforum.org/global-information-technology-report-2016/">Global Information Technology Report 2016</a>:
+<ul>
+<li>View Digital Savvy Countries video</li>
+<li>Review Report Highlights</li>
+</ul>
+</li>
+<li><a href="http://www3.weforum.org/docs/GAC16_Top10_Emerging_Technologies_2016_report.pdf">Top 10 Emerging Technologies of 2016</a>:
+<ul>
+<li>Skim article</li>
+<li>Focus on one emerging technology</li>
+</ul>
+</li>
+<li><a href="http://www.businessinsider.com/11-reasons-to-be-excited-about-the-future-of-technology-2016-8">11 Reasons to be Excited </a></li>
+<li>Skim Deep <a href="http://www3.weforum.org/docs/WEF_GAC15_Technological_Tipping_Points_report_2015.pdf">Shift Tipping Points Report</a></li>
+</ul>
+</li>
+<li>Course Evaluations in class</li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/" target="_blank">Digital Activity #10</a>: Word Clouds, Snapchat Stories, Images</li>
+</ul>
+<h3>December 8: <span style="color: #ff0000;">Will not meet as class</span></h3>
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/" target="_blank">Digital Activity #10</a> due by midnight December 8.</li>
+<li><span style="color: #ff0000;">Due December 9</span> by midnight:
+<ul>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li><a href="http://fys142f16.blogs.muhlenberg.edu/reflective-essay/" target="_blank">Reflective Essay</a></li>
+</ul>
+</li>
+</ul>
+<p><!--
+ 	
+
+<li>In Class:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">HubSpot. (2015). <i>INBOUND Bold Talks: Clive Thompson “How the way you write changes the way you think.”</i> [Video file]. Retrieved from <a href="https://www.youtube.com/watch?v=89vzfTFu1Vw" target="_blank">https://www.youtube.com/watch?v=89vzfTFu1Vw</a>.</div>
+
+
+</div>
+
+</li>
+
+
+ 	
+
+<li>Pariser, E. (2011, March). <em>Beware online “filter bubbles”.</em> [Video file]. Retrieved from <a href="https://href.li/?http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html" target="_blank" rel="noreferrer">http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+&nbsp;
+
+&nbsp;
+
+
+<h2>Week 6: Library Research / Digital Distractions</h2>
+
+
+<a name="oct05"></a>
+
+
+<h3>October 5</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><span style="color: #000000;">Library Research Class:</span> <span style="color: #ff0000;">Meet in B-01 on B-level in the Library.</span></li>
+
+
+ 	
+
+<li><span style="color: #000000;">Research Paper: <a title="Topic Suggestions" href="http://fys142f15.blogs.muhlenberg.edu/topic-suggestions/">Topic Ideas</a> and <a title="Research Paper" href="http://fys142f15.blogs.muhlenberg.edu/research-paper/" target="_blank">Assignment Details</a>.</span></li>
+
+
+</ul>
+
+
+<a name="oct07"></a>
+
+
+<h3>October 7</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><span style="color: #000000;"><span style="color: #000000;">Watch Video: <strong>
+</strong></span></span>
+
+
+<ul>
+ 	
+
+<li>deGuzman, C. [charstarleneTV]. (2013, August 22).  <i>I forgot my phone </i>[Video file]. Retrieved from <a href="https://href.li/?http://www.youtube.com/watch?v=OINa46HeWg8" rel="nofollow noreferrer">http://www.youtube.com/watch?v=OINa46HeWg8</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li><span style="color: #000000;">Readings: </span>
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Alsop, R. (2015, April 9). A generation of cyberslackers. Retrieved from <a href="http://www.bbc.com/capital/story/20150408-a-generation-of-cyberslackers" target="_blank">http://www.bbc.com/capital/story/20150408-a-generation-of-cyberslackers</a>.</div>
+
+
+</div>
+
+</li>
+
+
+ 	
+
+<li>Mark G., Wang Y., Niiya M., &amp; CHI 2014. (2014). Stress and multitasking in everyday college life: An empirical study of online activity. Conference On Human Factors In Computing Systems - Proceedings, 41-50. doi:10.1145/2556288.2557361.
+
+
+<ul>
+ 	
+
+<li><a href="http://www.ics.uci.edu/~gmark/Home_page/Research_files/Millennial%20Camera-Ready%20Submission4.pdf" target="_blank">http://www.ics.uci.edu/~gmark/Home_page/Research_files/Millennial%20Camera-Ready%20Submission4.pdf</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li><span style="color: #ff0000;">Due: </span>
+
+
+<ul>
+ 	
+
+<li>Digital Activity: <a href="http://fys142f15.blogs.muhlenberg.edu/da5-digital-distractions/" target="_blank">Digital Distractions</a> by start of class.</li>
+
+
+ 	
+
+<li><span style="color: #ff0000;"><span style="color: #000000;"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #3</a> (by midnight)</span></span></li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 7: Fall Break / Thesis &amp; Research Paper</h2>
+
+
+<a name="oct12"></a>
+
+
+<h3>October 12</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><span style="color: #ff0000;">NO CLASS -- Enjoy Fall Break!
+</span></li>
+
+
+</ul>
+
+
+<a name="oct14"></a>
+
+
+<h3>October 14</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><span style="color: #000000;">Readings: </span>
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Chapters 6 and 7 of <i>Writing Analytically</i></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li><span style="color: #ff0000;">Due: </span>
+
+
+<ul>
+ 	
+
+<li><span style="color: #ff0000;"><span style="color: #000000;"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post #4</a> (by midnight)</span></span></li>
+
+
+ 	
+
+<li><span style="color: #008000;">EXTRA CREDIT</span>: Attend (10 points) and/or Tweet (10 points): Attend Center for Ethics program: <a href="http://shrek.muhlenberg.edu/Calendar/EventList.aspx?eventidn=14381&amp;view=EventDetails&amp;information_id=45384&amp;forceredirect=Y" target="_blank">Orin Kerr lecture</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 8: Privacy</h2>
+
+
+<a name="oct19"></a>
+
+
+<h3>October 19</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Skim:
+
+
+<ul>
+ 	
+
+<li>Cardozo, N., Opsahl, K., &amp; Reitman, R. (2015, June 17). <i>Who has your back? Protecting your data from government requests</i>. Retrieved from <a href="https://www.eff.org/who-has-your-back-2015" target="_blank">https://www.eff.org/who-has-your-back-2015</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li> Reading:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Acquisti, A. (2011, April). Privacy in the digital age: Three reasons for concern, and three reasons for hope. Retrieved from <a href="https://www.priv.gc.ca/information/research-recherche/2011/acquisti_201104_e.asp" target="_blank">https://www.priv.gc.ca/information/research-recherche/2011/acquisti_201104_e.asp</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Video:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Acquisti, A. (2013, June). <i>What will a future without secrets look like?</i> [Video file]. Retrieved from <a href="https://www.ted.com/talks/alessandro_acquisti_why_privacy_matters" target="_blank">https://www.ted.com/talks/alessandro_acquisti_why_privacy_matters</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Digital Activity: <a href="http://fys142f15.blogs.muhlenberg.edu/da6-dropbox/" target="_blank">DropBox</a> (for sending photo essay)</li>
+
+
+ 	
+
+<li><span style="color: #008000;">EXTRA CREDIT</span>: Attend (10 points): Attend Living Writers program: Maggie Shipstead, Miller Forum in Moyer Hall at 7:00pm.</li>
+
+
+</ul>
+
+
+<a name="oct21"></a>
+
+
+<h3>October 21</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Reading:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Timm, T. (2015, October 8). The Snowden effect: new privacy wins await after data transfer ruling. <i>The Guardian</i>. Retrieved from <a href="http://www.theguardian.com/commentisfree/2015/oct/08/snowden-effect-new-privacy-wins-data-transfer-ruling" target="_blank">http://www.theguardian.com/commentisfree/2015/oct/08/snowden-effect-new-privacy-wins-data-transfer-ruling</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Video:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Greenwald, G. (2014, October). <i>Why privacy matters </i>[Video file]. Retrieved from <a href="https://www.ted.com/talks/glenn_greenwald_why_privacy_matters" target="_blank">https://www.ted.com/talks/glenn_greenwald_why_privacy_matters</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li><span style="color: #008000;">EXTRA CREDIT</span>: Attend (10 points): Attend Center for Ethics program in Trumbower Lecture Hall at 6:45: <a href="http://shrek.muhlenberg.edu/Calendar/EventList.aspx?eventidn=14383&amp;view=EventDetails&amp;information_id=45388&amp;forceredirect=Y" target="_blank">Citizen Four screening</a></li>
+
+
+ 	
+
+<li><span style="color: #ff0000;">DUE: <span style="color: #000000;"><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay</a>: </span></span>End of day (Wednesday, October 21, Midnight)</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 9: Copyright / Open Access</h2>
+
+
+<a name="oct26"></a>
+
+October 26
+
+
+<ul>
+ 	
+
+<li>Readings:
+
+
+<ul>
+ 	
+
+<li>Peruse Copyright Basics: <a href="http://www.copyright.gov/circs/circ01.pdf" target="_blank">http://www.copyright.gov/circs/circ01.pdf</a></li>
+
+
+ 	
+
+<li>Vaidhyanathan, S. (2001). Copyright and American culture. <em>Copyrights &amp; copywrongs : The rise of intellectual property and how it threatens creativity </em>(pp.17-34). New York, NY: NYU Press. Retrieved from <a href="http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=30&amp;docID=10032481&amp;tm=1413300284168">http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=30&amp;docID=10032481&amp;tm=1413300284168</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Multimedia:
+
+
+<ul>
+ 	
+
+<li>Lessig, L. (2007, March). Laws that choke creativity. Retrieved from <a href="http://www.ted.com/talks/larry_lessig_says_the_law_is_strangling_creativity" target="_blank" rel="noreferrer">http://www.ted.com/talks/larry_lessig_says_the_law_is_strangling_creativity</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Mindmapping
+
+
+<ul>
+ 	
+
+<li>Read over the following on mindmapping:
+
+
+<ul>
+ 	
+
+<li><a href="http://www.mindmeister.com/blog/2013/09/17/the-students-guide-to-mind-mapping/" target="_blank">http://www.mindmeister.com/blog/2013/09/17/the-students-guide-to-mind-mapping/</a></li>
+
+
+ 	
+
+<li><a href="http://www.edudemic.com/how-mind-maps-can-inspire-collaborative-learning/" target="_blank">http://www.edudemic.com/how-mind-maps-can-inspire-collaborative-learning/</a></li>
+
+
+ 	
+
+<li><a href="http://coschedule.com/blog/brainstorming-techniques/" target="_blank">http://coschedule.com/blog/brainstorming-techniques/</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Mind Mapping Tools
+
+
+<ul>
+ 	
+
+<li>Manual:  Can be hand-drawn, index cards, post-it notes</li>
+
+
+ 	
+
+<li>Tool Based:  Can use software, anywhere from Word to mindmapping software such as <a href="https://coggle.it/" target="_blank">Coggle</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+
+
+<ul>
+ 	
+
+<li>Digital Activity: <a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/" target="_blank">Word Clouds</a></li>
+
+
+ 	
+
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/26/writing-sessions-with-holden/" target="_blank">Sign-ups</a> with Holden</li>
+
+
+</ul>
+
+
+<a name="oct28"></a>
+
+October 28
+
+
+<ul>
+ 	
+
+<li>Readings:
+
+
+<ul>
+ 	
+
+<li>Suber, P. (2013, August 13). <em>Open access overview. </em>Retrieved from <a href="http://legacy.earlham.edu/%7Epeters/fos/overview.htm" target="_blank">http://legacy.earlham.edu/~peters/fos/overview.htm</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Multimedia:
+
+
+<ul>
+ 	
+
+<li>Piled Higher and Deeper. [phdcomics]. (2012, October 25).  <em>Open access explained!.</em> [Video file].  Retrieved from <a href="http://www.youtube.com/watch?v=L5rVH1KGBCY" target="_blank">http://www.youtube.com/watch?v=L5rVH1KGBCY</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>In Class:
+
+
+<ul>
+ 	
+
+<li>Read over the sections under 'Learn' on the <a href="http://www.righttoresearch.org/index.shtml" target="_blank">Right to Research </a>website. There are four section to read (The Problem, The Solution, Why Open Access?, and Related Issues)</li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 10:  Photo Essay Presentations</h2>
+
+
+<a name="nov02"></a>
+
+
+<h3>November 2</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay Presentations</a></li>
+
+
+ 	
+
+<li><a href="http://bit.ly/1jRsxq9" target="_blank">Order of Presentations</a></li>
+
+
+ 	
+
+<li><span style="color: #ff0000;">DUE</span>: Digital Activity #7, <a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/" target="_blank">Word Clouds</a></li>
+
+
+ 	
+
+<li><span style="color: #008000;">EXTRA CREDIT</span>: Attend (10 points): Attend Living Writers program: Aracelis Girmay, Miller Forum in Moyer Hall at 7:00pm.</li>
+
+
+</ul>
+
+
+<a name="nov04"></a>
+
+
+<h3>November 4</h3>
+
+
+
+
+<ul>
+ 	
+
+<li><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/" target="_blank">Photo Essay Presentations</a></li>
+
+
+ 	
+
+<li><a href="http://bit.ly/1jRsxq9" target="_blank">Order of Presentations</a></li>
+
+
+ 	
+
+<li><span style="color: #ff0000;">DUE</span>: <a title="Blog Posts" href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post</a> #5 End of day (by Midnight)</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 11: Googlization</h2>
+
+
+<a name="nov09"></a>
+
+November 9
+
+
+<ul>
+ 	
+
+<li> Readings:
+
+
+<ul>
+ 	
+
+<li>Thompson, C. (2013). The Art of Finding. <em>Smarter than you think: How technology is changing our minds for the better </em>(pp.115-146). New York: The Penguin Press.</li>
+
+
+ 	
+
+<li>Vaidhyanathan, S. (2012). The Googlization of memory: Information overload, filters, and the fracturing of knowledge. <em>Googlization of Everything : (And why we should worry) </em>(pp.174-198). Berkely: University of California Press. Retrieved from <a href="https://href.li/?http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=189&amp;docID=10537975&amp;tm=1414511786957" target="_blank" rel="noreferrer">http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=189&amp;docID=10537975&amp;tm=1414511786957</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>In Class:
+
+
+<ul>
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">HubSpot. (2015). <i>INBOUND Bold Talks: Clive Thompson “How the way you write changes the way you think.”</i> [Video file]. Retrieved from <a href="https://www.youtube.com/watch?v=89vzfTFu1Vw" target="_blank">https://www.youtube.com/watch?v=89vzfTFu1Vw</a>.</div>
+
+
+</div>
+
+</li>
+
+
+ 	
+
+<li>Pariser, E. (2011, March).  <em>Beware online “filter bubbles”.</em> [Video file].  Retrieved from <a href="https://href.li/?http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html" target="_blank" rel="noreferrer">http://www.ted.com/talks/eli_pariser_beware_online_filter_bubbles.html</a>.</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Visit from Registrar to discuss registration</li>
+
+
+ 	
+
+<li>Advising Sign-up sheet: <a href="https://goo.gl/Q6ry47" target="_blank">https://goo.gl/Q6ry47</a></li>
+
+
+</ul>
+
+
+<a name="nov11"></a>
+
+November 11
+
+
+<ul>
+ 	
+
+<li>Readings:
+
+
+<ul>
+ 	
+
+<li>Carr, N. (2008, July 1). Is Google making us stupid? <em>The Atlantic</em>. Retrieved from <a href="https://href.li/?http://www.theatlantic.com/magazine/archive/2008/07/is-google-making-us-stupid/306868/" target="_blank" rel="noreferrer">http://www.theatlantic.com/magazine/archive/2008/07/is-google-making-us-stupid/306868/</a></li>
+
+
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Estes, A. C. (2011, July 15). Google is making us stupid and smart at the same time? Retrieved from <a href="http://www.theatlanticwire.com/technology/2011/07/google-making-us-stupid-and-smart-same-time/40007/" target="_blank">http://www.theatlanticwire.com/technology/2011/07/google-making-us-stupid-and-smart-same-time/40007/</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Digital Activity: <a href="http://fys142f15.blogs.muhlenberg.edu/da8-google-docs/" target="_blank">Google Docs</a></li>
+
+
+ 	
+
+<li>DUE: <a title="Blog Posts" href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/" target="_blank">Blog Post</a> #6 End of day (by Midnight)</li>
+
+
+</ul>
+
+
+
+
+<h2>Week 12: Business &amp; the Internet</h2>
+
+
+<a name="nov16"></a>
+
+November 16
+
+Readings:
+
+
+<ul>
+ 	
+
+<li>Anderson, C. (2004, December 10). The Long Tail. <em>Wired. </em>Retrieved from <a href="https://href.li/?http://archive.wired.com/wired/archive/12.10/tail.html" target="_blank" rel="noreferrer">http://archive.wired.com/wired/archive/12.10/tail.html</a></li>
+
+
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Boudreau, K. J., &amp; Lakhani, K. R. (2013, April). Using the Crowd as an Innovation Partner. Retrieved from <a href="https://hbr.org/2013/04/using-the-crowd-as-an-innovation-partner" target="_blank">https://hbr.org/2013/04/using-the-crowd-as-an-innovation-partner</a></div>
+
+
+</div>
+
+</li>
+
+
+ 	
+
+<li>Hagel III, J., Brown, J. S., Davison, L. (2010, February 18). From do it yourself to do it together. <em>Harvard Business Review</em>. Retrieved from <a href="https://href.li/?http://blogs.hbr.org/2010/02/from-do-it-yourself-to-do-it-t/" target="_blank" rel="noreferrer">http://blogs.hbr.org/2010/02/from-do-it-yourself-to-do-it-t/</a></li>
+
+
+ 	
+
+<li>
+
+
+<div class="csl-bib-body">
+
+
+<div class="csl-entry">Free exchange. (2015, January 10). <i>The Economist</i>. Retrieved from <a href="http://www.economist.com/news/finance-and-economics/21638142-consumers-reap-benefits-e-commerce-surprising-ways-hidden-long" target="_blank">http://www.economist.com/news/finance-and-economics/21638142-consumers-reap-benefits-e-commerce-surprising-ways-hidden-long</a></div>
+
+
+</div>
+
+</li>
+
+
+</ul>
+
+
+<a name="nov18"></a>
+
+November 18
+
+
+<ul>
+ 	
+
+<li>Overview of online innovative companies. Review the list below, then go to this spreadsheet to pick one of the companies (<a href="https://docs.google.com/spreadsheets/d/1t9-FMV5OP74xwCemeRXadLMofymSjK8A_TKs4VyqPgA/edit?usp=sharing" target="_blank">https://docs.google.com/spreadsheets/d/1t9-FMV5OP74xwCemeRXadLMofymSjK8A_TKs4VyqPgA/edit?usp=sharing</a>). Each company can only be selected once. Write a brief blog post about the company, how it relates to the articles we read above, how and why technology is a factor in the company's success, and pros/cons of such a company. Blog post must be posted by the end of our class period today (1:45).
+
+
+<ul>
+ 	
+
+<li>AirBnB: <a href="https://www.airbnb.com/" target="_blank">https://www.airbnb.com/</a></li>
+
+
+ 	
+
+<li>Airtasker: <a href="https://www.airtasker.com/" target="_blank">https://www.airtasker.com/</a></li>
+
+
+ 	
+
+<li>Amazon: <a href="http://www.amazon.com/" target="_blank">http://www.amazon.com/</a></li>
+
+
+ 	
+
+<li>Bitcoin: <a href="https://bitcoin.org/en/" target="_blank">https://bitcoin.org/en/</a></li>
+
+
+ 	
+
+<li>Car2Go: <a href="https://www.car2go.com/" target="_blank">https://www.car2go.com/</a></li>
+
+
+ 	
+
+<li>Change.org: <a href="https://www.change.org/" target="_blank">https://www.change.org/</a></li>
+
+
+ 	
+
+<li>Couchsurfing: <a href="https://www.couchsurfing.com/" target="_blank">https://www.couchsurfing.com/</a></li>
+
+
+ 	
+
+<li>Etsy: <a href="https://www.etsy.com/" target="_blank">https://www.etsy.com/</a></li>
+
+
+ 	
+
+<li>GoFundMe: <a href="https://www.gofundme.com/" target="_blank">https://www.gofundme.com/</a></li>
+
+
+ 	
+
+<li>The Grommet: <a href="https://www.thegrommet.com/" target="_blank">https://www.thegrommet.com/</a></li>
+
+
+ 	
+
+<li>Hailo: <a href="https://www.hailoapp.com/" target="_blank">https://www.hailoapp.com/</a></li>
+
+
+ 	
+
+<li>iTunes: <a href="http://www.apple.com/itunes/" target="_blank">http://www.apple.com/itunes/</a></li>
+
+
+ 	
+
+<li>KickStarter: <a href="https://www.kickstarter.com/" target="_blank">https://www.kickstarter.com/</a></li>
+
+
+ 	
+
+<li>Kiva: <a href="http://www.kiva.org/" target="_blank">http://www.kiva.org/</a></li>
+
+
+ 	
+
+<li>Lending Club: <a href="https://www.lendingclub.com/" target="_blank">https://www.lendingclub.com/</a></li>
+
+
+ 	
+
+<li>Love Home Swap: <a href="http://www.lovehomeswap.com/" target="_blank">http://www.lovehomeswap.com/</a></li>
+
+
+ 	
+
+<li>Shapeways: <a href="http://www.shapeways.com/" target="_blank">http://www.shapeways.com/</a></li>
+
+
+ 	
+
+<li>TaskRabbit: <a href="https://www.taskrabbit.com/" target="_blank">https://www.taskrabbit.com/</a></li>
+
+
+ 	
+
+<li>Uber: <a href="https://www.uber.com/" target="_blank">https://www.uber.com/</a></li>
+
+
+ 	
+
+<li>Zipcar: <a href="http://www.zipcar.com/" target="_blank">http://www.zipcar.com/</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Meetings with Holden start next week. Sign-ups are available: <a href="https://docs.google.com/spreadsheets/d/1Sj_OQja4GnA8buBJRvyKr-InrpSzIFBjA-qOqLva0dQ/edit#gid=0" target="_blank">https://docs.google.com/spreadsheets/d/1Sj_OQja4GnA8buBJRvyKr-InrpSzIFBjA-qOqLva0dQ/edit#gid=0</a></li>
+
+
+</ul>
+
+
+
+
+<h2><a name="nov23"></a>
+Week 13: Gettin' Good with Grammar</h2>
+
+
+
+
+<h3>November 23</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Readings:
+
+
+<ul>
+ 	
+
+<li>Chapter 11, <em>Writing Analytically</em></li>
+
+
+ 	
+
+<li>OWL website on finding grammar errors: <a href="https://owl.english.purdue.edu/owl/resource/561/02/" target="_blank">https://owl.english.purdue.edu/owl/resource/561/02/</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+<a name="nov25"></a>
+
+
+<h3>November 25</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>No Class!</li>
+
+
+ 	
+
+<li>Have a wonderful Thanksgiving Break.</li>
+
+
+ 	
+
+<li>Don't forget your <a title="Research Paper" href="http://fys142f15.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper</a> !</li>
+
+
+</ul>
+
+
+<a name="nov30"></a>
+
+
+<h2>Week 14: Technology, Social Media, Gender, Race</h2>
+
+
+
+
+<h3>November 30</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Review Google Presentation</li>
+
+
+ 	
+
+<li>Review Business Posts</li>
+
+
+ 	
+
+<li>Digital Activity 10: <a href="http://fys142f15.blogs.muhlenberg.edu/da-10-website-tips-hacks/" target="_blank">Implicit Associations </a></li>
+
+
+ 	
+
+<li>For next class, post an article on that pertains to gender or race issues with social media or technology. This can be about leaders in the technology industry, sexism, racism, social movements, etc. Post a link to the blog with a short description of why this article relates to gender or race issues.</li>
+
+
+ 	
+
+<li>Reminder: Meetings with Holden. Sign-ups are available: <a href="https://docs.google.com/spreadsheets/d/1Sj_OQja4GnA8buBJRvyKr-InrpSzIFBjA-qOqLva0dQ/edit#gid=0" target="_blank">https://docs.google.com/spreadsheets/d/1Sj_OQja4GnA8buBJRvyKr-InrpSzIFBjA-qOqLva0dQ/edit#gid=0</a></li>
+
+
+</ul>
+
+
+<a name="dec02"></a>
+
+
+<h3>December 2</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Discussion of Implicit Associations results</li>
+
+
+ 	
+
+<li>Discussion of gender and race in technology</li>
+
+
+</ul>
+
+
+<a name="dec07"></a>
+
+
+<h2>Week 15: Happy Endings</h2>
+
+
+
+
+<h3>December 7</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Reading:
+
+
+<ul>
+ 	
+
+<li>World Economic Forum. (2015, September). <em>Deep shift: Technology tipping points and societal impact</em>. Geneva: World Economic Forum. Retrieved from: <a href="http://www3.weforum.org/docs/WEF_GAC15_Technological_Tipping_Points_report_2015.pdf" target="_blank">http://www3.weforum.org/docs/WEF_GAC15_Technological_Tipping_Points_report_2015.pdf</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+</ul>
+
+
+<a name="dec09"></a>
+
+
+<h3>December 9</h3>
+
+
+
+
+<ul>
+ 	
+
+<li>Writing Wrap-up
+
+
+<ul>
+ 	
+
+<li>What good writers know: <a href="http://ctl.yale.edu/writing/undergraduate-writing/what-good-writers-know" target="_blank">http://ctl.yale.edu/writing/undergraduate-writing/what-good-writers-know</a></li>
+
+
+ 	
+
+<li>Writers on Writing: <a href="https://href.li/?https://docs.google.com/document/d/1ZHrYy9DvacOg-qxl61NNWL2NcwDwhmOnC1qsffVDBH0/edit?usp=sharing" target="_blank" rel="noreferrer">https://docs.google.com/document/d/1ZHrYy9DvacOg-qxl61NNWL2NcwDwhmOnC1qsffVDBH0/edit?usp=sharing</a></li>
+
+
+</ul>
+
+
+</li>
+
+
+ 	
+
+<li>Course Wrap-up</li>
+
+
+</ul>
+
+
+<span style="color: #ff0000;">DUE by midnight</span> (11:59), Friday <strong>December 11</strong>: <a href="http://fys142f15.blogs.muhlenberg.edu/research-paper/" target="_blank">Research Paper</a> and <a href="http://fys142f15.blogs.muhlenberg.edu/reflective-essay/" target="_blank">Reflective Essay</a>
+--></p>
+</div>
+		<div class="clear"></div>
+					</div><!--end entry-content-->
+	
+</article><!-- end post-2343 -->
+
+				
+<div id="comments"  class="clearfix">
+
+	
+				
+				
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/syllabus/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="http://fys142f16.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fsyllabus%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	</div><!-- end comments -->
+	</div><!-- end content -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+			<aside id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/FYS142DigitalWorldF16Final.pdf">Syllabus</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-3080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3080"><a href="http://fys142f16.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-3910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3910"><a href="http://libraryguides.muhlenberg.edu/digitalworld">Library Research Guide</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+</ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-3311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3311"><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="http://fys142f16.blogs.muhlenberg.edu/technology-autobiography/">Technology Autobiography</a></li>
+<li id="menu-item-3630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"><a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a></li>
+<li id="menu-item-3903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3903"><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3904"><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-4113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4113"><a href="http://fys142f16.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+<li id="menu-item-4120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4120"><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/">DA#10: Word Clouds, Snapchat Stories, Images</a></li>
+</ul></div></aside><aside id="nav_menu-9" class="widget widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-3285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3285"><a href="http://fys142f16.blogs.muhlenberg.edu/da1-create-blogs-acct/">DA#1: Create ‘Berg Blogs Account</a></li>
+<li id="menu-item-3321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3321"><a href="http://fys142f16.blogs.muhlenberg.edu/da-zotero/">DA#2: Zotero</a></li>
+<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3546"><a href="http://fys142f16.blogs.muhlenberg.edu/da3-tech-profile/">DA#3: Technology Profile Survey</a></li>
+<li id="menu-item-3545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3545"><a href="http://fys142f16.blogs.muhlenberg.edu/da4-twitter/">DA#4: Twitter</a></li>
+<li id="menu-item-3629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"><a href="http://fys142f16.blogs.muhlenberg.edu/da5-linkedin-profile/">DA#5: Create a LinkedIn Profile</a></li>
+<li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">DA#6: Google Yourself</a></li>
+<li id="menu-item-3981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3981"><a href="http://fys142f16.blogs.muhlenberg.edu/da7-one-button-studio/">DA#7: One Button Studio</a></li>
+<li id="menu-item-3982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="http://fys142f16.blogs.muhlenberg.edu/da8-dropbox/">DA#8: Dropbox for File Management</a></li>
+<li id="menu-item-4111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4111"><a href="http://fys142f16.blogs.muhlenberg.edu/da9-google-docs/">DA#9: Google Docs</a></li>
+</ul></div></aside>		</div><!-- #secondary .widget-area -->
+</div><!-- end main -->
+
+		<div id="tertiary" class="widget-area" role="complementary">
+			<aside id="search-6" class="widget widget_search"><form role="search" method="get" class="searchform" action="http://fys142f16.blogs.muhlenberg.edu/" >
+		<div>
+		<input type="text" class="search-input" value="" name="s" id="s" />
+		<input type="submit" class="searchsubmit" value="Search" />
+		</div>
+		</form></aside>		<aside id="recent-posts-10" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/da10/">DA#10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/4201/">Digital Activity #10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/digital-activity-10-8/">Digital Activity 10</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/fys-142-word-cloud/">Fys 142 word cloud</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-7/">Digital Activity 10</a>
+											<span class="post-date">December 7, 2016</span>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-10" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10/#comment-147">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-word-cloud-3/#comment-146">Digital Activity 10 Word Cloud</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-5/#comment-145">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/4181/#comment-144"></a></li><li class="recentcomments"><span class="comment-author-link">Justin Dalena</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-4/#comment-143">Digital Activity #10</a></li></ul></aside><aside id="tag_cloud-7" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys142/" class="tag-cloud-link tag-link-76331 tag-link-position-1" style="font-size: 17.586956521739pt;" aria-label="#fys142 (12 items)">#fys142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/gaming/" class="tag-cloud-link tag-link-108 tag-link-position-2" style="font-size: 9.8260869565217pt;" aria-label="#gaming (3 items)">#gaming</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" class="tag-cloud-link tag-link-94010 tag-link-position-3" style="font-size: 11.347826086957pt;" aria-label="#socialmedia (4 items)">#socialmedia</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/apps/" class="tag-cloud-link tag-link-8005 tag-link-position-4" style="font-size: 8pt;" aria-label="apps (2 items)">apps</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" class="tag-cloud-link tag-link-179921 tag-link-position-5" style="font-size: 12.565217391304pt;" aria-label="autobiography (5 items)">autobiography</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/blog3/" class="tag-cloud-link tag-link-179948 tag-link-position-6" style="font-size: 8pt;" aria-label="blog3 (2 items)">blog3</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/bots/" class="tag-cloud-link tag-link-175844 tag-link-position-7" style="font-size: 8pt;" aria-label="bots (2 items)">bots</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/children/" class="tag-cloud-link tag-link-52 tag-link-position-8" style="font-size: 9.8260869565217pt;" aria-label="children (3 items)">children</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/computer/" class="tag-cloud-link tag-link-179934 tag-link-position-9" style="font-size: 8pt;" aria-label="computer (2 items)">computer</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/control/" class="tag-cloud-link tag-link-8016 tag-link-position-10" style="font-size: 8pt;" aria-label="control (2 items)">control</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/copyright/" class="tag-cloud-link tag-link-61 tag-link-position-11" style="font-size: 8pt;" aria-label="copyright (2 items)">copyright</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyber-bullying/" class="tag-cloud-link tag-link-74472 tag-link-position-12" style="font-size: 8pt;" aria-label="cyber bullying (2 items)">cyber bullying</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital/" class="tag-cloud-link tag-link-300 tag-link-position-13" style="font-size: 8pt;" aria-label="digital (2 items)">digital</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" class="tag-cloud-link tag-link-179941 tag-link-position-14" style="font-size: 13.630434782609pt;" aria-label="digital identity (6 items)">digital identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-immigrants/" class="tag-cloud-link tag-link-180027 tag-link-position-15" style="font-size: 8pt;" aria-label="Digital Immigrants (2 items)">Digital Immigrants</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-natives/" class="tag-cloud-link tag-link-94041 tag-link-position-16" style="font-size: 11.347826086957pt;" aria-label="Digital Natives (4 items)">Digital Natives</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-world/" class="tag-cloud-link tag-link-179987 tag-link-position-17" style="font-size: 8pt;" aria-label="Digital World (2 items)">Digital World</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/domain-of-ones-own/" class="tag-cloud-link tag-link-20890 tag-link-position-18" style="font-size: 9.8260869565217pt;" aria-label="Domain of One&#039;s Own (3 items)">Domain of One&#039;s Own</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-19" style="font-size: 12.565217391304pt;" aria-label="Facebook (5 items)">Facebook</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fake/" class="tag-cloud-link tag-link-179979 tag-link-position-20" style="font-size: 8pt;" aria-label="fake (2 items)">fake</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/future/" class="tag-cloud-link tag-link-30652 tag-link-position-21" style="font-size: 8pt;" aria-label="future (2 items)">future</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys-142/" class="tag-cloud-link tag-link-179938 tag-link-position-22" style="font-size: 9.8260869565217pt;" aria-label="fys 142 (3 items)">fys 142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-23" style="font-size: 17.130434782609pt;" aria-label="Google (11 items)">Google</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google-myself/" class="tag-cloud-link tag-link-179968 tag-link-position-24" style="font-size: 8pt;" aria-label="google myself (2 items)">google myself</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/government/" class="tag-cloud-link tag-link-8189 tag-link-position-25" style="font-size: 8pt;" aria-label="government (2 items)">government</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" class="tag-cloud-link tag-link-15565 tag-link-position-26" style="font-size: 14.391304347826pt;" aria-label="Identity (7 items)">Identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/images/" class="tag-cloud-link tag-link-30047 tag-link-position-27" style="font-size: 8pt;" aria-label="Images (2 items)">Images</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-28" style="font-size: 11.347826086957pt;" aria-label="Instagram (4 items)">Instagram</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-29" style="font-size: 15.152173913043pt;" aria-label="Internet (8 items)">Internet</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet-privacy/" class="tag-cloud-link tag-link-29524 tag-link-position-30" style="font-size: 8pt;" aria-label="internet privacy (2 items)">internet privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ipads/" class="tag-cloud-link tag-link-94044 tag-link-position-31" style="font-size: 8pt;" aria-label="iPads (2 items)">iPads</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/jim-groom/" class="tag-cloud-link tag-link-179995 tag-link-position-32" style="font-size: 8pt;" aria-label="jim groom (2 items)">jim groom</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ownership/" class="tag-cloud-link tag-link-179962 tag-link-position-33" style="font-size: 13.630434782609pt;" aria-label="ownership (6 items)">ownership</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" class="tag-cloud-link tag-link-179942 tag-link-position-34" style="font-size: 9.8260869565217pt;" aria-label="perception (3 items)">perception</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/personal-information/" class="tag-cloud-link tag-link-8060 tag-link-position-35" style="font-size: 8pt;" aria-label="Personal Information (2 items)">Personal Information</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/phone/" class="tag-cloud-link tag-link-160555 tag-link-position-36" style="font-size: 8pt;" aria-label="phone (2 items)">phone</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/police/" class="tag-cloud-link tag-link-180008 tag-link-position-37" style="font-size: 8pt;" aria-label="police (2 items)">police</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-38" style="font-size: 20.478260869565pt;" aria-label="privacy (19 items)">privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" class="tag-cloud-link tag-link-519 tag-link-position-39" style="font-size: 15.913043478261pt;" aria-label="Social Media (9 items)">Social Media</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/tagxedo/" class="tag-cloud-link tag-link-180078 tag-link-position-40" style="font-size: 9.8260869565217pt;" aria-label="Tagxedo (3 items)">Tagxedo</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-41" style="font-size: 22pt;" aria-label="Technology (24 items)">Technology</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ted-talk/" class="tag-cloud-link tag-link-94075 tag-link-position-42" style="font-size: 9.8260869565217pt;" aria-label="TED TALK (3 items)">TED TALK</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/word-cloud/" class="tag-cloud-link tag-link-68332 tag-link-position-43" style="font-size: 9.8260869565217pt;" aria-label="Word Cloud (3 items)">Word Cloud</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 8pt;" aria-label="Writing (2 items)">Writing</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/youtube/" class="tag-cloud-link tag-link-251 tag-link-position-45" style="font-size: 12.565217391304pt;" aria-label="youtube (5 items)">youtube</a></div>
+</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">#FYS142 Twitter Feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</aside>		</div><!-- end tertiary .widget-area -->
+</div><!-- end wrap -->
+
+	<footer id="colophon" class="clearfix">
+		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a><span class="sep"> | </span>Theme: Yoko by <a href="http://www.elmastudio.de/en/themes/">Elmastudio</a></p>
+		<a href="#page" class="top">Top</a>
+	</footer><!-- end colophon -->
+	
+</div><!-- end page -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/smoothscroll.js?ver=1.4'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f16.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fsyllabus%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f16.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

@@ -1,0 +1,1016 @@
+http://sportsinfo.blogs.muhlenberg.edu/page/20/
+93
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Sports Information Blog | Just another Muhlenberg College Blogs site | Page 20	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=A25F81DD6F9E5A7602BAA910DE8F3A93');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support wp-embed-responsive paged-20 single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/21/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/19/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-841" class="post-841 post type-post status-publish format-standard hentry category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/16/pointed-analysis/" rel="bookmark">Pointed Analysis</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/16/pointed-analysis/" title="2:11 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-16T14:11:19-04:00">February 16, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Alexandra Chili has scored more points than any other player in Muhlenberg basketball history (male or female). She became the all-time leading scorer in Mule women&#8217;s basketball history at McDaniel in early January and broke the all-gender mark at Johns Hopkins in late January.</p>
+<p>Chili will be returning to her home state of Maryland next weekend for the Centennial Conference Championships and has a shot at becoming the league&#8217;s all-time leading scorer. She has 1,908 points; the record for women is 1,965 and for all players 1,973.</p>
+<p>How, when, where and against whom did Chili get her first 1,908 points? Last week, we broke down the <a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/07/board-games/">record rebound total </a>for men&#8217;s player Spencer Liddic. Now it&#8217;s time to take a closer look at Chili&#8217;s record point total.</p>
+<p>But first, a trivia question: Which team held Chili to the lowest point total in a single game during her career? The surprising answer is at the bottom.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points2.jpg"><img class="alignright size-full wp-image-843" title="Alexandra Chili" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points2.jpg" alt="" width="225" height="525" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points2.jpg 225w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points2-128x300.jpg 128w" sizes="(max-width: 225px) 100vw, 225px" /></a>• by type</strong></p>
+<ul>
+<li>
+<div>points on three-pointers 963 (8.8 per game)</div>
+</li>
+<li>
+<div>points on two-pointers 628 (5.7 per game)</div>
+</li>
+<li>
+<div>points on free throws 317 (2.9 per game)</div>
+</li>
+</ul>
+<p><strong>• by class year</strong></p>
+<ul>
+<li>freshman 480 (16.0 per game)</li>
+<li>sophomore 471 (17.4 per game)</li>
+<li>junior 546 (18.8 per game)</li>
+<li>senior 411 (17.1 per game)</li>
+</ul>
+<p><strong>• by site</strong></p>
+<ul>
+<li>home games 933 (17.0 per game)</li>
+<li>road games 884 (18.0 per game)</li>
+<li>neutral site games 91 (15.2 per game)</li>
+</ul>
+<p><strong>• by month</strong></p>
+<ul>
+<li>November 249(17.8 per game)</li>
+<li>December 334 (18.6 per game)</li>
+<li>January 723 (18.1 per game)</li>
+<li>February 467 (15.6 per game)</li>
+<li>March 135 (16.9 per game)</li>
+</ul>
+<p><strong>• by day of the week</strong></p>
+<ul>
+<li>Sunday 80 (16.0 per game)</li>
+<li>Monday 268 (19.1 per game)</li>
+<li>Tuesday 233 (17.9 per game)</li>
+<li>Wednesday 295 (16.4 per game)</li>
+<li>Thursday 218 (19.8 per game)</li>
+<li>Friday 173 (17.3 per game)</li>
+<li>Saturday 641 (16.4 per game)</li>
+</ul>
+<p><strong>• by game type</strong></p>
+<ul>
+<li>Centennial Conference games 1341 (17.6 per game)</li>
+<li>CC playoff games 90 (15.0 per game)</li>
+<li>Scotty Wood Tournament games 132 (16.5 per game)</li>
+<li>NCAA Tournament games 112 (16.0 per game)</li>
+<li>other games 233 (17.9 per game)<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points1.jpg"><img class="alignright size-full wp-image-842" title="Alexandra Chili" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points1.jpg" alt="" width="225" height="396" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points1.jpg 225w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/chili_points1-170x300.jpg 170w" sizes="(max-width: 225px) 100vw, 225px" /></a></li>
+</ul>
+<p><strong>• by opponent (more than two games, in order of average)</strong></p>
+<ul>
+<li>Moravian 100 (25.0 per game)</li>
+<li>Swarthmore 173 (21.6 per game)</li>
+<li>Washington 132 (18.9 per game)</li>
+<li>Johns Hopkins 185 (18.5 per game)</li>
+<li>Ursinus 126 (18.0 per game)</li>
+<li>Dickinson 161 (17.9 per game)</li>
+<li>McDaniel 174 (17.4 per game)</li>
+<li>Haverford 132 (16.5 per game)</li>
+<li>Franklin &amp; Marshall 131 (16.4 per game)</li>
+<li>Gettysburg 140 (15.6 per game)</li>
+<li>DeSales 55 (13.8 per game)</li>
+<li>Bryn Mawr 77 (12.8 per game)</li>
+</ul>
+<p>Trivia answer: Arcadia. In Chili&#8217;s freshman season, the Mules played Arcadia in the first round of Marymount&#8217;s tournament in their first game back from the holiday break. Although Muhlenberg won 59-29, Chili scored just three points on 1-of-7 shooting in 15 minutes. Arcadia went on to finish the season with a record of 4-21.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-841 -->
+
+				
+					
+	<article id="post-827" class="post-827 post type-post status-publish format-standard hentry category-golf">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/15/foul-weather-fairway/" rel="bookmark">Foul-Weather Fairway</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/15/foul-weather-fairway/" title="2:58 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-15T14:58:37-04:00">February 15, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>If you’re walking across campus this winter and think you see someone carrying a Muhlenberg golf bag through the snow (if it ever comes) into the Life Sports Center, don’t worry; you’re not going crazy.</p>
+<p>Yes, the sub-freezing temperatures and occasional flaky white stuff may not be exactly what comes to mind when thinking of golf. But thanks to a new addition to the LSC, the Mule golfers can get the feel of playing some of the best courses in the world, even if Lehigh Country Club is a winter wonderland.</p>
+<div id="attachment_834" style="width: 428px" class="wp-caption alignright"><a href="http://www.facebook.com/media/set/?set=a.10150598995088221.401510.103031738220&amp;type=3"><img aria-describedby="caption-attachment-834" class="size-full wp-image-834" title="mgolfsimulator" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mgolfsimulator.jpg" alt="" width="418" height="295" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mgolfsimulator.jpg 418w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mgolfsimulator-300x211.jpg 300w" sizes="(max-width: 418px) 100vw, 418px" /></a><p id="caption-attachment-834" class="wp-caption-text">Click the picture to see a photo gallery for the simulator</p></div>
+<p>Muhlenberg recently installed a P3ProSwing projection simulator to help the golf team stay on top of its game during the offseason. The system consists of a platform with sensors connected to a computer and a giant screen durable enough to take the full brunt of even the hardest of drives.</p>
+<p>The sensors pick up the speed, trajectory and angle of the clubhead upon impact with the ball. The computer then takes that data and projects the ball’s flight onto the 9-foot-by-10-foot screen, almost like a life-sized video game.</p>
+<p>But the simulator does a lot more than any Wii or Xbox. The computer also precisely measures key metrics of the swing, such as swing path, club face angle and club sweet spot, to help the golfers make precise corrections to their alignment and swing.</p>
+<p>“It’s really important to be able to see where your club is at impact,” said sophomore Christopher Lucarelli. “It helps you visualize what’s off and what adjustments you need to make. It makes it a lot easier to make quick fixes to your swing.”</p>
+<p>For the Mule golfers, winter used to be a time of waiting for the snow to melt and hoping their swings wouldn’t get too rusty during the time off. They could hit foam balls in the John Deitrich Field House and work on their short games, but it was a far cry from being out on the course or driving range.</p>
+<p>The simulator may not have quite the same feel as being outside, but the players can actually hit real golf balls. They can also work on every club in the bag, something they could not do as easily before.</p>
+<p>“It’s pretty cool to be able to come in here, even if it’s snowing outside, and be able to really work on your game,” said junior Brandon Davis. “Being able to hit real balls is huge, and this about as good as it gets in the winter without going to Florida.”</p>
+<p>In addition to the driving range feature, the simulator also includes the option of playing 20 different courses from around the world, many of which are featured on various professional tours. A putting green was installed near the simulator, giving the Mules the chance to work on every part of their games.</p>
+<p>The simulator may be plenty of fun, but senior Jon Heppen said it is an even more valuable tool. Everyone on the team is using the data gained to try to hone their swings for the start of the season.</p>
+<p>And while the Mules’ first tournament may still be more than a month away, he said he can’t wait to see the results when the team heads to Myrtle Beach, S.C., to play a few rounds during Spring Break.</p>
+<p>“I definitely think it’s going to help us this season,” said Heppen, who admitted he actually misses the novelty of hitting the foam golf balls from time to time. “It should be more of a smooth transition when we go outside, because we’ve been able to do a lot of work on our swings. It shouldn’t take as long for us to get readjusted when we can finally get out on the course, and hopefully that will lower our scores.</p>
+<p>“And if we come back from Spring Break, and there’s snow on the ground, we’ll know exactly what to do.”</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/golf/" rel="category tag">golf</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-827 -->
+
+				
+					
+	<article id="post-821" class="post-821 post type-post status-publish format-standard hentry category-football category-mens-basketball category-soccer category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/14/821/" rel="bookmark"><3 for the Mules</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/14/821/" title="5:34 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-14T17:34:01-04:00">February 14, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>In honor of Valentine&#8217;s Day, we asked a few of our student-athletes what they LOVE about being a Mule.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/lagomarsinohs.jpg"><img class="alignleft size-full wp-image-822" title="Ryan Lagomarsino" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/lagomarsinohs.jpg" alt="" width="100" height="150" /></a>Ryan Lagomarsino (Junior, Men&#8217;s Basketball)</strong></p>
+<p>First of all I love all of my Lady Mules and the relationships I&#8217;ve been able to build with them. I also love how close everyone on both teams are and how we always seem to have a good time together both on and off the court. Finally, I love the recognition we get off the court and how we always have the best and rowdiest fans, especially for our past few Saturday games. Seeing all of my friends and peers out there supporting us means the world to me.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/weisshs.jpg"><img class="alignleft size-full wp-image-823" title="Jamie Weiss" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/weisshs.jpg" alt="" width="100" height="150" /></a>Jamie Weiss (Senior, Women&#8217;s Soccer)</strong></p>
+<p>Being a student athlete allows you the opportunity to compete. It teaches you time management skills, is a great form of exercise, gives you a strong support system, and you know that you always have a friend. It gives you a great Muhlenberg experience because you get to excel in and out of the classroom setting, and allows you to experience different aspects of college life. Muhlenberg is a great tight-knit community where there are a lot of student fans who come out and support you, which is very nice!</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/wilsonhs.jpg"><img class="alignleft size-full wp-image-824" title="Bryan Wilson" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/wilsonhs.jpg" alt="" width="100" height="150" /></a>Bryan Wilson (Junior, Football)</strong></p>
+<p>The number one thing about being a Muhlenberg student-athlete, and student for that matter, is being able to work out in the Life Sports Center. The facilities are incredible, and I particularly like the fact that the weight room overlooks the football field in order to keep your ultimate goals in sight. I also really like the support staff that we have at Muhlenberg, from the coaches to the equipment room staff to the athletic trainers, and faculty and other students. It truly feels like everyone works together to be successful.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/lanzahs.jpg"><img class="alignleft size-full wp-image-825" title="Leeann Lanza" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/lanzahs.jpg" alt="" width="100" height="150" /></a>Leeann Lanza (Sophomore, Basketball)</strong></p>
+<div>What I love about being a Mule is knowing all of my fellow athletes on campus. Every team is very supportive of the others. I also love the individual team aspect. Coming to college without knowing anyone is a very scary thing and when I came to Muhlenberg as a freshman, I found it extremely easy to transition having 14 automatic friends. It can be like a family, where you&#8217;re doing things with these people all the time. Being a Lady Mule on the women&#8217;s basketball team is such a rewarding experience for me because I have met some of the most amazing people I will ever meet on or off the court. I get really excited when one coaches of the other sports knows who I am too, just because I&#8217;m an athlete. The entire athletics staff as well as professors are so supportive and it is so great to see all of the Muhlenberg pride! I have had many great opportunities through Muhlenberg in academics and athletics and I consider myself so lucky to be a student-athlete here.</div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/soccer/" rel="category tag">soccer</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-821 -->
+
+				
+					
+	<article id="post-818" class="post-818 post type-post status-publish format-standard hentry category-track-field">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/13/athletes-of-the-week-15/" rel="bookmark">Athletes of the Week</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/13/athletes-of-the-week-15/" title="12:43 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-13T12:43:46-04:00">February 13, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>for contests between February 6 and February 12</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/maydenhs.jpg"><img class="alignleft size-full wp-image-53" title="Samantha Mayden" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/maydenhs.jpg" alt="" width="100" height="150" /></a>Female Athlete of the Week &#8211; Samantha Mayden, Track &amp; Field</strong></p>
+<p>Mayden won both the mile and the 1000 meters &#8211; two races that started less than an hour apart &#8211; at the Lafayette-Rider Games. Her mile time of 5:02.63 (converted) is the second-fastest in the CC and the 15th-fastest in Division III this year. Her time in the 1,000 (2:58.69) broke the former school record – held by a three-time NCAA qualifier – by almost nine seconds.  </p>
+<p><strong><img class="alignleft" title="Peter Rice" src="http://www.muhlenberg.edu/images/main/athletics/men/trackandfield/hs/track11/ricehs.jpg" alt="" width="100" height="150" />Male Athlete of the Week &#8211; Peter Rice, Track &amp; Field</strong></p>
+<div>Rice was part of two first-place finishes at the Lafayette-Rider Games, winning the 400 and anchoring the 4&#215;400. His time in the 400 (49.56) is the best in the CC this season, and he helped the relay team break an eight-year-old school record. Rice is now part of five school-record relay teams.</div>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-818 -->
+
+				
+					
+	<article id="post-812" class="post-812 post type-post status-publish format-standard hentry category-mens-basketball category-track-field category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/10/weekend-preview-14/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/10/weekend-preview-14/" title="12:56 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-10T12:56:10-04:00">February 10, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0210.jpg"><img class="alignright size-medium wp-image-815" title="Weekend Preview Feb. 10" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0210-300x170.jpg" alt="" width="300" height="170" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0210-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0210-500x284.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0210.jpg 780w" sizes="(max-width: 300px) 100vw, 300px" /></a>Seniors take the spotlight in a weekend that features three noteworthy events.</p>
+<p><strong>Track &amp; Field at Lafayette-Rider Games (Friday, 1:00)</strong></p>
+<p>The Mule teams compete at the Armory in their last big meet before the Centennial Conference Championships in two weeks. The track in Manhattan has been very good to the Muhlenberg runners, particularly senior Peter Rice, who broke the school record in the 200 and 400 at this meet last year. He then returned to the Armory eight days later and broke the 400 record again, hitting the NCAA qualifying standard.</p>
+<p>Results: <a href="http://www.armorytrack.com/">http://www.armorytrack.com/</a></p>
+<p><strong>Basketball doubleheader vs. McDaniel (Saturday, women at 2:00, men at 4:00)</strong></p>
+<p>It&#8217;s rare that individual accomplishments would be put ahead of team goals in basketball, but Alexandra Chili and Spencer Liddic are two rare student-athletes. Unless the Mules qualify to host playoff games, this will be the last time they play at Memorial Hall.</p>
+<p>Both have had incredible careers on and off the court. Both were preseason All-Americans and are Centennial Conference all-time leaders in a major statistical category (Chili in three-pointers, Liddic in rebounds). Chili is the all-time leading scorer in Muhlenberg basketball history (men or women); Liddic is likely to move into fourth place tomorrow:</p>
+<ul>
+<li><strong>Alexandra Chili, 2009-12 &#8211; 1865 points</strong></li>
+<li>Bob McClure, 1968-71 &#8211; 1788 points</li>
+<li>Felicia Perryman, 1990-93 &#8211; 1690 points</li>
+<li>Dennis Adams, 1991-94 &#8211; 1638 points</li>
+<li><strong>Spencer Liddic, 2009-12 &#8211; 1631 points</strong></li>
+</ul>
+<p>Both also were named to the Academic All-District first team recently and are candidates for Academic All-America honors. It is quite remarkable for two student-athletes like this to be at the same school, playing the same sport and in the same class year.</p>
+<p>As for the games, both are key for Mule teams in search of playoff berths with three games remaining in the regular season.</p>
+<p>The women (17-5, 12-5) are tied for third in the CC and can clinch a playoff spot with a win. They beat McDaniel 77-64 in the first meeting. Although the Green Terror is a little down this year (10-13, 7-11) it is coming off a 76-74 upset of first-place Johns Hopkins and has a history of spoiling Muhlenberg&#8217;s parties, winning three CC playoff games at Memorial Hall in the last 11 years.</p>
+<p>The men (14-8, 8-7) are in sole possession of fifth place in a tightly packed CC. Johns Hopkins and Washington are both a game ahead, Haverford and Ursinus (next week&#8217;s opponents for the Mules)both a game back. Muhlenberg came back from an eight-point deficit in the final two minutes to pull out a 71-70 win at McDaniel in January. The Green Terror (7-15, 4-11), which is nationally ranked in scoring defense, has won only two of its last 20 games in Allentown.</p>
+<p>Live stats (women): <a href="http://www.muhlenberg.edu/sports/wbblive/xlive.htm">http://www.muhlenberg.edu/sports/wbblive/xlive.htm</a></p>
+<p>Live stats (men): <a href="http://www.muhlenberg.edu/sports/wbblive/xlive.htm">http://www.muhlenberg.edu/sports/mbblive/xlive.htm</a></p>
+<p>Live video (both): <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p>Live audio (both): <a href="http://www.muhlenberg.edu/wmuh/stream.html">http://www.muhlenberg.edu/wmuh/stream.html</a></p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-812 -->
+
+				
+					
+	<article id="post-804" class="post-804 post type-post status-publish format-standard hentry category-mens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/07/board-games/" rel="bookmark">Board Games</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/07/board-games/" title="3:37 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-07T15:37:26-04:00">February 7, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>If Spencer Liddic was a little bit better as a shooter, he might not be the Centennial Conference&#8217;s all-time leading rebounder.</p>
+<p>That comment is made in jest, of course. Liddic has an excellent career field-goal percentage of .525, and with 1,615 points is just 24 away from second on the Muhlenberg men&#8217;s basketball all-time scoring list.</p>
+<p>Liddic tied the CC record for career rebounds in Saturday&#8217;s win against Franklin &amp; Marshall and will most likely move into sole possession of first place tomorrow at Dickinson. Of his 947 rebounds, 74 came off his own missed shots &#8211; by far the most of any player.</p>
+<p>What Mule teammate has Liddic rebounded the most? How about players on other teams? And on what day of the week does he rebound the best?</p>
+<p>The answers to all those questions and more in our breakdown of Liddic&#8217;s 947 rebounds:</p>
+<p><strong>• by type</strong></p>
+<ul>
+<li>
+<div style="text-align: left;">offensive rebounds 344 (3.5 per game)</div>
+</li>
+<li>
+<div style="text-align: left;">defensive rebounds 603 (6.1 per game)<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound1.jpg"><img class="alignright size-full wp-image-805" title="Spencer Liddic" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound1.jpg" alt="" width="230" height="522" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound1.jpg 230w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound1-132x300.jpg 132w" sizes="(max-width: 230px) 100vw, 230px" /></a></div>
+</li>
+</ul>
+<p><strong>• by class year</strong></p>
+<ul>
+<li>freshman 185 (7.1per game)</li>
+<li>sophomore 281 (10.4 per game)</li>
+<li>junior 246 (9.8 per game)</li>
+<li>senior 235 (11.2 per game)</li>
+</ul>
+<p><strong>• by site</strong></p>
+<ul>
+<li>home games 489 (9.8 per game)</li>
+<li>road games 406 (9.2 per game)</li>
+<li>neutral site games 52 (10.4 per game)</li>
+</ul>
+<p><strong>• by month</strong></p>
+<ul>
+<li>November 212 (11.2 per game)</li>
+<li>December 127 (9.1 per game)</li>
+<li>January 402 (9.6 per game)</li>
+<li>February 206 (8.6 per game)</li>
+</ul>
+<p><strong>• by day of the week</strong></p>
+<ul>
+<li>Sunday 49 (9.8 per game)</li>
+<li>Monday 90 (9.0 per game)</li>
+<li>Tuesday 89 (9.9 per game)</li>
+<li>Wednesday 240 (8.9 per game)</li>
+<li>Thursday 54 (9.0 per game)</li>
+<li>Friday 38 (9.5 per game)</li>
+<li>Saturday 387 (10.2 per game)</li>
+</ul>
+<p><strong>• by game type</strong></p>
+<ul>
+<li>Centennial Conference games 644 (9.6 per game)</li>
+<li>CC playoff games 36 (9.0 per game)</li>
+<li>Scotty Wood Tournament games 83 (10.4 per game)</li>
+<li>other games 184 (9.2 per game)<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound21.jpg"><img class="alignright size-full wp-image-808" title="Spencer Liddic" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/liddic_rebound21.jpg" alt="" width="225" height="463" /></a></li>
+</ul>
+<p><strong>• by opponent (more than two games, in order of average)</strong></p>
+<ul>
+<li>Washington 105 (13.1 per game)</li>
+<li>Swarthmore 91 (11.4 per game)</li>
+<li>Gettysburg 88 (11.0 per game)</li>
+<li>Moravian 57 (9.5 per game)</li>
+<li>McDaniel 64 (9.1 per game)</li>
+<li>Johns Hopkins 72 (9.0 per game)</li>
+<li>Dickinson 53 (8.8 per game)</li>
+<li>DeSales 34 (8.5 per game)</li>
+<li>Franklin &amp; Marshall 80 (8.0 per game)</li>
+<li>Ursinus 64 (8.0 per game)</li>
+<li>Haverford 63 (7.9 per game)</li>
+</ul>
+<p><strong>• by Muhlenberg player (20 or more)</strong></p>
+<ul>
+<li>Spencer Liddic 74</li>
+<li>Evan Tozer 40</li>
+<li>Austin Curry 33</li>
+<li>Ryan Foster 27</li>
+<li>Malique Killing 24</li>
+<li>Brian Frankoski 23</li>
+</ul>
+<p><strong>• by opposing player (10 or more)</strong></p>
+<ul>
+<li>Kevin Breslin, Washington 15</li>
+<li>Georgio Milligan, Franklin &amp; Marshall 12</li>
+<li>Will Gates, Swarthmore 11</li>
+<li>James McNally, Franklin &amp; Marshall 11</li>
+<li>Sal Schittino, Washington 11</li>
+<li>Andrew Powers, Gettysburg 10</li>
+</ul>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-804 -->
+
+				
+					
+	<article id="post-796" class="post-796 post type-post status-publish format-standard hentry category-mens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/06/rivalry-reviewed/" rel="bookmark">Rivalry Reviewed</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/06/rivalry-reviewed/" title="5:36 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-06T17:36:58-04:00">February 6, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Thirteen days before Spencer Liddic was born on February 27, 1990, a great rivalry was born.</p>
+<p>On Valentine’s Day 1990, the Muhlenberg men’s basketball team upset top-ranked Franklin &amp; Marshall, 78-74, for the first of its six home wins against nationally ranked Diplomat teams. The latest came Saturday when Liddic, now the Mule captain, tied two Centennial Conference records in a 60-58 victory against eighth-ranked F&amp;M.</p>
+<p>“It didn&#8217;t take very long for F&amp;M to become a great rival. It started on our end because they were a program that was where we were trying to get to,” said Muhlenberg head coach Scott McClary, who has been on the coaching staff for five of the six upsets.</p>
+<p>“However, no rivalry is truly a rivalry unless both sides are winning games. Our consistent success against F&amp;M here at Memorial Hall (10 of the last 15) has made this one of the best rivalries around!”</p>
+<p>Here’s a closer look at the six wins:</p>
+<p><strong>February 14, 1990 – Muhlenberg 78, Franklin &amp; Marshall 74</strong></p>
+<p>Franklin &amp; Marshall came in with a record of 22-1, a 19-game winning streak and a No. 1 ranking in Division III. Muhlenberg was 10-13 and desperately in need of a win to stay alive in the MAC Southwest playoff hunt with just two games left in the regular season. Led by 21 points from Tom Lutz, the Mules made a 37-29 halftime lead stand up.</p>
+<p>F&amp;M went on to finish with a record of 24-4, and although the Mules beat Moravian in the finale, they did not make the playoffs.</p>
+<p><strong>February 19, 1992 – Muhlenberg 74, Franklin &amp; Marshall 66</strong></p>
+<p>Franklin &amp; Marshall came in with a record of 21-2 and a No. 8 ranking in Division III. Muhlenberg was 14-9 and in a three-way tie for second in the MAC Southwest. The Mules trailed 41-33 at halftime, but went 21-of-22 from the foul line in the second half to pull out the win. Muhlenberg was 6-of-7 from three-point range in the game, with Ernie Koschineg going 4-for-4.</p>
+<p>F&amp;M went on to finish with a record of 26-4. Muhlenberg did qualify for the MAC South playoffs but lost to Johns Hopkins in the first round to end up 16-10.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_2.jpg"><img class="alignleft size-full wp-image-797" title="Ernie Koschineg" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_2.jpg" alt="" width="300" height="403" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_2.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_2-223x300.jpg 223w" sizes="(max-width: 300px) 100vw, 300px" /></a>February 25, 1995 – Muhlenberg 88, Franklin &amp; Marshall 86</strong></p>
+<p>The gold standard for Muhlenberg upset wins came in the Centennial Conference championship game at a packed Memorial Hall. Franklin &amp; Marshall came in 25-0 and ranked No. 1 in Division III. Muhlenberg was 17-8 and was on the bubble for an NCAA Tournament bid.</p>
+<p>The Mules shot an insane 62.7 percent from the field, and Koschineg scored 26 points – again going 4-for-4 from behind the arc. Muhlenberg led 43-32 at halftime and by 10 with about four minutes left before the Diplomats made a frantic late charge that fell just short.</p>
+<p>Muhlenberg won its first conference championship since 1970, but the euphoria was short-lived when the Mules found they had to go to F&amp;M for the first round of the NCAA Tournament. The Diplomats won the rematch, 69-54, and went on to finish with a record of 27-2.</p>
+<p><strong>February 7, 1996 – Muhlenberg 66, Franklin &amp; Marshall 49</strong></p>
+<p>The rather one-sided score suggests this was not one of F&amp;M’s vintage teams. Not so – the Diplomats came into this game 19-0 and ranked No. 2 in Division III. They had won 50 consecutive regular-season games, were 35-0 all-time in Centennial regular-season contests, and they would go on to reach the NCAA “Final Four.”</p>
+<p>Muhlenberg, which entered the game at 10-10 and clinging to a half-game lead for second place in CC East, took the lead on a dunk by Chris Bedell 6:39 into the first half and never looked back.</p>
+<p>The Mules finished with the second seed in the CC East and had to travel to the West top seed – F&amp;M. Their season ended at 13-12 with a 72-59 loss to the Diplomats.</p>
+<p><strong>January 13, 2011 – Muhlenberg 71, Franklin &amp; Marshall 67</strong></p>
+<p>Franklin &amp; Marshall was 10-3 and ranked 19<sup>th</sup> in Division III, and Muhlenberg was 7-6 and had recently lost five in a row. After trailing by eight points in the first half, the Mules took their first lead with 12:53 left in the second on a layup by Liddic. Coincidentally, that basket also put him over 1,000 points in his career.</p>
+<p>F&amp;M took its final lead at 59-58 with 5:39 left, but Muhlenberg responded with an 8-0 run that included a three-pointer by Austin Curry, who was 5-for-8 on threes and finished with a game-high 22 points.</p>
+<p>The Diplomats went on to win the CC championship, while the Mules finished 13-12 and did not make the playoffs.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_3.jpg"><img class="alignleft size-full wp-image-798" title="Malique Killing" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_3.jpg" alt="" width="275" height="425" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_3.jpg 275w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_3-194x300.jpg 194w" sizes="(max-width: 275px) 100vw, 275px" /></a>February 4, 2012 – Muhlenberg 60, Franklin &amp; Marshall 58</strong></p>
+<p>Franklin &amp; Marshall came in with a record of 19-1 and ranked No. 8 in Division III. Muhlenberg was 13-7. A tight second half that featured six lead changes and four ties came down to a battle of free throws. The Diplomats hit four straight to take a 56-55 lead with 1:51 left, but the Mules hit the next five, including four by Curry.</p>
+<p>Liddic finished with 14 points and 12 rebounds, tying the CC all-time records for career rebounds (947) and double-doubles (41).</p>
+<p>“Saturday reminded me so much of 1995, and we had over half of the team [back for Alumni Day] in the building,” said McClary.</p>
+<p>So there you are – six nationally ranked Franklin &amp; Marshall teams that had combined for seven losses before traveling to Allentown returned home with another loss. And as the students showed in 1995, when they lifted Koschineg on their shoulders, and Saturday, when they stormed the court, there&#8217;s nothing quite like beating your rival.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_1.jpg"><img class="aligncenter size-full wp-image-799" title="1995 celebration" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_1.jpg" alt="" width="400" height="309" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_1.jpg 400w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_1-300x231.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_1-388x300.jpg 388w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<p>“Everyone who has been a part of the Muhlenberg men’s basketball program has a lot of good memories,” said McClary. “And I guarantee you that four out of the top five on everyone’s list is beating the Diplomats!”</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_4.jpg"><img class="aligncenter size-full wp-image-800" title="2012 celebration" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_4.jpg" alt="" width="400" height="322" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_4.jpg 400w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_4-300x241.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/rivalry_4-372x300.jpg 372w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-796 -->
+
+				
+					
+	<article id="post-790" class="post-790 post type-post status-publish format-standard hentry category-field-hockey category-track-field">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/05/super-bowl-preview/" rel="bookmark">Super Bowl Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/05/super-bowl-preview/" title="11:25 am" rel="bookmark"><time class="entry-date" datetime="2012-02-05T11:25:19-04:00">February 5, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/pricehs.jpg"><img class="alignleft size-full wp-image-792" title="Alex Price" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/pricehs.jpg" alt="" width="100" height="150" /></a><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/nortonhs.jpg"><img class="alignright size-full wp-image-791" title="Renee Norton" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/nortonhs.jpg" alt="" width="100" height="150" /></a>Since there isn’t enough analysis of the Super Bowl in the two weeks leading up to the game, we asked two Muhlenberg senior athletes &#8211; track runner Alex Price (from Westborough, Mass.) and field hockey player Renee Norton (from Lincoln Park, N.J.) – to break down the matchup. What teams do you think they’re rooting for?</em></p>
+<p><strong>How far do you live from your team’s home stadium?</strong></p>
+<p>AP: Westborough is about 45 minutes up 495 from Gillette Stadium.</p>
+<p>RN: I live just about 15 minutes from the stadium. It&#8217;s a very easy ride to get there. I&#8217;ve been there for not only games, but for concerts and fairs as well.</p>
+<p><strong>How many games have you gone to?</strong></p>
+<p>AP: I’ve been to a decent amount over the years, hard to get tickets. The most notable game I’ve been to was the Snow-Bowl/Tuck-Rule Game against the Raiders back in 2002. Between being the last game at the old Foxboro Stadium and part of the Pats’ first championship, I’ll never forget it.</p>
+<p>RN: I would say I&#8217;ve been to about three games in my life. I think I went to a few preseason games when I was younger with my family, and this year I went to the Giants vs. Dolphins game. I will definitely be going to more games in years to come because my parents became season ticket holders this year. However, it is hard to compete with my three brothers and parents for games to go to considering they are all diehard fans also.</p>
+<p><strong>On a scale of 1 to 10, how big of a fan are you?</strong></p>
+<p>AP: 12, the number of Tom Brady. One of the superstitions I’ve had since the Patriots’ Super Bowl run back in 2004 is that I only wash my jersey after a loss. So, since the Patriots have won 10 games in a row, it’s going on almost three months now. Smells like victory.</p>
+<p>RN: Ummmmmm, 10!!! My whole life I’ve been a Giants fans. I was brought up with the game of football being a huge part of my life. All three of my brothers played football, my father was a football player, my uncles were football players &#8230; I even wanted to play little league football, but my dad wouldn&#8217;t let me (it&#8217;s hard not to be a &#8220;tomboy&#8221; when I grew up with mostly guys). My grandfather, my dad&#8217;s dad, was actually a diehard Giants fan since the 1930s as well. I own four Giants jersey. I got a Plaxico Burress jersey the year of their Super Bowl win in 2007, and quickly hid it in my closet shortly after his incident that sent him to jail. I then got my Ahmad Bradshaw jersey. My family&#8217;s Christmas card last year was a picture of me and my three brothers with our Giants jerseys on. Last season I got a Kevin Boss jersey, after the season. Of course he was then traded so it was a waste. Lastly, this season I got a Victor Cruz jersey, and I can&#8217;t be more excited about that. I will be wearing his jersey for the Super Bowl. </p>
+<p><strong>Who is your favorite player?</strong></p>
+<p>AP: Definitely the big man, Vincent Lamar Wilfork. He had a monstrous game against the Ravens two weeks ago and you can bet he’ll be hungry this weekend.</p>
+<p>RN: Through the years, we have all had our favorite players, sometimes from different teams. I would say that Victor Cruz has become my new favorite Giants player. I remember thinking to myself after he made his first touchdown early this season that I would love this guy. He&#8217;s a phenomenal receiver. He&#8217;s quick, he&#8217;s agile, he&#8217;s firy, he&#8217;s electric, he&#8217;s a HUGE game-changer … He&#8217;s everything you would want in a player.  And he&#8217;s from Paterson which is like five minutes from where I live.  All I gotta say is CRUZZZZZZZZZZZZZZZZZZZZz!!!</p>
+<p><strong>What did you think of the Giants-Patriots Super Bowl two years ago?</strong></p>
+<p>AP: It was a tough, tough game. But that was a different team with a lot of aging players, especially on defense. And don’t get me started on Belichick wearing a red sweatshirt for that game. He ALWAYS wears gray, occasionally navy blue. Luckily, sources have confirmed that Bill won’t be wearing red this time around.</p>
+<p>RN: That was a PHENOMENAL game. It was sooooo exciting! It was my mom, my dad, and me watching it at my home. I remember being scared once they were down and rushing to get that touchdown. All of a sudden &#8230; &#8220;THE CATCH!&#8221; Eli Manning to David Tyree &#8230; how did he hold on to that ball? I still don&#8217;t get it! But it was so amazing. Then the touchdown to Burress. I got the chills immediately. We were going insaneeeeee in my house! Yelling &#8230; laughing &#8230; high-fiving! What a great memory, thanks to the Giants.</p>
+<p><strong>What or who do you like least about the other team?</strong></p>
+<p>AP: Eli Manning. He’s always going to be the “other Manning” whether or not Peyton plays again or not. Don’t get me wrong, the Giants have some very talented players on their roster, but it’s hard to take them seriously with Eli at the helm.</p>
+<p>RN: Bill Belichick and that ATROCIOUS sweatshirt. Who cuts the sleeves off their sweatshirts? It is just awful looking. Also, I know it&#8217;s hard to hate Tom Brady because he is awesome, but he is not the Giants quarterback. That&#8217;s enough reason right there not to like him. Also, Brady is a little embarrassing too. This is evident if you click on this link: <a href="http://www.youtube.com/watch?v=vGF4l3hcgBg">http://www.youtube.com/watch?v=vGF4l3hcgBg</a></p>
+<p><strong>Are you doing anything special for the game?</strong></p>
+<p>AP: Probably going to be watching with a whole lot of Giants fans and hopefully a few of us on the New England side too. Weeks ago we could all see this matchup coming, and campus is definitely going to be exciting on Sunday.</p>
+<p>RN: I will be going home for the game to watch it with my whole family. It will be my mom, my dad, my three brothers, my brother&#8217;s fiance and my boyfriend. We will be making football cookies and blue-chocolate covered pretzels and all will be wearing BLUE!</p>
+<p><strong>Who wins and what&#8217;s the score?</strong></p>
+<p>AP: Everyone knows what our offense can do. It’s definitely going to come down to our defense and this time around we have a young crew between Mayo, Chung, Spikes, and others who won’t be getting tired at the end. Patriots get their revenge, 24-23.</p>
+<p>RN: Giants 28-21. It should be a close game but I believe in the Giants to pull through.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-790 -->
+
+				
+					
+	<article id="post-787" class="post-787 post type-post status-publish format-standard hentry category-mens-basketball category-track-field category-womens-basketball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/03/weekend-preview-13/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/03/weekend-preview-13/" title="12:26 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-03T12:26:50-04:00">February 3, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>As the end of the season draws closer, the contests grow bigger in importance. And that&#8217;s certainly the case this weekend, with only 15 days left in the regular season.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg"><img class="alignleft size-full wp-image-104" title="Mule Marquee Matchup" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg" alt="" width="350" height="237" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg 300w" sizes="(max-width: 350px) 100vw, 350px" /></a>Men&#8217;s Basketball vs. Franklin &amp; Marshall (Saturday, 4:00)</strong></p>
+<p>Franklin &amp; Marshall is 19-1, ranked eighth in Division III and closing in on the top seed for the Centennial Conference playoffs. Muhlenberg is 13-7 and tied for fourth place in the CC, just a game ahead of two other teams with five games to go in the regular season.</p>
+<p>While it&#8217;s obviously a big game for the Mules, what makes this the Marquee Matchup is the history of the series. Muhlenberg has five wins against nationally ranked F&amp;M teams at Memorial Hall since the early 1990s, including a 71-67 win last year when the Dips were ranked 19th. The Mules have won nine of the last 14 against F&amp;M at home, and only one of F&amp;M&#8217;s wins was by more than five points.</p>
+<p>Then there&#8217;s the presence of two of the &#8220;marquee&#8221; players in the CC. On the league&#8217;s all-time lists, F&amp;M senior Georgio Milligan is second in assists and steals, seventh in scoring and 11th in blocked shots. Muhlenberg senior Spencer Liddic is second in rebounds and double-doubles, 10th in scoring and tied for 16th in blocked shots. He needs 12 rebounds and a double-double to tie the CC all-time marks.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/mbblive/xlive.htm">www.muhlenberg.edu/sports/mbblive/xlive.htm</a></p>
+<p>Live video: <a href="http://www.livestream.com/muhlenberg">www.livestream.com/muhlenberg</a></p>
+<p>Live audio (WMUH): <a href="http://www.muhlenberg.edu/wmuh/stream.html">www.muhlenberg.edu/wmuh/stream.html</a></p>
+<p><strong>Women&#8217;s Basketball vs. Franklin &amp; Marshall (Saturday, 2:00)</strong></p>
+<p>This is a key CC matchup between two teams that are tied for second place in the loss column, two games behind Johns Hopkins. Franklin &amp; Marshall is 14-6 overall, 11-4 in the CC, while Muhlenberg is 15-4, 10-4.</p>
+<p>The Mules, who won the first meeting, 62-54, looked like their former selves in beating Swarthmore, 81-46, on Wednesday. The Diplomats are coming off two impressive wins of their own, by 13 points at home vs. Haverford and by 14 points at Washington.</p>
+<p>The top three scorers in the CC will be on display in F&amp;M junior Alexa Barbush (17.2 ppg), Muhlenberg senior Alexandra Chili (16.5 ppg) and Muhlenberg junior Alita Zabrecky (15.4 ppg). The Diplomats haven&#8217;t won in Memorial Hall since 2000.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/mbblive/xlive.htm">www.muhlenberg.edu/sports/wbblive/xlive.htm</a></p>
+<p>Live video: <a href="http://www.livestream.com/muhlenberg">www.livestream.com/muhlenberg</a></p>
+<p>Live audio (WMUH): <a href="http://www.muhlenberg.edu/wmuh/stream.html">www.muhlenberg.edu/wmuh/stream.html</a></p>
+<p><strong>Track &amp; Field at New Balance Collegiate Invitational (Friday) and DeSchriver Invitational (Saturday)</strong></p>
+<p>Muhlenberg will send a women&#8217;s distance medley relay to the Armory tonight for one of the most prestigious indoor meets. The Mule quartet is the only Division III team in its heat. The rest of the team will also compete against athletes from higher divisions at East Stroudsburg on Saturday.</p>
+<p>New Balance entries: <a href="http://www.armorytrack.com/armory/nbci-women-2012">http://www.armorytrack.com/armory/nbci-women-2012</a></p>
+<p><strong>Wrestling at Washington and Lee with McDaniel and NYU (Saturday, 10:00)</strong></p>
+<p>The Mule wrestlers will get to preview more of their opponents for the upcoming Centennial Conference Championships. New York University is in its first year as an associate member of the CC in wrestling.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-787 -->
+
+				
+					
+	<article id="post-780" class="post-780 post type-post status-publish format-standard hentry category-volleyball category-womens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/02/coaching-futures/" rel="bookmark">Coaching Futures</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/02/coaching-futures/" title="2:12 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-02T14:12:15-04:00">February 2, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The Centennial Conference hosted the 13th annual Snell-Shillingford Symposium at Haverford last weekend. Female athlete representatives and coaches from the conference’s member schools participated in sessions designed to empower women in the coaching profession and to encourage them to take up the legacy of those who have gone before them.</em></p>
+<p><em>Muhlenberg was represented at the three-day event by two coaches, Cindy Wilson (assistant lacrosse) and Rhonwen Peters (assistant field hockey), who attended as a presenter and mentor, respectively, and two </em><em>senior athletes, Davi Gordon (volleyball) and Jessica Shegoski (lacrosse).</em></p>
+<p><em>Here is what Gordon had to say about her experience:</em></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/gordonhs2.jpg"><img class="alignleft size-full wp-image-67" title="Davi Gordon" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/gordonhs2.jpg" alt="" width="100" height="150" /></a>… Students and coaches from each school in the Centennial Conference attended this all-female conference to learn, share and present about women in sports and coaching. Various coaches and representatives from the conference presented about the history of Title IX, the different responsibilities a coach may have, creating a practice and season plan, developing a coaching philosophy, and sportsmanship and ethics in coaching.</p>
+<p>I wanted to attend this symposium because I have a passion for volleyball, and with graduation quickly approaching, I know that I want to continue to keep the sport as a major part of my life. Although I’m not sure what level I ultimately want to coach, this conference definitely confirmed my desire to coach volleyball in the future.  I have had some great (and not so good) coaches in the past, and I think that my coaches have helped me develop into the person I am today. I would love to be able to have the same impact on other girls, and being able to see their progress will be very rewarding!</p>
+<p><em>And Shegoski gave this insight into the Symposium:</em></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/shegoskihs.jpg"><img class="alignleft size-full wp-image-781" title="Jessica Shegoski" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/shegoskihs.jpg" alt="" width="100" height="150" /></a>The Snell-Shillingford Symposium is a weekend full of education and fun. I attended the Symposium because I have always had a love for coaching and teaching a sport I love to other girls. It’s a great feeling to see their eyes light up when they master a new concept and fall in love with the game. This is also the reason that I am considering a career coaching either at the college or high school level.</p>
+<p>I learned so much throughout the weekend, not only about sports and females, but also about myself.</p>
+<p>During one of the sessions, presented by the Bryn Mawr soccer coach Erin DeMarco, we did a personality test that grouped you into colors (Davi, Cindy and I were Blues). These colors gave insight into our personalities; there were the builders, the planners, the realtors and the adventurers. Erin then let us know how each of these personalities got along during a LONG road trip.</p>
+<p>The builders were the one who had already loaded the directions into the GPS that was of course already set up on the dash, read the directions a couple times online, printed out the Google Maps version of the directions, and just in case none of those worked packed the 50 state atlas in the back of the car. They also have already mapped out the trip down the minute (including bathroom stops).</p>
+<p>The planners are the ones at the hood of the car with the atlas spread out. They are looking at the route printed by the builders and thinking to themselves “well what if we instead took this road, it would add 10 minutes but we would hit traffic, or this road we wouldn’t have to pay a toll but again more mileage.” The planners are not going to be ready to leave until every possibility is looked over.</p>
+<p>Then there are the relators (Davi, Cindy and I). We are the “moms” of the group, and we are already sitting in the car with a snack packed for each person in the group, making sure that no one is hungry and trying to find out how everyone’s day is going so far, while at the same time trying to make sure everyone is comfortable for the long trip ahead.</p>
+<p>Lastly, there are the adventurers. These are your friends who are always last minute (you know you are thinking of that person right now). They come running up the driveway two minutes before the builder has planned to leave (pan to the builder constantly checking their watch), throwing their duffel into the trunk and screaming, “road trip here we come.”</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/snell_symposium.jpg"><img class="alignright size-full wp-image-782" title="Snell Symposium" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/snell_symposium.jpg" alt="" width="450" height="223" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/snell_symposium.jpg 450w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/snell_symposium-300x148.jpg 300w" sizes="(max-width: 450px) 100vw, 450px" /></a>As we sat and listened to Erin describe this scenario we all realized that we were the person that she was describing and that we could place our teammates and friends into the other roles, which helped us to learn the best ways to work within a team and thrive as a team.</p>
+<p>Overall the Symposium was a fun, long, amazing weekend that I would tell any female athlete in the Centennial Conference to attend if they even have the slightest draw towards coaching in the future. And that doesn’t mean you have to want to coach at the college or high school level &#8211; the pee wee leagues matter just as much.</p>
+<p><em>The above picture of Shegoski (in pink sweater) and Gordon (to her right) at one of the sessions was taken by a former Muhlenberg Symposium attendee &#8211; Jamie Gluck &#8217;03, head women&#8217;s soccer coach at Haverford.</em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/volleyball/" rel="category tag">volleyball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-lacrosse/" rel="category tag">women's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-780 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/21/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/19/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/11/'>November 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/10/'>October 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/09/'>September 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/07/'>July 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/05/'>May 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/04/'>April 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/03/'>March 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/02/'>February 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/01/'>January 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/12/'>December 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/11/'>November 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/10/'>October 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/06/'>June 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/05/'>May 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/04/'>April 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/03/'>March 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/'>February 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/'>January 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/12/'>December 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/11/'>November 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/10/'>October 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/09/'>September 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/'>August 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/'>July 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/06/'>June 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/'>May 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/04/'>April 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/03/'>March 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/02/'>February 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/01/'>January 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/'>December 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/11/'>November 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/08/'>August 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://sportsinfo.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2Fpage%2F20%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

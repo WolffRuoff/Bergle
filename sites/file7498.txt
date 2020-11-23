@@ -1,0 +1,675 @@
+http://admissions.blogs.muhlenberg.edu/page/86/
+63
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+Muhlenberg College Blogs | Hear from our students what Muhlenberg is all about. | Page 86	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://admissions.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://admissions.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Muhlenberg College Blogs &raquo; Feed" href="http://admissions.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Muhlenberg College Blogs &raquo; Comments Feed" href="http://admissions.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/admissions.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/admissions.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://admissions.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://admissions.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://admissions.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://admissions.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://admissions.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//admissions.blogs.muhlenberg.edu/?wordfence_lh=1&hid=F13B627514D974C547DA0D83157FA8D5');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #cc092f; background-image: url("http://admissions.blogs.muhlenberg.edu/files/2010/12/webcolors1.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support custom-background paged-86 no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<h1 id="site-title">
+					<span>
+						<a href="http://admissions.blogs.muhlenberg.edu/" title="Muhlenberg College Blogs" rel="home">Muhlenberg College Blogs</a>
+					</span>
+				</h1>
+				<div id="site-description">Hear from our students what Muhlenberg is all about.</div>
+
+									<img src="http://admissions.blogs.muhlenberg.edu/files/2012/08/cropped-admissionsheader.jpg" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-authors" class="menu"><li id="menu-item-1131" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1131"><a href="http://admissions.blogs.muhlenberg.edu/author/mattlawsky12/">Matt</a></li>
+<li id="menu-item-1130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1130"><a href="http://admissions.blogs.muhlenberg.edu/author/as246905/">Ariel</a></li>
+<li id="menu-item-2406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2406"><a href="http://admissions.blogs.muhlenberg.edu/author/swedberg/">Drew</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://admissions.blogs.muhlenberg.edu/author/felisa/">Felisa</a></li>
+<li id="menu-item-2405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2405"><a href="http://admissions.blogs.muhlenberg.edu/author/jakegordon42/">Jake</a></li>
+<li id="menu-item-3039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3039"><a href="http://admissions.blogs.muhlenberg.edu/author/zoebriggs/">Zoe</a></li>
+<li id="menu-item-3794" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3794"><a href="http://admissions.blogs.muhlenberg.edu/author/aria/">Aria</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://admissions.blogs.muhlenberg.edu/page/87/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"><a href="http://admissions.blogs.muhlenberg.edu/page/85/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+	</div><!-- #nav-above -->
+
+
+
+	
+			<div id="post-1024" class="post-1024 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2012/04/my-final-days-in-perugia/" rel="bookmark">My Final Days In Perugia</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2012/04/my-final-days-in-perugia/" title="10:08 am" rel="bookmark"><span class="entry-date">April 23, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/db240243/" title="View all posts by Dani">Dani</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>I had a hard time starting this blog honestly, because I knew it meant that I was writing about my last moments here in Perugia. I have and will spend my last moments here soaking the beauty of Perugia and capturing the last memories with friends that I have made. My experience this semester has truly been incredible. I have learned so much about myself. Everyone says that study abroad changes you in some way, and I absolutely believe that, because I have truly been changed by this experience. I don’t know if I can pinpoint exactly when it happened, but it has, and I am so grateful for the experience.</p>
+<p>I have had the opportunity to live in a foreign country for four months. I have been able to learn and speak a foreign language and immerse myself into the culture of Perugia, Italy and Europe. Things are different here, and I learned that through my experience. I have gained a greater knowledge of culture globally, and it has opened up my views of the world.</p>
+<p>I have been able to travel to so many exciting and beautiful places, and I learned a lot about being independent on the way. Whether it was traveling by myself, missing trains and figuring out what to do next or trying to communicate with my little Italian to someone who doesn’t speak English, I learned a lot, and I feel stronger and more independent because of it. I feel like I can go out on my own and conquer a lot more now because of my time abroad.</p>
+<p>I have been able to learn really interesting and cool things in the classroom and then actually go out and see the real pieces. I never thought that I would take a Leonardo Da Vinci class and then go and see the Last Supper and actual pieces from his notebooks. It is almost surreal. Nothing has been more rewarding than having Italian class about traveling and directions and then going to travel that weekend and being able to talk to the train conductor about which stop to get off at the where to go from there.</p>
+<p>And last, but not least, I have made incredible friends for life. We have been through so many experiences together, and whenever anything good or bad happens, we are here for each other. I have had amazing roommates this entire semester. Since the first week, we have been having dinners together for hours so that we can sit and talk together. They have always been there for me, and I have been so lucky to have them as my roommates and friends. For them and the other friends I have made here, I cannot thank them enough for how they have come into my life and helped shape me to who I will be in the next stage of my life. I think it takes a certain kind of person to study abroad, and all the friends I have made are incredible people. I will miss them and will go to incredible lengths to keep them a part of my life.</p>
+<p>Perugia has been an amazing experience for me. Every time I left for a traveling I would say, “I can’t wait to get back to Perugia.” But a couple of weeks ago, when I was coming back from a trip, I said, “I can’t wait to go home to Perugia.” Perugia has become another home for me. While I may not still have an apartment here at Via Benincasa 24, I have a place filled with memories that will stay with me forever and I can’t wait to share them with everyone at home. I will be sad to say goodbye, but it won’t be forever. If I have anything to do with it, I’ll be back. 🙂</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on My Final Days In Perugia</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-1024 -->
+
+		
+	
+
+	
+			<div id="post-1002" class="post-1002 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2012/04/somewhere-old-and-somewhere-new/" rel="bookmark">Somewhere Old and Somewhere New</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2012/04/somewhere-old-and-somewhere-new/" title="2:32 pm" rel="bookmark"><span class="entry-date">April 10, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/db240243/" title="View all posts by Dani">Dani</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>After three months, I finally got the chance to visit Arezzo, which is only an hour away by train. I am surely filled with so many memories for some theatre and dance students at Muhlenberg. There is study abroad program in Arezzo, and I was so happy that I got a chance to visit and see a place where my some of my friends spent their entire semester.</p>
+<div id="attachment_1009" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010399.jpg"><img aria-describedby="caption-attachment-1009" class="size-medium wp-image-1009" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010399-300x281.jpg" alt="" width="300" height="281" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010399-300x281.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010399-1024x961.jpg 1024w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010399.jpg 1478w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1009" class="wp-caption-text">Arezzo 🙂</p></div>
+<div id="attachment_1003" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010363.jpg"><img aria-describedby="caption-attachment-1003" class="size-medium wp-image-1003" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010363-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010363-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010363-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1003" class="wp-caption-text">Piazza Grande and also the place where La vita e Bella was filmed! </p></div>
+<div id="attachment_1004" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010381.jpg"><img aria-describedby="caption-attachment-1004" class="size-medium wp-image-1004" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010381-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010381-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010381-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1004" class="wp-caption-text">My friends Alex, Liz, Dao and I in Arezzo</p></div>
+<p>Now for something new. I do not know how many people or Muhlenberg students have been able to visit Cinque Terre while they are studying abroad, but it is by far my new favorite place and one of my favorite places in all of Italy. If you ever have the chance, go there. Cinque Terre is made up of five villages: Manarola, Riomaggiore, Corniglia, Vernazza and Monterosso al Mare. Unfortunatley, Cinque Terre was hit with  mudslides in the fall. Most of the towns have been rebuilt and are okay, but one town, Vernazza, was hit the most, which was so devastating to that town. While in Cinque Terre, my two friends and I were still able to see two of the towns: Riomaggiore and Manarola.</p>
+<div id="attachment_1007" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010262.jpg"><img aria-describedby="caption-attachment-1007" class="size-medium wp-image-1007" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010262-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010262-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010262-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1007" class="wp-caption-text">Manarola!</p></div>
+<div id="attachment_1011" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010228.jpg"><img aria-describedby="caption-attachment-1011" class="size-medium wp-image-1011" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010228-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010228-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010228-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1011" class="wp-caption-text">Riomaggiore</p></div>
+<p>The views were absolutely stunning. I have never seen water so blue, and the pictures that I have here have not been altered at all. The views are just so rich with color that it is truly amazing. We walked along Via dell’ Amore, which is also called Lover’s Walk. The views were gorgeous.</p>
+<div id="attachment_1008" style="width: 210px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010261.jpg"><img aria-describedby="caption-attachment-1008" class="size-medium wp-image-1008" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010261-200x300.jpg" alt="" width="200" height="300" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010261-200x300.jpg 200w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010261-683x1024.jpg 683w" sizes="(max-width: 200px) 100vw, 200px" /></a><p id="caption-attachment-1008" class="wp-caption-text">Via Dell&#39; Amore</p></div>
+<div id="attachment_1012" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010240.jpg"><img aria-describedby="caption-attachment-1012" class="size-medium wp-image-1012" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010240-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010240-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010240-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1012" class="wp-caption-text">The beginning of Via dell&#39; Amore</p></div>
+<p>&nbsp;</p>
+<p>Also, my friends and I sat and watched the sunset in Manarola and as I sat there, I thought about my time here so far. I was really calm and just wanted to soak in every minute, which is what I have been doing this entire experience. I wanted to bottle the beauty and bring it back to America with me. I am glad the pictures do it some justice, and I hope if anyone has the chance to visit Cinque Terre that they seize the opportunity, because I did, and I know it will stay with me for the rest of my life. There have been many moments like this throughout my trip so far, and I am just so fortunate to be blogging and taking pictures and videos so that I will be able to hold onto these memories for the rest of my life, even though they are truly unforgettable.</p>
+<div id="attachment_1006" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010285.jpg"><img aria-describedby="caption-attachment-1006" class="size-medium wp-image-1006" src="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010285-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010285-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/04/P1010285-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1006" class="wp-caption-text">Manarola at Sunset</p></div>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Somewhere Old and Somewhere New</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-1002 -->
+
+		
+	
+
+	
+			<div id="post-990" class="post-990 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2012/03/here-comes-the-sun/" rel="bookmark">Here Comes the Sun</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2012/03/here-comes-the-sun/" title="5:00 pm" rel="bookmark"><span class="entry-date">March 30, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/db240243/" title="View all posts by Dani">Dani</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>The sun is out and shinning here in Perugia. It is absolutely wonderful. I have been spending as much time as possible outside trying to soak up the sun and sitting on the steps enjoying the weather (and eating lots of gelato).  The steps are in the main square outside of the Duomo in the center of Perugia, where basically the whole city hangs out with friends all day and late into the night. My friends and I have taken up this tradition as well, and we love sitting on the steps and enjoying the day.</p>
+<p>Because the weather has been so nice, some of my friends and I decided to go to a lake close to Perugia a couple of days ago. It is the largest lake on the Italian peninsula in the Umbrian region. It was very beautiful and quite relaxing, and it was nice to hang out and relax with some friends.</p>
+<div id="attachment_994" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010174.jpg"><img aria-describedby="caption-attachment-994" class="size-medium wp-image-994" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010174-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010174-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010174-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-994" class="wp-caption-text">Lago Trasimeno and Isola Maggiore</p></div>
+<div id="attachment_993" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010193.jpg"><img aria-describedby="caption-attachment-993" class="size-medium wp-image-993" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010193-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010193-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010193-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-993" class="wp-caption-text">My friends and I at Lago Trasimeno</p></div>
+<p>After a relaxing weekend, it was back to school, but what better way to start the week then having class at the Perugina chocolate factory? I got to go there with my Italian class to see how Bacio and other chocolate by Perugina was made. The tour was all in Italian, and I actually ended up understanding a lot more than I thought, so it is nice to know that my Italian is improving! An interesting fact about the factory is that if you have ever eaten a Bacio chocolate, it has come from the factory in Perugia. Every piece of Bacio, which is sold all over the world, all comes from this one factory in Perugia. Also, I got to see a plastic version of the Bacione (which means really large chocolate)  which the Perugina chocolate factory made to be displayed at the Eurochocolate festival in Perugia. The Bacione was the biggest piece of the chocolate in the world and is in the Guinness Book of World Records. Pretty cool, right?</p>
+<div id="attachment_992" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010208.jpg"><img aria-describedby="caption-attachment-992" class="size-medium wp-image-992" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010208-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010208-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010208-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-992" class="wp-caption-text">Bacione= huge piece of chocolate!</p></div>
+<div id="attachment_991" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010205.jpg"><img aria-describedby="caption-attachment-991" class="size-medium wp-image-991" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010205-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010205-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010205-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-991" class="wp-caption-text">Perugina chocolate factory</p></div>
+<p>Between the chocolate and the sun, things are quite wonderful here in Perugia. With less than a month left here, there is still so much to see and do that I can’t wait to see what  experience will be next.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Here Comes the Sun</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-990 -->
+
+		
+	
+
+	
+			<div id="post-973" class="post-973 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2012/03/class-on-the-weekend/" rel="bookmark">Class on the Weekend?</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2012/03/class-on-the-weekend/" title="9:59 am" rel="bookmark"><span class="entry-date">March 21, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/db240243/" title="View all posts by Dani">Dani</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>This may be hard to believe, but I have had the best time having classes when it is required on some weekends. This may be because they are field trips to cities all around Italy to see things, from the houses of saints from the 14<sup>th</sup> century to Da Vinci’s Last Supper. This past weekend, I got to go to Florence and Milan for one of the last field trips with my Leonardo Da Vinci class. It really was the trip of all trips, because after studying Leonardo for weeks, I was able to see some of his most famous works.</p>
+<p>We started in Florence at the Uffizi Gallery on Friday, where I got to see Leonardo’s The Annunciation. In the same gallery was Botticelli’s Birth of Venus. We also went into the Town Hall in Florence, where they just announced this past Monday that there may be a Leonardo fresco underneath the paintings on the walls of the town hall, so they are trying to get the funds to try and see if they can salvage the fresco underneath. So while my class was there, there was a lot of excitement to know there may be another Leonardo masterpiece in Florence.</p>
+<p>Then, after lunch, we went up to Milan, and the next day went to the Sforza Castle, where Leonardo spent a lot of his time while he was in Milan; the Duomo, which is gorgeous; a museum that held parts of Leonardo’s notebooks, called the Codice Atlantico; and, last but not least, the Last Supper, which was quite a sight to see.</p>
+<p>It was very impressive and so cool to see the art I had only seen in detail during PowerPoint presentations in class. This was one of many class field trips that I have been able to take this semester. I’ve also had the chance to go to Assisi, Spoleto and Siena for class as well along with a couple trips in Perugia itself.</p>
+<div id="attachment_976" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010126.jpg"><img aria-describedby="caption-attachment-976" class="size-medium wp-image-976" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010126-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010126-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010126-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-976" class="wp-caption-text">The Duomo in Milano</p></div>
+<div id="attachment_975" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010092.jpg"><img aria-describedby="caption-attachment-975" class="size-medium wp-image-975" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010092-300x205.jpg" alt="" width="300" height="205" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010092-300x205.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010092-1024x701.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-975" class="wp-caption-text">My friends Liz, Amanda Sam and I outside the Duomo</p></div>
+<div id="attachment_977" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010062.jpg"><img aria-describedby="caption-attachment-977" class="size-medium wp-image-977" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010062-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010062-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010062-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-977" class="wp-caption-text">The place where the Last Supper is held! So beautiful!</p></div>
+<div id="attachment_978" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010065.jpg"><img aria-describedby="caption-attachment-978" class="size-medium wp-image-978" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010065-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010065-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010065-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-978" class="wp-caption-text">The Sforza Castle </p></div>
+<p>There is so much history and art in Italy, and it is so exciting to learn about these things here and then be able to see the originals. One of the best parts of my study abroad experience so far has been going off campus and on field trips to see all the buildings and art that I learn about in class. It is really fun, because not only do I get to see the things related to my class, but I also get to experience the culture and the town as well. I know all the experiences that I have had in each of these places will stick with me for the rest of my life.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Class on the Weekend?</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-973 -->
+
+		
+	
+
+	
+			<div id="post-952" class="post-952 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2012/03/io-amo-il-cibo-ditalia/" rel="bookmark">Io amo il cibo d&#8217;Italia</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2012/03/io-amo-il-cibo-ditalia/" title="2:52 pm" rel="bookmark"><span class="entry-date">March 12, 2012</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/db240243/" title="View all posts by Dani">Dani</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>The title says, &#8220;I love the food in Italy,&#8221; and that would almost be an understatement. Food is a huge part of the culture here in Italy, so I thought I would spend a little time talking about how I have experienced it. In the morning, breakfast consists of espresso or cappuccino and a cornetto, which is a croissant, and that is it. There are swarms of people in caffés in the mornings standing eating breakfast before they are off to work. A week ago, when I went on a class field trip, the first place we stopped was a caffé, and then we started our trip. I have learned to love a cappuccino in the morning but I have learned to not order it after 12pm. I have learned from experience that it will get you strange looks, because Italians see a cappuccino with its heavy dose of milk as a food so mixing it with any other food you eat that day is considered wrong. So I have learned to adapt to the culture and just have a cappuccino before lunch and a latte macchiato after lunch because that is a-okay.</p>
+<div id="attachment_956" style="width: 210px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010017.jpg"><img aria-describedby="caption-attachment-956" class="size-medium wp-image-956" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010017-200x300.jpg" alt="" width="200" height="300" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010017-200x300.jpg 200w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1010017-683x1024.jpg 683w" sizes="(max-width: 200px) 100vw, 200px" /></a><p id="caption-attachment-956" class="wp-caption-text">A cappucino to start the day 🙂</p></div>
+<p>Dinners typically don’t start until around 8:30pm and go for hours at a time. If you go out to a restaurant, the table is technically yours for the evening so unless you wave the waiter down, one could stay at a dinner for upwards of three hours. It is a lot of fun to go out with my friends and have dinners for hours at a time. My huge indulgence when I go out to eat is pizza. All the food here is one-of-a-kind to each restaurant and always delicious because the ingredients are fresh and homemade.</p>
+<div id="attachment_953" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/pizza-pic-for-blog-.jpg"><img aria-describedby="caption-attachment-953" class="size-medium wp-image-953" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/pizza-pic-for-blog--300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/pizza-pic-for-blog--300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/pizza-pic-for-blog--1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-953" class="wp-caption-text">veggie pizza!</p></div>
+<div id="attachment_957" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1000415.jpg"><img aria-describedby="caption-attachment-957" class="size-medium wp-image-957" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1000415-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/P1000415-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/P1000415-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-957" class="wp-caption-text">PizzaMed with ingredients straight from Naples</p></div>
+<p>I love having pizza, pasta and eating dinners out but that isn’t every day, and since there is no wonderful dining hall like there is at Berg, while I am here in Perugia, I am cooking a lot. I knew about next to nothing about cooking when I showed up here, and now I am starting to get the hang out of it and really enjoying putting meals together. It is also nice, because I can go to markets and get fresh, locally grown fruits and vegetables to put into dishes.</p>
+<div id="attachment_955" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/dinner-meal-blog-pic.jpg"><img aria-describedby="caption-attachment-955" class="size-medium wp-image-955" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/dinner-meal-blog-pic-300x200.jpg" alt="" width="300" height="200" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/dinner-meal-blog-pic-300x200.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/dinner-meal-blog-pic-1024x683.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-955" class="wp-caption-text">A dinner that was put together one night</p></div>
+<p>99% of the time, I am not cooking alone. People will  come over and help cook, and we will put whatever we can together. It is so wonderful because not only does that produce wonderful meals, but it is a great time to sit down with people from my program who are from different parts of the county and sometimes different parts of Italy to hear all about their lives and culture. Around the table, a community is made, and I really enjoy sitting down at the table each night to hear the stories of the people around me … and the food isn’t half bad either 🙂</p>
+<div id="attachment_954" style="width: 310px" class="wp-caption aligncenter"><a href="http://admissions.blogs.muhlenberg.edu/files/2012/03/roomie-dinner-table-photo.jpg"><img aria-describedby="caption-attachment-954" class="size-medium wp-image-954" src="http://admissions.blogs.muhlenberg.edu/files/2012/03/roomie-dinner-table-photo-300x186.jpg" alt="" width="300" height="186" srcset="http://admissions.blogs.muhlenberg.edu/files/2012/03/roomie-dinner-table-photo-300x186.jpg 300w, http://admissions.blogs.muhlenberg.edu/files/2012/03/roomie-dinner-table-photo-1024x635.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-954" class="wp-caption-text">Dinner with wonderful friends!</p></div>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Io amo il cibo d&#8217;Italia</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-952 -->
+
+		
+	
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://admissions.blogs.muhlenberg.edu/page/87/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"><a href="http://admissions.blogs.muhlenberg.edu/page/85/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+			</ul>
+		</div><!-- #primary .widget-area -->
+
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+				<li id="search-3" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://admissions.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="calendar-3" class="widget-container widget_calendar"><h3 class="widget-title">Recent Posts</h3><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>November 2020</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://admissions.blogs.muhlenberg.edu/2015/05/">&laquo; May</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+	</tr>
+	<tr>
+		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td>
+	</tr>
+	<tr>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	<tr>
+		<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td id="today">22</td>
+	</tr>
+	<tr>
+		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+	</tr>
+	<tr>
+		<td>30</td>
+		<td class="pad" colspan="6">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></li>			</ul>
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="footer-widget-area" role="complementary">
+
+				<div id="first" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-5" class="widget-container widget_text">			<div class="textwidget"><a href="http://muhlenberg.edu/" target="_blank" rel="noopener noreferrer">Muhlenberg College Home</a><br />
+2400 Chew St. Allentown, PA 18104-5586 484-664-3100 484-664-3623 (TTY)</div>
+		</li>					</ul>
+				</div><!-- #first .widget-area -->
+
+				<div id="second" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-3" class="widget-container widget_text">			<div class="textwidget">&nbsp;</div>
+		</li>					</ul>
+				</div><!-- #second .widget-area -->
+
+				<div id="third" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-6" class="widget-container widget_text">			<div class="textwidget">&nbsp;</div>
+		</li>					</ul>
+				</div><!-- #third .widget-area -->
+
+				<div id="fourth" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-2" class="widget-container widget_text">			<div class="textwidget"><p align="right"><a href="http://www.facebook.com/MuhlenbergCollege"><img src="http://muhlenberg.edu/images/facebook-w.jpg" border="0"></a>
+		<a href="http://twitter.com/muhlenberg"><img src="http://muhlenberg.edu/images/twitter-w.jpg" border="0"></a></p></div>
+		</li>					</ul>
+				</div><!-- #fourth .widget-area -->
+
+			</div><!-- #footer-widget-area -->
+
+			<div id="site-info">
+				<a href="http://admissions.blogs.muhlenberg.edu/" title="Muhlenberg College Blogs" rel="home">
+					Muhlenberg College Blogs				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://admissions.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fadmissions.blogs.muhlenberg.edu%2Fpage%2F86%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://admissions.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

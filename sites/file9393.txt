@@ -1,0 +1,475 @@
+http://sportsinfo.blogs.muhlenberg.edu/2011/12/15/senior-profiles-football-part-3-of-4/
+27
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Senior Profiles: Football, Part 3 of 4 | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Senior Profiles: Football, Part 2 of 4' href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/14/senior-profiles-football-part-2-of-4/' />
+<link rel='next' title='Senior Profiles: Football, Part 4 of 4' href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/16/senior-profiles-football-part-4-of-4/' />
+
+<link rel="canonical" href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/15/senior-profiles-football-part-3-of-4/" />
+<link rel='shortlink' href='http://sportsinfo.blogs.muhlenberg.edu/?p=612' />
+<link rel="alternate" type="application/json+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2011%2F12%2F15%2Fsenior-profiles-football-part-3-of-4%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2011%2F12%2F15%2Fsenior-profiles-football-part-3-of-4%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=949A51B5F1821C74AA4BDE4CAA85E071');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-612 single-format-standard admin-bar no-customize-support wp-embed-responsive single-author singular two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/14/senior-profiles-football-part-2-of-4/" rel="prev"><span class="meta-nav">&larr;</span> Previous</a></span>
+						<span class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/16/senior-profiles-football-part-4-of-4/" rel="next">Next <span class="meta-nav">&rarr;</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-612" class="post-612 post type-post status-publish format-standard hentry category-football">
+	<header class="entry-header">
+		<h1 class="entry-title">Senior Profiles: Football, Part 3 of 4</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/15/senior-profiles-football-part-3-of-4/" title="3:25 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-15T15:25:50-04:00">December 15, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><em>Five more profiles of seniors on the Muhlenberg football team. <a title="Senior Profiles: Football, Part 1 of 4" href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/13/senior-profiles-football-part-1-of-4/">Part 1</a> and <a title="Senior Profiles: Football, Part 2 of 4" href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/14/senior-profiles-football-part-2-of-4/">Part 2</a> ran earlier this week, and we&#8217;ll finish up with the four senior captains tomorrow.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/ryanhs.jpg"><img class="alignleft size-full wp-image-613" title="Kevin Ryan" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/ryanhs.jpg" alt="" width="100" height="150" /></a>Kevin Ryan</strong></p>
+<p><strong>Six is not a typical number for a defensive back; how did you end up wearing it?</strong><em> </em>I originally wore the number back in high school for both baseball and football, and when I arrived at Muhlenberg my freshman year, six was the number they gave me. I thought that was pretty cool, and six kind of just became a part of me. And now it’s my favorite number.</p>
+<p><strong>What was it like punting last year? </strong>I had never punted before in my life. One practice, coach came up to me and told me I was going to start punting. I never thought I’d actually end up punting in a game, though. Don’t get me wrong, I had some stellar punts in my short-lived career, but I think it’s safe to say it was a failed experiment.<em></em></p>
+<p><strong>What are your future plans? </strong>Make millions of dollars through penny stocks. Then buying a WNBA franchise and leading it to multiple championships. The Dalai Lama himself once told me that on my deathbed I would receive total consciousness. So I’ve got that going for me, which is nice.<em></em></p>
+<p><strong>What kind of teammate is Gregg Mercogliano?</strong><em> </em>Gregg “The Leg” Mercogliano is the best teammate one could have. Secretly, he is the funniest kid on the team. Armed with feathered and lethal hair, “The Leg” is the backbone of Muhlenberg Special Forces. Cogs is a go-getter. Most people would back down from certain challenges, such as a 4th-and-19 fake punt, but not Cogs. With zero hesitation, he put his blazing speed to work running with such gracefulness the he reminded the crowd of a young Barry Sanders. He may have come up a couple yards shy, but nevertheless, Cogs is one man I’m grateful to have on my team.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/mercoglianohs.jpg"><img class="alignleft size-full wp-image-614" title="Gregg Mercogliano" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/mercoglianohs.jpg" alt="" width="100" height="150" /></a>Gregg Mercogliano</strong> </p>
+<p><strong>How rewarding does it feel to be making an impact in your final season? </strong>It’s been a great feeling to contribute to the team this year on game day. I stayed committed during the summer to make this season an important and memorable one. I’m glad it is paying off so far. Having a great snapper and holder helps as well.</p>
+<p><strong>What was the feeling like when your 44-yard field goal sailed through the uprights at Gettysburg? </strong>It felt good. We spend a lot of time in practice working on situational field goals, and to make a long one in a game felt rewarding. Unfortunately, the outcome of the game didn’t turn out the way we wanted it to. <strong></strong></p>
+<p><strong>What are your future plans? </strong>I plan on working in the accounting field in either Philadelphia or New York. I also plan on hopefully passing the CPA exam. If I can’t get a job right away, I plan on trading stocks during the day.  </p>
+<p><strong>What kind of player is Steve Nissley? </strong>Niss is a great teammate and one of my best friends. On the field, he’s known for his strong work ethic and physical toughness. Off the field, he’s known for his fashion style. He has a nice collection of Armani watches and always seems to be wearing a classic pair of penny loafers. I’m glad I became friends with Niss and know he will have a successful future.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nissleyhs.jpg"><img class="alignleft size-full wp-image-615" title="Steve Nissley" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nissleyhs.jpg" alt="" width="100" height="150" /></a>Steve Nissley</strong></p>
+<p><strong>You’ve made the Centennial Conference Academic Honor Roll; how have you been able to balance your time between school and football? </strong>Finding time to study and finish work for class can be a struggle during the season. At times I’ve had to pass on going out with some friends to finish some work, but playing football and maintaining good grades have taught me how to manage my time well. Looking back on it, I have no idea how I managed playing football, classes and living in the crazy world of Benfer for two straight years.<strong></strong></p>
+<p><strong>What off-the-field accomplishment are you most proud of? </strong>I would say starting up and successfully running my business, “Fresh-Niss Barber Shop,” incorporated in 2008, providing Muhlenberg College with a one-of-a-kind look. I like to think of myself as Van Gogh with clippers in my hand, just dishing out masterpieces left and right. I can also cut with scissors, and have perfected “the visor” look specifically for my good friend Gregg “4G connecting from anywhere on the field” Mercogliano. Additionally, I’m looking for investors to help expand my business along the East Coast and eventually overseas.<strong></strong></p>
+<p><strong>What are your future plans? </strong>I’m hoping to get out and travel a little after graduation before I start working in the fall at Deloitte. I’m leaning towards Las Vegas for its spontaneity.<strong></strong></p>
+<p><strong>What’s Kevin Ryan like off the field? </strong>A wise man once told me, “Never trust a man with two first names.” Kevin Ryan is definitely a character. Some of the things that go through his head could be classified under Area 51 — just straight up unexplainable. But when push comes to shove, I know he would have my back. Kev is a great friend, and it has been a pleasure playing ball with him over the past four years. We’ve had some good memories and many more to come.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nadellhs.jpg"><img class="alignleft size-full wp-image-616" title="Chase Nadell" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nadellhs.jpg" alt="" width="100" height="150" /></a>Chase Nadell</strong></p>
+<p><strong>What’s the biggest hit you’ve ever delivered?</strong> It would have to be against Gettysburg my junior year. I came in untouched off the edge and just crushed the helpless running back. This is a funny game because you never want to hit to cause serious injury, but you always want to hit to instill a little fear in your opponent’s mind for the next time he’s carrying or catching the ball. That was one of those hits that let Gettysburg know we were there. <em></em></p>
+<p><strong>What’s the most memorable moment from your Mule career?</strong><em> </em>The first time I returned a kickoff against Union. I was so nervous and wondered how bad it was going to hurt when I got tackled. It turned out I would have to wait until the next return to see how it felt because I ended up taking that kick back 87 yards for a touchdown. It was my first touchdown and ended up being the game-winner.</p>
+<p><strong>What are your future plans? </strong>I don’t know exactly what they are, but in the near future I plan to travel around Europe. It’s an experience that I always wanted to have. I feel that by traveling and seeing new things in different places, I’ll get a different perspective on living. I am thinking about going into wealth management for a career.<em></em></p>
+<p><strong>What’s it been like playing both football and lacrosse with Andy Curley?</strong><em> </em>It has been more than amazing playing with Andy Curley. The man is one of my best friends. I am always trying to spend more time with him, but he’s always breaking our plans to go see the shows at the Center for the Arts; he just can’t get enough of the musicals. Seeing that Curley is in his fifth year here, a lot of the guys see him as a father figure and role model. He is never too busy to pass on his wisdom about the good old days and will never be afraid to teach you some pointers he’s picked up over his tenure here. It’s been a pleasure to have played with Andy, and I hope that he becomes a successful doctor so he can fix me after the season.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/curleyhs.jpg"><img class="alignleft size-full wp-image-89" title="Andy Curley" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/curleyhs.jpg" alt="" width="100" height="150" /></a>Andy Curley</strong></p>
+<p><strong>How great does it feel to be back on the field after being injured most of last season? What made you decide to come back for a fifth year? </strong>It feels great. Having to watch my teammates play my senior year was pretty tough to go through. This season definitely gives me a sense of closure on my career.<em> </em>I wanted to make sure Pat McDonough never got an interception, so I stepped in front of him to grab one at F&amp;M. Robbing him of that made it all worthwhile.<em></em></p>
+<p><strong>What’s the most memorable moment from your Mule career? </strong>My freshman year we went 10-0 and then beat Salisbury during the first round of the playoffs. Since my cousin was the starting quarterback of that Salisbury team, it made our family Thanksgiving dinner the following week pretty enjoyable because I got to rub it in on him.</p>
+<p><strong>You’ve been named to the Centennial Conference Academic Honor Roll six times; how have you been able to continually excel in the classroom while also playing two sports? </strong>I take it one day at a time, don’t sleep a lot and drink a lot of coffee.</p>
+<p><strong>What are your future plans? </strong>I plan on attending medical school so I can become a doctor and fix other broken athletes that are aging way too fast like me. If that doesn’t work, I’ll probably just look into retirement and live with my parents for the rest of my life.<em></em></p>
+<p><strong>What’s it been like playing both football and lacrosse with Chase Nadell?</strong><em> </em>Anybody that knows him agrees that I could write a collection of novels on Captain Chase and it still wouldn’t tell the whole story. He is unbelievably competitive, always energetic and a soft, caring person deep down inside. You could be having the worst day of your life, but you would forget about it by talking to Chase for five minutes. I can honestly say that I have never met anybody in my life like Chase, and I doubt I ever will. Chase is a person that everybody wants to be around, and I have been lucky to play with him here.</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a> by <a href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/">sportsinfo</a>. Bookmark the <a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/15/senior-profiles-football-part-3-of-4/" title="Permalink to Senior Profiles: Football, Part 3 of 4" rel="bookmark">permalink</a>.
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-612 -->
+
+						<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2011%2F12%2F15%2Fsenior-profiles-football-part-3-of-4%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

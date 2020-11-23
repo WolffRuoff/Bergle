@@ -1,0 +1,819 @@
+http://it.blogs.muhlenberg.edu/?cat=172334/
+83
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://it.blogs.muhlenberg.edu/xmlrpc.php">
+
+<title>Phone System &#8211; Office of Information Technology</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Feed" href="http://it.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Comments Feed" href="http://it.blogs.muhlenberg.edu/?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Phone System Category Feed" href="http://it.blogs.muhlenberg.edu/?feed=rss2&#038;cat=172334" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather Sans-css'  href='http://fonts.googleapis.com/css?family=Merriweather+Sans&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather-css'  href='http://fonts.googleapis.com/css?family=Merriweather&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wpstatistics-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-statistics/assets/css/frontend.css?ver=12.6.13' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-font-awesome-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/fontawesome/font-awesome.css?ver=4.1.0' type='text/css' media='screen' />
+<!--[if IE]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/styles/ie.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='editor-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic%7CRoboto+Condensed%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wptt_front-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-twitter-feeds/controller/../css/admin_style.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css'  href='http://it.blogs.muhlenberg.edu?sccss=1&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var elp_data = {"messages":{"elp_name_required":"Please enter name.","elp_email_required":"Please enter email address.","elp_invalid_name":"Name seems invalid.","elp_invalid_email":"Email address seems invalid.","elp_unexpected_error":"Oops.. Unexpected error occurred.","elp_invalid_captcha":"Robot verification failed, please try again.","elp_invalid_key":"Robot verification failed, invalid key.","elp_successfull_single":"You have successfully subscribed.","elp_successfull_double":"You have successfully subscribed. You will receive a confirmation email in few minutes. Please follow the link in it to confirm your subscription. If the email takes more than 15 minutes to appear in your mailbox, please check your spam folder.","elp_email_exist":"Email already exist.","elp_email_squeeze":"You are trying to submit too fast. try again in 1 minute."},"elp_ajax_url":"http:\/\/it.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers//inc/email-posts-to-subscribers.js?ver=2.2'></script>
+<link rel='https://api.w.org/' href='http://it.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://it.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://it.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://it.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//it.blogs.muhlenberg.edu/?wordfence_lh=1&hid=872AB610B5CFFD3C7B9518604852779A');
+</script><style>.elp_form_message.success { color: #008000;font-weight: bold; } .elp_form_message.error { color: #ff0000; } .elp_form_message.boterror { color: #ff0000; } </style><!-- Analytics by WP-Statistics v12.6.13 - https://wp-statistics.com/ -->
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css">
+						h1 { font-family: Merriweather; } h2 { font-family: Merriweather Sans; } h3 { font-family: Merriweather; } h4 { font-family: Merriweather; } h5 { font-family: Merriweather; } h6 { font-family: Merriweather; } body, p { font-family: Merriweather Sans; } blockquote, blockquote p { font-family: Merriweather; } 	</style>
+
+</head>
+
+<body class="bp-legacy archive category category-phone-system category-172334 admin-bar no-customize-support group-blog no-js">
+
+<div id="page" class="hfeed site container">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
+		<header id="masthead" class="site-header light" role="banner">
+		<!-- Tab navigation -->
+		<ul class="toggle-bar" role="tablist">
+			<!-- Main navigation -->
+			<li id="panel-1" class="current" role="presentation">
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text">View menu</span></a>
+			</li>
+
+			<!-- Featured Posts navigation -->
+							<li id="panel-2" role="presentation">
+					<a href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" data-tab="tab-2"><i class="fa fa-thumb-tack"></i><span class="screen-reader-text">View featured posts</span></a>
+				</li>
+			
+			<!-- Sidebar widgets navigation -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text">View sidebar</span></a>
+			</li>
+		</ul>
+
+		<div id="tabs" class="toggle-tabs">
+			<div class="site-header-inside">
+				<!-- Logo, description and main navigation -->
+				<div id="tab-1" class="tab-content current fadeIn">
+					<div class="site-branding">
+						<!-- Get the site branding -->
+													<h1 class="site-logo">
+								<a href="http://it.blogs.muhlenberg.edu/"><img class="site-logo" src="http://it.blogs.muhlenberg.edu/files/muhl_icon_RGB_color.png" alt="Office of Information Technology" /></a>
+							</h1>
+											</div>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<div class="menu"><ul>
+<li ><a href="http://it.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-2"><a href="http://it.blogs.muhlenberg.edu/?page_id=2">About</a></li>
+</ul></div>
+					</nav><!-- #site-navigation -->
+
+									</div><!-- #tab-1 -->
+
+				<!-- Featured Posts template (template-featured-posts.php) -->
+				
+									<div id="tab-2" class="widget-area tab-content animated fadeIn">
+						<div class="widget featured-posts-widget">
+							<h2 class="widget-title">Announcements</h2>
+
+							<div class="featured-posts">
+							    
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark">IT Connects!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark"><time class="entry-date published" datetime="2020-05-27T10:25:17-04:00">May 27, 2020</time><time class="updated" datetime="2020-05-27T10:25:20-04:00">May 27, 2020</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark">Google Drive Feature Release: Team Drive and Drive File Stream</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark"><time class="entry-date published" datetime="2018-02-20T12:53:10-04:00">February 20, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark">A new way to TV- Philo Internet Television</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark"><time class="entry-date published" datetime="2017-10-23T11:12:08-04:00">October 23, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark">OIT Open House &#8211; April 28</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark"><time class="entry-date published" datetime="2017-04-11T14:18:31-04:00">April 11, 2017</time><time class="updated" datetime="2017-04-27T15:52:51-04:00">April 27, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark">Coming Soon: G Suite &amp; Google Day!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark"><time class="entry-date published" datetime="2016-12-23T11:43:32-04:00">December 23, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark">GSuite Info Sessions Announced</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark"><time class="entry-date published" datetime="2016-11-23T15:22:53-04:00">November 23, 2016</time><time class="updated" datetime="2016-12-06T10:21:21-04:00">December 6, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark">Instructional Technology and Digital Learning Team Updates&#8230;.</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark"><time class="entry-date published" datetime="2016-10-13T17:01:09-04:00">October 13, 2016</time><time class="updated" datetime="2016-10-13T17:26:02-04:00">October 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1682">Thomas Sciarrino</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark">Qualtrics</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark"><time class="entry-date published" datetime="2016-09-13T14:59:26-04:00">September 13, 2016</time><time class="updated" datetime="2016-09-13T15:37:08-04:00">September 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1478">Tim</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark">Office 2016 Deployment</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark"><time class="entry-date published" datetime="2016-08-25T15:26:52-04:00">August 25, 2016</time><time class="updated" datetime="2016-08-26T16:02:15-04:00">August 26, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark">Lynda.com &#8211; Our New Online Training Resource</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark"><time class="entry-date published" datetime="2016-08-10T15:53:12-04:00">August 10, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																							</div><!-- .featured-posts -->
+						</div><!-- .featured-posts-widget -->
+					</div><!-- #tab-2 .widget-area -->
+				
+				<!-- Sidebar widgets -->
+				<div id="tab-3" class="tab-content animated fadeIn" role="tabpanel" aria-labelledby="panel-3" aria-hidden="true">
+						<div id="secondary" class="widget-area" role="complementary">
+		<aside id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+				<li class="cat-item cat-item-22152"><a href="http://it.blogs.muhlenberg.edu/?cat=22152">Announcements</a> (14)
+</li>
+	<li class="cat-item cat-item-172350"><a href="http://it.blogs.muhlenberg.edu/?cat=172350">Client Support Services</a> (13)
+</li>
+	<li class="cat-item cat-item-172364"><a href="http://it.blogs.muhlenberg.edu/?cat=172364">General News</a> (2)
+</li>
+	<li class="cat-item cat-item-172396"><a href="http://it.blogs.muhlenberg.edu/?cat=172396">Instructional Technology</a> (7)
+</li>
+	<li class="cat-item cat-item-172349"><a href="http://it.blogs.muhlenberg.edu/?cat=172349">IT Connects! Newsletter</a> (5)
+</li>
+	<li class="cat-item cat-item-20867 current-cat-parent current-cat-ancestor"><a href="http://it.blogs.muhlenberg.edu/?cat=20867">Projects</a> (26)
+<ul class='children'>
+	<li class="cat-item cat-item-170064"><a href="http://it.blogs.muhlenberg.edu/?cat=170064">Communication &amp; Collaboration</a> (4)
+</li>
+	<li class="cat-item cat-item-172356"><a href="http://it.blogs.muhlenberg.edu/?cat=172356">ERP</a> (5)
+</li>
+	<li class="cat-item cat-item-172338"><a href="http://it.blogs.muhlenberg.edu/?cat=172338">Google Apps</a> (10)
+</li>
+	<li class="cat-item cat-item-172334 current-cat"><a aria-current="page" href="http://it.blogs.muhlenberg.edu/?cat=172334">Phone System</a> (3)
+</li>
+	<li class="cat-item cat-item-172331"><a href="http://it.blogs.muhlenberg.edu/?cat=172331">Printing and WEPA</a> (5)
+</li>
+	<li class="cat-item cat-item-172365"><a href="http://it.blogs.muhlenberg.edu/?cat=172365">WiFi</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8070"><a href="http://it.blogs.muhlenberg.edu/?cat=8070">Security</a> (23)
+<ul class='children'>
+	<li class="cat-item cat-item-1"><a href="http://it.blogs.muhlenberg.edu/?cat=1">cybersecurity</a> (14)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8028"><a href="http://it.blogs.muhlenberg.edu/?cat=8028" title="Stay up-to-date on technology related issues. ">Status</a> (3)
+</li>
+	<li class="cat-item cat-item-172342"><a href="http://it.blogs.muhlenberg.edu/?cat=172342">Upgrades and Updates</a> (2)
+</li>
+		</ul>
+			</aside><aside id="email-posts-to-subscribers-2" class="widget widget_text elp-widget"><h2 class="widget-title">Subscribe to Blog</h2>				<div class="email_posts_subscribers">
+						<form action="#" method="post" class="elp_form" id="elp_form_1606078582">
+				<p><span class="name">Name</span><br /><input type="text" name="name" id="name" placeholder="Name" value="" maxlength="50" required/></p>				<p><span class="email">Email</span><br /><input type="email" id="email" name="email" value="" placeholder="Email"  maxlength="225" required/></p>								<input name="submit" id="elp_form_submit_1606078582" value="Submit" type="submit" />
+				<span class="elp_form_spinner" id="elp-loading-image" style="display:none;">
+					<img src="http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers/inc/ajax-loader.gif" />
+				</span>
+				<input name="nonce" id="nonce" value="cc1392543b" type="hidden"/>
+				<input name="group" id="group" value="" type="hidden"/>
+				<input type="text" style="display:none;" id="email_name" name="email_name" value="" type="hidden"/>
+			</form>	
+			<span class="elp_form_message" id="elp_form_message_1606078582"></span>
+		</div>
+		<br />
+	</aside><aside id="archives-3" class="widget widget_archive"><h2 class="widget-title">Post Archive</h2>		<ul>
+				<li><a href='http://it.blogs.muhlenberg.edu/?m=202009'>September 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202007'>July 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202005'>May 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202004'>April 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202003'>March 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202002'>February 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202001'>January 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201912'>December 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201911'>November 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201910'>October 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201909'>September 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201908'>August 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201907'>July 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201905'>May 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201904'>April 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201809'>September 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201808'>August 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201807'>July 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201806'>June 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201805'>May 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201804'>April 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201802'>February 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201801'>January 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201711'>November 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201710'>October 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201709'>September 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201708'>August 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201706'>June 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201705'>May 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201704'>April 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201703'>March 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201701'>January 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201612'>December 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201611'>November 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201610'>October 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201609'>September 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201608'>August 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201607'>July 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201605'>May 2016</a></li>
+		</ul>
+			</aside>	</div><!-- #secondary -->
+				</div><!-- #tab-3 -->
+			</div><!-- .site-header-inside -->
+		</div><!-- #tabs -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content fadeInFast">
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+			<header class="page-header ">
+				<h1 class="page-title">
+					Category / Phone System				</h1>
+							</header><!-- .page-header -->
+
+			<!-- If author has a bio, show it. -->
+			
+						
+				
+<article id="post-508" class="post post-508 type-post status-publish format-standard hentry category-phone-system tag-mitel tag-phone">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=508" rel="bookmark"><time class="entry-date published" datetime="2016-11-01T09:17:34-04:00">November 1, 2016</time><time class="updated" datetime="2016-12-20T16:48:31-04:00">December 20, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=508" rel="bookmark">What to expect while you are expecting the new phone system</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172334" rel="category">Phone System</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=mitel" rel="tag">mitel</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=phone" rel="tag">phone</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=508#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>OIT is in the midst of the installation of the new campus wide phone system, based on Mitel. We want to provide further clarity about the project and additional details about what you can expect during this transition.</p>
+<p><strong>Project Goals</strong></p>
+<p>The goal of the first phase, to be completed in 2016, is to replace our aging legacy architecture, which is past its maintenance life and viability in a crisis. Detailed information about the early planning stages of this project are posted on our <a href="http://it.blogs.muhlenberg.edu/2016/08/09/new-phone-system/">IT blog</a>.</p>
+<p>The new system provides the same capabilities you have today, as well as some popular, easy-to-use new features. After the initial installation is complete campus wide, we will be expanding the range of supported features and options. Your new Mitel phone is just the beginning.</p>
+<p><strong>What to Expect</strong></p>
+<p>There is an enormous amount of behind the scenes work accomplished by three different teams. This takes place over a three-week period prior to switching over each campus location to the new system; each week, we start the cycle over again for the next building.</p>
+<p>The last time we replaced the phone system was 17 years ago. We will need access to the wall jacks and cables, often behind your desks.  This may require moving books, paperwork, and so on.  We are on tight schedules, and apologize if we ever seem hurried. We will strive to do the work with minimum disruption. Your understanding is greatly appreciated.</p>
+<p><strong>Timeline<br />
+</strong></p>
+<ul>
+<li><strong>1-3 weeks prior to cut-over &#8211; Wiring work</strong>
+<ul>
+<li>Our wiring partner, Westside Hammer, will upgrade existing wiring or repair/improve wall jacks prior to the phones being placed.</li>
+</ul>
+</li>
+<li><strong>1-2 weeks prior to cut-over &#8211; Network upgrades</strong>
+<ul>
+<li>OIT staff will install and configure new network equipment in wiring closets. This may result in an early morning interruption of service, depending on your desktop configuration. We usually get these done prior to 7am. If we expect an extended outage, we will communicate that to you.</li>
+</ul>
+</li>
+<li><strong>1 week prior to cut-over &#8211; Placing the new phones</strong>
+<ul>
+<li>Staff from Frontier Communications, our phone partner, will set up your new phone. Your new Mitel phone is NOT ready for use; it still needs to be programmed and tested.</li>
+</ul>
+</li>
+<li><strong>Cut-over day</strong><strong>– Go live</strong>
+<ul>
+<li>The specific day your new phone goes live, or is <strong>cut-over</strong><em>, </em>will be communicated in an e-mail when the date has been scheduled. We usually know about a week ahead of time and will provide that date as early as we can. Dates have been posted on the <a href="http://it.blogs.muhlenberg.edu/2016/08/31/phone-system-installation-schedule/">IT blog</a>, but are subject to change as we move across campus. We will be on-site making sure the new phones work. Documentation basic phone functionality, including how to setup your voicemail, will be provided in a hard copy at the time of service and is <a href="http://muhlenberg.edu/media/contentassets/pdf/about/oit/documentation/Mitel-3300-training-guide.pdf">available online</a>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#8220;Who are these people?&#8221;<br />
+</strong></p>
+<p><strong>OIT Staff (Sergio Maciujec, Stephen Small, and Joe Shigo)</strong></p>
+<p>They are doing site surveys to assess what work needs to be done. They are also installing new network equipment in each building to prepare the infrastructure for the new phone system. In many cases they will be speaking with you personally to address any concerns you have and/or better understand your phone needs.</p>
+<p><strong>Westside Hammer (Todd Hanzl and his team)</strong></p>
+<p>They are preparing the building wiring to accept the new phones, which use a technology called &#8220;power over Ethernet&#8221; or POE. Some buildings required more work than others.</p>
+<p><strong>Frontier Communications (Jim and Steve and their team)</strong></p>
+<p>They are the Mitel experts and are deploying, configuring and generally doing the work of installing the new phone system.</p>
+<p><strong>Frequently Asked Questions</strong></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>What is &#8220;Cut-over&#8221;?</strong><br />
+This is the process of actually “moving” your line from the old system to the new. It is very simple and should only take a few minutes per desk. The new phones can already accomplish most functions &#8211; we just need to route incoming calls to them. The only things we need to do are make the actual change in our database, then a few test calls to make sure everything is working.</li>
+<li><strong>How can I access my voicemail?</strong><br />
+Voicemail will work as soon as the phone is live. Because they are separate systems, though, you will need to remove all voicemails (listen and delete) from the old system before the cut-over. You may do so by dialing <a href="tel:4846643000">484-664-3000</a> to access the messages on the old system.New voicemail will start working immediately, but you won&#8217;t be able to retrieve messages until you go through the activation process, which includes setting a new PIN. The temporary PIN is “1111”.</li>
+<li><strong>What type of support will be provided?</strong><br />
+Members of OIT and Frontier will be visiting offices to answer any questions and do on-the-spot training throughout the day. We will also provide documentation on the basic functionality of the phone and it is <a href="http://muhlenberg.edu/media/contentassets/pdf/about/oit/documentation/Mitel-3300-training-guide.pdf">available online</a>. Additional training materials are being developed and will be released at a later date.</li>
+<li><strong>What are the new features?</strong>There are many new features with the phones, but some notable ones are:
+<ul>
+<li>Voicemail to email &#8211; receive messages straight to your inbox for listening on the go, on your phone, etc. This is on by default.</li>
+<li>Twinning &#8211; concurrent ringing of your desk phone to your cell phone. We have to configure this, and you have the ability to turn it on and off at will. If you are interested in this feature, please contact <a href="mailto:support@muhlenberg.edu">support@muhlenberg.edu</a>.</li>
+<li>The new system gives us a great deal of additional functionality and control that will allow for easier management, easier support for people changing offices or new faculty and staff coming on board.</li>
+<li>There are many other features, as well. Our plan is to slowly implement these over time to those interested. For example, there are powerful desktop and mobile software clients that some may be interested.</li>
+</ul>
+</li>
+</ul>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-445" class="post post-445 type-post status-publish format-standard hentry category-phone-system tag-mitel tag-phone">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=445" rel="bookmark"><time class="entry-date published" datetime="2016-08-31T14:19:16-04:00">August 31, 2016</time><time class="updated" datetime="2016-12-06T17:12:23-04:00">December 6, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=445" rel="bookmark">Phone System Installation Schedule</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172334" rel="category">Phone System</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=mitel" rel="tag">mitel</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=phone" rel="tag">phone</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=445#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Below please find the installation schedule for our new phone system. You&#8217;ll see it is very aggressive, but it is important that we complete the transition before the end of the calendar year. We have built in &#8220;slack&#8221; weeks in October and November in case we fall behind.</p>
+<p>You should receive an email reminding you of the installation the week before and the week of your installation.</p>
+<p>Actual cut-over of your phone takes mere minutes per desk. An entire building might take the better part of a day. Training will be offered 1:1 at desks and/or at set times in a conference room or another meeting space. We will be asking for RSVP for the training sessions.</p>
+<p>We will deploy phones to desks prior to actual cut-over.They&#8217;ll be installed and powered up and able to make calls, but not yet able to receive until after they are fully cut-over in our networking closets and data center.</p>
+<p>The specific steps for us and you are:</p>
+<ol>
+<li>OIT or our partner Frontier Communications will install a new Mitel phone at your desk.</li>
+<li>On the day of cut-over, you must retrieve all voicemail messages from the existing phone system and delete them all.</li>
+<li>We will cut-over the phone and verify that calls from both on and off campus are routing correctly.</li>
+<li>We will leave documentation with the new phone.</li>
+<li>You will receive an email with your temporary voicemail PIN.</li>
+<li>You will need to call into your voicemail box and configure your preferred PIN and outgoing messages.</li>
+<li>We will come around to show you the features of your phone and/or offer a training session.</li>
+</ol>
+<p>If there is a reason why the day indicated is not acceptable, please <a href="mailto:support@muhlenberg.edu">let OIT know</a> as soon as possible. Note that we will make every effort to accommodate such requests, but cannot guarantee the change considering the size of any one building and impact on schedule.</p>
+<p>We appreciate your understanding with a project of this logistical size.</p>
+<ul>
+<li>9/12 &#8211; Moyer</li>
+<li>9/27 &#8211; Life Sports Center</li>
+<li>9/29 &#8211; Plant Ops</li>
+<li>10/4 &#8211; Shankweiler</li>
+<li>10/6 &#8211; New Science Building</li>
+<li>10/11 &#8211; Trexler Pavilion</li>
+<li>10/13 &#8211; Haas College Center</li>
+<li>10/18 Trexler Library</li>
+<li>10/20 &#8211; Hillel/Soc/Anth, Multicultural Center, External Relations</li>
+<li>11/15 &#8211; Center for the Arts</li>
+<li>11/29 &#8211; Rehearsal House</li>
+<li>12/1 &#8211; Walson Hall, Egner Chapel, Everson, Hoffman, Wescoe School, President&#8217;s House</li>
+<li>12/6 &#8211; Trumbower</li>
+<li>12/8 &#8211; Ettinger</li>
+<li>12/13 &#8211; Seegers Union</li>
+<li>12/22 &#8211; Prosser</li>
+</ul>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-419" class="post post-419 type-post status-publish format-standard hentry category-announcements category-phone-system tag-mitel tag-phone tag-projects">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=419" rel="bookmark"><time class="entry-date published" datetime="2016-08-09T08:41:09-04:00">August 9, 2016</time><time class="updated" datetime="2016-08-09T09:16:33-04:00">August 9, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=419" rel="bookmark">New Phone System</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=22152" rel="category">Announcements</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172334" rel="category">Phone System</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=mitel" rel="tag">mitel</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=phone" rel="tag">phone</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=projects" rel="tag">Projects</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=419#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>For the past year, OIT has been working on a new phone system to replace our aging legacy architecture. Our current system is incredibly robust and reliable, but it&#8217;s past its maintenance life and we&#8217;re essentially relying on spare parts as our contingency plan for dramatic failures. It&#8217;s been time for us to move forward for a while now.</p>
+<p>After an exhaustive (and exhausting) selection process, we chose <a href="http://www.mitel.com">Mitel </a>as our new phone solution in early spring. Their Voice over IP (VoIP) phone system offers a powerful, flexible, and expandable communication platform that will open up some interesting doors in the years to come. It&#8217;s much more than merely getting us to current &#8211; it&#8217;s getting us ready for the future, too.</p>
+<p>Some of the higher end features will be quite compelling as we adopt them. For instance, there is a desktop app from which one can look up anyone in the phone book and, with a single click, launch a call on the phone. Not a computer call, but a phone call. There is a mobile app that does the same thing. Imagine you&#8217;re driving and need to pull over to call someone, but don&#8217;t have his or her number. Just look it up in the mobile app and fire up the call. We don&#8217;t see these features being in use on day one, but we&#8217;re hopeful that the community will adopt them over time.</p>
+<p>Even the phones themselves are upgrades &#8211; they sport multiple &#8220;pages&#8221; of programmable keys, providing up to 36 speed dials/extensions if one wishes. There is visual voicemail &#8211; no need to dial in, just access your messages right there on the phone &#8211; and, finally, full two-way speakerphone capabilities. We are also deploying proper conference phones into as many dedicated meeting spaces as we can.</p>
+<p>However, this isn&#8217;t <em>just</em> a phone system upgrade. New networking equipment is needed in literally all of our buildings, and new wiring in merely almost all of our buildings. The good news is that this is a valuable chance for us to make large, critically-important upgrades to our core infrastructure. The bad news is that this all takes a lot of time.</p>
+<p>Right now, we&#8217;re looking at the bulk of the installation later in the fall term. Since phone deployment takes merely minutes, we likely won&#8217;t aim for a particular break, but it will be all done in a single day. We are doing a soft-launch currently in Moyer and Ettinger halls, however, to see what questions arise. The system itself is completely stable and tested &#8211; it&#8217;s a matter of what concerns arise, what user questions come up that we might not have anticipated, and how we can be most successful during the full launch.</p>
+<p>The phones will operate exactly as they do now &#8211; dial &#8220;8&#8221; for an outside line, for instance. Voicemail is working. The only thing that won&#8217;t work for now is the ability to forward voicemails from one system to the other.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+			
+		
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a class="powered-by" href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: editor by <a href="https://array.is/">Array</a>		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/jquery.fitvids.js?ver=20140820'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/editor.js?ver=20120206'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://it.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fit.blogs.muhlenberg.edu%2F%3Fcat%3D172334%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://it.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

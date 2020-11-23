@@ -1,0 +1,900 @@
+http://entomology.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css/
+84
+
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title></title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://entomology.blogs.muhlenberg.edu/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<title>Fabulous Insects of the Lehigh Valley &#8211; The adventures &amp; discoveries of entomology students at Muhlenberg College</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Fabulous Insects of the Lehigh Valley &raquo; Feed" href="http://entomology.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Fabulous Insects of the Lehigh Valley &raquo; Comments Feed" href="http://entomology.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/entomology.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/entomology.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://entomology.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://entomology.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://entomology.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/keyboard-image-navigation.js?ver=20120202'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/jquery.flexslider-min.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider-init.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<link rel='https://api.w.org/' href='http://entomology.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://entomology.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://entomology.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://entomology.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://entomology.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//entomology.blogs.muhlenberg.edu/?wordfence_lh=1&hid=605F3B4747017D6E72C8263779D877DB');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css">
+			.site-header img {
+			display: block;
+			margin: 0.5em auto 0;
+		}
+			.site-title a,
+		.site-description {
+			color: #000000 !important;
+		}
+		</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<link rel="icon" href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cropped-Red-legged-stink-bug-Edessa-rufomarginata-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cropped-Red-legged-stink-bug-Edessa-rufomarginata-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cropped-Red-legged-stink-bug-Edessa-rufomarginata-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://entomology.blogs.muhlenberg.edu/files/2016/04/cropped-Red-legged-stink-bug-Edessa-rufomarginata-1-270x270.jpg" />
+</head>
+
+<body class="home-page bp-legacy home blog admin-bar no-customize-support group-blog no-js">
+<div id="wrap">
+<div id="topbar"> 
+	<ul class="social-media">
+				
+				
+				
+				
+				
+				
+				
+				
+			
+		
+		
+				
+
+	</ul><!-- #social-icons--></div>
+<div id="page" class="hfeed site">
+	    <div id="masthead-wrap">
+<header id="masthead" class="site-header" role="banner">
+    
+		<div class="site-introduction">
+			<h1 class="site-title"><a href="http://entomology.blogs.muhlenberg.edu/" title="Fabulous Insects of the Lehigh Valley" rel="home">Fabulous Insects of the Lehigh Valley</a></h1>
+			<p class="site-description">The adventures &amp; discoveries of entomology students at Muhlenberg College</p> 
+		</div>
+
+<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="assistive-text">Menu</h1>
+			<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="http://entomology.blogs.muhlenberg.edu/?page_id=7">About BIO 242</a></li>
+<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://entomology.blogs.muhlenberg.edu/?page_id=5">What is Entomology?</a></li>
+</ul></div>		</nav><!-- .site-navigation .main-navigation -->
+
+	</header><!-- #masthead .site-header -->
+	</div><!-- #masthead-wrap -->
+    <div class="header-image">
+				<a href="http://entomology.blogs.muhlenberg.edu/" title="Fabulous Insects of the Lehigh Valley" rel="home">
+				<img src="http://entomology.blogs.muhlenberg.edu/files/2016/04/cropped-18866197140_05f05cb8d2_o.jpg" width="960" height="210" alt="" />
+			</a>
+			</div>
+	<div id="main" class="site-main">
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+
+			
+				
+								
+					
+<article id="post-344" class="post-344 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=344" title="Permalink to Cicadas, Commencement and Citizen Science" rel="bookmark">Cicadas, Commencement and Citizen Science</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=344" title="9:05 pm" rel="bookmark"><time class="entry-date" datetime="2020-02-05T21:05:07+00:00" pubdate>February 5, 2020</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		
+<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img src="http://entomology.blogs.muhlenberg.edu/files/2020/02/cicada.jpg" alt="" class="wp-image-349" width="244" height="184" srcset="http://entomology.blogs.muhlenberg.edu/files/2020/02/cicada.jpg 705w, http://entomology.blogs.muhlenberg.edu/files/2020/02/cicada-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2020/02/cicada-1x1.jpg 1w" sizes="(max-width: 244px) 100vw, 244px" /><figcaption>A periodical cicada.  <br>Photo: Marten Edwards</figcaption></figure></div>
+
+
+
+<p>Before we know it, many of us in the Lehigh Valley will be sharing  our parks, roadways, and gardens with Brood II 17-year periodical cicadas.&nbsp; They are different from the green annual cicadas that we look forward to each July. Periodical cicadas have black bodies, orange wings, and red eyes. Unlike annual cicadas, they only reveal themselves in vast numbers every seventeen years. Their numerically rich and audibly famous lifestyles can be explored with a wealth of information at <a rel="noreferrer noopener" href="http://www.cicadamania.com/faq.html" target="_blank">Cicada Mania</a> and <a rel="noreferrer noopener" href="http://www.magicicada.org/magicicada_ii.php" target="_blank">Cicada Central</a>.&nbsp;</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter size-large is-resized"><img src="http://entomology.blogs.muhlenberg.edu/files/2020/02/Anna-cicada.jpg" alt="" class="wp-image-347" width="142" height="189" srcset="http://entomology.blogs.muhlenberg.edu/files/2020/02/Anna-cicada.jpg 576w, http://entomology.blogs.muhlenberg.edu/files/2020/02/Anna-cicada-225x300.jpg 225w, http://entomology.blogs.muhlenberg.edu/files/2020/02/Anna-cicada-1x1.jpg 1w" sizes="(max-width: 142px) 100vw, 142px" /><figcaption>Anna checking the ground temperature</figcaption></figure></div>
+
+
+
+<p>The  Lehigh Valley is home to all three species of 17-year cicadas. They belong to an exclusive clique of periodical cicadas, scientifically known as the <a rel="noreferrer noopener" href="http://en.wikipedia.org/wiki/Magicicada" target="_blank">Magicicada</a>.&nbsp; Magicicada are native to the Eastern United States and nowhere else in the world. When it&#8217;s time to leave their subterranean homes, all three species will dig out simultaneously. There is also a band of four closely related  13-year Magicicada species. The 13-year cicadas prefer the Southern states and are not found in Pennsylvania.</p>
+
+
+
+<p>Periodical cicadas have no way to protect themselves beyond their sheer numbers. They cannot bite or sting and are apparently rather <a rel="noreferrer noopener" href="http://cicadainvasion.blogspot.com/2011/04/if-you-cant-beat-em-eat-em-cicada.html" target="_blank">tasty</a> due to a lack of defensive chemicals. Predators simply cannot eat enough of them.&nbsp; Right after they emerge from the ground and molt for the last time, their bodies are soft and squishy. Their wings are not rigid enough for flight and the male sound-producing structures are silent. Since newbie adults (tenerals) are especially vulnerable to attack during their first tender hours, they tend to emerge after sunset. This way, they have all night to toughen up and start to fly before the birds, squirrels, and dogs start to feast on them. It takes about 4 to 6 days for adult males to achieve the level of maturity required to make their joyful noise.&nbsp; Fortunately, their obstreperous pleas for female companionship are only made in the light of day, so they should not keep you up at night. &nbsp;</p>
+
+
+
+<p><strong>Where and when they going to come out here in the Lehigh Valley?</strong>&nbsp;Short answer: nobody knows. It turns out to be a harder question than I would have expected. Surprisingly, the <a rel="noreferrer noopener" href="http://www.magicicada.org/about/brood_pages/broods.php" target="_blank">maps</a> that show where periodical cicadas are expected come out in a given year are largely based on the spotty and sparse records that were available to <a rel="noreferrer noopener" href="https://en.wikipedia.org/wiki/Charles_Lester_Marlatt" target="_blank">Charles Marlatt</a>,  a USDA entomologist, back in 1923. He came up with the Roman numeral system to identify the group, or &#8220;brood&#8221; of cicadas that comes up each year, generally in a different place.&nbsp;</p>
+
+
+
+<p>Our natural environment has changed quite a bit since 1923. Forests have been cleared of trees and their cicada-laden roots for lumber, agriculture and strip malls.&nbsp;  Meanwhile, many of our pre-1923 farms have been returned to woodlands or transmogrified into housing developments. Suburban habitats can be either cicada-friendly or cicada-hostile, depending on landscaping and pesticide choices. Some Magicicada populations have certainly shrunk or gone extinct since 1923. On the flip side, it&#8217;s possible that some local populations have expanded their stomping grounds.&nbsp;</p>
+
+
+
+<p>I am not aware of any scientifically collected <a rel="noreferrer noopener" href="http://hydrodictyon.eeb.uconn.edu/projects/cicada/magicicada_central/magicicada_central.php" target="_blank">historical records</a> of Brood II cicadas in the Lehigh Valley. This doesn&#8217;t mean they weren&#8217;t here back in 1996, 1979, 1962, 1945 and so-on back to the last ice age around 20,000 years ago.&nbsp; It just means that they were not reported and verified by leading cicada researchers, such as <a rel="noreferrer noopener" href="http://today.uconn.edu/blog/2013/03/uconn-research-suggests-complex-genetic-heritage-in-three-cicada-species/" target="_blank">Chris Simon</a> at the University of Connecticut. &nbsp;Her team recently investigated the<a rel="noreferrer noopener" href="http://www.pnas.org/content/early/2013/03/15/1220060110.full.pdf+html" target="_blank"> genetics</a> of periodical cicadas.&nbsp; Their data suggest that Magicicada populations have been throwing their 17 or 13-year underground sap-sipping slumber parties for at least 3.9 million years.</p>
+
+
+
+<p>Periodical cicadas were <a rel="noreferrer noopener" href="http://www.wfmz.com/news/news-regional-lehighvalley/Get-ready-the-cicadas-are-coming/-/132502/19654934/-/8a1b1v/-/index.html" target="_blank">spotted</a> in 1996 around Bear Creek Ski Resort. &nbsp;A 1996 Morning Call article <a rel="noreferrer noopener" href="http://articles.mcall.com/1996-06-03/news/3088831_1_periodical-cicadas-halley-s-comet-solt" target="_blank">quoted</a>  cicada expert Chris Simon that back in 1979, Brood II cicadas emerged  on &#8220;June 3 from Schuylkill Haven to Upper Mount Bethel Township.&#8221;&nbsp; In  2008, brood XIV cicadas were observed in <a rel="noreferrer noopener" href="http://www.cicadamania.com/cicadas/category/brood-xiv/page/4/" target="_blank">Bear Gap</a> PA on May 25.&nbsp; In a 2004 study of <a rel="noreferrer noopener" href="http://www.highbeam.com/doc/1G1-144664648.html" target="_blank">Ohio&#8217;s</a>  Brood X cicadas, the first emergence observations were made on May 9  and most had come out of the ground by May 14, a week earlier than historical records would have predicted.</p>
+
+
+
+<p>Variations in local weather can jiggle the actual dates of emergence back and forth by about a week.&nbsp; Checking the Lehigh Valley <a rel="noreferrer noopener" href="http://weather-warehouse.com/WeatherHistory/PastWeatherData_AllentownLehighValleyIntlArpt_LehighValley_PA_January.html" target="_blank">monthly average temperatures</a> since 1948, this past winter doesn&#8217;t seem too far out of the ordinary.&nbsp; <a rel="noreferrer noopener" href="http://www.cpc.ncep.noaa.gov/products/predictions/30day/off14_temp.gif" target="_blank">NOAA</a>  predicts a warmer than usual April for this region. &nbsp;I might err a  little on the early side if I were placing a bet on this year&#8217;s Brood II  emergence date.</p>
+
+
+
+<p>Back in 2004, I got involved with mapping Pennsylvania&#8217;s periodical cicadas <strong>when Muhlenberg College asked me if the cicadas were going to ruin our commencement ceremony.&nbsp;</strong>Of course, I thought that cicadas would only add sparkle to the day, but it wasn&#8217;t an idle concern.&nbsp; On June 9, 1970, Bob Dylan was upstaged and outperformed by Brood X cicadas while being awarded an honorary degree in Music from Princeton University.&nbsp; This experience was immortalized in the lyrics to his song <a rel="noreferrer noopener" href="http://www.bobdylan.com/us/songs/day-locusts" target="_blank">&#8220;Day of the Locusts&#8221;</a> and the event was vividly recalled in the <a rel="noreferrer noopener" href="http://theprince.princeton.edu/princetonperiodicals/cgi-bin/princetonperiodicals?a=d&amp;d=Princetonian19870604-01.2.25&amp;e=-------en-20--1--txt-IN-----" target="_blank">Daily Princetonian</a>.&nbsp;</p>
+
+
+
+<p>This year, college commencement ceremonies in the Lehigh Valley are planned between May 4 (Penn State Lehigh Valley) and May 25 (Lafayette  College).&nbsp; Based on our limited historical data, we might expect to see cicadas emerge between May 25 and June 6, if we see them at all.&nbsp; It takes another 4 to 6 days before they start to get noisy.&nbsp; My guess is that all of the Lehigh Valley commencement ceremonies are going to be simply marvelous, even without the cicadas.</p>
+
+
+
+<p>A popular &#8220;factoid&#8221;  about periodical cicadas is that they emerge when the ground temperature is 64 degrees. On the grand scale, this is a reasonable rule of thumb.  Northern populations emerge later than southern populations. &nbsp;However,  any patch of ground will have peaks and valleys, sunny and shady spots  and other features leading to local variations in soil temperature.&nbsp;  Still, the vast majority of the Magicicada within an area will typically emerge after sunset within a few days of each other.&nbsp; Clearly, some speedy developers wait for the slowpokes to get ready.&nbsp; How do they decide which night to come out? &nbsp;Twitter?&nbsp;</p>
+
+
+
+<p><strong>There are at least two easy and fun ways that you can get involved in cicada citizen science yourself.</strong>  The first project will is something you can try right now before you see or hear a single cicada. All you need is a mercury-free thermometer that is at least eight inches long.&nbsp; Dash outside and poke it eight inches into the ground and measure the soil temperature. (A perfectly  adequate soil thermometer can cost less than ten dollars.) When you have recorded the soil temperature, report it on <a rel="noreferrer noopener" href="http://project.wnyc.org/cicadas/" target="_blank">Cicada Tracker</a>.  This experimental project is not intended to be a foolproof predictor of when and where the cicadas will actually emerge.&nbsp; Nevertheless, it&#8217;s the first time that soil temperatures will be <a rel="noreferrer noopener" href="http://en.wikipedia.org/wiki/Crowdsourcing" target="_blank">crowdsourced</a> via the information superhighway.&nbsp; Something new and interesting is bound to be discovered.</p>
+
+
+
+<p>A significant way that everyone can participate in a scientific study of Brood II cicadas is through <a rel="noreferrer noopener" href="http://www.magicicada.org/report/report.php" target="_blank">Cicada Central</a>.&nbsp;  All you need to do is go to the site and report whether or not you see or hear cicadas at a specific location.&nbsp; It is just as important to report if you do <strong>not</strong> find cicadas since this helps determine the margins of their range. &nbsp;</p>
+
+
+
+<p>Periodical cicadas are not just delightfully entertaining.&nbsp; Their distributions can serve as long-term barometers of environmental health.&nbsp; <a rel="noreferrer noopener" href="http://www.magicicada.org/report/report.php" target="_blank">Cicada Central</a> will improve the resolution of our current Brood II 17-year cicada maps.&nbsp; Better maps will allow us to see how the cicadas are doing next time they make their above-ground cameos 2030 and beyond.</p>
+
+
+
+<p>This mapping project is the brainchild <a rel="noreferrer noopener" href="http://www.magicicada.org/cooley/cooley.php" target="_blank">John Cooley</a>,  a cicada scholar who has worked with Chris Simon and other cicada luminaries.&nbsp; Dr. Cooley got hooked on cicadas as an undergraduate researcher at Yale University.&nbsp; His citizen mapping efforts were given a  major boost with a grant from the National Geographic Society.&nbsp;  The project has already contributed to national maps of 2004 Brood X  and 2008 Brood XIV cicada emergences, which have set the standard for this kind of research.&nbsp; Even the most dedicated team of professional cicada researchers would not be able to gather as much data as the thousands of people in our community who care about cicadas and the environment.&nbsp; Please spread the word about this citizen-science opportunity to your family, friends, and neighbors.</p>
+
+
+
+<p>This summer I will be joined by Muhlenberg College undergraduate researchers to supplement the <a rel="noreferrer noopener" href="http://www.magicicada.org/report/report.php" target="_blank">Cicada Central</a> database.&nbsp; We will determine which species are present in the mix in specific locations and try to get a better handle on the local Brood II  boundaries.&nbsp; From a distance, the different bugs can be hard to distinguish by their looks.&nbsp; Fortunately, the species are easy to tell apart by the distinct <a rel="noreferrer noopener" href="http://insects.ummz.lsa.umich.edu/fauna/michigan_cicadas/Periodical/" target="_blank">mating calls</a> that the males exclaim with such gusto.</p>
+
+
+
+<p>If you remember seeing cicadas in the Lehigh Valley back in 1996, 1979 or intervals of 17 years earlier, please post a comment and share your experience with us here! &nbsp;When I get wind of the first signs of  Brood II in this area, I will update to this blog and send a reminder to electronically celebrate your local cicada situation with a report to  <a rel="noreferrer noopener" href="http://www.magicicada.org/report/report.php" target="_blank">Cicada Central</a>. &nbsp;</p>
+
+
+
+<p>This work by Marten Edwards is licensed under a <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" rel="noreferrer noopener" target="_blank"><em>Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</em></a>.</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=344#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-344 -->
+
+				
+					
+<article id="post-304" class="post-304 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=304" title="Permalink to Well-Timed Crickets     by Emily Davis &#038; Anna Kennedy" rel="bookmark">Well-Timed Crickets     by Emily Davis &#038; Anna Kennedy</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=304" title="8:22 pm" rel="bookmark"><time class="entry-date" datetime="2018-05-04T20:22:41+00:00" pubdate>May 4, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p><div id="attachment_305" style="width: 310px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket.jpg"><img aria-describedby="caption-attachment-305" class="wp-image-305 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-300x200.jpg" alt="" width="300" height="200" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-300x200.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-768x513.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-1x1.jpg 1w, http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket.jpg 887w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-305" class="wp-caption-text">A cave cricket   <a href="https://www.flickr.com/photos/e_monk/7522778974">CC: e_monk</a></p></div></p>
+<p>Have you ever known someone that really enjoys eating three-day-old junk food? Do you ever wonder <em>why </em>that person is the way that they are? How could you possibly enjoy eating junk food that has been rotting away for days on end? Well it just so happens that there is an insect that follows this behavior somewhat closely. This little guy has a much more complicated scientific name: <em>Diestrammena asynamora</em> and is more commonly referred to as <a href="https://bugguide.net/index.php?q=search&amp;keys=rhaphidophoridae&amp;search=Search">Cave Crickets</a>. Yes, it’s true. This group of crickets can be pretty picky eaters and it’s all for good and fair reasons that aren’t initially obvious. What sets them apart from the crickets you hear in your backyard during the summer? Cave Crickets don’t have the ability to make noise. Crickets that you tend to hear have ridges on their wings that they rub together to make that noise. However, Cave Crickets do not possess these ridges and thus rely mainly on their sense of touch through their <a href="https://bugguide.net/node/view/153">front antennae and hind legs</a>. Another attribute that further separates them from regular crickets is that they have a much longer life span. A typical life span of common crickets is roughly 2 months. Cave Cricket life spans last roughly 2 years!</p>
+<p>For most of their lifetime, cave crickets will surprisingly reside in…caves. Due to their choice of location and habitat, they have a limited source of nutrient income. Considering that they are prey to a few animals that are active during the day time such as some birds, they will rightfully choose to limit their chances of getting eaten and do most of their activities at night. This behavior gives limited access to food, so when they <em>do</em> have the chance to safely venture out and search for food, they will feast on anything in sight. What is most available for them is typically anything that is decaying or being broken down by the earth. Cave Crickets have been demonstrating this feeding behavior long before any human you know who strictly eats organic and therefore can be considered the original trendsetters for organic eating habits. However, if you were to come across a cave cricket in the drier regions of the United States, you might be looking at a “sand-treader”. These organisms are closely related to cave crickets and are pretty much only separated by habitat choices and temperature tolerance. If you guessed that they reside in sand dunes, you’re right.</p>
+<p>&nbsp;</p>
+<p><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-2.png"><img class="alignnone size-medium wp-image-306" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-2-300x200.png" alt="" width="300" height="200" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-2-300x200.png 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-2-2x1.png 2w, http://entomology.blogs.muhlenberg.edu/files/2018/04/cave-cricket-2.png 764w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>&#8220;Spricket&#8221;   another name for a Cave Cricket  <a href="https://www.flickr.com/photos/e_monk/7522776932/">CC: e_monk</a></p>
+<p>&nbsp;</p>
+<p>Another nickname, that is dependent upon your location in the United States, Cave Crickets have graciously earned is the name “sprickets” for their close appearance to spiders. Their hind legs extend far from the center of their body making their appearance that of a spider’s at a quick glance. Cave Crickets appear to have two different colors on their bodies.  They exhibit mostly a light tan color with darker brown spots covering the rest of their body. Scientists have estimated that there are close to <a href="https://www.livescience.com/47646-invasive-camel-crickets-widespread.html">700 million</a> cave crickets close to residential areas in the Eastern parts of the United States alone. Interestingly enough, they are quite considerate roommates if they do reside in your basement or laundry area in your home. Due to their feeding behavior and craving for organic matter, they clean your areas more than you would like to think!</p>
+<p>You can consider yourself lucky because you are able to find these crickets just about anywhere in the United States given that the temperature and habitat structure is how they prefer it to be. Also, you must be able to pull an all-nighter! The next time you find yourself in an area that is somewhat damp with a temperature that is neither too hot nor too cold; keep your eye out for mating cave crickets. Damp, dark places with mildly temperate conditions such as laundry rooms, basements, caves, and some shower areas are considered some of the best places for them to breed which is really interesting behavior. Due to their poor eyesight, cave crickets tend to jump frantically at anything that may pose a threat in order to scare them away. So don’t be frightened by their quick acrobatics; they are virtually harmless to you because these crickets are not known to bite humans.</p>
+<p>Cave Crickets are misunderstood by many and they deserve to be awarded with some credit. Without these organisms in the United States, our residential and rural areas would be rife’ with organic material! Not to mention, they aren’t as noisy as common crickets so you don’t need ear plugs when you sleep. Completely harmless and inevitably interesting creatures, I encourage you to search for Cave Crickets near you!</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=304#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-304 -->
+
+				
+					
+<article id="post-299" class="post-299 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=299" title="Permalink to It’s a bee! It’s a Hummingbird! No, it’s a Snowberry Clearwing!    Daniel Kier and Nebiyat Tadesse" rel="bookmark">It’s a bee! It’s a Hummingbird! No, it’s a Snowberry Clearwing!    Daniel Kier and Nebiyat Tadesse</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=299" title="8:05 pm" rel="bookmark"><time class="entry-date" datetime="2018-05-04T20:05:53+00:00" pubdate>May 4, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>Think back to a time when you were enjoying the sun at your favorite greenspace. Now, did you happen to see bees, with their iconic coloring, and hummingbirds, with the brisk wing speed and elongated beak? To the untrained eye, it’s quite possible that what you or those around you observed was not even a bee or a hummingbird- but a moth!</p>
+<p><div id="attachment_314" style="width: 269px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/hummingbird.png"><img aria-describedby="caption-attachment-314" class="wp-image-314 size-full" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/hummingbird.png" alt="" width="259" height="194" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/hummingbird.png 259w, http://entomology.blogs.muhlenberg.edu/files/2018/04/hummingbird-1x1.png 1w" sizes="(max-width: 259px) 100vw, 259px" /></a><p id="caption-attachment-314" class="wp-caption-text">Hummingbird <a href="https://pxhere.com/en/photo/553902">CCO Public domain</a> <a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee.jpg"><img class="alignnone wp-image-319" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee-300x225.jpg" alt="" width="288" height="216" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee-1024x768.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/bumblebee-1x1.jpg 1w" sizes="(max-width: 288px) 100vw, 288px" /></a>Bumble bee <a href="https://en.wikipedia.org/wiki/Bumblebee#/media/File:Bumblebee_October_2007-3a.jpg">CC: alvesgaspar</a></p></div></p>
+<p>The Snowberry Clearwing (<a href="https://bugguide.net/node/view/2639"><em>Hemaris diffinis</em></a> Biosduval), is a common moth placed in the same group of insects as butterflies. These moths are named <a href="https://plants.usda.gov/core/profile?symbol=syal">after a North American native shrub</a> which produces berries that when opened look like fresh powdered snow. Some readers may be thinking of another name for these moths- “flying lobster”. This nickname <a href="https://web.archive.org/web/20121110034819/http:/www.cate-sphingidae.org/taxonomy/Hemaris/diffinis.html">is commonly given</a> to the Snowberry Clearwing because its body and tail are shaped similarly to genetically unrelated animals such as the lobster.</p>
+<p><div id="attachment_320" style="width: 255px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing.jpg"><img aria-describedby="caption-attachment-320" class="wp-image-320" src="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-300x225.jpg" alt="" width="245" height="184" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-1x1.jpg 1w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing.jpg 640w" sizes="(max-width: 245px) 100vw, 245px" /></a><p id="caption-attachment-320" class="wp-caption-text">Snowberry Clearwing <a href="https://www.flickr.com/photos/meanandpinchy/2641071092/">CCL Lisa Brown</a></p></div></p>
+<p><div id="attachment_321" style="width: 259px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-2.jpg"><img aria-describedby="caption-attachment-321" class="wp-image-321" src="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-2-300x225.jpg" alt="" width="249" height="187" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-2-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-2-1x1.jpg 1w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Clearwing-2.jpg 640w" sizes="(max-width: 249px) 100vw, 249px" /></a><p id="caption-attachment-321" class="wp-caption-text">Snowberry Clearwing <a href="https://www.flickr.com/photos/meanandpinchy/2641071100/in/photostream/">CC; Lisa Brown</a></p></div></p>
+<p>Snowberry clearwings are commonly <a href="https://www.butterfliesandmoths.org/species/Hemaris-diffinis">found</a> in the eastern portion of the United States, and can thus be spotted all over the Lehigh Valley. However, this moth has also been spotted in southern parts of the West Coast. Open spaces, fields, stream sides, gardens, and suburban areas are the <a href="https://www.massaudubon.org/learn/nature-wildlife/insects-arachnids/hummingbird-moth-clearwing-moth">main locations</a> one will come across these moths. One of the greatest things about living in a habitat like those just mentioned is the abundancy of flowers. Like a real hummingbird, the moth prefers to feed on nectar. As this moth goes on its quest for food, darting from one plant to the next in hopes of a reward, it is also pollinating many native plants. Mass Audubon <a href="https://www.massaudubon.org/learn/nature-wildlife/insects-arachnids/hummingbird-moth-clearwing-moth">claims </a>the moths are primarily active during the day, but if a superb food source is found the moth will continue to be active during the night. Another reason for incorrectly identifying the moth as a hummingbird is because the moth beats its wings incredibly fast making them somewhat invisible. In fact, the <a href="https://www.youtube.com/watch?v=uyLSi11niWU">moth’s flight</a> sounds almost identical to a <a href="https://www.youtube.com/watch?v=0vgRYTPV9qU">hummingbird’s</a>.</p>
+<p>Like most insects, each season brings about new stages in life. Ellen Rathbone is a forester who <a href="https://www.adirondackalmanack.com/2010/07/snowberry-clearwing-the-hummingbird-moth.html">writes about</a> the life cycle of the Snowberry Clearwing. One of the most interesting topics that Rathbone is exploring and researching is the development of clear wings on this moth. In spring, adult moths surface from the ground with wings that are one color. Once they are ready to take flight these moths rapidly begin to move their wings, which results in a large number of wing scales to shed off. The aftermath produces the an almost clear wing appearance, however, there are still a few scales along the outermost parts of the wings.  Soon after emergence, female moths emit a pheromone that attracts males. Once they mate, the females lay eggs on the food that the caterpillars like best such as dogbane, honeysuckle, bush honeysuckle, and snowberry. During summer, the eggs hatch and produce a beautiful caterpillar that is a non-stop eater with 5 growth stages of its own</p>
+<p><div id="attachment_323" style="width: 371px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar.jpg"><img aria-describedby="caption-attachment-323" class="wp-image-323" src="http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar-300x136.jpg" alt="" width="361" height="164" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar-300x136.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar-768x349.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar-1024x466.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/05/Snowberry-Clearwing-Caterpillar-2x1.jpg 2w" sizes="(max-width: 361px) 100vw, 361px" /></a><p id="caption-attachment-323" class="wp-caption-text">Snowberry Clearwing Caterpillar  <a href="https://www.flickr.com/photos/richardwc/29963674532">CC: Richard Crook</a></p></div></p>
+<p>When it is ready, the caterpillar will make a silk cocoon and pupate in leaf litter to wait out the winter and change into an adult.   The Snowberry Clearwing moth is a evolutionary powerhouse. It has the flying ability of a hummingbird with the coloration safety of a bumble bee!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=299#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-299 -->
+
+				
+					
+<article id="post-301" class="post-301 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=301" title="Permalink to The Brown Prionid Beetle   by Joshua Shaffer and Samantha Sikkerbol" rel="bookmark">The Brown Prionid Beetle   by Joshua Shaffer and Samantha Sikkerbol</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=301" title="11:02 pm" rel="bookmark"><time class="entry-date" datetime="2018-04-23T23:02:28+00:00" pubdate>April 23, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p><div id="attachment_302" style="width: 310px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid.jpg"><img aria-describedby="caption-attachment-302" class="wp-image-302 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid-300x199.jpg" alt="" width="300" height="199" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid-300x199.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid-768x510.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Brown-Prionid-2x1.jpg 2w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-302" class="wp-caption-text">An alien?  <a href="https://www.flickr.com/photos/dgovoni/7527789188">CC David Govoni</a></p></div></p>
+<p>This is an alien. Actually it’s not. It’s the <a href="https://bugguide.net/node/view/5031">brown prionid</a> [<em>Orthosoma brunneum</em>] and it probably lives closer to you than this picture would have you believe. It is a long-horned beetle native to the eastern half of North America. The adults are usually seen during the summer months from June to August and they can be almost <a href="https://books.google.com/books?id=aluUgDVYJ8wC&amp;pg=PA85&amp;lpg=PA85&amp;dq=brown+prionid&amp;source=bl&amp;ots=HvpAqBZCKq&amp;sig=YbwqsqCxm5r4ANScAhtsxzkO-Rs&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjXscjM9MvZAhXGT98KHcoDD_g4FBDoAQhMMAg#v=onepage&amp;q=brown%20prionid&amp;f=false">twice as long as</a> an <a href="https://support.apple.com/kb/sp592?locale=en_US">iPod shuffle</a>. They mate and <a href="https://books.google.com/books?id=aluUgDVYJ8wC&amp;pg=PA85&amp;lpg=PA85&amp;dq=brown+prionid&amp;source=bl&amp;ots=HvpAqBZCKq&amp;sig=YbwqsqCxm5r4ANScAhtsxzkO-Rs&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjXscjM9MvZAhXGT98KHcoDD_g4FBDoAQhMMAg#v=onepage&amp;q=brown%20prionid&amp;f=false">lay their eggs</a> during this time either in or on decaying wood or in the soil. However, <a href="https://www.inaturalist.org/taxa/143662-Orthosoma-brunneum">iNaturalist</a> reports that the vast majority of sightings it has catalogued from its members were in July. They have a graph that shows the number of sightings over the year, which clearly peaks in July, and they also have a map of all sightings reported to them. Brown prionids <a href="https://bugguide.net/node/view/5031">are relatively common</a> throughout their range.</p>
+<p>Well, anybody who looks at <a href="https://bugguide.net/node/view/17370/bgimage">this picture</a> probably assumes that they are xenomorphs from <a href="http://avp.wikia.com/wiki/Zeta_Reticuli">Zeta Reticuli</a>. That is, as a matter of fact, not true. Its larval stage can be found living, eating, and growing <a href="http://onlinelibrary.wiley.com/doi/10.2307/1943233/full">inside rotting pine logs</a> on the forest floor. The adult female finds a rotting log to lay her eggs in and for her larvae to grow up in. She does this by <a href="https://doi.org/10.1139/z64-028">detecting high carbon dioxide levels</a> from the decay of the wood <a href="https://www.cambridge.org/core/journals/canadian-entomologist/article/perception-of-carbon-dioxide-by-larvae-of-orthosoma-brunneum-coleoptera-cerambycidae-as-indicated-by-recordings-from-the-ventral-nerve-cord/4A87F544A9EE4B7E5C90BC1B858F196D">using her palps</a>, which are finger-like projections on her head. As they move along and eat the rotting wood, the larvae <a href="https://books.google.com/books?id=aluUgDVYJ8wC&amp;pg=PA85&amp;lpg=PA85&amp;dq=brown+prionid&amp;source=bl&amp;ots=HvpAqBZCKq&amp;sig=YbwqsqCxm5r4ANScAhtsxzkO-Rs&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwjXscjM9MvZAhXGT98KHcoDD_g4FBDoAQhMMAg#v=onepage&amp;q=brown%20prionid&amp;f=false">create tunnels and subsequently fill them with their poop</a> as they bore through the wood. The larvae can digest the fiber in wood by <a href="https://doi.org/10.1086/physzool.61.4.30161254">eating fungi growing in the rotting logs</a> along with the fungi’s enzymes that help break the fiber down. Luckily, they offer no reason for humans to worry; they are vegans and no part of their life cycle will hug your face. However, according to <a href="https://www.whatsthatbug.com/2014/07/16/brown-prionid-19/">whatsthatbug</a>, these beasts have strong mandibles that can give a painful bite, and that can even draw blood if not handled correctly. Adults have been observed to <a href="https://bugguide.net/node/view/5031">go after rotting fruit set out as bait</a> and they are <a href="http://elmostreport.blogspot.com/2015/07/brown-prionid-orthosoma-brunneum.html">attracted to light</a>.</p>
+<p>They <a href="http://www.catalogueoflife.org/col/details/species/id/8ac4b3cc8c1e5dc0c74ee271e6943703">used to be classified</a> in the same group as the Palo Verde beetle of Arizona, which is a similar looking beetle that is bigger and that is about as aerodynamic as a rock, according to anecdotal sources.    Despite his mischaracterization of these graceful creatures, Harvey Epperson Savely Jr. had the foresight to provide a small amount of <a href="https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1943233">insight</a> into the childhoods of these stellar insects (stellar as in they live inside rotting trees). He suggests, based on his observations, that only two or three of these larvae will be found in any given log at a time.  He also points out that the larvae of the brown prionid like to hang out in the same logs as the larvae of the blind click beetle, which looks like it has <a href="https://www.flickr.com/photos/pcoin/4832741348/">two bottomless eyes on its back</a> as an adult. As exciting as rotting pine logs are, the brown prionid can be more than just a grub inside a log. This <a href="https://bugguide.net/node/view/17369/bgimage">brown prionid grub</a> actually was found inside a moist wooden plank that was part of the structure of a 1.5 million dollar home. These beetles also like to <a href="https://www.nps.gov/media/photo/view.htm?id=872CD244-1DD8-B71C-07CF00A01CAF9E7D">lay their eggs in utility poles and railroad ties</a>.</p>
+<p>After a sometimes luxurious larvae hood, the brown prionid will enter the next phase of its life cycle, <a href="https://bugguide.net/node/view/17370/bgimage">the pupal stage</a>, or the thing that looks like<a href="https://www.youtube.com/watch?v=AdBu6VAESeI"> a newborn xenomorph</a>. This is the stage in between larvae hood and adulthood. The adult brown prionid will at first not be brown. It will be <a href="https://bugguide.net/node/view/17373/bgimage">white</a> after it sheds its pupal skin. Its exoskeleton will then harden and turn brown, and it will chew its way <a href="https://bugguide.net/node/view/17374/bgimage">out of the log</a> and into the world. The adults look like <a href="https://bugguide.net/node/view/17375/bgimage">this</a>, and you’ll believe it when you hear it, they aren’t all looks. If you watch <a href="https://www.youtube.com/watch?v=14M6BsT5bnA">this video</a>, you will hear why it is called the squeaking beetle.</p>
+<p>The brown prionid is a beetle that spends its childhood in rotting logs, makes poop tunnels, hangs out with click beetles that grow up to look like Halloween decorations, and squeaks, among many other talents. It is most certainly not an alien, and it is probably closer than you think if you live on the east coast.</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=301#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-301 -->
+
+				
+					
+<article id="post-293" class="post-293 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=293" title="Permalink to The Wonderful World of Weevils   by Stephen Koester and Jacqueline McKenna" rel="bookmark">The Wonderful World of Weevils   by Stephen Koester and Jacqueline McKenna</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=293" title="10:05 pm" rel="bookmark"><time class="entry-date" datetime="2018-04-23T22:05:30+00:00" pubdate>April 23, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>&nbsp;</p>
+<p><div id="attachment_294" style="width: 310px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1.jpg"><img aria-describedby="caption-attachment-294" class="wp-image-294 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1-300x197.jpg" alt="" width="300" height="197" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1-300x197.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1-768x505.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1-1024x673.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1-2x1.jpg 2w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Weevil-1.jpg 2048w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-294" class="wp-caption-text">A spectacular acorn weevil perched upon a leaf.    <a href="https://commons.wikimedia.org/wiki/File:Acorn_Weevil_(Curculio_glandium)_(9740905986).jpg">cc Josve05a</a></p></div></p>
+<p><a href="https://bugguide.net/node/view/6682">Acorn weevils</a> (<em>Curculio glandium</em>) are adorable beetles found all over the United States, Canada, Mexico, and Europe; however, they are most abundant in the Eastern states due to their affinity for <a href="https://www.britannica.com/plant/oak">Oak</a> and <a href="https://www.britannica.com/plant/hickory-plant">Hickory</a> trees that flourish in this specific region of the U.S. If you can believe it, the long probe attached to their head is actually an extension of their mouths! Try imagining it like a long snout or beak! In the middle of this snout, Acorn Weevils have antennae coming off on either side. These antennae are elbowed, or hinged, making them look like football uprights. When the Acorn Weevil is drilling into the acorn with their long mouthpart, the antenna fold back along the side of the head. That is some great flexibility! The jaws and mouth of the Acorn Weevil are located at the very front of their snout. This allows the Acorn Weevil to chew food that is relatively far away from the rest of their body, and allows them to feed on seeds, leaves, stems, flowers, and fruits that are only made accessible to them due to their long mouth. Although Acorn Weevils can feed on other foods, they tend to stick to acorns. This is partially due to the fact that the mouth of the Acorn Weevil evolved specifically for the acorns of an Oak tree, making Acorn Weevils one of the most<a href="https://www.youtube.com/watch?v=wm2mqzyrdt4"> highly specialized species in the world</a>! Not only do Acorn Weevil mouths look cool, but they make <a href="https://video.nationalgeographic.com/video/weevil_acorn">practical use of them</a> too. Feeding on acorns can be difficult but the Weevils’ snouts allow them to excavate the inside of acorns to feed themselves. Acorn Weevils also have feet with two lobes that help them get a grip on the side of the smooth and slippery acorn. Unfortunately, due to the insects taste for acorns, they have become a <a href="https://www.insectidentification.org/insect-description.asp?identification=Acorn-Weevil">pest</a> for oak tree expansion. By eating the inside of acorns and using acorns to foster their eggs as they develop, the weevils kill acorns that would typically develop into large oak trees!</p>
+<p><div id="attachment_295" style="width: 310px" class="wp-caption alignnone"><a href="https://www.flickr.com/photos/70626035@N00/15619999059"><img aria-describedby="caption-attachment-295" class="wp-image-295 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-2-300x225.jpg" alt="" width="300" height="225" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-2-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-2-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-2-1024x768.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-2-1x1.jpg 1w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-295" class="wp-caption-text">A proud acorn weevil larvae sits next to the acorn it was born in.  <a href="https://www.flickr.com/photos/70626035@N00/15619999059">cc Jacinta Lluch Vanero</a></p></div></p>
+<p>Similar to other insects, the Acorn Weevil can go years before indulging on tasty, liquid fat from inside acorns. Sometimes they have to wait up to three years before eating, imagine that! Although females and males both have the long characteristic snouts of Acorn Weevils, <a href="https://www.arkive.org/acorn-weevil/curculio-glandium/image-A23508.html">females’ tend to be longer than males</a>, sorry boys! The reason for this unequal development is that females do not exclusively use their long mouths to feed on acorn fats, but she also uses it to <a href="https://hortnews.extension.iastate.edu/acorn-and-nut-weevils">bore holes </a>into acorns so she can insert her ovipositor, a tube female insects use to lay their eggs, and lay her eggs too. Females typically <a href="http://www.arkive.org/acorn-weevil/curculio-glandium/video-09a.html#src=portletV3web">lay their eggs</a> in immature or damaged acorns during the summer allowing their eggs plenty of time to feed on the acorns and develop into squishy, white larvae by the time the acorn drops to the ground in the fall. When the acorn hits the ground, a three-day process is initiated where the larvae try to escape out of the acorn. In order to get out, the larvae <a href="https://www.youtube.com/watch?v=ZNKVbVBJoOc">push their squishy bodies out</a> of a tunnel they dig for themselves to escape the hole that their mother left in the acorn. The hole is only about the size of their head and had been covered by the poop of their mother, yuck! Imagine trying to squeeze through a hole the size of your head, your body would have to be really squishy and flexible. Once the squishy little larvae escape the acorn, they <a href="https://www.extension.iastate.edu/news/2007/sep/072107.htm">fall onto the ground</a> where they must wiggle and squirm their legless bodies to the soil while trying to avoid predators. This drama-filled and suspenseful feat includes dodging <a href="https://www.britannica.com/animal/shrew">shrews</a>, other rodents and insects that feed on plump weevil larvae. If the larvae reach the soil and are able to bury into it unscathed, then they will stay there as they pupate for 1 or 2 years undergoing metamorphosis, a process where insects mature from an immature stage to their adult stage (basically like a more intense puberty, yikes!), before emerging as an adult. Once reaching adulthood these little weevils will live for another <a href="https://spiral.imperial.ac.uk/bitstream/10044/1/46774/2/Forrester-GJ-1991-PhD-Thesis.pdf">2 to 3 years</a>.</p>
+<p><div id="attachment_296" style="width: 310px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3.jpg"><img aria-describedby="caption-attachment-296" class="wp-image-296 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3-300x225.jpg" alt="" width="300" height="225" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3-1024x768.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3-1x1.jpg 1w, http://entomology.blogs.muhlenberg.edu/files/2018/04/weevil-3.jpg 1820w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-296" class="wp-caption-text">An acorn weevil grips onto an acorn using it’s two-lobed feet . CC: Ryan Kaldari</p></div></p>
+<p>If you haven’t already, check out this <a href="https://www.youtube.com/watch?v=wm2mqzyrdt4">video</a> of Entomologist George McGavin taking a look at the Acorn Weevil, he thinks they’re as cool as we do!</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=293#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-293 -->
+
+				
+					
+<article id="post-282" class="post-282 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=282" title="Permalink to Meet the Blue-Winged Wasp    by   Abigail Edwards and Francine Koitz" rel="bookmark">Meet the Blue-Winged Wasp    by   Abigail Edwards and Francine Koitz</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=282" title="9:39 pm" rel="bookmark"><time class="entry-date" datetime="2018-04-23T21:39:03+00:00" pubdate>April 23, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1546" title="View all posts by martenedwards" rel="author">martenedwards</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p><div id="attachment_284" style="width: 310px" class="wp-caption alignnone"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp.jpg"><img aria-describedby="caption-attachment-284" class="size-medium wp-image-284" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp-300x200.jpg" alt="" width="300" height="200" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp-300x200.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp-768x512.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp-1024x683.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp-2x1.jpg 2w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-Winged-Wasp.jpg 1434w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-284" class="wp-caption-text">Blue wingdd wasp Scolia dubia     <a href="http://djringer.com/photos/v/0908-springfield-wildlife/digger-wasp-scolia-dubia-1.jpg.html">cc David Ringer</a></p></div></p>
+<p>Are you dubious about your feelings on wasps? Then you should meet the Blue-Winged Wasp, <a href="https://bugguide.net/node/view/431"><em>Scolia dubia</em></a><em>!.  </em>A fear of wasps is common, but if you see the Blue-Winged Wasp in your garden, don’t be alarmed! These insects won’t sting you if they’re not threatened, and they’re actually beneficial to your garden. For example, you know those June Beetles and Japanese Beetles that ravage your vegetables? The Blue-Winged Wasp is a predator of those!  The Blue-Winged Wasp is one of the most common “solitary” wasps.  Other than mating, it doesn’t interact with other wasps, which makes it very different from the yellow jackets or hornets that often interfere with picnics.   This wasp is fairly large, about the size of a quarter!  It is easily identifiable because of its two-colored abdomen: black on the top and reddish orange on the bottom. On the reddish orange part of the abdomen, there are two bright yellow spots close to the waist.   It earned its name because when the sun shines on its black wings, there is a blue sheen.</p>
+<p>The Blue-Winged Wasp is a widespread species found throughout the country, including Pennsylvania! They are parasites of scarab beetle grubs, specifically June Beetles and Japanese Beetles. The female wasp flies low over the surface of the soil and somehow knows where the beetle grubs are underground.</p>
+<p><strong><a href="https://www.youtube.com/watch?v=PTx3Vo5Rk7g">Is it magic?</a>  This video would make it seem so, but</strong> who knows, we haven’t seen any research about how exactly they find their targets.   When she detects a beetle grub, she lands on the soil and starts digging. They have insanely strong legs that are very spiny. When a scarab grub gets exposed, it will make an attempt to rebury itself immediately. The wasp will sting the grub to paralyze it. Then she digs a hole and drags the paralyzed grub into the hole, and lays an egg on top of the grub. She seals up the hole, and repeats this process. Other than ensuring her egg is laid on a tasty grub, the female Blue-Winged Wasp doesn’t provide further motherly care .  Not surprisingly, males don’t provide parental care at all! Once the wasp larva hatches, it feeds on the grub while it’s still alive. It will feed on the beetle grub for about a week before making a cocoon for itself. It will emerge from its cocoon the following summer as an adult wasp. These wasps only live for one season, so approximately four to five months.</p>
+<p>Male and female Blue-Winged Wasps commonly visit flowers (e.g. Goldenrod and Mountain Mint) to feed on nectar during the day. Males have longer antennae and a skinnier physique than the females. In the morning, the males fly near the ground in an unique pattern, hoping to find and mate with a virgin female just emerging from the ground. Males also have a distinctive prong-like “pseudostinger” that is used in copulation… compensating for something?    Males cannot sting, and females do not sting humans, so no worries!</p>
+<p><strong>Sleight of Wings</strong>  Did you know that insects cannot actually produce a blue pigment? While the animal kingdom has mastered how to make almost any pigment, virtually no animal can actually produce the color blue! So, how does the Blue-Winged Wasp have its eponymous name? It’s all a trick of light. At certain angles, the light hits the wings of the Blue-Winged Wasp, tricking the eye into thinking that the wings are blue.</p>
+<h5><strong>Should I be scared?</strong>  Unless you’re a scarab beetle grub, there’s no reason to be scared of this wasp. Although these wasps look scary, they are harmless and rarely sting people (unless the wasp feels threatened and is forced to sting in self defense). But why would you threaten a wasp in the first place? Pick on someone your own size!</h5>
+<p><div id="attachment_285" style="width: 310px" class="wp-caption aligncenter"><a href="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod.jpg"><img aria-describedby="caption-attachment-285" class="wp-image-285 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod-300x220.jpg" alt="" width="300" height="220" srcset="http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod-300x220.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod-768x563.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod-1024x750.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2018/04/Blue-winged-wasp-on-goldenrod-1x1.jpg 1w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-285" class="wp-caption-text">Blue winged wasp on goldenrod flower  <a href="https://www.flickr.com/photos/131104726@N02/30901482092/in/photolist-P5Eb31-wbajFq-cuQHsU-6jxrXF-8QXopy-d2MnKG-mEoJDD-smSbMP-6jxGFa-rpSCD7-6jxGFF-s3x6V2-ahfona-9ima2D-dfohVV-hAKobG-aeCHA5-Bewou-BevvQ-Bevjv-goFop5-myMcxm-goESjd-hbi9oM-nKvTnK-goFGP1-9ipeQL-i27VFj-hAKpL5-s5houJ-ahfnNT-KffVzW-ftdTsF-KibWqc-xPLui4-KbdnNH-Kz53oG-se3D7G-smH8aJ-ahfoEF-hALHAZ-BewME-myKpS6-goFFS9-2zY69w-cBp8Z9-XtB1fx-9ipgbS-goFZbB-Bex1E/">cc by Alejandro Santillana</a></p></div></p>
+<p><strong>The birds and the wasps</strong>.   Both males and females engage in mating dances, which consists of doing the Macarena. Just kidding, they fly close to the ground in figure eight patterns, which is probably more exciting to them than one hundred macarenas. There is little information known about their mating rituals.  The Blue-Winged Wasp breeds once a year between April and November, depending on the location.  The Blue-Winged Wasp contributes significantly to controlling lawn grub populations, as well as helping the bees out with pollination of wild flowers. The Blue-Winged Wasp is a parasitoid species, which means that not only does it get its nutrients from a host victim, but it kills the host in the process. A female lays one egg per grub, and she lays more than one egg per season, making this wasp an excellent biological control of the beetles that eat your home garden! If you want to encourage these beneficial wasps to visit your garden, make sure to plant Goldenrod – the Blue-Winged Wasp seems to like the taste of the Goldenrod nectar!</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=282#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-282 -->
+
+				
+					
+<article id="post-21" class="post-21 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=21" title="Permalink to Under Quarantine: Local Townships the Battleground in a Fight to Prevent a National Spotted Lanternfly Invasion" rel="bookmark">Under Quarantine: Local Townships the Battleground in a Fight to Prevent a National Spotted Lanternfly Invasion</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=21" title="6:27 pm" rel="bookmark"><time class="entry-date" datetime="2016-05-03T18:27:46+00:00" pubdate>May 3, 2016</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1665" title="View all posts by Chad I. Schwartz" rel="author">Chad I. Schwartz</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p><div id="attachment_23" style="width: 250px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lantern-Fly.jpg" rel="attachment wp-att-23"><img aria-describedby="caption-attachment-23" class="wp-image-23" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lantern-Fly-209x300.jpg" alt="Spotted Lantern Fly" width="240" height="344" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lantern-Fly-209x300.jpg 209w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lantern-Fly.jpg 280w" sizes="(max-width: 240px) 100vw, 240px" /></a><p id="caption-attachment-23" class="wp-caption-text"><strong>Adult Spotted Lanternfly (<em>Lycorma delicatula</em>)</strong> (Photo Credit: Chad I. Schwartz, <a href="https://creativecommons.org/licenses/by/2.0/">CC License 2.0</a>)</p></div></p>
+<p>By Chad I. Schwartz</p>
+<p>When you hear the word “quarantine,” what images come to mind? Perhaps you envision an infected person isolated amid an epidemic, or even recall the aid workers who were confined following their return to the U.S. from Ebola-stricken West Africa. While you may imagine strings of black and yellow “caution” tape cordoning off a contaminated area, you probably don’t picture a vibrantly spotted red and gray insect with an appetite for fruit trees and grapevines. But for residents of <a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Documents/Lycorma%20Detection%20Map%20(08%20Feb%202016).pdf">several townships in nearby Berks, Montgomery, Bucks, </a><a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Documents/Lycorma%20Detection%20Map%20(08%20Feb%202016).pdf">and Chester counties</a>, the word “quarantine” is now associated with just that – a colorful but potentially destructive insect called the spotted lanternfly (<a href="http://bugguide.net/node/view/1016519"><em>Lycorma delicatula</em></a>).</p>
+<p>Making its unwelcomed North American debut in Pike Township, Berks County less than two years ago, the spotted lanternfly has since colonized adjacent townships and counties, prompting the Pennsylvania Department of Agriculture (PDA) to enact a general quarantine in an effort to contain the insect. Much as a conventional quarantine is authorized to restrict the dispersion of a pathogen, PDA’s quarantine is intended to limit the spotted lanternfly’s distribution to localized pockets by prohibiting the transport of objects that may carry the insects and their eggs. Therefore, as per PDA order, the following objects are not permitted to be moved beyond the quarantine zone: plant materials (including firewood and yard waste), construction materials, grills, lawn furniture, vehicles stored outdoors, and any other surfaces that may carry any stage of the insect’s life cycle. Individuals who fail to obey the <a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Documents/QuarantineOrder.pdf">requirements of the quarantine</a> could be criminally prosecuted (with penalties of up to 90 days imprisonment and a fine of up to $300 per violation), and face civil penalties of up to $20,000 per violation. But why make such a big fuss over an insect barely larger than a quarter?</p>
+<p><div id="attachment_222" style="width: 595px" class="wp-caption aligncenter"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1.jpg" rel="attachment wp-att-222"><img aria-describedby="caption-attachment-222" class="wp-image-222" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1-300x225.jpg" alt="Lanternfly Head" width="585" height="438" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1-1024x768.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2016/04/lantern2-1.jpg 1865w" sizes="(max-width: 585px) 100vw, 585px" /></a><p id="caption-attachment-222" class="wp-caption-text"><strong>Head of an Adult Lanternfly and Close-up of Specialized Antenna </strong>(Photo Credit: Chad I. Schwartz, <a href="https://creativecommons.org/licenses/by/2.0/">CC License 2.0</a>)</p></div></p>
+<p>Native to northern China, the spotted lanternfly is a ‘vegetarian’ that has a fondness for many plants of local, regional, and global economic importance. As members of the insect Order Hemiptera, lanternflies have sucking mouthparts, and therefore cannot chew plants as, for example, a caterpillar generally would. Instead, adults and nymphs suck phloem – plant tissues that carry sugars – from leaves and stems. But what goes in must come out! In fact, while feeding damage alone may weaken host plants, it is the lanternfly’s habit of <em>peeing</em> sugary liquids onto the plants it eats that makes it a particularly harmful pest! As sugary excrement collects on plant surfaces, resulting mold growth can ultimately slow or stop plant growth, and attract other insects that may further damage the plant (<a href="http://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=15861">Dara 2014</a>). Far from a picky eater, the spotted lanternfly is known to consume in excess of <a href="http://extension.psu.edu/pests/spotted-lanternfly/news/2015/host-plants-used-by-spotted-lanternfly">70 plant species</a>, 25 of which currently grow in Pennsylvania, according to PDA. Such host plants as apples, birches, cherries, grapes, maples, and stone fruits might be at risk of damage if the lanternfly spreads in North America (<a href="http://ucanr.edu/blogs/blogcore/postdetail.cfm?postnum=15861">Dara 2014</a>). Research suggests that the lanternflies may locate preferred host plants by &#8216;smelling&#8217; attractive plant compounds through their antennae (<a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085">Moon </a><a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085"><em>et al</em></a><a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085">. 2011</a>; <a href="http://ag.udel.edu/delpha/7994.pdf">Yoon <em>et al</em>. 2011</a>).</p>
+<p>While considered a pest in its native China, the species gained a more notorious reputation as an <em>invasive</em> species in South Korea and Japan, where, since its introduction and rapid spread in 2006, it has targeted grapes, fruit trees, and ornamental plants (<a href="https://www.researchgate.net/publication/279531772_The_First_New_World_Record_of_Lycorma_delicatula_Insecta_Hemiptera_Fulgoridae">Barringer <em>et al</em>. 2015</a>). To be characterized as “invasive,” a species must be nonnative, and exhibit the potential to harm the environment, economy, and/or human health. If the lanternfly’s impact on Korea and Japan serves as any indication of the insect’s invasive potential, it is clear why a quarantine is so important: PDA fears that Pennsylvania’s multimillion-dollar agriculture, wine-making, nursery, and timber industries provide prime fodder for a growing population of hungry lanternflies. Athough it is unclear how the insect was introduced to Berks County, its containment and eradication within the quarantine zone is essential to averting a statewide, and possibly a <em>continent</em>-wide, invasion.</p>
+<p><div id="attachment_160" style="width: 180px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/6136414182_5bf8c71654_o.jpg" rel="attachment wp-att-160"><img aria-describedby="caption-attachment-160" class="wp-image-160" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/6136414182_5bf8c71654_o-300x225.jpg" alt="6136414182_5bf8c71654_o" width="170" height="128" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/6136414182_5bf8c71654_o-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/6136414182_5bf8c71654_o-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/6136414182_5bf8c71654_o-1024x768.jpg 1024w" sizes="(max-width: 170px) 100vw, 170px" /></a><p id="caption-attachment-160" class="wp-caption-text"><strong>Tree of Heaven</strong> (Photo Credit: <a href="https://www.flickr.com/photos/wayneandwax/6136414182/in/photolist-amfJ9w-9YDepf-amcLjV-8max9P-amcLCt-qQQXYQ-rmwqyd-6d617E-7f1aJJ-6Di4k-8bieen-6ZuUUj-bWYQJJ-oWKH6M-oGstyh-oLKLwr-4aEGGm-arV8iR-8bmw3Q-9XMuR2-aa8yNE-3KAmuk-3KAmmM-6qc7Ay-9QpnC-3LXuTs-qQLeet-5Dh4Uq-7eWgp2-amfGF3-3KAmqX-qyn58y-7eWh9P-a4GCSq-3LUMp3-otFC1S-hAFcwU-5aahc8-oaXV8c-374H27-osiWCr-cG4tQC-ae5qzM-ngkBhQ-6PqSye-a6sJK9-bTdeM6-pTVmt3-3LT5pP-siwF1F">wayne marshall</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC License BY-NC-SA 2.0</a>)</p></div></p>
+<p>Thousands of miles from its native range, the lanternfly is thriving in the absence of natural predators, and its population is expanding as it exploits Pennsylvania’s vegetation. Yet, much of what makes the lanternfly such a successful invader actually has to do with another nonnative species, the tree of heaven (<a href="http://plants.usda.gov/core/profile?symbol=aial"><em>Ailanthus altissima</em></a>). An abundant invasive species in Pennsylvania, but originating in the lanternfly’s native range, tree of heaven is a woody plant that outcompetes other plants by releasing toxins into the soil. Rather than avoiding the toxins, lanternflies actually eat them, making the tree of heaven a preferred host species for the insect (<a href="http://jipm.oxfordjournals.org/content/6/1/20#ref-16">Dara <em>et al</em>. 2015</a>).</p>
+<p><div id="attachment_122" style="width: 180px" class="wp-caption alignright"><img aria-describedby="caption-attachment-122" class="wp-image-122" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lanternfly3-300x221.png" alt="Spotted Lanternfly (Wings Spread)" width="170" height="125" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lanternfly3-300x221.png 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Spotted-Lanternfly3.png 589w" sizes="(max-width: 170px) 100vw, 170px" /><p id="caption-attachment-122" class="wp-caption-text"><strong>Adult Spotted Lanternfly &#8211;Wings Spread</strong> (Photo Credit: Chad I. Schwartz, <a href="https://creativecommons.org/licenses/by/2.0/">CC License 2.0</a>)</p></div></p>
+<p>The spotted lanternfly is a strikingly colored insect whose appearance varies from a white-spotted, black or red nymph to a black-spotted, gray and red adult over the course of its life cycle. But don’t let its handsome appearance fool you! In nature, flashy colors often serve to communicate one important fact to potential predators: “I am poisonous, so you better not eat me!” As the lanternfly consumes tree of heaven, the plant’s toxic compounds are concentrated in the lanternfly’s tissues. Thus, while the lanternfly has no natural predators in North America, even native predatory animals such as birds may be deterred by the insect’s toxicity (<a href="http://jipm.oxfordjournals.org/content/6/1/20#ref-16">Dara <em>et al</em>. 2015</a>). Amazingly, the toxic properties of lanternflies have long been valued in Chinese medicine, having been used to treat swelling as early as the 12<sup>th</sup> century.</p>
+<p><div id="attachment_114" style="width: 180px" class="wp-caption alignright"><img aria-describedby="caption-attachment-114" class="wp-image-114" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/14215962157_4e2b028058_b-300x200.jpg" alt="14215962157_4e2b028058_b" width="170" height="113" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/14215962157_4e2b028058_b-300x200.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/14215962157_4e2b028058_b-768x512.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/14215962157_4e2b028058_b.jpg 1024w" sizes="(max-width: 170px) 100vw, 170px" /><p id="caption-attachment-114" class="wp-caption-text"><strong>Spotted Lanternfly Nymph</strong> (Photo Credit: <a href="https://www.flickr.com/photos/100620478@N03/14215962157">stevenw12339</a>, <a href="https://creativecommons.org/licenses/by-nc/2.0/">CC License BY-NC 2.0</a>)</p></div></p>
+<p>Come fall, adult lanternflies prefer to eat, mate, and deposit egg masses exclusively on tree of heaven, likely because the tree’s toxic compounds discourage egg predation (<a href="http://jipm.oxfordjournals.org/content/6/1/20#ref-16">Dara <em>et al</em>. 2015</a>). In fact, it was on a tree of heaven that the first North American lanternflies were identified by PDA and the PA Game Commission in the fall of 2014 (<a href="https://www.researchgate.net/publication/279531772_The_First_New_World_Record_of_Lycorma_delicatula_Insecta_Hemiptera_Fulgoridae">Barringer <em>et al</em>. 2015</a>). Due to its abundance in Pennsylvania, and its importance to the lanternfly life cycle, tree of heaven has received a lot of attention in eradication efforts.</p>
+<p>Toxicity isn’t the lanterfly’s only ‘super power.’ <a href="http://www.sciencedirect.com/science/article/pii/S0022191008000462?np=y">Frantsevich <em>et al</em>. (2008)</a> determined that specialized foot structures allow spotted lanternflies to adhere to smooth, vertical and horizontal surfaces. Much like Spiderman, the insects can even walk upside down on glass and plastic! While this ability helps the lanternfly to traverse surfaces where it may feed and/or lay its eggs, its well-designed foot structures have actually inspired scientists to engineer shoe soles for climbing robots (<a href="http://www.sciencedirect.com.muhlenberg.idm.oclc.org/science/article/pii/S0921889012000681">Voigt <em>et al</em>. 2012</a>).</p>
+<p>PDA estimates that the scraping of lanternfly egg masses from various surfaces had eradicated over 600,000 individual insects in Pennsylvania by December 2015. This number not only attests to the success of eradication efforts, it also reveals the true scale of the insect’s proliferation in Pennsylvania. Aside from egg mass scraping, the PDA has also applied sticky tree bands to host trees as a means of catching lanternfly nymphs. Other proposed lanternfly population management methods include pesticide application, as well as biological control using a parasitoid wasp (native to Asia) that targets lanternfly eggs (<a href="http://www.sciencedirect.com/science/article/pii/S1226861511000215">Kim <em>et al</em>. 2011</a>). Lab and field research also suggests that lavender oil effectively repels lanternflies, and could be applied to crops to discourage the insects from feeding (<a href="http://ag.udel.edu/delpha/7994.pdf">Yoon <em>et al</em>. 2011</a>). Similar research suggests that spearmint oil actually <em>attracts</em> lanternflies, and could be incorporated into traps (<a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085">Moon </a><a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085"><em>et al</em></a><a href="http://link.springer.com/article/10.3839%2Fjksabc.2011.085">. 2011</a>). Research and evaluation, supported by USDA funding and volunteer efforts, are ongoing, and are directed toward the ultimate goal of eliminating the lanternfly before it becomes a pervasive pest.</p>
+<p><div id="attachment_157" style="width: 180px" class="wp-caption alignleft"><img aria-describedby="caption-attachment-157" class="wp-image-157 " src="http://entomology.blogs.muhlenberg.edu/files/2016/04/Halyomorpha_halys_lab-300x200.jpg" alt="Halyomorpha_halys_lab" width="170" height="113" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/Halyomorpha_halys_lab-300x200.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Halyomorpha_halys_lab-768x512.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Halyomorpha_halys_lab-1024x683.jpg 1024w" sizes="(max-width: 170px) 100vw, 170px" /><p id="caption-attachment-157" class="wp-caption-text"><strong>Brown Marmorated Stink Bug</strong> (Photo Credit: <a href="https://en.wikipedia.org/wiki/Brown_marmorated_stink_bug#/media/File:Halyomorpha_halys_lab.jpg">Yerpo</a>, <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC License BY-SA 3.0</a>)</p></div></p>
+<p>Interestingly, the spotted lanternfly is not the first insect to put our region on the map. Are you familiar with those pesky brown bugs that fly clumsily around your house and smell when you squash them? Known as brown marmorated stink bugs, these cousins of the spotted lanternfly have gained notoriety across much of the U.S. since they were introduced to Allentown in 1998. Fears of a similar invasion are a driving force behind current lanternfly eradication efforts.</p>
+<p>So, what can <em>you</em> do to prevent a spotted lanternfly invasion? Through a carefully coordinated effort involving experts and volunteers, it may be possible to prevent repeats of the American stink bug and Korean/Japanese lanternfly invasions. First, you need to <a href="http://www.forestryimages.org/browse/subthumb.cfm?sub=77293">know what to look for</a>. Though generally deposited on tree trunks, brown, waxy egg masses can be found on <em>any</em> flat surface, including outdoor furniture, walls, and vehicles (<a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Pages/default.aspx#.VwvwbTaYXt9">PDA 2016</a>). Also watch out for wingless nymphs, which range in size from about one-fifth to three-quarters the diameter of a penny, and can be found feeding on small plants, vines, and tree of heaven (<a href="http://jipm.oxfordjournals.org/content/6/1/20#ref-16">Dara <em>et al</em>. 2015</a>; <a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Pages/default.aspx#.VwvwbTaYXt9">PDA 2016</a>). Winged adults may feed on a variety of host plants. Also, don’t overlook signs that lanternflies have been feeding on your trees (especially tree of heaven). Tree wounds and fungal growth may very well be (but are not necessarily) an indicator that lanternflies have been feeding. If you do find lanternflies or eggs within or beyond the quarantine zone, do not hesitate to <a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Pages/default.aspx#.VvNRHDaYXt8">contact PDA</a> (<a href="mailto:badbug@pa.gov">badbug@pa.gov</a>) or <a href="http://extension.psu.edu/counties">your local Penn State Extension Office</a>!</p>
+<p>While shooing European Starlings or pulling Japanese stiltgrass from your backyard, don’t forget about our area’s newest nonnative species, the spotted lanternfly. Though it is tiny, it could pack a big punch on plant based industries in Pennsylvania and beyond. Unfortunately, we live in an age in which the introduction of invasive species is inevitable. But, as with a contagion, vigilance and quick action can stop a localized case from going epidemic. So if you enjoy fruit, wine, hardwood floors, or a nicely landscaped yard, be grateful for Pennsylvania’s lanternfly quarantine!</p>
+<p>Visit the <a href="http://www.agriculture.pa.gov/Protect/PlantIndustry/spotted_lanternfly/Pages/default.aspx#.VtSvaDaYXt8">PDA webpage</a> to view images of the various spotted lanternfly life stages, learn how to assist with eradication efforts, report sightings, or explore this subject in greater depth. The <a href="http://extension.psu.edu/pests/spotted-lanternfly">Penn State Extension</a> and <a href="https://www.aphis.usda.gov/publications/plant_health/2014/alert_spotted_lanternfly.pdf">USDA</a> websites also include important information regarding the ongoing spotted lanternfly threat.</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=21#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-21 -->
+
+				
+					
+<article id="post-25" class="post-25 post type-post status-publish format-aside hentry category-uncategorized post_format-post-format-aside">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=25" title="Permalink to Epitaph for a Dog Day Cicada" rel="bookmark">Epitaph for a Dog Day Cicada</a></h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>&nbsp;</p>
+<p><div id="attachment_27" style="width: 711px" class="wp-caption aligncenter"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1.jpg" rel="attachment wp-att-27"><img aria-describedby="caption-attachment-27" class="wp-image-27" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1-300x87.jpg" alt="cicada 1" width="701" height="203" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1-300x87.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1-768x223.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1-500x145.jpg 500w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-1.jpg 896w" sizes="(max-width: 701px) 100vw, 701px" /></a><p id="caption-attachment-27" class="wp-caption-text">Red ocelli in the top of a cicada head. Photo Credit: Sarah Schulz-Arnold</p></div></p>
+<p>By Sarah Schulz-Arnold</p>
+<p>The sweet summer song of the annual cicada  <a href="http://bugguide.net/node/view/1099330">annual cicada</a> is one I long to hear, especially when I’m reaching for the snow shovel.  That is precisely what I was doing when I found the camouflage-colored body of an annual cicada on my garden shed window.  I make it a point to not bumble around  the shed much in the winter months as it makes the pangs for a green garden only stronger. This little corpse on my shed windowsill sparked a different kind of melancholy.  She had made it to adulthood only to be trapped in my shed when it emerged, spending her whole adult life trying to get out and sing the song of her people and make more of her own kind.</p>
+<p>I identified my auto-taxidermied little friend as as <em>Tibicen canicularis</em><em>, </em>more commonly known as the annual (refers to their appearance, rather than their lifespan) Dog Day cicada.  These cicadas are not the periodic cicadas that seem to blanket the trees every seventeen years. They have a much shorter larvaehood of three to four years, which would help explain how the poor dear ended up in my shed.  In 2012, Hurricane Sandy up-ended the garden shed onto our cars.  It is a very light weight shed made of metal siding, so it was easy enough to tip it back on to the foundation.  However, we couldn’t get it exactly back to where it was as it bent a bit.  Next to the shed are my hazelnut shrubs and a goji berry vine.  It would have been on one of the branches of these shrubs that our little friend would have been laid as an egg, burrowed under once hatched, and then emerged from last summer&#8230;right into my shed as it was off the foundation and partially covering the roots of the hazels.</p>
+<p><div id="attachment_134" style="width: 310px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicadanymphhardatwork-e1461685613930.png" rel="attachment wp-att-134"><img aria-describedby="caption-attachment-134" class="size-medium wp-image-134" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicadanymphhardatwork-300x264.png" alt="Photo Credit: Seel Kaiser " width="300" height="264" /></a><p id="caption-attachment-134" class="wp-caption-text">Photo Credit: Seel Kaiser</p></div></p>
+<p>What is the purpose of the cicada then, if only to come out to mate for two weeks and then die of a combination of starvation and dehydration?  Aside from keeping the population going, they provide a very important infusion of <a href="http://agris.fao.org/agris-search/search.do?recordID=US9025278">carbon and nitrogen</a> further up the food pyramid without upsetting the base.  Trees and shrubs take carbon dioxide, sun, and water and make sugar for themselves.  Cicadas feed from the uptake of water (through the xylem vascular tissue) which has very little sugar to it at all.  When the larva has finally managed to glean enough resources to get it to adulthood 3-4 years later, it emerges from the ground in its last larval stage that looks like its adult form without wings.   From that molts the adult that hopefully manages to breed before being eaten by a bird or any number of predators. Those predators are eaten by larger predators and so on and so forth.</p>
+<p><div id="attachment_145" style="width: 279px" class="wp-caption alignright"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-life-cycle-images.jpg" rel="attachment wp-att-145"><img aria-describedby="caption-attachment-145" class="wp-image-145 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-life-cycle-images-269x300.jpg" alt="Drawing: Sarah Schulz-Arnold. Based on http://thehouseholdpests.org/cicada-life-cycle-images.html" width="269" height="300" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-life-cycle-images-269x300.jpg 269w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-life-cycle-images.jpg 487w" sizes="(max-width: 269px) 100vw, 269px" /></a><p id="caption-attachment-145" class="wp-caption-text">Drawing: Sarah Schulz-Arnold. Based on http://thehouseholdpests.org/cicada-life-cycle-images.html</p></div></p>
+<p>The life cycle of the cicada is a patient one.  The eggs are laid on a tree branch or trunk where they hatch into first instar larvae and fall to the ground.  The larvae then burrow under the leaf litter to start a slow journey through the root system of the tree it initially fell from, back to the trunk of the tree to live its adult life <a href="http://bugguide.net/node/view/15740">for two whole weeks</a>.  As it digs deeper, it has nowhere to go with the soil it has dug, so the cicada keeps back filling the hole behind it. The larval cicada will start its dig upwards after the third instar stage so that by the time it molts into its fifth larval stage, it will be right by the surface of the ground so that it may molt and begin the cycle again with its own offspring. With such an unusual life cycle that is only visible above ground (unless you dig them up) , they have managed to tickle human curiosity since history began.</p>
+<p><div id="attachment_30" style="width: 157px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/Cicada-4.jpg" rel="attachment wp-att-30"><img aria-describedby="caption-attachment-30" class="wp-image-30 size-full" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/Cicada-4.jpg" alt="Cicada 4" width="147" height="200" /></a><p id="caption-attachment-30" class="wp-caption-text">Photo Credit: Louisiana Research Collection, Howard-Tilton Memorial Library, Tulane University</p></div></p>
+<p><span style="font-weight: 400;">Cicadas are ponderous creatures.  It must have seemed very strange to humanity at the start of history how these insects could just emerge out of the ground and then do nothing but sing, dance, and mate without seeming to eat.There is a </span><a href="http://www.insects.org/ced3/cicada_ancgrcult.html"><span style="font-weight: 400;">Greek myth</span></a><span style="font-weight: 400;"> surrounding this odd behavior of the cicada involving the genesis of the Muses. When Apollo had trained once feral forest nymphs in the ways of the arts, they shared their grace with humanity.  As the mortal humans had never done anything except to survive, the arts were a great comfort and joy to them. However there were some men that were so obsessed with the music and stories, they were overtaken by a mania so strong that they sang and danced all day, not noticing the needs of the body until they died. The Muses were impressed, so they brought these devotees back as cicadas to watch humanity to see if they were being honored so that the faithful could be rewarded in kind.The </span><a href="http://www.insects.org/ced3/cicada_ancgrcult.html"><span style="font-weight: 400;">cicada’s triad of amber-colored ocelli </span></a><span style="font-weight: 400;">(simple light-sensing eyes) even seem to honor the leader of the Muses as she was said to wear gold on her brow. Cicadas came to represent renewal and ascension of the spirit to the Greeks as well as being </span><a href="http://www.insects.org/ced3/cicada_ancgrcult.html"><span style="font-weight: 400;">considered a delicacy</span></a><span style="font-weight: 400;"> right after the last molt.</span></p>
+<p><div id="attachment_31" style="width: 310px" class="wp-caption alignright"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-5.jpg" rel="attachment wp-att-31"><img aria-describedby="caption-attachment-31" class="wp-image-31 size-medium" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-5-300x185.jpg" alt="cicada 5" width="300" height="185" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-5-300x185.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-5-486x300.jpg 486w, http://entomology.blogs.muhlenberg.edu/files/2016/04/cicada-5.jpg 518w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-31" class="wp-caption-text">Photo Credit: Sarah Schulz-Arnold</p></div></p>
+<p>Chinese Feng Shui practices saw the cicada as a symbol of rebirth as most of the Asian-originating religions believe in reincarnation. The dictates of Feng Shui say a carved jade cicada should be placed at the foot of the bed, or as beads in the mouth of a dying person as a wish for a<a href="http://www.insects.org/ced3/cicada_chfolk.html"> good rebirth</a>. Another use a representation of a cicada could serve is as a gift to a person who is about to undergo a very big change in life like graduation or starting a new job to ensure that the transition goes smoothly.  The folklore was passed on by farmers who believed that cicadas would change their song when bad storms were coming <a href="http://www.insects.org/ced3/cicada_chfolk.html">as a warning</a> to prepare for the worst.</p>
+<p>With all the environmental good and rich cultural heritage that cicadas passively are a part of, I know that I will be paying more attention to my shed to make sure that no other suffers my little buddy’s fate. At the very least, I’m giving a blue jay a chance at a nutritious lunch. But more likely I hope to hear the song of the cicada’s children for many years to come.</p>
+<p><div id="attachment_228" style="width: 310px" class="wp-caption aligncenter"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/05/cicada-ocelli.jpg" rel="attachment wp-att-228"><img aria-describedby="caption-attachment-228" class="size-medium wp-image-228" src="http://entomology.blogs.muhlenberg.edu/files/2016/05/cicada-ocelli-300x192.jpg" alt="Photo Credit: Sarah Schulz-Arnold When I was a child, I knew that this triad of bumps were eyes and I always wanted to see them closer to find out what they see with them. The notion is that all insects that have these use them to triangulate in flight. Cicadas have some of the most prominent ocelli that resemble amber gems on their brow. Getting to see these under a scanning electron microscope has been a childhood dream of mine come true." width="300" height="192" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/05/cicada-ocelli-300x192.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/05/cicada-ocelli-768x492.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/05/cicada-ocelli-1024x656.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-228" class="wp-caption-text">Photo Credit: Sarah Schulz-Arnold<br />When I was a child, I knew that this triad of bumps were eyes and I always wanted to see them closer to find out what they see with them. The notion is that all flying insects that have these use them to triangulate in flight. Cicadas have some of the most prominent ocelli that resemble amber gems on their brow and getting to see these under a scanning electron microscope has been a childhood dream of mine come true.</p></div></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		<a href="http://entomology.blogs.muhlenberg.edu/?p=25" title="Permalink to Epitaph for a Dog Day Cicada" rel="bookmark">May 3, 2016</a>
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=25#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-25 -->
+
+				
+					
+<article id="post-63" class="post-63 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=63" title="Permalink to The wheel bug in your garden" rel="bookmark">The wheel bug in your garden</a></h1>
+
+				<div class="entry-meta">
+			Posted on <a href="http://entomology.blogs.muhlenberg.edu/?p=63" title="7:33 pm" rel="bookmark"><time class="entry-date" datetime="2016-04-20T19:33:11+00:00" pubdate>April 20, 2016</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://entomology.blogs.muhlenberg.edu/?author=1666" title="View all posts by ryanbohrod" rel="author">ryanbohrod</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>by Ryan Bohrod</p>
+<p>Insects surround us everyday, and whether we realize it or not, we still have daily interactions with these little critters. One insect that can be found in our very own backyards here in Allentown, Pennsylvania in late spring through autumn is  the <a href="http://bugguide.net/node/view/1131149">Wheel Bug </a>(<em>Arilus cristatus). </em> Wheel Bugs are a type of assassin bug and are commonly <a href="http://wric.com/2015/12/01/expert-weighs-in-on-local-kissing-bug-sightings/%20">mistaken</a> for the “deadly kissing bug”. The real kissing bug can infect humans with the microscopic organism that causes Chagas Disease by “peeing” on a victim while it is feeding.   While the Wheel Bug doesn’t pose any serious long-term health risks to humans, it has been known to defend itself with a painful bite that can <a href="http://entnemdept.ufl.edu/creatures/trees/wheel_bug.htm%20">be more powerful than a bee sting</a>. The site of the bite has been known to become numb for several days after the initial pain has worn off and the entire area usually is healed after two weeks. A bite from a wheel bug does have the potential to become infected, however this can be easily avoided with the use of a topical antimicrobial ointment.</p>
+<p><div id="attachment_268" style="width: 310px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/wheel-2.jpg" rel="attachment wp-att-268"><img aria-describedby="caption-attachment-268" class="size-medium wp-image-268" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/wheel-2-300x225.jpg" alt="Ryan Bohrod" width="300" height="225" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/wheel-2-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/wheel-2-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/wheel-2-1024x768.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-268" class="wp-caption-text">Photo Credit: Ryan Bohrod</p></div></p>
+<p>While the Wheel Bug shares a similar body shape and size with the “deadly kissing bug”, this insect can be properly identified by a crest on its thorax that is shaped like a wheel with protruding cogs around the outside. It is also characterized by its skinny neck, noisy flight, and its large body that can be as long as a silver dollar. These insects can be found all over the continental United States and as far south as Mexico. The <a href="http://entnemdept.ufl.edu/creatures/trees/wheel_bug.htm%20">life cycle</a> of the Wheel Bug is a one-year long generation that spends the winter season in the egg stage before hatching in the spring, not unlike us humans who like to spend the cold winter months indoors before emerging in beautiful spring weather!</p>
+<p>Wheel Bugs are predatory insects and commonly prey on pest insects such as caterpillars. They are part of a group of insects known as assassin bugs, whose vicious style of eating matches their violent name. Wheel Bugs and other assassin bugs liquefy the insides of their prey before sucking it out of the victim’s body. They do this by piercing prey with their beaks and injecting enzymes in their saliva that dissolve the bug’s insides. <a href="http://edis.ifas.ufl.edu/pdffiles/in/in24300.pdf">Wheel Bug saliva</a> is powerful enough to paralyze and kill prey within 30 seconds of being bitten. Their long piercing beaks are folded down when not in use and stored on a groove that runs along the underside of their thorax like how an airplane stores its landing gear while in flight. Wheel Bugs are also known to be very aggressive at both nymph and adult stages in their natural habitats, with some nymphs even showing cannibalistic behavior. It has also been found that the larger females sometimes <a href="http://entnemdept.ufl.edu/creatures/trees/wheel_bug.htm">kill and feed upon males</a> soon after mating with them.</p>
+<p><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/800px-A_Wheel_bug_Arilus_cristatus_eating_a_Japanese_beetle_Popillia_japonica.jpg" rel="attachment wp-att-267"><img class="size-medium wp-image-267 alignleft" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/800px-A_Wheel_bug_Arilus_cristatus_eating_a_Japanese_beetle_Popillia_japonica-300x225.jpg" alt="https://commons.wikimedia.org/wiki/File:A_Wheel_bug_%28Arilus_cristatus%29_eating_a_Japanese_beetle_%28Popillia_japonica%29.jpg https://www.flickr.com/photos/audreyjm529/1240909256/" width="300" height="225" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/800px-A_Wheel_bug_Arilus_cristatus_eating_a_Japanese_beetle_Popillia_japonica-300x225.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/800px-A_Wheel_bug_Arilus_cristatus_eating_a_Japanese_beetle_Popillia_japonica-768x576.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/800px-A_Wheel_bug_Arilus_cristatus_eating_a_Japanese_beetle_Popillia_japonica.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p><a href="https://commons.wikimedia.org/wiki/File:A_Wheel_bug_%28Arilus_cristatus%29_eating_a_Japanese_beetle_%28Popillia_japonica%29.jpg"> CC Some Rights Reserved</a><br />
+<a href="https://www.flickr.com/photos/audreyjm529/1240909256/">Photo Credit: Audrey</a></p>
+<p>Despite their aggressive nature and painful bite, Wheel Bugs should be welcomed in gardens and yards as esteemed guests of honor due to their <a href="http://aggie-horticulture.tamu.edu/galveston/beneficials/beneficial-09_wheel_bug.htm">ecological importance</a>. These bugs are very efficient predators and act as guardians of the garden, defending it from pests who would feed on the plants if left uninterrupted. Some of the pests that the Wheel Bug preys on include beetles, aphids, grasshoppers, crickets, caterpillars, and stink bugs and other true bugs.  Unfortunately our protectors of the garden may be too efficient of hunters, as they don’t only eat pest bugs but also eat beneficial insects such as ladybugs and honeybees. Nevertheless, Wheel Bugs still provide a net benefit to any garden or community of plants. In fact, the presence of these bugs in a garden is seen as an indication that the community is thriving and healthy. This is because Wheel Bugs are at the top of their food chain, the highest-level predator in the garden, and when their population numbers are thriving, it indicates that all of the other food web levels are intact and that the environment is healthy and free of pesticides and contaminants. Wheel Bugs are so beneficial to environments that they are welcomed as a form of <a href="http://www.rodalesorganiclife.com/garden/wheel-bug">organic pest control</a> by rural and urban gardeners.</p>
+<p>Wheel Bugs are fascinating insects that can be found in our very own backyards and are a productive part of local ecology, and, if treated with precaution and respect, are completely harmless to humans. Although they are very good at camouflaging with their environment they can be found by looking for their giant wheel shaped crest on their thoraxes. Just remember not to touch them or be prepared to potentially face a bite that is said to be worse than a hornet’s sting! According to a classic 1924 <a href="http://archinte.jamanetwork.com/article.aspx?articleid=534468">article,</a> the sting of a wheel bug was said to be equivalent or more painful than insects that scored a 3 out of 4 on the <a href="http://insects.about.com/od/antsbeeswasps/tp/schmidt_sting_index.htm">Schmidt Pain Index</a>. Still, Wheel Bugs should be viewed as friends not foes, as they contribute to the health of gardens and the local ecosystem.</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+					
+					
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=63#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-63 -->
+
+				
+					
+<article id="post-46" class="post-46 post type-post status-publish format-aside hentry category-uncategorized post_format-post-format-aside">
+	<header class="entry-header">
+		<h1 class="entry-title"><a href="http://entomology.blogs.muhlenberg.edu/?p=46" title="Permalink to Let’s talk about the Asian tiger mosquito!" rel="bookmark">Let’s talk about the Asian tiger mosquito!</a></h1>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><div id="attachment_110" style="width: 310px" class="wp-caption alignright"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609.jpg" rel="attachment wp-att-110"><img aria-describedby="caption-attachment-110" class="size-medium wp-image-110" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609-300x220.jpg" alt="Heinrich Damm - CC BY-SA 3.0" width="300" height="220" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609-300x220.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609-768x563.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609-1024x750.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2016/04/Ferrieskhlongsaensaeb0609.jpg 1093w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-110" class="wp-caption-text"><a href="https://en.wikipedia.org/wiki/Khlong_Saen_Saep#/media/File:Ferrieskhlongsaensaeb0609.jpg" target="_blank">Heinrich Damm</a> &#8211; <a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a></p></div></p>
+<p>Imagine the busy streets of Bangkok during the winter. The streets are similar to that of Times Square in NYC, but with more motorcycles and open sewage systems. You might imagine a lot of standing water, which are the breeding grounds for mosquitoes. That was my experience of Bangkok in the 6<sup>th</sup> grade. I stayed in an apartment in the city with my family and I would have mosquito bites all over my body at the end of each day. At the time I didn’t realize that mosquitoes have the potential to transmit diseases, but once I started taking more biology courses in High school I realized that the tropics have prime real-estate for mosquito growth and that trip to Thailand really piqued my interest in biology and diseases.</p>
+<p><div id="attachment_103" style="width: 310px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/CDC-Gathany-Aedes-albopictus-1.jpg" rel="attachment wp-att-103"><img aria-describedby="caption-attachment-103" class="size-medium wp-image-103" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/CDC-Gathany-Aedes-albopictus-1-300x199.jpg" alt="James Gathany/CDC - Public Domain " width="300" height="199" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/CDC-Gathany-Aedes-albopictus-1-300x199.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/CDC-Gathany-Aedes-albopictus-1-768x509.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/CDC-Gathany-Aedes-albopictus-1-1024x678.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-103" class="wp-caption-text"><a href="https://en.wikipedia.org/wiki/File:Aedes_Albopictus.jpg">James Gathany/CDC </a>&#8211; <a href="http://search.creativecommons.org/" target="_blank">Public Domain</a></p></div></p>
+<p>With the outbreak of Zika primarily in the Americas in April 2015 in Brazil, there have been concern over whether the United States can harbor such a debilitating vector of Zika virus.  You might have heard of the <em>Aedes aegypti</em><em>, </em>but this is the Asian tiger mosquito. You may also see it presented in the scientific literature as <em>Aedes albopictus. </em>It has the prefix of <em>Aedes, </em>and you might be thinking that they’re related to the aegypti, and you are right! They are of the same genus in the binomial nomenclature. In a piece written by the<a href="http://www.mcall.com/news/local/mc-lehigh-valley-zika-mosquitoes-20160212-story.html"> Morning Call</a>, they have ruled out <em>Aedes aegypti</em> as a possible endemic mosquito to transmit Zika in the Lehigh Valley. But is Pennsylvania off the hook?</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><div id="attachment_279" style="width: 310px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2.jpg" rel="attachment wp-att-279"><img aria-describedby="caption-attachment-279" class="size-medium wp-image-279" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2-300x250.jpg" alt="Dennis Punyodyana - [2016] " width="300" height="250" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2-300x250.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2-768x640.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2-1024x853.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus2-1x1.jpg 1w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-279" class="wp-caption-text">Dennis Punyodyana &#8211; [2016]</p></div>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><div id="attachment_277" style="width: 302px" class="wp-caption alignleft"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus.jpg" rel="attachment wp-att-277"><img aria-describedby="caption-attachment-277" class="wp-image-277 " src="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus-300x250.jpg" alt="albopictus" width="292" height="243" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus-300x250.jpg 300w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus-768x640.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus-1024x853.jpg 1024w, http://entomology.blogs.muhlenberg.edu/files/2016/04/albopictus-1x1.jpg 1w" sizes="(max-width: 292px) 100vw, 292px" /></a><p id="caption-attachment-277" class="wp-caption-text">Dennis Punyodyana [2016]</p></div>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>In a recent article published in the past month, <a href="http://www.mcall.com/news/local/mc-lehigh-valley-zika-mosquitoes-20160212-story.html" target="_blank">the Morning call </a>notes that “We do need to pay attention to the Asian tiger mosquito… it has evolved the ability to survive our winters.”The fact that it is capable of adapting to the winter ties into what the character Dr. Ian Malcolm in Jurassic park states “Life breaks free, it expands to new territories and crashes through barriers, painfully, maybe even dangerously” You might be asking what brought these mosquito over and many government and educational websites have been citing that the Asian tiger mosquito entered the U.S. from shipments from northern Asia in the mid-1980s and is capable of surviving in a broad array of climates.</p>
+<p><div id="attachment_124" style="width: 198px" class="wp-caption alignright"><a href="http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML.jpg" rel="attachment wp-att-124"><img aria-describedby="caption-attachment-124" class="size-medium wp-image-124" src="http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML-188x300.jpg" alt="© Brady et al. - Open Access article " width="188" height="300" srcset="http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML-188x300.jpg 188w, http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML-768x1226.jpg 768w, http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML-641x1024.jpg 641w, http://entomology.blogs.muhlenberg.edu/files/2016/04/13071_2014_Article_1533_Fig3_HTML.jpg 1200w" sizes="(max-width: 188px) 100vw, 188px" /></a><p id="caption-attachment-124" class="wp-caption-text"><a href="http://parasitesandvectors.biomedcentral.com/articles/10.1186/1756-3305-7-338" target="_blank">© Brady et al</a>. &#8211;<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank"> Open Access article</a></p></div></p>
+<p>Published in 2014, the journal Parasite Vectors explains the constraints that Global temperature has on <em>Aedes aegypti</em> and <em>Ae. Albopictus. </em>Temperature was related to the transmission potential of dengue fever. Their discussion section of their paper states that the <a href="http://parasitesandvectors.biomedcentral.com/articles/10.1186/1756-3305-7-338"><em>Ae. albopictus</em></a> has adapted its immature stages to local environments to allow it to persist long in winters in Europe and the USA. The paper also mentions that <em>Ae. albopictus</em> eggs can undergo long period of diapause that allow populations to persist in temperate environments, like Pennsylvania, that are unsuitable for adult survival. Diapause refers to the animal dormancy which an animal undergoes in response to adverse environmental conditions. Now that we have looked at potential ways that mosquitos transmit diseases, it’s important to look at how it is able to be controlled.</p>
+<p>But, considering its potential to migrate, does the Asian Tiger mosquito have the potential to to spread to the U.S.?  Only the females require a blood meal to develop eggs. It is also capable of <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038058">transmitting pathogens</a> such as Yellow fever virus, Dengue fever, and Chikungunya fever.  A brief summary of those mosquito borne diseases can be found <a href="http://www.nature.com/nature/journal/v448/n7155/images/448734a-t1.jpg">here</a>. Looking in the scope of the Zika outbreaks, we know that viruses cannot survive within mosquitos as a host. Rather, they have coevolved with these mosquitos and avert being destroyed by a mosquito’s immune system. Viruses and other pathogens can go through the tract of the mosquito and find a way to advert the mosquito immune system. The black arrows represent the direction that the virus might travel through the mosquito tract. In the process of following that tract, the pathogen can make its way off its projected path instead of being destroyed by the mosquito immune system.</p>
+<p>It is also capable of <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0038058">transmitting pathogens</a> such as Yellow fever virus, Dengue fever, and Chikungunya fever.  A brief summary of those mosquito borne diseases can be found <a href="http://www.nature.com/nature/journal/v448/n7155/images/448734a-t1.jpg">here</a>. Looking in the scope of the Zika outbreaks, we know that viruses cannot survive within mosquitoes as a host. Rather, they have co evolved with these mosquitos and avert being destroyed by a mosquito’s immune system. Viruses and other pathogens can go through the tract of the mosquito and find a way to advert the mosquito immune system. The black arrows represent the direction that the virus might travel through the mosquito tract. In the process of following that tract, the virus can make its way off its projected path instead of being destroyed by the mosquito immune system.</p>
+<p>In terms of mosquito control in addition to other methods, there are special compounds very specific to ONLY insect reproduction and their life cycle. They are called juvenile hormone analogs and are of relatively low toxicity to humans. There are efforts to place these in water supplies across the globe to prevent these mosquitos from reproducing. Its chemical name is called Methprene. It affects the lifecycle of the mosquito by preventing it from having this vital time in its reproduction cycle. It is the time in which the steroid hormone ecdysone is released in a small amount in the absence of juvenile hormone. The way the analog works is by never giving that mosquito larvae the chance to have that commitment peak by having the always the juvenile hormone present.</p>
+<p>With all that in consideration, should we ignore the Asian tiger mosquito? No. The Asian Tiger mosquito has many unique characteristics different from that of <em>Aedes agypti</em>. It shoudl definately be studied but also worried about. Mosquitos shouldn&#8217;t ruin your day if you get bitten many times like I have. You should take your misfortunes and use them as a way to get inspired to get curious and get informed. Sometimes new experiences are good even if they make you uncomfortable like traveling in a tropical place. It shouldn&#8217;t deter you from flying abroad!</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		<a href="http://entomology.blogs.muhlenberg.edu/?p=46" title="Permalink to Let’s talk about the Asian tiger mosquito!" rel="bookmark">April 19, 2016</a>
+				<span class="sep"> | </span>
+		<span class="comments-link"><a href="http://entomology.blogs.muhlenberg.edu/?p=46#respond">Leave a comment</a></span>
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-46 -->
+
+				
+				
+			
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+						<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="http://entomology.blogs.muhlenberg.edu/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="http://entomology.blogs.muhlenberg.edu/?p=344">Cicadas, Commencement and Citizen Science</a>
+									</li>
+											<li>
+					<a href="http://entomology.blogs.muhlenberg.edu/?p=304">Well-Timed Crickets     by Emily Davis &#038; Anna Kennedy</a>
+									</li>
+											<li>
+					<a href="http://entomology.blogs.muhlenberg.edu/?p=299">It’s a bee! It’s a Hummingbird! No, it’s a Snowberry Clearwing!    Daniel Kier and Nebiyat Tadesse</a>
+									</li>
+											<li>
+					<a href="http://entomology.blogs.muhlenberg.edu/?p=301">The Brown Prionid Beetle   by Joshua Shaffer and Samantha Sikkerbol</a>
+									</li>
+											<li>
+					<a href="http://entomology.blogs.muhlenberg.edu/?p=293">The Wonderful World of Weevils   by Stephen Koester and Jacqueline McKenna</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+				<li><a href='http://entomology.blogs.muhlenberg.edu/?m=202002'>February 2020</a></li>
+	<li><a href='http://entomology.blogs.muhlenberg.edu/?m=201805'>May 2018</a></li>
+	<li><a href='http://entomology.blogs.muhlenberg.edu/?m=201804'>April 2018</a></li>
+	<li><a href='http://entomology.blogs.muhlenberg.edu/?m=201605'>May 2016</a></li>
+	<li><a href='http://entomology.blogs.muhlenberg.edu/?m=201604'>April 2016</a></li>
+		</ul>
+			</aside>		</div><!-- #secondary .widget-area -->
+
+		<div id="tertiary" class="widget-area" role="supplementary">
+						</div><!-- #tertiary .widget-area -->
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+    
+    <div class="section group">
+    
+	<div class="col span_1_of_3">
+    <div id="text-3" class="widget widget_text">			<div class="textwidget"></div>
+		</div>  
+		</div>
+        
+	<div class="col span_1_of_3">
+	<div id="text-4" class="widget widget_text"><h4>Copyright 2016 &#8211; Muhlenberg College</h4>			<div class="textwidget"></div>
+		</div> 
+
+	</div>
+    
+	<div class="col span_1_of_3">
+	<div id="text-5" class="widget widget_text">			<div class="textwidget"></div>
+		</div> 
+	</div>
+	</div>
+
+		<div class="site-info">
+            <a href="http://www.templateexpress.com/bota-theme/">
+            Bota simple WordPress Theme</a>
+            Powered By WordPress 		</div><!-- .site-info -->
+	</footer><!-- #colophon .site-footer -->
+     <a href="#top" id="smoothup"></a>
+</div><!-- #page .hfeed .site -->
+</div><!-- end of wrapper -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/small-menu.js?ver=20120206'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-content/themes/bota/js/smoothscroll.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://entomology.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://entomology.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fentomology.blogs.muhlenberg.edu%2Fwp-content%2Fmu-plugins%2Fwp-recaptcha%2Frecaptcha.css%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://entomology.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

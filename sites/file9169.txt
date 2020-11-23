@@ -1,0 +1,508 @@
+http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/
+27
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Senior Profiles: Men&#8217;s Lacrosse | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Senior Profiles: Men&#8217;s Tennis' href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/09/senior-profiles-mens-tennis/' />
+<link rel='next' title='Senior Profiles: Women&#8217;s Lacrosse' href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/11/senior-profiles-womens-lacrosse/' />
+
+<link rel="canonical" href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/" />
+<link rel='shortlink' href='http://sportsinfo.blogs.muhlenberg.edu/?p=1133' />
+<link rel="alternate" type="application/json+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F05%2F10%2Fsenior-profiles-mens-lacrosse%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F05%2F10%2Fsenior-profiles-mens-lacrosse%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=0A5F72B225B4A19705F51DF68F6C3C21');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-1133 single-format-standard admin-bar no-customize-support wp-embed-responsive single-author singular two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/09/senior-profiles-mens-tennis/" rel="prev"><span class="meta-nav">&larr;</span> Previous</a></span>
+						<span class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/11/senior-profiles-womens-lacrosse/" rel="next">Next <span class="meta-nav">&rarr;</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1133" class="post-1133 post type-post status-publish format-standard hentry category-mens-lacrosse">
+	<header class="entry-header">
+		<h1 class="entry-title">Senior Profiles: Men&#8217;s Lacrosse</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/" title="2:09 pm" rel="bookmark"><time class="entry-date" datetime="2012-05-10T14:09:49-04:00">May 10, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><em>With the spring sports season just about wrapped up, we will be taking a closer look at Muhlenberg’s senior student-athletes.</em></p>
+<p><em>We continue with men’s lacrosse. Seniors Alex Ardolino, Corey Aferiat, Charlie Pianko, Nick Rispoli, Jonathan Fritog, Jay Salasko and Andrew Disdier were honored during a ceremony before the season finale against Haverford.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/ardolinohs.jpg"><img class="alignleft size-full wp-image-1137" title="ardolinohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/ardolinohs.jpg" alt="" width="100" height="150" /></a>Alex Ardolino</strong><em></em></p>
+<p><strong>How big of an accomplishment is it for you that you rank in the top 10 in school history in points and goals? </strong>It is a nice category to be a part of. There are many good players in that category, and some of them are my friends.<strong></strong></p>
+<p><strong>What are your strengths as a player? </strong>I feel that my speed and my ability to use my off hand are the strongest parts of my game.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>Scoring the overtime goal to beat Haverford my sophomore year.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>The trip to Vancouver this summer; we had a great time.<strong></strong></p>
+<p><strong>What are your future plans? </strong>I will be working as a financial advisor in New York City.</p>
+<p><strong>What’s Corey Aferiat like off the field? </strong>There is so much you can say about Corey. He is one of the funniest people I know. His one-liners and voice impressions are great. His claim to fame is his classic joke, “So a horse walks into a bar, and the bartender says why the long face?” Corey is a great guy to hang out with and one of the smartest people I know. We have had some fun times. He is always joking around and making people laugh, and I am sure he will continue to do that at Yale next year.<strong></strong></p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/aferiaths.jpg"><img class="alignleft size-full wp-image-1138" title="aferiaths" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/aferiaths.jpg" alt="" width="100" height="150" /></a>Corey Aferiat</strong></p>
+<p><strong>What’s it like being one of the few guys on the team from south of the Mason-Dixon Line? </strong>It is nice to have a little geographic diversity on the team, and hopefully I add a little pseudo-southern character. However, it is really difficult being the only one on the team who can’t handle the cold weather practices. I have been outcasted for my wardrobe on numerous occasions, most notably for wearing my sweat suit to practice, even when it is in the 50s. I tell people it’s because I like to be comfortable, but they don’t seem to care. They just don’t understand the harsh transition from nice, warm Virginia weather to the freezing, arctic conditions we deal with here in the Lehigh Valley.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable Muhlenberg lacrosse memory was beating Gettysburg on our home field last year. To have everyone on the team show up like they did, leave it all out there and come out with a huge win was incredibly special.<strong></strong></p>
+<p><strong>What made you decide to major in political science and minor in public health? </strong>I had planned on majoring in political science when I got to college, but I didn’t know what area I was most interested in. It wasn’t until sophomore year when I figured out I would be best suited in American government and public policy. With regards to public health, I didn’t really have much of an idea about what public health was until I took a course in it as a sophomore. My mom had suggested I take the course, so I figured why not. I really enjoyed the class, and as they say, the rest is history.<strong></strong></p>
+<p><strong>What are your future plans? </strong>Next year I will be studying health policy and administration at Yale University. After two years of graduate school, I hope to find a job within the realm of hospital administration.</p>
+<p><strong>What kind of teammate is Alex Ardolino? </strong>Alex is an awesome guy to have out on the field and in the locker room. I admire him the most for his love of the game. It is clear that regardless of what is going on (winning streaks, losing streaks, bad practices, good practices) that he continues to love being a part of the game. When you watch him in practices and games, you can tell he experiences genuine satisfaction from just being around the sport. That kind of love and commitment for the game rubs off on his teammates, and it has certainly rubbed off on me. Despite the fact he has made me look inexcusably slow during sprints in practice for four years straight, I am definitely honored to have been his teammate. <strong></strong></p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/piankohs.jpg"><img class="alignleft size-full wp-image-1139" title="piankohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/piankohs.jpg" alt="" width="100" height="150" /></a>Charlie Pianko</strong></p>
+<p><strong>What’s something most people don’t know about you that they might find interesting? </strong>An interesting fact that most people don’t know is that my dad and Doug Rheiner’s dad were fraternity brothers at Gettysburg.</p>
+<p><strong>How have you improved as a player since coming to Muhlenberg? </strong>I would say I have improved every part of my game since coming to Muhlenberg. I think it is impossible not to when you go to practice every day with the amount of talent we have on this team. It forces you to get better.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable memory has to be beating Gettysburg last year. To beat a team that Muhlenberg had never beaten before was something special.<strong> </strong></p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>I think there is a high possibility I would get in serious trouble if I didn’t say when I met my girlfriend, so I’ll go with that.</p>
+<p><strong>What’s it like playing against your brother who plays for Dickinson? </strong>It is a fun time for my entire family except for the fact that my parents do not know who to root for. I just wish we were able to beat them one of the three years we played against each other, because I am sure I will be hearing about it for the rest of my life. <strong></strong></p>
+<p><strong>What are your future plans? </strong>I plan on getting a job in accounting and seeing where it goes from there. I would also like to coach youth lacrosse or Pop Warner football in the future.<strong></strong></p>
+<p><strong>What kind of person is Nick Rispoli? </strong>Nick is a great person. I have lived with him the last two years, and although he can be quiet at times, he is always funny and entertaining to be around.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/rispolihs.jpg"><img class="alignleft size-full wp-image-1140" title="rispolihs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/rispolihs.jpg" alt="" width="100" height="150" /></a>Nick Rispoli</strong></p>
+<p><strong>What are the keys to being a good faceoff man? How have you been so successful? </strong>Step to the right!! Facing off is just like any other position; it’s all about practice and becoming comfortable with what you’re doing. I’ve been lucky enough to have some great coaches along the way that really knew what they were talking about that have helped out. It’s also nice when you have other great faceoff men around you to push you every day in practice. Having great wing play has also been a tremendous help over the years. To be completely honest, I don’t know how I’ve been so successful. I pretty much just go out there and don’t think. I hum a little tune to myself and just try to have fun.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My favorite lacrosse memory has to be back in the high school state championship game my senior year, running down the field with Andrew Disdier on me and scoring a left-handed goal on him. But beating Gettysburg for the first time last season was my most memorable Muhlenberg lacrosse memory, by far. The atmosphere was outrageous. <strong></strong></p>
+<p><strong>We’ve heard you play a mean guitar; are you the next Eric Clapton? </strong>Oh, I can play a mean guitar; it’s really not fair. I’m more of a Bruce Springsteen fan myself; we’re actually in the middle of planning our summer tour dates now. <strong></strong></p>
+<p><strong>What made you decide to major in business administration? </strong>Well, I meant to sign up for theater, but I guess I filled out the wrong form that day. But seriously, I’ve always been interested in business, particularly marketing and advertising. After taking some business courses freshman year, I knew that was the field I was most interested in, so I decided to pursue it. <strong></strong></p>
+<p><strong>What are your future plans? </strong>Aside from going on tour with my guitar with Bruce, I plan to move to California and hang out all day in the sun since I spent the past four years in the rainy Lehigh Valley. In all seriousness, I’m not exactly sure what I plan on doing and am still investigating and exploring my options. I’m all ears if anyone has any offers.</p>
+<p><strong>What kind of teammate is Jonathan Fritog? </strong>Jonathan who? No, it’s been great being able to continue to play with Jonathan for another four years. I’ve known him for most of my life. He’s excellent at communication on and off the field and is willing to spend extra time with the players to help them improve and learn. He’s always trying to become better, but definitely knows how to have fun and can turn it on when he needs to. He also has a great lacrosse IQ (must be a Ridgewood thing).</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/fritoghs.jpg"><img class="alignleft size-full wp-image-1135" title="fritoghs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/fritoghs.jpg" alt="" width="100" height="150" /></a>Jonathan Fritog</strong></p>
+<p><strong>You’ve taken quite a few drumming classes at Muhlenberg; are you a rock star in waiting? </strong>I don’t think I’m a rock star in waiting, but since Nick Rispoli takes guitar lessons, and we both took a magic class together, we decided that if we are unable to find jobs after college we will stay in Ridgewood (yes, with our parents) and become street performers. All we need is a singer like Jay “Mad Dog” Salasko, and we can be an official band.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable Muhlenberg lacrosse memory is definitely going on the Vancouver trip over this past summer. Even though the entire team wasn’t with us, it was still my most favorite vacation that I have ever been on because it was with all my friends. That trip really gave all the guys a chance to simply kick back, relax and enjoy being in a different country with each other. Oh yeah, and we played lacrosse there too. Also, scoring against McDaniel this year was pretty cool since they were my first collegiate points.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>My best off-the-field memory from my time here is really all four years that I was able to spend here. From going from room to room in Walz hanging out with friends, then moving into Benfer with guys on the lacrosse team, then getting a house off campus and just being able to hang out with the people that have had such a great influence on my life in the past four years has really made this one of the greatest experiences of my life. I really owe it to all of the people that I have met and all of my friends that I have made here. I will truly miss this place and everyone that I have met. I will also miss beating Andrew Disdier in video games every day. I really have my parents to thank the most because they never stopped pushing me and believing in me to do my absolute best in whatever it was that I decided to do. And they never missed a single game in my time here at Muhlenberg, which means more to me then they will probably ever know. They truly are the best parents that any kid could ever ask for, and I am extremely grateful that they have acted as such a great support system to me throughout my life. Love you guys.<strong></strong></p>
+<p><strong>What are your future plans? </strong>Besides becoming a street performer with Nick Rispoli, I want to become a high school teacher and lacrosse coach. I am going to take a year off after college and then hopefully go to grad school to get my master’s degree.</p>
+<p><strong>What’s Charlie Pianko like off the field? </strong>Pianko is probably one of the nicest guys on the team. In my past four years here I cannot recall one time that I have ever heard him complain or not have a smile on his face. Charlie is just a happy-go-lucky guy who leads by example and is a hard worker.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/salaskohs.jpg"><img class="alignleft size-full wp-image-1136" title="salaskohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/salaskohs.jpg" alt="" width="100" height="150" /></a>Jay Salasko</strong></p>
+<p><strong>What would you say is the strongest part of your game? </strong>The strongest part of my game would have to be my ability to communicate on the field.</p>
+<p><strong>What made you decide to transfer to Muhlenberg after your freshman year? </strong>I came to Muhlenberg because it was a great opportunity to come to a great academic institution and join a great group of players who I had a chance to meet before I made my decision.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>I think our win against Gettysburg last year stands out the most. The emotion that we played with in that game fueled our victory, and it couldn’t have been a better feeling.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>It is hard to choose the best off-the-field memory from my time here, but if I were to choose one I can guarantee that it would be with my teammates. Although we spend every day together on the field, our off the field time together is how we grew as a team. That said, it’s impossible to choose just one moment.<strong></strong></p>
+<p><strong>Some of your drawings were in a recent exhibition on campus; have you always been an artist? </strong>I definitely have not always been an artist and still don’t believe that I’m much of one. But the few drawing classes that I have taken here definitely taught me a few things that have helped me graduate from drawing stick figures.</p>
+<p><strong>What are your future plans? </strong>After graduation I am hoping to find a graduate coaching position where I can further my schooling as well as get a jump start on a collegiate lacrosse coaching career.<strong></strong></p>
+<p><strong>What was it like getting to play three more years with your high school teammate Andrew Disdier? </strong>Playing with Andrew again was definitely a plus when I made my decision to come here. Andrew has been a great asset to the team in his four years here. He is a great guy to have in our locker room. He always helps to keep team morale up and keep those who are struggling motivated.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/disdierhs.jpg"><img class="alignleft size-full wp-image-1141" title="disdierhs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/disdierhs.jpg" alt="" width="100" height="150" /></a>Andrew Disdier</strong></p>
+<p><strong>Do you have any hidden or unusual talents? </strong>I can tie my shoelaces without using my hands, and I’m fluent in five languages. However, those talents are completely dwarfed by the arsenal of tricks Connor Winter has.</p>
+<p><strong>How frustrating has it been having to deal with so many injuries during your career? </strong>It is difficult to articulate the frustration. I will say that the recovery process has been much easier with the support from my family, teammates and coaches.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>This past summer’s trip to British Columbia was unforgettable. <strong></strong></p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>I’m a big basketball guy, so all the pickup games that we played in the fall were some great times. I know that Mike Carpetto and Jack Reilly will keep the tradition going next year. Beating Jon Fritog in “Around the World” in a single turn is something I won’t forget either.</p>
+<p><strong>How was the experience interning with Merrill Lynch? </strong>I really perfected my envelope addressing and database updating skills at Merrill Lynch. In all seriousness, it was a great experience, because I was able to apply my academic ability to the professional workplace. The fundamental knowledge that I absorbed there really put me a step ahead for the following semester. I wish AJ “The Bond Vigilante” Diaz and Ian “The Big Short” de Ruiter the best of luck this coming summer at Merrill Lynch.</p>
+<p><strong>What are your future plans? </strong>To start, I’m going to get my knee fixed. Professionally, I have accepted a bank examiner position with the Office of the Comptroller of the Currency, an entity of the Department of the Treasury.</p>
+<p><strong>What was it like getting to play three more years with your high school teammate Jay Salasko? </strong>It has been a tremendous opportunity to play with Jay “Mad Dog” Salasko for an extra three years. He has always been a ferocious competitor, and he has a canny knowledge of the game. He is also one of the toughest players I know. If he did not have the back of a 55-year-old arthritic man and had not gotten sniped in the spleen by Corey’s rifle of a lefty bounce shot, I know his career would have looked a lot different.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a> by <a href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/">sportsinfo</a>. Bookmark the <a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/" title="Permalink to Senior Profiles: Men&#8217;s Lacrosse" rel="bookmark">permalink</a>.
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-1133 -->
+
+						<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F05%2F10%2Fsenior-profiles-mens-lacrosse%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

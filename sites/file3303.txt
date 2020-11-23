@@ -1,0 +1,518 @@
+http://cameronford.blogs.muhlenberg.edu/
+28
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en-US">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<title>Cameron Ford&#039;s e-Portfolio</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Cameron Ford&#039;s e-Portfolio &raquo; Feed" href="http://cameronford.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cameron Ford&#039;s e-Portfolio &raquo; Comments Feed" href="http://cameronford.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/cameronford.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/cameronford.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Archivo%3A400%2C400i%2C500%2C500i%2C700%2C700i&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-fontawesome-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/fonts/font-awesome/font-awesome.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-style-css'  href='http://cameronford.blogs.muhlenberg.edu/wp-content/themes/sullivan/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/jquery.flexslider.js?ver=1'></script>
+<link rel='https://api.w.org/' href='http://cameronford.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cameronford.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cameronford.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="canonical" href="http://cameronford.blogs.muhlenberg.edu/" />
+<link rel='shortlink' href='http://cameronford.blogs.muhlenberg.edu/' />
+<link rel="alternate" type="application/json+oembed" href="http://cameronford.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcameronford.blogs.muhlenberg.edu%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://cameronford.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcameronford.blogs.muhlenberg.edu%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://cameronford.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://cameronford.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//cameronford.blogs.muhlenberg.edu/?wordfence_lh=1&hid=EC8CBFD765A0A0A700175C3DC8CB2AD5');
+</script>		<script>jQuery( 'html' ).removeClass( 'no-js' ).addClass( 'js' );</script>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	
+	</head>
+
+	<body class="home-page bp-legacy home page-template page-template-template-cover page-template-template-cover-php page page-id-545 admin-bar no-customize-support missing-post-thumbnail missing-manual-excerpt template-cover no-js">
+
+		
+		<a class="skip-link faux-button" href="#site-content">Skip to the content</a>
+
+		<div class="mobile-menu-wrapper">
+
+			<div class="mobile-search">
+
+				<form role="search" method="get" class="mobile-search-form" action="http://cameronford.blogs.muhlenberg.edu/">
+					<span class="screen-reader-text">Search for:</span>
+					<label for="mobile-search-field"></label>
+					<input type="search" id="mobile-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+					<div class="cancel-search"></div>
+				</form>
+
+				<div class="compact-search-results ajax-search-results"></div><!-- .compact-search-results -->
+
+			</div><!-- .mobile-search -->
+
+			<ul class="mobile-menu">
+				<li class="page_item page-item-545 current_page_item"><a href="http://cameronford.blogs.muhlenberg.edu/" aria-current="page">About Me</a></li>
+<li class="page_item page-item-582"><a href="http://cameronford.blogs.muhlenberg.edu/business-analysis-skills/">Business Analysis Skills</a></li>
+<li class="page_item page-item-713"><a href="http://cameronford.blogs.muhlenberg.edu/global-perspective/">Global Perspective</a></li>
+<li class="page_item page-item-698"><a href="http://cameronford.blogs.muhlenberg.edu/quantitative-and-research-skills/">Quantitative and Research Skills</a></li>
+<li class="page_item page-item-646"><a href="http://cameronford.blogs.muhlenberg.edu/sample-page-2/">Teamwork Skills</a></li>
+<li class="page_item page-item-282"><a href="http://cameronford.blogs.muhlenberg.edu/goals-predictions/">Communication Skills</a></li>
+<li class="page_item page-item-284"><a href="http://cameronford.blogs.muhlenberg.edu/research-progress/">Work Experience</a></li>
+<li class="page_item page-item-69"><a href="http://cameronford.blogs.muhlenberg.edu/resume-2/">Resume</a></li>
+<li class="page_item page-item-366"><a href="http://cameronford.blogs.muhlenberg.edu/career-plan/">Career Plan</a></li>
+			</ul>
+
+			
+		</div><!-- .mobile-menu-wrapper -->
+
+		<div class="body-inner">
+
+			<div class="mobile-nav-content-overlay dark-overlay"></div>
+
+			
+			<header class="site-header">
+
+				<div class="nav-toggle">
+
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+
+				</div>
+
+				<div class="header-inner section-inner">
+
+					
+		<div class="header-search">
+
+			<form role="search" method="get" class="header-search-form" action="http://cameronford.blogs.muhlenberg.edu/">
+				<span class="screen-reader-text">Search for:</span>
+				<label for="header-search-field"></label>
+				<input type="search" id="header-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+
+				<input type="hidden" name="post_type" value="post"><input type="hidden" name="post_type" value="page">
+			</form>
+
+			<div class="compact-search-results ajax-search-results modal arrow-left"></div>
+
+		</div><!-- .header-search -->
+
+
+		
+					<div class="header-titles">
+
+						
+							<h1 class="site-title"><a href="http://cameronford.blogs.muhlenberg.edu/" class="site-name">Cameron Ford&#039;s e-Portfolio</a></h1>
+
+						
+					</div><!-- .header-titles -->
+
+					
+				</div><!-- .header-inner -->
+
+				<ul class="site-nav">
+					<li class="page_item page-item-545 current_page_item"><a href="http://cameronford.blogs.muhlenberg.edu/" aria-current="page">About Me</a></li>
+<li class="page_item page-item-582"><a href="http://cameronford.blogs.muhlenberg.edu/business-analysis-skills/">Business Analysis Skills</a></li>
+<li class="page_item page-item-713"><a href="http://cameronford.blogs.muhlenberg.edu/global-perspective/">Global Perspective</a></li>
+<li class="page_item page-item-698"><a href="http://cameronford.blogs.muhlenberg.edu/quantitative-and-research-skills/">Quantitative and Research Skills</a></li>
+<li class="page_item page-item-646"><a href="http://cameronford.blogs.muhlenberg.edu/sample-page-2/">Teamwork Skills</a></li>
+<li class="page_item page-item-282"><a href="http://cameronford.blogs.muhlenberg.edu/goals-predictions/">Communication Skills</a></li>
+<li class="page_item page-item-284"><a href="http://cameronford.blogs.muhlenberg.edu/research-progress/">Work Experience</a></li>
+<li class="page_item page-item-69"><a href="http://cameronford.blogs.muhlenberg.edu/resume-2/">Resume</a></li>
+<li class="page_item page-item-366"><a href="http://cameronford.blogs.muhlenberg.edu/career-plan/">Career Plan</a></li>
+				</ul>
+
+			</header><!-- .site-header -->
+
+<main id="site-content">
+
+	
+			<article class="post-545 page type-page status-publish hentry missing-thumbnail" id="post-545">
+
+				
+				<div class="page-hero-wrapper">
+
+					<div class="page-hero with-content dark-overlay bg-image bg-attach">
+
+						<header class="section-inner thin page-header text-center fade-block">
+
+							<h1 class="page-title">About Me</h1>
+							
+						</header><!-- .post-header -->
+
+						<div class="to-content"></div>
+
+					</div><!-- .page-hero -->
+
+				</div><!-- .page-hero-wrapper -->
+
+				<div id="content-element" class="entry-content page-content section-inner thin">
+
+					<p><img class="alignleft wp-image-677 " src="http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-scaled.jpeg" alt="" width="178" height="238" srcset="http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-scaled.jpeg 1920w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-225x300.jpeg 225w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-768x1024.jpeg 768w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-1152x1536.jpeg 1152w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-1536x2048.jpeg 1536w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-870x1160.jpeg 870w, http://cameronford.blogs.muhlenberg.edu/files/2020/02/E0821857-F9D7-439D-BB2A-BBA28E17984F_1_201_a-1860x2480.jpeg 1860w" sizes="(max-width: 178px) 100vw, 178px" /></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Hello, my name is Cameron Ford and I am currently a Senior at Muhlenberg College, with an expected graduation date of May 2020. I am a Business Administration major with a </span>concentration in Marketing, as well as a Philosophy minor. At Muhlenberg I am a member of the Track and Field Team, to which I was named a captain this semester by my teammates.  I am also a member of the Alpha  Tau Omega Fraternity, the Black Student Association, Comunidad Latinx, as well as the Emerging Leaders Program. My time at Muhlenberg had taught me innumerable lessons and has shaped me into the person I am today.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="padding-left: 210px"><span style="font-size: large"><strong>Introduction to my e-Portfolio</strong></span></p>
+<p style="text-align: left"><span style="font-weight: 400">This e-portfolio is a way for me to offer a quick look at my skills that I have developed while at Muhlenberg College through assignments and other extra curricular activities I have completed.  Throughout this e-Portfolio I will show how the skills I have learned in can be applied into the real world. </span></p>
+<p style="text-align: left;padding-left: 210px"><span style="font-size: large"><strong>Contact Information</strong></span></p>
+<p style="text-align: left">email: cameronford@muhlenberg.edu</p>
+<p>cellphone: 703-7894046</p>
+<p style="text-align: left">
+					
+				</div><!-- .entry-content -->
+
+				
+			</article>
+
+			
+</main><!-- #site-content -->
+
+			<footer id="site-footer" class="bg-black">
+
+				
+				<div class="section-inner credits">
+
+					<p>
+						<span>&copy; 2020 <a href="http://cameronford.blogs.muhlenberg.edu/" class="site-name">Cameron Ford&#039;s e-Portfolio</a></span>
+												<span>Theme by <a href="https://www.andersnoren.se">Anders Norén</a></span>
+					</p>
+
+					
+				</div><!-- .section-inner.credits -->
+
+			</footer><!-- .footer -->
+
+		</div><!-- .body-inner -->
+		
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sullivan_ajax_search = {"ajaxurl":"http:\/\/cameronford.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","query_vars":"[]"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://cameronford.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://cameronford.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fcameronford.blogs.muhlenberg.edu%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://cameronford.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+	</body>
+</html>

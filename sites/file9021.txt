@@ -1,0 +1,551 @@
+http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/
+30
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Empowering the Next Generation | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Empowering the Next Generation Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Writer&#8217;s Blocks' href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/29/writers-blocks/' />
+<link rel='next' title='Super Bowl Preview' href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/01/super-bowl-preview-2/' />
+
+<link rel="canonical" href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/" />
+<link rel='shortlink' href='http://sportsinfo.blogs.muhlenberg.edu/?p=1657' />
+<link rel="alternate" type="application/json+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2013%2F01%2F31%2Fempowering-the-next-generation%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2013%2F01%2F31%2Fempowering-the-next-generation%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=C13BE04AE40B6FE3BC9C3D7CB17479E9');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-1657 single-format-standard admin-bar no-customize-support wp-embed-responsive single-author singular two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/29/writers-blocks/" rel="prev"><span class="meta-nav">&larr;</span> Previous</a></span>
+						<span class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/02/01/super-bowl-preview-2/" rel="next">Next <span class="meta-nav">&rarr;</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1657" class="post-1657 post type-post status-publish format-standard hentry category-muhlenberg-college-athletics">
+	<header class="entry-header">
+		<h1 class="entry-title">Empowering the Next Generation</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/" title="1:01 pm" rel="bookmark"><time class="entry-date" datetime="2013-01-31T13:01:10-04:00">January 31, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/barberhs.jpg"><img class="alignright size-full wp-image-1658" title="Devon Barber" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/barberhs.jpg" alt="" width="100" height="150" /></a>Devon Barber, a senior field hockey and softball player at Muhlenberg, writes about a special event on campus last weekend.</em></p>
+<p>Female coaches, mentors, and student-athletes from the Centennial Conference arrived at Muhlenberg this past Friday night for the <strong>Snell-Shillingford Coaching Symposium</strong>. The symposium is designed to educate young female athletes on the history of women in sports, acknowledge the importance of their accomplishments thus far, and empower them to continue their work professionally, whether that entails becoming a coach, administrator, or simply an advocate for the continuation of women’s athletics in our own communities.</p>
+<p>Most of the athletes stayed in a hotel close by, but Alexandra Franck, Alex Bellini, Katy Mitton and I had the luxury of strolling into the first night with confidence in knowing that “Haas” is not an indication of a person excessively exhaling, and “Ettinger” [a building on campus] and “Eddinger” [head field hockey coach Megan] are indeed of different substance. After congregating for a quick introductory meal, we moved to the Friedman Family Conference room where the presentations began.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_logo.jpg"><img class="aligncenter size-full wp-image-1659" title="symposium logo" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_logo.jpg" alt="" width="600" height="283" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_logo.jpg 600w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_logo-300x141.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_logo-500x235.jpg 500w" sizes="(max-width: 600px) 100vw, 600px" /></a></p>
+<p>Here’s a breakdown of some of the presentations we experienced this weekend:</p>
+<p>“<strong>Many Hats of Coaching</strong>:” Communicated by Muhlenberg’s own Alexa Keckler (head volleyball coach), athletes were educated on the different roles they will play if they are to become coaches, including specific advice associated with each role. The purpose was not to scare female athletes away from the profession, but rather prepare them for the many positions they will be asked to fill.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_1.jpg"><img class="alignright size-medium wp-image-1660" title="symposium talk 1" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_1-259x300.jpg" alt="" width="259" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_1-259x300.jpg 259w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_1.jpg 350w" sizes="(max-width: 259px) 100vw, 259px" /></a>Did you know that female coaches are not only coaches, but they’re motivators, counselors, referees, artists, drill sergeants, mentors, P.R. extraordinaires, social directors, travel agents, lawyers, managers, fundraisers, jesters and humans all at the same time!? Whose head is spinning?</p>
+<p><strong>“Understanding Title IX and Its History:” </strong>This presentation was given by Amy Wilson, an individual who has worked closely with nationally recognized Title IX expert Dr. Christine Grant on gender equity issues in intercollegiate sport. Title IX, as most people know, is a law that was passed in 1972 by President Nixon, which states that “<strong><em>no person in the United States, shall on the basis of sex, be excluded from participation in, be denied the benefits of, or be subjected to discrimination under any educational program or activity receiving federal financial assistance</em></strong>.”</p>
+<p>Although seemingly straightforward, Wilson reminds us that there are many little-known socio-historical factors that led up to the passage of this law and the history of its enforcement was a long, rollercoaster of a process. Yet today, Title IX is recognized as the source that changed the history of sports forever and allowed women to be relatively on the same playing field as men in athletics (no pun intended).</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_2.jpg"><img class="alignleft size-medium wp-image-1661" title="symposium talk 2" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_2-300x283.jpg" alt="" width="300" height="283" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_2-300x283.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_2-317x300.jpg 317w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_2.jpg 400w" sizes="(max-width: 300px) 100vw, 300px" /></a>“Developing Your Coaching Philosophy:”</strong> As one of the last we experienced, this presentation allowed us to delve into our own values in order to determine what kind of coaches, administrators, mentors or advocates we are/may be in the future. The first step in developing a coaching philosophy, we learned, is to get to know <em>ourselves</em>: what rules do you live by? What can you control and what can’t you control? What coaches have shaped you and how?</p>
+<p>Next, we learned that we should take a look into our <em>objectives</em>: why do you want to coach? What makes a good coach? What is your definition of success? Lastly, we had to get to know our <em>context</em>: What level do you want to coach? What position do you want to hold? What are the aims and philosophies of your school/conference organization? With the answers to these questions, student-athletes were able to have a better understanding of their own hopes and beliefs, which in turn, facilitates the development of a solid, personal coaching philosophy.</p>
+<p>All in all, the experience was one that not only informed me about the steps it takes in potentially becoming a great coach, but also the steps it takes into becoming a better athlete and person. It was great to move off the field and meet people from our conference that may be opponents during the season, but are fun and interesting athletes who are strikingly similar to me (emphasis on the fun, if that’s the case).</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_3.jpg"><img class="alignright size-medium wp-image-1662" title="symposium talk 3" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_3-300x182.jpg" alt="" width="300" height="182" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_3-300x182.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/01/snell13_3.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></a>I greatly appreciated the coaches and mentors for taking the time out to inform us/entertain us/cater to our cuisine-based needs throughout the entire weekend. I think Alexandra, Alex and Katy would agree with me in promoting this symposium to Muhlenberg female athletes for next year. If sports are a big part of your life, like mine, the benefits you can receive from this symposium are beyond what you could even imagine.</p>
+<p>Think about it! If knowledge is power and influence is a snowball, this symposium can pump out a pretty awesome snow-based super-crew of talented, and well-informed, female coaches. But I digress &#8230;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://sportsinfo.blogs.muhlenberg.edu/category/muhlenberg-college-athletics/" rel="category tag">Muhlenberg College athletics</a> by <a href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/">sportsinfo</a>. Bookmark the <a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/" title="Permalink to Empowering the Next Generation" rel="bookmark">permalink</a>.
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-1657 -->
+
+						<div id="comments">
+	
+	
+			<h2 id="comments-title">
+			4 thoughts on &ldquo;<span>Empowering the Next Generation</span>&rdquo;		</h2>
+
+		
+		<ol class="commentlist">
+					<li class="comment even thread-even depth-1" id="li-comment-8944">
+		<article id="comment-8944" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/6e7886c5096386793b5eda3fcec294ca?s=68&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D68&amp;r=G' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">MULES2013</span> on <a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/#comment-8944"><time datetime="2013-01-31T15:25:12-04:00">January 31, 2013 at 3:25 pm</time></a> <span class="says">said:</span>
+										</div><!-- .comment-author .vcard -->
+
+					
+					
+				</footer>
+
+				<div class="comment-content"><p>Awesome piece Dev!!!</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8946">
+		<article id="comment-8946" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/a34b01e505a66bb7d6f90578a0714bef?s=68&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D68&amp;r=G' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn"><a href='http://Mulenberg' rel='external nofollow ugc' class='url'>Aunt Di</a></span> on <a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/#comment-8946"><time datetime="2013-01-31T17:02:07-04:00">January 31, 2013 at 5:02 pm</time></a> <span class="says">said:</span>
+										</div><!-- .comment-author .vcard -->
+
+					
+					
+				</footer>
+
+				<div class="comment-content"><p>WOW&#8230;how inspiring&#8230;I could actually hear your voice as I was reading&#8230;here&#8217;s hoping you will be able to coach Marley in the future&#8230;your are all grown up&#8230;brings a tear to my eye&#8230;LOVE YOU</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-8973">
+		<article id="comment-8973" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/86efa8d8466c8c7256d445e9642e8ba7?s=68&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D68&amp;r=G' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Ann I</span> on <a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/#comment-8973"><time datetime="2013-02-04T21:35:57-04:00">February 4, 2013 at 9:35 pm</time></a> <span class="says">said:</span>
+										</div><!-- .comment-author .vcard -->
+
+					
+					
+				</footer>
+
+				<div class="comment-content"><p>Great job Dev!  You would make a great coach. Luv u</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-8980">
+		<article id="comment-8980" class="comment">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<img alt='' src='http://0.gravatar.com/avatar/81006ccc62d925cc9c1aec7fb67447ed?s=68&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D68&amp;r=G' class='avatar avatar-68 photo' height='68' width='68' /><span class="fn">Sue B</span> on <a href="http://sportsinfo.blogs.muhlenberg.edu/2013/01/31/empowering-the-next-generation/#comment-8980"><time datetime="2013-02-05T23:51:37-04:00">February 5, 2013 at 11:51 pm</time></a> <span class="says">said:</span>
+										</div><!-- .comment-author .vcard -->
+
+					
+					
+				</footer>
+
+				<div class="comment-content"><p>Sounds like you were informed and inspired!  Great recap &#8230;&#8230;&#8230;. Good words of wisdom for the future coach in you!</p>
+</div>
+
+				<div class="reply">
+									</div><!-- .reply -->
+			</article><!-- #comment-## -->
+
+				</li><!-- #comment-## -->
+		</ol>
+
+		
+				<p class="nocomments">Comments are closed.</p>
+		
+	
+	
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2013%2F01%2F31%2Fempowering-the-next-generation%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

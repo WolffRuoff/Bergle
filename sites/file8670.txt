@@ -1,0 +1,861 @@
+http://sportsinfo.blogs.muhlenberg.edu/page/23/
+85
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Sports Information Blog | Just another Muhlenberg College Blogs site | Page 23	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=887BB6977D233EEF0120B8DA41BFFF63');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support wp-embed-responsive paged-23 single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/24/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/22/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-594" class="post-594 post type-post status-publish format-standard hentry category-football">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/13/senior-profiles-football-part-1-of-4/" rel="bookmark">Senior Profiles: Football, Part 1 of 4</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/13/senior-profiles-football-part-1-of-4/" title="5:10 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-13T17:10:36-04:00">December 13, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The final round of senior profiles for the fall athletes begins with five of the 19 football seniors.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/bartonhs.jpg"><img class="alignleft size-full wp-image-595" title="Scott Barton" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/bartonhs.jpg" alt="" width="100" height="150" /></a>Scott Barton</strong></p>
+<p><strong>How rewarding has it been to have earned a full-time starting spot during your senior season?</strong> It has been very rewarding to say the least. I’ve seen a lot of good lineman play during my four years here. I feel like I’ve paid my dues and put myself in a position to play wherever the team needs me.</p>
+<p><strong>What’s your most memorable off-the-field accomplishment from your time at Muhlenberg?</strong> Having the opportunity to intern at Northwestern Mutual this past summer. It allowed me to see what an agent does at a risk management company on a day-to-day basis. I met a lot of great people, and it definitely opened my eyes to a potential career choice.</p>
+<p><strong>What are your future plans? </strong>My ultimate goal is to be a financial advisor for a big corporation. In the meantime, I’d like to be a financial representative at a company that can offer people comprehensive financial services. I do, however, sometimes joke about pooling my money together with Gregg Mercogliano and just trading stocks at our computers all day.</p>
+<p><strong>What’s it been like playing with MJ Rus for the past four years? </strong>MJ’s been a great guy to have on the team. He’s someone who leads by example with his play and work ethic. I consider him an honorary offensive lineman because he never forgets to bring us maple syrup from his home state of Vermont.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/rushs.jpg"><img class="alignleft size-full wp-image-88" title="MJ Rus" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/rushs.jpg" alt="" width="100" height="150" /></a>MJ Rus</strong></p>
+<p><strong>Fullbacks generally don’t get a lot of fame blocking the way for the running backs; what’s it like being an unsung hero?</strong> In football, it takes all 11 guys to execute their assignments to be successful on any given play, and just one person missing an assignment poses a high possibility of ruining the whole play. So although the fullback may not get a lot of recognition for a running back’s outstanding day, neither do the other guys on the field. As long as we’re coming out with wins I’ve got no problem trying to block the way for TD and Merk onto the front page of the papers.</p>
+<p><strong>What’s your most memorable off-the-field accomplishment from your time at Muhlenberg?</strong> My most memorable off-the-field accomplishment is introducing my teammates to real maple syrup. It’s truly a life-changing experience, and anyone who I have yet to convert to Vermont maple syrup should invite me to brunch on Sunday mornings so you never have to let Aunt Jemima ruin your breakfast again. </p>
+<p><strong>What are your future plans?</strong> I plan on buying my own island in the Whitsundays off the coast of Australia.</p>
+<p><strong>What kind of teammate is Scott Barton? </strong>It’s been a pleasure having Barton as a teammate. Seemingly always in a good mood and able to get along with anybody, … he seems to always be the first one to “resolve” the offense vs. defense scuffles when tensions run high during preseason practice. Truly a great person with a fun and sincere personality, I couldn’t ask for a better teammate to be with for four years of Mule football.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/myershs.jpg"><img class="alignleft size-full wp-image-596" title="Justin Myers" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/myershs.jpg" alt="" width="100" height="150" /></a>Justin Myers</strong></p>
+<p><strong>What is the best part about being a quarterback? </strong>The best part is being able to have the ball in your hands on every play. The mental aspect of it is great, too. Having to understand where to go with the ball based on what the defense is doing and understanding the down and distance add a whole other dimension to the game.</p>
+<p><strong>How have you improved since your freshman year? </strong>I think my accuracy and understanding of the game have been the areas I’ve improved in the most. Coming in from high school, I was convinced almost any throw had to be thrown with as much velocity as I had. This led me to become incapable of completing the easiest 2-yard slide ball, which annoyed just about every fullback we had. I hope by now I’ve learned to have some touch on my throws.</p>
+<p><strong>What are your future plans? </strong>I hope to travel. Studying abroad [in Australia] opened my eyes to what is out there, and I want to see as much as I can as soon as I can. A job somewhere in there would also be welcomed as well.</p>
+<p><strong>What kind of teammate is Sean Mulligan?</strong> Mulligan is a great guy to have on the team. He’s had some tough injuries in the past but still comes to work every day. You never hear him complain, and he catches whatever you throw at him. He’s someone who is always in the weight room and works hard to get better every day.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/mulliganhs.jpg"><img class="alignleft size-full wp-image-597" title="Sean Mulligan" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/mulliganhs.jpg" alt="" width="100" height="150" /></a>Sean Mulligan</strong></p>
+<p><strong>How frustrating has it been fighting through injuries for a good portion of your career? </strong>It has been incredibly frustrating fighting through injuries for almost half of my career. In the span of about a year I had to deal with two torn ACLs and three knee surgeries. These injuries have definitely set back my progress both on the field and in the weight room. It would have been great to never have had to deal with these setbacks, but I also think that they have made me a stronger person mentally. I believe that there are really no obstacles I cannot overcome.</p>
+<p><strong>What was it like getting to play a season with your brother? </strong>I see my brother as a role model in my life. Getting to play a season with him was very cool. It was especially nice having him around to ease my transition into college. Most freshmen start to feel a little homesick during the first few days of football camp, but I was fortunate enough to never feel that way because I had my brother out on the field with me.</p>
+<p><strong>What are your future plans? </strong>I plan on working in New York City or New Jersey for an accounting or finance company. At this point I am still unsure as to which of my fields of study I will end up pursuing a career in.</p>
+<p><strong>What’s it been like playing with Jesse Long? </strong>It has been a great experience playing with Jesse for the past four years. Jesse is a great guy and one of my closest friends on the team. Jesse is kind of a quiet guy, but having had the chance to live with him and really get to know him over the years, I’ve realized that he’s actually pretty hysterical. I can really relate to Jesse because he has also been plagued by many of the same injuries that I have throughout his football career. It’s nice to see that he’s finally healthy this year. These past four years have been a lot of fun.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/longjessehs.jpg"><img class="alignleft size-full wp-image-598" title="Jesse Long" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/longjessehs.jpg" alt="" width="100" height="150" /></a>Jesse Long</strong></p>
+<p><strong>How have you improved since your freshman year? </strong>My strength and my mental toughness. After facing so many injuries and missing an entire season last year, it has made it easier for me to not sweat the small things and worry about every little mistake I make.</p>
+<p><strong>What’s the most lasting memory from your football career?</strong> The 2008 season and winning the conference my first year here. It was one of the greatest teams I’ve ever been a part of.</p>
+<p><strong>What are your future plans? </strong>I plan to attend law school, preferably somewhere warm, and become a contract lawyer.</p>
+<p><strong>How is Justin Myers as a quarterback and teammate? </strong>Justin Myers is a great teammate and quarterback. It is always fun going to meetings and having Justin telling stories or making jokes. He also is a great player on the field, and I have enjoyed playing with him for four years. He’s also a great hangman player; he probably knows every movie ever made.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/football/" rel="category tag">football</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-594 -->
+
+				
+					
+	<article id="post-587" class="post-587 post type-post status-publish format-standard hentry category-muhlenberg-college-athletics">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/12/dissecting-the-move-to-a-d/" rel="bookmark">Dissecting the Move to A.D.</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/12/dissecting-the-move-to-a-d/" title="1:50 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-12T13:50:53-04:00">December 12, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Corey Goff was introduced as Muhlenberg&#8217;s next athletic director this morning. Here, he discusses the unexpected path he took to that position.</em></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/dissected_frog.jpg"><img class="alignright size-full wp-image-588" title="dissected frog" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/dissected_frog.jpg" alt="" width="151" height="126" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/dissected_frog.jpg 151w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/dissected_frog-150x126.jpg 150w" sizes="(max-width: 151px) 100vw, 151px" /></a>Twelve years ago I was dissecting frogs with middle school students, today I am being named the next Director of Athletics at Muhlenberg College?</p>
+<p>At the time I was teaching biology while coaching football and baseball at Wyoming Seminary. One of our senior football players, Clem Gover, was already on his way to Muhlenberg when I agreed to join Mike Donnelly&#8217;s staff as an assistant football coach. I remember thinking Clem would probably spend more time at Muhlenberg than I would.</p>
+<div id="attachment_589" style="width: 360px" class="wp-caption alignleft"><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/goff_jones.jpg"><img aria-describedby="caption-attachment-589" class="size-full wp-image-589 " title="Corey Goff with Justin Jones" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/goff_jones.jpg" alt="" width="350" height="339" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/goff_jones.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/goff_jones-300x290.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/goff_jones-309x300.jpg 309w" sizes="(max-width: 350px) 100vw, 350px" /></a><p id="caption-attachment-589" class="wp-caption-text">Corey Goff with quarterback Justin Jones in 2001. In 2002, with Goff serving as offensive coordinator, Jones was the Centennial Conference player of the year.</p></div>
+<p>My stop in Allentown would be brief because I was on my way up the coaching ladder quickly. Lauren and I lived in Philadelphia for the first two years of our marriage in part because I would not be here long enough to justify moving to Allentown. Muhlenberg would just be another line on my resume, or so I thought &#8230;</p>
+<p>In recent years, when recruits ask me if I will remain at Muhlenberg for their entire career, I can’t help but think about Clem Gover.</p>
+<p>I usually make light of the question by saying “if Stanford or Notre Dame were to call and offer me a job I guess I would have to listen.” I go on to explain how rewarding it is to work in a community that recognizes and values the positive role athletics can play in the small college experience. I reference the success several of our teams have had recently on the national stage and share my belief that each of our teams can experience that level of achievement athletically.</p>
+<p>I look back now and realize how lucky we (my family and I) are that opportunity didn’t knock too loudly during those times when I thought the grass might have been greener &#8230;</p>
+<p><em>After graduating from Muhlenberg in 2004, Clem Gover served our nation as a Captain in the United States Army and has since become a very successful financial advisor for Wells Fargo in Wilkes-Barre, Pa. Coincidentally, he is married to a college classmate of mine.</em></p>
+<p>Go Mules!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/muhlenberg-college-athletics/" rel="category tag">Muhlenberg College athletics</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-587 -->
+
+				
+					
+	<article id="post-581" class="post-581 post type-post status-publish format-standard hentry category-field-hockey">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/09/senior-profiles-field-hockey/" rel="bookmark">Senior Profiles: Field Hockey</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/09/senior-profiles-field-hockey/" title="4:18 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-09T16:18:10-04:00">December 9, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>With the semester winding down and finals just around the corner, we start our final round of senior profiles from the fall sports. Today, field hockey, and next week, football.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/10/deangelisbhs.jpg"><img class="alignleft size-full wp-image-328" title="Brittany DeAngelis" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/10/deangelisbhs.jpg" alt="" width="100" height="150" /></a>Brittany DeAngelis</strong></p>
+<p><strong>What’s the most common misconception about twins? </strong>Although many people assume that being twins must mean that you are exactly the same, I think that Courtney and I really challenge the stereotype. Besides the obvious height difference (we are four inches apart, although Courtney will never concede to that), Courtney and I have very distinct personalities and different interests. Courtney and I are much more different than we are similar, and I think people quickly learn how very different we are after getting to know us. <strong></strong></p>
+<p><strong>You’re the school’s all-time leader in defensive saves.</strong> <strong>What’s been the key to making all of your big stops?</strong> While I can’t give away all of my secrets, I think that the biggest part of making the stops is having this overwhelming desire to not want to see that ball get past the goal line. I hate the sound of the ball hitting the back of the cage, so I really try to do anything that I can to make sure that doesn’t happen.</p>
+<p><strong>What are your future plans? </strong>I hope to become involved in either marketing or event planning in the future. I spent my summer interning at Rider University and was responsible for coordinating and managing events, and I really enjoyed my time there. I look forward to balancing my career with having a family, and hopefully I will still have time for some field hockey in my old age.</p>
+<p><strong>What’s it like playing on defense with Shelby Smith?</strong> Shelby has a great stick and consistently makes big plays for us in the backfield. Shelby and I have grown very comfortable with one another on the field, and I never question her ability to shut down the offense and come up with the ball. Overall, I think that Shelby is an excellent field hockey player, and I couldn’t think of a better partner to have with me on defense.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/deangelischs.jpg"><img class="alignleft size-full wp-image-23" title="Courtney DeAngelis" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/deangelischs.jpg" alt="" width="100" height="150" /></a>Courtney DeAngelis</strong></p>
+<p><strong>How would you describe yourself as a player? </strong>I think the best word to describe me is “scrappy.” I hustle to the ball whether it’s a game or practice. I’m especially aggressive in the circle, and my approach when I play is that a goal is a goal, it doesn’t matter if it’s pretty, ugly or just plain lucky.</p>
+<p><strong>What off-the-field accomplishment are you most proud of? </strong>I was recently published in a literary arts journal. I submitted a piece I wrote my sophomore year in a nonfiction writing class, and the editor worked with me to make it less of an academic piece and more of a memoir. I thought it was incredibly kind of her to take the time to work with me and make it stronger, and it was encouraging to hear that others liked my work. Knowing that people outside of Muhlenberg will read my story is exciting.</p>
+<p><strong>What are your future plans? </strong>I’m currently applying to graduate schools in hopes of obtaining a doctorate degree in psychology. I’d like to do clinical work, but haven’t decided if I want to work with children or adults. It’s cliché to say that I love helping people, and that’s why I want to enter the field, but I’ve always been a good listener and can’t see myself doing anything else. Ideally, I’d like to open up my own private practice one day. My major and minor have further inspired me to write a self-help book too. <strong></strong></p>
+<p><strong>What’s Jillian Katz like off the field? </strong>Jill is one of my roommates, so there’s a lot that I could say here, but I’ll be kind… All kidding aside, she’s one of my best friends here at Muhlenberg, and I’m so happy I was able to meet her through field hockey. Jill is funny and energetic, and despite her small size, she has a big personality. Jill is a wonderful friend who is always there to listen to me, and she supports and encourages me both on and off the field. <strong></strong></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/katzhs.jpg"><img class="alignleft size-full wp-image-582" title="Jillian Katz" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/katzhs.jpg" alt="" width="100" height="150" /></a>Jillian Katz</strong></p>
+<p><strong>What’s it mean to you to be a captain? </strong>Having the title of team captain is a privilege, and I am honored to provide leadership for the team. To me, being a captain means that you lead by example both on and off the field. It means that you motivate and try to encourage positive thinking. I try my best to be there for all of my teammates, especially when the going gets tough.</p>
+<p><strong>What off-the-field accomplishment are you most proud of? </strong>An off-the-field accomplishment that I am most proud of is taking the leap to study abroad in Florence. Four months is a long time to be in a foreign country, but I survived! I am proud of the way I went so far out of my comfort zone and learned how to truly do things on my own thousands of miles away from home. <strong></strong></p>
+<p><strong>What are your future plans? </strong>My immediate plan is to find a job in the marketing field that will challenge me and help me gain experience to further my career. My dream is to eventually start up a business with my younger sister, Heather, that somehow involves us going back and forth to Italy 🙂<strong></strong></p>
+<p><strong>What kind of teammate is Courtney DeAngelis? </strong>Courtney is the definition of a good teammate. She has worked unbelievably hard all four years to be the best player she can be. She has so much heart and desire, and wants to see everyone do their best. Whenever I have been down, she has always been there to pick me back up. She may be a little girl, but when she is on the field, she is a force to be reckoned with. When all is said and done, I am incredibly lucky to have had Courtney on my team, and even more lucky to have her as my best friend.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nortonhs.jpg"><img class="alignleft size-full wp-image-583" title="Renee Norton" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/nortonhs.jpg" alt="" width="100" height="150" /></a>Renee Norton</strong></p>
+<p><strong>What was it like following your brother to Muhlenberg? </strong>It was pretty cool following my brother here to Muhlenberg. It had its advantages and disadvantages for sure. It was nice because I was familiar with the school before I started here. I would have to say the biggest disadvantage was considering Mickey was such an amazing athlete, it was hard to live up to his potential. How do I beat the all-time leader in points in a career and a season, the all-time leader in assists in a career, season and one game? … Both of my older brothers, Mickey and Sean, have been my role models since I started sports around second grade. I hope that I can be a role model to my little brother Joey, like Mickey and Sean are to me.</p>
+<p><strong>What was it like interning with Wenner Media? </strong>It was awesome. I worked with some amazing people and learned so much. The office had so many cool things about it. For instance, they had one long hallway that included every single <em>Rolling Stone</em> magazine cover ever made in order from the first to the most recent. They also had a guitar that Pete Townshend from The Who smashed.</p>
+<p><strong>What are your future plans?</strong> I want to work for a public accounting firm out of college for a few years. Hopefully the firm will pay me to go back and get my master’s degree and take the CPA exam. Then I want to get into forensic accounting and fraud examination. One day, I would like to work for the FBI to assist in fraud investigations.</p>
+<p><strong>What kind of person is Brittany DeAngelis? </strong>That’s a pretty hard question to answer because honestly, she is an indescribable person. Her work ethic is just remarkable. The way she cares so much about school is evident considering how good her grades are and the awards she has won for being such a great student. Also, her work ethic in field hockey is just as impressive. She is the kind of player that I am sure every coach would hope to have. Most importantly, she is one of my best friends. I am so fortunate to have my best friend be one of my teammates and co-captains throughout my time at Muhlenberg.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/smithhs.jpg"><img class="alignleft size-full wp-image-584" title="Shelby Smith" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/smithhs.jpg" alt="" width="100" height="150" /></a>Shelby Smith</strong></p>
+<p><strong>What was the Washington Semester like? </strong>My semester in Washington, D.C., was an experience that I will never forget. I fell in love with the city, and my internship provided me with the opportunity to not only live in our nation’s capital, but to also learn about it. We went to our internships during the day and had classes in the evenings. One day a week, we had field trips and explored many of our national monuments. I learned to live in an entirely different environment, and I really enjoyed it.</p>
+<p><strong>How have you improved as a player since your freshman year? </strong>I have learned to be a leader on and off the field. I have learned to be able to voice my opinions to others while still knowing that it is important to be a good listener as well. I have also learned composure; I have learned to be patient on defense to allow the offense make the first mistake and then take advantage of that mistake.<strong></strong></p>
+<p><strong>What are your future plans?</strong> After college, I hope my future includes working for a department of the federal government. I would really enjoy working for the FBI or the state department.</p>
+<p><strong>What kind of teammate is Renee Norton? </strong>Renee Norton is a great leader. She is a player who is able to keep everyone together and motivated, even through the toughest of times. She is a great listener who is always taking time to help any of her teammates. She is a strong player, always communicating on the field. She is always there supporting the offense while making sure to always recover to help defend. Not only is she a great teammate, but she is a great friend as well.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/field-hockey/" rel="category tag">field hockey</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-581 -->
+
+				
+					
+	<article id="post-577" class="post-577 post type-post status-publish format-standard hentry category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/08/hidden-gems/" rel="bookmark">Hidden Gems</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/08/hidden-gems/" title="6:18 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-08T18:18:07-04:00">December 8, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>For the first seven games of the season, five of the six freshmen on the Muhlenberg women’s basketball team saw only spot duty, watching mostly from the bench as their more experienced teammates drove the Mules to a 7-0 start and a No. 13 ranking in the national poll.</p>
+<p>Last night, they got their chance, and did they ever make the most of it.</p>
+<p>The five freshmen – Abby Stenger, Laura Gregory, Nicole Pepe, Janelle Fleet and Emily Lesher – combined to outscore Bryn Mawr, totaling 50 points in a 115-43 win that tied the school record for biggest margin of victory. The quintet had scored 31 points total in the first seven games.</p>
+<p>(The sixth freshman, Hannah Rush, has seen more playing time but did not dress for last night’s game.)</p>
+<p>“We’re all willing to wait our turn,” said Gregory, who scored 12 points and pulled down a team-high seven rebounds in 14 minutes. “We all have so much respect for the upperclassmen. The players ahead of me, Alita Zabrecky and Kim Mui, are the players I want to become.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/gregory.jpg"><img class="alignright size-full wp-image-578" title="Laura Gregory" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/gregory.jpg" alt="" width="235" height="539" /></a>“We’re still learning. This is a completely different level from high school, especially the way we play. It’s so much more intense, and we’re still experiencing new things.”</p>
+<p>Scoring 115 points was a new experience for everyone except the coaching staff, which was around when the Mules ran the Grinnell system and averaged 90.8 points per game in 2003-04. Muhlenberg reached triple digits eight times that season and twice more the following year, but had done so only once since.</p>
+<p>And it was a welcome new experience for Stenger, whose James River High School team played in a few games with big scores.</p>
+<p>“Usually we were on the other side of that score,” she said. “It was exciting to be on the winning side.”</p>
+<p>Muhlenberg led 50-22 at halftime – the third time this season it has scored at least 50 points in the first half. The Mules finished the first two games with 94 and 85, but this time they scored 20 points in the first four minutes of the second half, coming up empty on only one of 10 possessions, to extend their lead to 70-28.</p>
+<p>“It was crazy how fast they were scoring!” said Gregory <em>(pictured).</em></p>
+<p>The Mules slowed the scoring pace a little for the next few minutes, but then picked it up again, with 25 points in the last 7:30. The freshmen accounted for 19 of those points, with Stenger pouring in eight of her team-high 20 during that span.</p>
+<p>“We all just played really hard, and the baskets came,” said Stenger. “We definitely played our hardest, and that’s why we were able to score as much as we did. Hopefully we’ll be able to do it again this season.”</p>
+<p>Whether it happens this season or more in future seasons, it looks like the members of this freshman class will have many more baskets coming their way for Muhlenberg.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-577 -->
+
+				
+					
+	<article id="post-567" class="post-567 post type-post status-publish format-standard hentry category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/06/home-away-from-home/" rel="bookmark">Home Away From Home</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/06/home-away-from-home/" title="3:18 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-06T15:18:18-04:00">December 6, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Whenever her teammates on the Muhlenberg women’s basketball team make a joke at her expense, junior Alita Zabrecky knows exactly how to get them back.</p>
+<p>A native of Center Valley, which just so happens to be the home of one of the Lehigh Valley’s other strong programs, DeSales, Zabrecky just threatens to go home.</p>
+<p>“She’ll tell us she’s going to transfer,” sophomore Erin Laney said with a laugh after the Mules’ 66-60 win over the Bulldogs last night. “So I guess it’s a good thing we won, because now we know she’ll stay.”</p>
+<p>It’s a good-natured joke, of course. Zabrecky isn’t going anywhere soon, which is good news for the Mules and bad news for future opponents.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckydsu.jpg"><img class="alignright size-full wp-image-568" title="Alita Zabrecky" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckydsu.jpg" alt="" width="338" height="360" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckydsu.jpg 338w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckydsu-281x300.jpg 281w" sizes="(max-width: 338px) 100vw, 338px" /></a>An honorable mention all-conference performer last season, Zabrecky has raised her game even more this year, leading the Mules in rebounding and steals, while ranking second in scoring.</p>
+<p>It was that well-rounded game that helped her gain attention when she came out of Southern Lehigh High School. But while Zabrecky could have literally walked home whenever she wanted had she chose DeSales, she said she could not imagine going to college a little more than a long 3-pointer away from her house.</p>
+<p>But it was more than just location that drew Zabrecky to Muhlenberg. Her mother, Judy, is a Muhlenberg grad, and when Alita visited the school and met her future teammates, she said she knew right away that she would become a Mule.</p>
+<p>“DeSales is a great school and they have a great program, but it was a little too close for me,” said Zabrecky, who led the Mules with 16 points and added eight rebounds last night to move to 2-1 in her career against DeSales. “Muhlenberg gave me the opportunity to still be close to home but have some space at the same time. And when I met the team and saw how they played, I knew this was where I wanted to be.</p>
+<p>“It’s always pretty neat playing against DeSales. But losing to them in overtime last year felt awful. So it was nice to be able to get them back.”</p>
+<p>More than two years after choosing Muhlenberg, it seems to be a match made in heaven. Zabrecky has helped the Mules make two NCAA Tournaments, including advancing to last year’s “Sweet 16.”</p>
+<p>This year, she has been an integral part of the Mules’ 7-0 start and No. 13 national ranking. Zabrecky, who ranks third in the conference in scoring, is the only Mule to reach double figures in every game this season.</p>
+<p>According to Laney, what makes her such a solid player is her relentless hustle. And after playing against her in practice, she said she is really glad Zabrecky chose Muhlenberg.</p>
+<p>“Alita is such a great player,” Laney said. “She goes all out on every play, even in practice. I don’t know how she doesn’t get tired; it’s amazing.</p>
+<p>“Some of the things she can do are pretty amazing, and I’m really glad she’s on our team because we don’t have to worry about trying to stop her.”</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-567 -->
+
+				
+					
+	<article id="post-558" class="post-558 post type-post status-publish format-standard hentry category-mens-basketball category-womens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/05/plays-of-the-week/" rel="bookmark">Plays of the Week</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/05/plays-of-the-week/" title="12:42 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-05T12:42:23-04:00">December 5, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Instead of our usual athletes of the week, this Monday we bring you plays of the week for contests between November 28 and December 4.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckyhs.jpg"><img class="alignleft size-full wp-image-563" title="Alita Zabrecky" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabreckyhs.jpg" alt="" width="100" height="150" /></a>Female Play of the Week &#8211; Alita Zabrecky&#8217;s crazy shot</strong></p>
+<p>Zabrecky got two points for the basket but many more for creativity on this shot late in the first half of Saturday&#8217;s game against Washington. With the Mules leading 28-22 and about 2:40 to play in the half, Zabrecky chased down a long rebound of a missed three-pointer and dribbled the length of the court. Anticipating contact when she got into the lane, she flung the ball up with her right (non-shooting) hand, and it went off the glass and in. She got the foul call as well, but missed the free throw.</p>
+<p>The basket gave Muhlenberg its biggest lead (30-22) to that point. The Mules led by as many as 15 in the second half and went on to win, 71-63. Zabrecky finished with a game-high 18 points.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/zabrecky_layup.wmv">Click here to watch video of the shot.</a> Note the Washington coach putting her hands on her head in disbelief.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/curryhs.jpg"><img class="alignleft size-full wp-image-560" title="Austin Curry" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/curryhs.jpg" alt="" width="100" height="150" /></a>Male Play of the Week &#8211; Austin Curry&#8217;s game-tying three</strong></p>
+<p><span style="font-family: mceinline;">It was desperation time for Muhlenberg against Washington on Saturday &#8211; trailing by three with time ticking down. After the Mules&#8217; initial attempt at a game-tying shot missed, AJ Dean snagged the rebound and found Curry, who was on the wing, cutting to the corner. Although a Shoreman player got a hand in his face, Curry drained the shot, tying the score at 79. </span></p>
+<p>Curry made another last-gasp three in overtime for the last of his 14 points, but Washington won, 96-93.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/curry_3_WC.wmv">Click here to watch video of the shot.</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-558 -->
+
+				
+					
+	<article id="post-556" class="post-556 post type-post status-publish format-standard hentry category-mens-basketball category-trivia">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/03/saturday-trivia-11/" rel="bookmark">Saturday Trivia</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/03/saturday-trivia-11/" title="1:05 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-03T13:05:43-04:00">December 3, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>What legendary college basketball coach earned his first win against Muhlenberg 45 years ago today?</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/trivia/" rel="category tag">trivia</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-556 -->
+
+				
+					
+	<article id="post-553" class="post-553 post type-post status-publish format-standard hentry category-mens-basketball category-womens-basketball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/02/weekend-preview-10/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/02/weekend-preview-10/" title="12:08 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-02T12:08:38-04:00">December 2, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>It&#8217;s the last full weekend of athletic events in the year 2011.</p>
+<p><strong>Basketball Doubleheader vs. Washington College (Saturday, women at 2, men at 4)</strong></p>
+<p>Both basketball teams will be playing at home for the first time since winning the Scotty Wood Tournament two weeks ago. Since then, the women have remained undefeated with a pair of wins while climbing up to No. 13 in the national poll, and the men have gone 3-1 with a tournament championship at Gallaudet.</p>
+<p>The Mule teams have a combined record of 11-1. The women have won their last two games by 15 points each, and the men have taken their last two by 40 and 23.</p>
+<p>That&#8217;s not good news for the Washington teams on what is traditionally a difficult trip for them anyway. Since the start of Centennial Conference play, neither the Shorewomen or the Shoremen have won at Memorial Hall. The Shorewomen (2-2 this year) are winless all-time in Allentown, and the Shoremen (2-3) haven&#8217;t won at Muhlenberg since the 1989 Scotty Wood Tournament.</p>
+<p>Live video (both games): <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p>Live stats (women’s game): <a href="http://www.muhlenberg.edu/sports/wbblive/xlive.htm">http://www.muhlenberg.edu/sports/wbblive/xlive.htm</a></p>
+<p>Live stats (men’s game): <a href="http://www.muhlenberg.edu/sports/swtwlive/xlive.htm">http://www.muhlenberg.edu/sports/mbblive/xlive.htm</a></p>
+<p><strong>Wrestling at Messiah Petrofes Invitational (Friday, Saturday)</strong></p>
+<p>Muhlenberg visits this pretigious tournament (which used to be hosted by Lebanon Valley) for the 29th time in the last 32 years.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-553 -->
+
+				
+					
+	<article id="post-545" class="post-545 post type-post status-publish format-standard hentry category-mens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/01/cleaning-the-glass/" rel="bookmark">Cleaning the Glass</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/12/01/cleaning-the-glass/" title="5:23 pm" rel="bookmark"><time class="entry-date" datetime="2011-12-01T17:23:50-04:00">December 1, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Spencer Liddic has put up some really impressive numbers during his time with the Muhlenberg men’s basketball team. But in the Mules’ game against Swarthmore last night, he went where only two other players have ever gone in the history of the Centennial Conference.</p>
+<p>Liddic tied the conference record with 21 rebounds in the Mules’ 79-56 win over the Garnet. It equaled the mark set in 1995 — fittingly, by a Swarthmore player — and tied in 1997.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/liddicreb.jpg"><img class="alignright size-full wp-image-546" title="Spencer Liddic" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/liddicreb.jpg" alt="" width="229" height="526" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/liddicreb.jpg 229w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/12/liddicreb-130x300.jpg 130w" sizes="(max-width: 229px) 100vw, 229px" /></a>It was the best rebounding night by a Mule in more than three decades and bettered his previous career-high, also set against the Garnet, by two.</p>
+<p>Liddic has led the conference in rebounding each of the past two years and currently leads by more than five per game this season. He has pulled down 44 offensive boards thus far, the next closest CC player has 18.</p>
+<p>According to teammate Austin Curry, it is Liddic’s relentless effort that has always made him a great rebounder. But this season, Curry said, he has taken it to an even higher level.</p>
+<p>“Spencer is such a great player; he works harder than anyone else every time we step on the floor,” Curry said. “He gives everything he has, and as weird as it sounds, tonight was just another typical effort from him.</p>
+<p>“He’s such a great player, and I wouldn’t be surprised to see him break the record this year.”</p>
+<p>With 818 career rebounds, Liddic currently ranks seventh on the conference’s all-time list and is just 21 boards away from the top five.</p>
+<p>He is averaging 15.1 rebounds per game this season, and is within striking distance of the CC career record of 947.</p>
+<p>But for a player whose name appears throughout the Mule record book, including the single-season scoring mark, it was just another day at the office.</p>
+<p>Liddic said he doesn’t really pay any attention to the records. What fuels his play in the paint is the desire to win. He has never played for a CC championship and desperately wants to change that this season.</p>
+<p>“It feels great to tie the record, but it’s really a tribute to my teammates,” Liddic said. “Swarthmore was doubling me all night, but the pressure wasn’t on me because everyone else performed to their abilities and played well.</p>
+<p>“This is my last year, so I want to make it a special season. I don’t care how many rebounds I get, as long as we keep on winning.”</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-545 -->
+
+				
+					
+	<article id="post-535" class="post-535 post type-post status-publish format-standard hentry category-mens-basketball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/11/29/capitol-investment/" rel="bookmark">Capitol Investment</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2011/11/29/capitol-investment/" title="1:28 pm" rel="bookmark"><time class="entry-date" datetime="2011-11-29T13:28:37-04:00">November 29, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>The Muhlenberg men&#8217;s basketball team spent the three days after Thanksgiving in Washington, D.C. The weekend started with a tour of the U.S. Capitol and ended with the Mules winning the championship of the Gallaudet Holiday Tournament.</p>
+<p>Along the way, the Mules learned a little bit about their country and their school, and a lot about themselves and each other. Here&#8217;s what some of them had to say about the trip:</p>
+<p><strong>Matt O&#8217;Hara</strong></p>
+<p>My favorite part of the tour through the Capitol Building was the video we watched. It took us through the history of America and how it has come together through many obstacles and difficulties to stand now united as one. The main line in the movie was “Out of many, we are one.” That night, at practice, we talked about how our team is battling through our own obstacles and difficulties and how we need to come together, from many, into one.</p>
+<p>It was great being in a place steeped with so much history and walking out of that building, learning all types of facts and history, but also things that we could take and apply to our own team to make us become better. The trip was awesome and I believe will be one of the main reasons for what we hope to be a very successful year.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC1.jpg"><img class="aligncenter size-full wp-image-536" title="men's basketball in Washington" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC1.jpg" alt="" width="500" height="377" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC1.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC1-300x226.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC1-397x300.jpg 397w" sizes="(max-width: 500px) 100vw, 500px" /></a></p>
+<p><strong>Ryan Lagomarsino</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC4.jpg"><img class="alignright size-full wp-image-540" title="men's basketball in Washington" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC4.jpg" alt="" width="300" height="354" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC4.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC4-254x300.jpg 254w" sizes="(max-width: 300px) 100vw, 300px" /></a>Our trip started with a tour of the US Capitol Building, in which the Latin phrase, “E pluribus unum,” which appears on the Seal of the United States, was greatly emphasized. When translated, it means, “Out of many, one,” and it is applied to the great diversities found within America, and how we are able to pull together to create one great country. This phrase soon became our intangible thought of the weekend as we, as a very diverse team with many unique individuals and pieces, focused on how to come together to play and win together.</p>
+<p>We did come together to win the Gallaudet championship, however we have a long way to go before we can hang a banner up and win the Centennial Conference championship.</p>
+<p><strong>Austin Curry</strong></p>
+<p>I really enjoyed the trip as a whole. It was a nice way for our young team to bond and see sites which were, and still are, the center of our country&#8217;s history. By far, besides winning the championship, I enjoyed seeing the statue of [John Peter Gabriel] Muhlenberg in the Capitol Building. I didn&#8217;t realize his importance in our country’s history. I’m expecting our team picture with the Muhlenberg statue to be on the center of the school’s web page. <em>(here it is, below)</em></p>
+<p>Also I plan to return to D.C. in order to learn more about the formation and history of our country. The trip planted and grew an interest in me that I never thought I would have.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC2.jpg"><img class="aligncenter size-full wp-image-538" title="men's basketball in Washington" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC2.jpg" alt="" width="450" height="361" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC2.jpg 450w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC2-300x240.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC2-373x300.jpg 373w" sizes="(max-width: 450px) 100vw, 450px" /></a></p>
+<p><strong>James Albano</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC3.jpg"><img class="alignright size-medium wp-image-539" title="men's basketball in Washington" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC3-300x225.jpg" alt="" width="300" height="225" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC3-300x225.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC3-399x300.jpg 399w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC3.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /></a>It was really fun walking around Washington and taking a tour of the Capitol Building with my teammates. Being able to walk around where famous people in history worked is pretty cool when you think about it. It’s a great city and I think everyone should take a trip down there to look at everything it has to offer. As a team, I think we all took a lot away from the experience and we were able to relate some of it to us.</p>
+<p><strong>Jesse Lerner</strong></p>
+<p>The best part of the D.C. trip for me were definitely all of the team bonding experiences. Joining this team as a walkon freshman made it more difficult for me to just jump right into the mix of a group of guys who knew each other so well already. However, being with the team in D.C. for three days, whether we were touring monuments or playing basketball, really brought us all together and made us an even better team.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC5.jpg"><img class="aligncenter size-full wp-image-537" title="men's basketball in Washington" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC5.jpg" alt="" width="400" height="355" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC5.jpg 400w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC5-300x266.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/11/MBBinDC5-338x300.jpg 338w" sizes="(max-width: 400px) 100vw, 400px" /></a></p>
+<p><strong>AJ Dean</strong></p>
+<p>The trip to Gallaudet was a much-needed event for the team. Spending time away from the burdens of campus life allowed us to dedicate all our time and energy towards coming closer to one another and developing into a cohesive unit. This showed on the court where we were able to defeat two quality opponents. I believe that as we look back on this team and season in the future, we will view our time in D.C. as the turning point for the Mules.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-535 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/24/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/page/22/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/11/'>November 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/10/'>October 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/09/'>September 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/07/'>July 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/05/'>May 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/04/'>April 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/03/'>March 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/02/'>February 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/01/'>January 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/12/'>December 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/11/'>November 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/10/'>October 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/06/'>June 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/05/'>May 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/04/'>April 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/03/'>March 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/'>February 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/'>January 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/12/'>December 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/11/'>November 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/10/'>October 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/09/'>September 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/'>August 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/'>July 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/06/'>June 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/'>May 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/04/'>April 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/03/'>March 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/02/'>February 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/01/'>January 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/'>December 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/11/'>November 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/08/'>August 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://sportsinfo.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2Fpage%2F23%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>
