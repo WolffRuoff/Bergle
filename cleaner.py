@@ -31,7 +31,7 @@ Opens a file, splits it, strips of punctuation, makes text lowercase, removes an
 @return {list} A sanitized list of unigrams
 @see cleanWord()
 """
-def cleanFile(fileName):
+def cleanFile(fileName, scrubURL=True, folder1="Bergle", folder2="sites"):
     f = open("..\\Bergle\\sites\\" + str(fileName), encoding="utf-8")
     text = f.read()
     
@@ -52,8 +52,9 @@ def cleanFile(fileName):
     text = text.split()
     text = [cleanWord(w) for w in text]
 
-    #Remove url from first spot
-    text.pop(0)
+    if scrubURL:
+        #Remove url from first spot
+        text.pop(0)
 
     #Remove empty spots
     while "" in text:
