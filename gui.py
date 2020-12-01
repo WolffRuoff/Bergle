@@ -1,10 +1,17 @@
 #%%
 import tkinter as tk
+import cleaner
+from cossim import CosSimCalc
+from invIndex import invIndexCreator
 
 class searchGUI():
-    def __init__(self):
+    def __init__(self, invIndex):
         window = tk.Tk()
         window.title("Bergle")
+
+        self.query = ""
+        self.invIndex = invIndex
+        self.cossim = CosSimCalc(self.invIndex)
 
         self.useStemming = tk.BooleanVar()
         self.useStemming.set(True)
@@ -42,15 +49,14 @@ class searchGUI():
         window.mainloop()
 
     def handle_search(self):
-        print(self.search.get())
+        self.cossim.setInvIndex(self.invIndex)
+        self.query = cleaner.cleanQuery(self.search.get(),useStemming=self.useStemming.get(), useStopwords=self.remStop.get())
+        
+
+        rankings = self.cossim.getRanking(self.query)
+        print(rankings)
+
 
     def handle_reindex(self):
-        if self.useStemming.get() == True:
-            print("True")
-        else:
-            print("False")
-
-def main():
-    searchGUI()
-
-main()
+        creator = invIndexCreator(useStemming=self.useStemming.get(), useStopwords=self.remStop.get())
+        self.invIndex = creator.getInvIndex()

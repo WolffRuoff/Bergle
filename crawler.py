@@ -3,19 +3,19 @@ import requests
 import time
 import re
 
-"""
-@class RuoffCrawler Web crawler that maps muhlenberg.edu and saves html to files
-@author: Ethan Ruoff
-"""
-class RuoffCrawler():
+'''
+@class Crawler Web crawler that maps muhlenberg.edu and saves html to files
+@author: Ethan Ruoff & Sam Farinacci
+'''
+class Crawler():
 
-    """
+    '''
     Saves attributes and starts crawl()
 
     @constructor
     @param {string} startURL The starting url for the crawling
     @see crawl()
-    """
+    '''
     def __init__(self, startURL):
         self.startURL = startURL
         self.visited = []
@@ -24,12 +24,12 @@ class RuoffCrawler():
         self.id = 1
         self.crawl(self.startURL, True)
 
-    """
+    '''
     Grabs absolute and relative links from the html, adds http://muhlenberg.edu to relative links, and returns both lists
 
     @param {string} html The html of the url
     @return {list} absLinks A list of absolute links
-    """
+    '''
     def getLinks(self, html):
         absLinks = re.findall(r'((?<=href=\")(?:http[s]?://|www\.)[a-zA-Z0-9\.]*(?<!(webapps\.))muhlenberg\.edu.*?)[\"\']', html)
         relLinks = re.findall(r'((?<=href=\"(?!http))[a-zA-z0-9/]+\.htm[l]?)', html)
@@ -50,13 +50,13 @@ class RuoffCrawler():
 
         return absLinks
 
-    """
+    '''
     Requests the html from the url
 
     @param {string} url The url that's html is being requested
     @return {string} The html from the get request
     @see crawl()
-    """
+    '''
     def getHTML(self, url):
         try:
             html = requests.get(url, timeout=10)
@@ -71,7 +71,7 @@ class RuoffCrawler():
         html.encoding = "utf-8"
         return html.text
 
-    """
+    '''
     Writes a new file named file[id].txt with [id] being the current id in the following format:
     url of file
     # of absolute links
@@ -81,7 +81,7 @@ class RuoffCrawler():
     @param {string} html The html of the site at the url
     @param {int} absLinks The number of absolute links in html
     @see crawl()
-    """
+    '''
     def writeFile(self, url, html, absLinks):
         fileName = "../Bergle/sites/file" + str(self.id) + ".txt"
         self.id += 1
@@ -90,7 +90,7 @@ class RuoffCrawler():
             writeUp.writelines(lines)
             writeUp.write(html)
 
-    """
+    '''
     Recursive DFS of Muhlenberg.edu
     It counts each sites' absolute and relative links and then writes them to a new file. Caps at 10,000 pages
 
@@ -99,7 +99,7 @@ class RuoffCrawler():
     @see getHTML()
     @see getLinks()
     @see writeFile()
-    """
+    '''
     def crawl(self, url, isFirst):
         if self.id <= 10000:
             print(str(self.id) + " : " + url)
