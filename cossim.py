@@ -35,7 +35,7 @@ class CosSimCalc():
         
         #If no results
         if len(text) == 0:
-            return [(-1, "No Results")]
+            return [("No Results", "", "", -1)]
 
         #Compile list of all documents containing query word
         idsWithWords = []
@@ -61,8 +61,8 @@ class CosSimCalc():
                 w = self.getWeight(k, i)
                 vect[i].append(w)
             #calc cosSim
-            cosSims.append((self.docs[i][0], self.getCosSim(qVect, vect[i])))
-        cosSims.sort(key = lambda x: x[1], reverse=True)
+            cosSims.append([self.docs[i][0], self.docs[i][1], self.docs[i][3], self.getCosSim(qVect, vect[i])])
+        cosSims.sort(key = lambda x: x[2], reverse=True)
         return cosSims
 
     '''
@@ -94,7 +94,7 @@ class CosSimCalc():
 
     @param {string} k The term being calculated
     @param {int} i The index of the document
-    @return {float} The term frequency of k in docs[i]
+    @return {float} The term frequency of k in docs[i][2]
     @see getWeight
     '''
     def getTF(self, k, i):
@@ -114,7 +114,7 @@ class CosSimCalc():
         #If max freq for doc isn't known, count it and add it to the dict 
         maxv = 0
         if i not in self.maxFreq.keys():
-            maxv = self.docs[i].count(max(set(self.docs[i]), key = self.docs[i].count))
+            maxv = self.docs[i][2].count(max(set(self.docs[i][2]), key = self.docs[i][2].count))
             self.maxFreq[i] = maxv
         
         return freq/self.maxFreq[i]

@@ -35,13 +35,21 @@ and the converts numbers to "<Number>"
 @param {string} folder2 directory name to store site text files
 @param {boolean} useStemming stem words if selected in menu
 @param {boolean} useStopwords remove stopwords if selected in menu
-@return {list} A sanitized list of unigrams
+@return {list} If scrubURL = True: A sanitized list of unigrams
+@return {list} If scrubURL = False: [0] = Title, [1] = URL, [2] = A sanitized list of unigrams
 @see cleanWord()
 '''
 def cleanFile(fileName, scrubURL=True, folder1="Bergle", folder2="sites", useStemming=True, useStopwords=True):
     f = open("..\\Bergle\\sites\\" + str(fileName), encoding="utf-8")
     text = f.read()
     
+    #Grab title and description
+    if not scrubURL:
+        title = re.findall(r'<title[^>]*>(.+?)</title>', text)
+        title = title[0] if title else "No Title"
+        title = re.sub(r'&\S*;', '', title)
+        url = text.split('\n', 1)[0]
+
     #Remove CSS and JS
     text = re.sub(r'<script[\S\s]+?<\/script>', ' ', text)
     text = re.sub(r'<style[\S\s]+?<\/style>', ' ', text)
@@ -53,26 +61,30 @@ def cleanFile(fileName, scrubURL=True, folder1="Bergle", folder2="sites", useSte
     #convert lazy writing to spaces
     text = re.sub(r'(?<=[a-zA-z])&rsquo;', '\'', text)
     text = re.sub(r'(?<=[a-zA-z])&nbsp;', ' ', text)
-    text = re.sub(r'(?<=[a-zA-z])&[a-zA-Z]*;', ' ', text)
+    text = re.sub(r'(?<=[a-zA-z])&\S*;', ' ', text)
     text = re.sub(r'(?<=[a-zA-z])[\/;](?=[a-zA-Z])', ' ', text)
     text = re.sub(r'(?<=[a-zA-z])\.\.\.(?=[a-zA-Z])', ' ', text)
     
     text = text.split()
+
+    if scrubURL:
+        text.pop(0)
+    
     if useStopwords:
         text = [cleanWord(w, useStemming) for w in text if w not in stopwords]
     else:
         text = [cleanWord(w, useStemming) for w in text]
-
-    if scrubURL:
-        #Remove url from first spot
-        text.pop(0)
 
     #Remove empty spots
     while "" in text:
         text.remove("")
 
     f.close()
-    return text
+    
+    if scrubURL:
+        return text
+    else:
+        return [title,url,text,fileName]
 
 '''
 Cleans a one word string by:
