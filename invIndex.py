@@ -22,9 +22,8 @@ class invIndexCreator():
         self.invertedIndex = {}
         i = 1
         for files in os.listdir(os.path.join("..", folder1, folder2)):
-            words = cleaner.cleanFile(files, useStemming=useStemming, useStopwords=useStopwords)
+            words = cleaner.cleanFile("file" + str(i) + ".txt", useStemming=useStemming, useStopwords=useStopwords)
             #For each word in the text file
-            print(i)
             wordCount = {}
             for w in words:
                 if w not in wordCount.keys():

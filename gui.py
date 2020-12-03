@@ -6,7 +6,21 @@ from cossim import CosSimCalc
 from invIndex import invIndexCreator
 import webbrowser
 
+'''
+@class searchGui Creates a gui that allows the user to search the Muhlenberg website
+@author Ethan Ruoff and Sam Farinacci
+@see cleaner.py
+@see cossim.py
+@see invIndex.py
+'''
 class searchGUI():
+    '''
+    Creates gui with full structure but empty results area
+
+    @constructor
+    @param {dict} invIndex The initial inverted index for the cossim program
+
+    '''
     def __init__(self, invIndex):
         window = tk.Tk()
         window.title("Bergle")
@@ -100,14 +114,21 @@ class searchGUI():
         self.pageLab = tk.Label(master=turner, text=str(self.page+1))
         self.pageLab.grid(row=0, column=1)
 
-        prevPage = tk.Button(master=turner, text="Next Page", command=self.handle_increasePage)
-        prevPage.grid(row=0,column=2,sticky="nsew")
+        nextPage = tk.Button(master=turner, text="Next Page", command=self.handle_increasePage)
+        nextPage.grid(row=0,column=2,sticky="nsew")
 
         topFrame.pack()
         results.pack()
         turner.pack()
         window.mainloop()
 
+    '''
+    Updates the cossim with the most up to date invIndex, sends the query to get sorted rankings, then resets page number and calls to show results
+    
+    @see search Entry
+    @see cossim.py
+    @see showResults
+    '''
     def handle_search(self):
         self.cossim.setInvIndex(self.invIndex)
         self.query = cleaner.cleanQuery(self.search.get(),useStemming=self.useStemming.get(), useStopwords=self.remStop.get())
@@ -118,16 +139,36 @@ class searchGUI():
         self.page = 0
         self.showResults()
 
+    '''
+    Decreases self.page by one (as long as page is positive) and calls to load the new results
+
+    @see prevPage label
+    @see showReults
+    '''
     def handle_decreasePage(self):
         if self.page > 0:
             self.page -= 1
             self.showResults()
 
+    '''
+    Increases self.page by one (as long as results permit) and calls to load the new results
+
+    @see nextPage label
+    @see showReults
+    '''
     def handle_increasePage(self):
+        #prevents blank pages
         if self.page < (len(self.rankings)/10)-1:
             self.page += 1
             self.showResults()
 
+    '''
+    Updates the results frame with the corresponding title and url in self.rankings
+
+    @see handle_decreasePage
+    @see handle_increasePage
+    @see handle_search
+    '''
     def showResults(self):
         for i in range(len(self.titleList)):
             if (self.page*10)+i < len(self.rankings):
@@ -138,9 +179,21 @@ class searchGUI():
                 self.resultList[i].config(text = "")
         self.pageLab["text"] = str(self.page+1)
 
+    '''
+    Opens a webbrowser with the provided url
+
+    @param {string} url The url that needs loading
+    @see resultList labels
+    '''
     def openSite(self,url):
         webbrowser.open_new(url)
 
+    '''
+    Hand to recompile index with new stemming and stopwords params
+    
+    @see useStemming checkbox
+    @see remStop checkbox
+    '''
     def handle_reindex(self):
         creator = invIndexCreator(useStemming=self.useStemming.get(), useStopwords=self.remStop.get())
         self.invIndex = creator.getInvIndex()

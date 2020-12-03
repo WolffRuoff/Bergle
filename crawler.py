@@ -68,6 +68,9 @@ class Crawler():
             return None
         
         time.sleep(0.5)
+        if html.status_code < 200 or html.status_code > 299:
+            return None
+        
         html.encoding = "utf-8"
         return html.text
 
