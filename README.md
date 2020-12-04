@@ -10,7 +10,7 @@ Using Bergle is easy! Simply download the repo and run main.py <br> If you don't
 <br><br>
 
 ## Why make a search engine for just muhlenberg.edu/?
-This is @slfarinacci and @WolffRuoff 's final project for Artificial Intelligence. Even though the project has the small scope of just Muhlenberg's website, we still learned the same information and techniques that we would have learned creating a search engine for numerous sites. During this project, we learned how to create a web crawler and corresponding inverted index, preprocess complicated html/text with vanilla regex (stemming being the exception), calculate the cosine similarity between a query and webpage, and create a comprehensive GUI to display the resulting rankings.
+This is [slfarinacci](https://github.com/slfarinacci) and [WolffRuoff](https://github.com/WolffRuoff)'s final project for Artificial Intelligence. Even though the project has the small scope of just Muhlenberg's website, we still learned the same information and techniques that we would have learned creating a search engine for numerous sites. During this project, we learned how to create a web crawler and corresponding inverted index, preprocess complicated html/text with vanilla regex (stemming being the exception), calculate the cosine similarity between a query and webpage, and create a comprehensive GUI to display the resulting rankings.
 
 <!--
 ## Files
