@@ -1,0 +1,655 @@
+http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/the-kings-speech/
+31
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en-US">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<title>$#*! &#8220;The King&#8217;s Speech&#8221; &#8211; Media Industries Course Blog 2011</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Comments Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; $#*! &#8220;The King&#8217;s Speech&#8221; Comments Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/the-kings-speech/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Archivo%3A400%2C400i%2C500%2C500i%2C700%2C700i&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-fontawesome-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/fonts/font-awesome/font-awesome.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-style-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/jquery.flexslider.js?ver=1'></script>
+<link rel='https://api.w.org/' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediaindustries11.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Clear Channel Acquire&#8217;s Thumbplay Service' href='http://mediaindustries11.blogs.muhlenberg.edu/2011/03/20/clear-channel-acquires-thumbplay-service/' />
+<link rel='next' title='AdAge Brings Together Internet, Video Games' href='http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/adage-brings-together-internet-video-games/' />
+
+<link rel="canonical" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/the-kings-speech/" />
+<link rel='shortlink' href='http://mediaindustries11.blogs.muhlenberg.edu/?p=970' />
+<link rel="alternate" type="application/json+oembed" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F25%2Fthe-kings-speech%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F25%2Fthe-kings-speech%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mediaindustries11.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mediaindustries11.blogs.muhlenberg.edu/?wordfence_lh=1&hid=3663322FD0535A3071A24859E87D0F10');
+</script>		<script>jQuery( 'html' ).removeClass( 'no-js' ).addClass( 'js' );</script>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	
+	</head>
+
+	<body class="bp-legacy post-template-default single single-post postid-970 single-format-standard admin-bar no-customize-support missing-post-thumbnail missing-manual-excerpt no-js">
+
+		
+		<a class="skip-link faux-button" href="#site-content">Skip to the content</a>
+
+		<div class="mobile-menu-wrapper">
+
+			<div class="mobile-search">
+
+				<form role="search" method="get" class="mobile-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+					<span class="screen-reader-text">Search for:</span>
+					<label for="mobile-search-field"></label>
+					<input type="search" id="mobile-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+					<div class="cancel-search"></div>
+				</form>
+
+				<div class="compact-search-results ajax-search-results"></div><!-- .compact-search-results -->
+
+			</div><!-- .mobile-search -->
+
+			<ul class="mobile-menu">
+				<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+			</ul>
+
+			
+		</div><!-- .mobile-menu-wrapper -->
+
+		<div class="body-inner">
+
+			<div class="mobile-nav-content-overlay dark-overlay"></div>
+
+			
+			<header class="site-header">
+
+				<div class="nav-toggle">
+
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+
+				</div>
+
+				<div class="header-inner section-inner">
+
+					
+		<div class="header-search">
+
+			<form role="search" method="get" class="header-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+				<span class="screen-reader-text">Search for:</span>
+				<label for="header-search-field"></label>
+				<input type="search" id="header-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+
+				<input type="hidden" name="post_type" value="post"><input type="hidden" name="post_type" value="page">
+			</form>
+
+			<div class="compact-search-results ajax-search-results modal arrow-left"></div>
+
+		</div><!-- .header-search -->
+
+
+		
+					<div class="header-titles">
+
+						
+							<h2 class="site-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></h2>
+
+						
+							<p class="site-description">If It&#039;s About the Media, It&#039;s On This Blog!</p>
+
+						
+					</div><!-- .header-titles -->
+
+					
+				</div><!-- .header-inner -->
+
+				<ul class="site-nav">
+					<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+				</ul>
+
+			</header><!-- .site-header -->
+
+<main id="site-content">
+
+	<div class="section-inner split">
+
+		<div class="content">
+
+			<article class="post-970 post type-post status-publish format-standard hentry category-motion-pictures tag-censorship tag-mpaa tag-ratings tag-the-kings-speech tag-the-weinstein-co missing-thumbnail" id="post-970">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/the-kings-speech/" title="$#*! &#8220;The King&#8217;s Speech&#8221;">March 25, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+			<h1 class="post-title">$#*! &#8220;The King&#8217;s Speech&#8221;</h1>
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/sandys312/" title="Posts by sandys312" rel="author">sandys312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/motion-pictures/" rel="category tag">Motion Pictures</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>McClintock, Pamela. (2011, March 24). &#8216;The King&#8217;s Speech&#8217; PG-13 version gets release date. <em>The Hollywood Reporter</em>. Retrieved from <a href="http://www.hollywoodreporter.com/news/kings-speech-pg-13-version-171129">http://www.hollywoodreporter.com/news/kings-speech-pg-13-version-171129</a>.</p>
+<p>&#8220;The Kin<a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/03/The-Kings-Censored-Speech.jpg"><img class="alignleft size-thumbnail wp-image-972" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/03/The-Kings-Censored-Speech-150x150.jpg" alt="" width="150" height="150" /></a>g&#8217;s Speech,&#8221; the most recent winner of the Academy Award for Best Picture, will undergo a ratings facelift on Friday, April 1. The Weinstein Co., the film&#8217;s distributing studio, announced that they will replace all R-rated prints of the film currently in theaters with a brand new PG-13 version. Starting next Friday, this teen-friendly version of the film will play in approximately 1,000 theaters nationwide. This is the first time a film has been released in theaters with a new rating since 1978&#8217;s &#8220;Saturday Night Fever,&#8221; although in the case of that film, the new PG version (downgraded from R) was released in theaters months later. In the case of &#8220;The King&#8217;s Speech,&#8221; which is still playing in wide release, the studio is simply pulling the current R-rated version from theaters and replacing all prints with this new PG-13 version. The Motion Picture Association of America, which is responsible for designating the ratings of films, originally gave &#8220;The King&#8217;s Speech&#8221; an R rating for &#8220;some language.&#8221; The reedited PG-13 version is so rated because of &#8220;language.&#8221; In the PG-13 cut, numerous uses of the &#8220;F-bomb&#8221; have either been muted or replaced with &#8220;s*it.&#8221;<span id="more-970"></span></p>
+<p>In late February, MPAA chair Bob Pisnano and NATO (National Association of Theater Owners) president John Fithian co-signed a waiver permitting the Weinstein Co. to release this new version <em>without</em> the standard provision that it be released 90 days after the R-rated version was pulled from theaters. Prior to a few years ago, the possibility of this waiver did not exist, so &#8220;The King&#8217;s Speech&#8221; is the first time the waiver has been employed by a film studio. It seems clear the Weinstein Co. has made the effort to release a PG-13 version of the film in hopes of attracting more widespread revenue. An R rating limits film patrons under the age of 17 to only being sold a ticket when in the presence of a parent or guardian. With a PG-13 rating, however, no age limit exists in terms of ticket sales.</p>
+<p>This re-rating seems to indicate the tremendous power role that the studio holds. It seems that, at least in this particular case, the studio is more interested in obtaining as much profit as possible rather than the film&#8217;s art. Not only did &#8220;The King&#8217;s Speech&#8221; receive extensive critical acclaim and win the Best Picture Oscar in its original form, but it also was very successful financially (the film has grossed $132.7 million in the United States already). From a logical standpoint, there seems to be no reason for the existence of the PG-13 version. The subject matter of &#8220;The King&#8217;s Speech&#8221; is inherently adult and, at least on first glance, it doesn&#8217;t seem like allowing teenagers to see the film unaccompanied will really change the film&#8217;s fortunes a considerable amount. The DVD is also scheduled for release on April 19, less than three weeks after the PG-13 re-release, perhaps further muting box office returns. The Weinstein Co.&#8217;s actions could have extensive repercussions throughout the film industry. If the PG-13 re-release of the film is at all successful, it may give studios incentives to lobotomize the content of future films in order to gain more audience-friendly ratings. What&#8217;s more, this issue seems to be stirring a debate regarding the preservation of the film&#8217;s original content. The filmmakers of &#8220;The King&#8217;s Speech&#8221; intended for the film to be seen in its original R rating, and some have spoken out against changing the film&#8217;s content, such as the film&#8217;s star Geoffrey Rush. Our group believes this change in the film&#8217;s rating to be some  &#8220;bull&#8230;&#8221; Censorship should not stand, and filmmakers should be able to have their content embraced by audiences in the way dictated by the creators themselves, not the studios.</p>
+<p>&nbsp;</p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+		<div class="post-inner compensate">
+
+			<div class="post-meta bottom">
+
+				
+					<p class="post-tags">
+						<span class="meta-title subheading">Tags:</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/censorship/" rel="tag">censorship</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/mpaa/" rel="tag">MPAA</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/ratings/" rel="tag">Ratings</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/the-kings-speech/" rel="tag">The King's Speech</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/the-weinstein-co/" rel="tag">The Weinstein Co.</a></span>
+					</p>
+
+				
+				<p class="post-categories">
+					<span class="meta-title subheading">Categories:</span>
+					<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/motion-pictures/" rel="category tag">Motion Pictures</a></span>
+				</p>
+
+			</div>
+
+			
+				<div class="single-pagination">
+
+					
+						<a class="next-post" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/adage-brings-together-internet-video-games/" title="AdAge Brings Together Internet, Video Games">
+							<span class="subheading">Next post</span>
+							<span class="title">AdAge Brings Together Internet, Video Games</span>
+						</a>
+
+					
+						<a class="previous-post" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/20/clear-channel-acquires-thumbplay-service/" title="Clear Channel Acquire&#8217;s Thumbplay Service">
+							<span class="subheading">Previous post</span>
+							<span class="title">Clear Channel Acquire&#8217;s Thumbplay Service</span>
+						</a>
+
+					
+				</div><!-- .single-pagination -->
+
+			
+		</div><!-- .post-inner -->
+
+		
+			<div class="hanging-titles">
+				
+	<div class="comments" id="comments">
+
+		
+		<h3 class="comment-reply-title">1 Comment</h3>
+
+				<div id="comment-133" class="comment byuser comment-author-jsullivan47 even thread-even depth-1">
+			<article id="div-comment-133" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn"><a href='http://blogs.muhlenberg.edu/members/jsullivan47/' rel='external nofollow ugc' class='url'>Dr. Sullivan</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/the-kings-speech/#comment-133">
+							<time datetime="2011-05-10T01:39:12+00:00">
+								May 10, 2011 at 1:39 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Nice catch here, Group 3 &#8211; What you didn&#8217;t necessarily discuss but which is critical here is the role of the motion picture ratings board: a powerful facilitator in the movie industry.  A simple shift from R to PG-13 could mean major revenue for a studio, and as your example plainly illustrates, it can have recursive impacts on the production of the film itself (down to creative decisions about how the script and plot should look!).  If you haven&#8217;t seen the film &#8220;This Film Is Not Yet Rated&#8221;, you definitely should, since it shines a bright light on this little seen but critical aspect of the industry (e.g., the ratings board).  Nice job.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-login" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F25%2Fthe-kings-speech%2F">Log in to Reply</a></div>			</article><!-- .comment-body -->
+		</div><!-- #comment-## -->
+
+	</div> <!-- comments -->
+
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2011/03/25/the-kings-speech/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F25%2Fthe-kings-speech%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+			</div>
+
+		
+	<div class="hanging-titles">
+
+		<div class="related-posts">
+
+			<h3 class="related-posts-title">Related Posts</h3>
+
+			
+				<a class="related-post post-839 post type-post status-publish format-standard hentry category-motion-pictures tag-dvd tag-online tag-redbox tag-subscription missing-thumbnail" id="post-839" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/02/17/839/" title="Redbox Goes Digital with New Subscription Service">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Redbox Goes Digital with New Subscription Service</span></h4>				</a>
+
+				
+				<a class="related-post post-1016 post type-post status-publish format-standard hentry category-motion-pictures tag-directv tag-distributors tag-exhibitors tag-fox tag-home-premium tag-just-go-with-it tag-nato tag-on-demand tag-power-roles tag-sony tag-universal tag-unknown tag-warner-bros missing-thumbnail" id="post-1016" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/31/coming-soon-to-a-living-room-near-you/" title="Coming Soon to a Living Room Near You&#8230;">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Coming Soon to a Living Room Near You&#8230;</span></h4>				</a>
+
+				
+				<a class="related-post post-710 post type-post status-publish format-standard hentry category-motion-pictures tag-academy-awards tag-editors missing-thumbnail" id="post-710" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/02/02/oscar-nominated-editors-still-snubbed/" title="Oscar-Nominated Editors Still Snubbed">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Oscar-Nominated Editors Still Snubbed</span></h4>				</a>
+
+				
+				<a class="related-post post-1104 post type-post status-publish format-standard hentry category-motion-pictures tag-blockbuster tag-cross-promotion tag-green-lantern tag-kung-fu-panda-2 tag-linking-pins tag-product-placement tag-summer missing-thumbnail" id="post-1104" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/14/summer-blockbusters-cross-promotions-happy-meal/" title="Summer Blockbusters Cross Promotions (Happy Meal)">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Summer Blockbusters Cross Promotions (Happy Meal)</span></h4>				</a>
+
+				
+		</div><!-- .related-posts -->
+
+	</div><!-- .section-inner.wide -->
+
+
+</article>
+
+		</div><!-- .content -->
+
+		<aside class="sidebar">
+
+	
+</aside>
+
+	</div><!-- .section-inner -->
+
+</main><!-- #site-content -->
+
+			<footer id="site-footer" class="bg-black">
+
+				
+				<div class="section-inner credits">
+
+					<p>
+						<span>&copy; 2020 <a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></span>
+												<span>Theme by <a href="https://www.andersnoren.se">Anders Norén</a></span>
+					</p>
+
+					
+				</div><!-- .section-inner.credits -->
+
+			</footer><!-- .footer -->
+
+		</div><!-- .body-inner -->
+		
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sullivan_ajax_search = {"ajaxurl":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","query_vars":"{\"page\":\"\",\"year\":\"2011\",\"monthnum\":\"03\",\"day\":\"25\",\"name\":\"the-kings-speech\"}"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F25%2Fthe-kings-speech%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mediaindustries11.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+	</body>
+</html>

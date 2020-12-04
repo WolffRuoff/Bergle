@@ -1,0 +1,843 @@
+http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/
+50
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+College Mourns the Loss of Trustee and Benefactor Bob Wood | Communications at Muhlenberg College	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://pr.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://pr.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Communications at Muhlenberg College &raquo; Feed" href="http://pr.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Communications at Muhlenberg College &raquo; Comments Feed" href="http://pr.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Communications at Muhlenberg College &raquo; College Mourns the Loss of Trustee and Benefactor Bob Wood Comments Feed" href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/pr.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/pr.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://pr.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://pr.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://pr.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://pr.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://pr.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://pr.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://pr.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://pr.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Frank Marino' href='http://pr.blogs.muhlenberg.edu/frank-marino/' />
+<link rel='next' title='Muhlenberg College mourns the loss of Professor Charles Russell' href='http://pr.blogs.muhlenberg.edu/muhlenberg-college-mourns-the-loss-of-professor-charles-russell/' />
+
+<link rel="canonical" href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/" />
+<link rel='shortlink' href='http://pr.blogs.muhlenberg.edu/?p=24' />
+<link rel="alternate" type="application/json+oembed" href="http://pr.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpr.blogs.muhlenberg.edu%2Fcollege-mourns-the-loss-of-trustee-and-benefactor-bob-wood%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://pr.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fpr.blogs.muhlenberg.edu%2Fcollege-mourns-the-loss-of-trustee-and-benefactor-bob-wood%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://pr.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://pr.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//pr.blogs.muhlenberg.edu/?wordfence_lh=1&hid=1F15C23E57223B9B8ABFC2B1EFFF99A6');
+</script><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-24 single-format-standard admin-bar no-customize-support no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<div id="site-title">
+					<span>
+						<a href="http://pr.blogs.muhlenberg.edu/" title="Communications at Muhlenberg College" rel="home">Communications at Muhlenberg College</a>
+					</span>
+				</div>
+				<div id="site-description"></div>
+
+									<img src="http://pr.blogs.muhlenberg.edu/files/2017/10/cropped-Communications-BlogHeader.png" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu"><ul>
+<li ><a href="http://pr.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-2"><a href="http://pr.blogs.muhlenberg.edu/about/">About</a></li>
+</ul></div>
+			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+
+				<div id="nav-above" class="navigation">
+					<div class="nav-previous"><a href="http://pr.blogs.muhlenberg.edu/frank-marino/" rel="prev"><span class="meta-nav">&larr;</span> Frank Marino</a></div>
+					<div class="nav-next"><a href="http://pr.blogs.muhlenberg.edu/muhlenberg-college-mourns-the-loss-of-professor-charles-russell/" rel="next">Muhlenberg College mourns the loss of Professor Charles Russell <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-above -->
+
+				<div id="post-24" class="post-24 post type-post status-publish format-standard hentry category-uncategorized">
+					<h1 class="entry-title">College Mourns the Loss of Trustee and Benefactor Bob Wood</h1>
+
+					<div class="entry-meta">
+						<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/" title="7:31 am" rel="bookmark"><span class="entry-date">October 31, 2011</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://pr.blogs.muhlenberg.edu/author/publicrelationstest/" title="View all posts by Bill Keller">Bill Keller</a></span>					</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+						<p>Bob Wood, long-time trustee and friend of Muhlenberg College, has passed away.</p>
+<p>&#8220;Muhlenberg College has lost a great friend,&#8221; said Muhlenberg College President Randy Helm.  &#8221; The College has been associated with the Wood family over a period spanning eight decades.&#8221;</p>
+<p>Bob&#8217;s father, Milton &#8220;Scotty&#8221; Wood, provided the first food service at Muhlenberg College in 1948.  The Wood Company, now part of the Sodexo Group, has maintained the dining contract for 63 years.  The College&#8217;s athletic stadium, built in 1999, is named after &#8220;Scotty&#8221; Wood, and the campus restaurant, opened in August 2010, is named the &#8220;Ilene and Robert Wood Dining Commons.&#8221;  Bob also was the long-time chair of the College&#8217;s annual men&#8217;s and women&#8217;s basketball tournament, the Scotty Wood Tournament.</p>
+<p>&#8220;Virtually everywhere you turn in Allentown and beyond,&#8221; said Helm, &#8220;you will find that Bob Wood was an energetic presence promoting the arts and the overall well-being of Lehigh Valley residents.  He and his wonderful wife, Ilene, are an inspiring example not only to Muhlenberg&#8217;s volunteer leadership, but to our students and alumni as well, of how to live a life of leadership and service.&#8221;</p>
+<p>&nbsp;</p>
+<p><strong>Calling Hours</strong><br />
+Tuesday 6-8 pm in Seegers Union, Event Space</p>
+<p><strong>Memorial Service</strong><br />
+12:30 pm Egner Chapel<br />
+(Also available on closed circuit TV in Moyer Hall, Miller Forum)</p>
+<p>Additional parking will be available at the Allentown Fairgrounds infield. A shuttle will be provided in the event these parking spaces are utilized.</p>
+<p><strong>Reception</strong><br />
+1:30 pm Seegers Union, Wood Dining Commons</p>
+											</div><!-- .entry-content -->
+
+							<div id="entry-author-info">
+						<div id="author-avatar">
+														</div><!-- #author-avatar -->
+							<div id="author-description">
+							<h2>
+							About Bill Keller							</h2>
+							The Office of Communications is the liaison between the College and the media for news stories, interviews and other forms of publicity. The Office of Communications also supervises production of the College's Annual Report, Alumni Magazine, Community Impact Report and oversees the College's radio station, WMUH.							<div id="author-link">
+								<a href="http://pr.blogs.muhlenberg.edu/author/publicrelationstest/" rel="author">
+									View all posts by Bill Keller <span class="meta-nav">&rarr;</span>								</a>
+							</div><!-- #author-link	-->
+							</div><!-- #author-description -->
+						</div><!-- #entry-author-info -->
+	
+						<div class="entry-utility">
+							This entry was posted in <a href="http://pr.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">In Memoriam</a>. Bookmark the <a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/" title="Permalink to College Mourns the Loss of Trustee and Benefactor Bob Wood" rel="bookmark">permalink</a>.													</div><!-- .entry-utility -->
+					</div><!-- #post-24 -->
+
+					<div id="nav-below" class="navigation">
+						<div class="nav-previous"><a href="http://pr.blogs.muhlenberg.edu/frank-marino/" rel="prev"><span class="meta-nav">&larr;</span> Frank Marino</a></div>
+						<div class="nav-next"><a href="http://pr.blogs.muhlenberg.edu/muhlenberg-college-mourns-the-loss-of-professor-charles-russell/" rel="next">Muhlenberg College mourns the loss of Professor Charles Russell <span class="meta-nav">&rarr;</span></a></div>
+					</div><!-- #nav-below -->
+
+					
+			<div id="comments">
+
+
+			<h3 id="comments-title">
+			17 Responses to <em>College Mourns the Loss of Trustee and Benefactor Bob Wood</em>			</h3>
+
+	
+			<ol class="commentlist">
+						<li class="comment even thread-even depth-1" id="li-comment-268">
+		<div id="comment-268">
+			<div class="comment-author vcard">
+								<cite class="fn">Mike Bruckner</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-268">
+				October 31, 2011 at 7:43 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob Wood is another one of the giants of Allentown and Muhlenberg College.  Although Bob was a Cornell grad, Muhlenberg also ran in the family&#8217;s blood &#8211; Scotty Wood Stadium, the Wood Dining Commons, the Scotty Wood Tournament.  He was a wonderful philanthropist.  There are literally hundreds of non-profit organizations across the Valley that have been touched by his, and Ilene&#8217;s, generosity.  This is a great loss for the community and the College.<br />
+My heart goes out to Ilene and the rest of the Wood family.<br />
+Mike Bruckner</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-269">
+		<div id="comment-269">
+			<div class="comment-author vcard">
+								<cite class="fn">David K. Bausch</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-269">
+				October 31, 2011 at 11:14 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I have known Bob Wood most of his life, I will be miss him as a friend, but  more important  the community has lost a concerned citizen.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-270">
+		<div id="comment-270">
+			<div class="comment-author vcard">
+								<cite class="fn">Ken Butler</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-270">
+				October 31, 2011 at 12:46 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob was a kind and gentle man, with an eclectic sense of humor that I loved.  I had many delightful, though brief, conversations with him while he was a Trustee of the College.  Ilene, you and the rest of Bob&#8217;s family will be in my prayers in the coming weeks.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-271">
+		<div id="comment-271">
+			<div class="comment-author vcard">
+								<cite class="fn">Randy Helm</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-271">
+				October 31, 2011 at 12:51 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob knew everybody and liked everybody.  He was always looking for ways to help those who needed help.  He was gentle, he was kind, he was loving, and he was smart.  And he made it all look so easy.  We will really miss him.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-272">
+		<div id="comment-272">
+			<div class="comment-author vcard">
+								<cite class="fn"><a href='http://www.wlvt.org' rel='external nofollow ugc' class='url'>Amy Burkett/PBS39</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-272">
+				October 31, 2011 at 2:20 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob was an AMAZING asset to our region.  He had a heart of pure gold.  His love for his community and his family were obvious the minute you spoke with him.  My prayers are with Ilene as she deals with the loss of her best friend and loving husband.  Bob may be gone, but we will never forget him.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment byuser comment-author-sportsinfo odd alt thread-odd thread-alt depth-1" id="li-comment-274">
+		<div id="comment-274">
+			<div class="comment-author vcard">
+								<cite class="fn"><a href='http://blogs.muhlenberg.edu/members/sportsinfo/' rel='external nofollow ugc' class='url'>sportsinfo</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-274">
+				October 31, 2011 at 3:10 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>A tribute to Bob Wood is in The MuhlBox, the daily blog of Muhlenberg College Athletics. He will be missed greatly.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/?p=399" rel="nofollow ugc">http://sportsinfo.blogs.muhlenberg.edu/?p=399</a></p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-275">
+		<div id="comment-275">
+			<div class="comment-author vcard">
+								<cite class="fn">Andreea Sandulescu</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-275">
+				October 31, 2011 at 3:58 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>My condolences to all of Bob Wood’s family and friends. He was a wonderful inspiration to many at Muhlenberg. I am proud to have met him. He will be greatly missed.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-276">
+		<div id="comment-276">
+			<div class="comment-author vcard">
+								<cite class="fn">Michael Drabenstott</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-276">
+				November 1, 2011 at 5:21 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>We will all certainly miss Bob&#8217;s energy, enthusiasm and optimism for the West End Theatre District and the entire city of Allentown. His presence was &#8212; and will continue to be &#8212; a profound inspiration for our group. He was one of the most supportive people I&#8217;ve ever met. I feel fortunate to have worked alongside him in our community.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-277">
+		<div id="comment-277">
+			<div class="comment-author vcard">
+								<cite class="fn">Elizabeth J Minger</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-277">
+				November 1, 2011 at 8:17 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I knew Mr. Wood through my boss Malcolm Gross.  He was always very friendly when I spoke with him.  He will truly be missed.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-278">
+		<div id="comment-278">
+			<div class="comment-author vcard">
+								<cite class="fn"><a href='http://www.qualityservicemarketing.com' rel='external nofollow ugc' class='url'>Sybil Stershic</a></cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-278">
+				November 1, 2011 at 8:31 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>It was four years ago this week that I had a very special meeting with Bob. I gave him a signed copy of my first book that was just published. It&#8217;s a book about employee- customer care that highlighted Bob and The Wood Company&#8217;s employee and customer focused culture.  Bob epitomized servant leadership in business and in the community. I am honored to have learned so much from him and will continue to share his stories.<br />
+(For a special blog tribute, please see: <a href="http://qualityservicemarketing.blogs.com/quality_service_marketing/2011/11/tribute-to-bob-wood.html" rel="nofollow ugc">http://qualityservicemarketing.blogs.com/quality_service_marketing/2011/11/tribute-to-bob-wood.html</a>)</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-279">
+		<div id="comment-279">
+			<div class="comment-author vcard">
+								<cite class="fn">Ron Lewis</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-279">
+				November 1, 2011 at 12:46 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I am fortunate to be able to say that I was a personal friend of Bob.  I will miss his smiling greetings and his support.  Moreover, he will truly be missed by our community, but his influence and generosity will live on forever.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-280">
+		<div id="comment-280">
+			<div class="comment-author vcard">
+								<cite class="fn">Donna Bergenstock</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-280">
+				November 1, 2011 at 2:36 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I had the privilege of serving with Bob on the Scotty Wood Tournament committee.  It was apparent to everyone involved that he truly enjoyed interacting with the students from my marketing classes.  He was an extraordinary mentor to hundreds of students and they valued his wisdom and leadership.  The spirits of both Bob and Scotty Wood live on with the tournament.  They will not be forgotten.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-281">
+		<div id="comment-281">
+			<div class="comment-author vcard">
+								<cite class="fn">Wendy Body</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-281">
+				November 1, 2011 at 3:41 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob was an agent of POSITIVE change in the Lehigh Valley.  From orchestrating a true &#8220;sock&#8221; hop to his vision for Allentown, Bob put his imprint and flare on everything he did.   I am afraid the Valley and many of its affairs will not be quite as exciting and unique with Bob&#8217;s passing.   He will be forever missed.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-284">
+		<div id="comment-284">
+			<div class="comment-author vcard">
+								<cite class="fn">Susan Rhoads-Procina</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-284">
+				November 2, 2011 at 1:44 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob Wood was a wonderful person who always had a moment to speak to a new acquaintance or an old friend.  My husband and I got to know Bob and Ilene through many events at Muhlenberg College and the Allentown Art Museum.  My husband and I enjoyed trading thoughts on recipes and new restaurants with Bob and Ilene.   Bob&#8217;s enthusiasm for the many projects that were dear to his heart will be greatly missed.  However, he has laid a wonderful foundation for his successors to carry on his visions.  Eileen, my thoughts and prayers will be with you as you mourn the loss of the love of your life.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-285">
+		<div id="comment-285">
+			<div class="comment-author vcard">
+								<cite class="fn">Beth Halpern</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-285">
+				November 2, 2011 at 2:16 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>Bob was the kind of active, caring and engaged citizen that I aspire to be and that I hope Muhlenberg students are and/or will become. I felt like there must have been 10 Bob Woods when I first came to the Lehigh Valley because I saw him everywhere I went! He had an amazing sensitivity to people, an inclusive personality that brought people together and an unapologetic concern for others that I wish more people had. And he loved Allentown so much that it rubbed off on everyone he met! Our community has lost such an asset, but I know his legacy will live on through other people.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-290">
+		<div id="comment-290">
+			<div class="comment-author vcard">
+								<cite class="fn">John Lychak</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-290">
+				November 4, 2011 at 1:19 pm					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I first met Bob many years ago before he went into the family business. It  was a privilege to reconnect with him through  the Board of Associates and appreciate his commitment to  Muhlenberg and the community.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+		<li class="comment even thread-even depth-1" id="li-comment-293">
+		<div id="comment-293">
+			<div class="comment-author vcard">
+								<cite class="fn">Stacey Prohaska</cite> <span class="says">says:</span>			</div><!-- .comment-author .vcard -->
+
+				
+				
+			<div class="comment-meta commentmetadata"><a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/#comment-293">
+				November 5, 2011 at 10:11 am					</a>
+									</div><!-- .comment-meta .commentmetadata -->
+
+				<div class="comment-body"><p>I did not know Bob well, unfortunately, but I was lucky to have the opportunity to set up a photo shoot last summer with Bob and Ilene, President Helm and Dean Karen Green.  The photo was to mark the occasion of the first lunch in the new Ilene and Robert Wood Dining Commons, lovingly prepared and served to Bob and Ilene by Sodexo.  As the photographer set up the shot, Ilene turned to Bob, smoothed his hair and kissed him.  I&#8217;ve not forgotten that moment, and the loving care Ilene provided for her husband.  My thoughts and prayers are with Ilene and the entire Wood family.</p>
+</div>
+
+				<div class="reply">
+								</div><!-- .reply -->
+			</div><!-- #comment-##  -->
+
+				</li><!-- #comment-## -->
+			</ol>
+
+	
+			<p class="nocomments">Comments are closed.</p>
+	
+
+
+</div><!-- #comments -->
+
+	
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://pr.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://pr.blogs.muhlenberg.edu/muhlenberg-mourns-the-passing-of-mike-donnelly/">Muhlenberg mourns the passing of Mike Donnelly</a>
+									</li>
+											<li>
+					<a href="http://pr.blogs.muhlenberg.edu/dr-ed-baldrige-jr/">Dr. Ed Baldrige Jr.</a>
+									</li>
+											<li>
+					<a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-long-time-trustee-tom-mendham-63/">College mourns the loss of long-time trustee Tom Mendham &#8217;63</a>
+									</li>
+											<li>
+					<a href="http://pr.blogs.muhlenberg.edu/muhlenberg-college-mourns-the-loss-of-professor-charles-russell/">Muhlenberg College mourns the loss of Professor Charles Russell</a>
+									</li>
+											<li>
+					<a href="http://pr.blogs.muhlenberg.edu/college-mourns-the-loss-of-trustee-and-benefactor-bob-wood/" aria-current="page">College Mourns the Loss of Trustee and Benefactor Bob Wood</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Go Mules</span> on <a href="http://pr.blogs.muhlenberg.edu/muhlenberg-mourns-the-passing-of-mike-donnelly/#comment-588">Muhlenberg mourns the passing of Mike Donnelly</a></li><li class="recentcomments"><span class="comment-author-link">Peter Myers</span> on <a href="http://pr.blogs.muhlenberg.edu/dr-ed-baldrige-jr/#comment-582">Dr. Ed Baldrige Jr.</a></li><li class="recentcomments"><span class="comment-author-link">Priscilla Howard</span> on <a href="http://pr.blogs.muhlenberg.edu/dr-ed-baldrige-jr/#comment-561">Dr. Ed Baldrige Jr.</a></li><li class="recentcomments"><span class="comment-author-link">Ken Bahrt '75</span> on <a href="http://pr.blogs.muhlenberg.edu/dr-ed-baldrige-jr/#comment-559">Dr. Ed Baldrige Jr.</a></li><li class="recentcomments"><span class="comment-author-link">Liz Fitzsimmons '91</span> on <a href="http://pr.blogs.muhlenberg.edu/dr-ed-baldrige-jr/#comment-555">Dr. Ed Baldrige Jr.</a></li></ul></li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+				<li id="text-3" class="widget-container widget_text"><h3 class="widget-title">Contact Us</h3>			<div class="textwidget">(484) 664-3230<br />
+(484) 664-3477 (fax)<br />
+<br />
+<a href="http://facebook.com/MuhlenbergCollege" target="_blank" rel="noopener noreferrer"><img src="http://www.muhlenberg.edu/images/facebook-w.jpg" border="0" /></a><a href="http://twitter.com/muhlenberg" target="_blank" rel="noopener noreferrer"><img src="http://www.muhlenberg.edu/images/twitter-w.jpg" border="0" /></a></div>
+		</li>			</ul>
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://pr.blogs.muhlenberg.edu/" title="Communications at Muhlenberg College" rel="home">
+					Communications at Muhlenberg College				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://pr.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://pr.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fpr.blogs.muhlenberg.edu%2Fcollege-mourns-the-loss-of-trustee-and-benefactor-bob-wood%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://pr.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

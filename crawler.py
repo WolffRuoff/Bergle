@@ -2,10 +2,12 @@
 import requests
 import time
 import re
-
+import os
 '''
 @class Crawler Web crawler that maps muhlenberg.edu and saves html to files
 @author: Ethan Ruoff & Sam Farinacci
+
+Since the crawler has to crawl 10,000 files, some editors time out or crash. If this happens, self.startID will make it read the already written files to minimize requests
 '''
 class Crawler():
 
@@ -22,7 +24,10 @@ class Crawler():
         self.visited.append(self.startURL)
         self.map = {}
         self.id = 1
+        self.startID= len(os.listdir(os.path.join("..", "Bergle", "sites")))
+        print(str(self.startID))
         self.crawl(self.startURL, True)
+        print(str(self.startID))
 
     '''
     Grabs absolute and relative links from the html, adds http://muhlenberg.edu to relative links, and returns both lists
@@ -45,8 +50,9 @@ class Crawler():
         absLinks = [re.sub(r'#.*', '', i) for i in absLinks]
         absLinks = [i + "/" if i[-1] != "/" else i for i in absLinks]
 
-        #sedehidiversity project subdomain blog has way too many pages
-        absLinks = [i for i in absLinks if "sedehidiversityproject" not in i]
+        #Remove oembed (file embeded links) and links to jpg pictures
+        absLinks = [i for i in absLinks if "oembed" not in i]
+        absLinks = [i for i in absLinks if "jpg" not in i]
 
         return absLinks
 
@@ -58,6 +64,17 @@ class Crawler():
     @see crawl()
     '''
     def getHTML(self, url):
+        #In case crawler crashes during running, uses already written files instead of requests
+        if self.id <= self.startID:
+            with open("..\\Bergle\\sites\\file" + str(self.id) + ".txt", encoding="utf-8") as text:
+                html = text.read()
+                #Makes sure skip the bad urls found and follow the same order
+                if url == html.split('\n', 1)[0]:
+                    return html.split('\n', 1)[1]
+                else:
+                    return None
+            
+
         try:
             html = requests.get(url, timeout=10)
         except UnicodeError as e:
@@ -120,7 +137,11 @@ class Crawler():
             self.map[url]["targets"] = absLinks
 
             #Write a new file for the url
-            self.writeFile(url,html,len(absLinks))
+            #In case crawler crashes during running, uses already written files (no need to rewrite)
+            if self.id >= self.startID:
+                self.writeFile(url,html,len(absLinks))
+            else:
+                self.id += 1
 
             #for all the url's target links
             for link in self.map[url]["targets"]:

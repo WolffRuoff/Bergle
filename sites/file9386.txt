@@ -1,0 +1,170 @@
+http://servicedesk.muhlenberg.edu/HEAT/Account/SsoLogin?provider=OneLogin&amp;timezoneOffset=240&amp;timezone=America%2FNew_York/
+0
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    
+<link href="/HEAT/lib/bootstrap-3.2.0-dist/css/bootstrap.css" rel="stylesheet"/>
+
+<link href="/HEAT/css/bootlogin2.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" type="text/css" href="/HEAT/LoginStylesGenerator/GenerateCssFromSetting" />
+
+    
+    <!--[if lt IE 9]>
+        <link rel="stylesheet" type="text/css" href="/HEAT/css/login2ie8override.css" />
+    <![endif]-->
+
+
+    <script src="/HEAT/lib/RespondJs/respond.min.js" type="text/javascript"></script>
+</head>
+<body class="login-layout LoginLayoutTmpLegacy">
+    
+
+<div class="heat-bar heat-bar-top"></div>
+
+<div class="heat-table">
+    <div class="heat-col-left">
+        <div class="logo"></div>
+        <div class="title"><h1>Service Desk</h1></div>
+        <div class="content-body">
+            
+
+
+<div class="content-inner row-fluid">
+    <div class="alert alert-danger" role="alert">
+        You cannot login to the system now. Please contact your administrator. Additional information is available in the logs.
+    </div>
+</div>
+
+        </div>
+        <div class="content-footer">
+            <div class="additional-text"></div>
+            <p>To&nbsp;learn more about our innovative IT&nbsp;Service Management solutions, visit our website at&nbsp;<a href="https://www.ivanti.com/" target="_blank">Ivanti</a></p>
+            <p>Copyright &copy;&nbsp;2005-2017 Ivanti. All&nbsp;rights reserved.</p>
+            <p> 
+                <a href="http://www.heatsoftware.com/privacy-policy" target="_blank">Privacy Policy</a> - 
+                <a href="http://www.heatsoftware.com/legal" target="_blank">Legal Terms and Notices</a>
+            </p>
+        </div>
+    </div>
+    <div class="heat-col-right">
+        <div class="logo"></div>
+        <div class="title"><h1>Service Desk</h1></div>
+        <div class="content-footer">
+            <div class="additional-text"></div>
+            <p>To&nbsp;learn more about our innovative IT&nbsp;Service Management solutions, visit our website at&nbsp;<a href="https://www.ivanti.com/" target="_blank">Ivanti</a></p>
+            <p>Copyright &copy;&nbsp;2005-2017 Ivanti. All&nbsp;rights reserved.</p>
+            <p> 
+                <a href="http://www.heatsoftware.com/privacy-policy" target="_blank">Privacy Policy</a> - 
+                <a href="http://www.heatsoftware.com/legal" target="_blank">Legal Terms and Notices</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="heat-bar heat-bar-bottom"></div> 
+
+<script src="/HEAT/lib/jQuery-1.11.1/jquery-1.11.1.js"></script>
+<script src="/HEAT/lib/jquery-validation-1.13.0/jquery.validate.js"></script>
+
+<script src="/HEAT/lib/bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+
+<script type="text/javascript">
+    var adjustHeightHandler = function () {
+        var windowHeight = $(window).innerHeight() - parseInt($('body').css('marginBottom')) - parseInt($('body').css('marginTop')),
+            contentHeight = $('.heat-table').outerHeight(),
+            barsHeight = $('.heat-bar-top').is(':visible') ? ($('.heat-bar-top').outerHeight(true) * 2) : 0,
+            margin = (windowHeight - contentHeight - barsHeight) / 2;
+
+        $('.heat-table').css({ marginTop: ((margin > 0) ? margin + 'px' : 0) });
+    };
+    $(function () {
+        $(window).resize(adjustHeightHandler);
+        adjustHeightHandler();
+    });
+</script>
+
+
+
+    <script type="text/javascript">
+        var resizeMethod = function() {
+            if (adjustHeightHandler) {
+                adjustHeightHandler();
+            }
+        },
+        PreviewController = {
+            _styleEl: null,
+            _logoStyleEl: null,
+            _bgCacheEl: {},
+
+            applyPreviewStyle: function(data) {
+                var me = this,
+                    path = "/HEAT/LoginStylesGenerator/GenerateCssFromDefinition";
+                $.ajax(path, {
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    type: 'POST',
+                    success: function(result) {
+                        var head;
+                        if (!me._styleEl) {
+                            me._styleEl = document.createElement('style');
+                            me._styleEl.type = 'text/css';
+
+                            head = document.head || document.getElementsByTagName('head')[0];
+                            head.appendChild(me._styleEl);
+                        }
+
+                        if (me._styleEl.styleSheet){
+                            me._styleEl.styleSheet.cssText = result;
+                        } else {
+                            me._styleEl.innerHTML = result;
+                        }
+                        resizeMethod();
+                    }
+                });
+            },
+
+            applyTitle: function(title) {
+                $('.title h1').text(title);
+            },
+
+            applyCopyright: function(copyright) {
+                if (copyright) {
+                    $('.content-footer .additional-text').show().html(copyright);
+                } else {
+                    $('.content-footer .additional-text').hide();
+                }
+            },
+
+            isPreviewMode: function () {
+                return location.search.indexOf('preview') > 0;
+            },
+
+            disableLinks: function() {
+                $('body').delegate('a, button', 'click', function() {
+                    return false;
+                })
+            },
+
+            destroy: function() {
+                delete this._bgCacheEl;
+                delete this._logoStyleEl;
+            }
+        };
+        $(function() {
+            if (PreviewController.isPreviewMode() && window.parent !== window && window.parent.StyleConfigurator) {
+                var controller = window.parent.StyleConfigurator.app.getStyleController('Login');
+                if (controller) {
+                    controller.initPreviewController(PreviewController);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

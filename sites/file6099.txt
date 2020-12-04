@@ -1,0 +1,746 @@
+http://academics.blogs.muhlenberg.edu/
+62
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Learning at &#039;Berg | Just another Muhlenberg College Blogs site	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://academics.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://academics.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://academics.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Learning at &#039;Berg &raquo; Feed" href="http://academics.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Learning at &#039;Berg &raquo; Comments Feed" href="http://academics.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/academics.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/academics.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://academics.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://academics.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://academics.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://academics.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://academics.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://academics.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://academics.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://academics.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://academics.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://academics.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//academics.blogs.muhlenberg.edu/?wordfence_lh=1&hid=C092F976A983DC3B9A2FC1538E39E881');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog admin-bar no-customize-support wp-embed-responsive two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://academics.blogs.muhlenberg.edu/" rel="home">Learning at &#039;Berg</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://academics.blogs.muhlenberg.edu/">
+									<img src="http://academics.blogs.muhlenberg.edu/files/2013/02/cropped-BlogHeader.jpg" width="1000" height="288" alt="Learning at &#039;Berg" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://academics.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-17" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-17"><a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/arts-culture/">Arts &#038; Culture</a></li>
+<li id="menu-item-18" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-18"><a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/humanities/">Humanities</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-19"><a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/physical-sciences/">Physical Sciences</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-20"><a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/social-sciences/">Social Sciences</a></li>
+</ul></div>			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://academics.blogs.muhlenberg.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-99" class="post-99 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/05/15/goodbye-first-year/" rel="bookmark">Goodbye First Year</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/05/15/goodbye-first-year/" title="7:38 pm" rel="bookmark"><time class="entry-date" datetime="2013-05-15T19:38:52+00:00">May 15, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/emma/" title="View all posts by Emma" rel="author">Emma</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Did you know that as you age, you experience time to move faster and faster? How you perceive time depends on how old you are; how much living you’ve done before. The second year of your life seems a lot longer than the hundredth, because in a year you’ve gained 50% of your history instead of only 1%. It’s all quite fascinating.</p>
+<p>It’s funny. This year, all of the alumni, seniors, juniors and even sophomores I’ve met have one thing in common to say: “Cherish your four years. They will be gone before you know it.” Whenever I’ve heard this, I politely nod and sympathize with their statement, understanding quantitatively how time is perceived to move at a faster rate. Yet, I don’t think I truly understood.</p>
+<p>It’s something about college. It is such a whirlwind experience. When you come to college, the amount of things you’re involved in, people you know, and information you’re exposed to increases tenfold. Each day is a life-changing experience, and let me tell you: It has absolutely flown by. In your first year of college, you don’t just age to be a year older. You grow to be many years wiser. You make the transition from high school kid to young adult.</p>
+<p>After taking a post-finals-week breath, and reflecting on who I was a year ago…. I think I can definitively say that I’ve made that transition.</p>
+<p>Thank you, Muhlenberg. See you in the fall.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-99 -->
+
+				
+					
+	<article id="post-90" class="post-90 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/05/01/last-class-in-dublin/" rel="bookmark">Last class in Dublin</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/05/01/last-class-in-dublin/" title="5:43 pm" rel="bookmark"><time class="entry-date" datetime="2013-05-01T17:43:31+00:00">May 1, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/alexanderbrotman/" title="View all posts by Alexander" rel="author">Alexander</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Today I have my last class of the semester in Dublin and my last class prior to senior year. It has been a wonderful adventure and experience over here, amplified by the presence of 19 other Muhlenberg students and Dr. John Sullivan of the Comm department. One of the things I have really appreciated about my classes here is how valued my voice and opinions are as an American. Sure, other Americans study in Ireland, but when discussing films by Scorsese or looking at pictures of New York, the voice and perspective of a US citizen is quite important. There are a lot of Irish students who haven&#8217;t been to the US and have notions of it from watching movies and TV shows. To be in the class when discussing 9/11 and have such a unique take is an experience I will not soon forget.</p>
+<p>Every country has stereotypes, and you can find a lot of vocal students who paint broad depictions of the US as a country filled with skyscrapers and people who love their guns. I have listened to these depictions daily and not criticized them at all; I find it fascinating to hear what others think, and it makes a great conversation. At the same time, I have learned so much about Ireland from my lecturers that has proved worthwhile. As a visiting student, you take in sights, read the local newspaper and begin to develop opinions on Irish life. You may love a certain part of Dublin only to hear a lecturer later say how weird that part of the city is and how they wouldn&#8217;t touch it with a ten foot pole. That is travel and that is experience, the ultimate reasons why you study abroad.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-90 -->
+
+				
+					
+	<article id="post-82" class="post-82 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/04/25/end-of-semester-final-push/" rel="bookmark">End of semester- Final push!</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/04/25/end-of-semester-final-push/" title="6:56 pm" rel="bookmark"><time class="entry-date" datetime="2013-04-25T18:56:24+00:00">April 25, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/carolinedorn/" title="View all posts by Caroline" rel="author">Caroline</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Hi again everyone! I hope that everyone is enjoying the warm weather that has FINALLY arrived. Here at Muhlenberg, the last few weeks of the semester are a frenzy of finishing up the academic year, scrambling to attend/host those last few events for clubs and organizations, and anticipating final exams in the all-too-near future. It&#8217;s a struggle to drag myself inside to study on these beautiful days (turns out studying outside under Victor&#8217;s Lament with all my friends isn&#8217;t as effective as studying in the library. Who knew?) Anyway, I&#8217;m having an awesome last few weeks and while I&#8217;m excited for a long, homework-free summer, I&#8217;m sad to be finishing up another awesome semester at Berg. Here&#8217;s what I&#8217;ve been up to lately:</p>
+<p>-I went on a class trip to Northampton County Jail! As I have mentioned before, I am taking a sociology course called Inequality and Power which focuses on the American criminal justice system. As part of our research, we took a tour of the prison facility and got the opportunity to speak to a few different inmates about their experiences in the jail and, in a few cases, the drug rehabilitation program. While it was an incredible academic experience and I was lucky to see everything I&#8217;ve learned this semester with my own eyes, I have to admit the visit was a bit shocking. I was reminded to stay on the right track and always do the right thing so that I will never have to enter a jail again (I know you will be happy to see this, Mom!) I&#8217;m grateful to have had this educational opportunity- field trips and active learning experiences like this are quite common at Muhlenberg.</p>
+<p>-Through The Red Doors! This past weekend, Muhlenberg hosted it&#8217;s annual &#8220;Through The Red Doors&#8221; day for both committed and prospective members of the Class of 2017. I feel like my own Through the Red Doors day wasn&#8217;t so long ago, so it was very interesting to be on the other side of things and be one of the more experienced students talking to incoming freshmen and their families. Since I am on Hillel Board, I worked at the Hillel table to talk to everyone about what Jewish life at Muhlenberg has to offer them. I met so many awesome people and I can&#8217;t wait for them to be on campus next semester! During these types of events, I am always happy to speak to anyone who will listen about how much I love this school, and how glad I am that I chose Muhlenberg!</p>
+<p>-Spring fever! As I mentioned, the springtime is finally here to stay on campus and students are THRILLED. It was a cold, snowy winter, and everyone is ready to break out their shorts, flip flops, and frisbees. It&#8217;s so nice that as I&#8217;m walking down Academic Row to go to class, my classmates are outside on picnic blankets, reading and enjoying the sunshine. Some professors have started holding their classes outside when they can- it&#8217;s just too beautiful to pass up! We are in for a beautiful (and also crazy busy!) three weeks.</p>
+<p>Until next time,<br />
+Caroline</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-82 -->
+
+				
+					
+	<article id="post-68" class="post-68 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/life-lessons-from-design/" rel="bookmark">Life Lessons from Design</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/life-lessons-from-design/" title="7:15 pm" rel="bookmark"><time class="entry-date" datetime="2013-04-03T19:15:43+00:00">April 3, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/emma/" title="View all posts by Emma" rel="author">Emma</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>This semester, I’m taking <em>Design for the Theatre</em>. My professor is one of those people you know has done a lot of living, and has a very enlightened perspective on things. Though the class’ emphasis is (guess what!) on design, my professor never fails to supply me and my classmates with valid and inspiring knowledge applicable to greater life experiences. For my post today, I would like to share some of these lessons with you:</p>
+<p>Engage your mind more than anything you could imagine.</p>
+<p>Surprise is motivated by contrast.</p>
+<p>Don’t say “try” -&gt; Say “will” or “won’t”</p>
+<p>Don’t say “problem” -&gt; Say “challenge”</p>
+<p>Don’t say “like” or “dislike” -&gt; Say “effective” or “ineffective”</p>
+<p>Believe in what you’re doing, and keep doing it.</p>
+<p>Four agreements to having a great life:</p>
+<ol>
+<li>Be impeccable with your word (always do what you say you’ll do)</li>
+<li>Don’t make assumptions (always communicate)</li>
+<li>Don’t take anything personally (“leave your ego at the door” – Stanislavsky)</li>
+<li>Always do your best</li>
+</ol>
+<p>Obstacles make for interest.</p>
+<p>Every product is only as good as those who made it.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-68 -->
+
+				
+					
+	<article id="post-61" class="post-61 post type-post status-publish format-standard hentry category-academics-at-muhlenberg category-arts-culture category-humanities">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/who-we-are/" rel="bookmark">Who We Are</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/who-we-are/" title="7:15 pm" rel="bookmark"><time class="entry-date" datetime="2013-04-03T19:15:11+00:00">April 3, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/emma/" title="View all posts by Emma" rel="author">Emma</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Today, one event in particular stuck out to me, showing me how close a group of my classmates have become.</p>
+<p>I’m taking this rather unusual First Year Seminar called <em>Finding Your Muse</em>. (Check out my previous post for more details.) Each Monday, two students lead the entire class period. I co-led my “Monday Muse” session several weeks ago. In consultation with the professor, you plan out the class period considering where the ensemble is now, where they need to go, and how they can get there.</p>
+<p>Today, the theme was Vulnerability. The two students leading the session had us each prepare a story to share about a meaningful experience that has affected our life in a profound way. What was so fantastic about this was that, going around the circle and telling our stories, everyone completely trusted each other. Some people shared stories that they never had before. Some people cried. Some people talked about hardships that they’re still struggling with today. I won’t share details, but let’s just say it was deeply moving.</p>
+<p>We also had a discussion about each individual student, examining how others see them versus why and who they actually are.</p>
+<p>After just an hour-long discussion, the feeling of unsurpassed safety was unanimous. We hugged, wiped our tears, and some parted ways while others continued bonding over lunch.</p>
+<p>In the everyday hustle and bustle of college students’ lives, it’s easy to disregard the larger, sometimes painful truths that exist in our histories. It was such a remarkable blessing to have this experience today. It was so refreshing and enlightening to have everyone shed their defenses and just talk about big, complex things that have made them who they are.</p>
+<p>We’re not just a class anymore. We’re becoming a family.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>, <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/arts-culture/" rel="category tag">Arts &amp; Culture</a>, <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/humanities/" rel="category tag">Humanities</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-61 -->
+
+				
+					
+	<article id="post-55" class="post-55 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/extra-curriculars/" rel="bookmark">Extra-Curriculars</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/04/03/extra-curriculars/" title="7:13 pm" rel="bookmark"><time class="entry-date" datetime="2013-04-03T19:13:12+00:00">April 3, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/carolinedorn/" title="View all posts by Caroline" rel="author">Caroline</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Hi again! This week, all the students returned back to campus after a week-long spring break ready to complete the second half of the spring semester. While it&#8217;s definitely nice to have the time off to catch up on sleep and time with family, I always eagerly anticipate my return to school no matter how long I&#8217;m gone for. Even though this is the first week back after vacation, it feels like we&#8217;ve been back for weeks already! Life on campus is just as busy as ever, but the second half of the semester brings lots of exciting events and always flies by.</p>
+<p>This week is especially hectic for me because it&#8217;s show week! I am a member of a performance ensemble, An Artist Collective, sponsored by the Muhlenberg Theatre Association. AAC is one of a few different performance groups on Muhlenberg&#8217;s campus, and our focus is on bringing together many different types of artists (dancers, painters, actors, sculptors, writers, etc.) and collaborating together to create anything and everything. Using each other for inspiration, we work hard to challenge the ideas of what art is and what makes somebody an artist. This Saturday is our first performance of the semester, and we have been working around the clock to make it absolutely awesome. I can&#8217;t tell you exactly what it entails just yet, but I know it&#8217;s going to be a great time both for us and our audience. Fun fact: I am not studying theatre here at all, and I don&#8217;t have any prior theatre experience, but I have the best time participating in the Muhlenberg Theatre Association. I meet a lot of awesome people, and An Artist Collective challenges me as an artist and as a student all the time.</p>
+<p>I am also happy to announce that I am a newly elected member of Hillel Board! Hillel is the center of Jewish life on our campus, and an incredible resource to have here at Muhlenberg. I have been active in Hillel for the past two years I&#8217;ve been here, and this spring I decided to run for the position of Vice President of Publicity. Since Hillel is such a huge part of my Muhlenberg experience, I can&#8217;t wait to get started working with the other amazing board members and do amazing things for the Jewish community here. Currently, Hillel hosts several weekly events, including two different types of Shabbat services, a huge Shabbat dinner open to the entire college community, and yoga taught by certified instructors. In addition, there are often programming events (group discussions, guest speakers) about different issues in both the Jewish community and our campus community as a whole. I can&#8217;t wait to get started planning events, and becoming even more involved in this awesome organization.</p>
+<p>That&#8217;s all for now! Here&#8217;s to hoping the weather keeps getting warmer and spring arrives on campus soon!</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-55 -->
+
+				
+					
+	<article id="post-47" class="post-47 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/03/08/educational-differences-between-ireland-and-the-us/" rel="bookmark">Educational differences between Ireland and the US</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/03/08/educational-differences-between-ireland-and-the-us/" title="9:12 pm" rel="bookmark"><time class="entry-date" datetime="2013-03-08T21:12:36+00:00">March 8, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/alexanderbrotman/" title="View all posts by Alexander" rel="author">Alexander</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>After 5 weeks into my classes at DCU, I thought I might comment on some differences in education styles between Ireland and the US.</p>
+<p>I am taking two courses taught by Dublin City University faculty, and they consist of one lecture per week and one seminar per week. Both are intro comm courses, and students tend to take both at the same time. The lecture is obviously in a lecture hall with an average of 40 students, whereas the seminar has between 5 and 10.</p>
+<p>The seminars are nice, because that is when you really get to know the professor and participate in class discussion. One of my seminars is almost all international students, 5 total, and it is great to get so many different perspectives. A lot of the exchange students here are from Europe, with a large group from the US and smaller groups from Latin America and Asia. It is a much more relaxed, informal, and quite frankly distracting at times, classroom experience. Everyone has their laptop open during the lecture (usually to Facebook) and it is quite common to have students speaking while the lecturer is talking. This is a key cultural difference, as Irish lecturers will tell you that the students often arrive late and leave early and are frankly not as reliable as Americans when it comes to assignments.</p>
+<p>Group work is also big here; both of my classes rely heavily on group projects extended over a month-long period. It is nice, because my partners on both projects come from countries like Romania, Mexico, Italy and Germany. You learn a lot from each other, and that is really what any form of education is about. It is great to have exposure to different education systems, and like the study abroad mantra goes, it&#8217;s different, not worse.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-47 -->
+
+				
+					
+	<article id="post-38" class="post-38 post type-post status-publish format-standard hentry category-academics-at-muhlenberg category-arts-culture">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/03/04/classes-at-muhlenblog/" rel="bookmark">Classes at Muhlenblog</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/03/04/classes-at-muhlenblog/" title="10:06 pm" rel="bookmark"><time class="entry-date" datetime="2013-03-04T22:06:49+00:00">March 4, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/emma/" title="View all posts by Emma" rel="author">Emma</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Hey everyone! My name is Emma and I’m a freshman double majoring in Theatre with a concentration in Directing, and Business with a concentration in Arts Administration. I have absolutely adored my Muhlenberg experience so far, and wouldn’t change it for the world. This semester I’m taking five classes:</p>
+<p><strong>Principles of Microeconomics</strong>, taught by one of my favorite professors, Dr. Laposata, is the first Econ I’ve ever taken. We have a quiz every other class, which I really appreciate because it (hopefully) ensures that everyone stays on top of the material we’re covering.</p>
+<p><strong>Principles of Fitness &amp; Wellness</strong><span style="color: #333333; font-style: normal; line-height: 24px;"> is a General Academic Requirement (GAR) that all students typically take during their freshman year. We’ve just completed the Wellness module of the course, which featured many guest speakers from areas of the college including IT, Res Life and the Career Center. Next up is the Fitness module, led by soccer Coach Topping.</span></p>
+<p><strong>Voice and Speech for the Actor</strong> is probably both my favorite and most dreaded course I’ve yet to take at Berg. Through three-hour experiential workshops each week, we’ve so far explored the production of sound, tension and stress, phonetics and personal histories, all the while tackling my ironic fear of speaking in front of a group. The teacher, Troy Dwyer, is perhaps the most enlightened and motivating professor at Muhlenberg, and this class has allowed me more personal growth than I’d ever have anticipated.</p>
+<p><strong>Design for the Theatre</strong> with Tim Averill is a requirement for my Directing concentration and I’m enjoying it very much. It’s definitely more of a discussion and experiential learning class than my other courses. We’ve recently been learning about different elements of visual and spatial design through our in-class analysis of the play <em>Peer Gynt</em> by Henrik Ibsen.</p>
+<p><strong>Finding Your Muse</strong> with Dr. Michael London is my first year seminar (FYS), and is both a writing intensive and performance ensemble course. Through discussions, papers, in-class free writes, readings, artistic collaborations, etc., we are spending the semester exploring what it means to be creative and developing a cumulative large-scale performance piece. As part of the curriculum, two weeks ago I was challenged to lead an entire class period with one other classmate. It was an absolutely fantastic experience.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>, <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/arts-culture/" rel="category tag">Arts &amp; Culture</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-38 -->
+
+				
+					
+	<article id="post-25" class="post-25 post type-post status-publish format-standard hentry category-academics-at-muhlenberg">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/02/21/media-and-comm-in-dublin/" rel="bookmark">Media and Comm in Dublin</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/02/21/media-and-comm-in-dublin/" title="1:52 pm" rel="bookmark"><time class="entry-date" datetime="2013-02-21T13:52:18+00:00">February 21, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/alexanderbrotman/" title="View all posts by Alexander" rel="author">Alexander</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Hi there,</p>
+<p>My name is Alexander and I am a junior double major in Film Studies and Media and Communications. This semester I am in Dublin, Ireland with 19 other Muhlenberg students and a professor studying at Dublin City University. While this is only the 2nd year this program has been offered, it has already developed into one of the largest study abroad programs the college has.</p>
+<p>Prior to this semester, I was incredibly active in the Muhlenberg Film Association and Social Justice Collaborative, two clubs which have grown tremendously over the years. Back at &#8216;Berg I have taken film courses ranging from introductory analysis to in-depth studies of the French New Wave and Bollywood. I have been fortunate to have great professors along the way who are incredibly accessible, one of the reasons why I chose Muhlenberg to begin with. Media and Communications is another great major, as well as one of the largest at the school. So far I have taken Media and Society, Documentary Research, Media Theory and Methods and Fundamentals of Visual Communication. In Dublin we are taking a course called The Politics of Media Reform, looking at social movements in the 20th century over broadcasting rights.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://academics.blogs.muhlenberg.edu/category/academics-at-muhlenberg/" rel="category tag">Academics at Muhlenberg</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-25 -->
+
+				
+					
+	<article id="post-7" class="post-7 post type-post status-publish format-link hentry category-academics-at-muhlenberg post_format-post-format-link">
+		<header class="entry-header">
+			<hgroup>
+				<h2 class="entry-title"><a href="http://academics.blogs.muhlenberg.edu/2013/02/21/dna-d-c-dancing-delightful/" rel="bookmark">DNA + D.C. + Dancing= Delightful!</a></h2>
+				<h3 class="entry-format">Link</h3>
+			</hgroup>
+
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Hi, everyone!</p>
+<p>My name is Rebecca, and I am a junior here at Muhlenberg. I am a biochemistry major and an economics minor. I applied Early Decision to Muhlenberg, and I still maintain that choosing to spend four years at &#8216;Berg was the best decision I have ever made. I am so excited to blog about life on campus!</p>
+<p>This past week has been an amazing conglomeration of projects, activities, and events&#8211; in other words, a pretty typical week at Muhlenberg! It started with a really successful One Billion Rising Event that the Muhlenberg College Feminist Collective (of which I am a member) planned in conjunction with the international movement activist Eve Ensler started a year ago. On February 14, hundreds of thousands of men, women, and children in over 200 countries around the world sang, spoke, and danced in solidarity of a global commitment to ending sexual and domestic violence and promoting a worldwide atmosphere of love and safety for all its inhabitants. We spoke, read poetry, and danced in the middle of Seegers Union on Campus&#8211; it felt incredible to be a part of a movement that was so much bigger than anything any of us could  have comprehended, and to have received so much support from the campus community! Here&#8217;s an awesome picture of some of the people who &#8220;rose:&#8221;</p>
+<p><img src="https://sphotos-a.xx.fbcdn.net/hphotos-snc7/c93.0.403.403/p403x403/307939_4353662124566_461374304_n.jpg" alt="Foto: One Billion Rising at Muhlenberg College!" width="403" height="403" /></p>
+<p>The awesomenness (hooray for inventing words!) of the week continued with a successful round of experiments for my research. I have been conducting research in a lab since January of sophomore year that isolates and characterizes the enzymes involved in the biosynthesis of lincomycin, an antibiotic used to treat penicillin-resistant infections such as MRSA. By understanding how each of the enzymes in the bacteria <em>Streptomyces lincolnensis </em>function to naturally produce this antibiotic, we hope to identify ways to modify the enzymes so as to keep the drug one step ahead of antibiotic resistance. While I am a little out of my comfort zone in working with DNA (I&#8217;m normally a protein kind of girl), I&#8217;m really excited about my project this semester&#8211; I&#8217;m taking it in a new direction and learning a lot of new experimental techniques!</p>
+<p>A lot of this week has also been spent preparing for the annual National Collegiate Emergency Medical Services Foundation conference! Nine other members of Muhlenberg College EMS and I are heading to Washington DC this weekend to attend seminars and skills labs pertaining to the intricacies of collegiate EMS, participate in competitions, and connect with over 1,000 collegiate EMTs across the country! Expect pictures in future posts 🙂 For now, here is a picture of some of my MCEMS family and me. They are some of my best friends on campus!</p>
+<p><img src="https://sphotos-b.xx.fbcdn.net/hphotos-snc6/222752_485758924816850_1883751016_n.jpg" alt="" width="623" height="472" /></p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://academics.blogs.muhlenberg.edu/2013/02/21/dna-d-c-dancing-delightful/" title="1:50 pm" rel="bookmark"><time class="entry-date" datetime="2013-02-21T13:50:45+00:00">February 21, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://academics.blogs.muhlenberg.edu/author/rgolden/" title="View all posts by Rebecca" rel="author">Rebecca</a></span></span>								</footer><!-- .entry-meta -->
+	</article><!-- #post-7 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://academics.blogs.muhlenberg.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="http://academics.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://academics.blogs.muhlenberg.edu/2013/05/15/goodbye-first-year/">Goodbye First Year</a>
+									</li>
+											<li>
+					<a href="http://academics.blogs.muhlenberg.edu/2013/05/01/last-class-in-dublin/">Last class in Dublin</a>
+									</li>
+											<li>
+					<a href="http://academics.blogs.muhlenberg.edu/2013/04/25/end-of-semester-final-push/">End of semester- Final push!</a>
+									</li>
+											<li>
+					<a href="http://academics.blogs.muhlenberg.edu/2013/04/03/life-lessons-from-design/">Life Lessons from Design</a>
+									</li>
+											<li>
+					<a href="http://academics.blogs.muhlenberg.edu/2013/04/03/who-we-are/">Who We Are</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"></ul></aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://academics.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://academics.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Facademics.blogs.muhlenberg.edu%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://academics.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

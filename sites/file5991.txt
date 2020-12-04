@@ -1,0 +1,974 @@
+http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/
+101
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+men&#8217;s lacrosse | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; men&#039;s lacrosse Category Feed" href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=5576A171C357C9709857489EFF287D39');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive category category-mens-lacrosse category-7849 admin-bar no-customize-support wp-embed-responsive single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<section id="primary">
+			<div id="content" role="main">
+
+			
+				<header class="page-header">
+					<h1 class="page-title">
+					Category Archives: <span>men&#8217;s lacrosse</span>					</h1>
+
+									</header>
+
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-2209" class="post-2209 post type-post status-publish format-standard hentry category-baseball category-mens-basketball category-mens-lacrosse category-tennis category-womens-basketball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/02/21/weekend-preview-february-22-23-2014/" rel="bookmark">Weekend Preview &#8211; February 22-23, 2014</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2014/02/21/weekend-preview-february-22-23-2014/" title="8:16 am" rel="bookmark"><time class="entry-date" datetime="2014-02-21T08:16:03-04:00">February 21, 2014</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg"><img class="alignright size-full wp-image-1812" alt="weekend preview" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/08/weekendpreview_small.jpg" width="264" height="150" /></a><em>Melting snow and the ping of the aluminum bat are two sure signs that spring is starting to break through after the long winter. Baseball, lacrosse and women&#8217;s tennis all are scheduled to compete on a weekend highlighted by one winter team competing at the Centennial Conference Championships and the other four gearing up for them.</em></p>
+<p><strong>Men&#8217;s Lacrosse vs. York (Pa.) (Saturday, 12:00)</strong></p>
+<p>Field conditions permitting, the Mules will make their home debut against a York squad coming off an overtime loss to defending national champion Stevenson. Muhlenberg opened its season with an 11-7 loss at Montclair State. The Spartans, who set a school record with 13 wins last year, are part of a grueling schedule for the Mules: their 14 opponents combined for a .607 winning percentage in 2013. York won last year&#8217;s meeting, 15-10.</p>
+<p><a href="http://www.muhlenberg.edu/sports/mlaxlive/xlive.htm" target="_blank">live stats</a></p>
+<p><strong>Women&#8217;s Basketball vs. Ursinus (Saturday, 2:00)</strong></p>
+<p>The Mules closed out their regular season looking to take some momentum into the playoffs. For a change, they already know who and where they&#8217;ll play in the postseason: Muhlenberg (15-9, 11-6) is the fourth seed and will host fifth-seeded Gettysburg on Wednesday.</p>
+<p>Ursinus (11-12, 8-9) won five in a row to put itself in contention for a playoff spot before getting eliminated with a 73-36 loss to Haverford on Wednesday.</p>
+<p>The Mules have won 11 straight meetings against the Bears, including a convincing 67-43 victory in Collegeville last month, part of their current stretch of nine wins in 11 games.</p>
+<p><a href="http://www.muhlenberg.edu/sports/wbblive/xlive.htm" target="_blank">live stats</a> | <a href="http://www.muhlenberg.edu/main/athletics/streamingvideo.html" target="_blank">live video</a></p>
+<p><strong>Men&#8217;s Basketball vs. Ursinus (Saturday, 4:00)</strong></p>
+<p>Muhlenberg (15-9, 10-7) has clinched a playoff berth and is locked into the 4-5 game. The Mules need a win and a Johns Hopkins loss at Washington to host the game; otherwise they will travel to Franklin &amp; Marshall, McDaniel or Johns Hopkins for their first-round clash.</p>
+<p>Winless through their first 10 games of the Centennial Conference season, Ursinus (6-18, 4-13) has caught fire of late, winning four of its last seven. The Bears come into Memorial Hall on a three-game winning streak, which includes a 61-56 defeat of F&amp;M.</p>
+<p>Muhlenberg won 82-66 when the teams met a month ago for its fourth straight series win. Last year, the Mules swept the Bears in a season series for the first time since 1999-2000.</p>
+<p><a href="http://www.muhlenberg.edu/sports/mbblive/xlive.htm" target="_blank">live stats</a> | <a href="http://www.muhlenberg.edu/main/athletics/streamingvideo.html">live video</a></p>
+<p><strong>Wrestling at Centennial Conference Championships (Saturday, 10:00)</strong></p>
+<p>Two Muhlenberg wrestlers are expected to travel to Ursinus to compete at the conference meet. Freshman Jaryd Flank was 4-4 in the CC in a tough 125-pound field that includes two of the top-ranked wrestlers in the country. Sophomore Che Chengsupanimit was 2-6 at 149.</p>
+<p><a href="http://www.ursinusathletics.com/2014CCWrestle" target="_blank">tournament site</a></p>
+<p><strong>Indoor Track &amp; Field at Haverford&#8217;s Keogh Invitational (Saturday, 11:00)</strong></p>
+<p>After losing a meet to the weather last weekend, the Mules teams have their final tuneup for next weekend&#8217;s Centennial Conference Championships.</p>
+<p><a href="http://www.kennett-timing.com/">live results</a></p>
+<p><strong>Women&#8217;s Tennis at Vassar (Saturday, 12:00)</strong></p>
+<p>The Mules open their spring season against a Vassar team that was ranked 10th in the Northeast Region in the ITA preseason poll.</p>
+<p><strong>Baseball at Gallaudet (Sunday, 12:00 doubleheader)</strong></p>
+<p>Muhlenberg will get in the second half of its scheduled opening weekend four-game trip (Saturday&#8217;s twinbill at Shenandoah was rescheduled as a single game for Sunday, March 23). The forecast calls for weather in the mid-50s in Washington on Sunday &#8211; not bad at all. The Mules were 20-20 in 2013; Gallaudet, coached by former Major Leaguer Curtis Pride, went 20-21 and opened its 2014 campaign with a 14-4 win against Marymount on Wednesday.</p>
+<p>The Mules opened their last three seasons with doubleheader sweeps of the Bison, winning last year&#8217;s games 8-4 and 4-3.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/baseball/" rel="category tag">baseball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/tennis/" rel="category tag">tennis</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-2209 -->
+
+				
+					
+	<article id="post-1933" class="post-1933 post type-post status-publish format-standard hentry category-mens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/10/03/halfway-lacrosse-the-world/" rel="bookmark">From Russia with Lax</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/10/03/halfway-lacrosse-the-world/" title="2:14 pm" rel="bookmark"><time class="entry-date" datetime="2013-10-03T14:14:40-04:00">October 3, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmerhs.jpg"><img class="alignleft size-full wp-image-1936" alt="Nick Farmer" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmerhs.jpg" width="100" height="150" /></a>A good number of Muhlenberg men&#8217;s lacrosse players have studied abroad in recent years, but while most of them have gone to Maastricht in the Netherlands, junior Nick Farmer is spending the fall semester in St. Petersburg, Russia. He checked in to give a taste of his experience:</em></p>
+<p>The farthest I’d been from home: the far-off land of Disney World. After a lackluster lunch, enduring my first piecemeal conversation/game of charades with a true Russian &#8220;security man&#8221; from Brooklyn, and chasing the sun nearly halfway around the world I finally felt the screech of the wheels on the tarmac of Pulkovo a decade later.</p>
+<div id="attachment_1935" style="width: 250px" class="wp-caption alignright"><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_winterpalace.jpg"><img aria-describedby="caption-attachment-1935" class="size-full wp-image-1935" alt="Farmer in front of the former czarist Winter Palace (now part of the Hermitage Museum). " src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_winterpalace.jpg" width="240" height="501" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_winterpalace.jpg 240w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_winterpalace-143x300.jpg 143w" sizes="(max-width: 240px) 100vw, 240px" /></a><p id="caption-attachment-1935" class="wp-caption-text">Farmer in front of the former czarist Winter Palace (now part of the Hermitage Museum).</p></div>
+<p>As our tin can of a plane trudged to the gate, I sedately looked out the window only to see a white, wolf-like stray casually pacing down the runway. As if I needed assurance, between the dog and Cyrillic print on the Soviet-era hangars, I knew I had landed in St. Petersburg.</p>
+<p>As soon as the first passenger stood up, everyone rushed out of their seats; the attendants didn’t even try to stop them (a type of behavior I have now grown accustomed to). The &#8220;security man&#8221; yanked me out of my seat and thickly gestured me to follow him. Half expecting to be mugged, abducted or worse, in a zombielike state I followed him to the passport line. Here we managed to cut half of the 300+ people patiently standing in line. Ten minutes later I watched him get his passport stamped only to disappear into the crowd of luggage haphazardly tossed around a large room, never to be seen again.</p>
+<p>After spending two days in a hotel for &#8220;orientation,&#8221; I finally met my host mom, Nailya (which I couldn’t pronounce at all). Upon learning that I had only taken six hour-long courses of Russian over the summer, Nailya looked at me in a seemingly disheartened glare. The 15-minute wait for our late taxi was the most awkward experience of my life.</p>
+<p>On the way up Московский проспeкт (Moskovsky Prospekt or Avenue) to my home for the next semester, Nailya pointed out a number of statues, administrative buildings, important streets and some of the various canals that are spread across the &#8220;Venice of the North.&#8221; Way too much information for me to take in, never mind try to understand across our mutual language barrier.</p>
+<div id="attachment_1934" style="width: 310px" class="wp-caption alignleft"><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_school.jpg"><img aria-describedby="caption-attachment-1934" class="size-full wp-image-1934" alt="Farmer's school." src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_school.jpg" width="300" height="424" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_school.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/10/farmer_school-212x300.jpg 212w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-1934" class="wp-caption-text">Farmer&#8217;s school.</p></div>
+<p>After nearly three weeks in St. Petersburg, I can walk down the street without smiling (* see note below), successfully figure out how to get home and even order a cup of coffee in the morning. Living in Russia, even in the most welcoming city in the country, is a daily challenge. If I hadn’t known that every day would be a linguistic mess, I would be having a miserable time. Instead, having locals laugh at me while attempting the most menial of tasks is entertaining and easily used as fuel to continue learning.</p>
+<p>Exercising in public seems to be taboo, so I find myself running and working out in an overpriced gym on the bank of the Neva River, which runs through the center of town. Being away from Fall Ball at Muhlenberg, I’ve looked for a lacrosse club in the area to keep my game up. I managed to find one of only two clubs in the entire country and should be practicing with them this upcoming weekend. I can’t see practices going that long, it’s already starting to feel like winter here!</p>
+<p><em>* We asked Nick to explain this &#8220;not smiling&#8221; business, and here is what he wrote back: &#8220;In Russia, there are a few different ways to tell a local from a foreigner (specifically an American) &#8211; 1. We speak English. 2. We travel in large groups and loudly speak English. 3. We show emotion in public. Number 3 has been the hardest for me because I sometimes smile at strangers when making eye contact with them on the street in America &#8230; or say please and thank you when ordering food etc.  &#8230; no one does that here hahaha.&#8221;</em></p>
+<p><em>Global education is an important part of the Muhlenberg experience in a world that is becoming increasingly interdependent. Currently there are between 250 and 300 students studying abroad each year, and 52.4% of Muhlenberg graduates from the Class of 2013 studied abroad.<strong> </strong></em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1933 -->
+
+				
+					
+	<article id="post-1776" class="post-1776 post type-post status-publish format-standard hentry category-baseball category-lacrosse category-mens-basketball category-mens-lacrosse category-softball category-womens-basketball category-womens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/05/30/the-year-in-senior-profiles-part-2/" rel="bookmark">The Year in &#8230; Senior Profiles, Part 2</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2013/05/30/the-year-in-senior-profiles-part-2/" title="9:30 am" rel="bookmark"><time class="entry-date" datetime="2013-05-30T09:30:37-04:00">May 30, 2013</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>Profiles of senior Muhlenberg athletes are published in game programs in the sports of field hockey, football, soccer, volleyball, basketball, wrestling, baseball, softball, lacrosse and tennis, usually on that sport’s Senior Day.</em></p>
+<p><em>As part of the Year in Review, here are some of the best responses in the Q&amp;A profiles from the winter and spring athletes.</em></p>
+<p><strong>Matt O’Hara, Men&#8217;s Basketball</strong></p>
+<p><strong>If you could trade places with anyone for a day, who would it be? </strong>Truthfully, in a completely non-weird way, I’d love to be on the girls’ basketball team. They have the best team chemistry at this school and some of my best friends are on that team: Julie Kelly, Alita Zabrecky and Kate Clawson, plus the whole sophomore class. They are a great team with great girls who have a ton of fun together.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/lagomarsino_yir.jpg"><img class="alignright size-full wp-image-1777" title="Ryan Lagomarsino" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/lagomarsino_yir.jpg" alt="" width="256" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/lagomarsino_yir.jpg 256w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/lagomarsino_yir-219x300.jpg 219w" sizes="(max-width: 256px) 100vw, 256px" /></a>Ryan Lagomarsino, Men&#8217;s Basketball</strong></p>
+<p><strong>What was it like student teaching this past fall semester? </strong>Student teaching and playing basketball was an enjoyable hell. I would wake up every morning at six and hang out with a bunch of little prepubescent eighth graders. It was great because they would actually get my jokes and appreciate me acting like an idiot for their entertainment. After I was done yelling at those little whirling dervishes, and maybe teaching them a thing or two about the Mayan Empire, I would drive back to school, shove food down my throat and then get yelled at during practice. In the midst of all of this chaos, I would somehow do homework and sleep (sometimes during practice&#8230;) and I eventually became a master of the chaos. The worst part about all of this running around was that I loved every second of my time being Mr. Lags.</p>
+<p><strong>Alita Zabrecky, Women&#8217;s Basketball</strong></p>
+<p><strong>What’s the most memorable game of your Muhlenberg career? </strong>My most memorable game was, by far, my freshman year at Gettysburg. For some reason Coach had both Kate Clawson and I on the floor late in the game, down by one, with just seconds to go. We had the ball on the sideline out of bounds and our play was designed to get either Kelly [McKeon] or Alex [Chili] the ball so they could shoot, but they were not able to get open so by default, they had to pass to me. I started dribbling toward the basket and the next thing I know I am dribbling the ball off of my foot, thankfully right in the direction of Kate who snatched it up off of the floor. Once Kate had secured the ball I figured my best bet was just to stay out of the way and run to the basket to grab a rebound if someone missed a shot. After almost turning the ball over, I figured I probably should not be taking the last shot of the game. Kate now throws the ball into Sheila Cook in the post, and as I am making my way to the basket, Sheila throws the ball to me, assuming I am making a cut and that I wanted the ball (which I did not). It bounced off my chest, and I caught it and laid it in for the game-winning bucket. This play was by far the most dysfunctional game-winning play I have ever been a part of. I am just thankful that I made the layup given my track record of missed layups.</p>
+<p><strong>Ted Albanese, Men&#8217;s Lacrosse</strong></p>
+<p><strong>How did you get started playing lacrosse? </strong>I started playing lacrosse when I was 10 years old and in fourth grade. My career conveniently started when my baseball career ended (I didn&#8217;t make the travel team). It&#8217;s a funny story actually. The night I found out I didn&#8217;t make the baseball team, I also found out my pet hermit crab died, so that was a rough night.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/carpetto_yir.jpg"><img class="alignright size-full wp-image-1785" title="Michael Carpetto" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/carpetto_yir.jpg" alt="" width="248" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/carpetto_yir.jpg 248w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/carpetto_yir-212x300.jpg 212w" sizes="(max-width: 248px) 100vw, 248px" /></a>Michael Carpetto, Men&#8217;s Lacrosse</strong></p>
+<p align="left"><strong>What was it like playing with your brother at Muhlenberg? </strong>Since I was born, my brother was always right there at my side &#8230; By the time I was a senior in high school, &#8230; the only one I had in mind was Muhlenberg so I could play with my brother. When spring of my freshman year finally came, it felt like Christmas came early. As the team hit the field for the first time, I just saw my brother and I walking out to the backyard to have a catch. When lined up to guard him in practice, he’ll say he got the best of my every time, but he doesn’t want to admit his little brother came in as a freshman and put him on an island day in and day out. It was one thing to practice together, but to play in the games with each other made it even more special. Hearing, &#8220;Carpetto brothers you’re next on defense&#8221; was something that gave me chills every game.</p>
+<p><strong>Jack Reilly, Men&#8217;s Lacrosse</strong></p>
+<p align="left"><strong>What’s one possession you couldn’t live without? </strong>The possession I can’t live without is the bond and relationships I have developed with my teammates. This outweighs any material possession I own and is something that will last a lifetime.</p>
+<p><strong>Angie Sisco, Softball</strong></p>
+<p><strong>What’s one thing on your bucket list? </strong>To go to the Everglades and finally see and/or wrestle an alligator … I’d be okay with either.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/sullivan_yir.jpg"><img class="alignright size-full wp-image-1778" title="Elizabeth Sullivan" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/sullivan_yir.jpg" alt="" width="285" height="379" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/sullivan_yir.jpg 285w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/sullivan_yir-225x300.jpg 225w" sizes="(max-width: 285px) 100vw, 285px" /></a>Elizabeth Sullivan, Softball</strong></p>
+<p><strong>Describe Coach DeStasio in one word. </strong>I would describe Coach DeStasio as a “non-hugger.” This year we divided our team into “huggers” and the “touch me and die” group, otherwise known as “non-huggers.” Having grown up with the president of the “huggers,” Angie Sisco, I am definitely part of the “non-hugging” group and it’s great to have a coach that shares my views on this matter.</p>
+<p><strong>Jessica Klein, Women&#8217;s Tennis</strong></p>
+<p><strong>What off-the-court accomplishment are you most proud of? </strong>One off-the-court accomplishment I am proud of is getting into Muhlenberg. I worked hard to get here, and it has been a remarkable journey that I am so privileged to have had.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/vontaube_yir.jpg"><img class="alignright size-full wp-image-1779" title="Amanda von Taube" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/vontaube_yir.jpg" alt="" width="228" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/vontaube_yir.jpg 228w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/vontaube_yir-195x300.jpg 195w" sizes="(max-width: 228px) 100vw, 228px" /></a>Amanda von Taube, Women&#8217;s Tennis</strong></p>
+<p><strong>This is your second year as team captain. What has been the most rewarding part of leading the team for two years? </strong>The most rewarding part of being captain is being able to see all of my fellow teammates grow not only as tennis players, but as people – on and off the court. On the court especially, I have seen so many of my fellow teammates get more and more confident in their games and play some truly amazing tennis. Every one of them motivates me to be a better tennis player and even though I am captain, I think I look up to them for all that they do and their tennis skills. We spend so much time together during the season and I feel really lucky to have met such a smart, fun, loving group of girls … I am so honored to hold this position for my team.</p>
+<p><strong>Alexandra Franck, Women&#8217;s Lacrosse</strong></p>
+<p><strong>Do you have any pregame rituals or superstitions? </strong>My teammates will call me the most superstitious person on the team, and I’d have to agree. I’ve been wearing the same bow in my hair for game day throughout my four years here. I have two main rituals &#8211; one is taking a shower before every game. I started doing this my freshman year and when I started having success on the field, I knew I had to keep it. It’s a way of thinking about the game and what I want to accomplish. The second ritual also started my freshman year &#8211; a senior at the time (Alyssa Bascelli) told me about her pregame ritual of eating a pint of Ben &amp; Jerry’s ice cream the night before every game. She informed us that someone had to do it with her so that when she graduated, it would get passed down. I was the willing (and maybe not so intelligent) freshman who said, “Sure!” and proceeded to eat a pint of Ben &amp; Jerry’s Chocolate Chip Cookie Dough ice cream the night before every game. I have for all four years and now that I am graduating, I have passed the ritual down to freshmen Rachel Pedersen and Casey Armstrong. You guys better not disappoint me!</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/gabriele_yir.jpg"><img class="alignright size-full wp-image-1780" title="Ali Gabriele" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/gabriele_yir.jpg" alt="" width="189" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/gabriele_yir.jpg 189w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/gabriele_yir-162x300.jpg 162w" sizes="(max-width: 189px) 100vw, 189px" /></a>Ali Gabriele, Women&#8217;s Lacrosse</strong></p>
+<p><strong>Your middle name, Zoe, is pretty unique. Were you named after someone? </strong>I am named after my Greek grandmother (my Yiayia) whose name was Bessie Zoe Athanasiou. Zoe means “life” in Greek and was the perfect portrayal of my Yiayia who is sadly no longer with us. We also both had only one dimple on our left cheeks. This was something we shared and something she always loved about the two of us. I am honored to be named after my Yiayia, and her spirit lives on and will continue to live on through me as I share her name.  </p>
+<p><strong>Molly Davin, Women&#8217;s Lacrosse</strong></p>
+<p><strong>What’s it like having six siblings? Are you the youngest, oldest or in the middle? </strong>I am the third oldest of seven. My brother, Joey, is the oldest, then I have one older sister, Kelly, and four younger sisters, Erin, Mary Kate, Maggie and Tara. People generally feel sorry for my brother for being the only boy, but they shouldn’t because he is treated like a king (and acts like it). The biggest issue with having six siblings, and especially five sisters, is that you cannot leave any personal items unattended, especially clothing, because you will never get it back.</p>
+<p><strong>Ryan Rechten, Baseball</strong></p>
+<p><strong>Do you have any pregame rituals or superstitions? </strong>I have way too many superstitions and rituals to even name them all – from the way I put on my cleats to the made-up gibberish language our catcher Brett Rosen and I use to communicate before I pitch. The most meaningful and consistent ritual I have revolves around the word “trust.” The importance of this word was instilled in me by my high school coach. Before the inning begins he would tell me to clear off the mound and envision the word trust printed on the rubber. This year I printed it on the brim of my hat. It has served as my anchor, allowing me to take all the emotion out of the situation and focus on doing my job for our team.</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/velys_yir.jpg"><img class="alignright size-full wp-image-1781" title="Tim Velys" src="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/velys_yir.jpg" alt="" width="186" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/velys_yir.jpg 186w, http://sportsinfo.blogs.muhlenberg.edu/files/2013/05/velys_yir-159x300.jpg 159w" sizes="(max-width: 186px) 100vw, 186px" /></a>Tim Velys, Baseball</strong></p>
+<p><strong>How is it being teammates with Ryan Rechten? </strong>As a player, Ryan is one of the more loose and goofy kids on the team – he always has something ridiculous to say. The best part about this is that it makes everyone around him relaxed and reminds us that baseball is just a game and that we must treat it that way if we want to be successful. What I commend him for is his ability to joke around and have fun in the bullpen for six innings of the game and then turn it on right around the sixth knowing that it is his job to come in late and shut the door against the opposing team. I couldn’t think of a better person to have in this role as I have all the confidence in the world that he will come in and get outs in a hurry.</p>
+<p><strong>Rob Shannon, Baseball</strong></p>
+<p><strong>What’s it like having nine older siblings? </strong>Having nine older siblings is the most incredible thing in my life. It is something that I truly treasure. I am so blessed to have them because they have truly made me into the person I am today. They mean more to me than words can capture. I wear the number nine to represent them.</p>
+<p><strong>Robert Appleby, Baseball</strong></p>
+<p><strong>How did you get started playing baseball and what’s your first memory of playing?</strong>I’m not really sure how I got started but when I did start playing at the age of 4, I was instantly obsessed. My first memory of actually playing baseball was my first year of tee ball. The league rules were that there were no outs and each team got to hit through the lineup every inning. I remember being at shortstop when this kid hit a line drive to me, which I caught and doubled off the runner at first base. Even though I made the play, he still got to stay on base. I remember how excited I was when I was old enough to play in the league where you could actually get people out. As a hitter now, I take back ever thinking that.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/baseball/" rel="category tag">baseball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/lacrosse/" rel="category tag">lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/softball/" rel="category tag">softball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-lacrosse/" rel="category tag">women's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1776 -->
+
+				
+					
+	<article id="post-1405" class="post-1405 post type-post status-publish format-standard hentry category-mens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/09/tunnel-to-towers/" rel="bookmark">Tunnel to Towers</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/10/09/tunnel-to-towers/" title="2:48 pm" rel="bookmark"><time class="entry-date" datetime="2012-10-09T14:48:53-04:00">October 9, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>The Muhlenberg men&#8217;s lacrosse team recently participated in a very special event in New York City. Sophomore Austin Akner wrote about the experience.</em></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/TTTR_NYC_Logo.jpg"><img class="alignright size-medium wp-image-1410" title="Tunnel to Tower Run logo" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/TTTR_NYC_Logo-300x258.jpg" alt="" width="300" height="258" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/TTTR_NYC_Logo-300x258.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/TTTR_NYC_Logo-348x300.jpg 348w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/TTTR_NYC_Logo.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" /></a>Six o’clock Sunday morning, September 30, and the Muhlenberg College men’s lacrosse team was en route to New York City to run the Stephen Siller Tunnel to Towers 5K. It wasn’t hard to sacrifice some of our weekend and roll out of bed before the sun when we found out what we were running for.</p>
+<p>Stephen Siller, a FDNY firefighter of Squad 1, Park Slope, Brooklyn, from Rockville Centre, N.Y., gave his life on the tragic day of September 11, 2001. Being from Rockville Centre, his story hit home with me.</p>
+<p>After working the night shift, his morning plans of playing golf with his brothers were interrupted by news of the first tower being hit. He called his wife, returned to the firehouse, and grabbed his 60 pounds of gear. The Battery Tunnel was closed, so he ditched his car and ran through the tunnel to meet up with his squad.</p>
+<p>Like so many others, Siller perished on 9/11 helping save lives. At age 32, Stephen Siller left behind his wife, five children, and a legacy of sacrifice and hard work.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun2.jpg"><img class="alignleft size-medium wp-image-1408" title="tunnelrun2" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun2-225x300.jpg" alt="" width="225" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun2-225x300.jpg 225w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun2.jpg 300w" sizes="(max-width: 225px) 100vw, 225px" /></a>The 5K run retraced his footsteps. Starting at his firehouse, 30,000 runners lined the streets to honor him and all of those who lost their lives. Current firefighters from New York and around the world ran in their gear to pay tribute. It took almost 10 minutes to get across the starting line and get a jog going.</p>
+<p>The Mules ran through the tolls into the Battery Tunnel. USA chants erupted. We cheered on Wounded Warriors as we ran. Coming out of the muggy tunnel, the first fresh breath was that of the new World Trade Center buildings against a clear sky. Cadets from West Point lined the street bearing American Flags. Firefighters sporting their formal blues held banners of the faces of all the firefighters who lost their lives. I ran by, acknowledging each smiling picture. I ran harder.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun4.jpg"><img class="alignright size-full wp-image-1406" title="tunnelrun4" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun4.jpg" alt="" width="350" height="350" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun4.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun4-150x150.jpg 150w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun4-300x300.jpg 300w" sizes="(max-width: 350px) 100vw, 350px" /></a>Running through Battery Park, the Statue of Liberty stood out in the sun. No one thought about the running. The burning in our legs and feet disappeared as memories of 9/11 raced through our heads. Finishing in groups, we met back up as a unit at the foot of the new FreedomTower.</p>
+<p>It was an emotional and awesome experience. We ran with a sense of pride. Many were surprised that we made the two-hour drive from Allentown. A few Muhlenberg alumni came up and told us what year they graduated. We got to see some of our parents and take in the scenery.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun3.jpg"><img class="alignleft size-full wp-image-1409" title="tunnelrun3" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun3.jpg" alt="" width="320" height="240" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun3.jpg 320w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/10/tunnelrun3-300x225.jpg 300w" sizes="(max-width: 320px) 100vw, 320px" /></a>I’m glad we had the opportunity to partake in such an event and contribute. It was definitely special running together through the tunnel and along the Hudson River on such a beautiful morning in New York City. We’ll look forward to doing it again next year!</p>
+<p><em>For more information on the Tunnel to Towers Foundation and the many causes it supports, please visit the website <a href="http://tunneltotowersrun.org/">http://tunneltotowersrun.org/</a></em></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1405 -->
+
+				
+					
+	<article id="post-1318" class="post-1318 post type-post status-publish format-standard hentry category-mens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/08/14/de-ruiter-dutch-defender/" rel="bookmark">De Ruiter, Dutch Defender</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/08/14/de-ruiter-dutch-defender/" title="4:15 pm" rel="bookmark"><time class="entry-date" datetime="2012-08-14T16:15:29-04:00">August 14, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Typical study abroad experiences involve immersion in an intriguing and unfamiliar culture, overcoming language barriers, experiencing college classes at different institutions, making new friends and accumulating countless memories to share with family and friends at home.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiterhs.jpg"><img class="alignleft size-full wp-image-1326" title="Ian de Ruiter" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiterhs.jpg" alt="" width="100" height="150" /></a>For rising senior Ian de Ruiter, his study abroad experience in Maastricht last spring was all of the above but with a slight twist. The Muhlenberg lacrosse player spent several days of his semester-long stay in the Netherlands successfully trying out for the Dutch National Lacrosse Team.</p>
+<p>De Ruiter, who was born in the United States and played for nationally ranked John Jay High School in his hometown of Cross River, N.Y., has a Dutch passport, making him eligible to try out for the national team.</p>
+<p>Former Muhlenberg teammate Brent Siebold ’11, who also tried out for the Dutch National Team during his study-abroad stint in Maastricht, brought this eligibility to de Ruiter’s attention and encouraged him to try out for the team.</p>
+<p>De Ruiter, whose given name is Hendrick, that of his Dutch-born paternal grandfather, is quite familiar with the country because he visits his family there every other Christmas.</p>
+<p>“My dad was born and raised in Holland and his whole family lives there,” says de Ruiter. “So it was natural for me to go there to study and play lacrosse.”</p>
+<p>The 2012 European Lacrosse Championship was held in Amsterdam, the capital of the Netherlands, this past June, so de Ruiter was able to compete for the Dutch team on their home turf.</p>
+<p>De Ruiter arrived in Holland and spent a week with his family before beginning a rigorous 10-day training camp in preparation for the tournament.<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter31.jpg"><img class="alignright size-medium wp-image-1322" title="Ian de Ruiter" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter31-300x210.jpg" alt="" width="300" height="210" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter31-300x210.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter31-428x300.jpg 428w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter31.jpg 600w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>“It was a little more intense than I thought it would be,” he laughs. “They had us out in the woods and wanted us really focusing on training and getting ready for the tournament. Eat, sleep, practice. That was it. They didn’t even want us going on Facebook.”</p>
+<p>De Ruiter explains that the national team consisted of several Dutch players and five North Americans who, like him, have Dutch passports but don’t live in Holland.</p>
+<p>Two of the North Americans on the team were from Canada and the other three were from the United States. Ironically, de Ruiter knew the Dutch players from the tryouts but didn’t know any of the North American players.</p>
+<p>The players from Holland, all of them still in school, ranged in age from 23 to 30 years old. De Ruiter, at 21, was one of the youngest players on the team.</p>
+<p>De Ruiter says that lacrosse is not as popular in Holland as it is in America and the sport is played primarily by college students. Even though the game was slightly different from what he usually experiences as a defender in the highly competitive Centennial Conference, playing in Europe was undoubtedly a positive experience.</p>
+<p>“Each team had a couple of really, really good players which made it a solid game overall,” he states.</p>
+<p>Three-time All-American goalie Grant Zimmerman from the University of North Carolina was one of de Ruiter’s fellow Americans on the Dutch team.</p>
+<p>“At Muhlenberg, it’s a lot more organized because everyone has been playing a lot longer,” he continues. “Physically and athletically, the play in Europe is just as good. It actually gets more physical there because there are a lot of missed passes, which creates chaotic situations.”</p>
+<p>Right from the get-go, de Ruiter had the opportunity to play in the Olympic stadium in Amsterdam in front of 2,000 lacrosse fans. Amsterdam hosted the Olympic Games back in 1928.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter11.jpg"><img class="size-full wp-image-1323 alignleft" title="Ian de Ruiter" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter11.jpg" alt="" width="275" height="242" /></a>“It was the first time lacrosse was played there since it was a demonstration sport in the early Olympics,” he recalls. “People were going nuts and everyone was dressed up in orange. We were playing Germany, which is Holland’s biggest rival in everything. The fans were doing Dutch cheers when we walked out. It was really cool to be playing for the entire country, and the fans were really passionate.”</p>
+<p>The Dutch National Team finished fourth out of 17 teams in the European Championship despite having a 3-6 record in group play. They lost to Sweden in the tournament consolation game by one goal, just missing out on a bronze medal.</p>
+<p>According to de Ruiter, his team struggled during the group stage of the tournament because they were in the toughest group with the most competitive teams. Consequently, they had a low seed coming into the final tournament and had to play the Czech Republic in the first round, the best team in the group below.</p>
+<p>“That game was really exciting. We won in triple OT.”</p>
+<p>The Dutch then faced an inexperienced Israeli team in the second round and came away with another victory. In the semifinals they were matched up against England.</p>
+<p>“They were the best team in the entire tournament by far,” states de Ruiter. “We played them earlier during the group stage and they beat us pretty well. This time we hung in with them for half of the game.”<a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter21.jpg"><img class="alignright size-medium wp-image-1325" title="Ian de Ruiter" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter21-195x300.jpg" alt="" width="195" height="300" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter21-195x300.jpg 195w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/08/deruiter21.jpg 339w" sizes="(max-width: 195px) 100vw, 195px" /></a></p>
+<p>Despite the loss to Sweden in the next game de Ruiter says it was a pretty significant accomplishment to make it as far as they did in the tournament and finish fourth in the final standings.</p>
+<p>With training camp and tournament play, the team only had one day off, but de Ruiter says they made the most of it.</p>
+<p>“We rented bikes with a bunch of Dutch guys on the team and they took us around to cool spots to eat. It was fun to go around with the locals. I like how laid back it is there. It’s a city but it’s very relaxed.”</p>
+<p>De Ruiter says the language barrier wasn’t a problem because all of the Dutch players can speak English, making it easy to communicate off and even on the field, where some Dutch terms are used.</p>
+<p>“On the field it’s a mix of Dutch and English. I’m able to understand the Dutch commands they use even though I can’t actually speak the language,” he states.</p>
+<p>De Ruiter believes one of the most important things he learned while playing for the national team, and something he would like to bring back to his team at Muhlenberg, didn’t have to do with lacrosse skills.</p>
+<p>“They really focused on team building and creating a close knit group when we were there. The team would hang out and watch movies. It wasn’t all about trying to get better at lacrosse. I want to get new freshmen involved and build a close family atmosphere among the team here at Muhlenberg.”</p>
+<p>De Ruiter will graduate shortly after the lacrosse season concludes in the spring. After graduation, the finance major hopes to get a job with Merrill Lynch, where he interned this summer. He does, however, plan to keep lacrosse in his life.</p>
+<p>“If I have the chance, I’m definitely going to try out for the Dutch National Team again. It was an awesome experience and I really enjoyed it.”</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1318 -->
+
+				
+					
+	<article id="post-1133" class="post-1133 post type-post status-publish format-standard hentry category-mens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/" rel="bookmark">Senior Profiles: Men&#8217;s Lacrosse</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/05/10/senior-profiles-mens-lacrosse/" title="2:09 pm" rel="bookmark"><time class="entry-date" datetime="2012-05-10T14:09:49-04:00">May 10, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>With the spring sports season just about wrapped up, we will be taking a closer look at Muhlenberg’s senior student-athletes.</em></p>
+<p><em>We continue with men’s lacrosse. Seniors Alex Ardolino, Corey Aferiat, Charlie Pianko, Nick Rispoli, Jonathan Fritog, Jay Salasko and Andrew Disdier were honored during a ceremony before the season finale against Haverford.</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/ardolinohs.jpg"><img class="alignleft size-full wp-image-1137" title="ardolinohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/ardolinohs.jpg" alt="" width="100" height="150" /></a>Alex Ardolino</strong><em></em></p>
+<p><strong>How big of an accomplishment is it for you that you rank in the top 10 in school history in points and goals? </strong>It is a nice category to be a part of. There are many good players in that category, and some of them are my friends.<strong></strong></p>
+<p><strong>What are your strengths as a player? </strong>I feel that my speed and my ability to use my off hand are the strongest parts of my game.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>Scoring the overtime goal to beat Haverford my sophomore year.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>The trip to Vancouver this summer; we had a great time.<strong></strong></p>
+<p><strong>What are your future plans? </strong>I will be working as a financial advisor in New York City.</p>
+<p><strong>What’s Corey Aferiat like off the field? </strong>There is so much you can say about Corey. He is one of the funniest people I know. His one-liners and voice impressions are great. His claim to fame is his classic joke, “So a horse walks into a bar, and the bartender says why the long face?” Corey is a great guy to hang out with and one of the smartest people I know. We have had some fun times. He is always joking around and making people laugh, and I am sure he will continue to do that at Yale next year.<strong></strong></p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/aferiaths.jpg"><img class="alignleft size-full wp-image-1138" title="aferiaths" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/aferiaths.jpg" alt="" width="100" height="150" /></a>Corey Aferiat</strong></p>
+<p><strong>What’s it like being one of the few guys on the team from south of the Mason-Dixon Line? </strong>It is nice to have a little geographic diversity on the team, and hopefully I add a little pseudo-southern character. However, it is really difficult being the only one on the team who can’t handle the cold weather practices. I have been outcasted for my wardrobe on numerous occasions, most notably for wearing my sweat suit to practice, even when it is in the 50s. I tell people it’s because I like to be comfortable, but they don’t seem to care. They just don’t understand the harsh transition from nice, warm Virginia weather to the freezing, arctic conditions we deal with here in the Lehigh Valley.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable Muhlenberg lacrosse memory was beating Gettysburg on our home field last year. To have everyone on the team show up like they did, leave it all out there and come out with a huge win was incredibly special.<strong></strong></p>
+<p><strong>What made you decide to major in political science and minor in public health? </strong>I had planned on majoring in political science when I got to college, but I didn’t know what area I was most interested in. It wasn’t until sophomore year when I figured out I would be best suited in American government and public policy. With regards to public health, I didn’t really have much of an idea about what public health was until I took a course in it as a sophomore. My mom had suggested I take the course, so I figured why not. I really enjoyed the class, and as they say, the rest is history.<strong></strong></p>
+<p><strong>What are your future plans? </strong>Next year I will be studying health policy and administration at Yale University. After two years of graduate school, I hope to find a job within the realm of hospital administration.</p>
+<p><strong>What kind of teammate is Alex Ardolino? </strong>Alex is an awesome guy to have out on the field and in the locker room. I admire him the most for his love of the game. It is clear that regardless of what is going on (winning streaks, losing streaks, bad practices, good practices) that he continues to love being a part of the game. When you watch him in practices and games, you can tell he experiences genuine satisfaction from just being around the sport. That kind of love and commitment for the game rubs off on his teammates, and it has certainly rubbed off on me. Despite the fact he has made me look inexcusably slow during sprints in practice for four years straight, I am definitely honored to have been his teammate. <strong></strong></p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/piankohs.jpg"><img class="alignleft size-full wp-image-1139" title="piankohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/piankohs.jpg" alt="" width="100" height="150" /></a>Charlie Pianko</strong></p>
+<p><strong>What’s something most people don’t know about you that they might find interesting? </strong>An interesting fact that most people don’t know is that my dad and Doug Rheiner’s dad were fraternity brothers at Gettysburg.</p>
+<p><strong>How have you improved as a player since coming to Muhlenberg? </strong>I would say I have improved every part of my game since coming to Muhlenberg. I think it is impossible not to when you go to practice every day with the amount of talent we have on this team. It forces you to get better.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable memory has to be beating Gettysburg last year. To beat a team that Muhlenberg had never beaten before was something special.<strong> </strong></p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>I think there is a high possibility I would get in serious trouble if I didn’t say when I met my girlfriend, so I’ll go with that.</p>
+<p><strong>What’s it like playing against your brother who plays for Dickinson? </strong>It is a fun time for my entire family except for the fact that my parents do not know who to root for. I just wish we were able to beat them one of the three years we played against each other, because I am sure I will be hearing about it for the rest of my life. <strong></strong></p>
+<p><strong>What are your future plans? </strong>I plan on getting a job in accounting and seeing where it goes from there. I would also like to coach youth lacrosse or Pop Warner football in the future.<strong></strong></p>
+<p><strong>What kind of person is Nick Rispoli? </strong>Nick is a great person. I have lived with him the last two years, and although he can be quiet at times, he is always funny and entertaining to be around.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/rispolihs.jpg"><img class="alignleft size-full wp-image-1140" title="rispolihs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/rispolihs.jpg" alt="" width="100" height="150" /></a>Nick Rispoli</strong></p>
+<p><strong>What are the keys to being a good faceoff man? How have you been so successful? </strong>Step to the right!! Facing off is just like any other position; it’s all about practice and becoming comfortable with what you’re doing. I’ve been lucky enough to have some great coaches along the way that really knew what they were talking about that have helped out. It’s also nice when you have other great faceoff men around you to push you every day in practice. Having great wing play has also been a tremendous help over the years. To be completely honest, I don’t know how I’ve been so successful. I pretty much just go out there and don’t think. I hum a little tune to myself and just try to have fun.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My favorite lacrosse memory has to be back in the high school state championship game my senior year, running down the field with Andrew Disdier on me and scoring a left-handed goal on him. But beating Gettysburg for the first time last season was my most memorable Muhlenberg lacrosse memory, by far. The atmosphere was outrageous. <strong></strong></p>
+<p><strong>We’ve heard you play a mean guitar; are you the next Eric Clapton? </strong>Oh, I can play a mean guitar; it’s really not fair. I’m more of a Bruce Springsteen fan myself; we’re actually in the middle of planning our summer tour dates now. <strong></strong></p>
+<p><strong>What made you decide to major in business administration? </strong>Well, I meant to sign up for theater, but I guess I filled out the wrong form that day. But seriously, I’ve always been interested in business, particularly marketing and advertising. After taking some business courses freshman year, I knew that was the field I was most interested in, so I decided to pursue it. <strong></strong></p>
+<p><strong>What are your future plans? </strong>Aside from going on tour with my guitar with Bruce, I plan to move to California and hang out all day in the sun since I spent the past four years in the rainy Lehigh Valley. In all seriousness, I’m not exactly sure what I plan on doing and am still investigating and exploring my options. I’m all ears if anyone has any offers.</p>
+<p><strong>What kind of teammate is Jonathan Fritog? </strong>Jonathan who? No, it’s been great being able to continue to play with Jonathan for another four years. I’ve known him for most of my life. He’s excellent at communication on and off the field and is willing to spend extra time with the players to help them improve and learn. He’s always trying to become better, but definitely knows how to have fun and can turn it on when he needs to. He also has a great lacrosse IQ (must be a Ridgewood thing).</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/fritoghs.jpg"><img class="alignleft size-full wp-image-1135" title="fritoghs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/fritoghs.jpg" alt="" width="100" height="150" /></a>Jonathan Fritog</strong></p>
+<p><strong>You’ve taken quite a few drumming classes at Muhlenberg; are you a rock star in waiting? </strong>I don’t think I’m a rock star in waiting, but since Nick Rispoli takes guitar lessons, and we both took a magic class together, we decided that if we are unable to find jobs after college we will stay in Ridgewood (yes, with our parents) and become street performers. All we need is a singer like Jay “Mad Dog” Salasko, and we can be an official band.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>My most memorable Muhlenberg lacrosse memory is definitely going on the Vancouver trip over this past summer. Even though the entire team wasn’t with us, it was still my most favorite vacation that I have ever been on because it was with all my friends. That trip really gave all the guys a chance to simply kick back, relax and enjoy being in a different country with each other. Oh yeah, and we played lacrosse there too. Also, scoring against McDaniel this year was pretty cool since they were my first collegiate points.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>My best off-the-field memory from my time here is really all four years that I was able to spend here. From going from room to room in Walz hanging out with friends, then moving into Benfer with guys on the lacrosse team, then getting a house off campus and just being able to hang out with the people that have had such a great influence on my life in the past four years has really made this one of the greatest experiences of my life. I really owe it to all of the people that I have met and all of my friends that I have made here. I will truly miss this place and everyone that I have met. I will also miss beating Andrew Disdier in video games every day. I really have my parents to thank the most because they never stopped pushing me and believing in me to do my absolute best in whatever it was that I decided to do. And they never missed a single game in my time here at Muhlenberg, which means more to me then they will probably ever know. They truly are the best parents that any kid could ever ask for, and I am extremely grateful that they have acted as such a great support system to me throughout my life. Love you guys.<strong></strong></p>
+<p><strong>What are your future plans? </strong>Besides becoming a street performer with Nick Rispoli, I want to become a high school teacher and lacrosse coach. I am going to take a year off after college and then hopefully go to grad school to get my master’s degree.</p>
+<p><strong>What’s Charlie Pianko like off the field? </strong>Pianko is probably one of the nicest guys on the team. In my past four years here I cannot recall one time that I have ever heard him complain or not have a smile on his face. Charlie is just a happy-go-lucky guy who leads by example and is a hard worker.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/salaskohs.jpg"><img class="alignleft size-full wp-image-1136" title="salaskohs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/salaskohs.jpg" alt="" width="100" height="150" /></a>Jay Salasko</strong></p>
+<p><strong>What would you say is the strongest part of your game? </strong>The strongest part of my game would have to be my ability to communicate on the field.</p>
+<p><strong>What made you decide to transfer to Muhlenberg after your freshman year? </strong>I came to Muhlenberg because it was a great opportunity to come to a great academic institution and join a great group of players who I had a chance to meet before I made my decision.<strong></strong></p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>I think our win against Gettysburg last year stands out the most. The emotion that we played with in that game fueled our victory, and it couldn’t have been a better feeling.</p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>It is hard to choose the best off-the-field memory from my time here, but if I were to choose one I can guarantee that it would be with my teammates. Although we spend every day together on the field, our off the field time together is how we grew as a team. That said, it’s impossible to choose just one moment.<strong></strong></p>
+<p><strong>Some of your drawings were in a recent exhibition on campus; have you always been an artist? </strong>I definitely have not always been an artist and still don’t believe that I’m much of one. But the few drawing classes that I have taken here definitely taught me a few things that have helped me graduate from drawing stick figures.</p>
+<p><strong>What are your future plans? </strong>After graduation I am hoping to find a graduate coaching position where I can further my schooling as well as get a jump start on a collegiate lacrosse coaching career.<strong></strong></p>
+<p><strong>What was it like getting to play three more years with your high school teammate Andrew Disdier? </strong>Playing with Andrew again was definitely a plus when I made my decision to come here. Andrew has been a great asset to the team in his four years here. He is a great guy to have in our locker room. He always helps to keep team morale up and keep those who are struggling motivated.</p>
+<p>&nbsp;</p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/disdierhs.jpg"><img class="alignleft size-full wp-image-1141" title="disdierhs" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/05/disdierhs.jpg" alt="" width="100" height="150" /></a>Andrew Disdier</strong></p>
+<p><strong>Do you have any hidden or unusual talents? </strong>I can tie my shoelaces without using my hands, and I’m fluent in five languages. However, those talents are completely dwarfed by the arsenal of tricks Connor Winter has.</p>
+<p><strong>How frustrating has it been having to deal with so many injuries during your career? </strong>It is difficult to articulate the frustration. I will say that the recovery process has been much easier with the support from my family, teammates and coaches.</p>
+<p><strong>What’s your most memorable Muhlenberg lacrosse memory? </strong>This past summer’s trip to British Columbia was unforgettable. <strong></strong></p>
+<p><strong>What’s the best off-the-field memory from your time here? </strong>I’m a big basketball guy, so all the pickup games that we played in the fall were some great times. I know that Mike Carpetto and Jack Reilly will keep the tradition going next year. Beating Jon Fritog in “Around the World” in a single turn is something I won’t forget either.</p>
+<p><strong>How was the experience interning with Merrill Lynch? </strong>I really perfected my envelope addressing and database updating skills at Merrill Lynch. In all seriousness, it was a great experience, because I was able to apply my academic ability to the professional workplace. The fundamental knowledge that I absorbed there really put me a step ahead for the following semester. I wish AJ “The Bond Vigilante” Diaz and Ian “The Big Short” de Ruiter the best of luck this coming summer at Merrill Lynch.</p>
+<p><strong>What are your future plans? </strong>To start, I’m going to get my knee fixed. Professionally, I have accepted a bank examiner position with the Office of the Comptroller of the Currency, an entity of the Department of the Treasury.</p>
+<p><strong>What was it like getting to play three more years with your high school teammate Jay Salasko? </strong>It has been a tremendous opportunity to play with Jay “Mad Dog” Salasko for an extra three years. He has always been a ferocious competitor, and he has a canny knowledge of the game. He is also one of the toughest players I know. If he did not have the back of a 55-year-old arthritic man and had not gotten sniped in the spleen by Corey’s rifle of a lefty bounce shot, I know his career would have looked a lot different.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1133 -->
+
+				
+					
+	<article id="post-1091" class="post-1091 post type-post status-publish format-standard hentry category-mens-lacrosse category-softball">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/04/30/athletes-of-the-week-25/" rel="bookmark">Athletes of the Week</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/04/30/athletes-of-the-week-25/" title="3:03 pm" rel="bookmark"><time class="entry-date" datetime="2012-04-30T15:03:36-04:00">April 30, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><em>for contests between April 23 and April 29</em></p>
+<p><strong><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/joneskhs.jpg"><img class="alignleft size-full wp-image-963" title="Kelsey Jones" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/joneskhs.jpg" alt="" width="100" height="150" /></a>Female Athlete of the Week &#8211; Kelsey Jones, Softball</strong></p>
+<p>Jones went 2-0 with a save in a 4-0 week for the Mules. She allowed only two earned runs in 16 1/3 innings for a 0.86 ERA while striking out 15, walking none and holding opponents to a .194 batting average. In Muhlenberg&#8217;s final Centennial Conference doubleheader, she pitched a five-hit shutout in the first game and earned a save in the second. The15 strikeouts gave her 91 for the season, a school record for freshmen.</p>
+<p><img class="alignleft" title="Nick Rispoli" src="http://www.muhlenberg.edu/images/main/athletics/men/lacrosse/hs/mlax11/rispolihs.jpg" alt="" width="100" height="150" /><strong>Male Athlete of the Week &#8211; Nick Rispoli, Lacrosse</strong></p>
+<p>Rispoli finished his career with an incredible performance in the Mules&#8217; 14-11 loss to Haverford. He was 21-for-26 on faceoffs, breaking the school records for faceoffs won and ground balls (19) in a game, and assisted on two goals. Rispoli also became Muhlenberg&#8217;s all-time career leader with 240 career faceoffs won. He finished fourth on the all-time list for ground balls (156).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/softball/" rel="category tag">softball</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1091 -->
+
+				
+					
+	<article id="post-1034" class="post-1034 post type-post status-publish format-standard hentry category-baseball category-lacrosse category-mens-lacrosse category-softball category-track-field category-womens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/04/06/weekend-preview-19/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/04/06/weekend-preview-19/" title="9:04 am" rel="bookmark"><time class="entry-date" datetime="2012-04-06T09:04:04-04:00">April 6, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/04/mulebig_MB0406.jpg"><img class="alignright size-medium wp-image-1035" title="Weekend Preview April 6-7" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/04/mulebig_MB0406-300x170.jpg" alt="" width="300" height="170" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/04/mulebig_MB0406-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/04/mulebig_MB0406-500x284.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/04/mulebig_MB0406.jpg 780w" sizes="(max-width: 300px) 100vw, 300px" /></a>It may be a holiday weekend, but there&#8217;s no holiday for the Mule spring teams who continue their seasons today and tomorrow.</p>
+<p>Softball and track and field take the spotlight this weekend.</p>
+<p><strong>Softball at McDaniel (Saturday, 1:00)</strong></p>
+<p>What makes this the marquee matchup of the weekend? It&#8217;s not just that McDaniel is in first place in the Centennial Conference with an 8-0 record <a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg"><img class="alignleft size-medium wp-image-104" title="Mule Marquee Matchup" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg" alt="" width="300" height="203" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></a>and Muhlenberg is one of two teams tied for second at 6-2 &#8211; although that certainly is a big part of it.</p>
+<p>The two teams have come by their success in extremely different manners. Muhlenberg is hitting .374 and averaging more than nine runs in its eight CC games. Reigning CC player of the week Kelly Kline is hitting .593 with a .963 slugging percentage in CC games .</p>
+<p>McDaniel, on the other hand, has done it with pitching, allowing only eight runs in its eight CC games. Reigning CC pitcher of the week Caroline Brehm is 8-0 with a 0.46 ERA and 88 strikeouts in 45.1 innings in CC games.</p>
+<p>What will win out, hitting or pitching?</p>
+<p>Live stats: <a href="http://www.mcdanielathletics.com/livestats/landing">http://www.mcdanielathletics.com/livestats/landing</a></p>
+<p><strong>Track &amp; Field hosts Muhlenberg Invitational (Saturday, 10:00)</strong></p>
+<p>The Mules welcome 15 other schools for their only home meet of the outdoor season. This meet has been contested in rain and snow in previous years, so the sunshine and mild temperatures should lead to some good performances. Muhlenberg is also sending a handful of runners to Princeton for a distance event Friday night.</p>
+<p><strong>Women&#8217;s Lacrosse at McDaniel (Friday, 3:30); Men&#8217;s Lacrosse at McDaniel (Saturday, 1:00)</strong></p>
+<p>The Mule lax teams travel to Westminster in search of their first Centennial Conference win of the season. Both teams defeated McDaniel last year, the women 17-6 and the men 8-5. Both Green Terror squads have won just once in the CC.</p>
+<p>Live stats: <a href="http://www.mcdanielathletics.com/livestats/landing">http://www.mcdanielathletics.com/livestats/landing</a></p>
+<p><strong>Baseball at Franklin &amp; Marshall (Saturday, 12:30 doubleheader)</strong></p>
+<p>Muhlenberg has lost four of its last five CC games and will look to get back on the winning track against a Franklin &amp; Marshall team that has split its first three CC series. Four of the Diplomats&#8217; first six CC games ended in shutouts, two each way.</p>
+<p>Live stats/audio: <a href="http://client.stretchinternet.com/client/fandm.portal">http://client.stretchinternet.com/client/fandm.portal</a>#</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/baseball/" rel="category tag">baseball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/lacrosse/" rel="category tag">lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/softball/" rel="category tag">softball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-lacrosse/" rel="category tag">women's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-1034 -->
+
+				
+					
+	<article id="post-996" class="post-996 post type-post status-publish format-standard hentry category-baseball category-golf category-lacrosse category-mens-lacrosse category-softball category-tennis category-track-field category-womens-lacrosse">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/03/30/weekend-preview-18/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/03/30/weekend-preview-18/" title="6:44 am" rel="bookmark"><time class="entry-date" datetime="2012-03-30T06:44:52-04:00">March 30, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/mulebig_MB0330.jpg"><img class="alignright size-medium wp-image-997" title="weekend preview 3/30-4/1" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/mulebig_MB0330-300x170.jpg" alt="" width="300" height="170" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/mulebig_MB0330-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/mulebig_MB0330-500x284.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/03/mulebig_MB0330.jpg 780w" sizes="(max-width: 300px) 100vw, 300px" /></a>Four softball games, four baseball games, two lacrosse games, two tennis matches, 36 holes of golf and the first track meet of the outdoor season &#8230; there&#8217;s a lot on the docket this weekend, with most teams competing at home or nearby. Hopefully, the forecasted rain will not turn this busy schedule into an April Fool.</p>
+<p><strong>Softball vs. Washington (Saturday, 1:00); at Gettysburg (Sunday, 1:00)</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg"><img class="alignleft size-medium wp-image-104" title="Mule Marquee Matchup" src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg" alt="" width="300" height="203" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1-300x203.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2011/09/mulemarquee1.jpg 350w" sizes="(max-width: 300px) 100vw, 300px" /></a>Two Centennial Conference playoff teams square off on Saturday in the Mules&#8217; first home CC doubleheader of the 2012 season. Muhlenberg beat Washington, 8-4, in the first game of the playoffs en route to the CC championship last year. The teams split in the regular season. The Shorewomen are off to a 4-0 start in CC play, while the Mules are 2-0.</p>
+<p>Live stats Game 1: <a href="http://www.muhlenberg.edu">http://www.muhlenberg.edu/sports/softlive/xlive.htm</a></p>
+<p>Live stats Game 2: <a href="http://www.muhlenberg.edu">http://www.muhlenberg.edu/sports/softlive2/xlive.htm</a></p>
+<p>Gettysburg did not make the CC playoffs last year but is traditionally one of the strongest teams in the league, and one that gives Muhlenberg a hard time. The Mules have never swept the Bullets in a regular-season doubleheader, and they haven&#8217;t won a game at Gettysburg since 2000.</p>
+<p>Live stats: <a href="http://client.stretchinternet.com/client/gettysburg.portal">http://client.stretchinternet.com/client/gettysburg.portal</a>#</p>
+<p><strong>Baseball vs. Ursinus (Friday, 3:30); at McDaniel (Saturday, 12:30 doubleheader); at Centenary (Sunday, 12:00)</strong></p>
+<p>The 16-6 Mules, who received 11 votes in this week&#8217;s D3baseball.com poll, look to continue their winning ways with three CC games and one non-league contest. Coming off Tuesday&#8217;s 11-5 win at Ursinus, Muhlenberg will try to complete its first season sweep of the Bears on Friday.</p>
+<p>Live stats: <a href="http://www.muhlenberg.edu">http://www.muhlenberg.edu/sports/baselive/xlive.htm</a></p>
+<p>Saturday&#8217;s twinbill is against a McDaniel team that, like Muhlenberg, has shown great improvement: The Green Terror is 11-4 after winning 12 games all of last season. The Mules, who have scored in double figures in 13 of their 22 games, will try to solve a McDaniel pitching staff that has a sparkling 2.40 ERA.</p>
+<p>Live stats: <a href="http://www.mcdanielathletics.com/livestats/landing">http://www.mcdanielathletics.com/livestats/landing</a></p>
+<p>Sunday&#8217;s non-conference matchup will be played at TD Bank Ballpark in Bridgewater, N.J., the home of the Somerset Patriots of the Atlantic League.</p>
+<p>Live stats: <a href="http://dl.dropbox.com/u/52657926/Baseball/xhome.htm">http://dl.dropbox.com/u/52657926/Baseball/xhome.htm</a></p>
+<p><strong>Lacrosse doubleheader vs. Washington (Saturday, men at 1:00, women at 4:00)</strong></p>
+<p>Both Mule lax teams are seeking their first CC win of the season. Both lost by three at Washington last year but beat the Shoremen/women on their last trip to Allentown.</p>
+<p>Live stats (men): <a href="http://www.muhlenberg.edu">http://www.muhlenberg.edu/sports/mlaxlive/xlive.htm</a></p>
+<p>Live stats (women): <a href="http://www.muhlenberg.edu">http://www.muhlenberg.edu/sports/wlaxlive/xlive.htm</a></p>
+<p>Live video (both): <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p><strong>Tennis doubleheader vs. Washington (Saturday, men at 11:00, women at 3:00)</strong></p>
+<p>After evening their CC mark at 2-2 with a dramatic win vs. Franklin &amp; Marshall last night, the Mule women look to make it two in a row against a Washington team that reached the CC championship match last year. The Mule men are looking for their first win of the spring.</p>
+<p><strong>Men&#8217;s Golf at McDaniel Spring Invitational (Saturday and Sunday)</strong></p>
+<p>The Mules compete in one of their biggest tournaments of the season, with 18 teams scheduled to tee off in the two-day event. Among their opponents will be five other CC teams.</p>
+<p>Live stats: <a href="http://www.mcdanielathletics.com/sports/mgolf/live-stats">http://www.mcdanielathletics.com/sports/mgolf/live-stats</a></p>
+<p><strong>Track &amp; Field at Lafayette 7-Way Meet (Saturday)</strong></p>
+<p>At their first outdoor meet of the season, the Mules will be the only Division III squad. The other teams scheduled to compete are Division I Lafayette, Lehigh, St. Joseph&#8217;s, Rider and Monmouth and Division II East Stroudsburg.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/baseball/" rel="category tag">baseball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/golf/" rel="category tag">golf</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/lacrosse/" rel="category tag">lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/softball/" rel="category tag">softball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/tennis/" rel="category tag">tennis</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-lacrosse/" rel="category tag">women's lacrosse</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-996 -->
+
+				
+					
+	<article id="post-861" class="post-861 post type-post status-publish format-standard hentry category-baseball category-mens-basketball category-mens-lacrosse category-tennis category-track-field category-womens-basketball category-wrestling">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/24/weekend-preview-16/" rel="bookmark">Weekend Preview</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/02/24/weekend-preview-16/" title="2:59 pm" rel="bookmark"><time class="entry-date" datetime="2012-02-24T14:59:45-04:00">February 24, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0224.jpg"><img class="alignright size-medium wp-image-862" title="mulebig_MB0224" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0224-300x170.jpg" alt="" width="300" height="170" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0224-300x170.jpg 300w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0224-500x284.jpg 500w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/mulebig_MB0224.jpg 780w" sizes="(max-width: 300px) 100vw, 300px" /></a>It&#8217;s the weekend eight Muhlenberg teams have been looking forward to all year. For the five winter sports, it&#8217;s Championship Weekend, the culmination of months of practice and competition. For three spring sports, it&#8217;s the start of their season, a chance to get off on the right foot.</p>
+<p>Throw in the second game of the season for men&#8217;s lacrosse, and it adds up to a busy and exciting weekend for the Mules!</p>
+<p>Here are the events in the order they start:</p>
+<p><strong>Women&#8217;s Tennis at Vassar (Friday, 4:00)</strong></p>
+<p><strong>Men&#8217;s Basketball vs. Dickinson at Franklin &amp; Marshall (Friday, 6:00)</strong></p>
+<p>Live stats/video: <a href="http://client.stretchinternet.com/client/fandm.portal">http://client.stretchinternet.com/client/fandm.portal</a>#</p>
+<p>Live audio (WMUH): <a href="http://www.muhlenberg.edu/wmuh/stream.html">http://www.muhlenberg.edu/wmuh/stream.html</a></p>
+<p>Preview: <a href="http://www.muhlenberg.edu/main/athletics/winter12/0223.html">http://www.muhlenberg.edu/main/athletics/winter12/0223.html</a></p>
+<p><strong>Men&#8217;s Tennis at Lafayette (Friday, 7:00)</strong></p>
+<p><strong>Women&#8217;s Basketball vs. Franklin &amp; Marshall at Johns Hopkins (Friday, 8:00)</strong></p>
+<p>Live stats: <a href="http://www.hopkinssports.com/gametracker/launch/gt_wbaskbl.html?event=1087999&amp;school=jhop&amp;sport=wbaskbl&amp;camefrom=&amp;startschool">http://www.hopkinssports.com/gametracker/launch/gt_wbaskbl.html?event=1087999&amp;school=jhop&amp;sport=wbaskbl&amp;camefrom=&amp;startschool</a>=&amp;</p>
+<p>Live video: <a href="http://www.hopkinssports.com/allaccess/?media=304636">http://www.hopkinssports.com/allaccess/?media=304636</a></p>
+<p>Preview: <a href="http://www.muhlenberg.edu/main/athletics/winter12/0223.html">http://www.muhlenberg.edu/main/athletics/winter12/0223page2.html</a></p>
+<p><strong>Wrestling at Gettysburg for Centennial Conference Championships (Saturday, 10:00)</strong></p>
+<p>Brackets (to be updated periodically throughout tournament): <a href="http://www.gettysburgsports.com/sports/2012/2/20/WREST_0220122957.aspx?id=1203">http://www.gettysburgsports.com/sports/2012/2/20/WREST_0220122957.aspx?id=1203</a></p>
+<p>Live video (consolation finals and finals only): <a href="http://client.stretchinternet.com/client/gettysburg.portal">http://client.stretchinternet.com/client/gettysburg.portal#</a> </p>
+<p>Preview: <a href="http://www.muhlenberg.edu/main/athletics/winter12/0223.html">http://www.muhlenberg.edu/main/athletics/winter12/0222page3.html</a></p>
+<p><strong>Track &amp; Field at Ursinus for Centennial Conference Championships (Saturday, 10:30)</strong></p>
+<p>Live results: <a href="http://webpages.ursinus.edu/jwagner/track/index.htm">http://webpages.ursinus.edu/jwagner/track/index.htm</a></p>
+<p>Preview: <a href="http://www.muhlenberg.edu/main/athletics/winter12/0223.html">http://www.muhlenberg.edu/main/athletics/winter12/0222page2.html</a></p>
+<p><strong>Baseball at Gallaudet (Saturday, 12:00 doubleheader)</strong></p>
+<p>Season preview: <a href="http://www.muhlenberg.edu/main/athletics/winter12/0223.html">http://www.muhlenberg.edu/main/athletics/winter12/0223page3.html</a></p>
+<p><strong>Men&#8217;s Lacrosse vs. York (Saturday, 1:00)</strong></p>
+<p>Live stats: <a href="http://www.muhlenberg.edu/sports/mlaxlive/xlive.htm">http://www.muhlenberg.edu/sports/mlaxlive/xlive.htm</a></p>
+<p>Live video: <a href="http://www.livestream.com/muhlenberg">http://www.livestream.com/muhlenberg</a></p>
+<p><strong>Baseball at Catholic (Sunday, 1:00)</strong></p>
+<p> Live stats: <a href="http://livestats.prestosports.com/cua/bsb/?e=2rcig2kyg9l8wt06">http://livestats.prestosports.com/cua/bsb/?e=2rcig2kyg9l8wt06</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://sportsinfo.blogs.muhlenberg.edu/category/baseball/" rel="category tag">baseball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-basketball/" rel="category tag">men's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/" rel="category tag">men's lacrosse</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/tennis/" rel="category tag">tennis</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/track-field/" rel="category tag">track &amp; field</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-basketball/" rel="category tag">women's basketball</a>, <a href="http://sportsinfo.blogs.muhlenberg.edu/category/wrestling/" rel="category tag">wrestling</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-861 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/category/mens-lacrosse/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/11/'>November 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/10/'>October 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/09/'>September 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/07/'>July 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/05/'>May 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/04/'>April 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/03/'>March 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/02/'>February 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2014/01/'>January 2014</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/12/'>December 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/11/'>November 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/10/'>October 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/06/'>June 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/05/'>May 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/04/'>April 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/03/'>March 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/02/'>February 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2013/01/'>January 2013</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/12/'>December 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/11/'>November 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/10/'>October 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/09/'>September 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/'>August 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/'>July 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/06/'>June 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/05/'>May 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/04/'>April 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/03/'>March 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/02/'>February 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2012/01/'>January 2012</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/12/'>December 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/11/'>November 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+	<li><a href='http://sportsinfo.blogs.muhlenberg.edu/2011/08/'>August 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://sportsinfo.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2Fcategory%2Fmens-lacrosse%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

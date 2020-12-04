@@ -1,0 +1,723 @@
+http://bergdance.blogs.muhlenberg.edu/?page_id=1419/
+146
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="profile"  href="https://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://bergdance.blogs.muhlenberg.edu/xmlrpc.php" />
+		<!-- html5shiv for IE8 and less  -->
+		<!--[if lt IE 9]>
+			<script src="http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/html5.js"></script>
+		<![endif]-->
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>2016/2017 &#8211; Dance Department Blog</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Dance Department Blog &raquo; Feed" href="http://bergdance.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Dance Department Blog &raquo; Comments Feed" href="http://bergdance.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/bergdance.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/bergdance.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='tc-gfonts-css'  href='//fonts.googleapis.com/css?family=Lobster:400%7CRaleway' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-fa-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/shared/fonts/fa/css/fontawesome-all.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-common-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/tc_common.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-skin-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/red.min.css?ver=4.3.4' type='text/css' media='all' />
+<style id='customizr-skin-inline-css' type='text/css'>
+
+                  .site-title,.site-description,h1,h2,h3,.tc-dropcap {
+                    font-family : 'Lobster';
+                    font-weight : 400;
+                  }
+
+                  body,.navbar .nav>li>a {
+                    font-family : 'Raleway';
+                    font-weight : inherit;
+                  }
+
+            body,.navbar .nav>li>a {
+              font-size : 14px;
+              line-height : 1.6em;
+            }
+table { border-collapse: separate; }
+                           body table { border-collapse: collapse; }
+                          
+.social-links .social-icon:before { content: none } 
+.sticky-enabled .tc-shrink-on .site-logo img {
+    					height:30px!important;width:auto!important
+    				}
+
+    				.sticky-enabled .tc-shrink-on .brand .site-title {
+    					font-size:0.6em;opacity:0.8;line-height:1.2em
+    				}
+
+.site-logo img.sticky {
+                display: none;
+             }
+
+            .sticky-enabled .tc-sticky-logo-on .site-logo img {
+                display: none;
+             }
+
+            .sticky-enabled .tc-sticky-logo-on .site-logo img.sticky{
+                display: inline-block;
+            }
+
+
+      .carousel .czr-item {
+        line-height: 400px;
+        min-height:400px;
+        max-height:400px;
+      }
+      .tc-slider-loader-wrapper {
+        line-height: 400px;
+        height:400px;
+      }
+      .carousel .tc-slider-controls {
+        line-height: 400px;
+        max-height:400px;
+      }
+
+        @media (max-width: 1200px) {
+          .carousel .czr-item {
+            line-height: 308px;
+            max-height:308px;
+            min-height:308px;
+          }
+          .czr-item .carousel-caption {
+            max-height: 268px;
+            overflow: hidden;
+          }
+          .carousel .tc-slider-loader-wrapper {
+            line-height: 308px;
+            height:308px;
+          }
+        }
+
+        @media (max-width: 979px) {
+          .carousel .czr-item {
+            line-height: 247.2px;
+            max-height:247.2px;
+            min-height:247.2px;
+          }
+          .czr-item .carousel-caption {
+            max-height: 207.2px;
+            overflow: hidden;
+          }
+          .carousel .tc-slider-loader-wrapper {
+            line-height: 247.2px;
+            height:247.2px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .carousel .czr-item {
+            line-height: 152px;
+            max-height:152px;
+            min-height:152px;
+          }
+          .czr-item .carousel-caption {
+            max-height: 112px;
+            overflow: hidden;
+          }
+          .carousel .tc-slider-loader-wrapper {
+            line-height: 152px;
+            height:152px;
+          }
+        }
+
+        @media (max-width: 320px) {
+          .carousel .czr-item {
+            line-height: 112px;
+            max-height:112px;
+            min-height:112px;
+          }
+          .czr-item .carousel-caption {
+            max-height: 72px;
+            overflow: hidden;
+          }
+          .carousel .tc-slider-loader-wrapper {
+            line-height: 112px;
+            height:112px;
+          }
+        }
+
+#tc-push-footer { display: none; visibility: hidden; }
+         .tc-sticky-footer #tc-push-footer.sticky-footer-enabled { display: block; }
+        
+
+</style>
+<link rel='stylesheet' id='customizr-style-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/style.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fancyboxcss-css'  href='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"1","SliderName":"","SliderDelay":"","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"linear","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"1","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"1","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"http:\/\/bergdance.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","ajaxUrl":"http:\/\/bergdance.blogs.muhlenberg.edu\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"efe2978cec"},"isDevMode":"1","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"http:\/\/bergdance.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/js/tc-scripts.js?ver=4.3.4'></script>
+<link rel='https://api.w.org/' href='http://bergdance.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bergdance.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bergdance.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="canonical" href="http://bergdance.blogs.muhlenberg.edu/?page_id=1419" />
+<link rel='shortlink' href='http://bergdance.blogs.muhlenberg.edu/?p=1419' />
+<link rel="alternate" type="application/json+oembed" href="http://bergdance.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fbergdance.blogs.muhlenberg.edu%2F%3Fpage_id%3D1419" />
+<link rel="alternate" type="text/xml+oembed" href="http://bergdance.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Fbergdance.blogs.muhlenberg.edu%2F%3Fpage_id%3D1419&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://bergdance.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://bergdance.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//bergdance.blogs.muhlenberg.edu/?wordfence_lh=1&hid=CCBF89EB96330356209C724400F10830');
+</script><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<link rel="icon" href="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-cropped-theatre-dance-logo-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-cropped-theatre-dance-logo-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-cropped-theatre-dance-logo-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-cropped-theatre-dance-logo-270x270.jpg" />
+	</head>
+	
+	<body class="bp-legacy page-template-default page page-id-1419 page-child parent-pageid-700 admin-bar no-customize-support wp-embed-responsive tc-fade-hover-links tc-l-sidebar tc-center-images skin-red customizr-4-3-4 tc-sticky-header sticky-disabled tc-transparent-on-scroll no-navbar tc-regular-menu tc-sticky-footer no-js" >
+            <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+        
+    <div id="tc-page-wrap" class="">
+
+  		
+  	   	<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on tc-sticky-logo-on tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile">
+  			
+        <div class="brand span3 pull-left">
+        <a class="site-logo" href="http://bergdance.blogs.muhlenberg.edu/" aria-label="Dance Department Blog | Dance Major/Minor Need-to-Know&#039;s"><img src="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-theatre-dance-logo-3.jpg" alt="Back Home" width="576" height="124" style="max-width:250px;max-height:100px"  class=" attachment-1071"/><img src="http://bergdance.blogs.muhlenberg.edu/files/2016/09/cropped-theatre-dance-logo-2.jpg" alt="Back Home" width="576" height="124"   class="sticky attachment-1070"/></a>        </div> <!-- brand span3 -->
+
+        <div class="container outside"><h2 class="site-description">Dance Major/Minor Need-to-Know&#039;s</h2></div>      	<div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-right">
+        	<div class="navbar resp">
+          		<div class="navbar-inner" role="navigation">
+            		<div class="row-fluid">
+              		<div class="social-block span5"><div class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://bergdance.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-mail"  title="E-mail" aria-label="E-mail" href="mailto:bergdance@gmail.com"  target="_blank" ><i class="fas fa-envelope"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-instagram"  title="Follow me on Instagram" aria-label="Follow me on Instagram" href="#bergdance"  target="_blank" ><i class="fab fa-instagram"></i></a></div></div><h2 class="span7 inside site-description">Dance Major/Minor Need-to-Know&#039;s</h2><div class="nav-collapse collapse tc-hover-menu-wrapper"><ul class="nav tc-hover-menu"><li class="page_item page-item-1059 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-9 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=9">Muhlenberg Dance Association <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-306 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=306">MDA Handbook &#038; Rules and Regulations</a></li><li class="page_item page-item-303 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=303">MDA Hours</a></li><li class="page_item page-item-35 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=35">Meetings and Minutes</a><ul class="dropdown-menu"><li class="page_item page-item-1798 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1798">Fall 2015/Spring 2016</a></li><li class="page_item page-item-1800 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1800">Fall 2016/Spring 2017</a></li><li class="page_item page-item-1802 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1802">Fall 2017/Spring 2018</a></li></ul></li></ul></li><li class="page_item page-item-11 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=11">Concerts <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-40 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=40">Audition Information</a></li><li class="page_item page-item-19 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=19">Dance Emerge</a></li><li class="page_item page-item-21 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=21">Dance Gallery</a><ul class="dropdown-menu"><li class="page_item page-item-613 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=613">Fall 2017</a></li><li class="page_item page-item-643 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=643">Spring 2018</a></li></ul></li><li class="page_item page-item-15 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=15">Master Choreographers</a></li><li class="page_item page-item-17 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=17">Moving Stories</a></li><li class="page_item page-item-25 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=25">Senior Showcase</a></li><li class="page_item page-item-358 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=358">Student Choreographer Guidelines &amp; Proposal Forms</a></li></ul></li><li class="page_item page-item-5 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=5">Department Information <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-573 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=573">Accademia Dell&#8217;Arte- Study Abroad</a><ul class="dropdown-menu"><li class="page_item page-item-1112 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1112">Student&#8217;s Experiences</a></li></ul></li><li class="page_item page-item-42 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=42">ACDA</a></li><li class="page_item page-item-7 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=7">Auditing Classes</a></li><li class="page_item page-item-1561 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1561">Classes</a><ul class="dropdown-menu"><li class="page_item page-item-343 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=343">Class Levels</a></li><li class="page_item page-item-202 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=202">Independent Study</a></li></ul></li><li class="page_item page-item-193 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=193">Costume Shop</a></li><li class="page_item page-item-148 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=148">Dance Wellness</a><ul class="dropdown-menu"><li class="page_item page-item-170 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=170">Dance Wellness Screening</a></li><li class="page_item page-item-178 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=178">Supplemental Training</a></li><li class="page_item page-item-162 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=162">Websites &#038; Resources</a></li></ul></li><li class="page_item page-item-349 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=349">Eportfolio</a></li><li class="page_item page-item-1553 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1553">Major/Minor Requirements</a></li><li class="page_item page-item-13 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=13">Master Classes</a></li><li class="page_item page-item-31 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=31">Reference Recommendation</a></li><li class="page_item page-item-1833 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1833">Spring 2018-Semester Timeline</a></li><li class="page_item page-item-1934 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1934">Spring 2018-Trips</a></li><li class="page_item page-item-116 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=116">Studio Sign Out</a></li><li class="page_item page-item-470 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=470">The Muhlenberg Circus</a></li><li class="page_item page-item-380 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=380">Video</a></li><li class="page_item page-item-339 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=339">Why Major In Dance?</a></li></ul></li><li class="page_item page-item-33 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=33">Faculty <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-1544 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1544">Spring 2018 Office Hours</a></li></ul></li><li class="page_item page-item-44 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=44">MCDC <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-1102 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1102">How to get involved:</a></li><li class="page_item page-item-1104 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1104">MCDC Registration Forms</a></li><li class="page_item page-item-1108 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1108">Meet the MCDC Teachers</a></li></ul></li><li class="page_item page-item-239 page_item_has_children dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=239">Dance Outside of Muhlenberg <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-241 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=241">Audition Postings &amp; Job Opportunities</a></li><li class="page_item page-item-243 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=243">Summer Workshops</a></li><li class="page_item page-item-2132 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=2132">Winter Intensives</a></li></ul></li><li class="page_item page-item-180 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=180">Alumni Updates</a></li><li class="page_item page-item-694 page_item_has_children current_page_ancestor dropdown menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=694">Archives <strong class="caret"></strong></a><ul class="dropdown-menu"><li class="page_item page-item-713 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=713">ACDA</a></li><li class="page_item page-item-1938 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1938">Intensives</a><ul class="dropdown-menu"><li class="page_item page-item-1355 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1355">Summer 2017</a></li><li class="page_item page-item-1293 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1293">Winter 2016/2017</a></li></ul></li><li class="page_item page-item-700 page_item_has_children current_page_ancestor current_page_parent dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=700">Master Classes</a><ul class="dropdown-menu"><li class="page_item page-item-866 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=866">2010/2011</a></li><li class="page_item page-item-868 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=868">2011/2012</a></li><li class="page_item page-item-870 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=870">2012/2013</a></li><li class="page_item page-item-872 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=872">2013/2014</a></li><li class="page_item page-item-874 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=874">2014/2015</a></li><li class="page_item page-item-876 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=876">2015/2016</a></li><li class="page_item page-item-1419 current_page_item menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1419" aria-current="page">2016/2017</a></li></ul></li><li class="page_item page-item-711 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=711">Residencies and Master Choreographers</a><ul class="dropdown-menu"><li class="page_item page-item-829 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=829">2010/2011</a><ul class="dropdown-menu"><li class="page_item page-item-842 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=842">Master Choreographers</a></li><li class="page_item page-item-854 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=854">Residencies</a></li></ul></li><li class="page_item page-item-831 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=831">2011/2012</a><ul class="dropdown-menu"><li class="page_item page-item-844 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=844">Master Choreographers</a></li><li class="page_item page-item-856 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=856">Residencies</a></li></ul></li><li class="page_item page-item-833 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=833">2012/2013</a><ul class="dropdown-menu"><li class="page_item page-item-846 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=846">Master Choreographers</a></li><li class="page_item page-item-858 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=858">Residencies</a></li></ul></li><li class="page_item page-item-835 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=835">2013/2014</a><ul class="dropdown-menu"><li class="page_item page-item-848 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=848">Master Choreographers</a></li><li class="page_item page-item-860 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=860">Residencies</a></li></ul></li><li class="page_item page-item-837 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=837">2014/2015</a><ul class="dropdown-menu"><li class="page_item page-item-850 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=850">Master Choreographers</a></li><li class="page_item page-item-862 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=862">Residencies</a></li></ul></li><li class="page_item page-item-839 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=839">2015/2016</a><ul class="dropdown-menu"><li class="page_item page-item-852 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=852">Master Choreographers</a></li><li class="page_item page-item-864 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=864">Residencies</a></li></ul></li></ul></li><li class="page_item page-item-704 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=704">Student Choreographers</a><ul class="dropdown-menu"><li class="page_item page-item-768 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=768">2012/2013</a><ul class="dropdown-menu"><li class="page_item page-item-774 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=774">Dance Emerge</a></li><li class="page_item page-item-772 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=772">Fall Dance Gallery</a></li><li class="page_item page-item-770 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=770">Moving Stories</a></li><li class="page_item page-item-776 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=776">Spring Dance Gallery</a></li></ul></li><li class="page_item page-item-756 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=756">2013/2014</a><ul class="dropdown-menu"><li class="page_item page-item-762 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=762">Dance Emerge</a></li><li class="page_item page-item-760 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=760">Fall Dance Gallery</a></li><li class="page_item page-item-766 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=766">Freshmen First Pieces</a></li><li class="page_item page-item-758 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=758">Moving Stories</a></li><li class="page_item page-item-764 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=764">Spring Dance Gallery</a></li></ul></li><li class="page_item page-item-744 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=744">2014/2015</a><ul class="dropdown-menu"><li class="page_item page-item-752 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=752">Dance Emerge</a></li><li class="page_item page-item-750 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=750">Dance On</a></li><li class="page_item page-item-748 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=748">Fall Dance Gallery</a></li><li class="page_item page-item-746 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=746">Moving Stories</a></li><li class="page_item page-item-754 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=754">Spring Dance Gallery</a></li></ul></li><li class="page_item page-item-733 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=733">2015/2016</a><ul class="dropdown-menu"><li class="page_item page-item-740 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=740">Dance Emerge</a></li><li class="page_item page-item-738 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=738">Fall Dance Gallery</a></li><li class="page_item page-item-735 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=735">Moving Stories</a></li><li class="page_item page-item-742 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=742">Spring Dance Gallery</a></li></ul></li></ul></li><li class="page_item page-item-702 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=702">Trips</a><ul class="dropdown-menu"><li class="page_item page-item-787 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=787">2010/2011</a><ul class="dropdown-menu"><li class="page_item page-item-789 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=789">Fall Semester</a></li><li class="page_item page-item-791 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=791">Spring Semester</a></li></ul></li><li class="page_item page-item-793 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=793">2011/2012</a><ul class="dropdown-menu"><li class="page_item page-item-797 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=797">Fall Semester</a></li><li class="page_item page-item-799 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=799">Spring Semester</a></li></ul></li><li class="page_item page-item-801 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=801">2012/2013</a><ul class="dropdown-menu"><li class="page_item page-item-803 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=803">Fall Semester</a></li><li class="page_item page-item-805 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=805">Spring Semester</a></li></ul></li><li class="page_item page-item-808 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=808">2013/2014</a><ul class="dropdown-menu"><li class="page_item page-item-810 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=810">Fall Semester</a></li><li class="page_item page-item-812 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=812">Spring Semester</a></li></ul></li><li class="page_item page-item-814 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=814">2014/2015</a><ul class="dropdown-menu"><li class="page_item page-item-816 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=816">Fall Semester</a></li><li class="page_item page-item-818 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=818">Spring Semester</a></li></ul></li><li class="page_item page-item-820 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=820">2015/2016</a><ul class="dropdown-menu"><li class="page_item page-item-822 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=822">Fall Semester</a></li><li class="page_item page-item-824 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=824">Spring Semester</a></li></ul></li><li class="page_item page-item-1439 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1439">2016/2017</a></li><li class="page_item page-item-1437 page_item_has_children dropdown-submenu menu-item-has-children menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1437">2017/2018</a><ul class="dropdown-menu"><li class="page_item page-item-38 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=38">Trips</a></li></ul></li></ul></li></ul></li><li class="page_item page-item-1156 menu-item"><a href="http://bergdance.blogs.muhlenberg.edu/?page_id=1156">Missed the email&#8230;</a></li></ul></div><div class="btn-toggle-nav pull-right"><button type="button" class="btn menu-btn" data-toggle="collapse" data-target=".nav-collapse" title="Open the menu" aria-label="Open the menu"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button></div>          			</div><!-- /.row-fluid -->
+          		</div><!-- /.navbar-inner -->
+        	</div><!-- /.navbar resp -->
+      	</div><!-- /.navbar-wrapper -->
+    	  		</header>
+  		<div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div><div id="main-wrapper" class="container">
+
+    <div class="tc-hot-crumble container" role="navigation"><div class="row"><div class="span12"><div class="breadcrumb-trail breadcrumbs"><span class="trail-begin"><a href="http://bergdance.blogs.muhlenberg.edu" title="Dance Department Blog" rel="home" class="trail-begin">Home</a></span> <span class="sep">&raquo;</span> <a href="http://bergdance.blogs.muhlenberg.edu/?page_id=694" title="Archives">Archives</a> <span class="sep">&raquo;</span> <a href="http://bergdance.blogs.muhlenberg.edu/?page_id=700" title="Master Classes">Master Classes</a> <span class="sep">&raquo;</span> <span class="trail-end">2016/2017</span></div></div></div></div>
+    <div class="container" role="main">
+        <div class="row column-content-wrapper">
+
+            
+        <div class="span3 left tc-sidebar">
+           <div id="left" class="widget-area" role="complementary">
+              <aside class="social-block widget widget_social"><h3 class="widget-title">Social links</h3><div class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://bergdance.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-mail"  title="E-mail" aria-label="E-mail" href="mailto:bergdance@gmail.com"  target="_blank" ><i class="fas fa-envelope"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-instagram"  title="Follow me on Instagram" aria-label="Follow me on Instagram" href="#bergdance"  target="_blank" ><i class="fab fa-instagram"></i></a></div></aside><aside id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://bergdance.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>            </div><!-- //#left or //#right -->
+        </div><!--.tc-sidebar -->
+
+        
+                <div id="content" class="span9 article-container tc-gallery-style">
+
+                    
+                        
+                                                                                    
+                                                                    <article id="page-1419" class="row-fluid post-1419 page type-page status-publish czr-hentry">
+                                                <header class="entry-header">
+          <h1 class="entry-title ">2016/2017</h1><hr class="featurette-divider __before_content">        </header>
+        
+        <div class="entry-content">
+          <h1 style="text-align: left;"><a href="#fall-semester">Fall Semester</a> • <a href="#spring-semester">Spring Semester</a></h1>
+<p style="text-align: left;"><a name="fall-semester"></a></p>
+<h1 style="text-align: left;">Fall 2016</h1>
+<div id="main-wrapper" class="container" style="text-align: left;">
+<div class="container">
+<div class="row column-content-wrapper">
+<div id="content" class="span9 article-container tc-gallery-style">
+<article id="page-1421" class="row-fluid post-1421 page type-page status-publish hentry hover">
+<div class="entry-content">
+<h3>September 2</h3>
+<p><strong>Guest Artist: Nicholas Leichter</strong></p>
+<p><a class="grouped_elements" title="nicholas-leichter" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicholas-leichter.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-967" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicholas-leichter.jpg" alt="nicholas-leichter" width="164" height="248" /></a></p>
+<p><strong>Required: DTP II, Jazz III</strong></p>
+<p><strong>Bio</strong>: Nicholas Leichter, whose slippery, rhythmic style slides between street and classical, does mash-up more than subliminal.” ~ The New York Times. Nicholas Leichter Dance creates cultural narratives where movement tells the story. The works are carnivalesque, wherein the ‘jolly relativity’ of all things is proclaimed by alternative voices. Whether choreographing “The Rite of Spring” or reinventing the black Wizard of Oz, the works de-privilege the authoritative voice of hegemony through their mingling of high culture with the profane.</p>
+<p>Nicholas Leichter’s technique and repertory class will familiarize dancers with his unique fusion of contemporary dance-one that blurs the line between traditional, experimental, cultural and urban dance forms and styles, creating a form that is both dizzying and thought provoking. A knowledge, or experience, in a wide range of dance styles, including traditional modern, contemporary, West African, urban, street jazz, house or hip-hop is encouraged but not mandatory, however an openness to the mashup and deconstruction of styles is important. Working with Mr. Leichter students will discover/rediscover a deeper understanding of how to incorporate a wide range of movement forms and create a level of hybrid that is individual and responsive to their community and environment</p>
+<h3>September 16</h3>
+<p><strong>Guest Artist: Wallie Wolfgruber</strong></p>
+<p><a class="grouped_elements" title="wallie-wolfgruber" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/wallie-wolfgruber.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-968" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/wallie-wolfgruber.jpg" alt="wallie-wolfgruber" width="223" height="335" /></a></p>
+<p><strong>Required: Ballet V, Modern IV and V</strong></p>
+<p><strong>Bio</strong>: Wallie has had a distinguished teaching, performing and choreographic career with a wealth of experience in the studio, on stage and behind the scenes and a performing career spanned over 20 years.  She was a principal dancer in the Lar Lubovitch Dance Company, also serving as Mr. Lubovitch’s choreographic assistant.  She has worked with other notable names in modern dance such as Rod Rogers, Donald Byrd/The Group, Ohad Naharin and Sung Soo Ahn.</p>
+<p><b>Wallie Wolfgruber</b> has enjoyed a distinguished directing, teaching, choreographic, and performing career. Since joining the Conservatory of Dance in July 2010 and serving as director through June 2014, she has brought a wealth of experience in the studio, on stage, and behind the scenes to the program. Ms. Wolfgruber holds an MFA in dance from NYU Tisch School of the Arts. Her directing and teaching experience includes being undergraduate program director and associate professor in the dance department at SUNY Brockport; co-founder and director of SEAD in Austria; and a faculty member at Florida State University, Rutgers University, Manhattanville College, and the Mark Morris Dance Center. Her teaching expertise encompasses ballet, modern technique, composition, and improvisation. In 2007, she travelled to Africa, researched Maasai dances, and taught and performed in orphanages in remote, rural areas in Kenya. Ms. Wolfgruber’s choreography has been presented internationally and in New York City at the Abrons Arts Center, La Mama E.T.C., the Tribeca Performing Arts Center, and with DanceNow at the Joyce Soho, Joe’s Pub at the Public Theater, the Duke on 42nd Street and Dance Theater Workshop. Her interests include collaborations with composers and video artists. Her video dance, <i>A Hands-On Affair</i>, was created in collaboration with Alvin Booth and selected for the Dance On Camera Festival in Los Angeles and New York City. She established her company <i>Wallie Wolfgruber &amp; Dancers</i> in 2008. Her ongoing project, <i>Sacred Things</i>, currently includes the dance works <i>Dream Support</i> and <i>Ingress</i>, a series of photographs and an earth installation. Ms. Wolfgruber was a principal dancer with the Lar Lubovitch Dance Company, toured internationally, and has also worked with a variety of other choreographers from established to experimental. Among these are Ohad Naharin, Donald Byrd, Rod Rogers, Keith Young, Sung Soo Ahn, and Jessica Iwanson.</p>
+<h3>September 30</h3>
+<p><strong>Guest Artist: Paul Hudson</strong></p>
+<p><strong>Required: Both Comp classes</strong></p>
+<p><strong>Bio:</strong> Paul Hudson has been designing lighting for theater, dance, opera, television, and architectural public art in and around New York for over a decade. Having finished the graduate program at NYU at the age of 22, he knew from a young age that he wanted to sculpt with the intangible medium of light to help his fellow collaborators bring their creations to life.   His work has been seen throughout the New York area, in venues both large and small: from the Irish Rep to Gibney Dance; from Carnegie Hall to wacky, underground, site-specific locations.  Paul has the good fortune to work with the Juilliard School on regular occasion, having lit operas and plays for the institution, as well as collaborating on ‘Beyond the Machine’ for the past 6 years – an annual showcase of music, drama, dance, and other performance utilizing technology in new and interesting ways.</p>
+<div dir="ltr">Recently, Paul designed the small but politically charged premiere of ‘Private Manning Goes to Washington’ that traveled to Edinburgh, and then returned stateside to launch the second national tour of ‘Basetrack, Live’, a piece of verbatim theater looking at the experience of Marines serving in Afghanistan and returning home after their tours of duty.  Internationally, Paul’s work has also been seen throughout South America, with several dance companies, as well as in Cyprus, Spain, and London.  Over the next several months, he is bringing ‘Private Manning…’ to New York; collaborating with several artists to create ‘Cracked Orlando’, a new “opera with fractals” at Juilliard, which includes several dance passages that will be incorporated into the larger projection design in lieu of traditional operatic ballet sequences; and continuing to workshop ‘Sorry’, a full-length, narrative dance-and-poetry performance addressing culture, class, and race, and whether love can actually surmount the difficulties those things sometimes create.  He counts himself lucky to be able to light such a broad spectrum of work, from the joyous the tragic, and the profound to the prosaic…</div>
+<h3>October 14</h3>
+<p><strong>Guest Artist: Madboots – Jonathan Campbell and Austin Diaz</strong></p>
+<p><a class="grouped_elements" title="madboots" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/madboots.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-966" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/madboots.jpg" alt="madboots" width="308" height="231" /></a></p>
+<p>http://www.madbootsdance.com/</p>
+<p><strong>Required: Modern IV and V</strong></p>
+<p>Bio: Jonathan Campbell and Austin Diaz are the recipients of several awards and honors, including Dance Now’s Joe’s Pub Festival Challenge Winner (2012), Creative Development Residencies at Jacob’s Pillow (2014, 2015), choreographers on campus at Lafayette College (2015) and an invitation to perform at the Joyce Theaters annual Choreographers &amp; Cocktails Event (2015). Campbell and Diaz’s choreography has been commissioned by SUNY Purchase Conservatory of Dance, Point Park University, Dark Circles Contemporary Dance and Whim W’him. The duo has taught master classes at Broadway Dance Center, Dancemakers Toronto, Dance New Amsterdam, Gibney Dance Center, The Juilliard School, Kennesaw University, Peridance Capezio Center, The Playground NYC, Gallim Dance, Velocity Dance Center, Point Park University, Southern Methodist University, Lafayette College, Muhlenberg College, and DeSales University.</p>
+<h3>November 4</h3>
+<p><strong>Guest Artist: Boomerang</strong></p>
+<p><a class="grouped_elements" title="boomerang" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/boomerang.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-961" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/boomerang-300x200.jpg" alt="boomerang" width="344" height="229" /></a></p>
+<p>http://www.boomerangdance.com/</p>
+<p><strong>Required: DTP II, Modern IV and V</strong></p>
+<p>Bio: A daringly physical, poetically¬ nuanced dance and performance project created in 2012 by co-artistic directors Matty Davis and Kora Radella with founding member Adrian Galvin. Recognizing the body as an evolving repository for both physical and psychological life, BOOMERANG sifts through and siphons from the rich, eclectic histories that constitute the personhoods of the people with whom they work.</p>
+<p>The physical research of these classes demands athleticism and verve, as well as attention to detail. There will be lively investigations that utilize core strength and release technique principles to create an enlivened presence. Full-throttle and roller-coaster motion via momentum-based floor work and inversions will be met with point-on-precision. Dancers will learn about and experience the nuances of being on the edge of control.</p>
+<p>Boomerangdance.com</p>
+<h3>November 5</h3>
+<p><strong>Guest Artist: Gravity and Other Myths</strong></p>
+<p><a class="grouped_elements" title="gravity-and-other-myths" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/gravity-and-other-myths.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-970" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/gravity-and-other-myths.jpg" sizes="(max-width: 260px) 100vw, 260px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/gravity-and-other-myths.jpg 180w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/gravity-and-other-myths-150x150.jpg 150w" alt="gravity-and-other-myths" width="260" height="260" /></a></p>
+<blockquote data-secret="GfUHkGLmyb" class="wp-embedded-content"><p><a href="http://gravityandothermyths.com.au/">Home</a></p></blockquote>
+<p><iframe class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="http://gravityandothermyths.com.au/embed/#?secret=GfUHkGLmyb" data-secret="GfUHkGLmyb" width="600" height="338" title="&#8220;Home&#8221; &#8212; Gravity &amp; Other Myths" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></p>
+<p><strong>Required: no one, but highly recommended for acrobats and circus members!</strong></p>
+<p><strong>Bio</strong>: Gravity &amp; Other Myths (GOM) is a multi-award winning and well respected Australian acrobatics ensemble. The company creates engaging works of acrobatic art for touring, festivals and corporate clients. Formed in 2009 in Adelaide, South Australia, the ensemble creates and directs their own work with emphasis on an honest approach to performance, moving away from traditional circus and theatre models, towards a fusion of acrobatic physical theatre. Their touring work is represented both across Australia and internationally by Aurora Nova.</p>
+<h3>November 11</h3>
+<p><strong>Guest Artist: Khaleah London</strong></p>
+<p><a class="grouped_elements" title="khaleah-london" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/khaleah-london.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-964" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/khaleah-london-160x300.jpg" sizes="(max-width: 208px) 100vw, 208px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/khaleah-london-160x300.jpg 160w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/khaleah-london.jpg 164w" alt="khaleah-london" width="208" height="390" /></a></p>
+<p>http://www.khaleahlondon.com/</p>
+<p><strong>Required: African Dance and Cultures, DTP II, Dance and Society</strong></p>
+<p><strong>Bio</strong>: Khaleah is a dancer, choreographer, instructor and actress that graduated summa cum laude from California State University, Long Beach, with a Bachelor of Fine Arts in dance. At the age of eleven, she danced professionally in the Afro-Caribbean Dance Revue / Caribbean Heat, performing with fire, and dancing on nail boards and broken glass. Formerly a member of Chuck Davis and The African American Dance Ensemble, she performed her solo choreography in the company’s touring repertoire. As a featured soloist with, dancer, Hope Boykin, of the Alvin Ailey American Dance Theatre, Ms. London performed in a New York engagement of “Their Speech Is Silver, Their Silence Is Gold,” by choreographer Nathan Trice. Deemed Dance Magazine’s National Outstanding Performances Award winner for the National American College Dance Festival, Ms. London, received full tuition scholarships, including, the American Dance Festival’s Bessie Schoenberg.</p>
+<h3>November 18</h3>
+<p><strong>Guest Artist:</strong> <strong>Christopher K. Morgan</strong></p>
+<p><a class="grouped_elements" title="chris-morgan" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/chris-morgan.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-962" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/chris-morgan.jpg" alt="chris-morgan" width="225" height="338" /></a></p>
+<p>http://www.christopherkmorgan.com/</p>
+<p><strong>Required: Modern III, IV, and V</strong></p>
+<p><strong>Bio</strong>: Christopher K. Morgan is the Artistic &amp; Executive Director of CKM&amp;A, the Dance Artist in Residence in The School of Theatre, Dance and Performance Studies at the University of Maryland, and the Director of the Dance Omi International Dance Collective in New York.  Christopher grew up in Orange County, CA dancing the Hula and Polynesian dances of his Hawaiian ancestors.  Discovering ballet, jazz and modern dance at the age of 17, he studied dance at the University of California Irvine.  After only 2 years in school, he was offered a job dancing for Malashock Dance &amp; Company in San Diego.  Thus began his extensive performing career that would have him move to Munich, Washington DC, New York, Dublin and London.  Now, he brings his diverse heritage and over 20 years of experience as a dancer, educator, choreographer and arts facilitator to all of his work, including directing Montgomery County, Maryland based Dance company CKM&amp;A. christopherkmorgan.com</p>
+<h3>December 2</h3>
+<p><strong>Guest Artist: Eva Dean</strong></p>
+<p><a class="grouped_elements" title="eva-dean" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/eva-dean.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group1421"><img class="alignnone wp-image-963" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/eva-dean-300x200.jpg" sizes="(max-width: 359px) 100vw, 359px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/eva-dean-300x200.jpg 300w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/eva-dean.jpg 600w" alt="eva-dean" width="359" height="239" /></a></p>
+<p>http://evadeandance.org/</p>
+<p><strong>Required: Dance and Society, Modern III</strong></p>
+<p><strong>Bio: </strong>Eva Dean founded Eva Dean Dance (EDD) in 1985. Throughout the years her choreography has received critical acclaim and accolades from audiences, presenters and students. Dean views herself as a “movement experimentalist” and she is recognized as a consummate professional who creates work that uses multiple elements to bring her choreographic vision to life. Choreographic intent that embraces intuition is the spring- board for Dean’s creative process, and her unique movement is honed and crafted while working with her dance company. The dancers’ artistry and improvisational skills are an integral part of the work. Boots, balls, recycled materials and architectural design are specifically selected to enhance Dean’s artistic vision. Dean works closely with guest artists such as musicians, puppet masters, lighting, and set and costume designers to create a visually rich body of work, which, as a result, is diverse in scope, giving its audiences enduring memories</p>
+<p>Students will use guided imagery to access and construct abstract, movement-based stories surrounding their personal experience. Students will move to the pulse of the 21st century, and celebrate the joy of slowing down while moving fast, remaining in the present moment. The workshop will begin with authentic movement and breathing exercises to help students become aware of their perceptions of time and movement efficiency. Students will then be guided into improvisational movement in pairs, learning techniques to give and receive weight, both on the ground and in the air. The workshop will end with melding together personal authentic movement, and the sharing and giving of weight to create short improvisational duets. This workshop is for all skill levels</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer" class="">
+<div class="colophon"></div>
+</footer>
+<p style="text-align: left;"><a name="spring-semester"></a></p>
+<h1><em><strong>Spring 2017</strong></em></h1>
+<p><a class="grouped_elements" title="mark gidnik" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/mark-gidnik.jpeg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-medium wp-image-1424" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/mark-gidnik-200x300.jpeg" sizes="(max-width: 200px) 100vw, 200px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/mark-gidnik-200x300.jpeg 200w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/mark-gidnik-768x1151.jpeg 768w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/mark-gidnik-684x1024.jpeg 684w" alt="mark gidnik" width="200" height="300" /></a></p>
+<p><strong>Friday, January 27</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Mark Gindick</strong></p>
+<p><strong>Required: Composition, Circus</strong></p>
+<p>&nbsp;</p>
+<p>Mark Gindick’s Clown and Technology class is designed to inform students how to change judgements about clown work.  You will learn how to live in your body in regards to how clowning supports a comedic body, performing spirit, and interaction with the audience. Through eccentric dance and improvisation you will awaken your inner clown character and discover how to write your own physical comedy routines and how clowning reflects on present social media and technology.</p>
+<p>Mark Gindick was born and raised in New York City. He studied film and drama at SUNY Purchase, and is a graduate of Ringling Bros. and Barnum &amp; Bailey’s Clown College. He has been working as a physical comedian onstage and in the circus since his graduation from Clown College, and has shared the role of “Grandma” with Barry Lubin at the Big Apple Circus in Big Top Doo Wop (2001-2002) and Dreams Of A City (2002-2003). Mark has performed as a clown with The NY Goofs at Carnegie Hall and at The International Children’s Festival, with Ringling Bros. &amp; Barnum &amp; Bailey, and has been featured in the Big Apple Circus production of Play On! in 2008-2009. He has written, performed and appeared in theater, film and television, including Nora Ephron’s Julie and Julia (2009), The Late Show with David Letterman, and Late Night with Conan O’Brien. Mark’s one-man theatrical show Wing-Man is sailing toward residencies, shows and workshops, with new creative multi-media platforms and directions on the current horizon. After work shopping his award-winning one-man show Wing-Man in places like NYC, Austin Texas, Rochester NY, and Warsaw Poland, Mark will be building his show in residency at the New York City College of Technology, Entertainment Division also known as City Tech. Mark’s working with his brand new amazing creative team, merging old school clowning with new school technology. For more information visit: wingmantheshow.com</p>
+<p>&nbsp;</p>
+<p><a class="grouped_elements" title="wallie-wolfgruber" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/wallie-wolfgruber.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-full wp-image-968" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/wallie-wolfgruber.jpg" alt="wallie-wolfgruber" width="167" height="251" /></a></p>
+<p><strong>Friday, February 17</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Wallie Wolfgruber</strong></p>
+<p><strong>Required: Modern V/IV, IV, Ballet V, Composition</strong></p>
+<p>&nbsp;</p>
+<p>TruDee is a formidable dance artist and storyteller from Tuckahoe, NY. She began her dance training at the age of five in ballet, tap and aerobics under the tutelage of Miss Belinda in the local parks and recreation department. Her love of theater emerged later on through the coveted role of the Virgin Mary in the church nativity play. In her senior high school drama class she wrote and performed in her first one woman play as the prima ballerina Margot Fonteyn.  In the past year, TruDee, an elusive genre straddler, has gone on to share her dance stories at Joe’s Pub, American Dance Festival, Chicago Contemporary Circus Festival, and the beloved West Village drag bars Boots &amp; Saddle and Stonewall Inn. SILO and Marble House Project and Djerassi Artist Residency have hosted her musings and creative exercises. She has created dances and led workshops in performance for Advanced Curation and the Borough of Manhattan Community College. TruDee would like you to also note that she is an award winning lip sync artist, ribboned competitive speed walking champion and holds the title as the youngest member of the her church choir joining the ranks at the age of 11.</p>
+<p>Performance at Steel Stacks at 6:30PM</p>
+<p><a class="grouped_elements" title="cleo mack" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/cleo-mack.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-medium wp-image-1425" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/cleo-mack-240x300.jpg" sizes="(max-width: 240px) 100vw, 240px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/cleo-mack-240x300.jpg 240w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/cleo-mack.jpg 619w" alt="cleo mack" width="240" height="300" /></a></p>
+<p><strong>Friday, February 24</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Cleo Mack</strong></p>
+<p><strong>Required: Modern V/IV, Jazz IV</strong></p>
+<p>&nbsp;</p>
+<p>Cleo Mack was selected by Dance Magazine as on of the “25 to Watch in 2002.”  She began her dance training at the Purpich School of the Arts and earned her BFA in dance from Mason Gross School of the Arts, where she was the recipient of ACDFA/Dance Magazine Award for Outstanding Student Choreography.  She has been a teaching artist for the American Repertory Ballet Institute, Rutgers University, DeSales University, and the University of Iowa. She is currently Director of Dance at the Middlesex County Vocational and Technical School of the Performing Arts and the Artistic Director of Washington Rock Youth Modern Company. <a href="http://cleomack.org/home.html" target="_blank" rel="noopener">http://cleomack.org/home.html</a></p>
+<p>&nbsp;</p>
+<p><a class="grouped_elements" title="kyle marshall" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/kyle-marshall.png" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-medium wp-image-1426" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/kyle-marshall-300x186.png" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/kyle-marshall-300x186.png 300w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/kyle-marshall.png 566w" alt="kyle marshall" width="300" height="186" /></a></p>
+<p><strong>Friday, March 24</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Kyle Marshall</strong></p>
+<p><strong>Required: DTP II, Jazz III</strong></p>
+<p>&nbsp;</p>
+<p>Marshall currently dances for Doug Elkins Choreography Etc, Tiffany Mills Company and is a founder member of Randy James’ 10 Hairy Legs. His choreography has been performed at the Upstart Festival 2014, AUNTS, the Green Building, Rutgers University, “Your Move” Jersey City dance festival, STAGEfest 2013 at the Loew’s Theater and WAXworks at Triskelion Arts.</p>
+<p>&nbsp;</p>
+<p><a class="grouped_elements" title="paula josa jones" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/paula-josa-jones.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-full wp-image-1427" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/paula-josa-jones.jpg" alt="paula josa jones" width="276" height="183" /></a></p>
+<p><strong>Friday, March 31</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Paula Josa-Jones</strong></p>
+<p><strong>Required: Modern V/IV, IV, Composition, Laban, Modern III</strong></p>
+<p>&nbsp;</p>
+<p>Class Description</p>
+<p>A meditative, intuitive, improvisational movement practice involving a mover and a witness. It is a practice of listening, attunement; slowing and opening to a deeper sensing of body and psyche. With eyes closed, maintaining a focus on bodily sensation and the flow of consciousness, the mover attunes to the inner landscape of the body and allows herself to be moved by whatever impulses are arising in the moment. With eyes closed it is easier to focus inwardly. The mover, in the presence of the witness, discovers the consciousness and compassion of their own inner witness.</p>
+<p>paulajosajones.org/cgi-local/welcome.cgi</p>
+<p>&nbsp;</p>
+<p>Paula’s background is as a dancer, choreographer, writer, visual artist, educator and equestrian. She is dedicated to nourishing improvisational practice in work and play, and discovering how to be non-habitual in mind and body. My research is embodied 100% of the time. My performing, coaching and teaching are about helping you find focus and live your most embodied, improvisational and joyful life. She believes in deepening creativity and awareness playfully, through the body, and finding ways to expand knowing with all fifty trillion cells, not just the ones perched on our necks. That means having a 24/7 wide-awake, multi-sensory, bodily experience of ourselves and the world.</p>
+<p>&nbsp;</p>
+<p><a class="grouped_elements" title="nicole wolcott" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-medium wp-image-1428" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott-300x200.jpg" sizes="(max-width: 300px) 100vw, 300px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott-300x200.jpg 300w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott-768x512.jpg 768w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott-1024x683.jpg 1024w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/nicole-wolcott.jpg 1200w" alt="nicole wolcott" width="300" height="200" /></a></p>
+<p><strong>Friday, April 7</strong></p>
+<p><strong>2:30-4PM, Brown</strong></p>
+<p><strong>Nicole Wolcott</strong></p>
+<p><strong>Required: Modern V/IV, IV</strong></p>
+<p>&nbsp;</p>
+<p>Wolcott uses dance, spectacle and architecture to explore a world of awkward moments exposed, tender collisions and conspiratorial humor.</p>
+<p>Nicole Wolcott is called “One of today’s finest dance comedians and a knockout dancer,” by the New York Times. Nicole has enjoyed a great career with dance companies, rock bands and video artists around the country. Nicole co-founded KEIGWIN + COMPANY with her friend Larry in 2003 and was the Associate Artistic Director and a featured dancer until 2013. Nicole continues to assist Larry on a variety of projects outside of the company’s framework; most recently as the Associate Choreographer for the Broadway production of If/Then starring Idina Menzel. -Wolcott’s own choreography has been performed in New York City at a range of venues from The Joyce Theater to CBGB’s. and the Kennedy Center.  Most recently she finished an evening length solo titled PaperPieces. Quinn Baston of Offoffoff.com says, “Nicole Wolcott’s PaperPieces is/are all over the place literally and emotionally…”</p>
+<p>&nbsp;</p>
+<p><a class="grouped_elements" title="bryan strimpel" href="http://bergdance.blogs.muhlenberg.edu/files/2015/01/bryan-strimpel.jpg" class="grouped_elements" rel="tc-fancybox-group1419" rel="tc-fancybox-group13"><img class="alignnone size-full wp-image-1429" src="http://bergdance.blogs.muhlenberg.edu/files/2015/01/bryan-strimpel.jpg" sizes="(max-width: 240px) 100vw, 240px" srcset="http://bergdance.blogs.muhlenberg.edu/files/2015/01/bryan-strimpel.jpg 240w, http://bergdance.blogs.muhlenberg.edu/files/2015/01/bryan-strimpel-150x150.jpg 150w" alt="bryan strimpel" width="240" height="240" /></a></p>
+<p><strong>Friday, April 28</strong></p>
+<p><strong>2:30-4PM, DST</strong></p>
+<p><strong>Bryan Strimpel</strong></p>
+<p><strong>Required: Modern V/IV, IV, III</strong></p>
+<p>&nbsp;</p>
+<p>Class Description</p>
+<p>This class will focus our awareness and trust in the relationship between ourself and another moving body. We will study the responsibility two individuals must take on when working together to create one cohesive experience. Through momentum and successive articulation, we will move into and out of shared weight, finding the partnership to be as maneuverable a surface as the floor.</p>
+<p>A native Michigander, Bryan Strimpel graduated from Wayne State University in 2011 with a B.F.A. in dance. He is Co-Director for his own company, B.S. Movemend and he has danced with Nicholas Leichter Dance from 2009 to 2012 as well as the Brian Brooks Moving Company from 2011-2014. Most recently Bryan is dancing with David Dorfman Dance. He has performed internationally and across the U.S. in venues including: The Joyce Theater, Joyce SoHo, Brooklyn Academy of Music, Jacob’s Pillow, Bates Dance Festival, Joe’s Pub, Hundred Grand SoHo and more. He teaches class in NYC regularly at Gibney Dance at 280 Broadway. Bryan is honored to have been selected as one of Dance Magazine’s ‘Top 25 to Watch’ in 2013.</p>
+<p>Performance at Steel Stacks at 7:00PM</p>
+<p>&nbsp;</p>
+        </div>
+
+                                            </article>
+                                
+                            
+                        
+                    
+                                   <hr class="featurette-divider tc-mobile-separator">
+                </div><!--.article-container -->
+
+           
+        </div><!--.row -->
+    </div><!-- .container role: main -->
+
+    <div id="tc-push-footer"></div>
+</div><!-- //#main-wrapper -->
+
+  		<!-- FOOTER -->
+  		<footer id="footer" class="">
+  		 		    				 <div class="colophon">
+			 	<div class="container">
+			 		<div class="row-fluid">
+					    <div class="span3 social-block pull-left"></div><div class="span6 credits"><p>&middot; <span class="tc-copyright-text">&copy; 2020</span> <a href="http://bergdance.blogs.muhlenberg.edu" title="Dance Department Blog" rel="bookmark">Dance Department Blog</a> &middot; <span class="tc-wp-powered-text">Powered by</span> <a class="icon-wordpress" target="_blank" rel="noopener noreferrer" href="https://wordpress.org" title="Powered by WordPress"></a> &middot; <span class="tc-credits-text">Designed with the <a class="czr-designer-link" href="https://presscustomizr.com/customizr" title="Customizr theme">Customizr theme</a> </span> &middot;</p></div>	      			</div><!-- .row-fluid -->
+	      		</div><!-- .container -->
+	      	</div><!-- .colophon -->
+	    	  		</footer>
+    </div><!-- //#tc-page-wrapper -->
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/modernizr.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/retina.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://bergdance.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://bergdance.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fbergdance.blogs.muhlenberg.edu%2F%3Fpage_id%3D1419%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://bergdance.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		<div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div>	</body>
+	</html>

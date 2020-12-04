@@ -135,7 +135,7 @@ class searchGUI():
         
 
         self.rankings = self.cossim.getRanking(self.query)
-        print(self.rankings)
+        #print(self.rankings)
         self.page = 0
         self.showResults()
 

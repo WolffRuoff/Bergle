@@ -1,0 +1,837 @@
+http://fys142f16.blogs.muhlenberg.edu/page/8/
+152
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<title>Page 8</title>
+<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://fys142f16.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://fys142f16.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-fonts-css'  href='//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700%7CDroid+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-style-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/style.css?ver=2013-10-21' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f16.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f16.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f16.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f16.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f16.blogs.muhlenberg.edu/?wordfence_lh=1&hid=7AD4D813A047482E62B815C93E1DC3B2');
+</script>	<style type="text/css" id="yoko-themeoptions-css">
+		a {color: #3284ff;}
+		#content .single-entry-header h1.entry-title {color: #3284ff!important;}
+		input#submit:hover {background-color: #3284ff!important;}
+		#content .page-entry-header h1.entry-title {color: #3284ff!important;}
+		.searchsubmit:hover {background-color: #3284ff!important;}
+	</style>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support paged-8 no-js">
+<div id="page" class="clearfix">
+	<header id="branding">
+		<nav id="mainnav" class="clearfix">
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-3074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3074"><a href="http://fys142f16.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-3075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3075"><a href="http://fys142f16.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-3076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3076"><a href="http://fys142f16.blogs.muhlenberg.edu/info-assign-grading/">Info/Assignment/Grading</a></li>
+<li id="menu-item-3077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3077"><a href="http://fys142f16.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-3078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3078"><a href="http://fys142f16.blogs.muhlenberg.edu/syllabus/">Schedule and Topic Outline</a></li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-5"><a href="http://fys142f16.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>		</nav><!-- end mainnav -->
+
+		
+		<hgroup id="site-title">
+					<h1><a href="http://fys142f16.blogs.muhlenberg.edu/" title=""></a></h1>
+				<h2 id="site-description"></h2>
+				</hgroup><!-- end site-title -->
+
+								<img alt="" src="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/cropped-Screen-Shot-2016-09-01-at-9.20.53-AM-1.png" class="headerimage" width="1102" height="350">
+			
+		<nav id="subnav">
+					</nav><!-- end subnav -->
+</header><!-- end header -->
+
+<div id="wrap">
+<div id="main">
+	<div id="content">
+									
+				
+<article id="post-3820" class="post-3820 post type-post status-publish format-standard hentry category-blog-assignment category-peer-facilitation">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Michael Ellick<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-media-and-politics/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-media-and-politics/" title="Permalink to Social Media and Politics" rel="bookmark">Social Media and Politics</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Social media, particularly Twitter, has taken politics by storm. Recently, politicians have utilized social media as a way to gain publicity and to voice their opinions on current events. The craze for politicians to start using social media began in 2008 when President Obama posted on Instagram about an upcoming trip to Alaska, racking up thousands of ‘likes’ and ‘comments’ from millions of people around the world. After this, more politicians began using their own forms of social media to connect with people in attempt to gain popularity for upcoming events, such as the presidential election. For example, “Ted Cruz live-streams his appearances on Periscope. Marco Rubio broadcasts ‘Snapchat Stories’ at stops along the trail. Hillary Clinton and Jeb Bush spar over student debt on Twitter. Rand Paul and Lindsey Graham produce goofy YouTube videos. Even grumpy old Bernie Sanders has attracted nearly two million likers on Facebook, leading the <em>New York Times</em> to dub him “a king of social media” (Carr, 2015). Politicians have realized that social media platforms are a very easy way to connect with others, thus causing social media to have a “HUGE” impact on politics, as Presidential candidate Donald Trump would say.</p>
+<p>Although social media can be one person’s road to fame, it can also attract unwanted attention if one is not cautious about what they say on social media. Once somebody posts a post, or tweets a tweet, it is forever online, even if they are given the option to delete it. Sometimes those posts come back to haunt the people that posted them in the first place. A perfect example of something that was thought to be forgotten is the recent video that shows Donald Trump speaking ‘locker room’ talk with colleagues which was taped over 10 years ago in 2005. Donald Trump has been hurt tremendously by this in the Presidential election. Some deem Donald Trump as a “god” on social media for the way he issues provocative messages at the perfect moments, giving his 12.4 million twitter followers something to react to, giving him an abundance of attention with every tweet he sends out. Regardless, one of the biggest dangers of social media is being careful about what you say and when you say it, because you never know when the camera might be rolling.</p>
+<p>With social media being the main form of communication between people ages 16-25, politicians are smart to be utilizing different platforms in order to send their message out to people of that age range. On the edge of being able to vote, 16 and 17-year-old kids are using social media to talk to friends, connect with celebrities and in some cases, talk to strangers. It is almost impossible to think that they would not pay attention to the messages that politicians are sending out to capture their attention.</p>
+<p>Some politicians may seem different in person or on live television compared to how they may seem on social media. Often times people will put their best foot forward on social media, making their social media self the best version of themselves. I have experienced this personally and have seen others do the same. There is a vast difference between somebody on social media and somebody in person. On social media, there is so much time to edit something or practice what you want to post before you post it. There are so many ways to make it ‘perfect,’ so that one can often appear different than what they may appear in the current moment. The way that social media has influenced politics is exciting, to say the least. It seems necessary for politicians to be involved in some form of social media if they want to be successful. I can only think that social media will continue to take over politics, as this might be the beginning of social media in politics.</p>
+<p>&nbsp;</p>
+<p>Carr, B. N., Graff, B. G., &amp; Kruse, B. M. (2015, September 2). How social media is ruining politics. Retrieved October 4, 2016, from <a href="http://www.politico.com/magazine/story/2015/09/2016-election-social-media-ruining-politics-213104">http://www.politico.com/magazine/story/2015/09/2016-election-social-media-ruining-politics-213104</a></p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/category/peer-facilitation/" rel="category tag">Peer Facilitation</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-media-and-politics/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3820 -->
+								
+				
+<article id="post-3836" class="post-3836 post type-post status-publish format-standard hentry category-peer-facilitation tag-cyberbullying tag-gender-cyberbullying tag-social-media">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Melissa Carmilani<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyberbullying-2/#comments">2 Comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyberbullying-2/" title="Permalink to Cyberbullying" rel="bookmark">Cyberbullying</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Cyberbullying is the use of electronic communication to bully a person, typically by sending messages of an intimidating or threatening nature. According to Pew, &#8220;About one third (32%) of all teenagers who use the internet say they have been targets of a range of annoying and potentially menacing online activities &#8211; such as receiving threatening messages; having their private emails or text messages forwarded without consent; having an embarrassing picture posted without permission; or having rumors about them spread online&#8221;. This study was done in 2006; if this study was done today I believe that the percentage of people that have been bullied online would be higher. Social media has become more popular and there are more social medias out there making it more accessible for bullies to target people online.</p>
+<p>To no surprise cyberbullying is more common among girls. Girls are pettier and get involved in drama much more than boys do. Girls can also be very passive to one another and take it online instead so they do not need to face the person. Other than being passive, girls get jealous very easily. So if they think a girl is so great and &#8220;perfect&#8221; they will want to find something wrong with her and try to put her down to make her feel bad. Society puts a lot of pressure on girls to be &#8220;perfect&#8221;, even though there is no such thing. Girls want to be the best; it is a constant competition with other girls. Instead of building each other up (as we should), it is often seen that girls try to tear one another down.</p>
+<p>Also the article says that intense Internet users are bullied more. The situation is probably the more you use the Internet, the more one uses social media and is posting more. People judge everything, so if they do not like your post for some reason they may feel the need to let you know.</p>
+<p>Lastly, I was very shocked to read that bullying happens more often offline. I feel like now a day most bullying happens online. Again, this article is from 2006 so it could be the other way around now. The screen gives people something to hide behind and most likely say things that they would not say in person.</p>
+<div class="csl-bib-body">
+<div class="csl-entry">
+<div class="csl-bib-body">
+<div class="csl-entry">
+<div class="csl-bib-body">
+<div class="csl-entry">Amanda Lenhart. “Cyberbullying.” <i>Pew Research Center: Internet, Science &amp; Tech</i>, June 27, 2007. <a href="http://www.pewinternet.org/2007/06/27/cyberbullying/.">http://www.pewinternet.org/2007/06/27/cyberbullying/.</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/peer-facilitation/" rel="category tag">Peer Facilitation</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyberbullying/" rel="tag">Cyberbullying</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/gender-cyberbullying/" rel="tag">Gender Cyberbullying</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" rel="tag">Social Media</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyberbullying-2/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3836 -->
+								
+				
+<article id="post-3895" class="post-3895 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Matthew Stark<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/trends-in-social-gaming/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/trends-in-social-gaming/" title="Permalink to Trends in Social Gaming" rel="bookmark">Trends in Social Gaming</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>With the advances in gaming over the last few years, mobile gaming has increased in popularity. These mobile games, also called social games, are taking up more of people’s time than ever before. According to a Newzoo report, “players around the globe spend one billion hours daily playing games” (“The Biggest Trends, 2014). According to my calculations, this is about 114,077 years or <strong><u>1,522 human lifetimes</u></strong> assuming the average lifespan to be 75 years and no leap years happen. This is each day of our lives. The sheer amount of time we play is astounding and gaming companies want us to keep playing. By mixing genres up, Adventure, Massively Multi-Player Online (MMO), Real Time Strategy (RTS), Role Playing Games (RPG), Action, and First Person Shooter (FPS) they can make games more interesting and addicting for people. For example, the Clash of Clans rage from a while back. This combined the MMO and RTS game types into the biggest hit until Flappy Bird. Clash continued to be the number one top grossing free mobile game on the app store for a good number of years until Pokémon Go came about. Recently, the app has returned to number 1 and continues to stay there. After a while, playing level after level became tiring for both the players and the developers. Creating new levels took up too much time in the design phase. To combat this, “special events” became a prominent feature to keep players interested. These made people strive to be the best in the game over every aspect. It’s almost like a job interview. You want to be the best but there are others out there that are always better or more qualified. The event system has spilled over into console and PC games. Destiny is an example of this. Destiny is a FPS MMO RPG game made by Bungie, the developers of the hit FPS game series Halo. There are always new events that people are always trying to be a part of each month and even each week. There is an event called Moments of Triumph in Destiny. The concept is to do certain, difficult things before the next big expansion (we call it “year” because each year brings a new expansion) “drops” or is available to everyone. Those who complete it are rewarded with certain special items and, most recently, the ability to get a shirt proclaiming that you finished and are part of the elite few that actually did. Participation in events like these are a big part of keeping people interested in the game when there is very little actual content is being added. This ropes you into playing more than you might want to or even should be. Personally, I have over 45 days of cumulative play time on Destiny. This should go to show that events have such have huge effects on playtime and create an endless loop of event, play, event, play.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The Biggest Trends in Social Gaming right now. (2014, May 20). Retrieved October 1, 2016, from <a href="http://www.adweek.com/socialtimes/the-biggest-trends-in-social-gaming-right-now/610866">http://www.adweek.com/socialtimes/the-biggest-trends-in-social-gaming-right-now/610866</a></p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/trends-in-social-gaming/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3895 -->
+								
+				
+<article id="post-3826" class="post-3826 post type-post status-publish format-standard hentry category-blog-assignment tag-gaming tag-change tag-community tag-technology">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Jiahui<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/the-history-of-gaming-an-evolving-community/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/the-history-of-gaming-an-evolving-community/" title="Permalink to The History Of Gaming: An Evolving Community" rel="bookmark">The History Of Gaming: An Evolving Community</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p><span lang="EN-US">“Since its </span><span lang="EN-US">commercial birth in </span><span lang="EN-US">the 1950s </span><span lang="EN-US">as a </span><span lang="EN-US">technological oddity at a science fair, gaming has blossomed into one of most profitable entertainment </span><span lang="EN-US">industries in the</span><span lang="EN-US"> world.</span><span lang="EN-US">” (Chiknani</span><span lang="EN-US">, 2015)But how </span><span lang="EN-US">does the gaming industries exuberant in such a short time? As we all know, in 1967, the first game system designed </span><span lang="EN-US">and named “Brown Box”. But the “Brown Box” didn’t sold well because the mismanaged and the fact that home gaming was a relatively alien concept to average American at that time. And how technology’</span><span lang="EN-US">s advancement and the increase </span><span lang="EN-US">of the gaming community changed this situation through the history?</span></p>
+<p><span lang="EN-US">In 1970s, the first example of players competing on separate screens came and made the gaming community bigger. Later, technological advancements such as Intel’s invention of the world’s first microprocessor made the home gaming became a reality. Recently, the invention of the personal computers and the appearance of Smartphone made the gaming became more convenience, diverse, and interesting. These changes not only make the gaming industries flower, but also change people life.</span></p>
+<p><span lang="EN-US">It is hard for the people in 1970s to believe that nowadays more than 42 percent of Americans are gamers and four out of five U.S. households have a console. To see these changes in a positive way, the advance of the gaming really rich people’</span><span lang="EN-US">s life, satisfy the demand that people can never get from the reality, and relax people from the serious social pressure. But on the other hand,</span> <span lang="EN-US">the increase of the gaming community made the age of the gamers become smaller and smaller. And this is a very worrying thing because teens don’t have the ability to judge the right and wrong. I used to see the news that a fifteen years old teen killed his friend in a quarrel, when asked about the reason, he said: “I killed people who made me unhappy in the game, and don’t worry, he will soon resurrect.” </span><span lang="EN-US">What a lamentable thing! And the </span><span lang="EN-US">gaming also reduces the time that people spend on outdoor activities which is a bad thing for our health</span><span lang="EN-US">.</span></p>
+<p><span lang="EN-US">About the </span><span lang="EN-US">future, because the technologies </span><span lang="EN-US">like virtual reality and artificial intelligence technology will make the gaming </span><span lang="EN-US">experience become more stimulating, interesting, authentic, how to protect ourselves from the gaming become a problem.</span></p>
+<p><span lang="EN-US">Chikhani, R. (2015, October 31). <em>The History of Gaming: An Evolving Community</em>. Retrieved from <a href="https://techcrunch.com/2015/10/31/the-history-of-gaming-an-evolving-community/">https://techcrunch.com/2015/10/31/the-history-of-gaming-an-evolving-community/</a></span></p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/gaming/" rel="tag">#gaming</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/change/" rel="tag">change</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/community/" rel="tag">community</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/the-history-of-gaming-an-evolving-community/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3826 -->
+								
+				
+<article id="post-3828" class="post-3828 post type-post status-publish format-standard hentry category-blog-assignment tag-cyber-bullying tag-perception tag-technology">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Rosie Martin<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/blog-post-4-cyberbullying/#comments">1 Comment</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/blog-post-4-cyberbullying/" title="Permalink to Blog Post # 4 Cyberbullying" rel="bookmark">Blog Post # 4 Cyberbullying</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Most people in today’s society know what cyber bullying and bullying are. Students have probably had assembly after assembly on why not to cyber bully and how it makes the person being bullied feel. However what really drew me to this article was that it was not simply a run down of why not to bully. It told the differences and similarities between the two. I thought that this was fascinating because this was information that had never really been explained to me before. I also believe that in order to try and stop something like bullying or cyberbullying you need to fully understand the two topics.</p>
+<p>The biggest reason for bullying is because there is an imbalance of power. In other words bullying to me is making someone else feel small in order to make oneself feel better. This is why bullies select their victims very carefully in both cyber bullying and in normal bullying. “Both tend to target passive victims in which balance of power favors the bully”( Gale, 2016).  The character traits of the bully are also the same. “ Both involve harassment of a victim by an aggressor whose intent is to inflict harm” ( Gale, 2016). The main similarities between cyber bullying and bullying is the type of people that are bullied and the ones who bully. I found this incredibly interesting.</p>
+<p>Some of the difference between bullying and cyber bullying I found quite unsettling. For example in cyber bullying people are not always sure of who their bully is. “This anonymity empowers many cyber bullies to continue antagonizing their victims” ( Gale, 2016). With bullying normal schoolyard bullying people can pinpoint exactly who is targeting them. With cyber bullying it could literally be anyone  and this is a hard pill to swallow. i cannot even imagine not even knowing who is causing trying to hurt them. This also makes the bully feel that they can’t get caught and make the threats more prevalent. With technology as well there is always access to the person. They can make threats twenty four seven. Cyber bullying is so much more dangerous than normal bullying for this reason. People get a sense of confidence behind the computer screen that is unwavering. They say things that they never would to a persons face.</p>
+<p>Having now known the difference and similarities between bullying I feel i understand the topic of cyber bullying a lot more. I understand that it is not the people who are changing it is simply their access to the people being bullied that are changing. Cyberbullying is considered to be more detrimental as well. In my previous statement i concluded that it was not the people who were changing it was simply the method. If this is so its raises the question should we think of technology as more detrimental for young kids then beneficial?</p>
+<p>Differences between Cyberbullying and Traditional Bullying. (2016). In <i>Gale Student Resources in Context</i>. Detroit: Gale. Retrieved from <a href="http://ic.galegroup.com/ic/suic/ReferenceDetailsPage/DocumentToolsPortletWindow?displayGroupName=Reference&amp;p=SUIC&amp;action=2&amp;catId=&amp;documentId=GALE%7CEJ2181500310&amp;zid=6fd20aaf5793389959fde88575ac3810&amp;source=Bookmark&amp;u=groves&amp;jsid=1cbc1044d991834a8097337a1904a666">http://ic.galegroup.com/ic/suic/ReferenceDetailsPage/DocumentToolsPortletWindow?displayGroupName=Reference&amp;p=SUIC&amp;action=2&amp;catId=&amp;documentId=GALE%7CEJ2181500310&amp;zid=6fd20aaf5793389959fde88575ac3810&amp;source=Bookmark&amp;u=groves&amp;jsid=1cbc1044d991834a8097337a1904a666</a></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyber-bullying/" rel="tag">cyber bullying</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" rel="tag">perception</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/blog-post-4-cyberbullying/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3828 -->
+								
+				
+<article id="post-3821" class="post-3821 post type-post status-publish format-standard hentry category-blog-assignment tag-copyright tag-digital-world tag-expression tag-infringement-rights">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Justin Dalena<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/copyright-2/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/copyright-2/" title="Permalink to Copyright" rel="bookmark">Copyright</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p><span style="font-weight: 400">When one thinks of copyright law they automatically associate it with a positive. Copyright law was created with the intention of doing right by the public, encouraging self-expression and further promoting the artistic creativity of the public. However, when we begin to look deeper into the law as opposed to viewing it from the surface we begin to see a lot of gray-area evolve, diminishing much of the positive aspects of such law.</span></p>
+<p><span style="font-weight: 400">Today, we are living in a digital world, with a large portion of our lives residing online. With this change one begins to wonder who is protecting our rights in this new world? Are copyright laws thorough enough to address the issues that arise in this new world, and are they efficient enough to take a real stand on the issue of infringement?</span></p>
+<p><span style="font-weight: 400">The concern associated with copyright laws have been a long time running, and this new world has only exasperated these problems. It appears copyright law has not been able to appropriately keep up with these changes due to the complex and costly legal procedures usually associated with such. This has only further restrained one’s creative expression. Essentially, the matter of copyright law and fair use is subjective. Everything is on a “case-by-case” basis, and as a small player going up against large established company you find yourself fighting an uphill battle that does not appear to be worth the time or money expended. In agreement with Professor Merges “creativity should not be stifled by litigation;” however, on the contrary the law does need to be adjusted to reflect what Mr. Efroni considers the “practical realities of modern life and technological advancements.” The law needs to be looked at objectively, without consideration for profit, modified appropriately, and then enforced in a nonpartisan manner. Copyright law is extremely important to preserving the public’s right to self-expression and continued ownership of individual ideas and ongoing steps need to be taken to maintain these rights.</span></p>
+<p>By New Media Rights on Fri, 11/25/2011 &#8211; 15:05. (2011, November 25). New Media Rights. Retrieved October 10, 2016, from http://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/copyright/" rel="tag">copyright</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-world/" rel="tag">Digital World</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/expression/" rel="tag">expression</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/infringement-rights/" rel="tag">Infringement Rights</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/copyright-2/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3821 -->
+								
+				
+<article id="post-3812" class="post-3812 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Jamie Andrich<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyber-bullying/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyber-bullying/" title="Permalink to Cyber bullying" rel="bookmark">Cyber bullying</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Cyber bullying is a relatively new concept and we can all thank the newest technology for it. Cyber bullying is something that can take place more easily than face to face bullying because technology creates a sense of safety for the bully. The bully is essentially hidden behind a computer screen which makes it easier for the bully to get in contact with their prey and say and post certain comments without hesitation.The worst part of online bullying is that a message from the bully can be uploaded and spread amongst thousands in just seconds. Cyber bullying basically stems from a social media platform and takes off from there. Social media opens up a big window of opportunity where the bully or anyone, for that matter, can leave their opinion and bash anyone or anything that may be bothering them.</p>
+<p>Cyber bullying is not only horrible, due to the fact that it can happen so easily, it is also horrible because it can happen for an extended period of time. For example, if someone were to get bullied, not online or through technology, the confrontation would most likely not last that long. Reason being, is that it&#8217;s much more difficult to bully someone face to face and most likely would be quick and to the point and then over. The internet and social media have created a frenzy of Cyberbullying that seems to be out of control. There are now safeguards in place that help deter people from doing this to innocent people. However, it seems that people can still constantly be bothered and bombarded with an absurd amount of hate comments if the bully is relentless and doesn’t understand the hurt they are creating. Once the hate comments are posted, it can be very hurtful and open for any viewer to see or comment and bully too if they wish.</p>
+<p>Cyber bullying is not fair on the individual being bullied and can create a very bad mindset for the individual and all involved. Therefore, one should think long and hard before bullying or Cyber bullying someone, as there are consequences for doing this.</p>
+<div class="csl-bib-body">
+<div class="csl-entry">ASPA. “What is cyberbullying,” March 7, 2012. https://www.stopbullying.gov/cyberbullying/what-is-it/.</div>
+</div>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/cyber-bullying/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3812 -->
+								
+				
+<article id="post-3797" class="post-3797 post type-post status-publish format-standard hentry category-blog-assignment tag-fys142 tag-politics tag-technologys-influence">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by Christopher Hillburn<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-medias-impact-on-politics/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-medias-impact-on-politics/" title="Permalink to Social Medias Impact on Politics" rel="bookmark">Social Medias Impact on Politics</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Social media today has a huge impact on almost all aspects of life. It can influence things like ones education, to ones ability to get a job. I&#8217;m going to focus on the influence social media has on politics. Whether you realize it or not, social media can greatly affect things in politics. We live in the age of technology and the world is more connected as ever, this means that almost anything and everything can be done through the internet. When it comes to politics, social media plays a big role in campaigns. The key point for politicians while campaigning is for them to try to get their message across to as many people as possible to try to earn their votes, technology allows a resource that helps candidates do just that. Things like Twitter, Facebook, YouTube, and many other resources can reach millions of people around the world in a matter of seconds, allowing one to spread their message. The method of using social media to an advantage in political campaigns is prominent today in the ongoing 2016 presidential campaign between Donald Trump and Hillary Clinton. I currently follow Mr. Trump on Twitter and I see how he tries to earn votes every time he tweets. These tweets reach millions on millions of people, allowing him to talk indirectly to his voters at a very fast pace. Now there is a flip side to this, most of the people that are being reached through the internet are the younger, less active block of voters. Reaching out to millions of people is great but who is to say that all those people you are convincing to vote for you are actually going to go out and even vote. This might be the case today, however as explained by Sharon Housley, this younger generation is going to become the older generation and technology will then play an enormous role in our elections. Social media also plays a positive impact in elections through its ability to create an effective way of fundraising. In order for campaigns to run, they need money and a lot of that money is given as support through fundraisers. On a bit of a smaller scale, websites like GoFundMe.com exist today as a place specifically for helping people raise money. Online fundraising can be very effective and it can most certainty help in the fundraising for campaigns. Now these are all some positive impacts technology has on politics, there are many ways technology can be a negative impact for a politician in particular. The saying everything you put on the internet stays there forever, is very much true and well. Everything can be dug up from the depth of the internet and brought back to life, this is also been scene in the Trump vs Clinton election. A commercial, seen a lot not only on television but on Twitter and Youtube, was made by Hillary Clinton and shows an interview done many years back with Donald trump showing him saying he does not have much respect for women. This hurts his reputation towards women tremendously and will for sure put more female votes in the hands of Hillary Clinton. The social media is also a place that spreads news very fast around the world. An audio recording of Mr. Trump has been released that has him talking about women, saying that &#8220;sometimes you just have grab them by the p***y&#8221;. This is a disgusting remark towards women and because of the internet and its social media sites, everyone is aware of Mr. Trumps remarks. As you can see, the internet can be both a helpful hand or a dagger to the heart in terms of its impact on politics.</p>
+<div class="csl-bib-body">
+<div class="csl-entry">
+<div class="csl-bib-body">
+<div class="csl-entry">Housley, Sharon, Influence of Technology on Politics. (n.d.). Retrieved October 13, 2016, from http://www.feedforall.com/influence-of-technology.htm</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys142/" rel="tag">#fys142</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/politics/" rel="tag">Politics</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technologys-influence/" rel="tag">technology's influence</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/social-medias-impact-on-politics/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3797 -->
+								
+				
+<article id="post-3801" class="post-3801 post type-post status-publish format-standard hentry category-blog-assignment tag-decieve tag-fake tag-identity">
+
+	<div class="entry-details">
+				<p>October 13, 2016<br/>
+		by abbey glassman<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/how-numbers-define-instagram/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/how-numbers-define-instagram/" title="Permalink to How Numbers Define Instagram" rel="bookmark">How Numbers Define Instagram</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p><span style="font-weight: 400">This infographic explains the makeup  of the Instagram audience and their uses of this platform through numerical values. The most Instagram users are from urban settings (42%).  (Hutchinson, 2016)</span> <span style="font-weight: 400">This correlates with the idea that wealthier people use the app more. For example, only 26% of users make an annual income of less than $30,000 ;however, 30% of users have an income between $50,000 and $74,000. (Hutchinson, 2016) Living in a more urban setting is more expensive. From personal experience, Instagram is a difficult social media because it is all about having the perfect picture to get the most likes. One needs to make sure they are consistently posting  on their feed so they please their followers. Living in a more urban setting with some more money makes it easier for people to take pictures of their dinners when they go out to eat or a picture of their friends on their shopping excursion. People feel the need to show off their lives and make it more glamorous to their followers. Looking at the idea of filters and photoshop, one can see that followers can easily be alluded by a post. A mediocre selfie can turn into a work of art with a simple filter. When talking about having a fake identity in class discussions, most students said they don&#8217;t post inauthentic stuff but they don&#8217;t post the ugly or bad pictures. Only showing 50% of your life is inauthentic because from the viewer&#8217;s perspective, your life is perfect.  800 million posts are tagged with love, showing people&#8217;s’ needs to present their best sides and their amazing love life. (Hutchinson, 2016) Although relationships are difficult, followers are only subject to the fun outings and memorable couple moments. Therefore, Instagram often falsely shows a life of fun and luxury. Overall this infographic does a good job using numbers to show how Instagram is an app used for appeal and attention. However it doesn&#8217;t show the entire picture. Who was polled and how do we know these statistics aren&#8217;t biased in any way? </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Social. (2016, July 25). Instagram By The Numbers  [Infographic]. Retrieved from </span><a href="http://www.socialmediatoday.com/social-networks/instagram-numbers-infographic"><span style="font-weight: 400">http://www.socialmediatoday.com/social-networks/instagram-numbers-infographic</span></a></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/decieve/" rel="tag">decieve</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/fake/" rel="tag">fake</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" rel="tag">Identity</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/13/how-numbers-define-instagram/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3801 -->
+								
+				
+<article id="post-3799" class="post-3799 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>October 12, 2016<br/>
+		by Zhijiang Liu (Jerries)<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/12/blog-post-4-copyright/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/12/blog-post-4-copyright/" title="Permalink to Blog Post #4 – Copyright" rel="bookmark">Blog Post #4 – Copyright</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>The major problems in the management of YouTube Company are that lack of a stable system that ensures that safety of legitimate content and the failure to significantly prevent the uploading of infringing material (Plagiarism Today, 2013). These problems are defined in a vast explanation of copyright problem. The legitimacy of the content uploaded by users is questionable since there is a high probability that it can be denied and yet it is original legal work. Similarly, one can upload content that is copyrighted under another user, and yet, the YouTube management can readily accept it as original work. For example, if a company or someone uploads a video that isn&#8217;t theirs. They might get subscribers and a lots of people will following them based on a video someone else did, but it is not their news. Not only  is this a wrong and illegal behavior if the real authors are not cited properly or informed, the real authors will lose the credit that they are due. Therefore, YouTube should focus on the identification of copyrighted and illegal content in order to secure its reputation.<br />
+Providing a gate-pass for the creators of content to upload content that has issues with Content ID ( Which is checks to make sure the videos people upload are not the same as others)matches is one of the errors that will put the company’s operations at stake (Plagiarism Today, 2013). There are many companies that have partnered with YouTube. When YouTube subscribers incorporate copyrighted material into their creations, the companies involved might decide to withdraw their services and collaboration with YouTube. In the corporate world, collaboration makes an organization stronger but, with an error such as violation of the terms of agreement weakens its grasp in the market. Not only do the collaborating companies withdraw, but also, potential partners might shrug off and opt out of any partnerships with YouTube.<br />
+Conclusively, YouTube’s policy on ContentID matches should be strict on large matches of content and exempt the minor matches. In this way, the right creators of the content will enjoy their rights to pay and the other benefits associated with their creativity. In so doing, the uploader and copyright holder dilemmas would be solved. Much as there would be few cases of violations, the Company will fully enjoy a good reputation, loyal customers and expansion of its services through partnerships.</p>
+<p>Reference</p>
+<p>Plagiarism Today. (2013).YouTube’s Copyright Problem.</p>
+<p>Retrieved from https://www.plagiarismtoday.com/2013/10/23/youtubes-copyright-problem/</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/10/12/blog-post-4-copyright/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3799 -->
+								
+													<nav id="nav-below">
+						<div class="nav-previous"><a href="http://fys142f16.blogs.muhlenberg.edu/page/9/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+						<div class="nav-next"><a href="http://fys142f16.blogs.muhlenberg.edu/page/7/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+					</nav><!-- end nav-below -->
+							
+	</div><!-- end content -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+			<aside id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/FYS142DigitalWorldF16Final.pdf">Syllabus</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-3080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3080"><a href="http://fys142f16.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-3910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3910"><a href="http://libraryguides.muhlenberg.edu/digitalworld">Library Research Guide</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+</ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-3311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3311"><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="http://fys142f16.blogs.muhlenberg.edu/technology-autobiography/">Technology Autobiography</a></li>
+<li id="menu-item-3630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"><a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a></li>
+<li id="menu-item-3903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3903"><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3904"><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-4113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4113"><a href="http://fys142f16.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+<li id="menu-item-4120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4120"><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/">DA#10: Word Clouds, Snapchat Stories, Images</a></li>
+</ul></div></aside><aside id="nav_menu-9" class="widget widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-3285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3285"><a href="http://fys142f16.blogs.muhlenberg.edu/da1-create-blogs-acct/">DA#1: Create ‘Berg Blogs Account</a></li>
+<li id="menu-item-3321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3321"><a href="http://fys142f16.blogs.muhlenberg.edu/da-zotero/">DA#2: Zotero</a></li>
+<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3546"><a href="http://fys142f16.blogs.muhlenberg.edu/da3-tech-profile/">DA#3: Technology Profile Survey</a></li>
+<li id="menu-item-3545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3545"><a href="http://fys142f16.blogs.muhlenberg.edu/da4-twitter/">DA#4: Twitter</a></li>
+<li id="menu-item-3629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"><a href="http://fys142f16.blogs.muhlenberg.edu/da5-linkedin-profile/">DA#5: Create a LinkedIn Profile</a></li>
+<li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">DA#6: Google Yourself</a></li>
+<li id="menu-item-3981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3981"><a href="http://fys142f16.blogs.muhlenberg.edu/da7-one-button-studio/">DA#7: One Button Studio</a></li>
+<li id="menu-item-3982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="http://fys142f16.blogs.muhlenberg.edu/da8-dropbox/">DA#8: Dropbox for File Management</a></li>
+<li id="menu-item-4111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4111"><a href="http://fys142f16.blogs.muhlenberg.edu/da9-google-docs/">DA#9: Google Docs</a></li>
+</ul></div></aside>		</div><!-- #secondary .widget-area -->
+</div><!-- end main -->
+
+		<div id="tertiary" class="widget-area" role="complementary">
+			<aside id="search-6" class="widget widget_search"><form role="search" method="get" class="searchform" action="http://fys142f16.blogs.muhlenberg.edu/" >
+		<div>
+		<input type="text" class="search-input" value="" name="s" id="s" />
+		<input type="submit" class="searchsubmit" value="Search" />
+		</div>
+		</form></aside>		<aside id="recent-posts-10" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/da10/">DA#10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/4201/">Digital Activity #10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/digital-activity-10-8/">Digital Activity 10</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/fys-142-word-cloud/">Fys 142 word cloud</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-7/">Digital Activity 10</a>
+											<span class="post-date">December 7, 2016</span>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-10" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10/#comment-147">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-word-cloud-3/#comment-146">Digital Activity 10 Word Cloud</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-5/#comment-145">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/4181/#comment-144"></a></li><li class="recentcomments"><span class="comment-author-link">Justin Dalena</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-4/#comment-143">Digital Activity #10</a></li></ul></aside><aside id="tag_cloud-7" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys142/" class="tag-cloud-link tag-link-76331 tag-link-position-1" style="font-size: 17.586956521739pt;" aria-label="#fys142 (12 items)">#fys142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/gaming/" class="tag-cloud-link tag-link-108 tag-link-position-2" style="font-size: 9.8260869565217pt;" aria-label="#gaming (3 items)">#gaming</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" class="tag-cloud-link tag-link-94010 tag-link-position-3" style="font-size: 11.347826086957pt;" aria-label="#socialmedia (4 items)">#socialmedia</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/apps/" class="tag-cloud-link tag-link-8005 tag-link-position-4" style="font-size: 8pt;" aria-label="apps (2 items)">apps</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" class="tag-cloud-link tag-link-179921 tag-link-position-5" style="font-size: 12.565217391304pt;" aria-label="autobiography (5 items)">autobiography</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/blog3/" class="tag-cloud-link tag-link-179948 tag-link-position-6" style="font-size: 8pt;" aria-label="blog3 (2 items)">blog3</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/bots/" class="tag-cloud-link tag-link-175844 tag-link-position-7" style="font-size: 8pt;" aria-label="bots (2 items)">bots</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/children/" class="tag-cloud-link tag-link-52 tag-link-position-8" style="font-size: 9.8260869565217pt;" aria-label="children (3 items)">children</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/computer/" class="tag-cloud-link tag-link-179934 tag-link-position-9" style="font-size: 8pt;" aria-label="computer (2 items)">computer</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/control/" class="tag-cloud-link tag-link-8016 tag-link-position-10" style="font-size: 8pt;" aria-label="control (2 items)">control</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/copyright/" class="tag-cloud-link tag-link-61 tag-link-position-11" style="font-size: 8pt;" aria-label="copyright (2 items)">copyright</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyber-bullying/" class="tag-cloud-link tag-link-74472 tag-link-position-12" style="font-size: 8pt;" aria-label="cyber bullying (2 items)">cyber bullying</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital/" class="tag-cloud-link tag-link-300 tag-link-position-13" style="font-size: 8pt;" aria-label="digital (2 items)">digital</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" class="tag-cloud-link tag-link-179941 tag-link-position-14" style="font-size: 13.630434782609pt;" aria-label="digital identity (6 items)">digital identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-immigrants/" class="tag-cloud-link tag-link-180027 tag-link-position-15" style="font-size: 8pt;" aria-label="Digital Immigrants (2 items)">Digital Immigrants</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-natives/" class="tag-cloud-link tag-link-94041 tag-link-position-16" style="font-size: 11.347826086957pt;" aria-label="Digital Natives (4 items)">Digital Natives</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-world/" class="tag-cloud-link tag-link-179987 tag-link-position-17" style="font-size: 8pt;" aria-label="Digital World (2 items)">Digital World</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/domain-of-ones-own/" class="tag-cloud-link tag-link-20890 tag-link-position-18" style="font-size: 9.8260869565217pt;" aria-label="Domain of One&#039;s Own (3 items)">Domain of One&#039;s Own</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-19" style="font-size: 12.565217391304pt;" aria-label="Facebook (5 items)">Facebook</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fake/" class="tag-cloud-link tag-link-179979 tag-link-position-20" style="font-size: 8pt;" aria-label="fake (2 items)">fake</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/future/" class="tag-cloud-link tag-link-30652 tag-link-position-21" style="font-size: 8pt;" aria-label="future (2 items)">future</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys-142/" class="tag-cloud-link tag-link-179938 tag-link-position-22" style="font-size: 9.8260869565217pt;" aria-label="fys 142 (3 items)">fys 142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-23" style="font-size: 17.130434782609pt;" aria-label="Google (11 items)">Google</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google-myself/" class="tag-cloud-link tag-link-179968 tag-link-position-24" style="font-size: 8pt;" aria-label="google myself (2 items)">google myself</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/government/" class="tag-cloud-link tag-link-8189 tag-link-position-25" style="font-size: 8pt;" aria-label="government (2 items)">government</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" class="tag-cloud-link tag-link-15565 tag-link-position-26" style="font-size: 14.391304347826pt;" aria-label="Identity (7 items)">Identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/images/" class="tag-cloud-link tag-link-30047 tag-link-position-27" style="font-size: 8pt;" aria-label="Images (2 items)">Images</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-28" style="font-size: 11.347826086957pt;" aria-label="Instagram (4 items)">Instagram</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-29" style="font-size: 15.152173913043pt;" aria-label="Internet (8 items)">Internet</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet-privacy/" class="tag-cloud-link tag-link-29524 tag-link-position-30" style="font-size: 8pt;" aria-label="internet privacy (2 items)">internet privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ipads/" class="tag-cloud-link tag-link-94044 tag-link-position-31" style="font-size: 8pt;" aria-label="iPads (2 items)">iPads</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/jim-groom/" class="tag-cloud-link tag-link-179995 tag-link-position-32" style="font-size: 8pt;" aria-label="jim groom (2 items)">jim groom</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ownership/" class="tag-cloud-link tag-link-179962 tag-link-position-33" style="font-size: 13.630434782609pt;" aria-label="ownership (6 items)">ownership</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" class="tag-cloud-link tag-link-179942 tag-link-position-34" style="font-size: 9.8260869565217pt;" aria-label="perception (3 items)">perception</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/personal-information/" class="tag-cloud-link tag-link-8060 tag-link-position-35" style="font-size: 8pt;" aria-label="Personal Information (2 items)">Personal Information</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/phone/" class="tag-cloud-link tag-link-160555 tag-link-position-36" style="font-size: 8pt;" aria-label="phone (2 items)">phone</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/police/" class="tag-cloud-link tag-link-180008 tag-link-position-37" style="font-size: 8pt;" aria-label="police (2 items)">police</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-38" style="font-size: 20.478260869565pt;" aria-label="privacy (19 items)">privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" class="tag-cloud-link tag-link-519 tag-link-position-39" style="font-size: 15.913043478261pt;" aria-label="Social Media (9 items)">Social Media</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/tagxedo/" class="tag-cloud-link tag-link-180078 tag-link-position-40" style="font-size: 9.8260869565217pt;" aria-label="Tagxedo (3 items)">Tagxedo</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-41" style="font-size: 22pt;" aria-label="Technology (24 items)">Technology</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ted-talk/" class="tag-cloud-link tag-link-94075 tag-link-position-42" style="font-size: 9.8260869565217pt;" aria-label="TED TALK (3 items)">TED TALK</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/word-cloud/" class="tag-cloud-link tag-link-68332 tag-link-position-43" style="font-size: 9.8260869565217pt;" aria-label="Word Cloud (3 items)">Word Cloud</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 8pt;" aria-label="Writing (2 items)">Writing</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/youtube/" class="tag-cloud-link tag-link-251 tag-link-position-45" style="font-size: 12.565217391304pt;" aria-label="youtube (5 items)">youtube</a></div>
+</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">#FYS142 Twitter Feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</aside>		</div><!-- end tertiary .widget-area -->
+</div><!-- end wrap -->
+
+	<footer id="colophon" class="clearfix">
+		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a><span class="sep"> | </span>Theme: Yoko by <a href="http://www.elmastudio.de/en/themes/">Elmastudio</a></p>
+		<a href="#page" class="top">Top</a>
+	</footer><!-- end colophon -->
+	
+</div><!-- end page -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/smoothscroll.js?ver=1.4'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f16.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fpage%2F8%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f16.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

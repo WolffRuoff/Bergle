@@ -1,0 +1,879 @@
+http://fys142f15.blogs.muhlenberg.edu/page/2/
+187
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+Who Controls Your Digital World? | FYS 142 Course Site | Page 2	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Feed" href="http://fys142f15.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Comments Feed" href="http://fys142f15.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f15.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f15.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f15.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f15.blogs.muhlenberg.edu/?wordfence_lh=1&hid=DD402DF31DF629A0180A2C67FDA1DAA7');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://fys142f15.blogs.muhlenberg.edu/files/2015/08/fyswordcloud3.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support custom-background paged-2 no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<h1 id="site-title">
+					<span>
+						<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">Who Controls Your Digital World?</a>
+					</span>
+				</h1>
+				<div id="site-description">FYS 142 Course Site</div>
+
+									<img src="" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-2344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344"><a href="http://fys142f15.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345"><a href="http://fys142f15.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="http://fys142f15.blogs.muhlenberg.edu/course-requirements-and-grading/">Course Requirements and Grading</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2347"><a href="http://fys142f15.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2348"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/">Class Schedule and Topic Outline</a></li>
+<li id="menu-item-2349" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-2349"><a href="http://fys142f15.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/3/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+	</div><!-- #nav-above -->
+
+
+
+	
+			<div id="post-2905" class="post-2905 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-evolution tag-emoticons tag-male-vs-female">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/evolution-of-language/" rel="bookmark">Evolution of Language</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/evolution-of-language/" title="2:47 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/ls250633/" title="View all posts by Lucy Wang Sedlis">Lucy Wang Sedlis</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>As society is evolving so is social medias language. Through the internet people have discovered new ways to communicate easily while not actually having to use full coherent sentences. Chapter six in <em>How Blogs and Twitter Ate Transforming Popular Culture </em>written by Mary Cross, she states “Without editors or gatekeepers, language on the Internet is in constant flux, experimental at best, ungrammatical at worst” (2011, p 85). Visual information gets to the brain a lot faster so social media has been able to translate words and emotions into emoticons. Through emoticons one is able to express their emotions and thoughts to friends or family in a quick and easy to understand manner. It is very hard for people to read a tone text message, you may send a message with a joking tone but the receivers might take it the wrong way and think you were being rude or overly sarcastic. With emotions and expressions being translated into emoticons it makes it easier for people to be able to get a sense of the text messages tone because a quick smiley face at the end of the sentence can go along way.</p>
+<p>A huge theme that is constantly changing over the years is the use of slang words. As culture evolves so does slang, there will always be more words that are “in” during that year. This year specifically those words consisted of “no chill”, “FOMO”, “turnt”, “on fleek”, “bae”, “yas”, and many more. There have been people looking into whether or not slang effects the way one writes essays and complete assignments but some say other wise, “Yet experts who study these things say that language offline has not ben measurably affected, that students can still put together coherent papers in full sentences, and, even, that all the extra writing they are doing online is improving their mastery of written langue” (2011, p 86). Even thought students these days use slang more often than not it has not yet effect our ability to write properly. It is important that as our culture changes we do not begin slipping away from the English grammar and spelling, we cannot let slang take over the English dictionary.</p>
+<p>Chapter six also touches upon a major theme in that there is a difference between the male language and female language. In regard to the use of emoticons and slang females tend to have more length texts apply more emoticons where as males tend to be more short and to the point with less use of emoticons. On a more serious note when it comes to proper English and professional writings there were specific difference brought to my attention through this chapter. Linguistics professor Naomi S Baron, who is the author of <em>Always on </em>states that, “Women also tend to use more qualifiers, are more polite, stick to standard usage, and use conversation to enhance social interactions, while men converse to convey information” (2011, p 90). Over all I agree with this statement however I do not believe that men only talk to convey information, I feel as though women are more polite than men by using conversation to interact but men also do that too, just not as often. Baron also touches upon the fact that women tend to disguise themselves online so that they are able to speak out loud with out getting bashed on the internet however this is not what women should have to do to speak their mind.</p>
+<p>Again as society begins to develop so does our language, so it is important that we do not let slang get in the way of being professional students nor let society gender norms hold you back from expressing our own thoughts to the public.</p>
+<p>References:</p>
+<p>Cross, M. (2011). <em>Bloggerati, twitterati : How blogs and Twitter are transforming popular culture.</em> Santa Barbara, Calif.: Praeger. https://muhlenberg.on.worldcat.org/oclc/730945967?databaseList=1708,638</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/evolution/" rel="tag">#evolution</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/emoticons/" rel="tag">emoticons</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/male-vs-female/" rel="tag">male vs female</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/evolution-of-language/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2905 -->
+
+		
+	
+
+	
+			<div id="post-2898" class="post-2898 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-itunes-library tag-music-industry tag-pirated-companies tag-steve-jobs">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/the-perfect-blend-of-creativity-and-technology/" rel="bookmark">The Perfect Blend of Creativity and Technology</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/the-perfect-blend-of-creativity-and-technology/" title="2:38 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/jsilber426/" title="View all posts by Jennie Silber">Jennie Silber</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>As the pioneer of the microcomputer revolution and co-founder of the multi-billion-dollar technology company known as Apple, Steve Jobs has completely transformed the technology world we know today, creating innovative, user-friendly, life-altering products used by billions of people all over the world.</p>
+<p>In Chapter 31 of the book, <em>Steve Jobs</em>, author Walter Isaacson delves into the creation of the first legal and reliable media player/library that has the ability to play, download, and organize digital audio and video on personal devices. In the early 2000s, the music industry was plagued by an array of piracy services, including Napster, Grokster, Gnutella, and Kazaa that illegally provided songs for free online. Jobs once said, “From the earliest days at Apple, I realized that we thrived when we created intellectual property. If people copied or stole our software, we’d be out of business. If it weren’t protected, there’d be no incentive for us to make new software or product designs. If protection of intellectual property begins to disappear, creative companies will disappear or never get started. But there’s a simpler reason: It’s wrong to steal. It hurts other people. And it hurts your own character” (2011). In an effort to find a legal alternative that would benefit both the customer as well as the music companies, Steve Jobs met with AOL Time Warner and Sony. Working with these companies was a nightmare to say the least and every service they tried to set into motion failed due to complicated restrictions and clunky interfaces.</p>
+<p>It wasn’t until Jobs managed to persuade the five top record companies in the nation to allow digital versions of their songs to be sold that the “iTunes Store” was created. Jobs proposed not only to sell entire albums, but also individual songs for 99 cents, giving record companies 70% profit for each song sold. Jobs insisted that going down this route would be more appealing than the monthly subscription model preferred by most music companies. Jobs was right. He was able to convince the head of the Universal Music Group, Doug Morris, that he had the talent to produce a software that would portray the artistic and technological vision that most music companies lacked. Although Morris worked with plenty of artists, ranging from U2 to Eminem to Mariah Carey, Jobs still had much more work to do. “Corralling the record labels to go along with the iTunes plan was not enough, however. Many of their artists had carve-outs in their contracts that allowed them personally to control the digital distribution of their music or prevent their songs from being unbundled from their albums and sold singly. So Jobs set about cajoling various top musicians, which he found fun but also a lot harder than he expected” (2011). After rigorous work and plenty of convincing, Jobs was able to unveil the iTunes Store on April 28<sup>th</sup>, 2003. He explained at San Francisco’s Moscone Center, “The iTunes Store would start with 200,000 tracks, and it would grow each day. By using the store, you can own your songs, burn them on CDs, be assured of the download quality, get a preview of a song before you download it, and use it with your iMovies and iDVDs to make the soundtrack of your life.” As we know today, iTunes launched with great success, starting by selling a million songs in just six days.</p>
+<p>Overall, Steve Jobs understood that producing this kind of technology requires both intuition and creativity, all of which he had. In every Apple product on the market, it is apparent how much importance Job’s put into the company’s integrity, user-friendliness, and attention to detail. Without the iTunes library, we would probably still be illegally downloading our favorite songs from bootlegged companies. However, today we can enjoy the 11<sup>th</sup> version of this media management software, with features like new album art, on-demand music stations, AirPlay, and the ability to download countless amounts of music, movies, TV shows, podcasts, books, and apps, all thanks to Steve Jobs.</p>
+<p>&nbsp;</p>
+<p>References</p>
+<p>Isaacson, Walter. (2011). <em>The iTunes store: I’m the pied piper: Steve Jobs. </em>(no page numbers available). New York: Simon &amp; Schuster. Retrieved from &lt;http://web.uchile.cl/DctosIntranet/09Internet/CulturaDigital/BiografiaSteveJobs.pdf&gt;.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/itunes-library/" rel="tag">iTunes library</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/music-industry/" rel="tag">music industry</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/pirated-companies/" rel="tag">pirated companies</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/steve-jobs/" rel="tag">Steve Jobs</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/the-perfect-blend-of-creativity-and-technology/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2898 -->
+
+		
+	
+
+	
+			<div id="post-2899" class="post-2899 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-high-school tag-ipads tag-pre-schoolers tag-technologies">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/pre-schoolers-using-ipads/" rel="bookmark">Pre-schoolers using IPads!</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/pre-schoolers-using-ipads/" title="2:26 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/lindseybowen/" title="View all posts by Lindsey Bowen">Lindsey Bowen</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>There wasn’t a time in High School that I wasn’t using an IPad or even a computer, I was always attached to some kind of screen I never really was able to get a break. Every homework assignment that I had, had to be done on my IPad and sometimes a computer. I would sit in class looking at a smart board and then writing down the notes on my IPad. By the time I was done with school and my homework I didn’t even want to look at my my phone or TV because I couldn’t stand looking at screens.</p>
+<p>When looking at different books on IPads the one that really struck me was “Routledge Research in Early Childhood Education: IPads in the Early Years: Developing Literacy and creativity.” By Dezuanni, Dooley and Gattenhof. The whole concept of the book had to do with children developing with IPads and how they can use them for learning at a young age. Chapter seven focused on Preschools letting parents take home IPads for there children to use for learning. They would have to bring them back but they first teach the parents all about them and how to use them. Then they tell them what their children would be using them for.</p>
+<p>This does sound like a nice way to have kids learn in a fun way but children shouldn’t be looking at screens at such a young age. Kids should be learning in a normal class room setting with paper and white boards and we should be teaching kids how to write in cursive not learning how to use a IPad. Even though its something that I only happening at home and not for a long time kids shouldn’t be learning IPads or any kind of small device until there older.</p>
+<p>Kids should be playing with toys and going outside not looking at screens they need to build their imagination. They wont fully be able to do that when looking at a device, and playing video games.</p>
+<p>The teachers didn’t really see much of a difference from the kids who did use IPads at home verse the kids who didn’t use IPads. The one thing that they did notice is that when the teacher pulled the IPads out for a class activity the kids who used them at home knew how to use and the kids who don’t use it at home had a little bit of a hard time.</p>
+<p>My old school is a Pre-K – Twelve school so when we started using IPads in the high school they decided that the middle school and lower school should use them. They haven’t suggested that the little kids use them yet. I would find it absolutely crazy is they made Pre-K and Kindergarten kids use IPads for learning. Kids need to just play with each other and learn to socialize.</p>
+<p>&nbsp;</p>
+<p>Dezuanni, M., Dooley, K., &amp; Gattenhof, S. (2015). Routledge Research in Early Childhood Education : iPads in the Early Years : Developing Literacy and Creativity. Florence, KY, USA: Taylor and Francis. Retrieved from http://www.ebrary.com</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/high-school/" rel="tag">High school</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/ipads/" rel="tag">iPads</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/pre-schoolers/" rel="tag">Pre-Schoolers</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologies/" rel="tag">Technologies</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/pre-schoolers-using-ipads/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2899 -->
+
+		
+	
+
+	
+			<div id="post-2895" class="post-2895 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-copy-right-laws tag-digital-natives tag-napster">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-pirates/" rel="bookmark">Digital Pirates</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-pirates/" title="2:20 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/kirving/" title="View all posts by Kevin">Kevin</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>I know I am technically supposed to postpone my judgment until after analyzing a piece of text, but as I started reading a chapter from the book, Born Digital by John G Palfrey I couldn’t help but notice that the chapter I chose to read was called “Pirates”. So as I began reading silently too myself, all I could think was, “This author is crazy, is he really attempting to call my generation pirates, ones who lie and steal and kill?” Turns out Palfrey did a pretty good job in persuading me,  I hate to admit it but yeah, we are all pirates when it comes to the digital world whether we accept it or not.</p>
+<p>You may ask yourself why this is, and think that you do nothing wrong while on the internet and that may be the case, like it is for many people. However, the digital world has changed faster than anyone could have ever imagined and it simply wasn’t ready for the wave of our generation to step in. Palfrey says regarding the digital natives, “With so many forms of media available in digital formats, Digital Natives are breaking new creative ground” (Palfrey, 131). My judgment immediately kicked in again and I thought to myself, “Hey, he’s finally saying something nice about my generation!” All that we do in our daily lives, like surf the web, listen to music, or socialize with millions of other people were unimaginable just a few years ago and this new technology that we were born into allows us to grow up in a creative atmosphere. Here, Palfrey states, “Creativity, is the upside of this brave new world of digital media” (Palfrey, 132). But with every upside there is always a counterpart. The downsides to this atmosphere sometimes even outweigh those upsides. A detrimental downside is today’s violation of copy right laws. Palfrey claims that the vast majority of Digital Natives are breaking copy right laws on a regular basis. The emergence of new technologies and the easy access to violate copy right laws took everyone by surprise and led corporations to conclude that something had to be done to protect these laws and to punish those who do not cooperate with them. In doing so leads our growing digital era to a cross roads. Are the digital natives creative and helpful or destructive and relentless?</p>
+<p>Pirates are neither creative nor helpful, so in essence Palfrey’s claim is that our generation is destructive, but why? The chapter “Pirates” discussed a controversy I found to be very interesting regarding the epidemic of file sharing that occurred in the early 2000s. Napster was the head dog in this battle that eventually caused major corporations to re think copy right laws. You may have heard of Napster before but for those that haven’t, it was a new form a software developed so music could be shared easily and for free over the internet. What entailed from this was that the sales of CD’s and albums sharply declined, devastating the economy of the music industry. Aside from shortages in sales, Napster and many other “P2P” sites committed large scale copy right infringements. No matter how hard the music industry try’s to shut down the P2P file sharing sites they will never die because their popularity among the Digital Natives is bigger than law itself. Now a day’s how many people actually are buying CD’s and albums? Not many, as social norms drive this ongoing piracy. To fully comprehend this file sharing epidemic we have to understand social norms which regulate human behavior more than anything. We were all taught at a young age to comply with social norms of all sorts, such as “sharing nicely” or “saying please and thank you”. Napster kick started this wave of piracy among the Digital natives from a very early age making copy right infringement the “normal thing to do”. Also having not learned about them from an early age, the majority of Digital Natives are very confused about the intricacies of copy right laws. A necessary solution is to teach the importance of copy right at a young age and not strangle the creativity of our worlds Digitals Natives by strengthening the laws themselves.</p>
+<p>Palfrey , John, and Gasser, Urs. Born Digital : Understanding the First Generation of Digital Natives(pp. 131-153). New York, NY, USA: Basic Books, 2010. ProQuest ebrary. Web. 4 November 2015.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/copy-right-laws/" rel="tag">Copy Right Laws</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/digital-natives/" rel="tag">Digital Natives</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/napster/" rel="tag">Napster</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-pirates/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2895 -->
+
+		
+	
+
+	
+			<div id="post-2889" class="post-2889 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-broadcast tag-dilemma tag-facebook tag-terrorism tag-twitter tag-youtube">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/terrorism-and-social-media/" rel="bookmark">Terrorism and Social Media</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/terrorism-and-social-media/" title="1:54 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/jsaperstein/" title="View all posts by Jesse Saperstein">Jesse Saperstein</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p><span style="font-weight: 400">Social Media is a lethal weapon. When hearing this statement some people might be puzzled trying to figure out what it might mean. Although people may feel that social media is amazing for its ability to give each person who it is accessible to a voice, this is far from the case. Facebook and Twitter, two of the most popular social networking sites that we use in our everyday lives are flooded with terroristic propaganda used to help benefit various terrorist organizations. A book published by the United States government titled, </span><i><span style="font-weight: 400">The Evolution of Terrorist Propaganda: The Paris Attack and Social Media, </span></i><span style="font-weight: 400"> talks about the growing concern over terrorist organizations’ ability to use social media. The book continues to talk about the knowledge that terrorist organizations have as it says, “Terrorists know the benefit of social media. Social Media is easy to use, it is free, and it reaches everyone in the world,”(1). ISIS , who has recently come into view for the United States government and its citizens, uses social media to broadcast their horrible videos that show their terrible acts to the entire world. ISIS uses these videos in an attempt to recruit new members to their “caliphate” not just in the Middle East, but around the world due to the abilities of social media. With a growing terrorist organization presence on Twitter and Facebook, these companies and the United States are faced with a huge dilemma. Should they do whatever it takes to remove all the content posted by terrorist organizations to prevent recruitment or should they leave the content so they can use it for intelligence to help stop the terrorist organizations. The United States and Social Media companies must figure out a strategy to help improve this issue. </span></p>
+<p><span style="font-weight: 400">As the reading continues, it talks about occurrences where terrorist groups have used social media. Twitter has run into major problems with terrorist groups being on their website such as, “for years Twitter was asked to shut down an account of the foreign terrorist organization al- Shabaab, which pledged allegiance to al-Qaeda,”(2). In 2013, al-Shabaab’s account live tweeted their attack on the Westgate Mall in Kenya that killed 72 people. By Twitter not listening to these complaints, they let a terrorist organization live tweet so the rest of the world was able to see , which could have easily been prevented by Twitter. The reading continued to talk about the negatives of social media saying, “the use of Internet to radicalize and recruit homegrown terrorists is the single most important and dangerous innovation since the terrorist attacks of September 11, 2001. Approaches that are aimed at reducing the supply of violent extremist content on the Internet are neither feasible nor desirable.’’ The United States and other nations know that they are fighting a very tough battle against terrorists organization on social networking websites. In my opinion, these sites should look to eliminate every terrorist affiliated page. ISIS’ main strength is its ability to recruit and send messages using social media. I feel that if companies like Facebook and Twitter could cut off ISIS’ ability to use social media, their efforts would be extremely weakened. Having information about terrorist organizations like ISIS by using their posts can be beneficial, but the United States has been very good at knowing where and when ISIS mobilizes and with drone technology they are able to attack without sending military personnel to the battlefield to fight. United States citizens have also began to try to join the ISIS caliphate. Many of these people have been caught before being able to travel to Syria to join, but some have been successful in their efforts. Social media is the reason for this willingness to join ISIS. The United States and social networking websites have made strides to help put an end to terrorist organization’s ability to share their ideas and messages with the world,  but it will be a long, hard battle that the United States and the rest of the world will continue to fight.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">The evolution of terrorist propaganda: The Paris attack and social media: Hearing before the Subcommittee on Terrorism, Nonproliferation, and Trade of the Committee on Foreign Affairs, House of Representatives, One Hundred Fourteenth Congress, first sess. (2015). Washington D.C.: United States Government Publishing Office. </span></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/broadcast/" rel="tag">broadcast</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/dilemma/" rel="tag">dilemma</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" rel="tag">Facebook</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/terrorism/" rel="tag">terrorism</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" rel="tag">twitter</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/youtube/" rel="tag">youtube</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/terrorism-and-social-media/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2889 -->
+
+		
+	
+
+	
+			<div id="post-2888" class="post-2888 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-commercebusiness tag-connection tag-social-medianetworking">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/social-medias-impact-on-commerce/" rel="bookmark">Social Media’s Impact on Commerce</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/social-medias-impact-on-commerce/" title="1:45 am" rel="bookmark"><span class="entry-date">November 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/cfunge/" title="View all posts by Chris Funge">Chris Funge</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>The rise of the Internet over the past twenty or so years has undoubtedly changed the way of life for many. From instant access to extensive amounts of information to being able to communicate with individuals on the other side of the world in a flash, the Internet has unquestionably made previously unimaginable tasks possible. This feat has, largely, been achieved through the development of social networking sites such as Facebook, Twitter, and LinkedIn. These sites certainly make connecting and communicating with people simple. Hence, Shannon Belew (2014, p. 1) explains in her book, <em>Art of Social Selling: Finding and Engaging Customers on Twitter, Facebook, LinkedIn and Other Social Networks</em>, that there are over one billion people active on top social networks. “These networks include LinkedIn, Twitter, Facebook, and Google+” (Belew, 2014, p. 1). However, the positive effects of these social networking sites extend far beyond friendly communication. How else, then, are these social networks used?</p>
+<p>One of the largest uses for social networking sites is commerce. It is no surprise that businesses are focusing their efforts toward social networks given the number of members these networks possess. Belew (2014, p. 1) notes that if businesses “are able to connect with even one-tenth of one percent of [these members], then [businesses] have reached more than one million people.” While being active on social networking sites does not guarantee businesses a million or hundreds of thousands of leads, it does provide them with the potential to reach “a high number of high-quality prospects” (Belew, 2014, p. 2). Commerce is home to a survival of the fittest mentality in which only the strongest businesses survive and outlive their competitors. Belew (2014, p. 2) states that effective businesses will be able to adapt to changes in the sales and marketing process that social media is responsible for. As a result, these businesses will be able to effectively monitor social media sites, see what potential customers want, and fulfill these demands. In doing so, the businesses that utilize social media will leave their competitors not using social media, and their sales quota, “in the dust” (Belew, 2014, p. 2).</p>
+<p>Businesses are not the only winner when commerce takes place on social networking sites. Consumers can benefit as well. Belew (2014, p. 3) provides a prime example of a consumer that wins from commerce taking place over social networks in her story of a customer that had booked a reservation at a relatively well-known hotel in California. The hotel made an error in booking the woman’s reservation and it appeared as if she did not have a place to stay. The customer decided to take her frustrations to Twitter, where a competing hotel noticed her tweet. The hotel responded to the customer, suggesting that she stay at their hotel next time she was in the area. The hotel stated that they would be happy to take care of her and make her stay as relaxing and stress-free as possible. Of course, the hotel made sure that this tweet was public and in turn saw a “nice bump in reservations” (Belew, 2014, p. 3). Yet, the hotel was not the only winner in this scenario. The woman, or consumer in this case, and several other consumers, for that matter, benefited. The woman and other individuals knew that they could travel and have a hotel to stay in that would meet their expectations.</p>
+<p>Moreover, a powerful bond exists between social media and commerce. Businesses know that by adapting to the new social media driven sales and marketing process they will be able to closely-observe social media sites, see what potential customers desire, and meet the demand for these wants so that a profit can be made. Consumers are still paying the same amount that they typically would for products, but they can rest assured that the money they are spending is going toward goods and services that will, more often than not, meet their expectations. Thus, the relationship between commerce and social media is not so bad after all. Rather, this connection is a positive one that yields the satisfaction of businesses and consumers alike.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Reference List</p>
+<p>Belew, S. (2014). Fishing in social ponds: Using social media as a prospecting tool for online students. In <em>Art of social selling: Finding and engaging customers on Twitter, Facebook, LinkedIn, and other social networks </em>(pp. 1-11). Saranac Lake, NY, USA: AMACOM Books. Retrieved from <a href="http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=5&amp;docID=10816210&amp;tm=1446681731527">http://site.ebrary.com/lib/muhlenberg/reader.action?ppg=5&amp;docID=10816210&amp;tm=1446681731527</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/commercebusiness/" rel="tag">Commerce/business</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/connection/" rel="tag">Connection</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/social-medianetworking/" rel="tag">Social media/networking</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/social-medias-impact-on-commerce/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2888 -->
+
+		
+	
+
+	
+			<div id="post-2881" class="post-2881 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-lies tag-lifeskills">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/will-the-future-be-a-future-of-lying/" rel="bookmark">Will the Future be a Future of Lying?</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/will-the-future-be-a-future-of-lying/" title="11:47 pm" rel="bookmark"><span class="entry-date">November 4, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/willlerrick/" title="View all posts by Will Lerrick">Will Lerrick</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p><span style="font-weight: 400">Most children from a very young age are taught that lying is bad. They are told it will only get them in more trouble and cause problems. Kids do believe this and try not to lie. But when a child lies and gets away with it he or she won’t understand what the consequences might be if they are caught. This happens primarily online where a kid lies and doesn&#8217;t get caught and therefore sees no repercussions from lying so they continue to do it.</span></p>
+<p><span style="font-weight: 400">The chapter I read was </span><i><span style="font-weight: 400">Kids Online Lying as the New Social Norm?</span></i><span style="font-weight: 400"> From the book, </span><i><span style="font-weight: 400">From Fear to Facebook: One School’s Journey</span></i><span style="font-weight: 400"> by Matt Levinson. One of the main themes that occurs in the chapter is how more and more kids are lying online. There is no one online to tell the kids that lying is bad online. Levinson writes, “Kids need role models to help them learn, but in online life, there are no adult role models available,” (2010, pp.64). What Levinson is saying is that they have no one to look up to online. Kids have no idea how to act online because there are no role models. How are they supposed to know how to act when there is no supervision. This can be compared to William Golding’s </span><i><span style="font-weight: 400">Lord of the Flies</span></i><span style="font-weight: 400"> where the boys trapped on the island have no idea how to act with no adult supervision and therefore begin to slowly fall apart. In real life, kids look to their parents or teachers for guidance. But online they look to the other people they are with who sometimes are not the best role models. This is a recipe for disaster because odds are that the other people online with these kids are other kids who might be lying too.</span></p>
+<p><span style="font-weight: 400">Another theme that comes up in the chapter is the dishonest use of cell phones. As more kids are gaining access to mobile devices, it is becoming more easier for them to cheat. Levinson writes, “In the area of cheating, the findings grow more alarming. Of the 1,013 teens surveyed, 35% admit to cheating at least once with their cell phones. Teens are more likely to say that their friends are cheating than they are, as 65% of teens say they have seen or heard about other people in their school cheating with cell phones.” (2010. pp. 66). Cell phones could be considered as hand held cheating devices. It is getting easier to cheat and lie on tests due to cell phones and their ability to take pictures and send text messages. As technology becomes more integrated with our lives, parents and other role models must teach kids that cheating and lying is not okay just because it happens over cyberspace.</span></p>
+<p><span style="font-weight: 400">Overall, kids are gaining access to technology a lot earlier in their lives than anyone else. Most people gained the access to technology when they were old enough to understand that lying and cheating is bad in real life so they knew not to do it online. Nowadays kids are gaining access to technology before they even realize what is good and bad in real life so they have no idea how to act online. I believe that if parents can teach their children that whatever is not okay in real life probably is not okay online the next generation of children will lie and cheat a lot less.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Levinson, M., &amp; International Society for Technology in Education. (2010). </span><i><span style="font-weight: 400">From fear to Facebook: One school&#8217;s journey</span></i><span style="font-weight: 400"> (1st ed.). Eugene, Or.: International Society for Technology in Education. </span><a href="http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=476127"><span style="font-weight: 400">http://search.ebscohost.com/login.aspx?direct=true&amp;scope=site&amp;db=nlebk&amp;db=nlabk&amp;AN=476127</span></a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/lies/" rel="tag">#lies</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/lifeskills/" rel="tag">#lifeskills</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/will-the-future-be-a-future-of-lying/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2881 -->
+
+		
+	
+
+	
+			<div id="post-2879" class="post-2879 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-e-banking tag-technology-dependency tag-too-advanced">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/out-with-the-new-in-with-the-old/" rel="bookmark">Out with the New, In with the Old</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/out-with-the-new-in-with-the-old/" title="10:12 pm" rel="bookmark"><span class="entry-date">November 4, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/mm251310/" title="View all posts by Maddy Mummey">Maddy Mummey</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>It is no secret that in today’s world people have an ever-growing hunger for the newest, the best, and the quickest form of any good/service that exists. This demand for efficiency has subsequently led to the invention of many products that fulfilled such requirements. For example, people did not want to wait three days for a letter to be delivered to its recipient so electronic mail (e-mail) was invented, some people did not want to wait in a ticket booth line on the Turnpike so E-ZPass transponders were manufactured, and students did not feel like manually having to write citations for papers so online citation websites were generated. All of the aforementioned inventions are different and unique in terms of what they provide but similar in their purpose: keeping up with consumers’ mile-a-minute lifestyles. Following suit is banking. The days of actually going to a bank, conversing face to face with a teller, and completing a transaction are soon to be long gone. In their place is electronic banking: the newest, the best, and the quickest way to deposit, withdrawal, or transfer funds. Chapter 7 of <em>The Future of Banking</em> focuses solely on electronic banking. The term “electronic banking” is an umbrella terms that covers any banking activity accessed by electronic means (2002, p 131). To further simplify this concept, note that it includes automated teller machines (ATMs), automated call centers, digital cash, Internet banking, and many other electronic-related forms of banking (2002, p 131).</p>
+<p>Contrary to popular belief, electronic banking is not as innovative as it has been made out to be. The first form of electronic banking arose in 1871 when a nationwide money-transfer service was being offered by the Western Union Telegraph Company (2002, p 132). This was then followed by the Fedwire telegraph system in 1918, SWIFT and CHIPs payments systems in the 1970s, and Western Union’s first over-the-Internet services in 2000 (2002, p 132). In between all of these large milestones are more milestones that are smaller than but just as important as their predecessors. Such achievements include the first machine to read checks, credit cards, ATMs, and a multitude of other Internet-based inventions and innovations (2002, p 132). It is undeniable to say that society’s banking ways have made leaps and bounds since their birth 144 years ago. However, what is not so clear to people is if society is still headed in the right path or if it is time to take a break from becoming so obsessed with the need for speed in every aspect of daily life. Despite the extreme convenience of it, is electronic banking posing a number of negative effects on society?</p>
+<p>It can be argued that technology is ruining society in a number of different ways. In this instance, electronic banking is affecting society negatively in three major ways. First, the amount of jobs available to people is steadily decreasing. It is predicted that 45% of all jobs will belong to robots within the next two decades (Worstall, 2013). Second, people are becoming dependent on technology. The 188 billion text messages sent monthly in the US alone is an enormous indicator that people have an electronic obsession (Kluger, 2010). Another red flag appears when people are installing devices that make their lives revolve around technology now more than ever (Kluger, 2010). The final reason that electronic banking has adverse effects is the lost amount of face-to-face interaction between people. The assumption of believing that closing banks is not significant because it is just “one job,” is beyond false due to the fact that there are a number of jobs that are similarly being eliminated which add up and become an enormous issue for society to deal with. Nowadays, on average, people only have 74 face-to-face conversations a month (Narins, 2013). Closing banks and other like-businesses will only cause this statistic to become even worse. Although Gup refers to electronic banking as “innovative,” “faster,” “better,” and “cheaper” it is safe to say that he is wrong (2002, p 133). With the continued support and advancement of electronic banking and other technology-based substitutes, society as a whole will be hurt more than they will be helped.</p>
+<p>&nbsp;</p>
+<p>References:</p>
+<p>Gup, B. E. (Ed.). (2002). Electronic Banking. In <em>Future of Banking </em>(pp 131-151). Westport, CT, USA: Greenwood Press. Retrieved from <a href="http://www.ebrary.com">http://www.ebrary.com</a></p>
+<p>Kluger, J. (2012, August 31). We never talk any more: The problem with text messaging &#8211; CNN.com. Retrieved November 1, 2015, from <a href="http://www.cnn.com/2012/08/31/tech/mobile/problem-text-messaging-oms/">http://www.cnn.com/2012/08/31/tech/mobile/problem-text-messaging-oms/</a></p>
+<p>Narins, E. (2013, February 8). Do you text more than you talk? Retrieved November 4, 2015, from <a href="http://www.prevention.com/health/healthy-living/people-now-communicate-digitally-more-face-face">http://www.prevention.com/health/healthy-living/people-now-communicate-digitally-more-face-face</a></p>
+<p>Worstall, T. (2013, September 18). Phew, the robots are only going to take 45 percent of all the jobs. Retrieved November 1, 2015, from <a href="http://www.forbes.com/sites/timworstall/2013/09/18/phew-the-robots-are-only-going-to-take-45-percent-of-all-the-jobs/">http://www.forbes.com/sites/timworstall/2013/09/18/phew-the-robots-are-only-going-to-take-45-percent-of-all-the-jobs/</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/e-banking/" rel="tag">e-banking</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology-dependency/" rel="tag">technology dependency</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/too-advanced/" rel="tag">too advanced</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/out-with-the-new-in-with-the-old/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2879 -->
+
+		
+	
+
+	
+			<div id="post-2883" class="post-2883 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-internet tag-libraries tag-technology tag-young-adults">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/the-impact-of-technology-on-young-adults-and-libraries/" rel="bookmark">The Impact of Technology on Young Adults and Libraries</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/the-impact-of-technology-on-young-adults-and-libraries/" title="7:49 am" rel="bookmark"><span class="entry-date">November 4, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/ct251058/" title="View all posts by Carly Tilson">Carly Tilson</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Without a doubt, technology has made an incredible impact on the lives of young adults in such an extensive amount of ways. Additionally, &#8220;technology has certainly transformed our libraries. Public Internet access is available at almost every public library, even the smallest and most rural&#8221; (Walter &amp; Myers, 2003, p.50). Young adults have grown up in such a rapidly changing technological era that they automatically expect to see computers when they visit the library, and librarians in return expect to see teens actively using the computers. A recent study funded by the Pew Charitable Trust found that at least 78% of all young people between the ages of twelve and seventeen go online for school or personal use (Walter &amp; Myers, 2003). The number of homes with computers and Internet access has grown significantly over the last several years so much to the point that students themselves are concerned about the digital divide. At times, it can be difficult to be forced to rely on home computers for school assignments, and computers may not always be adequate for purposes of certain assignments (Walter &amp; Myers, 2003).</p>
+<p>In an effort to try to keep up with the constant developments of new technologies, public libraries have started providing technologically savvy homework helpers who can accommodate teens&#8217; need for information and their preference for digital media. Young adults have found that the Internet not only assists with communication amongst friends and family, but they also feel that the Internet gives them a broader voice (Walter &amp; Myers, 2003). &#8220;Through electronic discussion lists and chat rooms, they can speak and listen to a far more diverse community than they can in their own geographical neighborhoods&#8221; (Walter &amp; Myers, 2003, p.50).</p>
+<p>Since the Internet provides users with unlimited access to information, it is so important to be careful of how you use the Internet. As mentioned in several Ted Talks and in articles discussed in class in regards to privacy, especially now in the digital age, it is becoming more important than ever to be cognizant of what you are searching, downloading, and signing up for. With that in mind, young adults deserve the right to prove themselves as being responsible Internet users until a problem occurs. The Internet is such a useful, convenient, tool, it just needs to be used for appropriate purposes.</p>
+<p>Walter, V. A., &amp; Meyers, E. E. (2003). Citizens of the digital nation: The power of technology. <em>Teens and libraries: Getting it right.</em> Chicago, IL, USA: ALA Editions. Retrieved from: <a href="http://www.ebrary.com">http://www.ebrary.com</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" rel="tag">Internet</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/libraries/" rel="tag">Libraries</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/young-adults/" rel="tag">Young Adults</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/04/the-impact-of-technology-on-young-adults-and-libraries/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2883 -->
+
+		
+	
+
+	
+			<div id="post-2875" class="post-2875 post type-post status-publish format-standard hentry category-blog-assignment category-book-chapter tag-change tag-education tag-learning">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/" rel="bookmark">Technology&#8217;s Movement into Education</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/" title="7:49 pm" rel="bookmark"><span class="entry-date">November 3, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/dd251040/" title="View all posts by Doug D">Doug D</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Technology has taken a turn. Teachers and students are within a period of enlightenment and change. The educational curriculum and methods to learning are undergoing a new approach, but are yet to be fully adopted. The current stage of innovation and advancement lies between two ages, the old and the new. The direction we’re headed for is far from where we started but at the same time, nowhere near the finish. People are being forced into making changes to keep pace with the everlastingly growth of society. Some in which we don&#8217;t even question and just move on. Educators are in the midst of many technological innovations and to keep up with the leap, it has become imperative to match these alterations promptly.</p>
+<p>Many educators are aware of the movement and are trying to find the perfect balance. According to Jacobs (2010, p. 7), many are asking themselves “what is it we want students to know and be able to do?” What’s the primary goal? And the answer is, change the way we do things to benefit society. In chapter one, Jacobs (2010, p. 8) stated, be more deliberate and develop better ways of learning and thinking. In other words, to spring new ideas, make life swifter and ultimately improve generations to come. But why now you may ask. Currently, society sits in a period full of technological advancements which are strengthening the ways to better ourselves. This relates to our class discussion on technological growth.</p>
+<p>School is a place where students challenge themselves and try to reach their targets. But the traditional way of educating students is far from the standard set back in the late 1800’s. From ink to pencils and from papyrus to paper, to the development of e-books, computers and now tablets, curriculum and the methods in which many learn has drastically changed. According to Jacobs (2010, p. 9), it’s evolving now more than ever. Schools around the world continue taking notice and are integrating these changes into their learning process. But there is still a vast majority of schools who have not implemented these advancements yet. For example, laws and privacy, as discussed in class, has kept some away from this movement. In addition, high costs and area/region along with a slew of other factors have kept adoption rate to a minimalist.</p>
+<p>In chapter one, Jacobs (2010, p. 9) stated, “the concept of what school is does not need reform-it needs new forms.” This citation further exemplifies the educational technological movement and is essential to the common theme of this essay. But why? It&#8217;s not what we&#8217;re learning that needs to be revised, it&#8217;s the method in which we learn. With all this new technology, there&#8217;s work that can be done to make students better off. Such as using new programs, shifting from written assignments to online, reducing printing and having a more interactive learning experience. Many nowadays find these methods more interesting than the standard methods of learning. The reason this movement continues on is because many find education as a key importance in society. Although some disagree, the vast majority agrees this is the right thing to do in that these progressions will better prepare students for their future, which will in due course, impact the wealth of society.</p>
+<p>Education is a major area of focus. The recent increase of technological advancements has directly led to a substantial increase in ways to better off curriculum. Society is progressing fast, but not until it has fully adopted the changes will a difference be made visible. New developmental hardware and software have made it easier to learn in a variety of ways. Online programs offer more hands on experience, ease of use and an increased amount of ways that one can learn interactively. Many agree that these new methods will allow students to further engage with their studies, comprehend information more easily, and create a new way of thinking and interpreting information. But the list doesn’t stop there. With this direction in toe and progressions in full swing, it’s a great time to make a change.</p>
+<p>Jacobs, H. H., &amp; Association for Supervision and Curriculum Development. (2010). <em>Curriculum 21: Essential education for a changing world. </em>Alexandria, Va.: Association for Supervision and Curriculum Development. <a href="http://public.eblib.com/choice/publicfullrecord.aspx?p=513972">http://public.eblib.com/choice/publicfullrecord.aspx?p=513972</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/book-chapter/" rel="category tag">Book Chapter</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/change/" rel="tag">change</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" rel="tag">Education</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" rel="tag">learning</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/#comments">1 Comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2875 -->
+
+		
+	
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/3/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://fys142f15.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="nav_menu-3" class="widget-container widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-2520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2520"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-2685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685"><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-2714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2714"><a href="http://fys142f15.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="http://fys142f15.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+</ul></div></li><li id="nav_menu-4" class="widget-container widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2354"><a href="http://fys142f15.blogs.muhlenberg.edu/da1-tech-profile/">DA1: Technology Profile Survey</a></li>
+<li id="menu-item-2581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2581"><a href="http://fys142f15.blogs.muhlenberg.edu/da-zotero/">DA2: Zotero</a></li>
+<li id="menu-item-2664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664"><a href="http://fys142f15.blogs.muhlenberg.edu/da3-twitter/">DA3: Twitter</a></li>
+<li id="menu-item-2684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684"><a href="http://fys142f15.blogs.muhlenberg.edu/da4-linkedin-profile/">DA4: Create a LinkedIn Profile</a></li>
+<li id="menu-item-2747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2747"><a href="http://fys142f15.blogs.muhlenberg.edu/da5-digital-distractions/">DA5: Digital Distractions</a></li>
+<li id="menu-item-2807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2807"><a href="http://fys142f15.blogs.muhlenberg.edu/da6-dropbox/">DA6: Dropbox for File Management</a></li>
+<li id="menu-item-2866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2866"><a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/">DA7: Word Clouds</a></li>
+<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="http://fys142f15.blogs.muhlenberg.edu/da8-google-docs/">DA8: Google Docs</a></li>
+<li id="menu-item-3028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3028"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/#nov18">DA9: Internet Companies</a></li>
+<li id="menu-item-3032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3032"><a href="http://fys142f15.blogs.muhlenberg.edu/da-10-website-tips-hacks/">DA 10: Implicit Association</a></li>
+</ul></div></li><li id="nav_menu-6" class="widget-container widget_nav_menu"><h3 class="widget-title">Additional Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-2510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2510"><a href="http://fys142f15.blogs.muhlenberg.edu/files/2015/08/FYS142DigitalWorldF15.pdf">Syllabus</a></li>
+<li id="menu-item-2493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2493"><a href="http://fys142f15.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-2524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2524"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-2521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2521"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+<li id="menu-item-2522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2522"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-2523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2523"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+</ul></div></li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/2946/">Is Anonymity a Bad Thing?</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/a-walk-through-the-future/">A Walk through the Future</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-art-of-deception/">The Art of Deception</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-deterioration-of-our-privacy-whos-reading-your-emails-everyone/">The Deterioration of Our Privacy: Who&#8217;s Reading Your Emails? Everyone.</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/fame-fiends/">Fame Fiends</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/#comment-22">Yik Yak Attack</a></li><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/#comment-21">Technology&#8217;s Movement into Education</a></li><li class="recentcomments"><span class="comment-author-link">Maddy Mummey</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-misinterpretations/#comment-17">Digital Misinterpretations</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/#comment-16">How Uber Has Changed Transportation</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/#comment-15">The New Wave of Music: A SoundCloud Revolution</a></li></ul></li><li id="categories-4" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3><form action="http://fys142f15.blogs.muhlenberg.edu" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="20859">Article&nbsp;&nbsp;(30)</option>
+	<option class="level-0" value="64806">Blog Assignment&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="93877">Book Chapter&nbsp;&nbsp;(12)</option>
+	<option class="level-0" value="65684">Encyclopedia/Wikipedia&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="65899">FYS 142 Update&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="66182">Multimedia&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="66833">Peer Reviewed Article&nbsp;&nbsp;(9)</option>
+	<option class="level-0" value="93912">Reading Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="67420">Resource Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="93960">Technology Tip&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(25)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</li><li id="tag_cloud-3" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/advance/" class="tag-cloud-link tag-link-93941 tag-link-position-1" style="font-size: 8pt;" aria-label="#advance (1 item)">#advance</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/anonymity/" class="tag-cloud-link tag-link-93922 tag-link-position-2" style="font-size: 12.581818181818pt;" aria-label="#anonymity (2 items)">#anonymity</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/betterfuture/" class="tag-cloud-link tag-link-93898 tag-link-position-3" style="font-size: 12.581818181818pt;" aria-label="#betterfuture (2 items)">#betterfuture</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/ethicsoftechnology-consequencesofouractions/" class="tag-cloud-link tag-link-93959 tag-link-position-4" style="font-size: 8pt;" aria-label="#ethicsoftechnology #consequencesofouractions (1 item)">#ethicsoftechnology #consequencesofouractions</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/evolution/" class="tag-cloud-link tag-link-93992 tag-link-position-5" style="font-size: 12.581818181818pt;" aria-label="#evolution (2 items)">#evolution</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/iphone6s-voicerecognition-siri/" class="tag-cloud-link tag-link-93953 tag-link-position-6" style="font-size: 8pt;" aria-label="#IPhone6s #VoiceRecognition #Siri (1 item)">#IPhone6s #VoiceRecognition #Siri</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/lifeskills/" class="tag-cloud-link tag-link-93905 tag-link-position-7" style="font-size: 12.581818181818pt;" aria-label="#lifeskills (2 items)">#lifeskills</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/newgeneration/" class="tag-cloud-link tag-link-93940 tag-link-position-8" style="font-size: 8pt;" aria-label="#newgeneration (1 item)">#newgeneration</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/perspective/" class="tag-cloud-link tag-link-38704 tag-link-position-9" style="font-size: 8pt;" aria-label="#perspective (1 item)">#perspective</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/readingiscool/" class="tag-cloud-link tag-link-93904 tag-link-position-10" style="font-size: 12.581818181818pt;" aria-label="#readingiscool (2 items)">#readingiscool</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/strongerbrain/" class="tag-cloud-link tag-link-93897 tag-link-position-11" style="font-size: 12.581818181818pt;" aria-label="#strongerbrain (2 items)">#strongerbrain</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/comparison/" class="tag-cloud-link tag-link-93947 tag-link-position-12" style="font-size: 8pt;" aria-label="comparison (1 item)">comparison</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberattack/" class="tag-cloud-link tag-link-93954 tag-link-position-13" style="font-size: 8pt;" aria-label="cyberattack (1 item)">cyberattack</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberbullying/" class="tag-cloud-link tag-link-93957 tag-link-position-14" style="font-size: 8pt;" aria-label="Cyberbullying (1 item)">Cyberbullying</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/dangers-of-the-cloud/" class="tag-cloud-link tag-link-93958 tag-link-position-15" style="font-size: 8pt;" aria-label="Dangers of &quot;The Cloud&quot; (1 item)">Dangers of &quot;The Cloud&quot;</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" class="tag-cloud-link tag-link-24819 tag-link-position-16" style="font-size: 12.581818181818pt;" aria-label="depression (2 items)">depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/editing-apps/" class="tag-cloud-link tag-link-93951 tag-link-position-17" style="font-size: 8pt;" aria-label="editing apps (1 item)">editing apps</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" class="tag-cloud-link tag-link-5226 tag-link-position-18" style="font-size: 20.218181818182pt;" aria-label="Education (5 items)">Education</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" class="tag-cloud-link tag-link-93946 tag-link-position-19" style="font-size: 12.581818181818pt;" aria-label="envy (2 items)">envy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy-spiral/" class="tag-cloud-link tag-link-93952 tag-link-position-20" style="font-size: 8pt;" aria-label="envy spiral (1 item)">envy spiral</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" class="tag-cloud-link tag-link-37337 tag-link-position-21" style="font-size: 8pt;" aria-label="expression (1 item)">expression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-22" style="font-size: 18.181818181818pt;" aria-label="Facebook (4 items)">Facebook</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-depression/" class="tag-cloud-link tag-link-93956 tag-link-position-23" style="font-size: 8pt;" aria-label="Facebook depression (1 item)">Facebook depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-24" style="font-size: 8pt;" aria-label="Google (1 item)">Google</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/how-to/" class="tag-cloud-link tag-link-93963 tag-link-position-25" style="font-size: 8pt;" aria-label="How-To (1 item)">How-To</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-26" style="font-size: 15.636363636364pt;" aria-label="Instagram (3 items)">Instagram</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-27" style="font-size: 15.636363636364pt;" aria-label="Internet (3 items)">Internet</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learn/" class="tag-cloud-link tag-link-93888 tag-link-position-28" style="font-size: 12.581818181818pt;" aria-label="learn (2 items)">learn</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" class="tag-cloud-link tag-link-93198 tag-link-position-29" style="font-size: 20.218181818182pt;" aria-label="learning (5 items)">learning</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/monitor-set-up/" class="tag-cloud-link tag-link-93961 tag-link-position-30" style="font-size: 8pt;" aria-label="Monitor Set-up (1 item)">Monitor Set-up</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/new-age/" class="tag-cloud-link tag-link-93927 tag-link-position-31" style="font-size: 12.581818181818pt;" aria-label="new age (2 items)">new age</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/online-safety/" class="tag-cloud-link tag-link-93939 tag-link-position-32" style="font-size: 8pt;" aria-label="online safety (1 item)">online safety</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-33" style="font-size: 15.636363636364pt;" aria-label="privacy (3 items)">privacy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/reading/" class="tag-cloud-link tag-link-190 tag-link-position-34" style="font-size: 22pt;" aria-label="reading (6 items)">reading</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/security/" class="tag-cloud-link tag-link-8070 tag-link-position-35" style="font-size: 12.581818181818pt;" aria-label="security (2 items)">security</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/snapchat/" class="tag-cloud-link tag-link-11233 tag-link-position-36" style="font-size: 12.581818181818pt;" aria-label="Snapchat (2 items)">Snapchat</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/sports/" class="tag-cloud-link tag-link-5237 tag-link-position-37" style="font-size: 12.581818181818pt;" aria-label="Sports (2 items)">Sports</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/steve-jobs/" class="tag-cloud-link tag-link-372 tag-link-position-38" style="font-size: 12.581818181818pt;" aria-label="Steve Jobs (2 items)">Steve Jobs</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-39" style="font-size: 18.181818181818pt;" aria-label="Technology (4 items)">Technology</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologys-impact/" class="tag-cloud-link tag-link-93964 tag-link-position-40" style="font-size: 8pt;" aria-label="Technology&#039;s impact (1 item)">Technology&#039;s impact</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" class="tag-cloud-link tag-link-93944 tag-link-position-41" style="font-size: 8pt;" aria-label="tumblr (1 item)">tumblr</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" class="tag-cloud-link tag-link-405 tag-link-position-42" style="font-size: 20.218181818182pt;" aria-label="twitter (5 items)">twitter</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/wiki/" class="tag-cloud-link tag-link-93984 tag-link-position-43" style="font-size: 12.581818181818pt;" aria-label="Wiki (2 items)">Wiki</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 18.181818181818pt;" aria-label="Writing (4 items)">Writing</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/yikyak/" class="tag-cloud-link tag-link-93955 tag-link-position-45" style="font-size: 8pt;" aria-label="yikyak (1 item)">yikyak</a></li>
+</ul>
+</div>
+</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">#fys142 Twitter feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">
+					Who Controls Your Digital World?				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f15.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f15.blogs.muhlenberg.edu%2Fpage%2F2%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f15.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

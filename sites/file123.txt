@@ -1,0 +1,278 @@
+http://libraryguides.muhlenberg.edu/sb.php?subject_id=174475/
+3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=E<dge"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- write_head_public.twig -->
+<title>
+    Subjects - Subject Guides at Muhlenberg College
+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive"/>
+
+<!-- favicon.twig -->
+<link rel="apple-touch-icon" sizes="180x180" href="//libapps.s3.amazonaws.com/apps/common/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//libapps.s3.amazonaws.com/apps/common/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="//libapps.s3.amazonaws.com/apps/common/favicon/favicon-16x16.png">
+<link rel="manifest" href="//libapps.s3.amazonaws.com/apps/common/favicon/site.webmanifest">
+<link rel="mask-icon" href="//libapps.s3.amazonaws.com/apps/common/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="//libapps.s3.amazonaws.com/apps/common/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#ffc40d">
+<meta name="msapplication-config" content="//libapps.s3.amazonaws.com/apps/common/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" href="/web/jquery/css/jquery-ui.min.css?2695"/>
+<link rel="stylesheet" href="/web/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/web/css2.5.3/lg-public.min.css"/>
+<script src="/web/jquery/js/1.12.1_jquery.min.js"></script>
+<!-- js_include_fallback_lg.twig -->
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script>jQuery.ui || document.write('<script src="/web/jquery/js/jquery-ui.min.js?2695">\x3C/script>');</script>
+<!-- !js_include_fallback_lg.twig -->
+    <script type="text/javascript"
+            src="/web/js2.5.3/lg-public.min.js"></script>
+<!-- !write_head_public.twig --><script>
+var springStats = springStats || {};
+springStats.saConfig = springStats.saConfig || {
+    site_id: 12452,
+    tracking_parameters: {"_st_site_id":12452},
+    tracking_server_host: "libguides-proc.springyaws.com"
+};
+</script>
+<script async  src="/web/js/sa.min.js?3116" ></script>
+            <script type="text/javascript">
+                //====================================================
+                jQuery(document).ready(function() {
+					loadSubjectGuides(0);
+                });
+                //====================================================
+				loadSubjectGuides=function(subject_id) {
+					var is_subject = (subject_id != 0);
+					jQuery("#s-lg-sb-content-guides").html("<div class=\"bold s-lib-color-lt-grey pad-top-med text-center\">Loading...</div>");
+					jQuery("#s-lg-sb-content-databases").html("<div class=\"bold s-lib-color-lt-grey pad-top-med text-center\">Loading...</div>");
+					jQuery("#s-lg-sb-experts-div").html("<div class=\"bold s-lib-color-lt-grey pad-top-med text-center\">Loading...</div>");
+					
+					if (is_subject) {
+						jQuery.ajax({
+							url: "/sb_process.php",
+							dataType: "json",
+							data: {
+								action: 540,
+								subject_id: subject_id
+							},
+							success: function(response, textStatus) {
+								if ( response.errCode == 200 ) {
+									jQuery("#s-lg-sb-content-guides").html(response.data.guides);
+									jQuery("#s-lg-sb-content-databases").html(response.data.databases);
+									jQuery("#s-lg-sb-experts-div").html(response.data.experts);
+									jQuery("#s-lg-sb-content-blog-posts").html(response.data.blog_posts);
+									jQuery("#s-lg-sb-content-er-courses").html(response.data.er_courses);
+								}
+								// Init popovers.
+								springSpace.UI.xhrPopover();
+								springSpace.UI.initPopOvers();
+								jQuery(".az-bs-tooltip").tooltip();
+							},
+							error: function (jqXHR, textStatus, errorThrown) {
+							    springSpace.UI.error(errorThrown);
+							}
+						});
+					}
+				}
+                //====================================================jQuery(window).one('load', function() {springSpace.springTrack.trackPage({_st_type_id: '21'});});</script><style>h2.muted { font-size: 18px; }</style></head>
+<body class="s-lib-public-body">
+<a id="s-lg-public-skiplink" class="alert-info" href="#s-lib-public-main">Skip to main content</a><!-- obsolete_browser_alert.twig -->
+<div id="obsolete_browser_alert" class="alert alert-danger obsolete_browser_alert">
+    It looks like you&#039;re using Internet Explorer 11 or older. This website works best with modern browsers such as the latest versions of Chrome, Firefox, Safari, and Edge. If you continue with this browser, you may see unexpected results.
+</div>
+
+<style>
+    .obsolete_browser_alert {
+        display: none;
+        font-weight: bold;
+        font-size: 1.25em;
+        text-align: center;
+        padding: 20px;
+        z-index:9999
+    }
+</style>
+
+<script>
+    // this property being set indicates an IE browser, so we show the alert
+    if (window.document.documentMode) {
+        document.getElementById("obsolete_browser_alert").style.display = "block";
+    }
+</script>
+<!-- !obsolete_browser_alert.twig -->
+<!-- BEGIN: Page Header -->
+ <div id="s-lib-banner" class="container s-lib-banner-public"><a href="http://trexler.muhlenberg.edu" title="" target="" aria-hidden="true" tabindex="-1" ><img alt="Banner" name="s-lib-banner-img" id="s-lib-banner-img" class="img-responsive" src="//libapps.s3.amazonaws.com/sites/12452/banner/banner_balanced_resized2.jpg" aria-hidden="true" tabindex="-1" /></a></div><!-- END: Page Header -->
+<!-- BEGIN: Content Header -->
+<div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <nav id="s-lib-bc" aria-label="breadcrumb" role="navigation">
+        
+			<ol id="s-lib-bc-list" class="breadcrumb">
+				
+					<li id="s-lib-bc-customer">
+						<a title="Library"  href="http://trexler.muhlenberg.edu">Library
+						</a>
+					</li>
+					<li id="s-lib-bc-site">
+						<a title="Subject Guides"  href="https://libraryguides.muhlenberg.edu/">Subject Guides
+						</a>
+					</li>
+					<li id="s-lib-bc-page" class="active">Subjects
+					</li>
+			</ol>    </nav>
+    <h1 id="s-lib-public-header-title">Subjects</h1>
+    <div id="s-lib-public-header-desc">Browse our best resources, organized by subject</div>
+</div>
+<!-- END: Content Header -->
+<!-- BEGIN: Nav Bar -->
+<div id="s-lib-public-nav" class="container s-lib-side-borders">
+    </div>
+<!-- END: Nav Bar -->
+<!-- BEGIN: content -->
+<div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+    <section aria-label="Subject Search Bar">
+        <div id="s-lg-sb-search-bar" class="row">
+            <div id="sb-search-col-1" class="col-md-12 center">
+                <!-- sb_navbar.twig -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle pad-right-med" data-toggle="collapse"
+                    data-target="#s-lg-sb-nav-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div id="s-lg-sb-label" class="navbar-brand">
+                <span id="s-lg-sb-count" class="badge" style="margin-left:10px;">44</span>
+                <span id="s-lg-sb-label-text">SUBJECTS</span>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="s-lg-sb-nav-1">
+            <div class="navbar-form navbar-left" role="search" style="margin-top:8px;">
+                <div class="form-group row">
+                    <div class="col-md-10" style="display:inline-block;">
+                        <label class="control-label sr-only" for="sel-guide-drop">Guide Subject Filter</label>
+                        <select name="sel-guide-drop" id="sel-guide-drop" class="form-control" style="width:100%;">
+                                                            <option selected value="">Select a Subject...</option>
+                                                        <option value="sb.php?subject_id=174484" >Accounting</option>
+                            <option value="sb.php?subject_id=163684" >Africana Studies</option>
+                            <option value="sb.php?subject_id=174472" >American Studies</option>
+                            <option value="sb.php?subject_id=163676" >Anthropology</option>
+                            <option value="sb.php?subject_id=163677" >Art</option>
+                            <option value="sb.php?subject_id=174473" >Asian Studies</option>
+                            <option value="sb.php?subject_id=174474" >Biochemistry</option>
+                            <option value="sb.php?subject_id=130081" >Biology</option>
+                            <option value="sb.php?subject_id=163675" >Business</option>
+                            <option value="sb.php?subject_id=163674" >Chemistry</option>
+                            <option value="sb.php?subject_id=163678" >Computer Science</option>
+                            <option value="sb.php?subject_id=163686" >Dance</option>
+                            <option value="sb.php?subject_id=163689" >Economics</option>
+                            <option value="sb.php?subject_id=163682" >Education</option>
+                            <option value="sb.php?subject_id=163687" >English</option>
+                            <option value="sb.php?subject_id=163690" >Environmental Science</option>
+                            <option value="sb.php?subject_id=163708" >Film Studies</option>
+                            <option value="sb.php?subject_id=174491" >French & Francophone Studies</option>
+                            <option value="sb.php?subject_id=130082" >History</option>
+                            <option value="sb.php?subject_id=163707" >Information Science</option>
+                            <option value="sb.php?subject_id=174476" >Innovation & Entrepreneurship</option>
+                            <option value="sb.php?subject_id=163672" >Interdisciplinary</option>
+                            <option value="sb.php?subject_id=174477" >International Studies</option>
+                            <option value="sb.php?subject_id=174492" >Italian Studies</option>
+                            <option value="sb.php?subject_id=163691" >Jewish Studies</option>
+                            <option value="sb.php?subject_id=163706" >Latin American & Caribbean Studies</option>
+                            <option value="sb.php?subject_id=163705" >Law</option>
+                            <option value="sb.php?subject_id=163671" >Mathematics</option>
+                            <option value="sb.php?subject_id=163685" >Media & Communication</option>
+                            <option value="sb.php?subject_id=163673" >Music</option>
+                            <option value="sb.php?subject_id=174493" >Neuroscience</option>
+                            <option value="sb.php?subject_id=163709" >Philosophy</option>
+                            <option value="sb.php?subject_id=174483" >Philosophy / Political Thought</option>
+                            <option value="sb.php?subject_id=174482" >Physical Science</option>
+                            <option value="sb.php?subject_id=163679" >Physics</option>
+                            <option value="sb.php?subject_id=174478" >Political Economy & Public Policy</option>
+                            <option value="sb.php?subject_id=163680" >Political Science</option>
+                            <option value="sb.php?subject_id=130080" >Psychology</option>
+                            <option value="sb.php?subject_id=174479" >Public Health</option>
+                            <option value="sb.php?subject_id=163683" >Religion</option>
+                            <option value="sb.php?subject_id=163681" >Sociology</option>
+                            <option value="sb.php?subject_id=174481" >Sustainability Studies</option>
+                            <option value="sb.php?subject_id=163688" >Theatre</option>
+                            <option value="sb.php?subject_id=174469" >Women's & Gender Studies</option>
+                                                    </select>
+                    </div>
+                    <div class="col-md-2 pad-left-none" style="display:inline-block;">
+                        <button type="button" class="btn btn-small btn-primary"
+                                onclick="window.location.href = (jQuery('#sel-guide-drop').val());">
+                            Go
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>            </div>
+        </div>
+    </section>
+    <section aria-label="Content by Subject">
+        <div id="s-lg-sb-cols" class="row">
+            <div id="col1" class="col-md-8 center">
+
+            </div>
+            <div id="col2" class="col-md-4 center">
+                <div style="padding-top: 9px;"></div>
+                
+			<div class="margin-bottom-xlg">
+				<div class="s-lib-public-side-header">
+               		<h2 class="pad-bottom-sm">Search
+					</h2>
+				</div>
+					<div class="txt pad-top-sm"><div class="margin-bottom-med">Search the full text of this site. Results will link to pages containing your terms; results from subject page searches are automatically filtered by that subject.</div>
+					</div>
+					<div class="input-append">
+                <form role="search" method="GET" action="/srch.php">
+                    <label class="control-label sr-only" for="s-lg-guide-search">Guide Search Terms</label>
+                    <input class="form-control" name="q" id="s-lg-guide-search" type="text" placeholder="Enter Search Words">
+                    <button class="btn btn-info" type="submit" style="margin-top:2px;">Search</button>
+                </form>
+					</div>
+			</div>            </div>
+        </div>
+    </section>
+</div>
+<!-- END: content -->
+<!-- BEGIN: Page Footer -->
+<div id="s-lib-footer-public" class="s-lib-footer footer container s-lib-side-borders"><div><div id="s-lib-footer-brand">Powered by Springshare.</div><div id="s-lib-footer-rights">All rights reserved.</div><div id="s-lib-footer-login-link"><a href="https://muhlenberg.libapps.com/libapps/login.php?site_id=12452">Login to LibApps</a></div></div><div id="s-lib-footer-support-link"></div></div></div><!-- END: Page Footer -->
+<div id="s-lib-alert" title="">
+                            <div id="s-lib-alert-content"></div>
+                       </div>
+                <div id="s-lib-popover-title" class="hide">
+                    <span class="text-info"><strong>title</strong></span>
+                    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
+                </div>
+                <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+                    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+                </div>
+            <div id="s-lib-scroll-top">
+                <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top">
+                    <span class="fa-stack fa-lg" aria-hidden="true">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+                    </span>
+                </a>
+            </div>
+<!-- BEGIN: Custom Footer -->
+
+
+<!-- END: Custom Footer -->
+</body>

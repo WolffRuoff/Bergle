@@ -1,0 +1,620 @@
+http://rjfellows.blogs.muhlenberg.edu/?p=1075/
+59
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="profile"  href="https://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://rjfellows.blogs.muhlenberg.edu/xmlrpc.php" />
+		<!-- html5shiv for IE8 and less  -->
+		<!--[if lt IE 9]>
+			<script src="http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/html5.js"></script>
+		<![endif]-->
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>How the RJ Fellows Program Can Inspire Activism &#8211; RJ Fellows</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="RJ Fellows &raquo; Feed" href="http://rjfellows.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="RJ Fellows &raquo; Comments Feed" href="http://rjfellows.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/rjfellows.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/rjfellows.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='tc-gfonts-css'  href='//fonts.googleapis.com/css?family=Fjalla+One:400%7CCantarell:400' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-fa-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/shared/fonts/fa/css/fontawesome-all.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-common-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/tc_common.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-skin-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/red.min.css?ver=4.3.4' type='text/css' media='all' />
+<style id='customizr-skin-inline-css' type='text/css'>
+
+                  .site-title,.site-description,h1,h2,h3,.tc-dropcap {
+                    font-family : 'Fjalla One';
+                    font-weight : 400;
+                  }
+
+                  body,.navbar .nav>li>a {
+                    font-family : 'Cantarell';
+                    font-weight : 400;
+                  }
+table { border-collapse: separate; }
+                           body table { border-collapse: collapse; }
+                          
+.social-links .social-icon:before { content: none } 
+.sticky-enabled .tc-shrink-on .site-logo img {
+    					height:30px!important;width:auto!important
+    				}
+
+    				.sticky-enabled .tc-shrink-on .brand .site-title {
+    					font-size:0.6em;opacity:0.8;line-height:1.2em
+    				}
+
+#tc-push-footer { display: none; visibility: hidden; }
+         .tc-sticky-footer #tc-push-footer.sticky-footer-enabled { display: block; }
+        
+
+</style>
+<link rel='stylesheet' id='customizr-style-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/style.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fancyboxcss-css'  href='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"1","SliderName":"","SliderDelay":"","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"linear","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"1","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"http:\/\/rjfellows.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","ajaxUrl":"http:\/\/rjfellows.blogs.muhlenberg.edu\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"74565b19d9"},"isDevMode":"1","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"http:\/\/rjfellows.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/js/tc-scripts.js?ver=4.3.4'></script>
+<link rel='https://api.w.org/' href='http://rjfellows.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://rjfellows.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://rjfellows.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Leadership and Community within the RJ Fellows Program' href='http://rjfellows.blogs.muhlenberg.edu/?p=1069' />
+<link rel='next' title='New Opportunities Can Lead to New Career Paths' href='http://rjfellows.blogs.muhlenberg.edu/?p=1080' />
+
+<link rel="canonical" href="http://rjfellows.blogs.muhlenberg.edu/?p=1075" />
+<link rel='shortlink' href='http://rjfellows.blogs.muhlenberg.edu/?p=1075' />
+<link rel="alternate" type="application/json+oembed" href="http://rjfellows.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Frjfellows.blogs.muhlenberg.edu%2F%3Fp%3D1075" />
+<link rel="alternate" type="text/xml+oembed" href="http://rjfellows.blogs.muhlenberg.edu/index.php?rest_route=%2Foembed%2F1.0%2Fembed&#038;url=http%3A%2F%2Frjfellows.blogs.muhlenberg.edu%2F%3Fp%3D1075&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://rjfellows.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://rjfellows.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//rjfellows.blogs.muhlenberg.edu/?wordfence_lh=1&hid=D1D144176DAD589008B1E21FAC195014');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link id="czr-favicon" rel="shortcut icon" href="http://rjfellows.blogs.muhlenberg.edu/files/2015/11/M2.png" type="image/png"><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+		</head>
+	
+	<body class="bp-legacy post-template-default single single-post postid-1075 single-format-standard admin-bar no-customize-support wp-embed-responsive tc-fade-hover-links tc-l-sidebar tc-center-images skin-red customizr-4-3-4 tc-sticky-header sticky-disabled tc-transparent-on-scroll tc-regular-menu tc-sticky-footer no-js" >
+            <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+        
+    <div id="tc-page-wrap" class="">
+
+  		
+  	   	<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on  tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile">
+  			      <div class="brand span3 pull-left ">
+
+        <h1><a class="site-title" href="http://rjfellows.blogs.muhlenberg.edu/">RJ Fellows</a></h1>
+      </div> <!-- brand span3 pull-left -->
+      <div class="container outside"><h2 class="site-description">an honors community at Muhlenberg College</h2></div>      	<div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-right">
+        	<div class="navbar resp">
+          		<div class="navbar-inner" role="navigation">
+            		<div class="row-fluid">
+              		<div class="social-block span5"><div class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://rjfellows.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-facebook"  title="Follow me on Facebook" aria-label="Follow me on Facebook" href="https://www.facebook.com/groups/193776817316179"  target="_blank" ><i class="fab fa-facebook"></i></a></div></div><h2 class="span7 inside site-description">an honors community at Muhlenberg College</h2><div class="nav-collapse collapse tc-hover-menu-wrapper"><div class="menu-resources-container"><ul id="menu-resources-2" class="nav tc-hover-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-728"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=409">About Us <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1185"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1184">An Honors Program About Change</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1247"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1246">Program Events, Activities and Projects</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-739"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=335">RJ Fellows by Class Year</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-740"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=323">Faculty &amp; Advisory Board</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-727"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=554">RJ Course Archive <strong class="caret"></strong></a>
+<ul class="dropdown-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-736"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=608">Spring 2014</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-735"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=656">Fall 2014</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=672">Spring 2015</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-733"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=711">Fall 2015</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1357">Spring 2016</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1353"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1350">Fall 2016</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1058"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1056">Spring 2017</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1123">Fall 2017</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1346"><a href="http://rjfellows.blogs.muhlenberg.edu/files/2017/10/RJ-Designatedcourses-Spring-2019.pdf">Spring 2018</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1348"><a href="http://rjfellows.blogs.muhlenberg.edu/files/2019/04/RJ-Fellows-Courses-Fall-2018.pdf">Fall 2018</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1194"><a href="http://rjfellows.blogs.muhlenberg.edu/?p=1177">Spring 2019</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1422"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1419">Fall 2019</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-1485"><a href="http://rjfellows.blogs.muhlenberg.edu/?p=1423">Spring 2020</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1282"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1279">RJ Accomplishments</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1285"><a href="http://rjfellows.blogs.muhlenberg.edu/?page_id=1283">RJ Alumni</a></li>
+</ul></div></div><div class="btn-toggle-nav pull-right"><button type="button" class="btn menu-btn" data-toggle="collapse" data-target=".nav-collapse" title="Open the menu" aria-label="Open the menu"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button></div>          			</div><!-- /.row-fluid -->
+          		</div><!-- /.navbar-inner -->
+        	</div><!-- /.navbar resp -->
+      	</div><!-- /.navbar-wrapper -->
+    	  		</header>
+  		<div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div><div id="main-wrapper" class="container">
+
+    <div class="tc-hot-crumble container" role="navigation"><div class="row"><div class="span12"><div class="breadcrumb-trail breadcrumbs"><span class="trail-begin"><a href="http://rjfellows.blogs.muhlenberg.edu" title="RJ Fellows" rel="home" class="trail-begin">Home</a></span> <span class="sep">&raquo;</span> <a href="http://rjfellows.blogs.muhlenberg.edu/?cat=499" title="SRSJ">SRSJ</a> <span class="sep">&raquo;</span> <span class="trail-end">How the RJ Fellows Program Can Inspire Activism</span></div></div></div></div>
+    <div class="container" role="main">
+        <div class="row column-content-wrapper">
+
+            
+        <div class="span3 left tc-sidebar">
+           <div id="left" class="widget-area" role="complementary">
+              <aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://rjfellows.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://rjfellows.blogs.muhlenberg.edu/?p=1515">2020 RJ Fellows Senior Capstone Projects</a>
+									</li>
+											<li>
+					<a href="http://rjfellows.blogs.muhlenberg.edu/?p=1499">Overjoyed To Be The Glue &#8211; By Ryan Dimmick</a>
+									</li>
+											<li>
+					<a href="http://rjfellows.blogs.muhlenberg.edu/?p=1494">How I Found Change  by Emily Forster</a>
+									</li>
+											<li>
+					<a href="http://rjfellows.blogs.muhlenberg.edu/?p=1493">RJ Designated Courses &#8211; Fall 2020</a>
+									</li>
+											<li>
+					<a href="http://rjfellows.blogs.muhlenberg.edu/?p=1480">The Key to Discovering Unknown Opportunities by Stephanie Ng</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+				<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=202004'>April 2020</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=202002'>February 2020</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=202001'>January 2020</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201912'>December 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201911'>November 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201910'>October 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201905'>May 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201904'>April 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201903'>March 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201902'>February 2019</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201810'>October 2018</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201805'>May 2018</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201804'>April 2018</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201803'>March 2018</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201802'>February 2018</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201710'>October 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201707'>July 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201705'>May 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201704'>April 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201703'>March 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201702'>February 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201701'>January 2017</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201610'>October 2016</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201609'>September 2016</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201607'>July 2016</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201606'>June 2016</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201504'>April 2015</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201408'>August 2014</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201310'>October 2013</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201304'>April 2013</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201303'>March 2013</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201302'>February 2013</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201205'>May 2012</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201204'>April 2012</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201203'>March 2012</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201202'>February 2012</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201201'>January 2012</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201111'>November 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201109'>September 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201106'>June 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201105'>May 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201104'>April 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201103'>March 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201102'>February 2011</a></li>
+	<li><a href='http://rjfellows.blogs.muhlenberg.edu/?m=201101'>January 2011</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-211845"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=211845">2020 RJ Fellows Capstone</a>
+</li>
+	<li class="cat-item cat-item-313"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=313">HYPE</a>
+</li>
+	<li class="cat-item cat-item-534"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=534">news</a>
+</li>
+	<li class="cat-item cat-item-183392"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=183392">RJ Fellows Featured Courses</a>
+</li>
+	<li class="cat-item cat-item-211844"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=211844">RJ Fellows Senior Blog</a>
+</li>
+	<li class="cat-item cat-item-499"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=499">SRSJ</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://rjfellows.blogs.muhlenberg.edu/?cat=1">Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://rjfellows.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+			<li><a href="http://rjfellows.blogs.muhlenberg.edu/?feed=rss2">Entries feed</a></li>
+			<li><a href="http://rjfellows.blogs.muhlenberg.edu/?feed=comments-rss2">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</aside>            </div><!-- //#left or //#right -->
+        </div><!--.tc-sidebar -->
+
+        
+                <div id="content" class="span9 article-container tc-gallery-style">
+
+                    
+                        
+                                                                                    
+                                                                    <article id="post-1075" class="row-fluid post-1075 post type-post status-publish format-standard has-post-thumbnail category-srsj tag-activism tag-culture tag-injustices tag-sustainability czr-hentry">
+                                                <header class="entry-header">
+          <h1 class="entry-title ">How the RJ Fellows Program Can Inspire Activism</h1><div class="entry-meta"><a href="http://rjfellows.blogs.muhlenberg.edu/?m=20170328" title="9:57 am" rel="bookmark"><time class="entry-date updated" datetime="28 Mar, 2017">March 28, 2017</time></a> &nbsp;in <a class="" href="http://rjfellows.blogs.muhlenberg.edu/?cat=499" title="View all posts in SRSJ"> SRSJ </a>&nbsp;tagged <a class="" href="http://rjfellows.blogs.muhlenberg.edu/?tag=activism" title="View all posts in activism"> activism </a> / <a class="" href="http://rjfellows.blogs.muhlenberg.edu/?tag=culture" title="View all posts in culture"> culture </a> / <a class="" href="http://rjfellows.blogs.muhlenberg.edu/?tag=injustices" title="View all posts in injustices"> injustices </a> / <a class="" href="http://rjfellows.blogs.muhlenberg.edu/?tag=sustainability" title="View all posts in sustainability"> sustainability </a> <span class="by-author"> by <span class="author vcard author_name"><a class="url fn n" href="http://rjfellows.blogs.muhlenberg.edu/?author=1845" title="View all posts by rileyminkoff" rel="author">rileyminkoff</a></span></span> </div><hr class="featurette-divider __before_content">        </header>
+                  <section class="entry-content ">
+              <p><em><strong>By Madeleine Weko, Class of 2017</strong></em></p>
+<p>When I came to college I expected to learn new things, but stay the same. I didn’t know yet what I wanted to study, but I thought that who I was and the way I saw the world wouldn’t fundamentally change. I was, of course, spectacularly wrong. Almost immediately, I was forced to confront my own biases and develop new ways of looking at familiar issues, and the RJ Fellows program was a crucial part of this transformation.</p>
+<div id="attachment_1076" style="width: 361px" class="wp-caption alignright"><a href="http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1.jpg" class="grouped_elements" rel="tc-fancybox-group1075"><img aria-describedby="caption-attachment-1076" class=" wp-image-1076" src="http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1-300x300.jpg" alt="RJ Fellows Senior, Madeleine Weko " width="351" height="351" srcset="http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1-300x300.jpg 300w, http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1-150x150.jpg 150w, http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1-768x768.jpg 768w, http://rjfellows.blogs.muhlenberg.edu/files/2017/03/SustainabilityResearch-MadeleineWeko-4-1-1024x1024.jpg 1024w" sizes="(max-width: 351px) 100vw, 351px" /></a><p id="caption-attachment-1076" class="wp-caption-text">RJ Fellows Senior, Madeleine Weko, Researching Sustainable Solutions</p></div>
+<p>Our RJ freshman seminar, “Disney Days Arabian Nights”, focused on unpacking the complex and problematic views that our culture holds about the ‘Orient’ (a thoughtless generalization of all non-western cultures). As the course progressed, many of us got our first taste of critical analyses of our own prejudiced or naïve views, and those of the culture in which we were raised. The way my peers, my teachers, and my family had addressed issues of bias and injustice before I came to Muhlenberg was always very black and white – issues of discrimination were just ‘the way things are’. It was challenging but satisfying to learn the theory and history of the way the U.S. views Middle Eastern, North African, and Asian nations. The more I learned, the more I became curious about what other issues I’d been taking for granted.</p>
+<p>As my academic career progressed, I found myself becoming increasingly drawn to courses that helped me to reevaluate my privilege. While my passions are often directed towards environmental injustices (largely thanks to Muhlenberg’s eye-opening Sustainability Studies program that emphasizes the links between social and economic injustice and environmental issues), I’ve explored issues of gender, race, colonization, poverty, health, political inequality, etc. I can say with confidence that I will leave Muhlenberg with a new level of compassion for others and understanding of what needs to be done to fight for equality; I am both aware and excited about how much I have left to learn.</p>
+<p>The RJ Fellows are all activists in our own rite, with our own passions and areas of expertise, and there is no better example of this diversity than in our senior culminating undergraduate experience. We are putting the curiosity and engagement that we learned throughout the RJ Fellows program and our other courses at Muhlenberg to work through projects that are tailored to our distinct capabilities and interests. The end results of our projects will be reflections of the qualified and impassioned students who produced them; from community to community, we aim to create stronger relationships on campus, in Allentown, and in the RJ fellows program.</p>
+                                      </section><!-- .entry-content -->
+                                            </article>
+                                
+                            
+                        
+                    
+        
+          <hr class="featurette-divider __after_loop">
+        <nav id="nav-below" class="navigation">
+
+              <h3 class="assistive-text">
+                Post navigation              </h3>
+
+              <ul class="pager">
+                                  <li class="previous">
+                    <span class="nav-previous">
+                      <a href="http://rjfellows.blogs.muhlenberg.edu/?p=1069" rel="prev"><span class="meta-nav">&larr;</span> Leadership and Community within the RJ Fellows Program</a>                    </span>
+                  </li>
+                                                  <li class="next">
+                    <span class="nav-next">
+                        <a href="http://rjfellows.blogs.muhlenberg.edu/?p=1080" rel="next">New Opportunities Can Lead to New Career Paths <span class="meta-nav">&rarr;</span></a>                    </span>
+                  </li>
+                              </ul>
+
+          </nav><!-- //#nav-below .navigation -->
+
+        
+        
+                                   <hr class="featurette-divider tc-mobile-separator">
+                </div><!--.article-container -->
+
+           
+        </div><!--.row -->
+    </div><!-- .container role: main -->
+
+    <div id="tc-push-footer"></div>
+</div><!-- //#main-wrapper -->
+
+  		<!-- FOOTER -->
+  		<footer id="footer" class="">
+  		 		    				 <div class="colophon">
+			 	<div class="container">
+			 		<div class="row-fluid">
+					    <div class="span3 social-block pull-left"><span class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://rjfellows.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a><a rel="nofollow noopener noreferrer" class="social-icon icon-facebook"  title="Follow me on Facebook" aria-label="Follow me on Facebook" href="https://www.facebook.com/groups/193776817316179"  target="_blank" ><i class="fab fa-facebook"></i></a></span></div><div class="span6 credits"><p>&middot; <span class="tc-copyright-text">&copy; 2020</span> <a href="http://rjfellows.blogs.muhlenberg.edu" title="RJ Fellows" rel="bookmark">RJ Fellows</a> &middot; <span class="tc-wp-powered-text">Powered by</span> <a class="icon-wordpress" target="_blank" rel="noopener noreferrer" href="https://wordpress.org" title="Powered by WordPress"></a> &middot; <span class="tc-credits-text">Designed with the <a class="czr-designer-link" href="https://presscustomizr.com/customizr" title="Customizr theme">Customizr theme</a> </span> &middot;</p></div>	      			</div><!-- .row-fluid -->
+	      		</div><!-- .container -->
+	      	</div><!-- .colophon -->
+	    	  		</footer>
+    </div><!-- //#tc-page-wrapper -->
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/modernizr.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://rjfellows.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://rjfellows.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Frjfellows.blogs.muhlenberg.edu%2F%3Fp%3D1075%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://rjfellows.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		<div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div>	</body>
+	</html>

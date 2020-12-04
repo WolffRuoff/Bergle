@@ -1,0 +1,872 @@
+http://fys142f15.blogs.muhlenberg.edu/page/6/
+183
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+Who Controls Your Digital World? | FYS 142 Course Site | Page 6	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Feed" href="http://fys142f15.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Comments Feed" href="http://fys142f15.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f15.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f15.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f15.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f15.blogs.muhlenberg.edu/?wordfence_lh=1&hid=A8FB42982E731F63E5E288B68DC7C290');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://fys142f15.blogs.muhlenberg.edu/files/2015/08/fyswordcloud3.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support custom-background paged-6 no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<h1 id="site-title">
+					<span>
+						<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">Who Controls Your Digital World?</a>
+					</span>
+				</h1>
+				<div id="site-description">FYS 142 Course Site</div>
+
+									<img src="" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-2344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344"><a href="http://fys142f15.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345"><a href="http://fys142f15.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="http://fys142f15.blogs.muhlenberg.edu/course-requirements-and-grading/">Course Requirements and Grading</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2347"><a href="http://fys142f15.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2348"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/">Class Schedule and Topic Outline</a></li>
+<li id="menu-item-2349" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-2349"><a href="http://fys142f15.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/7/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/page/5/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+	</div><!-- #nav-above -->
+
+
+
+	
+			<div id="post-2737" class="post-2737 post type-post status-publish format-standard hentry category-article tag-cyberbullying tag-dangers-of-the-cloud tag-facebook-depression">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/the-dangers-in-the-cloud/" rel="bookmark">The Dangers in &#8220;The Cloud&#8221;</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/the-dangers-in-the-cloud/" title="1:04 am" rel="bookmark"><span class="entry-date">September 26, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/kirving/" title="View all posts by Kevin">Kevin</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Even with the dangerous persuasion of social networking sites, along with the anonymity and individualistic power there is online today, the vast majority of our worlds digital users still shy away from understanding what really is hidden within “The Cloud”. In my article entitled, “Influence of Social Media on Teenagers” written by Suren Ramasubbu, many of the realistic threats of the internet are looked at in comparison with the benefits new technologies have to offer. We all know that social media can broaden social connections throughout the world and may seem harmless as advertised thousands of times per day but what isn’t shown are the life altering repercussions in both professional and personal areas of life.</p>
+<p>The real problem is right in front of us. Facebook depression, Internet addiction, cyber bullying, sleep deprivation, obesity and sexting are just a few of the things that should call for the attention and be recognized as a major problem in our world today. Ramasubbu affirmatively states, “The lack or difficulty in self-regulation and susceptibility to peer pressure makes adolescents vulnerable to such evils as <a href="http://guilfordjournals.com/doi/abs/10.1521/jscp.2014.33.8.701">Facebook depression</a>, sexting, and cyberbullying, which are realistic threats” (Ramasubbu, 2015, p.1.). Our youth’s vulnerability can lead to much more than just an occasional blog post or tweet. The consequences of cyberbullying can be life altering. Ramasubbu made a very interesting point in that the two kinds of people who are likely to be cyberbullies are the popular ones and those on the fringes of society. Many technologies today have the power to disconnect children from reality. It is those people who then feel invincible hiding their insecurities behind their 20 inch laptop computer screen to go out and hurt somebody else’s life. It becomes very ironic how the individualistic nature of social networking can make it difficult to recognize a victim of cyberbullying. Not only does social networking give adolescents the power to bully behind a computer screen but it hides those being bullied as well. Ramasubbu closes his argument by saying, “Adolescence is the time for teens to spread their wings and take the tentative first flight out into the world…” (Ramasubbu, 2015, p.1.). He encourages teens to make a productive leap into the world, and not the digital world. He advocates that teens must learn to understand what the internet has to offer and how these things can both positively and negatively impact society.</p>
+<p>Ramasubbu, S. Influence of Social Media on Teenagers. <em>05/26/2015</em>. Retrieved from http://www.huffingtonpost.com/suren-ramasubbu/influence-of-social-media-on-teenagers_b_7427740.html</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberbullying/" rel="tag">Cyberbullying</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/dangers-of-the-cloud/" rel="tag">Dangers of "The Cloud"</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-depression/" rel="tag">Facebook depression</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/the-dangers-in-the-cloud/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2737 -->
+
+		
+	
+
+	
+			<div id="post-2732" class="post-2732 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-cyberattack tag-yikyak">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/" rel="bookmark">Yik Yak Attack</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/" title="11:43 pm" rel="bookmark"><span class="entry-date">September 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/ls250633/" title="View all posts by Lucy Wang Sedlis">Lucy Wang Sedlis</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>In society today I am almost positive that most teenagers can’t even fathom a day without social media and their personal cellphones. We spend half our day on our phones looking through social media and texting such as Instagram, Facebook, and SnapChat. A new and upcoming social media app, Yik Yak allows users to post anonymously thoughts and comments about anything they please. It was created in 2013 by Tyler Droll and Brooks Buffington who were recent graduates at Furman University. According to Mahler, Droll and Buffington, “came up with the ideas after realizing that there were only a handful of popular Twitter accounts at Furman…they hoped to created a more democratic social media network, one where users didn’t need a large number of followers or friends to have their posts read widely” (Mahler, 2015, p.1). This is a valid reason because social media today is all about likes and how many followers you have. On Snapchat I hear people rave about how many people have seen their story and on Instagram how many likes they got within a certain time span. Not having to make a Yik Yak profile allows anyone and everyone around your area to see your thoughts not just people who follow you or you may know personally. While it is a good way to get your thoughts out anonymously it is used way too many times to put out negative comments about people or things.</p>
+<p>In this article Jonathan Mahler interviewed a professor who filed multiple complaints about inappropriate things said about her on Yik Yak that her students posted about her. Unfortunately, nothing was done about it because the selling feature of Yik Yak is that ever post is completely anonymous making it impossible to find the person responsible for the inappropriate posts. Colleges have no control to students from accessing Yik Yak because if they just block access through their Wi-Fi networks students can easily just use their cell service which colleges have no control over. This is a huge issue because today so many people are targeted through cyber bullying. Having Yik Yak completely anonymous has its ups and downs, it allows people to ask questions that may be too uncomfortable to ask if their identity was exposed to the pubic. However cyber attacks that happened to the professor at Michigan are much easier to execute with rarely any consequences.</p>
+<p>Resources:</p>
+<p>Mahler, J. (2015, March 8). Who Spewed That Abuse? Anonymous Yik Yak App Isn’t Telling. Retrieved from <a href="http://www.nytimes.com/2015/03/09/technology/popular-yik-yak-app-confers-anonymity-and-delivers-abuse.html?_r=0">http://www.nytimes.com/2015/03/09/technology/popular-yik-yak-app-confers-anonymity-and-delivers-abuse.html?_r=0</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberattack/" rel="tag">cyberattack</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/yikyak/" rel="tag">yikyak</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/#comments">1 Comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2732 -->
+
+		
+	
+
+	
+			<div id="post-2728" class="post-2728 post type-post status-publish format-standard hentry category-article category-blog-assignment category-multimedia tag-iphone6s-voicerecognition-siri">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/iphone-6ss-hands-free-siri-is-an-omen-of-the-future-shaun/" rel="bookmark">“IPhone 6s’s Hands-Free Siri Is an Omen of the Future”</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/iphone-6ss-hands-free-siri-is-an-omen-of-the-future-shaun/" title="11:39 pm" rel="bookmark"><span class="entry-date">September 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/shaunbartholomew13/" title="View all posts by Shaun">Shaun</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>&nbsp;</p>
+<p>Recently, New York Times Journalist, Stuart Goldenberg, wrote an article called “IPhone 6s’s Hands-Free Siri Is an Omen of the Future”, which essentially conveys the idea that our society is taking a new, technological direction towards voice recognition and artificial intelligence. He describes the two as “A necessary part of Modern Computing”. A well defended statement but in a way he is almost contradicting his own argument because if he is saying that these two applications are “necessary” to Modern computing throughout our society then why is he minimizing its significance by describing it as a “part”? Later in the article he describes this revolutionary new idea, known as “Ambient Computing”, which Stuart describes as “a future in which robotic assistants are always on hand to answer questions, take notes, take orders or otherwise function as auxiliary brains to whom you might offload many of your chores”. Oddly enough he describes this as a “futuristic” idea but can’t one argue that our Phones, Computers, TVs, Videogames and all of our other twenty first century devices could hold the title of “Robotic Assistants” due to the fact that they do withstand most of our Dailey loads, making our lives not only easier but more simplistic as well. So rather Ambient Computing be considered a “futuristic” goal, I think its fair to say that its something that we have easily touched heavily upon but that there is also so much still out there that we haven’t created that can still revolutionize our day to day lives. Goldenberg eventually takes a social turn on the power of artificial intelligence, along with voice recognition, when he writes “It will be slightly creepy and completely helpful”. Conveying the idea that, at first, we may be very hesitant towards this very odd but incredible technology but that instead of seeing either one or the other, we will see that even those who find it to be “creepy” or “odd” will submit to its foreignness due to the beneficial value it has to offer. Stuart then shows us how these creatures of this never ending technology realm are adapting to this new technology when he points out a very compatible new app called “Sound Hound” which is basically a voice powered search engine that has the ability and potential to revolutionize the way we search by giving us more in depth results of the precise thing we were looking for. Illustrating the idea that the many faces of our technological world are completely on board with this very clear-cut direction. Towards the end of the article, Stuart starts to describe his take on the steps we will soon see most individuals go through when cooping with this new machinery when he utters “The more assistants there are, and the more you use them, the more natural they feel — and that means the more you’ll use them, feeding the cycle”. I noticed how he used the word “more” consecutively throughout that single sentence, demonstrating the idea that there is always going to be more, and that there will never come a time when people will stop thinking of new ideas. This repetition of such a simplistic world also shows that even though all of these new creations are beyond beneficial to our society, we don’t really have a chose as to if we want them to play a role in our lives. Each new deice always seems to find away into our pockets, signifying the idea that even though we “use” the technology, that we are actually, in a sense, just mere slaves that feed on the aid of these machines. At the end of the day I think its important to realize that technology will always be “there” but the term, “there” is broad, it could mean in our homes, in a store, or even in our pockets but just because its “there” doesn’t mean we have to use it, or buy it, or surround our lives around it. We have to realize that, just like everything else in life, technology is what we make of it and we, as individuals, have the power to choose the technology we find necessary to better ourselves and the technology that we consider to be wasteful.</p>
+<p>Manjoo, Farhad (2015, September 22). IPhone 6s&#8217;s Hands-Free Siri Is an Omen of the Future. Retrieved September 25, 2015, from http://mobile.nytimes.com/2015/09/24/technology/personaltech/iphone-6s-hands-free-siri-is-an-omen-of-the-future.html?ref=technology&amp;_r=1&amp;referer=</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/multimedia/" rel="category tag">Multimedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/iphone6s-voicerecognition-siri/" rel="tag">#IPhone6s #VoiceRecognition #Siri</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/iphone-6ss-hands-free-siri-is-an-omen-of-the-future-shaun/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2728 -->
+
+		
+	
+
+	
+			<div id="post-2723" class="post-2723 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-editing-apps tag-envy-spiral tag-instagram">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/selfie-loathing/" rel="bookmark">Selfie-Loathing</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/selfie-loathing/" title="7:56 pm" rel="bookmark"><span class="entry-date">September 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/jsilber426/" title="View all posts by Jennie Silber">Jennie Silber</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>&nbsp;</p>
+<p>In this article, Jessica Winter explains the science and psychology behind why not only Facebook is the “frenemy with the most heads,” (Winter, 2013, p.2) but more importantly why Instagram is the greatest threat to our mental well-being. Winter argues that our social media outlets reduce us as individuals to a whole new level of shallowness.</p>
+<p>Instagram is one out of many socia media sites that makes it extremely easy to morph a sub-par photo into a top of the line photo you would find on the front of a magazine. These days, there are countless amounts of editing apps that can not only brighten or sharpen a picture, but can change a person’s skin tone, make blemishes disappear, smooth out wrinkles, and even make a person’s teeth whiter. This kind of false advertisement is the reason “You get more explicit and implicit cues of people being happy, rich, and successful from a photo than from a status update” (Winter, 2013, p.3). People will spend hours upon hours experimenting with different filters and editing every small imperfection in order to create the “perfect” Instagram post. Not only this, but then they have to come up with the “perfect” witty and creative caption to capture their followers’ attentions. People will even spend hours simply dwelling over which emoji or hashtag is best to use. Although I myself am faulty of the endless battle of what filter to use, which caption to write, and what emoji looks best, I do realize that it is insane how much effort goes into just one photo. And why put all of this energy into an Instagram post? The one and only answer is: LIKES! Instagram is the one form of social media where getting the <u>most</u> likes is the <u>most</u> important. A lot of people think that the more likes a person gets, the more they are liked in the “real world.” However, this theory can be far from the truth. People are so obsessed with getting likes on their photos that there are even businesses you can pay to buy likes. It is absurd!</p>
+<p>“Krasnova’s research has led her to define what she calls an “envy spiral” peculiar to social media. “If you see beautiful photos of your friend on Instagram,” she says, “one way to compensate is to self-present with even better photos, and then your friend sees your photos and posts <em>even</em> <em>better</em> photos, and so on” (Winter, 2013, p.3). Although Krasnova may be making a valid point, I don’t believe it is right to generalize this conclusion to the whole population of social media users. Your personal reaction to others’ posts and pictures is merely a reflection of your own character and self-worth. If you dwell in self-pity and jealousy, it is inevitable that you will “enter into a semi-consensual sadomasochistic relationship” (Winter, 2013, p.2) with social media. It is not the filtered, over-edited picture of your skinny friend in a bikini at the beach that is to blame, it is yourself.</p>
+<p>&nbsp;</p>
+<p>References</p>
+<p>Winter, J. (2013, July 23). Here’s Why Instagram Is Even More Depressing than Facebook. Retrieved September 25, 2015, from http://www.slate.com/articles/technology/technology/2013/07/instagram_and_self_esteem_why_the_photo_sharing_network_is_even_more_depressing.html</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/editing-apps/" rel="tag">editing apps</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy-spiral/" rel="tag">envy spiral</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" rel="tag">Instagram</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/selfie-loathing/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2723 -->
+
+		
+	
+
+	
+			<div id="post-2718" class="post-2718 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-facebook tag-google tag-internet">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/the-uses-of-the-internet/" rel="bookmark">The Uses of the Internet</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/the-uses-of-the-internet/" title="7:25 pm" rel="bookmark"><span class="entry-date">September 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/ct251058/" title="View all posts by Carly Tilson">Carly Tilson</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>In today’s society, I think that it is safe to say that we can’t live without the Internet. Through using the Internet, we have access right at our fingertips to news, social media, and numerous search engines such as Google and Yahoo. Since we can so easily access the Internet, sources like the newspaper are becoming less important. Anything we come across in the newspaper, chances are we will be able to find on the Internet faster.</p>
+<p>An incredible social media tool that the Internet provides us access to is Facebook. It has been in existence for just over ten years now, and is the most popular social media website, attracting more than 1.49 billion users (Reddy, 2015). Facebook also allows us to view news, more specifically though, news that typically targets human interest. The Internet is “increasingly impacting all spheres of life across the world” (Reddy, 2015). It is coming to a point where people are becoming dependent on Facebook, and some people want to get connected to the Internet solely so that they can become active on Facebook. Before the Internet, not only did we not have access to Facebook, but we also relied heavily on resources such as newspapers, magazines, and radio to find out information. Google and Facebook are continually becoming more popularized in today’s society since they contain such a significant amount of information and serve as such a beneficial tool in our daily lives. It is said that “Facebook and Google will continue to dominate the online space” (Reddy, 2015). Both tools wouldn’t have been made possible without the Internet. The Internet now allows us to search for potential jobs, conduct research, connect with people nationwide, and so much more. It is because of reasons like these that Facebook and Google will continue to dominate our online world and keep us coming back. Having access to so many incredible tools myself in today’s society, it is hard to imagine what life would be like without the Internet. In conclusion, the ways in which we benefit from Internet access in today’s society are endless. This generation has brought us more technological resources than ever before.</p>
+<p>Ganapati, R. (2015, September 22). Facebook, google and the future of news. <em>IBN Live.</em> Retrieved from: <a href="http://www.ibnlive.com/news/tech/facebook-google-and-the-future-of-news-1108328.html">http://www.ibnlive.com/news/tech/facebook-google-and-the-future-of-news-1108328.html</a></p>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" rel="tag">Facebook</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/google/" rel="tag">Google</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" rel="tag">Internet</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/the-uses-of-the-internet/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2718 -->
+
+		
+	
+
+	
+			<div id="post-2715" class="post-2715 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-comparison tag-envy tag-instagram">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/instagram-slam/" rel="bookmark">Instagram Slam</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/instagram-slam/" title="1:42 pm" rel="bookmark"><span class="entry-date">September 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/mm251310/" title="View all posts by Maddy Mummey">Maddy Mummey</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Instagram is one of the most popular forms of social media that exists. The platform of this specific social media focuses solely on the posting of pictures with different filters and captions which are seen by a user’s followers who are able to like and comment on the posted photo. Although Instagram has a lot of positive aspects such as allowing people to be connected to family, friends, and strangers around the world, there are still numerous adverse effects that make the app not as advantageous as it is intended to be. In the article “The Instagram Effect: How the Psychology of Envy Drives Consumerism,” author, Lane Anderson lays out on the table all of the destructive consequences that stem from the thriving site. Anderson categorizes the most prominent aspects as “peer pressure,” “reality check,” and most importantly, “comparison.” Comparison is by far the most emphasized point in this article. Anderson interviewed multiple people and quoted them throughout the article and without fail, each person mentioned something about the envy that is typically instilled in majority of Instagram’s users.</p>
+<p>A quote that embodies the overall message of this article was said by Andrea Mouritsen, a well-known blogger turned Instagrammer. In regards to “famous” bloggers receiving free gifts just because they are well-known on the Internet, Mouritsen said, “There are photos of (a popular blogger) pushing a $1,800 stroller while a professional photographer follows them. Suddenly, I feel like my stroller is a piece of crap, and it puts me in a state of annoyance.” This quote is so vital to relaying the author’s message because it shows how Instagram is being misused. Instagram is supposed to make the users feel unified with the people that they follow; whether people are following their friends, family, or a superstar, everyone is on the same level. However, when situations like the one above occur users are no longer on the same level. Instead, people are driven apart and it is often a person’s own fault for allowing this to happen.</p>
+<p>This is not to say that comparison is always an awful thing. Sometimes it can be a constructive component that people utilize in order to better him- or herself or life. Comparison changes sides when people allow it to morph into envy and allow it to affect their life.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>References</p>
+<p>Anderson, L. (2014, April 15). The Instagram effect: How the psychology of envy drives consumerism. Retrieved September 21, 2015, from <a href="http://national.deseretnews.com/article/1294/the-instagram-effect-how-the-psychology-of-envy-drives-consumerism.html">http://national.deseretnews.com/article/1294/the-instagram-effect-how-the-psychology-of-envy-drives-consumerism.html</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/comparison/" rel="tag">comparison</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" rel="tag">envy</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" rel="tag">Instagram</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/instagram-slam/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2715 -->
+
+		
+	
+
+	
+			<div id="post-2710" class="post-2710 post type-post status-publish format-standard hentry category-article tag-depression tag-expression tag-tumblr">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/" rel="bookmark">Tumblr and Depression, Where Do You Draw the Line?</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/" title="8:54 pm" rel="bookmark"><span class="entry-date">September 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/rachelnorman113/" title="View all posts by Rachel Norman">Rachel Norman</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>In the article, <em>Social Media Is Redefining ‘Depression’, </em>Bine discusses how Tumblr has become a major platform for teenage girls with mental illness to express themselves publicly in an anonymous way. Tumblr is a form of social media that was developed to promote photography and blogging through pictures. Bine interviews a teenage girl named Laura who has fell victim to the massive online Tumblr community that accepts her for her depression. Bine mentions the Silver Bubble Problem, in which it is, “difficult for those inside the community to see the outside world…But they often don’t want to get out because to leave the community would be to lose the people who understand them.” (Bine 2013, p. 4) While being accepted though, Laura’s identity is still able to remain hidden from the people she knows in the outside world. This anonymity produces its own safety in knowing that “nobody” will find out about what you post. Bine goes on to discuss how a combination of intense feelings, misunderstanding, and a closed off online community all contribute to the exponential rise in depression throughout this upcoming generation.</p>
+<p>Yes, Depression combined with an online community of other depressed people is leading to a glorification of a serious mental health issue. When depressed teenagers take to Tumblr, it leads to a, “growing community of people feeding off of each other’s strong emotions, and it’s definitely visible online.” (Bine 2013, p. 3) And yes, it is definitely accurate to say that not everyone who reblogs depressing imagery is clinically depressed themselves and many “adolescents are confusing the clinical disorder called ‘depression’ with normal, everyday challenges.” (Bine 2013, p. 2) However, when Tumblr users feel almost, “strong, beautiful, and mysterious” (Bine 2013, p. 2) for posting, “black and white photos with scars along their wrists, from taking razor blades to their skin” (Bine 2013, p. 1) and are recognized and most infamously, praised for it, this is where the problem of interpretation begins.</p>
+<p>Bine is ignorantly incorrect to state that the self expression pertaining to depression has created a, “frenzy” (Bine 2013, p. 2) on Tumblr, for she thinks girls are giving into peer pressure and are self-harming because it is the cool thing to do. It is extremely offensive for Bine to label this social phenomenon as people who are, “‘wannabe depressed’” (Bine 2013, p. 2). Nobody wants to be depressed.  This insensitive label invalidates an adolescent’s emotions, which is all he/she really wants from posting on Tumblr in the first place. This is the problem. The controversy is in the way that these feelings are being expressed and the validity that comes with them. Teenage girls are being praised for being depressed, which turns depression into something that is normal or healthy. Teenagers are aloud to express themselves on the internet, but when it comes to mental illness, there should be a community focusing on recovery and support. Bine misinterprets and invalidates these depression blogs as teenagers, “advertising their suffering.” (Bine 2013, p. 5) She misses the point completely, and doesn’t realize that these teens are going through a difficult time and are simply calling for help through the only tool they feel comfortable with, the internet. The conversation of handling depression is very important in this day and age, however, it must be emphasizing healthy and appropriate ways to treat and overcome depression, not casting it off as an indulgent frenzied phenomenon.</p>
+<p>&nbsp;</p>
+<p style="text-align: center">References</p>
+<p>Bine, A. (2013, October 28). Social Media Is Redefining &#8216;Depression&#8217;. <em>The Atlantic</em>. Retrieved from <a href="http://www.theatlantic.com/health/archive/2013/10/social-media-is-redefining-">http://www.theatlantic.com/health/archive/2013/10/social-media-is-redefining-</a>depression/280818/</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" rel="tag">depression</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" rel="tag">expression</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" rel="tag">tumblr</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2710 -->
+
+		
+	
+
+	
+			<div id="post-2707" class="post-2707 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-advance tag-newgeneration tag-perspective">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/is-instagram-and-children-a-bad-mix/" rel="bookmark">Is Instagram and Children a Bad Mix?</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/is-instagram-and-children-a-bad-mix/" title="8:18 pm" rel="bookmark"><span class="entry-date">September 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/sb251420/" title="View all posts by Sam Best">Sam Best</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>What is the first thing that comes to mind when you think of Instagram? My mind is immediately flooded with selfies, pictures of dogs, and even last nights dinner. The social platform allows people to freely post pictures and anyone that follows them can see it. Harmless right? The world of Instagram <i>was</i>, up until a much younger generation got ahold of it.</p>
+<p>The article I found, <i>Lesson Learned: Kids and Instagram</i> is written by Wendi Aarons, a mother who describes her experience of allowing her eleven year old son to get an Instagram. When her son first downloaded the app, it looked the same as any other kids’. He began following his classmates from school, star athletes he looked up to, and post pictures of the family cat. It was the epitome of what an eleven year old’s Instagram should look like. However this photo sharing app is not made for children. They do not fully understand its purpose, and this mom quickly realized it. When Wendi proceeded to check up on his account, she found many things that were pretty alarming. First she came across the name of the school her son attended written in his bio, which she thought was alarming until she read the bio’s on the Instagram accounts of his friends. So many depicted their new relationship status. Wendi expressed,“Kids who I remember peeing their pants in Kindergarten now describe themselves online as “Taken!!” or ‘Single and Wants to Mingle!’…It was shocking because I had absolutely no idea that 10 and 11 year-old kids were already ‘dating’” (Aarons). Girls were beginning to make comments on boy’s photos complimenting them on how ‘hot they are’ and how much they ‘like them.’ Wendi finally stumbled upon something that left her in disbelief. An account was made about a girl that her son went to school with. The whole profile was making fun of how ugly this ten year old was.</p>
+<p>Instagram, a photo sharing app, is used by children in a whole different way than its meant for. Instead of just editing and posting pictures and videos, children put themselves in dangerous positions by revealing personal information about themselves. They also come in contact with people they don’t even know, who could potentially harm them. Technology and social media like Instagram are putting the young generation into a whole new perspective. How long can we keep them safe?</p>
+<p>&nbsp;</p>
+<p>Aarons, W. (2015, January 23). <i>Lesson earned: Kids and instagram. </i>Retrieved from</p>
+<p><a href="http://alphamom.com/parenting/big-kid/kids-using-instagram/">http://alphamom.com/parenting/big-kid/kids-using-instagram/</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/advance/" rel="tag">#advance</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/newgeneration/" rel="tag">#newgeneration</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/perspective/" rel="tag">#perspective</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/is-instagram-and-children-a-bad-mix/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2707 -->
+
+		
+	
+
+	
+			<div id="post-2705" class="post-2705 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-bullying tag-instagram tag-online-safety tag-privacy tag-social-media tag-teens tag-tweens tag-victims">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/insta-bully/" rel="bookmark">Insta Bully</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/insta-bully/" title="1:35 pm" rel="bookmark"><span class="entry-date">September 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/lindseybowen/" title="View all posts by Lindsey Bowen">Lindsey Bowen</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Bullying has always been an issue but with technology and social media being so essential to our lives its become easy for people to bully other people online. With every social media its easy to bully someone. It is not hard to make a fake account or just message a person or even comment on peoples post. It makes it even easier due to the fact that you don’t even see the person’s reaction. But now you are on social media that is specifically for posting pictures, and you might think how could you bully someone over Instagram.</p>
+<p>When I first got an Instagram I put my self on private just because I did not want random people following but I would have never thought about someone bullying on Instagram. Way too many people can see what you comment. It is not like Facebook where you might not stop and look at everyone’s post and comment. But for Instagram you purposely go on it to look at the pictures and what their captions are and you usually read the comments.  So why would any one want to even do anything mean on Instagram or any social media, it will always be brought back up. I’ve never seen any one being bullied on Instagram but I have heard of it happening.</p>
+<p>When I found Cyberbullying Research Center’s blog post on Instagram and bullying I couldn’t believe all the ways you could bully someone on Instagram. They listed five different ways to bully someone and then told some people’s stories. I don’t understand why anyone would want to bully anyone but since it does happen, the big question is what do we do?</p>
+<p>I see so many different adds and campaigns to stop bullying but it still seems to be going on. I truly do believe that more people need to start standing up to bullies, if you see someone getting bullied over social media then say something once one person does it I’m sure more will follow. To the person who gets bullied you might have made it better for them to see someone standing up for them. In the blog post a twelve-year-old girl posted a picture and got mean comments on it for no reason, but then that also starts the conversation of a twelve-year-old girl shouldn’t be on Instagram. At some point there should be an age limit on how old you can be to be on any social media. Someone that young shouldn’t experience hate like that. Even as a thirteen-year-old they shouldn’t have to be dealing with social media like that. Yes, it happens at any age but an 18-year-old might be able to handle a situation a little bit better then a twelve or thirteen-year-old. Cyber Bulling is a major issue in our world today and we all need to take steps to help prevent it because one day our own kids will have to be dealing with this. So trying to make social media a better place will help the future kids.</p>
+<p>Cyberbullying on Instagram &#8211; Cyberbullying Research Center. (2013, May 21). Retrieved September 23, 2015. <a href="http://cyberbullying.org/cyberbullying-on-instagram/">http://cyberbullying.org/cyberbullying-on-instagram/</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/bullying/" rel="tag">Bullying</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" rel="tag">Instagram</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/online-safety/" rel="tag">online safety</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" rel="tag">privacy</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/social-media/" rel="tag">Social Media</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/teens/" rel="tag">teens</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/tweens/" rel="tag">tweens</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/victims/" rel="tag">victims</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/insta-bully/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2705 -->
+
+		
+	
+
+	
+			<div id="post-2703" class="post-2703 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-mass-communication tag-mobile-messaging-apps tag-simpleeasy">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/mass-communication-made-easy-by-groupme/" rel="bookmark">Mass Communication Made Easy by GroupMe</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/mass-communication-made-easy-by-groupme/" title="3:50 am" rel="bookmark"><span class="entry-date">September 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/cfunge/" title="View all posts by Chris Funge">Chris Funge</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>The development of mobile phones, specifically smartphones, has brought about the creation of numerous apps. Among some of today’s most widely used apps are group messaging apps. In particular, GroupMe, owned by Microsoft, has emerged as one of the most popular group messaging apps on the market. In fact, there are some who swear by GroupMe, claiming that it is the best mobile messaging app available. So, why are so many individuals of this mindset?</p>
+<p>There are several reasons users prefer GroupMe to other mobile messaging apps. Among them are that GroupMe enables individuals to “select who is in the group and make it private,” provides members with an opportunity to “upload photos or videos like multimedia text messages,” and makes sure that a user’s “phone number remains private to the group” he/she is in (Ledesma, 2012, p.3). While author Paul Ledesma (2012, p.3) notes that GroupMe is primarily geared toward smartphones, he writes that its chats can also be accessed as SMS text messages. Additionally, GroupMe is extremely accommodating in that it allows users to simply request to increase the number of members in a group should it exceed the standard size of 25, works on every smartphone, and can be accessed via computers (Ledesma, 2012, p.3).</p>
+<p>GroupMe is such a user-friendly app that Ledesma, the Director of Undergraduate Admission at the University of Southern California’s Viterbi School of Engineering, has decided to use it for several of his affairs. Prior to using GroupMe, Ledesma would prepare logistics sheets to work out details regarding locations, people, and duties for several events that were taking place on campus (Ledesma, 2012, p.2). The primary issue with these logistics sheets was that Ledesma often found that he and his crew would have to change “one last detail at the last minute” typically having to cancel or add a location (Ledesma, 2012, p. 2). In addition, Ledesma’s crew was heavily reliant on rented walkie talkies. Unfortunately, not everyone would receive a walkie talkie due to expenses and those who did receive them often needed to resort to call signs and CB talk “over and outs” (Ledesma, 2012, p.3). Thus, GroupMe provided the perfect solution.</p>
+<p>With GroupMe Ledesma has been able to effectively communicate with his 25 student ambassadors, the professional admission staff, and the front desk staff (Ledesma, 2012, p. 3). The app is beneficial for both students and staff. The staff is not keen on giving out their phone numbers to all of the students and can avoid doing so by using GroupMe and students can disable their notifications if they are in class (Ledesma, 2012, p. 3).  The icing on the cake is that the inclusion of the front desk staff in the chat has given receptionists an opportunity to take calls on the phone and communicate with students and staff on the computer simultaneously (Ledesma, 2012, p. 4).</p>
+<p>Furthermore, GroupMe has made mass communication significantly simpler. Ledesma’s case serves as a prime example and is certainly not an anomaly. GroupMe has gained notoriety with students, specifically those in high school and college. Students have found that GroupMe’s user-friendly interface has made it easy to create multiple chats. For instance, any given person may be in nine or ten chats. Four of these chats may be dedicated to friends, another three to classes, and the final three to family. Aforementioned chats are bundled into one app providing GroupMe users with immediate access to conversations between classmates, family, and friends. As a result, communication in today’s day in age could not be easier than it is with GroupMe.</p>
+<p>&nbsp;</p>
+<p>Reference List</p>
+<p>Ledesma, P. (2012, May 1). <em>GroupMe: Using smartphones for mass communication during on campus events. </em>Retrieved from <a href="http://besttechpractices.usc.edu/2012/05/groupme/">http://besttechpractices.usc.edu/2012/05/groupme/</a></p>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/mass-communication/" rel="tag">mass communication</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/mobile-messaging-apps/" rel="tag">mobile messaging apps</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/simpleeasy/" rel="tag">simple/easy</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/mass-communication-made-easy-by-groupme/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2703 -->
+
+		
+	
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/7/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/page/5/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://fys142f15.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="nav_menu-3" class="widget-container widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-2520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2520"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-2685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685"><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-2714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2714"><a href="http://fys142f15.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="http://fys142f15.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+</ul></div></li><li id="nav_menu-4" class="widget-container widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2354"><a href="http://fys142f15.blogs.muhlenberg.edu/da1-tech-profile/">DA1: Technology Profile Survey</a></li>
+<li id="menu-item-2581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2581"><a href="http://fys142f15.blogs.muhlenberg.edu/da-zotero/">DA2: Zotero</a></li>
+<li id="menu-item-2664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664"><a href="http://fys142f15.blogs.muhlenberg.edu/da3-twitter/">DA3: Twitter</a></li>
+<li id="menu-item-2684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684"><a href="http://fys142f15.blogs.muhlenberg.edu/da4-linkedin-profile/">DA4: Create a LinkedIn Profile</a></li>
+<li id="menu-item-2747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2747"><a href="http://fys142f15.blogs.muhlenberg.edu/da5-digital-distractions/">DA5: Digital Distractions</a></li>
+<li id="menu-item-2807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2807"><a href="http://fys142f15.blogs.muhlenberg.edu/da6-dropbox/">DA6: Dropbox for File Management</a></li>
+<li id="menu-item-2866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2866"><a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/">DA7: Word Clouds</a></li>
+<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="http://fys142f15.blogs.muhlenberg.edu/da8-google-docs/">DA8: Google Docs</a></li>
+<li id="menu-item-3028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3028"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/#nov18">DA9: Internet Companies</a></li>
+<li id="menu-item-3032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3032"><a href="http://fys142f15.blogs.muhlenberg.edu/da-10-website-tips-hacks/">DA 10: Implicit Association</a></li>
+</ul></div></li><li id="nav_menu-6" class="widget-container widget_nav_menu"><h3 class="widget-title">Additional Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-2510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2510"><a href="http://fys142f15.blogs.muhlenberg.edu/files/2015/08/FYS142DigitalWorldF15.pdf">Syllabus</a></li>
+<li id="menu-item-2493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2493"><a href="http://fys142f15.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-2524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2524"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-2521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2521"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+<li id="menu-item-2522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2522"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-2523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2523"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+</ul></div></li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/2946/">Is Anonymity a Bad Thing?</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/a-walk-through-the-future/">A Walk through the Future</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-art-of-deception/">The Art of Deception</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-deterioration-of-our-privacy-whos-reading-your-emails-everyone/">The Deterioration of Our Privacy: Who&#8217;s Reading Your Emails? Everyone.</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/fame-fiends/">Fame Fiends</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/#comment-22">Yik Yak Attack</a></li><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/#comment-21">Technology&#8217;s Movement into Education</a></li><li class="recentcomments"><span class="comment-author-link">Maddy Mummey</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-misinterpretations/#comment-17">Digital Misinterpretations</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/#comment-16">How Uber Has Changed Transportation</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/#comment-15">The New Wave of Music: A SoundCloud Revolution</a></li></ul></li><li id="categories-4" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3><form action="http://fys142f15.blogs.muhlenberg.edu" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="20859">Article&nbsp;&nbsp;(30)</option>
+	<option class="level-0" value="64806">Blog Assignment&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="93877">Book Chapter&nbsp;&nbsp;(12)</option>
+	<option class="level-0" value="65684">Encyclopedia/Wikipedia&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="65899">FYS 142 Update&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="66182">Multimedia&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="66833">Peer Reviewed Article&nbsp;&nbsp;(9)</option>
+	<option class="level-0" value="93912">Reading Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="67420">Resource Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="93960">Technology Tip&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(25)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</li><li id="tag_cloud-3" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/advance/" class="tag-cloud-link tag-link-93941 tag-link-position-1" style="font-size: 8pt;" aria-label="#advance (1 item)">#advance</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/anonymity/" class="tag-cloud-link tag-link-93922 tag-link-position-2" style="font-size: 12.581818181818pt;" aria-label="#anonymity (2 items)">#anonymity</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/betterfuture/" class="tag-cloud-link tag-link-93898 tag-link-position-3" style="font-size: 12.581818181818pt;" aria-label="#betterfuture (2 items)">#betterfuture</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/ethicsoftechnology-consequencesofouractions/" class="tag-cloud-link tag-link-93959 tag-link-position-4" style="font-size: 8pt;" aria-label="#ethicsoftechnology #consequencesofouractions (1 item)">#ethicsoftechnology #consequencesofouractions</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/evolution/" class="tag-cloud-link tag-link-93992 tag-link-position-5" style="font-size: 12.581818181818pt;" aria-label="#evolution (2 items)">#evolution</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/iphone6s-voicerecognition-siri/" class="tag-cloud-link tag-link-93953 tag-link-position-6" style="font-size: 8pt;" aria-label="#IPhone6s #VoiceRecognition #Siri (1 item)">#IPhone6s #VoiceRecognition #Siri</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/lifeskills/" class="tag-cloud-link tag-link-93905 tag-link-position-7" style="font-size: 12.581818181818pt;" aria-label="#lifeskills (2 items)">#lifeskills</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/newgeneration/" class="tag-cloud-link tag-link-93940 tag-link-position-8" style="font-size: 8pt;" aria-label="#newgeneration (1 item)">#newgeneration</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/perspective/" class="tag-cloud-link tag-link-38704 tag-link-position-9" style="font-size: 8pt;" aria-label="#perspective (1 item)">#perspective</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/readingiscool/" class="tag-cloud-link tag-link-93904 tag-link-position-10" style="font-size: 12.581818181818pt;" aria-label="#readingiscool (2 items)">#readingiscool</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/strongerbrain/" class="tag-cloud-link tag-link-93897 tag-link-position-11" style="font-size: 12.581818181818pt;" aria-label="#strongerbrain (2 items)">#strongerbrain</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/comparison/" class="tag-cloud-link tag-link-93947 tag-link-position-12" style="font-size: 8pt;" aria-label="comparison (1 item)">comparison</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberattack/" class="tag-cloud-link tag-link-93954 tag-link-position-13" style="font-size: 8pt;" aria-label="cyberattack (1 item)">cyberattack</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberbullying/" class="tag-cloud-link tag-link-93957 tag-link-position-14" style="font-size: 8pt;" aria-label="Cyberbullying (1 item)">Cyberbullying</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/dangers-of-the-cloud/" class="tag-cloud-link tag-link-93958 tag-link-position-15" style="font-size: 8pt;" aria-label="Dangers of &quot;The Cloud&quot; (1 item)">Dangers of &quot;The Cloud&quot;</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" class="tag-cloud-link tag-link-24819 tag-link-position-16" style="font-size: 12.581818181818pt;" aria-label="depression (2 items)">depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/editing-apps/" class="tag-cloud-link tag-link-93951 tag-link-position-17" style="font-size: 8pt;" aria-label="editing apps (1 item)">editing apps</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" class="tag-cloud-link tag-link-5226 tag-link-position-18" style="font-size: 20.218181818182pt;" aria-label="Education (5 items)">Education</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" class="tag-cloud-link tag-link-93946 tag-link-position-19" style="font-size: 12.581818181818pt;" aria-label="envy (2 items)">envy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy-spiral/" class="tag-cloud-link tag-link-93952 tag-link-position-20" style="font-size: 8pt;" aria-label="envy spiral (1 item)">envy spiral</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" class="tag-cloud-link tag-link-37337 tag-link-position-21" style="font-size: 8pt;" aria-label="expression (1 item)">expression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-22" style="font-size: 18.181818181818pt;" aria-label="Facebook (4 items)">Facebook</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-depression/" class="tag-cloud-link tag-link-93956 tag-link-position-23" style="font-size: 8pt;" aria-label="Facebook depression (1 item)">Facebook depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-24" style="font-size: 8pt;" aria-label="Google (1 item)">Google</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/how-to/" class="tag-cloud-link tag-link-93963 tag-link-position-25" style="font-size: 8pt;" aria-label="How-To (1 item)">How-To</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-26" style="font-size: 15.636363636364pt;" aria-label="Instagram (3 items)">Instagram</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-27" style="font-size: 15.636363636364pt;" aria-label="Internet (3 items)">Internet</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learn/" class="tag-cloud-link tag-link-93888 tag-link-position-28" style="font-size: 12.581818181818pt;" aria-label="learn (2 items)">learn</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" class="tag-cloud-link tag-link-93198 tag-link-position-29" style="font-size: 20.218181818182pt;" aria-label="learning (5 items)">learning</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/monitor-set-up/" class="tag-cloud-link tag-link-93961 tag-link-position-30" style="font-size: 8pt;" aria-label="Monitor Set-up (1 item)">Monitor Set-up</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/new-age/" class="tag-cloud-link tag-link-93927 tag-link-position-31" style="font-size: 12.581818181818pt;" aria-label="new age (2 items)">new age</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/online-safety/" class="tag-cloud-link tag-link-93939 tag-link-position-32" style="font-size: 8pt;" aria-label="online safety (1 item)">online safety</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-33" style="font-size: 15.636363636364pt;" aria-label="privacy (3 items)">privacy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/reading/" class="tag-cloud-link tag-link-190 tag-link-position-34" style="font-size: 22pt;" aria-label="reading (6 items)">reading</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/security/" class="tag-cloud-link tag-link-8070 tag-link-position-35" style="font-size: 12.581818181818pt;" aria-label="security (2 items)">security</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/snapchat/" class="tag-cloud-link tag-link-11233 tag-link-position-36" style="font-size: 12.581818181818pt;" aria-label="Snapchat (2 items)">Snapchat</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/sports/" class="tag-cloud-link tag-link-5237 tag-link-position-37" style="font-size: 12.581818181818pt;" aria-label="Sports (2 items)">Sports</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/steve-jobs/" class="tag-cloud-link tag-link-372 tag-link-position-38" style="font-size: 12.581818181818pt;" aria-label="Steve Jobs (2 items)">Steve Jobs</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-39" style="font-size: 18.181818181818pt;" aria-label="Technology (4 items)">Technology</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologys-impact/" class="tag-cloud-link tag-link-93964 tag-link-position-40" style="font-size: 8pt;" aria-label="Technology&#039;s impact (1 item)">Technology&#039;s impact</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" class="tag-cloud-link tag-link-93944 tag-link-position-41" style="font-size: 8pt;" aria-label="tumblr (1 item)">tumblr</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" class="tag-cloud-link tag-link-405 tag-link-position-42" style="font-size: 20.218181818182pt;" aria-label="twitter (5 items)">twitter</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/wiki/" class="tag-cloud-link tag-link-93984 tag-link-position-43" style="font-size: 12.581818181818pt;" aria-label="Wiki (2 items)">Wiki</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 18.181818181818pt;" aria-label="Writing (4 items)">Writing</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/yikyak/" class="tag-cloud-link tag-link-93955 tag-link-position-45" style="font-size: 8pt;" aria-label="yikyak (1 item)">yikyak</a></li>
+</ul>
+</div>
+</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">#fys142 Twitter feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">
+					Who Controls Your Digital World?				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f15.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f15.blogs.muhlenberg.edu%2Fpage%2F6%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f15.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

@@ -1,0 +1,625 @@
+http://trajectories.blogs.muhlenberg.edu/2018/10/
+98
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7 no-js" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8 no-js" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html class="no-js" lang="en-US">
+<!--<![endif]-->
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+        		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="profile"  href="https://gmpg.org/xfn/11" />
+		<link rel="pingback" href="http://trajectories.blogs.muhlenberg.edu/xmlrpc.php" />
+		<!-- html5shiv for IE8 and less  -->
+		<!--[if lt IE 9]>
+			<script src="http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/html5.js"></script>
+		<![endif]-->
+		<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>October 2018 &#8211; Trajectories</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Trajectories &raquo; Feed" href="http://trajectories.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Trajectories &raquo; Comments Feed" href="http://trajectories.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/trajectories.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/trajectories.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-fa-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/shared/fonts/fa/css/fontawesome-all.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-common-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/tc_common.min.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-skin-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/css/red.min.css?ver=4.3.4' type='text/css' media='all' />
+<style id='customizr-skin-inline-css' type='text/css'>
+
+            body,.navbar .nav>li>a {
+              font-size : 14px;
+              line-height : 1.6em;
+            }
+table { border-collapse: separate; }
+                           body table { border-collapse: collapse; }
+                          
+.social-links .social-icon:before { content: none } 
+.sticky-enabled .tc-shrink-on .site-logo img {
+    					height:30px!important;width:auto!important
+    				}
+
+    				.sticky-enabled .tc-shrink-on .brand .site-title {
+    					font-size:0.6em;opacity:0.8;line-height:1.2em
+    				}
+
+          .comments-link .tc-comment-bubble {
+            color: #F00;
+            border: 2px solid #F00;
+          }
+          .comments-link .tc-comment-bubble:before {
+            border-color: #F00;
+          }
+        
+.tc-rectangular-thumb {
+        max-height: 250px;
+        height :250px
+      }
+
+</style>
+<link rel='stylesheet' id='customizr-style-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/style.css?ver=4.3.4' type='text/css' media='all' />
+<link rel='stylesheet' id='fancyboxcss-css'  href='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/fancybox/jquery.fancybox-1.3.4.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var TCParams = {"_disabled":[],"FancyBoxState":"1","FancyBoxAutoscale":"","SliderName":"","SliderDelay":"","SliderHover":"1","centerSliderImg":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"anchorSmoothScroll":"linear","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".tc-carousel-control",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"ReorderBlocks":"1","centerAllImg":"1","HasComments":"","LeftSidebarClass":".span3.left.tc-sidebar","RightSidebarClass":".span3.right.tc-sidebar","LoadModernizr":"1","stickyCustomOffset":{"_initial":0,"_scrolling":0,"options":{"_static":true,"_element":""}},"stickyHeader":"1","dropdowntoViewport":"","timerOnScrollAllBrowsers":"1","extLinksStyle":"","extLinksTargetExt":"","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"50","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn","tc-placeholder-wrap"],"id":[]},"imgSmartLoadEnabled":"","imgSmartLoadOpts":{"parentSelectors":[".article-container",".__before_main_wrapper",".widget-front"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"","goldenRatio":"1.618","gridGoldenRatioLimit":"350","isSecondMenuEnabled":"","secondMenuRespSet":"in-sn-before","isParallaxOn":"1","parallaxRatio":"0.55","pluginCompats":[],"adminAjaxUrl":"http:\/\/trajectories.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","ajaxUrl":"http:\/\/trajectories.blogs.muhlenberg.edu\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"74565b19d9"},"isDevMode":"1","isModernStyle":"","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"styleSwitcher":{"enabled":false,"content":"","dismissAction":"dismiss_style_switcher_note_front","ajaxUrl":"http:\/\/trajectories.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/inc/assets/js/tc-scripts.js?ver=4.3.4'></script>
+<link rel='https://api.w.org/' href='http://trajectories.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://trajectories.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://trajectories.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://trajectories.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://trajectories.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//trajectories.blogs.muhlenberg.edu/?wordfence_lh=1&hid=11B87D4C9817ABAB2DC0F5AF69A1EDDB');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+		</head>
+	
+	<body class="bp-legacy archive date admin-bar no-customize-support wp-embed-responsive tc-fade-hover-links tc-l-sidebar tc-center-images skin-red customizr-4-3-4 tc-sticky-header sticky-disabled tc-transparent-on-scroll tc-regular-menu tc-post-list-context no-js" >
+            <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+        
+    <div id="tc-page-wrap" class="">
+
+  		
+  	   	<header class="tc-header clearfix row-fluid tc-tagline-off tc-title-logo-on  tc-shrink-on tc-menu-on logo-left tc-second-menu-in-sn-before-when-mobile">
+  			
+        <div class="brand span3 pull-left">
+        <a class="site-logo" href="http://trajectories.blogs.muhlenberg.edu/" aria-label="Trajectories | Trajectories: A Course Blog for Developmental Psychopathology at Muhlenberg College (PSY-330)"><img src="http://trajectories.blogs.muhlenberg.edu/files/2014/08/MC_Logo.jpg" alt="Back Home"   style="max-width:250px;max-height:100px"  class=" "/></a>        </div> <!-- brand span3 -->
+
+        <div class="container outside"><h2 class="site-description">Trajectories: A Course Blog for Developmental Psychopathology at Muhlenberg College (PSY-330)</h2></div>      	<div class="navbar-wrapper clearfix span9 tc-submenu-fade tc-submenu-move tc-open-on-hover pull-menu-left">
+        	<div class="navbar resp">
+          		<div class="navbar-inner" role="navigation">
+            		<div class="row-fluid">
+              		<div class="social-block span5"><div class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://trajectories.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a></div></div><h2 class="span7 inside site-description">Trajectories: A Course Blog for Developmental Psychopathology at Muhlenberg College (PSY-330)</h2><div class="nav-collapse collapse tc-hover-menu-wrapper"><div class="menu-main-menu-container"><ul id="menu-main-menu-2" class="nav tc-hover-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-55"><a href="http://trajectories.blogs.muhlenberg.edu/">Home</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-26"><a href="http://trajectories.blogs.muhlenberg.edu/category/class-updates/">Class Updates</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25"><a href="http://trajectories.blogs.muhlenberg.edu/category/student-essays/">Student Essays</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-93"><a href="http://trajectories.blogs.muhlenberg.edu/category/internet-resources/">Internet Resources</a></li>
+</ul></div></div><div class="btn-toggle-nav pull-right"><button type="button" class="btn menu-btn" data-toggle="collapse" data-target=".nav-collapse" title="Open the menu" aria-label="Open the menu"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span> </button></div>          			</div><!-- /.row-fluid -->
+          		</div><!-- /.navbar-inner -->
+        	</div><!-- /.navbar resp -->
+      	</div><!-- /.navbar-wrapper -->
+    	  		</header>
+  		<div id="tc-reset-margin-top" class="container-fluid" style="margin-top:103px"></div><div id="main-wrapper" class="container">
+
+    <div class="tc-hot-crumble container" role="navigation"><div class="row"><div class="span12"><div class="breadcrumb-trail breadcrumbs"><span class="trail-begin"><a href="http://trajectories.blogs.muhlenberg.edu" title="Trajectories" rel="home" class="trail-begin">Home</a></span> <span class="sep">&raquo;</span> <a href="http://trajectories.blogs.muhlenberg.edu/developmental-psychopathology-course-blog/" title="Developmental Psychopathology Course Blog">Developmental Psychopathology Course Blog</a> <span class="sep">&raquo;</span> <a href="http://trajectories.blogs.muhlenberg.edu/2018/" title="2018">2018</a> <span class="sep">&raquo;</span> <span class="trail-end">October</span></div></div></div></div>
+    <div class="container" role="main">
+        <div class="row column-content-wrapper">
+
+            
+        <div class="span3 left tc-sidebar">
+           <div id="left" class="widget-area" role="complementary">
+                          </div><!-- //#left or //#right -->
+        </div><!--.tc-sidebar -->
+
+        
+                <div id="content" class="span9 article-container grid-container tc-gallery-style">
+
+                            <header class="archive-header">
+          <h1 class="format-icon">Monthly Archives: <span>October 2018</span></h1><hr class="featurette-divider __before_loop">        </header>
+        
+                        
+                                                                                    
+                                                                    <article id="post-461" class="row-fluid grid-item post-461 post type-post status-publish format-standard category-internet-resources tag-child-abuse tag-child-maltreatment tag-maltreatment tag-parents tag-schools thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/helpful-links-on-maltreatment-by-maayan-malomet/" rel="bookmark">Helpful Links on Maltreatment  (by Maayan Malomet)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/internet-resources/" title="View all posts in Internet Resources"> Internet Resources </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-abuse/" title="View all posts in child abuse"> child abuse </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-maltreatment/" title="View all posts in child maltreatment"> child maltreatment </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/maltreatment/" title="View all posts in Maltreatment"> Maltreatment </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/parents/" title="View all posts in parents"> parents </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/schools/" title="View all posts in schools"> schools </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/" title="1:10 am" rel="bookmark"><time class="entry-date updated" datetime="October 29, 2018">October 29, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/mmalomet/" title="View all posts by mmalomet" rel="author">mmalomet</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>&nbsp; Parenting a Child Who Has Experienced Abuse or Neglect (https://www.childwelfare.gov/pubPDFs/parenting_CAN.pdf) &#8211; This document has good resources for parents, because it provides the effects that maltreatment has on the child and the ways parents can help their children heal. The Cost of Child Abuse: The Rising Economic Impact of Child Maltreatment (https://www.childhelp.org/blog/cost-child-abuse-rising-economic-impact-child-maltreatment/) [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-464" class="row-fluid grid-item post-464 post type-post status-publish format-standard category-internet-resources tag-child-abuse tag-child-maltreatment tag-child-neglect tag-childhood-maltreatment thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/maltreatment-resources-by-karly-mccloskey/" rel="bookmark">Maltreatment Resources (by Karly McCloskey)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/internet-resources/" title="View all posts in Internet Resources"> Internet Resources </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-abuse/" title="View all posts in child abuse"> child abuse </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-maltreatment/" title="View all posts in child maltreatment"> child maltreatment </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-neglect/" title="View all posts in child neglect"> child neglect </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/childhood-maltreatment/" title="View all posts in Childhood Maltreatment"> Childhood Maltreatment </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/" title="1:05 am" rel="bookmark"><time class="entry-date updated" datetime="October 29, 2018">October 29, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/kmccloskey/" title="View all posts by kmccloskey" rel="author">kmccloskey</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>Merck Manual (https://www.merckmanuals.com/professional/pediatrics/child-maltreatment/overview-of-child-maltreatment) &#8211; This link contains a general overview of the different types of child maltreatment that may be helpful for a teacher or physician to recognize warning signs of any maltreatment towards a child in their life. &nbsp; Centers for Disease Control and prevention(https://www.cdc.gov/violenceprevention/childabuseandneglect/index.html) &#8211; This link would [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-470" class="row-fluid grid-item post-470 post type-post status-publish format-standard category-student-essays tag-child-abuse tag-child-maltreatment tag-child-neglect thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/child-maltreatment-by-gabrielle-gross/" rel="bookmark">Child Maltreatment (by Gabrielle Gross)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/student-essays/" title="View all posts in Student Essays"> Student Essays </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-abuse/" title="View all posts in child abuse"> child abuse </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-maltreatment/" title="View all posts in child maltreatment"> child maltreatment </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-neglect/" title="View all posts in child neglect"> child neglect </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/29/" title="12:59 am" rel="bookmark"><time class="entry-date updated" datetime="October 29, 2018">October 29, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/ggross/" title="View all posts by ggross" rel="author">ggross</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>An overview of child maltreatment: This week in class we discussed child maltreatment, including abuse and neglect. The Center for Disease Control (CDC) defines child abuse and neglect as “any act or series of acts of commission or omission by a parent or other caregiver (e.g., clergy, coach, teacher) that [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-456" class="row-fluid grid-item post-456 post type-post status-publish format-standard category-student-essays tag-child-abuse tag-child-maltreatment tag-mandated-reporters thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/25/child-maltreatment-who-are-mandatory-reporters-by-elise-vander-may/" rel="bookmark">Child Maltreatment: Who are mandatory reporters? (by Elise Vander May)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/student-essays/" title="View all posts in Student Essays"> Student Essays </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-abuse/" title="View all posts in child abuse"> child abuse </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/child-maltreatment/" title="View all posts in child maltreatment"> child maltreatment </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/mandated-reporters/" title="View all posts in mandated reporters"> mandated reporters </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/25/" title="9:16 pm" rel="bookmark"><time class="entry-date updated" datetime="October 25, 2018">October 25, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/evandermay/" title="View all posts by evandermay" rel="author">evandermay</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>Child maltreatment can be defined as the intentional or reckless doing of any physical, emotional, or mental harm to a child. Examples of child maltreatment include, but are not limited to: bodily injury, serious physical neglect of a child, fabricating or the intentionally exaggerating of a medical symptom or disease, [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-440" class="row-fluid grid-item post-440 post type-post status-publish format-standard category-autism-spectrum-disorders category-student-essays tag-aspergers-syndrome tag-autism tag-autism-spectrum-disorders tag-high-functioning-autism thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/18/aspergers-disorder-or-difference-by-julie-weikart/" rel="bookmark">Asperger&#8217;s: Disorder or Difference? (by Julie Weikart)</a> <span class="comments-link"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/18/aspergers-disorder-or-difference-by-julie-weikart/#tc-comment-title" title="1 Comment(s) on Asperger&#8217;s: Disorder or Difference? (by Julie Weikart)" data-disqus-identifier="javascript:this.page.identifier"><span class="tc-comment-bubble default-bubble">1 </span></a></span></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a><a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/student-essays/" title="View all posts in Student Essays"> Student Essays </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers-syndrome/" title="View all posts in Asperger&#039;s Syndrome"> Asperger's Syndrome </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism/" title="View all posts in Autism"> Autism </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/high-functioning-autism/" title="View all posts in high-functioning autism"> high-functioning autism </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/18/" title="8:30 pm" rel="bookmark"><time class="entry-date updated" datetime="October 18, 2018">October 18, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/jweikart/" title="View all posts by Julie Weikart" rel="author">Julie Weikart</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>Autism Spectrum Disorder This week in class, we focused on Autism Spectrum Disorder (ASD). In 2013 the Diagnostic and Statistical Manual of Mental Disorders (DSM) released it&#8217;s 5th edition (DSM-5).  In the DSM-5 they labeled ASD as the umbrella term that is used to diagnose a series of developmental disorders. [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-433" class="row-fluid grid-item post-433 post type-post status-publish format-standard category-class-updates tag-aspergers tag-autism tag-autism-spectrum-disorders thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/class-update-10-17/" rel="bookmark">Class Update (10/17)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/class-updates/" title="View all posts in Class Updates"> Class Updates </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers/" title="View all posts in Aspergers"> Aspergers </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism/" title="View all posts in Autism"> Autism </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/" title="6:35 pm" rel="bookmark"><time class="entry-date updated" datetime="October 16, 2018">October 16, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/msciutto/" title="View all posts by Mark J. Sciutto, Ph.D." rel="author">Mark J. Sciutto, Ph.D.</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>All students are now well into their service learning placements and they are very excited about their experiences. After each visit, students submit “reflective” journals in which they share their observations and raise questions about what they have experienced. At least once a week, we have a “check in” discussion [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-419" class="row-fluid grid-item post-419 post type-post status-publish format-standard category-internet-resources tag-aspergers-syndrome tag-aspergers tag-autism tag-autism-spectrum-disorders thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/autism-internet-resources-by-nerfis-nieves/" rel="bookmark">Autism Internet Resources (by Nerfis Nieves)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/internet-resources/" title="View all posts in Internet Resources"> Internet Resources </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers-syndrome/" title="View all posts in Asperger&#039;s Syndrome"> Asperger's Syndrome </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers/" title="View all posts in Aspergers"> Aspergers </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism/" title="View all posts in Autism"> Autism </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/" title="6:34 pm" rel="bookmark"><time class="entry-date updated" datetime="October 16, 2018">October 16, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/nnieves/" title="View all posts by nnieves" rel="author">nnieves</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>The Autism Society (www.autism-society.org)- An organization created by parents of children with Autistic Spectrum Disorder. A good resource for individuals with Autism, parents and professionals to find reliable information, employment opportunities and up to date news that affects the Autism community. Asperger/Autism Network (www.aane.org)- An inclusive organization who provides education and [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-424" class="row-fluid grid-item post-424 post type-post status-publish format-standard category-internet-resources tag-aspergers-syndrome tag-aspergers tag-autism tag-autism-spectrum-disorders thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/autism-spectrum-resources-for-teachers-by-bailey-roberts/" rel="bookmark">Autism Spectrum Resources for Teachers (by Bailey Roberts)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/internet-resources/" title="View all posts in Internet Resources"> Internet Resources </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers-syndrome/" title="View all posts in Asperger&#039;s Syndrome"> Asperger's Syndrome </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/aspergers/" title="View all posts in Aspergers"> Aspergers </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism/" title="View all posts in Autism"> Autism </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/" title="6:32 pm" rel="bookmark"><time class="entry-date updated" datetime="October 16, 2018">October 16, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/broberts/" title="View all posts by broberts" rel="author">broberts</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>Autism Classroom Resources (https://www.autismclassroomresources.com/) &#8211; Provides different activities to do in the classroom as well as resources such as kits, books and free resources to use in the classroom Super Power Speech (https://superpowerspeech.com/2015/07/5-tips-for-running-a-social-skills-group-ages-7-11.html) &#8211; Provides tips for running social skills groups and offers a possible social skills curriculum. Autism Educators [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-428" class="row-fluid grid-item post-428 post type-post status-publish format-standard category-student-essays tag-autism tag-autism-spectrum-disorders tag-neurodiversity thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/the-importance-of-neurodiversity-by-liza-castello/" rel="bookmark">The Importance of Neurodiversity (by Liza Castello)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/student-essays/" title="View all posts in Student Essays"> Student Essays </a> and tagged <a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism/" title="View all posts in Autism"> Autism </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/autism-spectrum-disorders/" title="View all posts in Autism Spectrum Disorders"> Autism Spectrum Disorders </a><a class="btn btn-mini" href="http://trajectories.blogs.muhlenberg.edu/tag/neurodiversity/" title="View all posts in Neurodiversity"> Neurodiversity </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/16/" title="6:32 pm" rel="bookmark"><time class="entry-date updated" datetime="October 16, 2018">October 16, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/ecastello/" title="View all posts by ecastello" rel="author">ecastello</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>The Importance of Neurodiversity Neurodiversity is an ideal perspective when working with children who appear to have certain differences and should be crucial for educators to consider. In class, we discuss the discrimination between a difference and a deficit. Most children with Autism, ADHD, or other disorders that impact their [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                                                            
+                                                                    <article id="post-406" class="row-fluid grid-item post-406 post type-post status-publish format-standard category-class-updates thumb-position-right rounded czr-hentry">
+                                        <div class="grid__item">    <section class="tc-content span12">
+              <header class="entry-header">
+          <h2 class="entry-title format-icon"><a href="http://trajectories.blogs.muhlenberg.edu/2018/10/03/class-update-10-2/" rel="bookmark">Class Update (10/2)</a></h2><div class="entry-meta">This entry was posted in <a class="btn btn-mini btn-tag" href="http://trajectories.blogs.muhlenberg.edu/category/class-updates/" title="View all posts in Class Updates"> Class Updates </a> on <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/03/" title="6:36 pm" rel="bookmark"><time class="entry-date updated" datetime="October 3, 2018">October 3, 2018</time></a> <span class="by-author">by <span class="author vcard author_name"><a class="url fn n" href="http://trajectories.blogs.muhlenberg.edu/author/msciutto/" title="View all posts by Mark J. Sciutto, Ph.D." rel="author">Mark J. Sciutto, Ph.D.</a></span></span> </div>        </header>
+        <section class="entry-summary"><p>Welcome to the first installment of our  Fall 2018 course blog! In previous years, we have composed a newsletter to help keep our community partners informed about what is going on inside the classroom. To make information more accessible, I have transformed the newsletter into electronic form. I hope you [&hellip;]</p>
+</section>    </section>
+    <hr class="featurette-divider __loop"></div>                                    </article>
+                                
+                            
+                        
+                    
+        
+          <nav id="nav-below" class="navigation">
+
+            <h3 class="assistive-text">
+              Post navigation            </h3>
+
+              <ul class="pager">
+
+                
+                  <li class="previous">
+                    <span class="nav-previous">
+                      <a href="http://trajectories.blogs.muhlenberg.edu/2018/10/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a>                    </span>
+                  </li>
+
+                
+                
+              </ul>
+
+          </nav><!-- //#nav-below .navigation -->
+
+        
+        
+                                   <hr class="featurette-divider tc-mobile-separator">
+                </div><!--.article-container -->
+
+           
+        </div><!--.row -->
+    </div><!-- .container role: main -->
+
+    
+</div><!-- //#main-wrapper -->
+
+  		<!-- FOOTER -->
+  		<footer id="footer" class="">
+  		 					<div class="container footer-widgets ">
+                    <div class="row widget-area" role="complementary">
+												
+							<div id="footer_one" class="span4">
+																
+												<aside id="recent-posts-6" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://trajectories.blogs.muhlenberg.edu/2018/12/16/bipolar-spectrum-disorder-in-adolescence-by-nerfis-nieves/">Bipolar Spectrum Disorder in Adolescence (by Nerfis Nieves)</a>
+									</li>
+											<li>
+					<a href="http://trajectories.blogs.muhlenberg.edu/2018/11/29/family-factors-in-childrens-anxiety-by-steven-smith/">Family Factors in Children&#8217;s Anxiety (by Steven Smith)</a>
+									</li>
+											<li>
+					<a href="http://trajectories.blogs.muhlenberg.edu/2018/11/29/conduct-disorder-links-by-izzy-zissman/">Conduct Disorder Links (by Izzy Zissman)</a>
+									</li>
+											<li>
+					<a href="http://trajectories.blogs.muhlenberg.edu/2018/11/28/oppositional-defiant-disorder-resource-links-by-elise-vander-may/">Oppositional Defiant Disorder Resource Links (by Elise Vander May)</a>
+									</li>
+											<li>
+					<a href="http://trajectories.blogs.muhlenberg.edu/2018/11/28/is-anxiety-hereditary-by-maayan-malomet/">Is anxiety hereditary? (By Maayan Malomet)</a>
+									</li>
+					</ul>
+		</aside>
+																							</div><!-- .{$key}_widget_class -->
+
+						
+							<div id="footer_two" class="span4">
+																
+										<aside id="rss-7" class="widget widget_rss"><h3 class="widget-title"><a class="rsswidget" href="http://www.tandfonline.com/action/showFeed?ui=0&#038;mi=6lepxz&#038;ai=2o4&#038;jc=HCAP&#038;type=etoc&#038;feed=rss"><img class="rss-widget-icon" style="border:0" width="14" height="14" src="http://trajectories.blogs.muhlenberg.edu/wp-includes/images/rss.png" alt="RSS" /></a> <a class="rsswidget" href="">Current Research</a></h3><ul><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1833338?ai=2o4&#038;mi=6lepxz&#038;af=R'>Emotion Recognition Performance in Children with Callous Unemotional Traits is Modulated by Co-occurring Autistic Traits</a></li><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1833735?ai=2o4&#038;mi=6lepxz&#038;af=R'>Predictors and Moderators of Treatment Efficacy in Children and Adolescents with Autism Spectrum Disorder</a></li><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1833734?ai=2o4&#038;mi=6lepxz&#038;af=R'>Four-Year Follow-Up of High versus Low Intensity Summer Treatment for Adolescents with ADHD</a></li><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1802735?ai=2o4&#038;mi=6lepxz&#038;af=R'>Evidence Base Update on Assessing Sleep in Youth</a></li><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1833337?ai=2o4&#038;mi=6lepxz&#038;af=R'>Moderators of Outcome for Youth Anxiety Treatments: Current Findings and Future Directions</a></li><li><a class='rsswidget' href='https://www.tandfonline.com/doi/full/10.1080/15374416.2020.1823850?ai=2o4&#038;mi=6lepxz&#038;af=R'>Sex Differences in Age of Diagnosis and First Concern among Children with Autism Spectrum Disorder</a></li></ul></aside>
+																							</div><!-- .{$key}_widget_class -->
+
+						
+							<div id="footer_three" class="span4">
+																
+										<aside id="search-6" class="widget widget_search"><h3 class="widget-title">Search Trajectories Blog</h3><form role="search" method="get" id="searchform" class="searchform" action="http://trajectories.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>
+																							</div><!-- .{$key}_widget_class -->
+
+																	</div><!-- .row.widget-area -->
+				</div><!--.footer-widgets -->
+				    				 <div class="colophon">
+			 	<div class="container">
+			 		<div class="row-fluid">
+					    <div class="span3 social-block pull-left"><span class="social-links"><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="http://trajectories.blogs.muhlenberg.edu/feed/rss/"  target="_blank" ><i class="fas fa-rss"></i></a></span></div><div class="span6 credits"><p>&middot; <span class="tc-copyright-text">&copy; 2020</span> <a href="http://trajectories.blogs.muhlenberg.edu" title="Trajectories" rel="bookmark">Trajectories</a> &middot; <span class="tc-wp-powered-text">Powered by</span> <a class="icon-wordpress" target="_blank" rel="noopener noreferrer" href="https://wordpress.org" title="Powered by WordPress"></a> &middot; <span class="tc-credits-text">Designed with the <a class="czr-designer-link" href="https://presscustomizr.com/customizr" title="Customizr theme">Customizr theme</a> </span> &middot;</p></div>	      			</div><!-- .row-fluid -->
+	      		</div><!-- .container -->
+	      	</div><!-- .colophon -->
+	    	  		</footer>
+    </div><!-- //#tc-page-wrapper -->
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/modernizr.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/retina.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://trajectories.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://trajectories.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ftrajectories.blogs.muhlenberg.edu%2F2018%2F10%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://trajectories.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		<div id="tc-footer-btt-wrapper" class="tc-btt-wrapper right"><i class="btt-arrow"></i></div>	</body>
+	</html>

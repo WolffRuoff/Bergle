@@ -1,0 +1,809 @@
+http://fys142f16.blogs.muhlenberg.edu/page/14/
+143
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<title>Page 14</title>
+<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://fys142f16.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://fys142f16.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-fonts-css'  href='//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700%7CDroid+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-style-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/style.css?ver=2013-10-21' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f16.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f16.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f16.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f16.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f16.blogs.muhlenberg.edu/?wordfence_lh=1&hid=AC186AFA14134E8F56F6AE2F15100A0E');
+</script>	<style type="text/css" id="yoko-themeoptions-css">
+		a {color: #3284ff;}
+		#content .single-entry-header h1.entry-title {color: #3284ff!important;}
+		input#submit:hover {background-color: #3284ff!important;}
+		#content .page-entry-header h1.entry-title {color: #3284ff!important;}
+		.searchsubmit:hover {background-color: #3284ff!important;}
+	</style>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support paged-14 no-js">
+<div id="page" class="clearfix">
+	<header id="branding">
+		<nav id="mainnav" class="clearfix">
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-3074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3074"><a href="http://fys142f16.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-3075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3075"><a href="http://fys142f16.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-3076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3076"><a href="http://fys142f16.blogs.muhlenberg.edu/info-assign-grading/">Info/Assignment/Grading</a></li>
+<li id="menu-item-3077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3077"><a href="http://fys142f16.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-3078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3078"><a href="http://fys142f16.blogs.muhlenberg.edu/syllabus/">Schedule and Topic Outline</a></li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-5"><a href="http://fys142f16.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>		</nav><!-- end mainnav -->
+
+		
+		<hgroup id="site-title">
+					<h1><a href="http://fys142f16.blogs.muhlenberg.edu/" title=""></a></h1>
+				<h2 id="site-description"></h2>
+				</hgroup><!-- end site-title -->
+
+								<img alt="" src="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/cropped-Screen-Shot-2016-09-01-at-9.20.53-AM-1.png" class="headerimage" width="1102" height="350">
+			
+		<nav id="subnav">
+					</nav><!-- end subnav -->
+</header><!-- end header -->
+
+<div id="wrap">
+<div id="main">
+	<div id="content">
+									
+				
+<article id="post-3562" class="post-3562 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 19, 2016<br/>
+		by Ricky Venuto<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/the-impact-of-technology-on-my-life/#comments">2 Comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/the-impact-of-technology-on-my-life/" title="Permalink to The Impact of Technology on My Life" rel="bookmark">The Impact of Technology on My Life</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Ever since I was a very young child, technology has had a huge impact on me for a myriad of reasons.  I have watched television for as long as I can remember.  Growing up in a football family, I was exposed to watching sports, especially football, as a young boy.  Every Saturday and Sunday when I was about 3 or 4 years old, I remember watching football games with my dad, and highlights of the football games that I did not get to witness.  Additionally, every morning I would either watch a show on Cartoon Network, Nickelodian, and Disney Channel.  I love watching shows like Spongebob, Rocket Power, Jimmy Neutron, Fairly OddParents, Edd Ed and Eddy, Scooby Doo, and much much more.  The television is one of the best works technology ever invented not only due to the entertainment aspect, but watching TV with your family can create a special bond.  I would look forward to watching football with my mom and dad every Saturday and every Sunday.  My dad Coaches football for the Villanova Wildcats, and my mom and I would watch every game on TV if we could not go to the game for some reason.  One of my dad&#8217;s former players, Brian Westbrook, was a star for the Eagles during the 2000s; I remember watching every Eagles game with my dad just to cheer on Brian.  The TV has impacted my life in a very positive way ever since I was a toddler.</p>
+<p>When I started to grow older, I was introduced to new pieces of technology.  I started to understand how to use the computer, and I was introduced to video games.  The first computer that I remember my parents owning was a very old and big computer.  We called it &#8220;the dinosaur&#8221;.  It was frustrating because 0f how slow the computer would load.  However, I remember using that computer to play games, and to look up new stuff on the internet.  In elementary school, I remember having a class called &#8220;Computer&#8221; designated for students to familiarize themselves with how to use the computer and to get comfortable with it.  Additionally, I remember having to do this program called &#8220;Compass Odyssey&#8221;, which had students do practice problems for different classes.  Another piece of technology that was a big part of my life was the Playstation2.  I believe that my parents bought me the Playstation as a Christmas Present.  I loved playing sports games like Madden, NCAA Football, NCAA Basketball, MLB The Show, and others.  As I gained more interest in using the computer and Playstation, I watched less TV.  However, the progression of technology from when I was a toddler into Elementary School had positive impact on my childhood.</p>
+<p>As I became older and older, I would play video games less and less.  I remember receiving my first cell phone in the fifth grade.  It was a blue razr.  I was attached to that phone because it allowed me to send text messages to friends and take pictures.  I believe that I received my first IPhone in 7th grade.  It was an IPhone4.  I love using my IPhone because text messages were unlimited, pictures were clearer, and it allowed me to download apps to go on social media and play games.  In addition to owning an IPhone4, I had a PlayStation3 as well.  Technology had a monstrous impact on my life at this point in time, but I was never addicted to technology.  I have always preferred to play outside with friends then sit inside and watch TV or play video games.  That trend grew even more as I became older.  As I entered high school, football practice and homework started to take over my life.  I would use my IPhone to text, and use forms of social media; however, I became less and less attached to video games.  Now, in college, the forms of technology that I use are my MAC computer, the Television, and my IPhone.  I will always remember the major impact technology has had on me as a young child, and I am thankful to have been able to access the newest forms of technology as I grew older.  I will always cherish the memories that I made involving technology like watching football games with my dad and playing video games with my friends.  The progression of technology has made a huge impact on not only my life, but on the whole world.</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/the-impact-of-technology-on-my-life/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3562 -->
+								
+				
+<article id="post-3559" class="post-3559 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 19, 2016<br/>
+		by Lauren Smartenko<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/my-journey-with-technology/#comments">2 Comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/my-journey-with-technology/" title="Permalink to My Journey With Technology" rel="bookmark">My Journey With Technology</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>From a very young age, I was exposed to many forms of technology. In fact, to this day, my parents still laugh about how I used to react to some of my favorite television shows like Luna and Molly, Teletubbies, and Barnie when I was only a few months old. It&#8217;s an ongoing inside joke that I loved the TV more than anything else, and I can firmly agree that this statement is not wrong. Growing up in the very late 90&#8217;s, I was exposed to technology from day one. I vividly remember being not even a year old, and recreating the clock movement from Luna and Mollie every time I heard the music start playing. I remember being told that I would start dancing to certain commercials that I liked before I even spoke my first word. Growing up, my parents made sure I was acclimated to every form of technology there was. I never had a set time of television that I was allowed to watch, and I played all the popular computer games like Webkinz and Club Penguin. I owned a Nintendo DS, a GameBoy, and any other handheld device that existed at the time. Being exposed to so much technology, I seemed to ignore it as it was always accessible to me.</p>
+<p>As I got older, and technology progressed, I became even more comfortable with using it. Starting from first grade, I used computers and laptops in my classrooms, had typing lessons, and used technological whiteboards to answer classroom questions. As time went on, and social media became a popular and &#8220;cool&#8221; thing among my friends, I became less and less involved in technology. My parents were very strict with cell phones, and I clearly remember I had to prove my responsibility before getting one 3 years later than all my friends. I was not allowed to be on any form of social media until my sophomore year of high school.</p>
+<p>My younger brother (one year younger than me), has always been a genius when incomes to technology. He was the kid who won every online game, and who could figure out any problem with your laptop or phone. When we moved from our house in New York, he became very interested in technology, because he realized he would have to be fluent in it to keep in touch with his friends the way he planned to. This is also the exact reason I was so antsy to get on social media as soon as possible .</p>
+<p>Social Media; it is defined by Merriam-Webster as &#8220;forms of electronic communication (such as Web sites) through which people create online communities to share information, ideas, personal messages, etc&#8221; (Merriam-Webster). Just like every other 12 year old girl at the time, I wanted an Instagram, Snapchat, and Facebook account. My parents refused to let me until I was about 16, which I hated at the time, but an extremely grateful for today. It is clear that nowadays, social media consumes people and can have a very negative effect. I am happy I didn&#8217;t have the chance to make a name for myself that I may have regretted in the future. Now that I am in college, social media is obviously very helpful for saying in touch with my friends and family at home that I can no longer see every day. Things like my phone and laptop are attached to me all the time, which is not something that I am proud of, but is something that I find crucial for living far away from home. My journey with technology has been a long one, and I am sure is ready to expand soon.</p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/19/my-journey-with-technology/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3559 -->
+								
+				
+<article id="post-3557" class="post-3557 post type-post status-publish format-standard hentry category-technology-autobiography tag-socialmedia tag-autobiography tag-gameboy tag-gamecube tag-guitarhero tag-technology tag-texting tag-tv tag-wii">
+
+	<div class="entry-details">
+				<p>September 17, 2016<br/>
+		by Sarah Kremen<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/17/the-transition-of-technology-throughout-my-life/#comments">1 Comment</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/17/the-transition-of-technology-throughout-my-life/" title="Permalink to The Transition of Technology Throughout my Life" rel="bookmark">The Transition of Technology Throughout my Life</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Whenever I go through my home videos, I always stumble upon videos of me doing what I loved as a kid: watching TV. Barnie, The Wiggles, Blue&#8217;s Clues; you name it, I probably have watched it. Given that I was an extremely shy child, I always preferred staying at home rather than playing at the playground with my classmates. I feel that this deep-seated my love for technology.</p>
+<p>This love for technology grew exponentially when I was introduced to video games. When I was about six years old, my parents bought me a Gameboy. Shortly, this hand-held gaming device never left my hands. I would use it to play games such as Pokemon, and I would also watch countless episodes of The Fairly Odd Parents on it when when traveling with no TV. I thought this gadget was the greatest invention ever. Little did I know how much I would love the Gamecube, which I got when I was seven. I was mind-blown by this gadget because it could connect to my TV and had more intricate buttons to press compared to the Gameboy. By then, I was <strong>hooked.</strong> I had a daily routine of getting up 2-3 hours before I had to go to school so I could play my favorite games, such as Monkeyball. Not only that, but as soon as I would get home from school, I would run straight to my Gamecube to play some more. It didn&#8217;t take long for my parents to realize that I had an unhealthy obsession. I was distraught when they had to restrain me from playing for so many hours a day, but now I am thankful that they did so because I became more focused on schoolwork and playing with my friends.</p>
+<p>My technology obsession took a hiatus for a while until I got a Wii when I was ten. This Christmas gift was the greatest thing ever because not only was it a gadget that required motion, but it had adapters for Gamecube users so that I could still play my Gamecube games. It was like I had the best of both worlds! My favorite game was Guitar Hero III. That year I had attempted to learn how to play the guitar, but I gave up rather quickly because it was too challenging. Playing Guitar Hero brought out my inner guitar player wannabe. Guitar Hero taught me what determination feels like; I was not going to stop until I reached the expert level. Once I reached my goal, I felt so accomplished that I couldn&#8217;t help but gloat to my friends.</p>
+<p>My constant texting habit that I still have today dates back to my first phone that I got for my 11th birthday. I thought I was hooked when it came to my Gameboy, but I was 10 times more hooked to my phone. It never left my sight (unless if my parents took it away). Nowadays I haven&#8217;t changed much, but I am more aware about how much of a distraction phones are so I try my best to focus on more important things. I feel that my obsession with technology for almost my whole life exposes my shyness because it has always been an outlet of entertainment when I feel bored or lonely, rather than conversing with people face-to-face. Sometimes, I wish I was like Brian O&#8217;Neill in &#8220;Teens Who Say No To Social Media&#8221; by Christine Rosen because he &#8220;doesn&#8217;t need social media to stay in touch&#8221; (Rosen 2016). Without social media, I would feel out of the loop because almost all of my friends post what is going on in their lives on a daily basis. Sometimes I miss the days before I started using social media because I didn&#8217;t feel stressed over how many likes I got on a picture that I posted. I do recognize that this is a silly thing to stress about because &#8216;likes&#8217; don&#8217;t matter, but I have yet to completely stop caring and worrying about it. Though I do feel satisfied when I do get a lot of likes, it unfortunately shows how much I care about what others think about me, and I should only focus on how I think about myself.</p>
+<p>Christine Rosen. (2016, August 27). <em>REVIEW &#8212; Teens Who Say No To Social Media &#8212; Those opting out of the obsession with “likes” don’t feel they’re missing much</em>. Wall Street Journal. New York, NY. Retrieved from <a href="http://search.proquest.com.muhlenberg.idm.oclc.org/docview/1814282390?accountid=40980">http://search.proquest.com.muhlenberg.idm.oclc.org/docview/1814282390?accountid=40980</a></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/technology-autobiography/" rel="category tag">Technology Autobiography</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" rel="tag">#socialmedia</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" rel="tag">autobiography</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/gameboy/" rel="tag">Gameboy</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/gamecube/" rel="tag">Gamecube</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/guitarhero/" rel="tag">GuitarHero</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/texting/" rel="tag">Texting</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/tv/" rel="tag">TV</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/wii/" rel="tag">Wii</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/17/the-transition-of-technology-throughout-my-life/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3557 -->
+								
+				
+<article id="post-3529" class="post-3529 post type-post status-publish format-standard hentry category-blog-assignment tag-innovative-products tag-internet tag-technology">
+
+	<div class="entry-details">
+				<p>September 13, 2016<br/>
+		by Rosie Martin<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/the-convenience-of-the-internet/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/the-convenience-of-the-internet/" title="Permalink to The Convenience of the Internet" rel="bookmark">The Convenience of the Internet</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p class="p1"><span class="s1">A day in the life of the internet by Michael Keshen describes how the ordinary computer user uses technology today. The enormity of the hold that the internet has on our lives is incredible. The internet allows for people to be in constant contact with larger audiences. To put this into perspective the article A Day in the Life of the Internet by Mike Keshen provides an interesting statistic<span class="Apple-converted-space">  </span>of one hundred million people logging into twitter daily (Keshen, 2014). One hundred and forty characters of tweeted information can potentially reach one hundred million people a day. The article also stresses the importance of how the internet is becoming more convenient with $717,808,219 dollars spent on online purchases (Keshen, 2014). </span></p>
+<p class="p1"><span class="s1"> Information is at our fingertips virtually any moment that we need it. Proof of this concept was exemplified in the previously stated statistic of<span class="Apple-converted-space">  </span>how many people actually use the internet.We rely on the information given to us because it is easy and convenient to access. This is represented even in our class time. With a click of a button Zoltero can immediately cite a article for a paper. I find this extremely innovative because it really shows how far we have progressed in technology. To reemphasize this point it is important to look back to see how far we have grown technologically. “Two centuries ago Leibnitz invented a calculating machine which embodied most of the essential features of recent keyboard devices, but it could not then come into use. The economics of the situation were against it: the labor involved in constructing it, before the days of mass production, exceeded the labor to be saved by its use, since all it could accomplish could be duplicated by sufficient use of pencil and paper” (Bush,1945). It is truly incredible feat to see how far technology has come since the pen and paper. Also we can see differences in our priorities because in the olden days the cost was too astronomical to see a potential in technology. Now we are constantly advancing technology and spending all of our time and resources on it. </span></p>
+<p class="p1">Uberflip. (2014, May 28). A Day In The Life Of The Internet [Infographic]. Retrieved from <a href="http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic" target="_blank">http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</a>.</p>
+<p class="p4"><span class="s1">Bush, V. (1945, July). As We May Think. <i>The Atlantic</i>. Retrieved from http://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/ </span></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/innovative-products/" rel="tag">innovative products</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" rel="tag">Internet</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/the-convenience-of-the-internet/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3529 -->
+								
+				
+<article id="post-3531" class="post-3531 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 13, 2016<br/>
+		by Ricky Venuto<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/blog-2-world-wide-web/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/blog-2-world-wide-web/" title="Permalink to Blog 2 World Wide Web" rel="bookmark">Blog 2 World Wide Web</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Since 1989, the World Wide Web has changed the lives of people around the world. Our daily lives are surrounded by media, both in workforces and socially. The World Wide Web Timeline shows how media has changed and evolved throughout the years. In the early years of media usage, statistics focused around the first boom that started the digital age. In 1989, The World Wide Web introduced CERN (European Organization for Nuclear Research). This research project started a timeline of advances in this field (Vizzuality 2012). The use of technology in the field of science enabled scientists to reach new discoveries. Throughout the World Wide Web Timeline, CERN makes major strides in their studies. Although CERN was a scientific research project, the study’s technological advances changed the digital world as a whole. CERN launched the first website to go live in 1990 and in 1993 CERN placed World Wide Web technology in the public domain, giving it to the world.<br />
+The amount of computer users changed drastically throughout the years. In 1990, 42% of American Adults have used computers, all using World Wide Web (Vizzuality 2012). In 1995, 18 million American homes were online but only 3% used World Wide Web (Vizzuality 2012). Although the early advancements in technology were exciting, the progress that followed later in the century was constant and rapid. Apple is the biggest contributor to the major successes in technological advancements. As Pew Research Center states, “In 2003, Apple launches the iTunes Music Store with 200,000 songs at 99¢ each. The store sells one million songs in its first week” (Vizzuality 2012). Ever since this launch, Apple has controlled the technological field. The World Wide Web has affected many different people in various ways.</p>
+<p>Vizzuality, G., Hyperakt. (2012). [Infographic]: Evolution of Browsers and the Web. Retrieved September 10, 2016, from http://www.evolutionofweb.com</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/blog-2-world-wide-web/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3531 -->
+								
+				
+<article id="post-3526" class="post-3526 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 13, 2016<br/>
+		by Justin Dalena<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-internet/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-internet/" title="Permalink to A Day In The Life Of Internet" rel="bookmark">A Day In The Life Of Internet</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>The enormity of the Internet and its capabilities is undeniable. Nearly 5.92 billion searches occur daily diving into the vast world that is online (Keshen, 2014). With a scope extending far beyond one’s imagination, the possibilities seem endless&#8211;allowing one to search, connect, download, watch, share, shop, etc. all within the confines of some electronic device.</p>
+<p>The simple click of a button has dramatically impacted everyday life, changing the way one thinks, learns, works, and communicates. Yet, one has to wonder, with such a wide scope of information at our fingertips, are we controlling our world or are we allowing the Internet to take over? It&#8217;s true the Internet opens up a boundless world of opportunities, but are we allowing this to affect us negatively? To allow the Internet to isolate us, control our actions and behaviors, and take away our ability to think independently and/or creatively without even realizing it. The ability to do so much with such ease has isolated us to the confines of our homes. Our dependence on the Internet has affected our ability to live in the real world outside of online. Instead of digging deep inside the recesses of our own brains we are ‘borrowing’ from the ideas and opinions of others simply because of the ease in which we can. The Internet has undoubtedly changed our lives tremendously. I fear we focus too much on the positives and how it has made life easier instead of acknowledging the consequences associated with it.</p>
+<p>Keshen, M. (2014, May 28). A Day In The Life Of The Internet [Infographic]. Retrieved September 12, 2016, from http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic.</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-internet/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3526 -->
+								
+				
+<article id="post-3510" class="post-3510 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 13, 2016<br/>
+		by Michael Ellick<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-the-internet-3/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-the-internet-3/" title="Permalink to A Day In the Life of the Internet" rel="bookmark">A Day In the Life of the Internet</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Being a teenager in the 21<sup>st</sup> century, it is difficult to imagine a world without the internet. How would I ever receive knowledge of world events, or the information I was seeking, without the internet on my phone or laptop computer? As a native to digital technology, Google appears to be as fundamental to my existence as breakfast, lunch or dinner. As a student, I often find myself using Google to find answers to questions that I do not know, or to do research on a specific topic for a class that I am taking. The internet also plays a large role in our personal and professional lives. One often unanswered question is: How big is the actual internet? In response to that question, “Google receives 5.92 billion searches every day” (Keshen 1). These searches can range from seeking food recipes to inquiring as to the size of the world’s biggest turtle; there appears to be no limit to the topics, information or content that one can search. Because of this, some people, like myself, often find themselves distracted by the infinite information emanating from the depths of the internet. Surfing the internet may not seem like a distraction or an inefficient use of time, until you realize that you have just spent thirty minutes watching videos or reading articles that have absolutely no relation to the work or task that you were supposed to be doing. Along with this blog post, there will be approximately 1,895 other posts published during the same minute. The internet is already enormous, and, believe it or not, it is growing larger each second, minute and day.</p>
+<p>&nbsp;</p>
+<p>Keshen, M. (2014, May 28). A day in the life of the internet [Infographic]. (n.d.). Retrieved September 12, 2016, from http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/13/a-day-in-the-life-of-the-internet-3/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3510 -->
+								
+				
+<article id="post-3516" class="post-3516 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 12, 2016<br/>
+		by Zhijiang Liu (Jerries)<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/our-internet/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/our-internet/" title="Permalink to Our internet" rel="bookmark">Our internet</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri">The year 1991; the year the changed the world; because on that year the internet began. The internet has become an important tool in people’s lives with the changing times and the development of technology. Just imagine, if there is no network right now, the world will become what? The answer is chaos; which is my first thought when answering this question. In a matter of minutes, the world would miss tens of millions of gigabytes worth of information which is enough to cause a lot of commotion in the modern world. If that lack of internet continues for several days or even months, our world would face disaster. This just goes to show how the internet has become a huge part of our lives. </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri">It is inseparable from the network for a reason, because there are a lot of new electronic products appearing every year. Businessmen will use a variety of advertising styles to attract people’s attention with things such as new products, new features, or new functions. Apple is a good example; Tim Cook said “Iphone 7 is the best mobile phone of Apple ever” at the Iphone 7 conference. Simply because of this sentence alone, a lot of people will go to buy this product, just like my friend Steve who did not like Apple products before this news. It is precisely because of the promotion and dissemination of these products, that more and more people come into contact with the internet, and even cannot leave from it, once connected. Therefore, this in the end is a good direction or bad direction? I am not sure.</span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: 宋体">Keshen, M. (2014, May 28).A day in the life of the internet [Infographic]. (n.d.). Retrieved September 12, 2016, from http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</span></span></p>
+<p><span lang="EN-US"><span style="color: #000000;font-family: Calibri"> </span></span></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/our-internet/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3516 -->
+								
+				
+<article id="post-3513" class="post-3513 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 12, 2016<br/>
+		by Jiahui<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/a-day-in-the-life-of-the-internet-2/#comments">1 Comment</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/a-day-in-the-life-of-the-internet-2/" title="Permalink to A Day In the life of the internet" rel="bookmark">A Day In the life of the internet</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>“The Internet has become an essential component of both our personal and professional lives, so a large part of our daily routines exists online” (Keshen, 2014).It is hard for some people to image the life without internet. Here are some data we can find from the article to prove this point. “Americans spend an average of $717,808,219 every day on online purchases; millions of apps being downloaded every day; 144.8B emails are sent daily; 2.73M blog posts are published daily; 5,92 billion searches/day; watch all of the videos uploaded in one day will take you 16 years.” It is still hard to image through this data, so let’s use an example. A normal office worker may need Uber to take him to the work, and he will need some office software to improve his working efficiency. Then he may order his lunch through GrubHub, after he come back home, he may look at the news through Google and buy something from Amazon. So, from this example, we can really know how internet impact and improve our daily life.</p>
+<p>From the article, the writer point out that a large part of our daily routines exists online. I think this conclusion has some dispute. Although the world of the internet is so big, but we can know from the data in the article that this kind of “big” is limited by the area. We can see that some place such as Africa only has 15.6% people able to go online, though America has 78.6%. So, some people in Africa may even never know about internet. Expect of this, some older people also don’t use or know the internet very much, and some poor people don’t have the chance know about the internet. And the number of people who live without internet is not small at all. So, I think it’s better to say “A Day in the Life of the internet for some people”.</p>
+<p>Keshen,M.(2014,May 28).A day in the life of the internet[Infographic].Retrieved September 12,2016,from http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/a-day-in-the-life-of-the-internet-2/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3513 -->
+								
+				
+<article id="post-3494" class="post-3494 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 12, 2016<br/>
+		by Jamie Andrich<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/social-media-take-over/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/social-media-take-over/" title="Permalink to social media take over" rel="bookmark">social media take over</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Due to the fact that I am a teenager, my phone is basically glued to my side at all times. It has become an essential part of my life.  I am always checking my phone for the latest updates or looking to see who has sent me a text or email so I know what all my friends are up to at any given time of the day. I would have to say that the most frequently opened apps on my phone are Twitter, Instagram and Snapchat. I try to tweet daily and will most likely post on Instagram a few times a day.  An app like Snapchat can also tell a story,  in live time,  I can video what I am doing so my friends can see the story.  If the numbers are correct, and the way social media travels and multiplies it seems I would be in 500 million tweets, the 5.92 billion searches, and the 50 million downloads (Keshen). I consider myself an average person when it comes to the utilization of social media and technology.  Therefore, if I feel as though I am an average user, then the technology world is most definitely a huge place. It seems that I am always so wrapped up and focused on my own profile and likes, I never really took the time to realize just how big the internet is. It has become so worldwide and global that people all over the world are persistently surfing the web for all types of reasons. Without social media, technology and the internet this world would certainly be a completely different place to live.</p>
+<p>If social media did not exist my friends and I would not be as caught up on our lives.  I am always so interested and intrigued when my Instagram picture gets 300 likes instead of 200. Even though that seems like a minuscule and unimportant fact, it is true that I keep track of things like that. For me, I feel it is very important to have a good profile that is well connected to all types of social media. That is the reason why I keep myself up to date and in the loop on the current and new emerging social media. Why are people so consumed by social media and technology? Only time will tell.</p>
+<p>Keshen, M. (2014, May 28).A day in the life of the internet [Infographic]. (n.d.). Retrieved September 12, 2016, from http://hub.uberflip.com/h/i/11695494-a-day-in-the-life-of-the-internet-infographic</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/12/social-media-take-over/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3494 -->
+								
+													<nav id="nav-below">
+						<div class="nav-previous"><a href="http://fys142f16.blogs.muhlenberg.edu/page/15/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+						<div class="nav-next"><a href="http://fys142f16.blogs.muhlenberg.edu/page/13/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+					</nav><!-- end nav-below -->
+							
+	</div><!-- end content -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+			<aside id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/FYS142DigitalWorldF16Final.pdf">Syllabus</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-3080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3080"><a href="http://fys142f16.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-3910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3910"><a href="http://libraryguides.muhlenberg.edu/digitalworld">Library Research Guide</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+</ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-3311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3311"><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="http://fys142f16.blogs.muhlenberg.edu/technology-autobiography/">Technology Autobiography</a></li>
+<li id="menu-item-3630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"><a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a></li>
+<li id="menu-item-3903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3903"><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3904"><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-4113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4113"><a href="http://fys142f16.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+<li id="menu-item-4120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4120"><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/">DA#10: Word Clouds, Snapchat Stories, Images</a></li>
+</ul></div></aside><aside id="nav_menu-9" class="widget widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-3285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3285"><a href="http://fys142f16.blogs.muhlenberg.edu/da1-create-blogs-acct/">DA#1: Create ‘Berg Blogs Account</a></li>
+<li id="menu-item-3321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3321"><a href="http://fys142f16.blogs.muhlenberg.edu/da-zotero/">DA#2: Zotero</a></li>
+<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3546"><a href="http://fys142f16.blogs.muhlenberg.edu/da3-tech-profile/">DA#3: Technology Profile Survey</a></li>
+<li id="menu-item-3545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3545"><a href="http://fys142f16.blogs.muhlenberg.edu/da4-twitter/">DA#4: Twitter</a></li>
+<li id="menu-item-3629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"><a href="http://fys142f16.blogs.muhlenberg.edu/da5-linkedin-profile/">DA#5: Create a LinkedIn Profile</a></li>
+<li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">DA#6: Google Yourself</a></li>
+<li id="menu-item-3981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3981"><a href="http://fys142f16.blogs.muhlenberg.edu/da7-one-button-studio/">DA#7: One Button Studio</a></li>
+<li id="menu-item-3982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="http://fys142f16.blogs.muhlenberg.edu/da8-dropbox/">DA#8: Dropbox for File Management</a></li>
+<li id="menu-item-4111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4111"><a href="http://fys142f16.blogs.muhlenberg.edu/da9-google-docs/">DA#9: Google Docs</a></li>
+</ul></div></aside>		</div><!-- #secondary .widget-area -->
+</div><!-- end main -->
+
+		<div id="tertiary" class="widget-area" role="complementary">
+			<aside id="search-6" class="widget widget_search"><form role="search" method="get" class="searchform" action="http://fys142f16.blogs.muhlenberg.edu/" >
+		<div>
+		<input type="text" class="search-input" value="" name="s" id="s" />
+		<input type="submit" class="searchsubmit" value="Search" />
+		</div>
+		</form></aside>		<aside id="recent-posts-10" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/da10/">DA#10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/4201/">Digital Activity #10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/digital-activity-10-8/">Digital Activity 10</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/fys-142-word-cloud/">Fys 142 word cloud</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-7/">Digital Activity 10</a>
+											<span class="post-date">December 7, 2016</span>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-10" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10/#comment-147">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-word-cloud-3/#comment-146">Digital Activity 10 Word Cloud</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-5/#comment-145">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/4181/#comment-144"></a></li><li class="recentcomments"><span class="comment-author-link">Justin Dalena</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-4/#comment-143">Digital Activity #10</a></li></ul></aside><aside id="tag_cloud-7" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys142/" class="tag-cloud-link tag-link-76331 tag-link-position-1" style="font-size: 17.586956521739pt;" aria-label="#fys142 (12 items)">#fys142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/gaming/" class="tag-cloud-link tag-link-108 tag-link-position-2" style="font-size: 9.8260869565217pt;" aria-label="#gaming (3 items)">#gaming</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" class="tag-cloud-link tag-link-94010 tag-link-position-3" style="font-size: 11.347826086957pt;" aria-label="#socialmedia (4 items)">#socialmedia</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/apps/" class="tag-cloud-link tag-link-8005 tag-link-position-4" style="font-size: 8pt;" aria-label="apps (2 items)">apps</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" class="tag-cloud-link tag-link-179921 tag-link-position-5" style="font-size: 12.565217391304pt;" aria-label="autobiography (5 items)">autobiography</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/blog3/" class="tag-cloud-link tag-link-179948 tag-link-position-6" style="font-size: 8pt;" aria-label="blog3 (2 items)">blog3</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/bots/" class="tag-cloud-link tag-link-175844 tag-link-position-7" style="font-size: 8pt;" aria-label="bots (2 items)">bots</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/children/" class="tag-cloud-link tag-link-52 tag-link-position-8" style="font-size: 9.8260869565217pt;" aria-label="children (3 items)">children</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/computer/" class="tag-cloud-link tag-link-179934 tag-link-position-9" style="font-size: 8pt;" aria-label="computer (2 items)">computer</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/control/" class="tag-cloud-link tag-link-8016 tag-link-position-10" style="font-size: 8pt;" aria-label="control (2 items)">control</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/copyright/" class="tag-cloud-link tag-link-61 tag-link-position-11" style="font-size: 8pt;" aria-label="copyright (2 items)">copyright</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyber-bullying/" class="tag-cloud-link tag-link-74472 tag-link-position-12" style="font-size: 8pt;" aria-label="cyber bullying (2 items)">cyber bullying</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital/" class="tag-cloud-link tag-link-300 tag-link-position-13" style="font-size: 8pt;" aria-label="digital (2 items)">digital</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" class="tag-cloud-link tag-link-179941 tag-link-position-14" style="font-size: 13.630434782609pt;" aria-label="digital identity (6 items)">digital identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-immigrants/" class="tag-cloud-link tag-link-180027 tag-link-position-15" style="font-size: 8pt;" aria-label="Digital Immigrants (2 items)">Digital Immigrants</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-natives/" class="tag-cloud-link tag-link-94041 tag-link-position-16" style="font-size: 11.347826086957pt;" aria-label="Digital Natives (4 items)">Digital Natives</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-world/" class="tag-cloud-link tag-link-179987 tag-link-position-17" style="font-size: 8pt;" aria-label="Digital World (2 items)">Digital World</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/domain-of-ones-own/" class="tag-cloud-link tag-link-20890 tag-link-position-18" style="font-size: 9.8260869565217pt;" aria-label="Domain of One&#039;s Own (3 items)">Domain of One&#039;s Own</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-19" style="font-size: 12.565217391304pt;" aria-label="Facebook (5 items)">Facebook</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fake/" class="tag-cloud-link tag-link-179979 tag-link-position-20" style="font-size: 8pt;" aria-label="fake (2 items)">fake</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/future/" class="tag-cloud-link tag-link-30652 tag-link-position-21" style="font-size: 8pt;" aria-label="future (2 items)">future</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys-142/" class="tag-cloud-link tag-link-179938 tag-link-position-22" style="font-size: 9.8260869565217pt;" aria-label="fys 142 (3 items)">fys 142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-23" style="font-size: 17.130434782609pt;" aria-label="Google (11 items)">Google</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google-myself/" class="tag-cloud-link tag-link-179968 tag-link-position-24" style="font-size: 8pt;" aria-label="google myself (2 items)">google myself</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/government/" class="tag-cloud-link tag-link-8189 tag-link-position-25" style="font-size: 8pt;" aria-label="government (2 items)">government</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" class="tag-cloud-link tag-link-15565 tag-link-position-26" style="font-size: 14.391304347826pt;" aria-label="Identity (7 items)">Identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/images/" class="tag-cloud-link tag-link-30047 tag-link-position-27" style="font-size: 8pt;" aria-label="Images (2 items)">Images</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-28" style="font-size: 11.347826086957pt;" aria-label="Instagram (4 items)">Instagram</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-29" style="font-size: 15.152173913043pt;" aria-label="Internet (8 items)">Internet</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet-privacy/" class="tag-cloud-link tag-link-29524 tag-link-position-30" style="font-size: 8pt;" aria-label="internet privacy (2 items)">internet privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ipads/" class="tag-cloud-link tag-link-94044 tag-link-position-31" style="font-size: 8pt;" aria-label="iPads (2 items)">iPads</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/jim-groom/" class="tag-cloud-link tag-link-179995 tag-link-position-32" style="font-size: 8pt;" aria-label="jim groom (2 items)">jim groom</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ownership/" class="tag-cloud-link tag-link-179962 tag-link-position-33" style="font-size: 13.630434782609pt;" aria-label="ownership (6 items)">ownership</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" class="tag-cloud-link tag-link-179942 tag-link-position-34" style="font-size: 9.8260869565217pt;" aria-label="perception (3 items)">perception</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/personal-information/" class="tag-cloud-link tag-link-8060 tag-link-position-35" style="font-size: 8pt;" aria-label="Personal Information (2 items)">Personal Information</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/phone/" class="tag-cloud-link tag-link-160555 tag-link-position-36" style="font-size: 8pt;" aria-label="phone (2 items)">phone</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/police/" class="tag-cloud-link tag-link-180008 tag-link-position-37" style="font-size: 8pt;" aria-label="police (2 items)">police</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-38" style="font-size: 20.478260869565pt;" aria-label="privacy (19 items)">privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" class="tag-cloud-link tag-link-519 tag-link-position-39" style="font-size: 15.913043478261pt;" aria-label="Social Media (9 items)">Social Media</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/tagxedo/" class="tag-cloud-link tag-link-180078 tag-link-position-40" style="font-size: 9.8260869565217pt;" aria-label="Tagxedo (3 items)">Tagxedo</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-41" style="font-size: 22pt;" aria-label="Technology (24 items)">Technology</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ted-talk/" class="tag-cloud-link tag-link-94075 tag-link-position-42" style="font-size: 9.8260869565217pt;" aria-label="TED TALK (3 items)">TED TALK</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/word-cloud/" class="tag-cloud-link tag-link-68332 tag-link-position-43" style="font-size: 9.8260869565217pt;" aria-label="Word Cloud (3 items)">Word Cloud</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 8pt;" aria-label="Writing (2 items)">Writing</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/youtube/" class="tag-cloud-link tag-link-251 tag-link-position-45" style="font-size: 12.565217391304pt;" aria-label="youtube (5 items)">youtube</a></div>
+</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">#FYS142 Twitter Feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</aside>		</div><!-- end tertiary .widget-area -->
+</div><!-- end wrap -->
+
+	<footer id="colophon" class="clearfix">
+		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a><span class="sep"> | </span>Theme: Yoko by <a href="http://www.elmastudio.de/en/themes/">Elmastudio</a></p>
+		<a href="#page" class="top">Top</a>
+	</footer><!-- end colophon -->
+	
+</div><!-- end page -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/smoothscroll.js?ver=1.4'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f16.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fpage%2F14%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f16.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

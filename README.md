@@ -1,7 +1,8 @@
 # Bergle
 Welcome to Bergle, a user friendly searching experience for Muhlenberg.edu/
 
-<!-- > Insert image or gif of gui here-->
+![Alt Text](berglegif.gif)
+
 <br><br>
 
 ## How do I use Bergle?
@@ -9,4 +10,21 @@ Using Bergle is easy! Simply download the repo and run main.py <br> If you don't
 <br><br>
 
 ## Why make a search engine for just muhlenberg.edu/?
-This is @slfarinacci and @WolffRuoff 's final project for Artificial Intelligence
+This is @slfarinacci and @WolffRuoff 's final project for Artificial Intelligence. Even though the project has the small scope of just Muhlenberg's website, we still learned the same information and techniques that we would have learned creating a search engine for numerous sites. During this project, we learned how to create a web crawler and corresponding inverted index, preprocess complicated html/text with vanilla regex (stemming being the exception), calculate the cosine similarity between a query and webpage, and create a comprehensive GUI to display the resulting rankings.
+
+<!--
+## Files
+
+### Web Crawler
+
+### Preprocessing Webpages
+
+### Inverted Index
+
+### Calculating the Cosine Similarity ranking
+
+### Displaying our Results
+
+## Analysis of our program
+
+-->

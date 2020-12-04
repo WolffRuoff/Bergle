@@ -1,0 +1,499 @@
+http://sportsinfo.blogs.muhlenberg.edu/2012/07/30/bagels-and-lax-part-2/
+19
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+Bagels and Lax, Part 2 | Sports Information Blog	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Feed" href="http://sportsinfo.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Sports Information Blog &raquo; Comments Feed" href="http://sportsinfo.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sportsinfo.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://sportsinfo.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sportsinfo.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sportsinfo.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sportsinfo.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='The Uniform Project &#8211; Men&#8217;s Soccer' href='http://sportsinfo.blogs.muhlenberg.edu/2012/07/19/the-uniform-project-mens-soccer/' />
+<link rel='next' title='Las Mulas en España, la primera parte' href='http://sportsinfo.blogs.muhlenberg.edu/2012/08/06/las-mulas-en-espana-la-primera-parte/' />
+
+<link rel="canonical" href="http://sportsinfo.blogs.muhlenberg.edu/2012/07/30/bagels-and-lax-part-2/" />
+<link rel='shortlink' href='http://sportsinfo.blogs.muhlenberg.edu/?p=1292' />
+<link rel="alternate" type="application/json+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F07%2F30%2Fbagels-and-lax-part-2%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://sportsinfo.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F07%2F30%2Fbagels-and-lax-part-2%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://sportsinfo.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sportsinfo.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sportsinfo.blogs.muhlenberg.edu/?wordfence_lh=1&hid=79727D6E9C6EB8F815AFF3F4D970BF30');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-1292 single-format-standard admin-bar no-customize-support wp-embed-responsive single-author singular two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://sportsinfo.blogs.muhlenberg.edu/" rel="home">Sports Information Blog</a></span></h1>
+				<h2 id="site-description">Just another Muhlenberg College Blogs site</h2>
+			</hgroup>
+
+						<a href="http://sportsinfo.blogs.muhlenberg.edu/">
+									<img src="http://sportsinfo.blogs.muhlenberg.edu/files/2011/08/MuhlBox_header.jpg" width="1000" height="288" alt="Sports Information Blog" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://sportsinfo.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li ><a href="http://sportsinfo.blogs.muhlenberg.edu/">Home</a></li></ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+				
+					<nav id="nav-single">
+						<h3 class="assistive-text">Post navigation</h3>
+						<span class="nav-previous"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/07/19/the-uniform-project-mens-soccer/" rel="prev"><span class="meta-nav">&larr;</span> Previous</a></span>
+						<span class="nav-next"><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/08/06/las-mulas-en-espana-la-primera-parte/" rel="next">Next <span class="meta-nav">&rarr;</span></a></span>
+					</nav><!-- #nav-single -->
+
+					
+<article id="post-1292" class="post-1292 post type-post status-publish format-standard hentry category-womens-lacrosse">
+	<header class="entry-header">
+		<h1 class="entry-title">Bagels and Lax, Part 2</h1>
+
+				<div class="entry-meta">
+			<span class="sep">Posted on </span><a href="http://sportsinfo.blogs.muhlenberg.edu/2012/07/30/bagels-and-lax-part-2/" title="10:12 am" rel="bookmark"><time class="entry-date" datetime="2012-07-30T10:12:21-04:00">July 30, 2012</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/" title="View all posts by sportsinfo" rel="author">sportsinfo</a></span></span>		</div><!-- .entry-meta -->
+			</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><em><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/shegoskihs.jpg"><img class="alignright size-full wp-image-781" title="Jessica Shegoski" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/02/shegoskihs.jpg" alt="" width="100" height="150" /></a>A couple of weeks ago, recent Muhlenberg graduate Jessica Shegoski <a title="Bagels and Lax, Part 1" href="http://sportsinfo.blogs.muhlenberg.edu/?p=1249">wrote about the first half of her lacrosse trip to Europe and Israel</a>, in which she helped Israel win the championship at the European Lacrosse Festival in Amsterdam.</em></p>
+<p><em>Here is her report on the second half of the trip, which involved a series of clinics designed to introduce the sport of lacrosse to Israelis &#8211; as well as plenty of sightseeing.</em></p>
+<p><strong>July 1</strong></p>
+<p>Woke up this morning to another glorious, I mean FULL day of traveling. The team was split up on a couple different flights to either head home to the states, head home to Israel, or like me head to Israel to coach and play.</p>
+<p>The first leg of our flight was Amsterdam to Bucharest (Romania). The airport was small in terms of United States standards. We had to deplane by walking down a set of stairs to a bus that took us to the terminal and had to take a similar bus back out to the tarmac for our flight to Tel Aviv. We got to Tel Aviv around 8:30 at night and caught a cab to our hostel to meet the two other teammates who had arrived ahead of us. The four of us hung out and walked the beach until everyone else who was staying at the hostel arrived around 2:00 am.</p>
+<p>Since everyone felt gross from traveling all day, we all decided the smartest decision was to throw on bathing suits and jump into the ocean at 2:30 in the morning.</p>
+<p><strong>July 2</strong></p>
+<p>We had no clinics or games planned for today so everyone took complete advantage of being right on the beach. By 11:00 am everyone who was staying in the hostel [was] on the beach, and none of us left the beach for the rest of the day (except perhaps to grab food and more water). </p>
+<p><strong>July 3</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic1.jpg"><img class="alignleft size-full wp-image-1286" title="lax clinic 1" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic1.jpg" alt="" width="295" height="168" /></a>This morning there was a clinic south of Tel Aviv, and after coaching we all hung out on the beach. As we were sitting on the beach we all decided that we wanted to be All-American (literally) for the next day (July 4), so the girls headed to find clothing to wear and a special piece of clothing for the boys.</p>
+<p><strong>July 4 (Happy Independence Day America)</strong></p>
+<p>Clinic #2, this time in Netanya with a group of low-income and at-risk kids who were initially more interested in the soccer ball someone had instead of lacrosse. It was funny how sassy some of the little girls were, but they were very fun to teach and work with.  </p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_swimsuit.jpg"><img class="alignright size-full wp-image-1291" title="American swimsuits" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_swimsuit.jpg" alt="" width="280" height="378" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_swimsuit.jpg 280w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_swimsuit-222x300.jpg 222w" sizes="(max-width: 280px) 100vw, 280px" /></a>Once the clinic ended it was off to the beach for us, the girls sporting their newly acquired American flag bikinis and the guys in their lovely American flag swimsuits.</p>
+<p><strong>July 5</strong></p>
+<p>Clinic #3 &#8211; This time we traveled to Kraft Stadium in Jerusalem to coach. This was the first clinic where the majority of the kids attending did speak English, which made coaching a little bit easier. After coaching all morning we were given the day to explore Jerusalem (where the majority of us had previously been on other trips).  </p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_westernwall.jpg"><img class="alignleft size-full wp-image-1285" title="Jessica Shegoski at the Western Wall" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_westernwall.jpg" alt="" width="450" height="256" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_westernwall.jpg 450w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_westernwall-300x170.jpg 300w" sizes="(max-width: 450px) 100vw, 450px" /></a>We headed towards the Jaffa Gate into the Old City and made our way to the Western Wall, where we placed our notes into the ancient cracks in the wall. (It is Jewish tradition to write a prayer or note on a small slip of paper and then deposit it in the cracks of the wall.)</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_helmet.jpg"><img class="alignright size-full wp-image-1290" title="women's players in helmets" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_helmet.jpg" alt="" width="244" height="326" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_helmet.jpg 244w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_helmet-224x300.jpg 224w" sizes="(max-width: 244px) 100vw, 244px" /></a>After exploring most of the afternoon, we made our way back to Kraft Stadium (yes the same Krafts of Patriots football fame) to get changed for our games. The two men’s club teams (Jerusalem and Tel Aviv) played three games, and the women’s team had exhibition intrasquad games in between the men’s games. As the men’s third game was winding down, some of the women’s team joked that we wanted to play with them too and threw on full pads and tried to sneak our way onto the field. But it didn’t work.</p>
+<p><strong>July 6</strong></p>
+<p>Woke up early to get on the bus for our team retreat up north. Thank you to the UJA Federation of New York for sponsoring the retreat. Both the Americans and the Israelis boarded our coach bus early in the morning to begin our drive to Caesarea, a city built by Herod the Great that served as the capital when Palestine was under Roman control and was used through the time of the Crusades as a major port. After touring the ruins we got back on the bus to head to the northern port city <a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_haifa.jpg"><img class="alignright size-full wp-image-1289" title="Haifa" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_haifa.jpg" alt="" width="250" height="332" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_haifa.jpg 250w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_haifa-225x300.jpg 225w" sizes="(max-width: 250px) 100vw, 250px" /></a>of Haifa, where we quickly ate lunch and then went to the Bahi Gardens (the hanging gardens of Haifa), which house the shrine of the Bab. The gardens were beautiful and so amazingly well manicured.</p>
+<p>Then it was off to the city of Akko, which is across the bay from Haifa and one of the oldest continuously inhabited cities in the world.  After exploring Akko and all its back alleys and markets, we got back on the bus to drive to the kibbutz that we were staying at for the weekend. The guesthouse at Kibbutz Nof Ginnossar was basically a hotel and we were right on the Kinneret (Sea of Galilee, Israel’s largest freshwater lake). The guesthouse and the Kinneret are located in a valley, and because of this we were able to sit on the shoreline and watch the moon rise up and over the mountains.</p>
+<p><strong>July 7</strong></p>
+<p>Another early morning to explore more of northern Israel; our first stop was the Golan Heights. We all piled into Jeep Wranglers with extended beds and started our off-roading trip up the mountains that surround the fertile valleys of the Golan. While you drive through the Golan you experience something that you don’t encounter in the States: Barbed wire surrounds areas that are marked with signs that read “Caution: Mines.” This is because the area was disputed between Israel and Syria and is scattered with still-live mines and bombed-out bunkers.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_golan.jpg"><img class="alignleft size-full wp-image-1288" title="Jessica Shegoski at the Golan Heights" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_golan.jpg" alt="" width="350" height="263" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_golan.jpg 350w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_golan-300x225.jpg 300w" sizes="(max-width: 350px) 100vw, 350px" /></a>After off-roading we headed to a kibbutz that I had visited on my previous trip to Israel. [Then] we headed to Mt. Bental, which holds a bunker that looks out on Damascus and to this day can be mobilized in the case of a threat.</p>
+<p>After being outside in the heat all day we headed to the Majrasa part of the Jordan River and rafted down it.</p>
+<p><strong>July 8</strong></p>
+<p>Another early morning. We checked out of the guesthouse and headed to Karmiel to coach a bunch of clinics at a large summer camp. Watching the kids’ faces light up when they catch their first pass or learn how to cradle is well worth it.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic2.jpg"><img class="alignright size-full wp-image-1287" title="lax clinic 2" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic2.jpg" alt="" width="263" height="180" /></a>We played a mock game of lacrosse, where the guys and girls mixed teams and played with modified girls’ rules. Some of the girls we had coached began a cheerleading section, which only egged us on to try moves that were a little silly but got the girls to laugh and smile. After playing some of the kids wanted autographs and hugs, which was a cool feeling.</p>
+<p>After coaching we headed to Wingate, an IDF (Israel Defense Force) base. This base is Israel’s National Center for Physical Education and Sport and is the national training center for Israel’s Olympic team. While there we watched a combat solider go through a practice street-clearing drill with a semi-automatic weapon. We then went to the obstacle course that every solider has to pass during basic training. Some of us tried about half of the course but stopped when we were told we had to crawl through the sandy, rocky dirt, because we weren’t in pants.</p>
+<p><strong>July 9</strong></p>
+<p>Another clinic day, and this time only four or five people went, so the rest of us took advantage of the day and spent it on the beach.</p>
+<p><strong>July 10</strong></p>
+<p>Woke up to another beautiful day in Tel Aviv, and the girls decided that because it was a Tuesday we were going to head toward the shuk for the artists’ fair. The handmade goods that the artists made were beautiful. I believe everyone bought something as a reminder of this trip to Israel and the experience. After a successful time in the shuk, we went to Netanya to coach another clinic that afternoon.</p>
+<p><strong>July 11</strong></p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic3.jpg"><img class="alignleft size-full wp-image-1294" title="lax clinic 3" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic3.jpg" alt="" width="325" height="275" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic3.jpg 325w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_clinic3-300x253.jpg 300w" sizes="(max-width: 325px) 100vw, 325px" /></a>Early wakeup call to drive to southern Tel Aviv to coach (this is my last clinic in Israel because I fly out at 5:00 am tomorrow).  The kids at this clinic spoke a good amount of English, which made it a little bit easier to coach. One of the girls thought it was funny to run up to us while coaching, tickle us and then run away giggling.</p>
+<p>After coaching we all headed down to the beach until we had to get ready for our games later that day in northern Tel Aviv. At the games we had a huge group of people watching us, and there were even a couple of reporters there, which made us all happy because it meant that the sport and the program were gaining recognition in Israel. The men were playing for the Zimmerman Cup for the second year in Israel and the women held an exhibition intrasquad game in between the men’s games.</p>
+<p>After everyone finished playing we finished up by celebrating and filming the last bit of footage for our “Call Me Maybe” video. </p>
+<p><strong>July 27</strong></p>
+<p>I’ve been home for about two weeks now, and I still cannot believe that my time in Europe and Israel has come to an end. Being able to represent a nation that I have always been connected to and being able to teach a sport that I love to children was incredibly fulfilling.</p>
+<p><a href="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_israelbanner.jpg"><img class="alignleft size-full wp-image-1252" title="Israel lacrosse banner" src="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_israelbanner.jpg" alt="" width="320" height="240" srcset="http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_israelbanner.jpg 320w, http://sportsinfo.blogs.muhlenberg.edu/files/2012/07/shegoski_israelbanner-300x225.jpg 300w" sizes="(max-width: 320px) 100vw, 320px" /></a>The hope is to continue to build the program from the bottom up in Israel so that the two men’s club teams continue to grow (and more teams are added) and that it becomes a sport that is recognized and played throughout the country. Fingers crossed Israel will have a women’s team representing them in 2013 at the World Cup in Canada and a men’s team representing them in 2014 at the World Championship in Colorado.</p>
+<p>The program is still in its infancy and can use all the help it can get. Any and all donations would be greatly appreciated to help build the program and to help grow the sport of lacrosse internationally. Thank you in advance for all of your help to get me to reach my goal of furthering the sport.</p>
+<p>Any and all donations can be sent to the below address, and in the notes section of the check please write Jessica Shegoski.</p>
+<ul>
+<ul>
+<li>Israel Lacrosse</li>
+<li>c/o Howard Borkan PC</li>
+<li>1501 Broadway, 21st Floor</li>
+<li>New York, NY  10036</li>
+</ul>
+</ul>
+<p>&nbsp;</p>
+<p><sup> </sup></p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		This entry was posted in <a href="http://sportsinfo.blogs.muhlenberg.edu/category/womens-lacrosse/" rel="category tag">women's lacrosse</a> by <a href="http://sportsinfo.blogs.muhlenberg.edu/author/sportsinfo/">sportsinfo</a>. Bookmark the <a href="http://sportsinfo.blogs.muhlenberg.edu/2012/07/30/bagels-and-lax-part-2/" title="Permalink to Bagels and Lax, Part 2" rel="bookmark">permalink</a>.
+		
+			</footer><!-- .entry-meta -->
+</article><!-- #post-1292 -->
+
+						<div id="comments">
+	
+	
+	
+	
+</div><!-- #comments -->
+
+				
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sportsinfo.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sportsinfo.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsportsinfo.blogs.muhlenberg.edu%2F2012%2F07%2F30%2Fbagels-and-lax-part-2%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sportsinfo.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

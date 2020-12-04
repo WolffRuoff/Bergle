@@ -1,0 +1,553 @@
+http://fabuckley.blogs.muhlenberg.edu/?p=9/
+23
+
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title>Journal 3 | </title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://fabuckley.blogs.muhlenberg.edu/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<title>Journal 3 &#8211; Faith Buckley</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Faith Buckley &raquo; Feed" href="http://fabuckley.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Faith Buckley &raquo; Comments Feed" href="http://fabuckley.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Faith Buckley &raquo; Journal 3 Comments Feed" href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/journal-3/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fabuckley.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fabuckley.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/keyboard-image-navigation.js?ver=20120202'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/jquery.flexslider-min.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider-init.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<link rel='https://api.w.org/' href='http://fabuckley.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fabuckley.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fabuckley.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Hello world!' href='http://fabuckley.blogs.muhlenberg.edu/2018/10/29/hello-world/' />
+
+<link rel="canonical" href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/journal-3/" />
+<link rel='shortlink' href='http://fabuckley.blogs.muhlenberg.edu/?p=9' />
+<link rel="alternate" type="application/json+oembed" href="http://fabuckley.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffabuckley.blogs.muhlenberg.edu%2F2018%2F10%2F29%2Fjournal-3%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://fabuckley.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ffabuckley.blogs.muhlenberg.edu%2F2018%2F10%2F29%2Fjournal-3%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://fabuckley.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fabuckley.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fabuckley.blogs.muhlenberg.edu/?wordfence_lh=1&hid=F56308B62C630421A4DE1987ACAE0B87');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css">
+			.site-title a,
+		.site-description {
+			color: #1d15a8 !important;
+		}
+		</style>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #948ad1; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-9 single-format-standard admin-bar no-customize-support custom-background no-js">
+<div id="wrap">
+<div id="topbar"> 
+	<ul class="social-media">
+				
+				
+				
+				
+				
+				
+				
+				
+			
+		
+		
+				
+
+	</ul><!-- #social-icons--></div>
+<div id="page" class="hfeed site">
+	    <div id="masthead-wrap">
+<header id="masthead" class="site-header" role="banner">
+    
+		<div class="site-introduction">
+			<h1 class="site-title"><a href="http://fabuckley.blogs.muhlenberg.edu/" title="Faith Buckley" rel="home">Faith Buckley</a></h1>
+			<p class="site-description"></p> 
+		</div>
+
+<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="assistive-text">Menu</h1>
+			<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu"><ul>
+<li ><a href="http://fabuckley.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-4"><a href="http://fabuckley.blogs.muhlenberg.edu/dance-technique-and-performance-ii/">Dance Technique and Performance II</a></li>
+<li class="page_item page-item-2"><a href="http://fabuckley.blogs.muhlenberg.edu/sample-page/">Sample Page</a></li>
+</ul></div>
+		</nav><!-- .site-navigation .main-navigation -->
+
+	</header><!-- #masthead .site-header -->
+	</div><!-- #masthead-wrap -->
+    <div class="header-image">
+		</div>
+	<div id="main" class="site-main">
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+
+			
+
+				
+<article id="post-9" class="post-9 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">Journal 3</h1>
+
+		<div class="entry-meta">
+			Posted on <a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/journal-3/" title="6:42 pm" rel="bookmark"><time class="entry-date" datetime="2018-10-29T18:42:10+00:00" pubdate>October 29, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://fabuckley.blogs.muhlenberg.edu/author/fabuckley/" title="View all posts by Faith Buckley" rel="author">Faith Buckley</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p><span style="font-weight: 400">Allie Miller and Faith Buckley</span></p>
+<p><span style="font-weight: 400">DTP2</span></p>
+<p><span style="font-weight: 400">Randall Smith and Marcie Mamura</span></p>
+<p><span style="font-weight: 400">10/29/18</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">As dancers we tend to overanalyze our bodies and movements and compare ourselves to those around us. This thought pattern creates a negative atmosphere, as well as unhealthy and unrealistic body perceptions. These feelings are cyclical but with the proper mindset they can be overcome. Through our experiences in and out of class, we came to an understanding that it is valuable to view other dancers as inspiration instead of competition. We have the power to decide what kind of energy we radiate towards those around us and continue to strive to become better versions of ourselves. Our ultimate ambition as dancers and as people is to learn to accept our minds and bodies, and to be able to utilize our voices in a way that inspires others to find their own. </span></p>
+<p><span style="font-weight: 400">The famous modern dancer and choreographer Martha Graham used her voice to inspire others by creating socially relevant choreography. Throughout the 20th century Graham went on to change the way people view dance, and her choreography was vital in shaping the way that dance reflects society (Martha, 2015). We as dancers have a social responsibility to represent these global issues surrounding race, gender, politics and other controversial topics. In addition to her social advocacy she emphasized the significance of the individual. In her piece titled </span><i><span style="font-weight: 400">Lamentation, </span></i><span style="font-weight: 400">she uses subtle yet purposeful movements while being confined in a fabric surrounding her body (Company, 2016). We saw the fabric is a metaphor for the feeling of being engulfed by personal and external negativity. She is confined within herself physically, by the fabric, but mentally, and emotionally as well. This relates to how we can be confined within a certain negative thought pattern that we feel we cannot break free from. These ways of thinking all translate to our movement, and our lives outside of dance. It creates incessant feelings of self doubt.</span></p>
+<p><span style="font-weight: 400">Negative thought patterns can rule our lives if we let them. Being in a strict ballet centered studio environment before Muhlenberg, Faith felt confined within her own negative pattern of thought. If she couldn’t turn as many times or lift her leg as high as others, Faith would revert to these toxic thoughts. It was only when she began to actively transform her cognition that she came to think more positively about her body. It was almost as if she was breaking out of the fabric that encapsulated Graham in Lamentation. Getting a professional perspective with Gayanne about the way our bodies move also answered a lot of these previous doubts. Faith told Gayanne that she had trouble balancing, and Gayanne told her that this was all due to the fact that she’s forcing her turnout so her bones aren’t fully stacked on top of one another. She can learn how to use her own body better now. Allie’s dance screening was eye opening in that she was able to put different measurements into numbers and understand her body more in depth, specifically how to increase her flexibility and strength. Allie felt that questions about her body that she didn’t even know she had were answered and she felt fulfilled due to this. Previous to the dance screening, Allie had a similar experience with feeling confined by a pattern of thought. As a person, Allie is very introverted, and within her dance experiences she can come off as lacking energy. As a dancer it is difficult for her to be expressive because she is engulfed inside her comfort zone and is used to flying under the radar. Given her discomfort and anxiety with speaking as a form of self expression, she is able to use dance as an outlet for her creative spirit. As she has continued to dance, she has become more comfortable with herself and with opening up. In the past, we both have been confined within our negative mindsets relating to our perception of our bodies and minds. The way in which we emerge from this state of self deprecation is essential to our personal growth as both dancers and as people. Through this we realize our overall purpose in leading a fulfilling life is to be the best selves we can be and recognize our achievements instead of mourning what we have not been able to accomplish. We can become activists in this context by spreading body positivity and self love.</span></p>
+<p><span style="font-weight: 400">Dance is a powerful form of communication, and through dance it is our responsibility to be social activists The show </span><i><span style="font-weight: 400">A Rap on Race</span></i><span style="font-weight: 400"> illustrated to Faith that she needs to be aware of how her body reads in a space, and how it can be used as an instrument for social change. We can tell stories through our bodies and with this become activists. We all move as human beings, so dance is a way for people to connect to difficult topics such as race relations in this country. Allie was able to make connections to her similar experience in high school surrounding these issues. In her Modern 2 class senior year, she was one of three white girls in her class, the other three people were black women. Together they performed a piece in the high school’s dance concert in which the choreographer used race to tell a story surrounding social issues regarding our country. She was able to learn more and keep the conversation going through watching dance and moving through it herself. Within her exploration, she was able to see dance as a method of discussion. Dance is something that reflects reality of society and the life of oneself. Given this new perspective, Allie is now able to incorporate more meaning into her dance and use her body to express more important topics. Through these experiences, we both realized that we can use our bodies to raise awareness and create social change. By sharing our voices in dance, we have the power to make the world a better place.</span></p>
+<p><span style="font-weight: 400">We were given the opportunity in class to speak out about our thoughts and experiences that have impacted the way that we view ourselves as people and dancers. Within these conversations, Allie was able to learn a lot more about her personal positivity and growth. In one conversation, multiple people discussed how they were not surrounded by the best people, herself included, but that there is a light at the end of the tunnel. Allie specifically shared how her freshman year was not a positive experience, and she didn’t do anything to help herself. This year she is proud of herself for learning to do what is best for her by joining Phi Mu. In a different class, the group had an in-depth discussion about body positivity. Faith found that through positive thought patterns and continuously not criticizing her body in the mirror, she was able to accept it more. The environment of self love and the idea of feeling joy in dance at Muhlenberg is something that has fostered her self esteem. We both discovered that our body confidence comes from ourselves and not from other people. It is something that is personal to us and is something to be proud of. We are beautiful and confident by learning to love our bodies as a whole, and by being able to recognize and accept the parts of ourselves that we don’t particularly like. Through these discussions and further thought, we were able to discover the importance of dance and life itself as a personal journey as opposed to a collective journey. It is intrinsic for the group to grow as a whole, but what is most valuable to oneself is to focus on what makes them a better person through self discovery and exploration. To experience personal growth is to not be concerned with other people’s growth or whether they are headed in the opposite direction. Another person’s failure does not make oneself look better, and one’s success does not make another seem inferior. </span></p>
+<p><span style="font-weight: 400">Every dancer has different strengths and dance histories that make them unique. With that being said it’s not very fair to make comparisons between people. We are our own worst critics, and it’s really easy to get caught up in negative thought patterns. To open oneself up and to begin taking risks is pivotal in loving and accepting our bodies. We are all living life at our own speed and learning how to find our voices, help ourselves, and recognize our own accomplishments without comparison to others. Through our own personal body empowerment we can be activists for social change in others and ourselves.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">CITATIONS</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Company, M. G. (2016, April 28). Retrieved October 29, 2018, from </span></p>
+<p><span style="font-weight: 400">https://www.youtube.com/watch?v=I-lcFwPJUXQ</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">Martha Graham. (2015, October 24). Retrieved from </span></p>
+<p><a href="https://www.biography.com/people/martha-graham-9317723"><span style="font-weight: 400">https://www.biography.com/people/martha-graham-9317723</span></a></p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		Bookmark the <a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/journal-3/" title="Permalink to Journal 3" rel="bookmark">permalink</a>.
+			</footer><!-- .entry-meta -->
+</article><!-- #post-9 -->
+
+					<nav role="navigation" id="nav-below" class="site-navigation post-navigation">
+		<h1 class="assistive-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/hello-world/" rel="prev"><span class="meta-nav">&larr;</span> Hello world!</a></div>		
+	
+	</nav><!-- #nav-below -->
+	
+				
+
+	<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/10/29/journal-3/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://fabuckley.blogs.muhlenberg.edu/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='9' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="7d45d48c08" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="29"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments .comments-area -->
+
+			
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+						<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="http://fabuckley.blogs.muhlenberg.edu/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/journal-3/" aria-current="page">Journal 3</a>
+									</li>
+											<li>
+					<a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/hello-world/">Hello world!</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='https://wordpress.org/' rel='external nofollow ugc' class='url'>A WordPress Commenter</a></span> on <a href="http://fabuckley.blogs.muhlenberg.edu/2018/10/29/hello-world/#comment-1">Hello world!</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+				<li><a href='http://fabuckley.blogs.muhlenberg.edu/2018/10/'>October 2018</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+				<li class="cat-item cat-item-1"><a href="http://fabuckley.blogs.muhlenberg.edu/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+						<li><a href="http://fabuckley.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+			<li><a href="http://fabuckley.blogs.muhlenberg.edu/feed/">Entries feed</a></li>
+			<li><a href="http://fabuckley.blogs.muhlenberg.edu/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary .widget-area -->
+
+		<div id="tertiary" class="widget-area" role="supplementary">
+						</div><!-- #tertiary .widget-area -->
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+    
+    <div class="section group">
+    
+	<div class="col span_1_of_3">
+             <div class="widget">
+			<h4>Widget Ready</h4>            <p>This left column is widget ready! Add one in the admin panel.</p>            </div>     
+	  
+		</div>
+        
+	<div class="col span_1_of_3">
+	         <div class="widget">
+			<h4>Widget Ready</h4>            <p>This center column is widget ready! Add one in the admin panel.</p>            </div>     
+	 
+
+	</div>
+    
+	<div class="col span_1_of_3">
+	         <div class="widget">
+			<h4>Widget Ready</h4>            <p>This right column is widget ready! Add one in the admin panel.</p>            </div>     
+	 
+	</div>
+	</div>
+
+		<div class="site-info">
+            <a href="http://www.templateexpress.com/bota-theme/">
+            Bota simple WordPress Theme</a>
+            Powered By WordPress 		</div><!-- .site-info -->
+	</footer><!-- #colophon .site-footer -->
+     <a href="#top" id="smoothup"></a>
+</div><!-- #page .hfeed .site -->
+</div><!-- end of wrapper -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/small-menu.js?ver=20120206'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/themes/bota/js/smoothscroll.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script async="async" type='text/javascript' src='http://fabuckley.blogs.muhlenberg.edu/wp-content/plugins/akismet/_inc/form.js?ver=4.1.7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fabuckley.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffabuckley.blogs.muhlenberg.edu%2F2018%2F10%2F29%2Fjournal-3%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fabuckley.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

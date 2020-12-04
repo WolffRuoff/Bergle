@@ -1,0 +1,673 @@
+http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/its-always-friday-at-the-ark-music-factory/
+32
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en-US">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<title>It&#8217;s Always &#8220;Friday&#8221; at the Ark Music Factory! &#8211; Media Industries Course Blog 2011</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Comments Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; It&#8217;s Always &#8220;Friday&#8221; at the Ark Music Factory! Comments Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/its-always-friday-at-the-ark-music-factory/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Archivo%3A400%2C400i%2C500%2C500i%2C700%2C700i&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-fontawesome-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/fonts/font-awesome/font-awesome.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-style-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/jquery.flexslider.js?ver=1'></script>
+<link rel='https://api.w.org/' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediaindustries11.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Junk Food Advertising Gets Healthier&#8230;Or At Least Kraftier' href='http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/junk-food-advertising-gets-healthier-or-at-least-kraftier/' />
+<link rel='next' title='Howard Stern Sues Sirius/XM Radio' href='http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/howard-stern-sues-siriusxm-radio/' />
+
+<link rel="canonical" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/its-always-friday-at-the-ark-music-factory/" />
+<link rel='shortlink' href='http://mediaindustries11.blogs.muhlenberg.edu/?p=991' />
+<link rel="alternate" type="application/json+oembed" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F27%2Fits-always-friday-at-the-ark-music-factory%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F27%2Fits-always-friday-at-the-ark-music-factory%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mediaindustries11.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mediaindustries11.blogs.muhlenberg.edu/?wordfence_lh=1&hid=F1A44364EB658D61A439D10DA0699487');
+</script>		<script>jQuery( 'html' ).removeClass( 'no-js' ).addClass( 'js' );</script>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	
+	</head>
+
+	<body class="bp-legacy post-template-default single single-post postid-991 single-format-standard admin-bar no-customize-support missing-post-thumbnail missing-manual-excerpt no-js">
+
+		
+		<a class="skip-link faux-button" href="#site-content">Skip to the content</a>
+
+		<div class="mobile-menu-wrapper">
+
+			<div class="mobile-search">
+
+				<form role="search" method="get" class="mobile-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+					<span class="screen-reader-text">Search for:</span>
+					<label for="mobile-search-field"></label>
+					<input type="search" id="mobile-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+					<div class="cancel-search"></div>
+				</form>
+
+				<div class="compact-search-results ajax-search-results"></div><!-- .compact-search-results -->
+
+			</div><!-- .mobile-search -->
+
+			<ul class="mobile-menu">
+				<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+			</ul>
+
+			
+		</div><!-- .mobile-menu-wrapper -->
+
+		<div class="body-inner">
+
+			<div class="mobile-nav-content-overlay dark-overlay"></div>
+
+			
+			<header class="site-header">
+
+				<div class="nav-toggle">
+
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+
+				</div>
+
+				<div class="header-inner section-inner">
+
+					
+		<div class="header-search">
+
+			<form role="search" method="get" class="header-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+				<span class="screen-reader-text">Search for:</span>
+				<label for="header-search-field"></label>
+				<input type="search" id="header-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+
+				<input type="hidden" name="post_type" value="post"><input type="hidden" name="post_type" value="page">
+			</form>
+
+			<div class="compact-search-results ajax-search-results modal arrow-left"></div>
+
+		</div><!-- .header-search -->
+
+
+		
+					<div class="header-titles">
+
+						
+							<h2 class="site-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></h2>
+
+						
+							<p class="site-description">If It&#039;s About the Media, It&#039;s On This Blog!</p>
+
+						
+					</div><!-- .header-titles -->
+
+					
+				</div><!-- .header-inner -->
+
+				<ul class="site-nav">
+					<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+				</ul>
+
+			</header><!-- .site-header -->
+
+<main id="site-content">
+
+	<div class="section-inner split">
+
+		<div class="content">
+
+			<article class="post-991 post type-post status-publish format-standard hentry category-recording tag-indie-artists tag-labels tag-linking-pin tag-pop-music tag-profits tag-rebecca-black missing-thumbnail" id="post-991">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/its-always-friday-at-the-ark-music-factory/" title="It&#8217;s Always &#8220;Friday&#8221; at the Ark Music Factory!">March 27, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+			<h1 class="post-title">It&#8217;s Always &#8220;Friday&#8221; at the Ark Music Factory!</h1>
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/kristinl312/" title="Posts by kristinl312" rel="author">kristinl312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/recording/" rel="category tag">Recording</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Peoples, G. (22 March 2011). Rebecca Black&#8217;s first-week sales: Not bad, but not in the millions&#8230;. <em>Billboard</em>. Retrieved from <a href="http://www.billboard.biz/bbbiz/industry/digital-and-mobile/rebecca-black-s-first-week-sales-not-bad-1005084972.story">http://www.billboard.biz/bbbiz/industry/digital-and-mobile/rebecca-black-s-first-week-sales-not-bad-1005084972.story</a></p>
+<p><img class="alignleft" src="http://cdn03.okcdn.okmagazine.com/wp-content/uploads/2011/03/Rebecca_Black_March17newsnea.jpg" alt="" width="216" height="152" />For those who complain that modern music is formulaic and factory-produced…well, it just got worse. The <a href="http://arkmusicfactory.com/">Ark Music Factory</a> released a music video by its new “artist” <a href="http://arkmusicfactory.com/profile/rebeccablack">Rebecca Black</a> called “<a href="http://www.youtube.com/watch?v=CD2LRROpph0">Friday</a>,” which quickly went viral for all the wrong reasons (click the link to watch the video, if you dare). Heralded as one of the worst songs ever produced, the song quickly skyrocketed the teen singer into the public spotlight. The formulaic, ready-made, culturally-deficient song provided material for columnists and pundits all week and raised the ire of public advocates who claim that the Ark Music Factory is destroying music.</p>
+<p><span id="more-991"></span></p>
+<p>&nbsp;</p>
+<p>The Ark Music Factory is actually only one of many “vanity” labels, which provide wannabe stars with pre-written songs, low-budget videos, and distribution and exhibition deals through <a href="http://www.cdbaby.com/">CD Baby</a> and<a href="http://www.apple.com/itunes/"> iTunes</a> in exchange for a fee. Black’s mother reportedly paid Ark’s standard fee of $2,000 for her daughter’s trip into YouTube notoriety. And most of that money is probably profit for Ark. The shockingly underdressed tweens in Black’s music video are apparently Black’s friends and neighbors who agreed to hop into the video in exchange for their own three minutes of fame (and, as it turned out, humiliation).</p>
+<p>&nbsp;</p>
+<p>Surprisingly, however, Black is already definitely making money from the song. As exploitative as Ark Music Factory sounds, it may treat its “artists” better than the major labels. After the $2,000 upfront fee, a 9% commission to Black’s distributor, CD Baby, and 9.1 cents per track to Ark for the use of the abominably-written song, Black keeps the rest. In fact, Ark even gives its “artists” copyright ownership of their recordings. Billboard reports that, as of Wednesday, Black had sold about 40,000 tracks through iTunes, and that number continues to rise. After crunching the numbers, Billboard reported that Black had already made about $25,000, pure profit, on the single. Considering that some of the biggest stars in the world—European grand-standing tours, MTV appearances, <em>Behind the Music</em> specials—are still in the red with their labels after selling millions of tracks, Rebecca Black may be the luckiest person in the music industry.</p>
+<p>&nbsp;</p>
+<p>And it’s not just Rebecca Black. Ark’s other “artists,” including <a href="http://www.youtube.com/watch?v=0xHfRUW99aI">Alana Lee</a>, are also apparently selling tracks and making money, and have been for awhile thanks the equalizing exhibition power of iTunes.</p>
+<p>&nbsp;</p>
+<p>Ark can operate this way because of an ingenious business plan, which was partially stolen from the <a href="http://www.youtube.com/watch?v=YZgXg_7kVI8">Disney</a> model. First, they employ creators who actually write the songs for pennies per word. A sampling of Ark’s other songs reveals that the lyrics to each basically consist of “butterfly,” “soul,” and various days of the week scrambled into different combinations. And while that may be both hilarious and a sign of the End of Art, it’s also economically smart. As others have pointed out, who cares if the lyrics are bad? After all, it’s really no worse than much of what the major labels are putting out, probably for hundreds of dollars per word.</p>
+<p>&nbsp;</p>
+<p>Ark then produces the video and the song, both cheaply. The actual music was clearly produced by a synthesizer you can probably buy at Radio Shack, as was most of Black’s voice in the video. Again, so what? The song is catchy and upbeat, and that seems to be what most of the music industry’s audience wants.</p>
+<p>&nbsp;</p>
+<p>Then, Ark simply arranges a distribution deal with CD Baby and puts the song on iTunes and YouTube for exhibition. A few phone calls to music industry contacts from some of the Ark staff, some of whom allegedly facilitated Miley Cyrus’ rise to stardom (anyone surprised?), and this horrible song becomes the talk of the Internet. Ark provides all the resources for production and the linking pins that get the final product promoted on television and the Internet. Everyone involved is making money.</p>
+<p>&nbsp;</p>
+<p>It’s also entirely possible that Ark made the song and the video bad on purpose. As they say, all press is good press. Sites like <a href="http://gawker.com/#!5783433/the-internet-made-rebecca-black-cry">Gawker</a> and Billboard that lampoon the video actually<img class="alignright" src="http://static.tvguide.com/MediaBin/Content/110321/News/4_thurs/110324RebeccaBlack1.jpg" alt="" width="257" height="177" /> actas Black’s best facilitators. Links to the video and to Ark Music Factory have appeared on almost every major hipster site in the past few weeks, and both Black and her mother have done interviews with the <a href="http://www.youtube.com/watch?v=9quaQjlzcOs">major networks’ morning shows</a> and with <a href="http://www.youtube.com/watch?v=9vQQucUWx50">Jay Leno</a>. A million indie artists who slaved over their life’s work for years before producing a song that no one listened to are weeping. Black has even become famous enough to <a href="http://www.contactmusic.com/news.nsf/story/internet-sensation-to-hand-over-itunes-cash-to-japan-relief-groups_1209597">start a relief fund for Japan</a>! Clearly, Ark is doing something right here.</p>
+<p>&nbsp;</p>
+<p>Many would say, however, that Ark is also doing a lot wrong. The list of things wrong with this entire story is long, but there are things to think about here beyond just snarky comments about helicopter parents and why 13-year olds are wearing tube tops in a music video. The most pressing: Is this really what it’s come to in the music industry? People who advocate for diversity in the recording industry <a href="http://www.motherboard.tv/2011/3/18/the-ark-music-factory-is-churning-out-pop-slop-for-the-internet-s-cringeworthy-enjoyment">point out</a> that these sorts of songs may make sense economically, but they may be destroying America culturally. After all, this formulaic music mostly catches on because people with money and power—in this case, Ark and the Disney-bots they hire—can promote and distribute them across media. What about music’s ability to challenge authority and expose social issues? If songs like “Friday” are really the future of music, how will music’s role in society change?</p>
+<p>&nbsp;</p>
+<p>The Ark Music Factory and Rebecca Black may not care. In fact, they may accurately see themselves as the only ones in the music industry who are honest about what they do. The major labels often defend themselves against accusations of homogeneity by saying that they are producing and facilitating “art,” and “behind the scenes” shows about all the creative energy that goes into making a hit song abound. In reality, of course, Ark Music Factory is no more of a “factory” than many of the big labels.</p>
+<p>&nbsp;</p>
+<p>If Ark Music Factory has a role in furthering American culture, it may be to increase the public’s awareness about how music is really produced.</p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+		<div class="post-inner compensate">
+
+			<div class="post-meta bottom">
+
+				
+					<p class="post-tags">
+						<span class="meta-title subheading">Tags:</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/indie-artists/" rel="tag">indie artists</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/labels/" rel="tag">labels</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/linking-pin/" rel="tag">linking pin</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/pop-music/" rel="tag">pop music</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/profits/" rel="tag">profits</a>, <a href="http://mediaindustries11.blogs.muhlenberg.edu/tag/rebecca-black/" rel="tag">Rebecca Black</a></span>
+					</p>
+
+				
+				<p class="post-categories">
+					<span class="meta-title subheading">Categories:</span>
+					<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/recording/" rel="category tag">Recording</a></span>
+				</p>
+
+			</div>
+
+			
+				<div class="single-pagination">
+
+					
+						<a class="next-post" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/howard-stern-sues-siriusxm-radio/" title="Howard Stern Sues Sirius/XM Radio">
+							<span class="subheading">Next post</span>
+							<span class="title">Howard Stern Sues Sirius/XM Radio</span>
+						</a>
+
+					
+						<a class="previous-post" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/25/junk-food-advertising-gets-healthier-or-at-least-kraftier/" title="Junk Food Advertising Gets Healthier&#8230;Or At Least Kraftier">
+							<span class="subheading">Previous post</span>
+							<span class="title">Junk Food Advertising Gets Healthier&#8230;Or At Least Kraftier</span>
+						</a>
+
+					
+				</div><!-- .single-pagination -->
+
+			
+		</div><!-- .post-inner -->
+
+		
+			<div class="hanging-titles">
+				
+	<div class="comments" id="comments">
+
+		
+		<h3 class="comment-reply-title">1 Comment</h3>
+
+				<div id="comment-122" class="comment byuser comment-author-jsullivan47 even thread-even depth-1">
+			<article id="div-comment-122" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+												<b class="fn"><a href='http://blogs.muhlenberg.edu/members/jsullivan47/' rel='external nofollow ugc' class='url'>Dr. Sullivan</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/03/27/its-always-friday-at-the-ark-music-factory/#comment-122">
+							<time datetime="2011-04-25T16:05:56+00:00">
+								April 25, 2011 at 4:05 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I like the idea of the Ark Music Factory here, Group 1.  It definitely seems to be something of a challenge to the existing &#8220;plantation style&#8221; management that artists complain about with the traditional record labels.  The key aspect to me of this great example is the most major shift that makes something like Ark possible: <b>that the Internet acts as the distributor for the song.</b> Without that critical piece, along with magnet sites like iTunes and YouTube, Rebecca Black&#8217;s song could never have achieved the notoriety it has thus far.  This makes a great example for the paper!  Nice job here.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-login" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F27%2Fits-always-friday-at-the-ark-music-factory%2F">Log in to Reply</a></div>			</article><!-- .comment-body -->
+		</div><!-- #comment-## -->
+
+	</div> <!-- comments -->
+
+
+
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2011/03/27/its-always-friday-at-the-ark-music-factory/#respond" style="display:none;">Cancel reply</a></small></h3><p class="must-log-in">You must be <a href="http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F27%2Fits-always-friday-at-the-ark-music-factory%2F">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+			</div>
+
+		
+	<div class="hanging-titles">
+
+		<div class="related-posts">
+
+			<h3 class="related-posts-title">Related Posts</h3>
+
+			
+				<a class="related-post post-1145 post type-post status-publish format-standard hentry category-recording tag-authority tag-biden tag-digital tag-downloading tag-facilitator tag-riaa missing-thumbnail" id="post-1145" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/24/the-white-house-scolds-illegal-downloaders/" title="The White House Scolds Illegal Downloaders">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>The White House Scolds Illegal Downloaders</span></h4>				</a>
+
+				
+				<a class="related-post post-1109 post type-post status-publish format-standard hentry category-recording tag-awards tag-facilitators tag-grammys tag-homogenization tag-mtv tag-video-games missing-thumbnail" id="post-1109" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/video-game-music-gets-grammy-award-nod/" title="Video Game Music Gets Grammy Award Nod">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Video Game Music Gets Grammy Award Nod</span></h4>				</a>
+
+				
+				<a class="related-post post-1082 post type-post status-publish format-standard hentry category-recording tag-fox tag-glee tag-homogenization tag-radio tag-synergy missing-thumbnail" id="post-1082" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/10/glee-coming-to-a-radio-station-near-you/" title="&#8220;Glee&#8221;: Coming to a Radio Station Near You">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>&#8220;Glee&#8221;: Coming to a Radio Station Near You</span></h4>				</a>
+
+				
+				<a class="related-post post-719 post type-post status-publish format-standard hentry category-recording tag-advertising tag-downloading tag-eminem tag-linking tag-music tag-superbowl tag-synergy missing-thumbnail" id="post-719" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/02/04/lipton-casts-eminem-in-clay-for-super-bowl-ad/" title="Lipton Casts Eminem in Clay for Super Bowl Ad">
+					<div class="bg-image related-post-image" style="background-image: url( http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png );">
+						<img src="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/images/default-fallback-image.png" />
+					</div>
+					<h4 class="title"><span>Lipton Casts Eminem in Clay for Super Bowl Ad</span></h4>				</a>
+
+				
+		</div><!-- .related-posts -->
+
+	</div><!-- .section-inner.wide -->
+
+
+</article>
+
+		</div><!-- .content -->
+
+		<aside class="sidebar">
+
+	
+</aside>
+
+	</div><!-- .section-inner -->
+
+</main><!-- #site-content -->
+
+			<footer id="site-footer" class="bg-black">
+
+				
+				<div class="section-inner credits">
+
+					<p>
+						<span>&copy; 2020 <a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></span>
+												<span>Theme by <a href="https://www.andersnoren.se">Anders Norén</a></span>
+					</p>
+
+					
+				</div><!-- .section-inner.credits -->
+
+			</footer><!-- .footer -->
+
+		</div><!-- .body-inner -->
+		
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sullivan_ajax_search = {"ajaxurl":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","query_vars":"{\"page\":\"\",\"year\":\"2011\",\"monthnum\":\"03\",\"day\":\"27\",\"name\":\"its-always-friday-at-the-ark-music-factory\"}"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F2011%2F03%2F27%2Fits-always-friday-at-the-ark-music-factory%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mediaindustries11.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+	</body>
+</html>

@@ -1,0 +1,852 @@
+http://fys142f16.blogs.muhlenberg.edu/page/12/
+151
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title></title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+	<title>Page 12</title>
+<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://fys142f16.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://fys142f16.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f16.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-fonts-css'  href='//fonts.googleapis.com/css?family=Droid+Sans%3A400%2C700%7CDroid+Serif%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='yoko-style-css'  href='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/style.css?ver=2013-10-21' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f16.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f16.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f16.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f16.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f16.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f16.blogs.muhlenberg.edu/?wordfence_lh=1&hid=4F24F569F22F7A2E0C0ADB5BCC4379F9');
+</script>	<style type="text/css" id="yoko-themeoptions-css">
+		a {color: #3284ff;}
+		#content .single-entry-header h1.entry-title {color: #3284ff!important;}
+		input#submit:hover {background-color: #3284ff!important;}
+		#content .page-entry-header h1.entry-title {color: #3284ff!important;}
+		.searchsubmit:hover {background-color: #3284ff!important;}
+	</style>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support paged-12 no-js">
+<div id="page" class="clearfix">
+	<header id="branding">
+		<nav id="mainnav" class="clearfix">
+			<div class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-3074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3074"><a href="http://fys142f16.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-3075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3075"><a href="http://fys142f16.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-3076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3076"><a href="http://fys142f16.blogs.muhlenberg.edu/info-assign-grading/">Info/Assignment/Grading</a></li>
+<li id="menu-item-3077" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3077"><a href="http://fys142f16.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-3078" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3078"><a href="http://fys142f16.blogs.muhlenberg.edu/syllabus/">Schedule and Topic Outline</a></li>
+<li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-5"><a href="http://fys142f16.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>		</nav><!-- end mainnav -->
+
+		
+		<hgroup id="site-title">
+					<h1><a href="http://fys142f16.blogs.muhlenberg.edu/" title=""></a></h1>
+				<h2 id="site-description"></h2>
+				</hgroup><!-- end site-title -->
+
+								<img alt="" src="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/cropped-Screen-Shot-2016-09-01-at-9.20.53-AM-1.png" class="headerimage" width="1102" height="350">
+			
+		<nav id="subnav">
+					</nav><!-- end subnav -->
+</header><!-- end header -->
+
+<div id="wrap">
+<div id="main">
+	<div id="content">
+									
+				
+<article id="post-3672" class="post-3672 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 27, 2016<br/>
+		by Jiahui<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/identity-why-do-teens-seem-strange-online/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/identity-why-do-teens-seem-strange-online/" title="Permalink to Identity Why do Teens Seem Strange Online" rel="bookmark">Identity Why do Teens Seem Strange Online</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p style="text-align: justify">Today’s Teens who grew up in an internet age, now more widely embrace social media sites as a more nonfiction-oriented atmosphere instead of seeing the internet the place to satisfy the need they can’t get in the real world twenty years ago. The change of these dynamics of identity portrayed online also points out a big problem: the context. “While teens move between different social contexts—including mediated ones like those produced by networked publics and unmediated ones like those constructed at school—they manage social dynamics differently.”(Boyd, 2014, p29) Why this happened, we can find few reasons from this article.</p>
+<p style="text-align: justify">An example given is that a boy who applied to the Ivy League university showed a different face between his application and his MySpace profile. The possible reason is the boy comes from a non affluent family, and he want to get into a higher economic standing, but he afraid he will be alienated by his community. And the other example is that a boy didn’t like his family respond to messages from his friends and made him feel embarrassed, which let his social net life become a burden. These examples show, though the internet is not a real world for us, everything in net is connected to our real identity. So, sometimes we have to care more about our context and about who will see the profile because we have no way to change the conversation which will spread quickly through Internet. And we should know, once we posting something, everyone can see the contents. But “it is impossible and unproductive to account for the full range of plausible interpretation”. (Boyd, 2014, p26) So if we want to post the message to the particular person that we think who will see the message is impossible. But what can teens do to let their social media life more comfortable, more joyful and more authentic?</p>
+<p style="text-align: justify">The things we can actually do in such a complex context are to manage our networked setting. We can use different social media to communicate with different kinds of people. For example, using FaceBook to chat with our family and friends, and using Twitter to meet the people that have same habit and topic, and using Skype to communicate with the person that you know through other ways. The advantage in doing these things is we can comfortably navigate our identity and interest in social contexts and switch social contexts and acting accordingly.</p>
+<p style="text-align: justify">
+<p style="text-align: justify">Boyd, D. (2014) . <em>It’s Complicated: The social Lives of Networked Teens. </em>New Haven: Yale University Press.</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/identity-why-do-teens-seem-strange-online/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3672 -->
+								
+				
+<article id="post-3670" class="post-3670 post type-post status-publish format-standard hentry category-blog-assignment tag-apps tag-digital-identity tag-offline-identity">
+
+	<div class="entry-details">
+				<p>September 27, 2016<br/>
+		by Justin Dalena<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/personal-identity-in-the-age-of-the-app/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/personal-identity-in-the-age-of-the-app/" title="Permalink to Personal Identity in the Age of the App" rel="bookmark">Personal Identity in the Age of the App</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<div class="t pgm0 pgx0 pgh1 pgy0 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">“…but this picture looks like I’m having more fun, right?” “Our</div>
+<div class="t pgm0 pgx1 pgh1 pgy1 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">lives look way more exciting on-line than they actually are. My</div>
+<div class="t pgm0 pgx1 pgh1 pgy2 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">friends laugh as they carefully decide between Instagram filters</div>
+<div class="t pgm0 pgx1 pgh1 pgy3 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">for their chosen photos. I sit there in awe, watching them</div>
+<div class="t pgm0 pgx1 pgh1 pgy4 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">manufacture a fictitious life solely for likes, and I realize I am no</div>
+<div class="t pgm0 pgx1 pgh1 pgy5 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">different. I, too, create a world online that is far more intriguing</div>
+<div class="t pgm0 pgx1 pgh1 pgy6 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">than my own begging the question “has my search for my true</div>
+<div class="t pgm0 pgx1 pgh1 pgy7 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">identity been so compromised by the internet that neither I nor</div>
+<div class="t pgm0 pgx1 pgh1 pgy8 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">my viewers know the real me?</div>
+<div class="t pgm0 pgx0 pgh1 pgy9 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">Almost everyone online appears to be crafting a persona that</div>
+<div class="t pgm0 pgx1 pgh1 pgya pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">is not quite synonymous with their real-life self. We find</div>
+<div class="t pgm0 pgx1 pgh1 pgyb pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">ourselves caught up in the world of appearances, wrapped up in</div>
+<div class="t pgm0 pgx1 pgh1 pgyc pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">what’s cool and what’s not, what’s more attractive to my peers</div>
+<div class="t pgm0 pgx1 pgh1 pgyd pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">and potential employers and what’s not. We are living more for</div>
+<div class="t pgm0 pgx1 pgh1 pgye pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">our resumes than for our actual enjoyment. Instead of creating a</div>
+<div class="t pgm0 pgx1 pgh1 pgyf pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">true representation of ourselves we are constructing an identity</div>
+<div class="t pgm0 pgx1 pgh1 pgy10 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">based on what we think others what us to be. We have become</div>
+<div class="t pgm0 pgx1 pgh1 pgy11 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">“objects of quantifiable value,” the value being that of worth to</div>
+<div class="t pgm0 pgx1 pgh1 pgy12 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">others instead of ourselves (Gardner). Is that really how</div>
+<div class="t pgm0 pgx1 pgh1 pgy13 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">we want to define ourselves? Sadly, we don’t take the time to</div>
+<div class="t pgm0 pgx1 pgh1 pgy14 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">determine our own self-worth and develop our own personal</div>
+<div class="t pgm0 pgx1 pgh1 pgy15 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">identity instead the digital age has caused us to rely on others for</div>
+<div class="t pgm0 pgx1 pgh1 pgy16 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">reassurance and a definition of self and that’s an alarming</div>
+<div class="t pgm0 pgx1 pgh1 pgy17 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">commentary.</div>
+<div class="t pgm0 pgx1 pgh1 pgy17 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0"></div>
+<div class="t pgm0 pgx1 pgh1 pgy17 pgff1 pgfs0 pgfc0 pgsc0 pgls0 pgws0">Gardner, H., &amp; Davis, K. (2014). <i>The app generation: How today&#8217;s youth navigate identity, intimacy, and imagination in a digital world</i>. New Haven: Yale University Pres</div>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/apps/" rel="tag">apps</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" rel="tag">digital identity</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/offline-identity/" rel="tag">offline identity</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/personal-identity-in-the-age-of-the-app/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3670 -->
+								
+				
+<article id="post-3668" class="post-3668 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 27, 2016<br/>
+		by Jamie Andrich<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/the-digital-identity-divide/#comments">1 Comment</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/the-digital-identity-divide/" title="Permalink to The digital identity divide" rel="bookmark">The digital identity divide</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>&nbsp;</p>
+<p><span style="font-weight: 400">This article, “The digital identity divide”</span> <span style="font-weight: 400">written by Joanna Goode, incorporates thoughts, ideas and conclusions that people have a technological identity. Goode mentions that this identity is determined by a number of life factors, including education, parents, family, economics and social influences. She discusses how this technology identity will eventually shape each individual person. She claims the way a person perceives their technology identity can ultimately affect the outcome of their life. She believes these differences, with regard to different stages of technology advancement, cause a thing called the digital divide.</span></p>
+<p>This digital divide can be a result of a less affluent and lower income person, someone of color or women not having the money to afford, or be exposed to, the latest technology. “Researchers found that while the students from primarily Latino and African American high-poverty high schools were relegated to low-level vocational computer courses, the affluent school which served the highest numbers of white students provided several college preparatory computing courses” (Goode, 4). Goode goes on to reference that people with the means to afford the latest, greatest technology or go to advanced/higher ranked schools and Colleges have an advantage and therefore their technology identity is superior. Again, these discrepancies cause something called the digital divide. These different levels of technology, based on factors, mostly social, are what drives this digital divide.</p>
+<p>Goode mentions how she conducted a study measuring the technology advancement levels of a few university students based on a number of factors. And, it was determined that the greatest level of learning/advancement came from those with the more access to technology in general.</p>
+<p><span style="font-weight: 400">I can certainly see her point of view as it makes sense that less fortunate people, and people of low socioeconomic status would be affected in this way since they don’t have a fair amount of access or exposure to the most advanced technology. Goode’s study is relevant because the technology world is making great advancements everyday and is shaping the world and people that have access to it and the people that don’t. </span></p>
+<p>Goode, Joanna. “The Digital Identity Divide: how technology knowledge impacts college students.” New Media &amp; Society 12, no. 3 (May 1, 2010): 497–513. doi:10.1177/1461444809343560.</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/the-digital-identity-divide/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3668 -->
+								
+				
+<article id="post-3661" class="post-3661 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 27, 2016<br/>
+		by Zhijiang Liu (Jerries)<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/digital-divide-in-technology/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/digital-divide-in-technology/" title="Permalink to Digital divide in Technology" rel="bookmark">Digital divide in Technology</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Science and technology have changed our life thoroughly throughout the history, especially in the last century. There is a prevailing understanding about science and technology among the general public that they are the same thing of two different names but they are acutally two things. Science is kind of series of theorrtical concepts and people can accept it or not, and it will not affect commom people&#8217;s life to a large extent, but it&#8217;s a different way when it comes to technology because technology has more pratical effect on people. People have to endure the results of the pactical applicance of technology whether they are good or not, such as the air pollution, and it all happens without people&#8217;s acceptance, for it all depends on the local governments&#8217; or even the nations&#8217; decision. However,  through this article, I have a new cognition.</p>
+<p>Originally, I always thought that science and technology are not related to gender, higher education and identity, until I saw this article. An example of this article, &#8220;There is a survey about the use of the Internet by freshman students, the annual Freshman Survey disaggregates internet access by race, gender and socioeconomic status. Analysis of the 2004 Freshman Survey determined that the digital divide was actually widening for African American students, whose frequency of personal computer use was significantly lower than other ethnic groups.&#8221; (Goode, 498). Therefore, from this instance, we can know that we really do not have the absolute equality and fairness in this digital world. From my personal perspective, we should do something to change this question, because i don&#8217;t think this is a good behavior.</p>
+<p>&nbsp;</p>
+<p>Goode, Joanna. “The Digital Identity Divide: How Technology Knowledge Impacts College Students.” New Media &amp; Society 12, no. 3 (May 1, 2010): 497–513</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/digital-divide-in-technology/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3661 -->
+								
+				
+<article id="post-3656" class="post-3656 post type-post status-publish format-standard hentry category-blog-assignment tag-socialmedia tag-facebook tag-identity tag-teens">
+
+	<div class="entry-details">
+				<p>September 27, 2016<br/>
+		by Sarah Kremen<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/social-media-trustworthy-or-inaccurate/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/social-media-trustworthy-or-inaccurate/" title="Permalink to Social Media: Trustworthy or Inaccurate?" rel="bookmark">Social Media: Trustworthy or Inaccurate?</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>When I got a Facebook when I was 12, I was ecstatic because it was my first time using social media. I didn&#8217;t create an account to truly expose my identity, however. I just sought to communicate with my friends and acquaintances. In 7th grade, there was a trend with the girls in my school to change your last name on Facebook to the last name of your favorite male singer. Pretty soon I was no longer Sarah Kremen; I was Sarah Bublé, a 13-year-old with a Michael Bublé obsession. It was also a trend to be &#8220;in a relationship&#8221; with one of your best friends to make it seem like you weren&#8217;t single. To this day, I am still &#8220;married&#8221; to my best friend Naomi. It&#8217;s been so for 5 years.</p>
+<p>It turns out, this trend wasn&#8217;t just a trend for teenagers at South Side Middle School. In <em>It&#8217;s Complicated : The Social Lives of Networked Teens </em>by Danah Boyd, social media is a toss-up because while some teens feel the need to take it seriously and make their profile as accurate as possible to depict who they truly are, others find &#8220;playful ways&#8221; to &#8220;respond to social media sites&#8217; requests for information&#8221; (Boyd 33). An example of a &#8220;playful way&#8221; according to the text is how teens like to make their best friends their &#8220;siblings&#8221; on Facebook to show how close they are. I can relate to this because on my Facebook it says I have 6 sisters, even though I only have 1.</p>
+<p>Though it is funny to fabricate information on social media, doesn&#8217;t it defeat the purpose of social media? Now that I&#8217;m no longer 13, I depend on Facebook for providing accurate information about people when I go on their profiles. For example, after I came across my roommate&#8217;s profile for the first time, I assumed that everything she established about herself was true so I wouldn&#8217;t be &#8220;catfished&#8221; in essence. Nowadays, we are becoming more reliant on social media to learn about each other, which is concerning because it is so easy to create an inaccurate depiction of yourself.</p>
+<p>Danah Boyd. (2014). It’s Complicated : The Social Lives of Networked Teens. New Haven: Yale University Press. Retrieved from <a href="http://web.b.ebscohost.com/ehost/detail/detail?sid=3d64ff22-5663-46e5-91f0-64bd88dbe717%40sessionmgr105&amp;vid=0&amp;hid=128&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#AN=698181&amp;db=nlebk">http://web.b.ebscohost.com/ehost/detail/detail?sid=3d64ff22-5663-46e5-91f0-64bd88dbe717%40sessionmgr105&amp;vid=0&amp;hid=128&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#AN=698181&amp;db=nlebk</a></p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" rel="tag">#socialmedia</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" rel="tag">Facebook</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" rel="tag">Identity</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/teens/" rel="tag">teens</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/27/social-media-trustworthy-or-inaccurate/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3656 -->
+								
+				
+<article id="post-3639" class="post-3639 post type-post status-publish format-standard hentry category-blog-assignment tag-digital-identity tag-social-media tag-ted-talk">
+
+	<div class="entry-details">
+				<p>September 26, 2016<br/>
+		by Melissa Carmilani<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/digital-identity/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/digital-identity/" title="Permalink to Digital Identity" rel="bookmark">Digital Identity</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Our digital identity is the person we want people to think we are. We only share with the world the things we want them to know about us. We can be whoever we want digitally, because we control what people see. We have all different versions of ourselves. As Sherry Turkle states in <em>Sherry Turkle of MIT: How social media impacts to your identity (Part 2)</em>, &#8220;We have the version of our self we present to our friends and even our families in real life, then we have the version of ourselves we have in our private moments with ourselves, we have the version of our self online like on Facebook or Twitter, and we may have secret accounts where we have another version of our self that we prefer to hide from others&#8221;. We behave differently and express ourselves differently in various settings. I know that I behave in different settings. For example, the head of youth group from my church at home requested to follow my Instagram and I did not let him because it is not professional and I do not need him to see me in a different setting and see what I do outside of the church. My Instagram is for my peers and family to see my photos, I do not need a middle aged man that works at my church to see my photos.</p>
+<p>In the other video, <em>Fake It- to control your digital identity: Pernille Tranberg at TEDxOxford, </em>it is actually recommended to use fake identities on social media like Facebook. This way your friends can know that it is actually you. It is like a screen name used for video games and there is a website that creates the fake name for you to make it easy. Creating this fake identity is all about &#8220;Controlling who knows what about you when&#8221; (Tranberg). It isn&#8217;t meant to create a whole other persona, it is to protect yourself from strangers and others that do not need to know everything about you because people (especially teens in my experience) tend to over share on social medias.</p>
+<div class="csl-bib-body">
+<div class="csl-entry">“Sherry Turkle of MIT: How Social Media Impacts to Your Identity (Part 2).” <i>SIMON MAINWARING</i>,     October 10, 2011. <a href="http://simonmainwaring.com/facebook/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/">http://simonmainwaring.com/facebook/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/</a>.</div>
+</div>
+<div class="csl-entry"></div>
+<div class="csl-bib-body">
+<div class="csl-entry">TEDx Talks. <i>Fake It &#8211; to Control Your Digital Identity: Pernille Tranberg at TEDxOxford</i>, 2013. <a href="https://www.youtube.com/watch?v=cRrgD-4-D8s">https://www.youtube.com/watch?v=cRrgD-4-D8s</a>.</div>
+</div>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" rel="tag">digital identity</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" rel="tag">Social Media</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/ted-talk/" rel="tag">TED TALK</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/digital-identity/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3639 -->
+								
+				
+<article id="post-3647" class="post-3647 post type-post status-publish format-standard hentry category-blog-assignment tag-challenge tag-facebook tag-perception">
+
+	<div class="entry-details">
+				<p>September 26, 2016<br/>
+		by abbey glassman<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/dangers-of-social-media/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/dangers-of-social-media/" title="Permalink to Dangers of Social Media" rel="bookmark">Dangers of Social Media</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p><span style="font-weight: 400">         The first chapter of It’s Complicated explains the difficulty of trying to create a persona on social media because everyone perceives things differently. This chapter discusses an example where a girl was tagged in a photo holding a beer on Facebook. Although she did not post the photo, friends were notified that she was tagged in it. To most people this picture creates a poor image of the girl ;however, it is just a photo and viewers are not clear of the context. She may have been holding the drink for a friend, but not enough information is given to understand what is happening. In chapter 1 boyd (2014) states, “ Without a shared sense of context, hanging out online becomes burdensome. “ (p. 36) </span></p>
+<p><span style="font-weight: 400">            People are very quick to judge online and there is not much room for explanation. There is no way to know how a post can be perceived by everyone and therefore there is no way to insure that it is perceived correctly. One quick tweet or post on instagram and the rumor mills have started. One person screenshots the post and declares her opinion about the post and it is then spread like wildfire. People thrive on gossip and they read too much into posts that were supposed to be fun and lighthearted. This is the black hole of society. Everybody assumes without thinking. Everyone judges without questioning. These mistakes that we all make are much harder to make in person as you simply ask a question as the conversation flows.</span></p>
+<p><span style="font-weight: 400">            There is no conversation on social media, only little bits and pieces that have no context or room for question and answer. How do we fix this? Boyd repetitively mentioned how social media is a challenge; a challenge to our identity and a challenge to our peers. Is this a challenge we should try to overcome or  should we take after </span><span style="font-weight: 400"> Brian O’Neill,  in the article </span><i><span style="font-weight: 400">Teens Who Say No To Social Media,</span></i><span style="font-weight: 400"> who chose to talk in person with his friends and avoid social media all together. (Rosen, 2016) </span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">boyd, d. (2014). </span><i><span style="font-weight: 400">It’s complicated: The social lives of networked teens. </span></i><span style="font-weight: 400">New Haven: Yale University Press. Retrieved <a href="http://web.a.ebscohost.com/ehost/detail/detail?sid=91e335a1-6983-4f39-a0fe-e66fdec392ab%40sessionmgr4009&amp;vid=0&amp;hid=4214&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#AN=698181&amp;db=nlebk">from http://web.a.ebscohost.com/ehost/detail/detail?sid=91e335a1-6983-4f39-a0fe-e66fdec392ab%40sessionmgr4009&amp;vid=0&amp;hid=4214&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#AN=698181&amp;db=nlebk </a></span></p>
+<p><span style="font-weight: 400">Rosen, C. (2016, August 25). </span><i><span style="font-weight: 400">Teens Who Say No to Social Media</span></i><span style="font-weight: 400">. Wall Street Journal. Retrieved from </span><a href="http://www.wsj.com/articles/teens-who-say-no-to-social-media-1472136877"><span style="font-weight: 400">http://www.wsj.com/articles/teens-who-say-no-to-social-media-1472136877</span></a><span style="font-weight: 400">.</span></p>
+<p>&nbsp;</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/challenge/" rel="tag">challenge</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" rel="tag">Facebook</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" rel="tag">perception</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/dangers-of-social-media/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3647 -->
+								
+				
+<article id="post-3642" class="post-3642 post type-post status-publish format-standard hentry category-blog-assignment tag-digital-identity tag-social-media">
+
+	<div class="entry-details">
+				<p>September 26, 2016<br/>
+		by Heather Downey<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/describe-myself-which-one/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/describe-myself-which-one/" title="Permalink to Describe Myself? Which One?" rel="bookmark">Describe Myself? Which One?</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>When asked to “describe yourself,” the response is usually your name, where you’re from, what organizations you are a part of, and maybe some of your most distinguishing qualities. However, an online identity is a lot more complicated. In her TED talk, Pernielle Tranberg confesses that she had a fake online identity for 5 years to avoid companies from knowing too much (Tranberg, 2013). She pushes her audience to not reveal lots of information online, although many people post everything about themselves on the Internet. Social media has pushed the boundary of what privacy is; the scariest part is that so many people are unaware of their online sense (or senses) of self. In her interview, Sherry Turkle mentions how she met a young man who claims that “Twitter has trained me that I have to be ironic and witty,…but I can’t get followers on Twitter unless I’m a certain kind of ironic and witty person” (Mainwaring, 2011). Personally I can understand the idea of a multiplicity of identities online: I post different photos to Instagram than I would Facebook. Specifically, my Instagram posts are more carefully edited, while I would post almost anything on Facebook. Sherry Turkle wants her audience to embrace the idea of living multiple online lives. Any technological evolution is essentially impossible to reverse, since all information online is saved and used by companies. So while Tranberg encourages us to hide oursleves, Turkle understands that the world is evolving and that us humans need to evolve along with the technology.</p>
+<p>&nbsp;</p>
+<p>Works Cited</p>
+<p>Tranberg, P. [TEDxTalks]. (2013, April 10).  <em>Fake It – to control your digital identity: Pernille Tranberg at TEDxOxford</em> [Video file].  Retrieved from <a href="http://www.youtube.com/watch?v=cRrgD-4-D8s">http://www.youtube.com/watch?v=cRrgD-4-D8s</a>.</p>
+<p>Wainmaring, S. (2011, October 10).  <em>Sherry Turkle of MIT: How social media impacts to your identity (Part 2)</em> [Blog post].  Retrieved from <a href="http://simonmainwaring.com/social-networking/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/">http://simonmainwaring.com/social-networking/sherry-turkle-of-mit-how-social-media-impacts-to-your-identity-part-2/</a>.</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" rel="tag">digital identity</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" rel="tag">Social Media</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/describe-myself-which-one/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3642 -->
+								
+				
+<article id="post-3641" class="post-3641 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-details">
+				<p>September 26, 2016<br/>
+		by Lauren Smartenko<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/divide-in-technology/#respond">0 comments</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/divide-in-technology/" title="Permalink to Divide in Technology" rel="bookmark">Divide in Technology</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p>Today, technology is such a common used thing that we don&#8217;t think about how race, ethnicity, and income can come into play. Based on the Sage journal &#8220;The digital identity divide: how technology impacts college students&#8221; by Joanna Goode, it is very easy for demographics to effect the way people, specifically college students, can utilize technology. Goode said;</p>
+<p>&#8220;For many college students, not having a strong technology identity is a product of an unequal high school education and disparities in home resources, yet the consequences of one’s technology identity has a powerful influence on the attitudes and decisions stu- dents make regarding their academic and life plans. It is these constraints and affor- dances of a technology identity – which seep into academic, social and work life – that truly reflect the depths of the digital divide&#8221; (Goode, 509).</p>
+<p>Based on the article, the differences in learning experiences with technology can greatly effect your education, and relationship with technology. For example, Lara was a girl who was not as exposed to technology as most, and continued to struggle technologically in college. She was emigrated from Mexico, and is from a low income family. For the other two boys, Jeff and Scott, who were better off economically, technology was a lot more accessible to them and therefore they succeeded more academically when it came to technology. It is clear that the difference in social class, race, and ethnicity can really have a large impact on your life as a college student. Having a low technology proficiency like Lara will haunt your academic career (Goode, 504).</p>
+<p>All in all, being proficient in technology enables you to succeed academically. It is evident from the stories told in the online journal that unfortunately, economic status, ethnicity, etc, really does effect your relationship with technology and then therefore does effect your education greatly.</p>
+<div class="csl-bib-body">
+<div class="csl-entry">Goode, Joanna. “The Digital Identity Divide: How Technology Knowledge Impacts College Students.” <i>New Media &amp; Society</i> 12, no. 3 (May 1, 2010): 497–513. doi:10.1177/1461444809343560.</div>
+</div>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a> | 
+									<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/26/divide-in-technology/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3641 -->
+								
+				
+<article id="post-3614" class="post-3614 post type-post status-publish format-standard hentry category-technology-autobiography tag-autobiography tag-computer tag-digital tag-internet tag-technology">
+
+	<div class="entry-details">
+				<p>September 22, 2016<br/>
+		by Justin Dalena<br/>
+		<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/22/technology-autobiography-5/#comments">1 Comment</a></p>
+	</div><!-- end entry-details -->
+    
+	<header class="entry-header">
+			<h2 class="entry-title"><a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/22/technology-autobiography-5/" title="Permalink to Technology Autobiography" rel="bookmark">Technology Autobiography</a></h2>
+	</header><!-- end entry-header -->
+        
+	<div class="entry-content">
+					<p class="p1"><span class="s1">“Did they have computers when you were younger, or were they still using feathers and ink?” While I do not remember my 5 year-old self asking this question, my mother and siblings will not let me live it down. A world without technology seems like a lifetime ago; a lifetime I have never experienced.</span></p>
+<p class="p1"><span class="s1">            For as long as I can remember, I have lived in a tech world. From the time I wake up in the morning, until the time I go to bed, I am constantly utilizing technology. “Teens ages 13 to 17 are also going online frequently. Aided by the convenience and constant access provided by mobile, 92% of teens report going online daily – with 24% using the internet “almost constantly,” 56% going online several times a day and 12% reporting once-a-day use” (Lenhart). In the matter of seconds the world is at my fingertips connecting me to everyone and everything I could ever imagine plus more. My life, for all intent and purposes, revolves around technology. From my smartphone to my laptop and wireless printer, my video games to my tablet I spend a majority of my life and waking hours using some form of technology.</span></p>
+<p class="p1"><span class="s1">            My experience with technology began at a very young age. At the mere age of 4 I was enrolled in a computer class. While the class did not go into depth about computers and all that could be done with these devices, it did expose me to a world that would become commonplace later in life. As I grew I graduated from computer games, to Nintendo Gameboys to PSPs and currently Xbox One it allowed me to take my gaming mobile. Everywhere I went my device came with me. I never thought twice about it, and it seemed like I was not the only one. Everywhere I went I was surrounded by others enamored with (not to mention glued to) their devices&#8211; parents on their cell phones, children on Gameboys, employees on their computers. Technology was all around me and as I grew it only surrounded me more, tightening its grasp and allure.</span></p>
+<p class="p1"><span class="s1">            As I matured so did my relationship with technology. With each new technological advancement my world grew larger, my reach became broader and the endless possibilities available to me became more abundant. </span></p>
+<p class="p1"><span class="s1">            My family went from a household with a communal phone attached to the wall and a single desktop computer that would require us to plug into the phone line, leaving the phone incapacitated during use to laptops and smartphones connected over Wi-Fi for all and tremendous independence. </span></p>
+<p class="p1"><span class="s1"> With age I have begun to better appreciate all the benefits the ever expanding world of technology offers me. Devices such as GoogleDocs has been incredibly beneficial to me in my studies throughout high school and now in college. In many of my classes over the years I noticed an increased focus on group projects being assigned to me by my teachers which posed a challenge to me. Being the 3 sport athlete that I was throughout high school, it was not always easy finding time to meet up with my other group members to work on our assignment together. To make things easier on everyone we typically did work through GoogleDocs so that we could collaboratively work on our different parts of the project when time allowed while also enabling us to help and critique other members of the group through GroupMe. The ease of accessibility for everyone enabled more work to get done while not wasting other group members because I could not physically be there to work on the assignment with them. </span></p>
+<p class="p2"><span class="s1">Frankly, I cannot imagine a world without technology. A failure to maintain a keen knowledge of all forms of technology will undoubtedly present challenges and a loss of opportunities in almost all aspects of my life. I don’t<span class="Apple-converted-space">  </span>intend to pass those opportunities by.</span></p>
+<p class="p2">Lenhart, A. (2015, April 09). Teens, Social Media &amp; Technology Overview 2015. Retrieved September 20, 2016, from http://www.pewinternet.org/2015/04/09/teens-social-media-technology-2015/</p>
+		
+								
+				
+		<footer class="entry-meta">
+			<p>			Categories: <a href="http://fys142f16.blogs.muhlenberg.edu/category/technology-autobiography/" rel="category tag">Technology Autobiography</a> | 
+									Tags: <a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" rel="tag">autobiography</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/computer/" rel="tag">computer</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital/" rel="tag">digital</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" rel="tag">Internet</a>, <a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a> | 
+						<a href="http://fys142f16.blogs.muhlenberg.edu/2016/09/22/technology-autobiography-5/">Permalink </a>
+			</p>
+	</footer><!-- end entry-meta -->
+	</div><!-- end entry-content -->
+			
+</article><!-- end post-3614 -->
+								
+													<nav id="nav-below">
+						<div class="nav-previous"><a href="http://fys142f16.blogs.muhlenberg.edu/page/13/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+						<div class="nav-next"><a href="http://fys142f16.blogs.muhlenberg.edu/page/11/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+					</nav><!-- end nav-below -->
+							
+	</div><!-- end content -->
+
+
+<div id="secondary" class="widget-area" role="complementary">
+			<aside id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6"><a href="http://fys142f16.blogs.muhlenberg.edu/files/2016/09/FYS142DigitalWorldF16Final.pdf">Syllabus</a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-3080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3080"><a href="http://fys142f16.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-3910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3910"><a href="http://libraryguides.muhlenberg.edu/digitalworld">Library Research Guide</a></li>
+<li id="menu-item-8" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+<li id="menu-item-7" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+</ul></div></aside><aside id="nav_menu-8" class="widget widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-3311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3311"><a href="http://fys142f16.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-3542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3542"><a href="http://fys142f16.blogs.muhlenberg.edu/technology-autobiography/">Technology Autobiography</a></li>
+<li id="menu-item-3630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3630"><a href="http://fys142f16.blogs.muhlenberg.edu/peer-facilitation/">Peer Facilitation</a></li>
+<li id="menu-item-3903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3903"><a href="http://fys142f16.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3904"><a href="http://fys142f16.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-4113" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4113"><a href="http://fys142f16.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+<li id="menu-item-4120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4120"><a href="http://fys142f16.blogs.muhlenberg.edu/da10-word-clouds/">DA#10: Word Clouds, Snapchat Stories, Images</a></li>
+</ul></div></aside><aside id="nav_menu-9" class="widget widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-3285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3285"><a href="http://fys142f16.blogs.muhlenberg.edu/da1-create-blogs-acct/">DA#1: Create ‘Berg Blogs Account</a></li>
+<li id="menu-item-3321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3321"><a href="http://fys142f16.blogs.muhlenberg.edu/da-zotero/">DA#2: Zotero</a></li>
+<li id="menu-item-3546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3546"><a href="http://fys142f16.blogs.muhlenberg.edu/da3-tech-profile/">DA#3: Technology Profile Survey</a></li>
+<li id="menu-item-3545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3545"><a href="http://fys142f16.blogs.muhlenberg.edu/da4-twitter/">DA#4: Twitter</a></li>
+<li id="menu-item-3629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3629"><a href="http://fys142f16.blogs.muhlenberg.edu/da5-linkedin-profile/">DA#5: Create a LinkedIn Profile</a></li>
+<li id="menu-item-3711" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3711"><a href="http://fys142f16.blogs.muhlenberg.edu/da6-google-yourself/">DA#6: Google Yourself</a></li>
+<li id="menu-item-3981" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3981"><a href="http://fys142f16.blogs.muhlenberg.edu/da7-one-button-studio/">DA#7: One Button Studio</a></li>
+<li id="menu-item-3982" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3982"><a href="http://fys142f16.blogs.muhlenberg.edu/da8-dropbox/">DA#8: Dropbox for File Management</a></li>
+<li id="menu-item-4111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4111"><a href="http://fys142f16.blogs.muhlenberg.edu/da9-google-docs/">DA#9: Google Docs</a></li>
+</ul></div></aside>		</div><!-- #secondary .widget-area -->
+</div><!-- end main -->
+
+		<div id="tertiary" class="widget-area" role="complementary">
+			<aside id="search-6" class="widget widget_search"><form role="search" method="get" class="searchform" action="http://fys142f16.blogs.muhlenberg.edu/" >
+		<div>
+		<input type="text" class="search-input" value="" name="s" id="s" />
+		<input type="submit" class="searchsubmit" value="Search" />
+		</div>
+		</form></aside>		<aside id="recent-posts-10" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/da10/">DA#10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/09/4201/">Digital Activity #10</a>
+											<span class="post-date">December 9, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/digital-activity-10-8/">Digital Activity 10</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/08/fys-142-word-cloud/">Fys 142 word cloud</a>
+											<span class="post-date">December 8, 2016</span>
+									</li>
+											<li>
+					<a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-7/">Digital Activity 10</a>
+											<span class="post-date">December 7, 2016</span>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-10" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10/#comment-147">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-word-cloud-3/#comment-146">Digital Activity 10 Word Cloud</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-5/#comment-145">Digital Activity #10</a></li><li class="recentcomments"><span class="comment-author-link">Jiahui</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/4181/#comment-144"></a></li><li class="recentcomments"><span class="comment-author-link">Justin Dalena</span> on <a href="http://fys142f16.blogs.muhlenberg.edu/2016/12/07/digital-activity-10-4/#comment-143">Digital Activity #10</a></li></ul></aside><aside id="tag_cloud-7" class="widget widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys142/" class="tag-cloud-link tag-link-76331 tag-link-position-1" style="font-size: 17.586956521739pt;" aria-label="#fys142 (12 items)">#fys142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/gaming/" class="tag-cloud-link tag-link-108 tag-link-position-2" style="font-size: 9.8260869565217pt;" aria-label="#gaming (3 items)">#gaming</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/socialmedia/" class="tag-cloud-link tag-link-94010 tag-link-position-3" style="font-size: 11.347826086957pt;" aria-label="#socialmedia (4 items)">#socialmedia</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/apps/" class="tag-cloud-link tag-link-8005 tag-link-position-4" style="font-size: 8pt;" aria-label="apps (2 items)">apps</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/autobiography/" class="tag-cloud-link tag-link-179921 tag-link-position-5" style="font-size: 12.565217391304pt;" aria-label="autobiography (5 items)">autobiography</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/blog3/" class="tag-cloud-link tag-link-179948 tag-link-position-6" style="font-size: 8pt;" aria-label="blog3 (2 items)">blog3</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/bots/" class="tag-cloud-link tag-link-175844 tag-link-position-7" style="font-size: 8pt;" aria-label="bots (2 items)">bots</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/children/" class="tag-cloud-link tag-link-52 tag-link-position-8" style="font-size: 9.8260869565217pt;" aria-label="children (3 items)">children</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/computer/" class="tag-cloud-link tag-link-179934 tag-link-position-9" style="font-size: 8pt;" aria-label="computer (2 items)">computer</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/control/" class="tag-cloud-link tag-link-8016 tag-link-position-10" style="font-size: 8pt;" aria-label="control (2 items)">control</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/copyright/" class="tag-cloud-link tag-link-61 tag-link-position-11" style="font-size: 8pt;" aria-label="copyright (2 items)">copyright</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/cyber-bullying/" class="tag-cloud-link tag-link-74472 tag-link-position-12" style="font-size: 8pt;" aria-label="cyber bullying (2 items)">cyber bullying</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital/" class="tag-cloud-link tag-link-300 tag-link-position-13" style="font-size: 8pt;" aria-label="digital (2 items)">digital</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-identity/" class="tag-cloud-link tag-link-179941 tag-link-position-14" style="font-size: 13.630434782609pt;" aria-label="digital identity (6 items)">digital identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-immigrants/" class="tag-cloud-link tag-link-180027 tag-link-position-15" style="font-size: 8pt;" aria-label="Digital Immigrants (2 items)">Digital Immigrants</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-natives/" class="tag-cloud-link tag-link-94041 tag-link-position-16" style="font-size: 11.347826086957pt;" aria-label="Digital Natives (4 items)">Digital Natives</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/digital-world/" class="tag-cloud-link tag-link-179987 tag-link-position-17" style="font-size: 8pt;" aria-label="Digital World (2 items)">Digital World</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/domain-of-ones-own/" class="tag-cloud-link tag-link-20890 tag-link-position-18" style="font-size: 9.8260869565217pt;" aria-label="Domain of One&#039;s Own (3 items)">Domain of One&#039;s Own</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-19" style="font-size: 12.565217391304pt;" aria-label="Facebook (5 items)">Facebook</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fake/" class="tag-cloud-link tag-link-179979 tag-link-position-20" style="font-size: 8pt;" aria-label="fake (2 items)">fake</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/future/" class="tag-cloud-link tag-link-30652 tag-link-position-21" style="font-size: 8pt;" aria-label="future (2 items)">future</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/fys-142/" class="tag-cloud-link tag-link-179938 tag-link-position-22" style="font-size: 9.8260869565217pt;" aria-label="fys 142 (3 items)">fys 142</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-23" style="font-size: 17.130434782609pt;" aria-label="Google (11 items)">Google</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/google-myself/" class="tag-cloud-link tag-link-179968 tag-link-position-24" style="font-size: 8pt;" aria-label="google myself (2 items)">google myself</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/government/" class="tag-cloud-link tag-link-8189 tag-link-position-25" style="font-size: 8pt;" aria-label="government (2 items)">government</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/identity/" class="tag-cloud-link tag-link-15565 tag-link-position-26" style="font-size: 14.391304347826pt;" aria-label="Identity (7 items)">Identity</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/images/" class="tag-cloud-link tag-link-30047 tag-link-position-27" style="font-size: 8pt;" aria-label="Images (2 items)">Images</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-28" style="font-size: 11.347826086957pt;" aria-label="Instagram (4 items)">Instagram</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-29" style="font-size: 15.152173913043pt;" aria-label="Internet (8 items)">Internet</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/internet-privacy/" class="tag-cloud-link tag-link-29524 tag-link-position-30" style="font-size: 8pt;" aria-label="internet privacy (2 items)">internet privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ipads/" class="tag-cloud-link tag-link-94044 tag-link-position-31" style="font-size: 8pt;" aria-label="iPads (2 items)">iPads</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/jim-groom/" class="tag-cloud-link tag-link-179995 tag-link-position-32" style="font-size: 8pt;" aria-label="jim groom (2 items)">jim groom</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ownership/" class="tag-cloud-link tag-link-179962 tag-link-position-33" style="font-size: 13.630434782609pt;" aria-label="ownership (6 items)">ownership</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/perception/" class="tag-cloud-link tag-link-179942 tag-link-position-34" style="font-size: 9.8260869565217pt;" aria-label="perception (3 items)">perception</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/personal-information/" class="tag-cloud-link tag-link-8060 tag-link-position-35" style="font-size: 8pt;" aria-label="Personal Information (2 items)">Personal Information</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/phone/" class="tag-cloud-link tag-link-160555 tag-link-position-36" style="font-size: 8pt;" aria-label="phone (2 items)">phone</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/police/" class="tag-cloud-link tag-link-180008 tag-link-position-37" style="font-size: 8pt;" aria-label="police (2 items)">police</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-38" style="font-size: 20.478260869565pt;" aria-label="privacy (19 items)">privacy</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/social-media/" class="tag-cloud-link tag-link-519 tag-link-position-39" style="font-size: 15.913043478261pt;" aria-label="Social Media (9 items)">Social Media</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/tagxedo/" class="tag-cloud-link tag-link-180078 tag-link-position-40" style="font-size: 9.8260869565217pt;" aria-label="Tagxedo (3 items)">Tagxedo</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-41" style="font-size: 22pt;" aria-label="Technology (24 items)">Technology</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/ted-talk/" class="tag-cloud-link tag-link-94075 tag-link-position-42" style="font-size: 9.8260869565217pt;" aria-label="TED TALK (3 items)">TED TALK</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/word-cloud/" class="tag-cloud-link tag-link-68332 tag-link-position-43" style="font-size: 9.8260869565217pt;" aria-label="Word Cloud (3 items)">Word Cloud</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 8pt;" aria-label="Writing (2 items)">Writing</a>
+<a href="http://fys142f16.blogs.muhlenberg.edu/tag/youtube/" class="tag-cloud-link tag-link-251 tag-link-position-45" style="font-size: 12.565217391304pt;" aria-label="youtube (5 items)">youtube</a></div>
+</aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">#FYS142 Twitter Feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</aside>		</div><!-- end tertiary .widget-area -->
+</div><!-- end wrap -->
+
+	<footer id="colophon" class="clearfix">
+		<p>Proudly powered by <a href="http://wordpress.org/">WordPress</a><span class="sep"> | </span>Theme: Yoko by <a href="http://www.elmastudio.de/en/themes/">Elmastudio</a></p>
+		<a href="#page" class="top">Top</a>
+	</footer><!-- end colophon -->
+	
+</div><!-- end page -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-content/themes/yoko/js/smoothscroll.js?ver=1.4'></script>
+<script type='text/javascript' src='http://fys142f16.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f16.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f16.blogs.muhlenberg.edu%2Fpage%2F12%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f16.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

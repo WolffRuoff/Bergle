@@ -1,0 +1,807 @@
+http://president.blogs.muhlenberg.edu/
+54
+
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) & !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>
+From The President | A blog by Muhlenberg College President Randy Helm	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://president.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/style.css?ver=20190507" />
+<link rel="pingback" href="http://president.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://president.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/js/html5.js?ver=3.7.0" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="From The President &raquo; Feed" href="http://president.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="From The President &raquo; Comments Feed" href="http://president.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/president.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/president.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://president.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://president.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://president.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://president.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyeleven-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyeleven.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://president.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyeleven-block-style-css'  href='http://president.blogs.muhlenberg.edu/wp-content/themes/twentyeleven/blocks.css?ver=20190102' type='text/css' media='all' />
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://president.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://president.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://president.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://president.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://president.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//president.blogs.muhlenberg.edu/?wordfence_lh=1&hid=77F9B0E2AD87670CC76D724AFE69837A');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog admin-bar no-customize-support wp-embed-responsive single-author two-column right-sidebar no-js">
+<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div><div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div><div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://president.blogs.muhlenberg.edu/" rel="home">From The President</a></span></h1>
+				<h2 id="site-description">A blog by Muhlenberg College President Randy Helm</h2>
+			</hgroup>
+
+						<a href="http://president.blogs.muhlenberg.edu/">
+									<img src="http://president.blogs.muhlenberg.edu/files/2011/09/cropped-Delphi-from-above.jpg.jpg" width="1000" height="288" alt="From The President" />
+								</a>
+			
+									<form method="get" id="searchform" action="http://president.blogs.muhlenberg.edu/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<div class="menu"><ul>
+<li class="current_page_item"><a href="http://president.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-12"><a href="http://president.blogs.muhlenberg.edu/about-president-helm/">About President Helm</a></li>
+</ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<div id="primary">
+			<div id="content" role="main">
+
+			
+							<nav id="nav-above">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://president.blogs.muhlenberg.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+				
+					
+	<article id="post-161" class="post-161 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/23/161/" rel="bookmark">Wrapping Up &#8211; Tuesday, October 11, 2011</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/23/161/" title="7:03 pm" rel="bookmark"><time class="entry-date" datetime="2011-10-23T19:03:44+00:00">October 23, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Becca returned to England Monday evening and Tuesday was our last full day in Athens. No strikes (that we knew of anyway), but lots of things we still wanted to take care of.  Turns out the one thing on everybody&#8217;s list was&#8230; The National Archaeological Museum.  I am not kidding.  I didn&#8217;t strong arm anybody &#8211; it was their idea.  Really.  I mean it.</p>
+<p>Burt and Kelly headed out for some last minute shopping/exploring, Alec slept in, and Pat and I cleaned the apartment and did a little preliminary packing.  Then we all rendezvoused at the NAM, which is near the University and near Omonia Square &#8211; a rather scruffy part of town known for pickpockets, drug addicts, drug dealers, and students &#8211; in other words, the Mos Eisely of Athens (&#8220;a hive of scum and villainy&#8221;in the words of Obi Wan Kenobi).  I&#8217;ve already talked about the NAM, as well as included numerous photos from its collections, so I won&#8217;t repeat myself here.  The gold from Grave Circle A was amazing (okay, so I am repeating myself), but so were the bronzes from Artemesion, the kourai from Sounion, and of course the pots, the pots, the pots.</p>
+<div id="attachment_164" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0681.jpg"><img aria-describedby="caption-attachment-164" class="size-large wp-image-164" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0681-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0681-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0681-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0681-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-164" class="wp-caption-text">Griffin cauldron protomes - from the NAM</p></div>
+<p>Then Kelly and Burt went off to Cape Sounion to see the temple of Poseidon (again &#8211; this was their idea, I didn&#8217;t force them.  In fact, I didn&#8217;t even go), while Pat, Alec, and I buckled down to do some serious shopping in the Plaka.  Alec had his heart set on a bust of Ares or, failing that, a bust of Athena.  In the end, he got one of each.</p>
+<div id="attachment_167" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0688.jpg"><img aria-describedby="caption-attachment-167" class="size-large wp-image-167" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0688-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0688-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0688-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0688-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-167" class="wp-caption-text">Alec&#39;s alliterative allies: Ares and Athena</p></div>
+<p>I got another vase &#8211; this one a Minoan marine-style amphora.  And we loaded up on refrigerator magnets (the basis for our &#8220;mini museum&#8221; when installed on the stove hood back at home), tea-towels, and assorted other treasures for friends and family.</p>
+<p>&nbsp;</p>
+<div id="attachment_169" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0689.jpg"><img aria-describedby="caption-attachment-169" class="size-large wp-image-169" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0689-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0689-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0689-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0689-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-169" class="wp-caption-text">Back in Allentown - the Mini-Museum</p></div>
+<p>Eventually we made it home, packed up, and ate a simple supper of bread, cheese, and wine (except for the indefatigable Burt and Kelly, who went out to one last restaurant).</p>
+<p>Here are some final thoughts about Athens.  All these strikes are not doing them any good, and are going to harm their biggest industry (tourism) if they don&#8217;t knock it off.  The day we left, we heard that all the museums and archaeological sites were going on strike.  That meant that a dozen or so cruise ships headed toward Athens had to change course, but to where?  Crete?  It must be rather disconcerting to discover that 20,000 or so hotel guests won&#8217;t be showing up (if you&#8217;re a hotelier in Athens), or will be showing up (if you&#8217;re a hotelier in Crete).</p>
+<p>On the other hand, the press has pretty much convinced the rest of the world that the Greeks are a bunch of spoiled babies who don&#8217;t pay any taxes and need to grow up.  I&#8217;m not sure that&#8217;s right or fair &#8211; at least not entirely.  It would be nice to know who else might be asked to share the sacrifice in addition to all the public sector workers.</p>
+<p>Second, whatever the economic problems, there&#8217;s really no excuse for all the graffiti, dirt, and garbage.  Business owners should be required to clean up their building facades and sidewalks.  Garbage collectors should be prohibited from striking more than one day at a time.  Athens is a beautiful, beautiful city. They should take care of it.</p>
+<div id="attachment_162" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0686.jpg"><img aria-describedby="caption-attachment-162" class="size-large wp-image-162" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0686-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0686-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0686-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0686.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-162" class="wp-caption-text">When the garbage collectors are on strike....</p></div>
+<p>&nbsp;</p>
+<p>Having said that, I&#8217;ll go back any time.  Just give me an excuse!</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-161 -->
+
+				
+					
+	<article id="post-136" class="post-136 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/16/water-wind-and-really-big-rocks-monday-october-10/" rel="bookmark">Water, Wind, and Really Big Rocks &#8211; Monday, October 10</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/16/water-wind-and-really-big-rocks-monday-october-10/" title="10:18 pm" rel="bookmark"><time class="entry-date" datetime="2011-10-16T22:18:30+00:00">October 16, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Thunder rumbled as we woke early for our next adventure.  Made you think of &#8220;Cloud-gathering&#8221; Zeus.  The day was dark and gray.  Rain was imminent.  Wind whipped the towels on the clotheslines.  We were undaunted &#8211; even upbeat. How fortunate that we had planned a day trip to Mycenae and other points in the Argolid on Monday with our trusty friend and driver George on the very day that all of Athens was having a transit strike!  No buses, trams, or metro.  Which would have meant long walks to go anywhere at all &#8211; much less places we actually wanted to go. But <em>we </em> had our very own bus.</p>
+<p>Of course the transit strike meant that traffic was totally jammed up (everybody was driving their cars &#8211; Zeus only knows where they were planning to park, we never saw a single parking lot or garage anywhere in Athens) so George was late, but no matter. Eventually we made it out of the city.  First stop: the great canal that joins the Aegean to the Corinthian Gulf.  This was only dug in the 1890s &#8211; before that, ships had to be unloaded and then rolled across land on rollers, then re-loaded.  Or, of course, they could sail around the southern tip of the Peloponnese, risking the storms that tend to play havoc with sailors in those parts.  The canal is a dramatic sight.  You stand on the footpath along the highway bridge peering down into a very narrow, very deep slit in the earth, at the bottom of which tiny ships are chugging along.  By this time the rain had been coming down for some time, and puddles were everywhere.  Which produced even more drama when a truck drove past us, honked his horn, and aimed straight for the biggest puddle he could find.  Burt and I were drenched.  Others got off easy.  Nothing like a big wave of cold water to wake you up at the start of a trip.</p>
+<div id="attachment_139" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/canal2.jpg"><img aria-describedby="caption-attachment-139" class="size-large wp-image-139" src="http://president.blogs.muhlenberg.edu/files/2011/10/canal2-e1318803442581-768x1024.jpg" alt="" width="584" height="778" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/canal2-e1318803442581-768x1024.jpg 768w, http://president.blogs.muhlenberg.edu/files/2011/10/canal2-e1318803442581-225x300.jpg 225w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-139" class="wp-caption-text">The Canal - picture taken before the big splash</p></div>
+<p>&nbsp;</p>
+<p>From Corinth we angled through the Argolid&#8217;s fertile orchards and fields to the valley dominated by the ancient citadel of Mycenae &#8211; perhaps my favorite place in all of Greece. The Mycenaeans were Greek speakers &#8211; we know this because they left clay tablets written in Linear B &#8211; a script that has been deciphered as an early form of Greek.  The Linear B tablets aren&#8217;t histories, or poems, or religious tracts &#8211; they are lists.  Lists of flocks, of wool, of chariot wheels, of textiles, of olive oil, and measures of grain; lists of cattle; lists of slaves.  They aren&#8217;t terribly inspiring, but they do tell us that the lords of Mycenae were keeping track of alot of stuff.  And that meant they were rich.</p>
+<div id="attachment_144" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0593.jpg"><img aria-describedby="caption-attachment-144" class="size-large wp-image-144" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0593-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0593-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0593-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0593-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-144" class="wp-caption-text">A Linear B tablet in the National Archaeological Museum in Athens</p></div>
+<p>This in itself is interesting, because they entered Greece (&#8220;they&#8221; meaning the earliest speakers of Greek) around 1900 B.C.E.  with no evidence of material wealth or cultural sophistication.  Mostly wherever they showed up they left behind the destruction of villages occupied by their predecessors and a soapy-textured kind of pottery called &#8220;Minyan Ware&#8221; (we don&#8217;t need to get into why it was called that, but you can google &#8220;Minyas&#8221; if you&#8217;re really interested).  Three hundred years later we find an explosion of wealth and sophistication in the shaft graves of Grave Circle A at Mycenae.  These were excavated by Heinrich Schliemann after the Turks threw him out for smuggling away the &#8220;treasure of Priam&#8221;.  If anything, the treasures of Grave Circle A made Priam look like a pauper.  Homer calls Mycenae &#8220;rich in gold.&#8221;  Boy did he ever get that right.  The gold is mostly in the National Archaeological Museum in Athens now &#8211; right in front of you when you walk in the main door &#8211; and it is staggering in its quantity and its beauty.</p>
+<div id="attachment_145" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0660.jpg"><img aria-describedby="caption-attachment-145" class="size-large wp-image-145" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0660-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0660-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0660-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0660.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-145" class="wp-caption-text">decorative gold squid plaques that would have been sewn onto a royal garment - from Grave Circle A</p></div>
+<p>Grave Circle A pre-dates the main citadel by at least 200 years. Subsequently, the lords of Mycenae began  burying the royal dead in huge beehive-shaped Tholos tombs (Schliemann named the grandest of these the &#8220;Treasury of Atreus&#8221; &#8211; but it was really a tomb).</p>
+<div id="attachment_146" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0627.jpg"><img aria-describedby="caption-attachment-146" class="size-large wp-image-146" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0627-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0627-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0627-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0627-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-146" class="wp-caption-text">The Helm party within the Treasury of Atreus</p></div>
+<p>The walls of the citadel are massive, built in a style the ancient Greeks called &#8220;Cyclopean&#8221; because they thought only the giant Cyclopes could have hefted such huge stones into position.  The major entrance is through the iconic Lion Gate.  Within the walls are storerooms, workshops, Grave Circle A, and &#8211; at the tip top of the citadel &#8211; the royal residential quarters.</p>
+<div id="attachment_152" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0668.jpg"><img aria-describedby="caption-attachment-152" class="size-large wp-image-152" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0668-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0668-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0668-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0668-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-152" class="wp-caption-text">A reconstruction of the citadel - in the NAM</p></div>
+<p>We were fortunate that the rain stopped just as we stepped down from our bus. Less fortunate that the wind was gusting at about 40 miles an hour and almost blew us right off the citadel and into the deep valley beyond.</p>
+<div id="attachment_153" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0633.jpg"><img aria-describedby="caption-attachment-153" class="size-large wp-image-153" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0633-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0633-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0633-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0633-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-153" class="wp-caption-text">Pat and a section of the Cyclopean walls</p></div>
+<p>We spent more than an hour scrambling among the stones of Mycenae, sometimes hugging each other to keep one or more of us from being blown away. Then back to the magic bus which whisked us to a much needed hot lunch and then&#8230;. back to work:  the charming seaside down of Nauplion (as charming as possible on a cold, gray, wet and windy day) and its small but excellent museum of Bronze Age artifacts, including&#8230;.. (fanfare, drumroll&#8230;.) the only known set of Bronze Mycenaean armor.  Uncomfortable from the look of it.  Sort of like making yourself into a human telescope  But the owner must have been really proud of it &#8211; after all, he was buried in it (or at least near it).</p>
+<div id="attachment_155" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0641.jpg"><img aria-describedby="caption-attachment-155" class="size-large wp-image-155" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0641-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0641-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0641-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0641.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-155" class="wp-caption-text">Bronze Age armor and (reconstructed) boars&#039; tusk helmet in the Nauplion Museum</p></div>
+<p>I have to admit that my family was really very tolerant of my passion for all this stuff.  So we treated ourselves to a long shopping experience at a pottery workshop near Epidauros on the way home, skipped the ancient site (another amphitheatre) and headed home for a dinner of delicious gyros from the stand across the street from our apartment.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-136 -->
+
+				
+					
+	<article id="post-126" class="post-126 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/11/the-big-a-sunday-october-9/" rel="bookmark">The Big A &#8211; Sunday, October 9</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/11/the-big-a-sunday-october-9/" title="6:00 pm" rel="bookmark"><time class="entry-date" datetime="2011-10-11T18:00:51+00:00">October 11, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Togetherness is great.  So, sometimes, is separateness.  So on Sunday morning the three couples did their own morning things.  Burt and Kelly went to Monastiraki to check out the flea market.  Alec and Becca went to Plaka to look at the shops.  Pat and I wandered around the area south of Syntagma Square looking for the Cathedral &#8211; and eventually finding it.  Then we browsed the flea market (boy I really wanted that three-barreled revolving flintlock pistol for only 60 euros, but I restrained myself), and finally everybody rendezvoused and we found a place under the Acropolis where we could eat lunch and plot our next move.  The next move was, in fact, to see the Acropolis.  One of the wonders of the ancient world, it is probably also a wonder of the modern world for the sheer volume of photographs in which it appears.  About four billion of those photographs were taken while we were on site, and only about 10 percent of those were taken by us.  If the Greek government charged 10 cents a photo, they would be out of the financial hole they&#8217;re in and bailing out Germany.</p>
+<div id="attachment_129" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2568.jpg"><img aria-describedby="caption-attachment-129" class="size-large wp-image-129" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2568-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2568-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2568-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2568.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-129" class="wp-caption-text">One of the 4 billion photos taken on the Acropolis on Sunday, October 9, 2011</p></div>
+<p>The Acropolis really is impressive architecturally &#8211; but what is less generally known and equally impressive is the fiscal chicanery by which it was financed. Here&#8217;s the scoop.  After the Persians were defeated in 480 at the naval battle of Salamis, and later at the land battle of Plataea, the Athenians decided it was time to take precautions against a possible third invasion. So they formed an alliance of Greek states with the idea that each would contribute an appropriate number of ships and men each year to a combined Hellenic fleet that would patrol the Aegean and act as a deterrent to the Persians.  Many of the city-states signed up.  Those that didn&#8217;t, well&#8230;.. we can imagine the conversations that the Athenian leaders had with them (&#8220;nice little island you got here, be a shame if something were to happen to it&#8221;).  So, by persuasion and/or compulsion the Athenians formed the so-called &#8220;Delian League&#8221; (so named because it kept its treasury on the sacred island of Delos &#8211; see earlier blog post).  After a few years of this, the Athenians decided it would just be more efficient if the other city states sent cash instead of ships, and Athens would maintain the fleet.  By the time of Pericles in the mid fifth-century B.C.E., the cash was burning a whole in Athens&#8217; national pocket and instead of buying more ships, they invested in some <em>really</em> nice architecture (the Propylaion, the temple of Athena Nike, the Erechtheon, and, of course, the Parthenon).  It&#8217;s hard to believe how long the Athenians got away with this scam, and it wasn&#8217;t really until they decided it would be even <em>more</em> convenient if the members of the &#8220;Delian League&#8221; (aka &#8220;The Athenian Empire&#8221;) would remint all their local money as Athenian coinage.  Saved a lot of pesky bookkeeping, you know.  Well, this was the final straw and generated rebellions and the beginning of the end of the Athenian Empire.  But by this time, the Acropolis was looking great (and what a terrific long-term investment &#8211; it&#8217;s generating tons of tourist revenue 2500 years later!).</p>
+<p>Here&#8217;s the really interesting thing about climbing up to the Acropolis on a Sunday afternoon &#8211; you wouldn&#8217;t believe what people are wearing.  There are, of course, the Americans in shorts and t-shirts with witty sayings (&#8220;Embarrassing my children is only one of the services I provide&#8221;), and the Germans in tank tops, Asians in crisp white shirts and black pants, and &#8211; our favorite &#8211; Italian women climbing the slippery marble steps in four-inch heels and tight leopard-print dresses (with hair and make-up absolutely perfect). And all, of course, furiously snapping photos.</p>
+<p>We eventually made our way down to the new Acropolis Museum.  It has been getting rave reviews and it deserves them &#8211; both for its architecture and its contents.  Built over a Byzantine layer of the city, the ground floor is glass so that visitors can look down onto the remains.</p>
+<div id="attachment_130" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2608.jpg"><img aria-describedby="caption-attachment-130" class="size-large wp-image-130" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2608-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2608-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2608-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2608.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-130" class="wp-caption-text">Looking down on the past at the new Acropolis Museum</p></div>
+<p>A long sloping concourse from the ground floor to the first floor is lined with floor to ceiling cases filled with pottery in chronological order, beginning with the neolithic and going through Roman times.  On the second floor &#8211; statuary and bronzes.  And on the third, a full-scale layout of the Parthenon itself with all the sculptural elements inserted into the appropriate places (including casts of the Elgin marbles that the British have conserved or stolen depending on your point of view).  All-in-all, a mind-boggling success.  And I picked up a nifty book about Greek pottery at the gift shop too.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-126 -->
+
+				
+					
+	<article id="post-116" class="post-116 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/11/the-oracle-saturday-october-8/" rel="bookmark">The Oracle &#8211; Saturday, October 8</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/11/the-oracle-saturday-october-8/" title="7:46 am" rel="bookmark"><time class="entry-date" datetime="2011-10-11T07:46:41+00:00">October 11, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<div id="attachment_124" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_23841.jpg"><img aria-describedby="caption-attachment-124" class="size-large wp-image-124" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_23841-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_23841-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_23841-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_23841.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-124" class="wp-caption-text">The light at the end ....</p></div>
+<p>It was enough to make one believe in miracles.  Despite the lack of hot water, all six of us were up, washed (more or less), dressed, fed, and ready to go by 8 AM &#8211; the appointed time for us to meet Paul and his car and drive to Delphi.  What we found outside the apartment was not Paul, but George (Paul may be like Charlie of &#8220;Charlie&#8217;s Angels&#8221; &#8211; we&#8217;ve never really seen him, just spoken with him on the phone &#8211; but he always gets the job done). We also did not find a car &#8211; but a miniature tour bus &#8211; probably capable of holding four times our number in a pinch.  It was a great start to our journey.</p>
+<div id="attachment_119" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0603.jpg"><img aria-describedby="caption-attachment-119" class="size-large wp-image-119" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0603-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0603-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0603-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0603-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-119" class="wp-caption-text">Saturday on the Bus with George</p></div>
+<p>George (also our driver two days later to Mycenae and other points in the Argolid &#8211; yet to be blogged about) is not only a great driver, but a wonderful guy. In his fifties, married to a tour guide, a great driver, story-teller, and a fount of useful information. His father&#8217;s family originated in Crete, his mother&#8217;s in Samos (where she still lives in a little house).  George grew up in South Africa and speaks fluent English, as well as Afrikaaner, Dutch, one or two other languages and, of course, Greek.  His father was one of 21 children born to his grandfather in Crete &#8211; the family left Crete in the 1950s (&#8220;because of a vendetta&#8221;) &#8211; then served on the oldest ship in the Greek navy (now on display at the naval museum in Piraeus) during World War II (the ship is steam driven and saw service in both world wars). His mother lives in the family house on the island of Samos, where George eventually hopes to retire and farm.</p>
+<p>We left Attica and wound our way through the hills, olive orchards, and country side to the spectacular site of Delphi.  George had thoughtfully brought along a DVD about the Oracle which he played on the bus&#8217;s television screen as we drove, so we were well prepared.</p>
+<p>The museum at Delphi is small, but has spectacular art on display (some of it copies of the originals now in the National Museum of Archaeology in Athens).  The Charioteer, the Sphinx, numerous bronzes, kouroi, etc.  .  The museum also has a spectacularly strict staff who enforce the &#8220;no posing with the exhibits&#8221; rule with fierce determination.  Burt in particular found this rule so ridiculous that he was determined to get a picture of himself posing with one of the guards.  They were not amused.  He was not actually thrown out of the museum, but they shadowed him closely until he left.</p>
+<p>&nbsp;</p>
+<div id="attachment_134" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/DSCN0289.jpg"><img aria-describedby="caption-attachment-134" class="size-large wp-image-134" src="http://president.blogs.muhlenberg.edu/files/2011/10/DSCN0289-e1318780184400-768x1024.jpg" alt="" width="584" height="778" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/DSCN0289-e1318780184400-768x1024.jpg 768w, http://president.blogs.muhlenberg.edu/files/2011/10/DSCN0289-e1318780184400-225x300.jpg 225w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-134" class="wp-caption-text">Kelly poses with the Charioteer - outside the Museum!</p></div>
+<p>Delphi is set on a mountainside &#8211; which offers fabulous views (one of the best is the title photo for this blog site), but also demands a fair amount of climbing. Once on the site of the sanctuary, Burt and Alec almost immediately found a small tunnel, crawled into it, and disappeared for about 20 minutes.  Turns out that this was an ancient tunnel that had something to do with how the Pythias were prepped to give their oracular responses &#8211; but it&#8217;s not clear (to me anyway) exactly how it worked.</p>
+<div id="attachment_121" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2382.jpg"><img aria-describedby="caption-attachment-121" class="size-large wp-image-121" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2382-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2382-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2382-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_2382.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-121" class="wp-caption-text">Entrance to the Tunnel of Mystery</p></div>
+<p>&nbsp;</p>
+<p>If Delphi had a &#8220;tagline&#8221; in ancient times it was &#8220;Know Thyself&#8221; (inscribed somewhere in the sacred precinct).  &#8220;Know thy children&#8221; would have been equally helpful advice &#8211; left to their own devices, Burt and Alec eventually emerged from the tunnel and rejoined our group. We then worked our way up to the top of the site &#8211; the ancient stadium &#8211; and then worked our way back down again.  It&#8217;s what you do when you visit Delphi (that, and wash yourself in the Kastallian spring &#8211; whose waters reputedly will purify you of any sins, including murder).</p>
+<p>Eventually we found our way back to the bus and George took us for a quick tour of the modern village of Delphi (the French archaeologists who excavated the site in the early 20th century made all the locals move a mile or so away to give them digging room).  And thence to the quaint ski resort village of Arachova (the Greek Vail), where we poked around for a bit before heading off to a late lunch.  On the way back to Athens George put a DVD about Olympia in the player.  Everybody fell asleep immediately.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-116 -->
+
+				
+					
+	<article id="post-110" class="post-110 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/09/arrivals-october-6-7-2011/" rel="bookmark">Arrivals &#8211; October 6-7, 2011</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/09/arrivals-october-6-7-2011/" title="7:17 am" rel="bookmark"><time class="entry-date" datetime="2011-10-09T07:17:48+00:00">October 9, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>A day (and two hours) later than originally planned, the bulk of our forces arrived at the apartment on Baknana Street late Thursday afternoon:  Pat, Burt, Alec, and Kelly.  I have to hand it to Paul Kalomiris, our ground traffic controller (i.e. the guy who arranges for car transportation), he provided a driver (Constantine) and a car that was perfect for the transfer from the airport:  enough room for five people with a trunk that handled an immense number of large suitcases.   (Note to Corleone family:  this is the type of vehicle you need if you are going to dispose of the <em>entire</em> Tagglia family in one trip).</p>
+<p>The troops were tired, they were stressed, they were hungry.  But they were in good spirits.  We set out to find a place nearby for dinner.  It is amazing how difficult it is to find a nice simple restaurant within walking distance when you don&#8217;t know the neighborhood.  You could be a block away from the perfect place just around the next (or last) corner and never know it.  So, you ask strangers.  The strangers we asked had recommendations all right, but they involved complex bus exchanges, and we were assured we couldn&#8217;t walk to any of them.  So&#8230;. we boarded the tram and headed to the familiar (to me at least) haunts of the Plaka and had dinner at The Vizentino on Kidathenaeon street, a place I&#8217;ve been to several times over the years, and which is always reliable.</p>
+<p>&nbsp;</p>
+<div id="attachment_113" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0597.jpg"><img aria-describedby="caption-attachment-113" class="size-large wp-image-113" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0597-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0597-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0597-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0597-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-113" class="wp-caption-text">Burt, Alec, Pat, and Kelly at Vizantino. Not showing jet lag a bit!</p></div>
+<p>Friday morning we foraged a breakfast of croissants from the bakery downstairs, yoghurt, honey, and granola from the supermarket down the block, coffee from the nescafe jar I bought earlier in the week, and tea from the box of teabags Pat had packed in her suitcase. Then off to Syntagma Square so I could show off the location of my famous face-off with the mad dog of Athens (see October 4th), so we could scout out the train to the airport for Alec to go meet Becca, change money, and  could find a Starbucks.  Then on to Monastiraki &#8211; the flea market of Athens.  We were not in the market for fleas (nor, I am happy to say, did we acquire any) &#8211; this was really more of a reconnaissance mission for Kelly, who had heard that dealers with the <em>real</em> interesting stuff come out on Sunday morning.  We wanted to make sure that she and Burt could find their way, and besides, it&#8217;s interesting to look at all the stuff (army surplus gear, t-shirts, painted pots, sandals, beads, more t-shirts, etc.).</p>
+<p>Eventually we found ourselves at the entrance to the ancient Agora where admission was free &#8211; we never quite found out why. Who should come walking toward us but Rich and Laurie Brueckner &#8211; spending their last day in Athens looking at the Acropolis and the Agora.  Shortly after bidding them safe travels, we realized that we&#8217;d better eat lunch soon if Burt, Kelly, and Alec &#8211; the designated reception committee for Becca &#8211; were going to make it to the airport in time.  After a pleasant if somewhat rushed repast at a taverna outside the gates to the Agora, off they went to find the train and off Pat and I went to look at the Agora again, this time lingering over the displays in the wonderful Agora Museum in the reconstructed Stoa of Attalos.  My favorite artifacts are the numerous identical ostraca with the name of Themistocles written on them in identical handwriting &#8211; evidence of an organized effort to throw the hero of Salamis out of the city in the annual vote to ostracize (exile) somebody or other.  This was the ancient Athenian version of &#8220;Survivor&#8221; and it&#8217;s pretty clear that the Greeks had very little tolerance for celebrities.  Get too big for your britches, too famous, too successful &#8211; and you make everybody else feel bad.  So&#8230; you get exiled for ten years.  That&#8217;ll show you!</p>
+<p>Pat and I got back to the apartment in time to greet Becca and her posse.  Great to have her with us.  In the words of A.A. Milne, &#8220;Now We Are Six&#8221;.</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-110 -->
+
+				
+					
+	<article id="post-102" class="post-102 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/05/athens-its-a-riot/" rel="bookmark">Athens &#8211; it&#8217;s a Riot! (October 5, 2011)</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/05/athens-its-a-riot/" title="7:02 pm" rel="bookmark"><time class="entry-date" datetime="2011-10-05T19:02:27+00:00">October 5, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>So, as a result of the general strike and the subsequent delayed arrival of my family, I found myself with a free day in Athens &#8211; albeit it an Athens where most of the sites and museums were closed because of the aforesaid general strike.  But I figured, correctly, that the merchants would not be on strike.  So, I sampled the wares of the bakery downstairs, then made my way to the Plaka to look at souvenirs &#8211; pots in particular, but I also like to keep a sharp eye for those ingeniously tacky items that defy not only good taste but mercantile logic.  There are many, many shops in the Plaka, and each of them has many, many pots on display so this was a good day&#8217;s work &#8211; but peaceful.  The only stress was trying to remember which shop had which pot just in case I wanted to go back and buy something.</p>
+<p>Things were FAR from quiet for Rich and Laurie Brueckner, however, and I will paste in Rich&#8217;s own account of their day for this blog:</p>
+<p><em>&#8220;Ok here&#8217;s one for your blog! So there is an air controllers strike today. And the Acropolis was closed so we went to the new museum (only thong open) at 11:00 to look around at all the antiquities. As we were walking back several hours later, the protest got into full swing. Ten thousand people. We couldn&#8217;t get back to the hotel. Someone started a big fire in the park in front of our hotel and the Parliament bldg. I guess it got out of control and the police shot off tear gas sporadically for a couple of hours. We felt it in our noses and throats so I guess we were gassed a bit even though we were a couple of blocks away. All the shops closed there metal riot doors rolled down over their windows. When we finally got to the hotel it similarly had the riot doors closed over all the doors and windows. The hotel was &#8220;closed&#8221; and heavily armed riot police were guarding the building. The police had to bang on the riot doors and yell into the hotel to get the guards inside to open the doors for us. And then they shut them again just as quickly. Then small groups of protesters threw rocks at the police for the next couple of hours and there was occasionally some more tear gas. We observed from our hotel balcony which had a birds eye view of all the action! </em><br />
+<em>&gt; </em><br />
+<em>&gt; Laurie says it was so exciting she&#8217;s never coming back again!  Just another day in Athens.&#8221;</em></p>
+<p><em></em>I&#8217;m not sure whether Rich and Laurie&#8217;s experience is an example of &#8220;timing is everything&#8221; or &#8220;location, location, location.&#8221;  Maybe being &#8220;in the wrong place at the wrong time.&#8221;</p>
+<p>And, not to hold a grudge, but I hope that that damn dog that tried to bite me yesterday got trampled in the riot.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-102 -->
+
+				
+					
+	<article id="post-100" class="post-100 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/05/the-bite-was-worse-than-the-disembark/" rel="bookmark">The Bite was worse than the Disembark (Tuesday, October 4, 2011)</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/05/the-bite-was-worse-than-the-disembark/" title="6:52 pm" rel="bookmark"><time class="entry-date" datetime="2011-10-05T18:52:09+00:00">October 5, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Apparently our Captain did make it to Athens ahead of the crowd, because when we woke up L&#8217;Austral was docked right alongside &#8220;Terminal A&#8221; in the Piraeus.  The crew and staff got our luggage off the ship as efficiently as they got it on the week before and the only thing they failed to tell us was how to retrieve our passports.  Fortunately, I asked before I left the ship &#8211; otherwise it would have been an interesting week:  me in Athens, my passport enjoying another cruise in the Aegean.</p>
+<p>A quick taxi ride brought me to the apartment I&#8217;d rented in Neos Kosmos &#8211; a pleasant residential section of Athens south of the Acropolis.  Indeed, my bedroom has a view of the Acropolis (handy in case I wake up in the middle of the night and can&#8217;t remember exactly where I am).  The apartment is ideally located for my purposes:  A bakery on the ground floor, a gyro/souvlaki restaurant right across the street, a pizzeria down the street in one direction and a supermarket down the street in the other direction.  Fresh fruits and vegetables just across the street.  Little chance that we shall go hungry.</p>
+<p>Today was supposed to be the day that Pat, Burt, and Alec fly from Newark &#8211; arriving on 10/5.  But the Greek air traffic controllers had other ideas &#8211; or one other idea, a strike.  Burt took charge and rebooked everybody&#8217;s flights so that they will now arrive on 10/6 &#8211; their vacation has been shortened by a day, but it could have been worse!</p>
+<p>Having scoped out the new apartment, shopped for basics in the supermarket, and unpacked, I ventured out to learn the public transport system.  A tram took me to Syntagma Square, whence I set out on foot for the National Archaeological Museum.  Fortunately I&#8217;d only gone a couple of blocks before a friendly native pointed out that I was heading in the wrong direction.  We took a bus together and I popped out right on the doorstep.</p>
+<p>The NAM is, of course, amazing &#8211; and if I lived in Athens I would probably visit it every day.  You walk in the main door and stare right into the face of the &#8220;Mask of Agamemnon&#8221; (no, it wasn&#8217;t Agamemnon &#8211; Schliemann got that wrong too), surrounded by all the gold of Mycenae (most of it from Grave Circle A).  Though I&#8217;ve seen these treasures before &#8211; both in person and in books &#8211; they are still breathtaking.  After goggling at the gold, I puttered around the pottery displays (Bronze Age, of course), then scoped out the sculptures.  Truly amazing.  I took picture after picture and will try to post some of them here.  By the way, they don&#8217;t often tell you that the other gold &#8220;death masks&#8217; from Grave Circle A are nowhere near as attractive as the &#8220;Mask of Agamemnon&#8221;.  Either the other members of the royal family were pudgy little guys, or maybe the gold death mask maker waited a little too long and they had started to bloat.</p>
+<div id="attachment_106" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0569.jpg"><img aria-describedby="caption-attachment-106" class="size-large wp-image-106" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0569-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0569-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0569-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0569-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-106" class="wp-caption-text">The &quot;Mask of Agamemnon&quot; from Mycenae&#039;s Grave Circle A</p></div>
+<div id="attachment_107" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0587.jpg"><img aria-describedby="caption-attachment-107" class="size-large wp-image-107" src="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0587-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0587-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0587-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/IMG_0587.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-107" class="wp-caption-text">The Mask of &quot;Agamemnon&#039;s Fat Brother&quot; from Grave Circle A at Mycenae</p></div>
+<p>Back to the apartment in time to spruce up for dinner with Rich and Laurie Brueckner and one of our few Greek alumni, Demetri Papacostas and his wife.  Back on the tram to Syntagma Square (where the Brueckners were staying at the Grande Bretagne), where my greatest adventure of the day awaited me:  a large German Shepherd mix mongrel took a disklike to me on the sidewalk and snapped at my leg.  Fortunately, he only ripped a hole in my trousers (and not in an embarrassing place).</p>
+<p>This was but an omen of the adventures that lay ahead in Syntagma Square, as you will soon see (or rather, read).</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-100 -->
+
+				
+					
+	<article id="post-93" class="post-93 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/04/delos-and-mykonos-monday-october-3/" rel="bookmark">Delos and Mykonos &#8211; Monday, October 3</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/04/delos-and-mykonos-monday-october-3/" title="10:51 am" rel="bookmark"><time class="entry-date" datetime="2011-10-04T10:51:12+00:00">October 4, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>&nbsp;</p>
+<p><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Delos-boat-landing.jpg"><img src="http://president.blogs.muhlenberg.edu/files/2011/10/Delos-boat-landing-1024x764.jpg" alt="" width="584" height="435" /></a><br />
+Delos &#8211; with the boat landing in the distance</p>
+<p>An early start as L&#8217;Austral approached the &#8220;sacred island&#8221; of Delos and we debarked by tenders to this relatively small, flat island that is strewn with the ruins of a wealthy religious center.  You may recall that Zeus was prone to having sex with young women (mortal, divine, semi-divine, willing, unwilling &#8211; doesn&#8217;t seem to have mattered).  In the case of the lovely Leto, he did so by taking the form of a swan (why Leto was willing to have sex with a swan has never been satisfactorily explained; maybe she was raped, but if Zeus was going to rape her anyway, why as a swan?  It&#8217;s all very perplexing).  As so often happened with Zeus&#8217;s liaisons, Leto became pregnant &#8211; in this case with twins.  As also usually happened, Hera was ticked off at the mother-to-be and went after her (easier than going after Zeus, I suppose).  Leto fled, stopping on Delos to give birth to Apollo.  Some versions of the myth say she then fled to another island where she gave birth to Artemis.  At any rate, Delos was held sacred as the place of Apollo&#8217;s birth, and this stood it in good stead throughout the first millennium B.C.E. and into the 3rd century A.D.</p>
+<p>Because Delos was sacred, it hosted annual festivals (including athletic competitions) and was studded with statues, temples, and other structures donated by wealthy individuals and various states.  The islands of Naxos and Paros (both sources of excellent marble in antiquity) are nearby.  Thus the extensive remains today.  Oh, and because Delos was &#8220;sacred&#8221; it was a sort of duty-free zone, which meant it thrived economically.  It became one of the great slave markets of the Aegean.  Houses of the wealthy ( several with beautiful mosaic floors) rise on a gentle slope above the market place, temples, and other more formal public areas until, halfway up the hill, one reaches the large amphitheatre built into the hillside. Here we paused for our daily group photo.</p>
+<div id="attachment_95" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Delos-Mules-in-the-Amphitheatre.jpg"><img aria-describedby="caption-attachment-95" class="size-large wp-image-95" src="http://president.blogs.muhlenberg.edu/files/2011/10/Delos-Mules-in-the-Amphitheatre-1024x500.jpg" alt="" width="584" height="285" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Delos-Mules-in-the-Amphitheatre-1024x500.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/Delos-Mules-in-the-Amphitheatre-300x146.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/Delos-Mules-in-the-Amphitheatre-500x244.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-95" class="wp-caption-text">Delos - Mules in the amphitheatre</p></div>
+<p>After lunch on L&#8217;Austral and a short cruise, we reached the tiny island of Mykonos &#8211; once home to jet-setters and nude bathers &#8211; now just a picturesque harbor village with a nice beach and several cafes with free wifi.</p>
+<div id="attachment_96" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-mapaki.jpg"><img aria-describedby="caption-attachment-96" class="size-large wp-image-96" src="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-mapaki-1024x764.jpg" alt="" width="584" height="435" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-mapaki-1024x764.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-mapaki-300x224.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-mapaki-401x300.jpg 401w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-96" class="wp-caption-text">Mykonos - The Maraki (or what&#039;s left of it)</p></div>
+<div id="attachment_97" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-street.jpg"><img aria-describedby="caption-attachment-97" class="size-large wp-image-97" src="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-street-764x1024.jpg" alt="" width="584" height="782" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-street-764x1024.jpg 764w, http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-street-224x300.jpg 224w, http://president.blogs.muhlenberg.edu/files/2011/10/Mykonos-street.jpg 1936w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-97" class="wp-caption-text">A street in Mykonos</p></div>
+<p>Monday evening: packing, packing, packing, followed by another &#8220;Captain&#8217;s Reception&#8221; (really, Captain, you shouldn&#8217;t have.  We mean it.  Really.  You shouldn&#8217;t have).  Followed by dinner and farewells as we returned to our cabins to finish packing and sleep.  L&#8217;Austral, in the meantime, &#8220;stretched its legs&#8221; by sailing as fast as it could go for the Piraeus (Athens&#8217; harbor) &#8211; a destination the Captain hoped to reach by midnight so he could nab a conveniently located pier.  It made for a rough ride at times, with the spray reaching my balcony doors on the 5th deck, but no <em>mal de mer</em> I am delighted to report.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-93 -->
+
+				
+					
+	<article id="post-84" class="post-84 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/03/santorini-%e2%80%93-what-a-blast-sunday-october-2-2011/" rel="bookmark">Santorini – What a Blast!   Sunday, October 2, 2011</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/03/santorini-%e2%80%93-what-a-blast-sunday-october-2-2011/" title="4:57 am" rel="bookmark"><time class="entry-date" datetime="2011-10-03T04:57:48+00:00">October 3, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>&nbsp;</p>
+<p><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Dawn.jpg"><img class="aligncenter size-large wp-image-86" src="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Dawn-1024x329.jpg" alt="" width="584" height="187" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Dawn-1024x329.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Dawn-300x96.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Dawn-500x160.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" /></a></p>
+<p>Sunrise found L’Austral sailing into the caldera of Santorini – a sentence that requires some explaining.  The “caldera” in this case is Spanish for “cauldron” and refers to the gigantic cavity blown from the center of the island of Thera by a series of volcanic eruptions – most notably in 1500 B.C.E. and most recently in 1950 A.D.</p>
+<p>&nbsp;</p>
+<p>The island of Thera (Santorini is its Christian name – from Saint Irene) was formed by volcanic action in the first place – lava spewing from a volcanic vent on the floor of the Aegean (about 65 miles north of Crete) solidified and, eventually, poked its head above the surface.  Over gazillions of years it became an island, sitting on top of (and blocking) an active volcanic vent. At some point the vent resented this blockage and blew out the center of the island.  Then, over millennia, the lava continue to build up and rebuild an island in the center of what was left of the old island (now reduced to a crescent-shaped island and a few left over bits of the original island).</p>
+<p>&nbsp;</p>
+<div id="attachment_88" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-caldera-stratigraphy.jpg"><img aria-describedby="caption-attachment-88" class="size-large wp-image-88" src="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-caldera-stratigraphy-1024x475.jpg" alt="" width="584" height="270" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-caldera-stratigraphy-1024x475.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-caldera-stratigraphy-300x139.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-caldera-stratigraphy-500x232.jpg 500w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-88" class="wp-caption-text">Santorini - the caldera, showing strata from different eruptions over the millennia</p></div>
+<p>This is all fairly difficult to describe, much less visualize, so I will try to insert some pictures when time permits.  The important thing is, that by the Middle Bronze Age (c. 1550 B.C.C.) things were pretty darn nice on Thera.  Good soil for crops, many good coves and harbors for anchorage, and a thriving city at what is now the archaeological site called “Akrotiri”.  Akrotiri was clearly in the Minoan/Cretan sphere of influence – but gives the impression of a rich enclave, perhaps the Middle Bronze equivalent of Beverly Hills.  Well-built houses lined pleasant winding streets, and their walls were decorated with beautiful painted frescoes (again, photos will help visualize this when I can get around to inserting them).  The frescoes show charming scenes of fishermen, fleets, birds flitting through spring landscapes, blue monkeys’ cavorting, ladies flirting – all the pleasures of Middle Bronze Age life.  So, apparently, things were just ducky (yes, some of the paintings showed ducks) until shortly before 1500 when a series of earthquakes let residents know that the volcano was getting restive again and maybe they should think about moving.  Which is exactly what they did, leaving their homes tidy and remarkably nicely furnished with painted pottery and furniture.  So, when Thera’s volcano got up to its old tricks around 1500 B.C.E.  and blew out the middle of the island again, nobody seems to have gotten hurt.  Akrotiri was buried in tephra (pumice and ash, mixed with chunks of black rock) and remained buried until the 1960s A.D. when Spiradon Maranatos and his team of archaeologists began to excavate it and dubbed it “The Bronze Age Pompeii”.</p>
+<p>&nbsp;</p>
+<div id="attachment_90" style="width: 535px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/92.67.101lilies.jpg"><img aria-describedby="caption-attachment-90" class="size-full wp-image-90" src="http://president.blogs.muhlenberg.edu/files/2011/10/92.67.101lilies.jpg" alt="" width="525" height="492" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/92.67.101lilies.jpg 525w, http://president.blogs.muhlenberg.edu/files/2011/10/92.67.101lilies-300x281.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/92.67.101lilies-320x300.jpg 320w" sizes="(max-width: 525px) 100vw, 525px" /></a><p id="caption-attachment-90" class="wp-caption-text">Akrotiri fresco: lilies in a spring landscape . 1500 B.C.E.</p></div>
+<div id="attachment_89" style="width: 671px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/92.35.68flotilla.jpg"><img aria-describedby="caption-attachment-89" class="size-full wp-image-89" src="http://president.blogs.muhlenberg.edu/files/2011/10/92.35.68flotilla.jpg" alt="" width="661" height="75" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/92.35.68flotilla.jpg 661w, http://president.blogs.muhlenberg.edu/files/2011/10/92.35.68flotilla-300x34.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/92.35.68flotilla-500x56.jpg 500w" sizes="(max-width: 661px) 100vw, 661px" /></a><p id="caption-attachment-89" class="wp-caption-text">Akrotiri fresco depicting the departure of a fleet of war ships - c. 1500 B.C.E.</p></div>
+<p>There were almost certainly catastrophic implications for other places in this part of the Aegean and Mediterranean.  Scholars have hypothesized that earthquakes, tsunamis, ash clouds, noxious gases and other unpleasant accompaniments to the eruption of Thera led to the demise of Minoan civilization on the island of Crete.  One extreme version of the big bang theory even tries to associate the tsunami with the parting of the Red Sea during Exodus.  I would rate the impact on Crete as highly likely; that on the Red Sea virtually nil.</p>
+<p>&nbsp;</p>
+<p>Although many of Akrotiri’s most famous frescoes have been carried off to the National Archaeological Museum in Athens, there are still enough on display in the tiny Museum here on Santorini to give visitors a very satisfying glimpse of the glories of the Middle Bronze settlement.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Santorini unquestionably provides some of the most dramatic landscapes in the Aegean. The sheer cliffs on the inside of the caldera plunge several hundred feet to the water’s edge and then keep on plunging a few hundred more to the ocean floor.  Villages like Oia, Athinai, and Thera, perched on the edge of the caldera, have dramatic views – and challenging switchback trails from the clifftops to the harborside.  Houses and churches are built onto the cliffsides in ways that defy the imagination – who would think to build there?  And if they thought it, how did they execute it?  And why haven’t they all tumbled into the sea?</p>
+<p>&nbsp;</p>
+<p>Today, Santorini is again an artist colony, popular with the wealthy – as well as the archaeologically inclined (like me) who find it’s ancient remains fascinating and are grateful that the souvenir shops pay proper tribute to ancient art by selling high quality reproductions at reasonable prices. One sobering <em>memento mori</em> is the island of Nea Kameni – rising in the center of the caldera.  Yes, it is another volcanic island and yes, it sits atop the vent of a still active volcano.  At breakfast, several of us thought we could see steam rising from the vent….until a cruise ship emerged from behind the island with its smokestacks belching.</p>
+<p>&nbsp;</p>
+<p>The Muhlenberg contingent ended our day with a party on the topmost observation deck while L’Austral toured around the caldera at sundown.  As we left the caldera and headed out into the sea, two schooners following us broke out their sails – a lovely sight to behold.</p>
+<div id="attachment_91" style="width: 594px" class="wp-caption aligncenter"><a href="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules.jpg"><img aria-describedby="caption-attachment-91" class="size-large wp-image-91" src="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules-1024x808.jpg" alt="" width="584" height="460" srcset="http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules-1024x808.jpg 1024w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules-300x236.jpg 300w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules-379x300.jpg 379w, http://president.blogs.muhlenberg.edu/files/2011/10/Santorini-Mules.jpg 1889w" sizes="(max-width: 584px) 100vw, 584px" /></a><p id="caption-attachment-91" class="wp-caption-text">Mules on Santorini</p></div>
+<p>&nbsp;</p>
+<p>Tomorrow, we land at the “sacred island” of Delos.  Sacred to Apollo because it is where is mother Leto bore him.  Sacred to the Athenians because it is where they kept their treasure, collected as taxes from the “Delian League”.  Then we will go on to Mykonos – also sacred in its way, but to jet-setting tourists.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-84 -->
+
+				
+					
+	<article id="post-74" class="post-74 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://president.blogs.muhlenberg.edu/2011/10/02/rhodes-%e2%80%93-saturday-october-1-2011/" rel="bookmark">Rhodes – Saturday, October 1, 2011</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://president.blogs.muhlenberg.edu/2011/10/02/rhodes-%e2%80%93-saturday-october-1-2011/" title="3:19 am" rel="bookmark"><time class="entry-date" datetime="2011-10-02T03:19:13+00:00">October 2, 2011</time></a><span class="by-author"> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="http://president.blogs.muhlenberg.edu/author/helm/" title="View all posts by helm" rel="author">helm</a></span></span>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>You think of “Rhodes” you think of “Colossos” right?  (Or maybe “Rhode Island” – but that’s just silly if you’re cruising the Aegean). Well, the “Colossos” isn’t here anymore and, in fact, despite that it was one of the seven wonders of the ancient world, it only existed for 75-80 years (from approximately 305 B.C. to about 225 B.C.) and they are not quite sure what it looked like or where it stood.  It certainly wasn’t part of today’s tour. The day was sparkling, warm, and breezy (every day of the trip has been just perfect) but nonetheless began on a sad note as two of our intrepid Mules left us to return to the States for other commitments.  We will miss you, Julie and John.  Safe travels!</p>
+<p>Rhodes is a beautiful spot and well worth a visit.  Most of the “old city” in the current capital city of the Dodecanese (unimaginatively named “Rhodes” like the island) is medieval – remains of the crusader fortifications of the “Knights Hospitallers” – one of those military/religious orders during the Crusades that persisted long after the high tide of the Crusades had ebbed back from the Holy Land to Europe (the Knights Hospitaller were eventually expelled from Rhodes by Sulieman the Magnificent – a man apparently not known for modesty – and removed to Malta, where they became “the Knights of Malta”).  The citadel of the “Grand Master” of the Knights Hospitaller was blown up in the early 19<sup>th</sup> century (apparently an ammunition store in the cellar was ignited by a lightning strike), and then rebuilt in the 1930s after Mussolini’s regime took over the island. So much of what remains today is actually Fascist work from the early-mid 20<sup>th</sup> century, though it incorporates ancient and medieval columns, mosaic floors, and other remains of previous eras.  Once the Italians were driven out (in 1943) and after the Germans were also driven out (in 1945) the citadel became a venue for art exhibits and concerts (and, of course, throngs of tourists like us).  Now on display are works of the contemporary artist Nico Floro, who constructs fabulous gowns and other garments from recycled aluminum soda cans (he specializes in Coke products – eat your heart out Pepsi. Take note Tim Gunn!!!).</p>
+<p>Rhodes’ real historical problem, however, is that it never knew which side it should be on.  In the late Bronze Age, it sheltered a troublemaker from Miletus (then known as “Milawanda” who was being pursued by the Hittites.  Rhodes was then under the control of the Mycenaeans (in Hittite: “Ahhiyawah” – or “Achaians”), and it wasn’t clear whether they were allies or enemies of the Hittites (and their vassal state – Troy).  During the Persian War Rhodes’ fleet sailed with the Persian fleet of Xerxes against the Greeks, and participated in their defeat by the Greeks at Salamis.  A year later, when Athens formed the Delian League to resist further Persian aggression, Rhodes happily joined up.</p>
+<p>Rhodes was pleased to surrender to Alexander the Great as he subjugated Greece and went on to invade Asia Minor (and then Asia) – but that was probably because he destroyed their biggest trading rival, the Phoenician city of Tyre, and established a very strong Egyptian trading partner, Alexandria).  When Alexander died and his generals split up his empire, the Rhodians “followed the money” by allying themselves with Ptolemy’s Egypt and resisting one of Alexander’s other heirs, “Demetrios the Besieger”.  The resulting profits allowed them to build the famous Colossus which was knocked down by an earthquake a couple of generations later.</p>
+<p>But I digress.  This is not the place to recount the history of Rhodes.  We enjoyed the tour, conducted by our guide Nina (Greek, but with a lovely Cockney accent), browsed the ubiquitous shops (I was sorely tempted to replace my hoplite armor with a new outfit, but resisted), and then after a quick lunch aboard L’Austral, many of us headed off to the other end of the island to see the ancient city of Lindos.</p>
+<p>Lindos has a minute and adorable harbor (ringed with a lovely beach), and an impressive acropolis which has been substantially restored (you can tell the restored parts  &#8211; they are made of poured concrete). One can walk up to the acropolis (as I did, needing the exercise) or rent a donkey for five euros each way.  One must also run the gauntlet of more souvenir shops along the narrow streets leading up to the acropolis (but since I am a connoisseur of souvenirs, that was no problem).  How does one judge a truly excellent souvenir?  Here are my criteria:  It must be tasteful (no bawdy slogans), useful or decorative or both, and it must be flat (or able to be folded flat) so that it can fit in one’s suitcase.  Of course, I have a great interest in reproductions of ancient Greek vases which are decorative and (usually) tasteful, but fail to meet all my other criteria. For that matter, so does a new suit of hopilite armor.</p>
+<p>Here’s another thing worth knowing about Lindos:  free WiFi in the public square.  Altogether, a delightful town.</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			
+										<span class="cat-links">
+					<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://president.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>			</span>
+							
+										
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-74 -->
+
+				
+							<nav id="nav-below">
+				<h3 class="assistive-text">Post navigation</h3>
+				<div class="nav-previous"><a href="http://president.blogs.muhlenberg.edu/page/2/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+				<div class="nav-next"></div>
+			</nav><!-- #nav-above -->
+			
+			
+			</div><!-- #content -->
+		</div><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			
+				<aside id="archives" class="widget">
+					<h3 class="widget-title">Archives</h3>
+					<ul>
+							<li><a href='http://president.blogs.muhlenberg.edu/2011/10/'>October 2011</a></li>
+	<li><a href='http://president.blogs.muhlenberg.edu/2011/09/'>September 2011</a></li>
+					</ul>
+				</aside>
+
+				<aside id="meta" class="widget">
+					<h3 class="widget-title">Meta</h3>
+					<ul>
+												<li><a href="http://president.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+											</ul>
+				</aside>
+
+					</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+												<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress				</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://president.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://president.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fpresident.blogs.muhlenberg.edu%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://president.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

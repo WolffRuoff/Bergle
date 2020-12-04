@@ -16,6 +16,7 @@ def main():
     ind = invIndexCreator()
     ind.writeInvIndex()
     '''
+    
     with open("invIndex.json") as inv:
         invIndex = json.load(inv)
     

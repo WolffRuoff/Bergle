@@ -1,0 +1,593 @@
+http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/
+33
+
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 8) ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+
+<title>The Dead Zoo: Parra and Berube | </title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://mobilemedia.blogs.muhlenberg.edu/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<title>The Dead Zoo: Parra and Berube &#8211; Mobile Media 2018</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Mobile Media 2018 &raquo; Feed" href="http://mobilemedia.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mobile Media 2018 &raquo; Comments Feed" href="http://mobilemedia.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Mobile Media 2018 &raquo; The Dead Zoo: Parra and Berube Comments Feed" href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mobilemedia.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mobilemedia.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='flexslider-css'  href='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/keyboard-image-navigation.js?ver=20120202'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/jquery.flexslider-min.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/flexslider-init.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<link rel='https://api.w.org/' href='http://mobilemedia.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mobilemedia.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mobilemedia.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Garden of Remembrance: Jess McFalls and Rachel Brodsky' href='http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/garden-of-remembrance-jess-mcfalls-and-rachel-brodsky/' />
+<link rel='next' title='The Ha&#8217;Penny Bridge: Ayanna Costley &amp; Nicole Newham' href='http://mobilemedia.blogs.muhlenberg.edu/2018/03/20/the-hapenny-bridge-ayanna-costley-nicole-newham/' />
+
+<link rel="canonical" href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/" />
+<link rel='shortlink' href='http://mobilemedia.blogs.muhlenberg.edu/?p=111' />
+<link rel="alternate" type="application/json+oembed" href="http://mobilemedia.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmobilemedia.blogs.muhlenberg.edu%2F2018%2F03%2F19%2Fthe-dead-zoo-parra-and-berube%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://mobilemedia.blogs.muhlenberg.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fmobilemedia.blogs.muhlenberg.edu%2F2018%2F03%2F19%2Fthe-dead-zoo-parra-and-berube%2F&#038;format=xml" />
+<link rel="stylesheet" type="text/css" href="http://mobilemedia.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mobilemedia.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mobilemedia.blogs.muhlenberg.edu/?wordfence_lh=1&hid=35F31CD9484C218FAEF38476AB62EBCF');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css">
+			.site-header img {
+			display: block;
+			margin: 0.5em auto 0;
+		}
+			.site-title a,
+		.site-description {
+			color: #000000 !important;
+		}
+		</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy post-template-default single single-post postid-111 single-format-standard admin-bar no-customize-support group-blog no-js">
+<div id="wrap">
+<div id="topbar"> 
+	<ul class="social-media">
+				
+				
+				
+				
+				
+				
+				
+				
+			
+		
+		
+				
+
+	</ul><!-- #social-icons--></div>
+<div id="page" class="hfeed site">
+	    <div id="masthead-wrap">
+<header id="masthead" class="site-header" role="banner">
+    
+		<div class="site-introduction">
+			<h1 class="site-title"><a href="http://mobilemedia.blogs.muhlenberg.edu/" title="Mobile Media 2018" rel="home">Mobile Media 2018</a></h1>
+			<p class="site-description">Project site for Dr. Sullivan&#039;s Mobile Media course</p> 
+		</div>
+
+<nav role="navigation" class="site-navigation main-navigation">
+			<h1 class="assistive-text">Menu</h1>
+			<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-25"><a href="http://mobilemedia.blogs.muhlenberg.edu">Home</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://mobilemedia.blogs.muhlenberg.edu/sample-page/st-stephens-green-and-interview-noa-boonin-and-jason-kopp/">St. Stephen&#8217;s Green and Interview: Noa Boonin and Jason Kopp</a></li>
+<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-161"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/garden-of-remembrance-jess-mcfalls-and-rachel-brodsky/">Garden of Remembrance: Jess McFalls and Rachel Brodsky</a></li>
+<li id="menu-item-162" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-162"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/" aria-current="page">The Dead Zoo: Parra and Berube</a></li>
+<li id="menu-item-163" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-163"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/20/the-hapenny-bridge-ayanna-costley-nicole-newham/">The Ha&#8217;Penny Bridge: Ayanna Costley &#038; Nicole Newham</a></li>
+<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-164"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/21/grafton-street-mcguire-bartholomew/">Grafton Street &#8211; McGuire / Bartholomew</a></li>
+<li id="menu-item-165" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-165"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/12/trinity-college-place-steph-sasha-jacob/">Trinity College: Place &#8211; Steph, Sasha &#038; Jacob</a></li>
+<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="http://mobilemedia.blogs.muhlenberg.edu/hugh-lane-gallery-colleen-guernier-and-brett-mathews/">Hugh Lane Gallery: Colleen Guernier and Brett Mathews</a></li>
+</ul></div>		</nav><!-- .site-navigation .main-navigation -->
+
+	</header><!-- #masthead .site-header -->
+	</div><!-- #masthead-wrap -->
+    <div class="header-image">
+				<a href="http://mobilemedia.blogs.muhlenberg.edu/" title="Mobile Media 2018" rel="home">
+				<img src="http://mobilemedia.blogs.muhlenberg.edu/files/2018/02/cropped-zach-meaney-248676-1.jpg" width="960" height="439" alt="" />
+			</a>
+			</div>
+	<div id="main" class="site-main">
+		<div id="primary" class="content-area">
+			<div id="content" class="site-content" role="main">
+
+			
+
+				
+<article id="post-111" class="post-111 post type-post status-publish format-standard hentry category-uncategorized">
+	<header class="entry-header">
+		<h1 class="entry-title">The Dead Zoo: Parra and Berube</h1>
+
+		<div class="entry-meta">
+			Posted on <a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/" title="5:37 pm" rel="bookmark"><time class="entry-date" datetime="2018-03-19T17:37:40+00:00" pubdate>March 19, 2018</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="http://mobilemedia.blogs.muhlenberg.edu/author/jaimieberube/" title="View all posts by Jaimie Berube" rel="author">Jaimie Berube</a></span></span>		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>&nbsp;</p>
+<p>Place: The National Museum of Ireland</p>
+<p>Date: March 10, 2018</p>
+<p>Our Observation:</p>
+<p>The National Museum of Ireland, consisting of over 10,000 exhibits, is an historical structure dating back to the year 1857. Its doors have been open to locals and tourists alike, sharing its amazing collection of the species in the natural world, dedicated one whole section to animals found in and around Ireland itself. The museum, also referred to as the “Dead Zoo”, welcomes many visitors and tourists within Dublin, impressing them with over 2 million species inside. The Geographic location of the Museum serves to be beneficial because of the accessibility of the building to many visitors. It’s location on Merrion Street Upper allows for people to visit multiple tourist attractions like the The National Gallery of Ireland and even Trinity College, attractions that are in walking distance of the Zoo.<br />
+For our project, Jess and I decided to visit the Dead Zoo not only because of the attractions but because of the opportunity to observe. We visited the museum on March 10th around 2pm. Without realizing it initially, Saturday was a good day to travel to the Zoo because of the amount of people out and about on weekend excursions. Many different groups of people, of all ages, walk around and learn about the species on their own time, reading the labels next to the exhibits and taking pictures to remember the experience. Immediately after walking in, the tall skeletons of the many moose species of Ireland can be seen, towering over everyone who walks by them. Because of this, everyone, including the adults resemble young children looking up in awe of the massive structures in front of them. The Zoo has a strict policy of no flash photography or videography, something that we were unaware of initially, which discouraged people from being on their phones. Because of this, people were walking through the exhibit encouraging family member and friends to look at the animals and trying to be respectful of others who were observing the species as well. There is a image of a father and son, within our short video montage of our visit, showing an example of shared experiences, one that didn’t require technological devices. The interactions among friends and family in the place were interesting to observe, going along with the dea that “traditionally, place is an interweaving of communication and action” (Wilken &amp; Goggin 2016, p 51). The communication took place as the man educated his son of the species, and family members caught each other’s attention as they wanted to show one another the different exhibits. These were all accompanied by actions such as gazing in awe, walking around the museum, and reading about the animals of Ireland.<br />
+Jess and I, on the other hand, became very aware of our surroundings when a man in a museum uniform was watching us with confusion as we used our handheld mobile stabilizer to capture our surroundings. After quickly figuring out that videography was prohibited, we ended out excursion. This is an example of our phenomenological approach. We often saw Wilken &amp; Goggin’s idea of pedestrian’s switching their gaze from the animals, to our smartphones in a place where people typically take photos of the animals, not other people in the space (Wilken &amp; Goggin 60). The pedestrians switched their gaze often as the stimulus of the animals, other people, and changing surroundings overtook their attention. Although the second room in the museum, holding species around the world, was closed to the public on this day, we were able to take note of the many interactions taking place in the initial room of the museum.<br />
+Using a phenomenological lens to analyze our environment, we noticed that the overall sense of the place was calm and welcoming. The lights were dimmed creating a very solemn space, which was respectable considering all of the species in the museum are either stuffed or frozen. There were many children eagerly looking at the exhibits and talking loudly, conversing about the animals. Many wanted to touch the exhibits, although the parents were happy to find that the children and the animals were seperated by glass through most of the building. We took into account our presence in the space as we captured our experience as visitors to the museum as well. Overall, it was very interesting to observe the people and our surroundings in the space.</p>
+<p>Works Cited</p>
+<p>Farman, J. (ed). (2016). Foundations of mobile media studies: Essential texts on the formation of a field. New York: Routledge.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Our Observation Video: Enjoy!</p>
+<p><iframe width="654" height="368" src="https://www.youtube.com/embed/drpKJpV1iog?feature=oembed" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img class="size-medium wp-image-114 aligncenter" src="http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/IMG_6290-225x300.jpg" alt="" width="225" height="300" srcset="http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/IMG_6290-225x300.jpg 225w, http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/IMG_6290-768x1024.jpg 768w, http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/IMG_6290-1x1.jpg 1w" sizes="(max-width: 225px) 100vw, 225px" /></p>
+<p>Jaimie&#8217;s Interview:</p>
+<p>In my interview with Jaimie, I learned a lot about her smartphone usage. I found that she typically uses her smartphone throughout the day, but for different purposes. These purposes align with domestication theory and the integration of the smartphone into our society. She starts by using her phone as an alarm clock and quickly checks her social media accounts such as Instagram and Snapchat to check her notifications and explore what her friends back at Muhlenberg at doing. These social media apps provide a visual and audio portrayal of what is happening back home. Immediately, this relates to domestication theory. She does not have a physical alarm clock that wakes her up in the morning. Instead, she relies on her cellular device to wake her up in time for classes and other activities. Instead of collecting her thoughts and having a quiet moment to herself, she chooses to check her social media notifications. As Turkle 2008 says, “Adults use tethering technologies during what most of us think of as down time, the time we might have daydreamed during a cab ride, waiting in line, or walking to work” (Turkle 129). While laying in bed, Jaimie could take a quiet moment to herself since she is “not the type of person to jump right out of bed in the morning,” but instead, checks her social media accounts to instantly feel connected to others that are not in her physical space. According to Turkle, this is the behavior of the average young adult in modern times.</p>
+<p>Jaimie says that she notices herself using her smartphone for different purposes in Dublin than at home. When she is at Muhlenberg, she notices herself using her phone to constantly check emails and texts, but doesn’t notice herself doing that as much while abroad. She also uses her phone more at the end of the day in Dublin since the time difference allows her to check in with family and friends back home in the later hours. Her usage also varies based on what her activities are for the day. She says that she uses her phone more when she is not busy, and she used it more when she was stuck inside due to the snowstorm we had in Dublin. Here, she is using her phone for entertainment purposes. She notices herself picking up her phone to check it about every 15 minutes when she is not busy. This also goes along with Turkle’s idea of the “tethered-self.” She is constantly tethered to her smartphone and feels the need to check it often for notifications of someone trying to get in contact with her.</p>
+<p>Her most used applications on her smartphone are messages, Snapchat, Instagram, Facebook, GroupMe, Spotify, email, and Shazam. These applications all serve different purposes for Jaimie and she tends to use different apps for different audiences. For example, while abroad, she uses messages to text her friends who also have Irish numbers, but GroupMe to communicate with those at home. She uses Instagram and Facebook to share photos and stay up to date with other’s social lives. She also uses Snapchat as a form of quick communication with friends and to send funny pictures of real-time events. She said that music is very important because it “puts me in a good mood transitioning classes or sitting in a room. Discovering music makes me feel good.” Before the smartphone, Jaimie would have had to mail letters home, or find a public telephone to communicate with others not in her physical space. She also would not have easy access to music, and would have to bring a physical camera to Ireland to share photos with those at home. Now, she can use her smartphone daily to have access to all of these features, and she chooses to utilize these features all on one device, hence domestication theory. As Wikipedia 2018 states, “First, technologies are integrated into everyday life and adapted to daily practices. Secondly, the user and its environment change and adapt accordingly. Thirdly, these adaptations feedback into innovation processes in industry, shaping the next generation of technologies and services.” Jaimie has integrated these communication apps into her everyday life for quick communication back to the States, and relies on them to complete daily tasks and stay in touch with others. She shared a story of when she accidentally dropped her phone into a toilet, and tried everything she could to bring it “back to life,” but unfortunately, she was unable to do so. She said that she almost “had a meltdown,” which shows how much she values her smartphone’s features. She was most devastated about the photos she lost that she did not have backed up onto her computer. This is typical behavior of the modern young adult, according to Turkle.</p>
+<p>The way Jaimie has chosen to organize her smartphone is interesting, and shows her prioritized applications. Her main four apps on the bottom of her phone are music, phone, messages, and email. These four are easy to access and available on any screen. From there, she has categorized the apps on her home screen into social media, navigation, and utilities. Shazam is also on this home screen, but not in any category since music is very important to her, and needs to be quickly accessible when attempting to identify a song that is playing in public. There are also random apps on her second screen, which do not fit into the other three categories, and she does not use these as often. Her lock screen shows her friends from the States, which she says is a visual reminder to stay in touch with them. The beach is her homepage, which is a relaxing picture, reminding her of the good times she had at the beach. She does have a password to unlock her iPhone, for security reasons. She figures that there is a lot of personal information that is held on her phone, and if someone were to have access to her phone, they would have a harder time gaining access to her personal information if there is a password protecting this. She has a plain black case to protect her smartphone in case she drops it, and this case has a section to hold her student ID. This also applies to domestication theory. Since she almost always has her phone on her, and there is no application on her smartphone to replace her student ID, she can at least have her ID attached to her smartphone at all times. She does not have stickers or other decorations on the case of her phone, and she did not purchase a ringtone. She feels that these actions are a bit outdated, which shows how the smartphone has developed over the years. In the past, it was trendy to have a pop music song as your ringtone, but that trend is beginning to fade out as the third phase of domestication theory, innovation and changes, sets in.</p>
+<p>Jaimie feels that her phone is very important to her in terms of connecting with others because she feels that she often forgets to do so when she is distracted with schoolwork and other activities. She mostly keeps in contact with friends and family, but enjoys knowing that she is able to connect with anyone who is also connected online right through her mobile device. Jaimie’s usage of her smartphone aligns with Turkle’s description of “tethered teens,” but Jaimie does find times and places to put her phone down and enjoy her surroundings. She says that since she has been abroad, she has noticed herself checking her mobile phone less since she has been very busy with seeing the beautiful views of Ireland.</p>
+<p>Turkle, S. (2008). Always on/Always-on-you: The tethered self. In J. E. Katz (ed.). Handbook of Mobile Communication Studies (pp. 121-138). Cambridge, MA: The MIT Press.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img class="size-medium wp-image-113 aligncenter" src="http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/2018-03-02-145121.384-300x225.jpg" alt="" width="300" height="225" srcset="http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/2018-03-02-145121.384-300x225.jpg 300w, http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/2018-03-02-145121.384-768x576.jpg 768w, http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/2018-03-02-145121.384-1024x768.jpg 1024w, http://mobilemedia.blogs.muhlenberg.edu/files/2018/03/2018-03-02-145121.384-1x1.jpg 1w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>Jessika’s Interview:</p>
+<p>Jessika Parra uses mobile media throughout her day in order to make her life easier, connect with family and friends and keep up-to-date on what’s going on in the world. Domestication theory states that technologies are welcomed into our daily routines which forces us to adapt to using it. Jess finds herself dependent on her smartphone because of the many amenities and tools it possess. I found that when listening to Jess explain how she uses her device; it was important to note the differences between her phone use abroad versus when back in the states. Keeping in mind the everyday tasks done by mobile devices, the individualistic qualities expressed with it and the connections it allows people to make, domestication theory plays a key role in helping us understand how and why people appropriate this technology into their daily lives.</p>
+<p>Jess’s mobile phone became an essential tool once she traveled to Ireland. With new scenery, people and transportation systems, GoogleMaps, and Apple Maps play an important role in getting her where she needs to be. Before GPS and Google/Apple Maps, people would use physical maps and simply ask for directions. Jess emphasized how she noticed a significant increase in her usage of navigation apps, making her state that she “couldn’t imagine life without them”. In this sense, these applications stand for more than just a tool but a means of safety and provide a feeling of comfort when accessible. This sense of security has been researched by may media scholars, questioning the independence of teens and young adults, as they go out into the world, always knowing that a quick ‘check-in’ is available via the internet or by phoning a friend.</p>
+<p>Besides navigation, users find themselves hooked on the idea of being accessible at all times. Within her article, <em>The Tethered Self</em>, author Sherry Turkle suggests that “the cell…is always available and there is a high probability that one will be able to reach a source of validation through it. It is understood that the validating cell conversation may be brief, just a ‘‘check-in,’’ but more is not necessarily desired” (2008 p.128). Jess experiences this feeling of validation when friends back at Muhlenberg, family members in Bethlehem Pa, and loved ones reach out just to catch up and see how she’s doing. For short and concise connections, she uses applications like Snapchat and WhatsApp, to keep those strong connections back home without disturbing her daily routine abroad. This technology became a part of her routine because of the accessibility to applications that keep the connections. Jess is very close with her family, so much so, that they are constantly reaching out to her making sure she’s “still alive”. This is where quick interactions come in handy once again. The quick “just thinking about you” text message gets a greater meaning put into it when communicating with people far away. From a phenomenological perspective, Jess notices herself not feeling as content or happy when she hasn’t reached out to people back home. She sees their facetiming rituals, snapchat streaks and picture sharing as representative of a way of staying relevant and present even when abroad.</p>
+<p>When asked about how Jess likes to decorate and organize her mobile device, she went into great detail about the choices she made when setting it up. She decided to keep the original applications on the home screen that were put there automatically. She has to color code them so that no two applications of the same color are next to one another, for aesthetic purposes. She has a marble-looking case on it and a card holder that says, “Good Vibes Only”. She likes this because it makes her feel happy when she looks at it. This sense of control is something that Jess likes, especially since there are many aspects about her device that she can’t control, like the notifications that come in on the regular. Within their article, <em>Adolescents and Smartphone</em>s, Maialen Garmendia, Miguel Casado del Río and Estefanía Jimenez, these authors note people’s tendencies to prioritize their messaging so that they don’t feel as manipulated by their own device. They claim that “as an alternative to putting the smartphone completely aside, some adolescents say they are able to keep the device on and next to them in order to read those messages regarded as relevant, while not paying attention to the rest” (2018 p.115). Jess claimed to do this in her own life. She purposely puts her phone on her desk before she goes to bed because she knows that the only notification she wants to hear is her alarm waking her up in the morning. She is consciously making the choice to ignore all temptations or urges to reach for her phone until she has to, when she has to get up. Showing this sense of control is important and should be practiced more, allowing individuals to feel more independent and capable even when their mobile devices aren’t glued to their side.</p>
+<p>The domestication of mobile phones can be applied to the way that we chose to personalize it. This device no longer does its service and is tossed away, but is decorated, kept close at all times and treated with ‘care”. Besides the physical changes to the appearance of the phone, we get to customize the data presented inside of it. When talking about how Jess organizes her own device, she mentioned that she places her applications in a very strategic way to enhance functionality and to continue her overall aesthetic. She, unlike most people, has kept the applications that are naturally set on the first screen where they were, such as the clock, email app, camera, photos, notes, wallet and health. Although she does not use all of these, she keeps them there because of their look. She claims that she could never have “two blue-colored applications next to one another, that’s just not okay”. Jess added applications to her smart phone which can be supported by the ‘incorporation’ part of domestication theory. She made functions like paying others online through Venmo more of a necessity in her everyday life using the mobile phone.</p>
+<p>Works Cited</p>
+<p>Garmendia, M., Casado del Rio, M., &amp; Jimenez, E. (2018). Aolescents and smartphones: Coping</p>
+<p>with overload. In J. Vincent &amp; L. Haddon (Eds.), Smartphone Cultures (pp. 108–120).</p>
+<p>London: Routledge.</p>
+<p>Turkle, S. (2008). Always on/Always-on-you: The tethered self. In J. E. Katz (ed.). Handbook of</p>
+<p>Mobile Communication Studies (pp. 121-138). Cambridge, MA: The MIT Press.</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		Bookmark the <a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/" title="Permalink to The Dead Zoo: Parra and Berube" rel="bookmark">permalink</a>.
+			</footer><!-- .entry-meta -->
+</article><!-- #post-111 -->
+
+					<nav role="navigation" id="nav-below" class="site-navigation post-navigation">
+		<h1 class="assistive-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/garden-of-remembrance-jess-mcfalls-and-rachel-brodsky/" rel="prev"><span class="meta-nav">&larr;</span> Garden of Remembrance: Jess McFalls and Rachel Brodsky</a></div>		<div class="nav-next"><a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/20/the-hapenny-bridge-ayanna-costley-nicole-newham/" rel="next">The Ha&#8217;Penny Bridge: Ayanna Costley &amp; Nicole Newham <span class="meta-nav">&rarr;</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+				
+
+	<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2018/03/19/the-dead-zoo-parra-and-berube/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://mobilemedia.blogs.muhlenberg.edu/wp-comments-post.php" method="post" id="commentform" class="comment-form"><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='111' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="782e5ba462" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="12"/></p></form>	</div><!-- #respond -->
+	
+</div><!-- #comments .comments-area -->
+
+			
+			</div><!-- #content .site-content -->
+		</div><!-- #primary .content-area -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+						<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="http://mobilemedia.blogs.muhlenberg.edu/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" value="" id="s" placeholder="Search &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/21/grafton-street-mcguire-bartholomew/">Grafton Street &#8211; McGuire / Bartholomew</a>
+									</li>
+											<li>
+					<a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/20/the-hapenny-bridge-ayanna-costley-nicole-newham/">The Ha&#8217;Penny Bridge: Ayanna Costley &amp; Nicole Newham</a>
+									</li>
+											<li>
+					<a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/the-dead-zoo-parra-and-berube/" aria-current="page">The Dead Zoo: Parra and Berube</a>
+									</li>
+											<li>
+					<a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/19/garden-of-remembrance-jess-mcfalls-and-rachel-brodsky/">Garden of Remembrance: Jess McFalls and Rachel Brodsky</a>
+									</li>
+											<li>
+					<a href="http://mobilemedia.blogs.muhlenberg.edu/2018/03/12/trinity-college-place-steph-sasha-jacob/">Trinity College: Place &#8211; Steph, Sasha &amp; Jacob</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='https://wordpress.org/' rel='external nofollow ugc' class='url'>A WordPress Commenter</a></span> on <a href="http://mobilemedia.blogs.muhlenberg.edu/2018/02/18/hello-world/#comment-1">Hello world!</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+				<li><a href='http://mobilemedia.blogs.muhlenberg.edu/2018/03/'>March 2018</a></li>
+	<li><a href='http://mobilemedia.blogs.muhlenberg.edu/2018/02/'>February 2018</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+				<li class="cat-item cat-item-1"><a href="http://mobilemedia.blogs.muhlenberg.edu/category/uncategorized/">Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h1 class="widget-title">Meta</h1>			<ul>
+						<li><a href="http://mobilemedia.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+			<li><a href="http://mobilemedia.blogs.muhlenberg.edu/feed/">Entries feed</a></li>
+			<li><a href="http://mobilemedia.blogs.muhlenberg.edu/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary .widget-area -->
+
+		<div id="tertiary" class="widget-area" role="supplementary">
+						</div><!-- #tertiary .widget-area -->
+	</div><!-- #main .site-main -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+    
+    <div class="section group">
+    
+	<div class="col span_1_of_3">
+             <div class="widget">
+			<h4>Widget Ready</h4>            <p>This left column is widget ready! Add one in the admin panel.</p>            </div>     
+	  
+		</div>
+        
+	<div class="col span_1_of_3">
+	         <div class="widget">
+			<h4>Widget Ready</h4>            <p>This center column is widget ready! Add one in the admin panel.</p>            </div>     
+	 
+
+	</div>
+    
+	<div class="col span_1_of_3">
+	         <div class="widget">
+			<h4>Widget Ready</h4>            <p>This right column is widget ready! Add one in the admin panel.</p>            </div>     
+	 
+	</div>
+	</div>
+
+		<div class="site-info">
+            <a href="http://www.templateexpress.com/bota-theme/">
+            Bota simple WordPress Theme</a>
+            Powered By WordPress 		</div><!-- .site-info -->
+	</footer><!-- #colophon .site-footer -->
+     <a href="#top" id="smoothup"></a>
+</div><!-- #page .hfeed .site -->
+</div><!-- end of wrapper -->
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/comment-reply.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/small-menu.js?ver=20120206'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/themes/bota/js/smoothscroll.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script async="async" type='text/javascript' src='http://mobilemedia.blogs.muhlenberg.edu/wp-content/plugins/akismet/_inc/form.js?ver=4.1.7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mobilemedia.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmobilemedia.blogs.muhlenberg.edu%2F2018%2F03%2F19%2Fthe-dead-zoo-parra-and-berube%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mobilemedia.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

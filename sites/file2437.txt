@@ -1,0 +1,1039 @@
+http://mediaindustries11.blogs.muhlenberg.edu/
+66
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en-US">
+
+	<head>
+
+		<meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+
+		<title>Media Industries Course Blog 2011 &#8211; If It&#039;s About the Media, It&#039;s On This Blog!</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Media Industries Course Blog 2011 &raquo; Comments Feed" href="http://mediaindustries11.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Archivo%3A400%2C400i%2C500%2C500i%2C700%2C700i&#038;subset=latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-fontawesome-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/fonts/font-awesome/font-awesome.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sullivan-style-css'  href='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/jquery.flexslider.js?ver=1'></script>
+<link rel='https://api.w.org/' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediaindustries11.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://mediaindustries11.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mediaindustries11.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mediaindustries11.blogs.muhlenberg.edu/?wordfence_lh=1&hid=11BAE2C7956081FEB63BBA64ACEE1033');
+</script>		<script>jQuery( 'html' ).removeClass( 'no-js' ).addClass( 'js' );</script>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	
+	</head>
+
+	<body class="home-page bp-legacy home blog admin-bar no-customize-support no-js">
+
+		
+		<a class="skip-link faux-button" href="#site-content">Skip to the content</a>
+
+		<div class="mobile-menu-wrapper">
+
+			<div class="mobile-search">
+
+				<form role="search" method="get" class="mobile-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+					<span class="screen-reader-text">Search for:</span>
+					<label for="mobile-search-field"></label>
+					<input type="search" id="mobile-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+					<div class="cancel-search"></div>
+				</form>
+
+				<div class="compact-search-results ajax-search-results"></div><!-- .compact-search-results -->
+
+			</div><!-- .mobile-search -->
+
+			<ul class="mobile-menu">
+				<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+			</ul>
+
+			
+		</div><!-- .mobile-menu-wrapper -->
+
+		<div class="body-inner">
+
+			<div class="mobile-nav-content-overlay dark-overlay"></div>
+
+			
+			<header class="site-header">
+
+				<div class="nav-toggle">
+
+					<div class="bar"></div>
+					<div class="bar"></div>
+					<div class="bar"></div>
+
+				</div>
+
+				<div class="header-inner section-inner">
+
+					
+		<div class="header-search">
+
+			<form role="search" method="get" class="header-search-form" action="http://mediaindustries11.blogs.muhlenberg.edu/">
+				<span class="screen-reader-text">Search for:</span>
+				<label for="header-search-field"></label>
+				<input type="search" id="header-search-field" class="ajax-search-field" placeholder="Search" value="" name="s" autocomplete="off" />
+
+				<input type="hidden" name="post_type" value="post"><input type="hidden" name="post_type" value="page">
+			</form>
+
+			<div class="compact-search-results ajax-search-results modal arrow-left"></div>
+
+		</div><!-- .header-search -->
+
+
+		
+					<div class="header-titles">
+
+						
+							<h1 class="site-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></h1>
+
+						
+							<p class="site-description">If It&#039;s About the Media, It&#039;s On This Blog!</p>
+
+						
+					</div><!-- .header-titles -->
+
+					
+				</div><!-- .header-inner -->
+
+				<ul class="site-nav">
+					<li class="page_item page-item-2"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about/">About</a></li>
+<li class="page_item page-item-589"><a href="http://mediaindustries11.blogs.muhlenberg.edu/about-2/">About</a></li>
+				</ul>
+
+			</header><!-- .site-header -->
+
+<main id="site-content">
+
+	<div class="section-inner split">
+
+		<div class="content">
+
+			
+				<div class="posts" id="posts">
+
+					<article class="post-1182 post type-post status-publish format-standard hentry category-computervideo-game-industry tag-baidu tag-exhibitors tag-google tag-online tag-search-engines missing-thumbnail" id="post-1182">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/03/google-it-think-baidu-it-in-china/" title="Google It? Think Baidu It in China">May 3, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/03/google-it-think-baidu-it-in-china/" title="Google It? Think Baidu It in China">Google It? Think Baidu It in China</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/jonf312/" title="Posts by Jonathan Flint" rel="author">Jonathan Flint</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/computervideo-game-industry/" rel="category tag">Computer/Video game industry</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p><img class="aligncenter" src="http://www.internationalsem.com/wp-content/uploads/2010/01/BaiduVideoServiceThumbnail.jpg" alt="" width="300" height="300" /></p>
+<div>
+Kan, M. April 27, 2011. China&#8217;s Baidu Revenue, Profits Up on Strong Traffic Growth.<em> Network World</em>. Retried from <a href="http://www.networkworld.com/news/2011/042811-chinas-baidu-revenue-profits-up.html">http://www.networkworld.com/news/2011/042811-chinas-baidu-revenue-profits-up.html</a></p>
+<p>Google dominants search in nearly every corner of the world, except in one: China. Google’s forays into the lucrative Chinese internet search marketplace, which is estimated at 457 million users, have captured less than 20% of the market. Baidu, an eleven year old competitor, offers many similar services to those provided by Google, yet has gained a significant market share by leveraging linking pin power roles. For instance, Baidu is the “default search engine in 80 percent of Andriod phones in China&#8230;because the mobile operating system is open-source software, device manufactures can make changes to it.” Baidu is pre-installed on devices through revenue sharing agreements with manufacturers.</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/03/google-it-think-baidu-it-in-china/">Read More</a></div>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1171 post type-post status-publish format-standard hentry category-radio tag-automobiles tag-car tag-iheartradio tag-internet-radio tag-power-roles tag-radio tag-streaming missing-thumbnail" id="post-1171">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/01/internet-radio-1-for-cars-maybe-not/" title="Internet Radio #1 for Cars?&#8230; Maybe Not!">May 1, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/01/internet-radio-1-for-cars-maybe-not/" title="Internet Radio #1 for Cars?&#8230; Maybe Not!">Internet Radio #1 for Cars?&#8230; Maybe Not!</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/samanthaa312/" title="Posts by samanthaa312" rel="author">samanthaa312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/radio/" rel="category tag">Radio</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p><a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/05/internet_radio1.jpg"><img class="alignleft size-thumbnail wp-image-1174" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/05/internet_radio1-150x150.jpg" alt="" width="150" height="150" srcset="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/05/internet_radio1-150x150.jpg 150w, http://mediaindustries11.blogs.muhlenberg.edu/files/2011/05/internet_radio1.jpg 300w" sizes="(max-width: 150px) 100vw, 150px" /></a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>RBR-TVBR. (2011, April, 25). In-car streaming perceptions, misperceptions examined. <em>Radio Broadcasting Report.</em> Retrieved from http://www.rbr.com/radio/in-car-streaming-numbers-perceptions-misperceptions-examined.html</p>
+<p>With the increasing technological growth and use of internet-streaming radio stations such as Pandora, iHeartRadio, and other cloud-based sites, the public still recognizes that the production and distribution of “over-the-air” terrestrial radio remains one of the most used media outlets while driving.  In a recent Radio Broadcasting Report article, it was made known through a survey of 18-44 year olds, that having streaming-internet radio in cars is not a threat at all to the AM/FM radio stations, or even Sirius/XM.  &#8220;The good news is most users of in-car streaming radio continue to use over-the-air radio extensively&#8221; (rbr.com).</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/05/01/internet-radio-1-for-cars-maybe-not/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1164 post type-post status-publish format-standard hentry category-motion-pictures tag-atlas-shrugged tag-ayn-rand tag-bad-reviews tag-internet tag-rotten-tomatoes missing-thumbnail" id="post-1164">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/29/your-movie-is-bad-please-stop/" title="Your Movie is Bad. Please Stop.">April 29, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/29/your-movie-is-bad-please-stop/" title="Your Movie is Bad. Please Stop.">Your Movie is Bad. Please Stop.</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/amandas312/" title="Posts by amandas312" rel="author">amandas312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/motion-pictures/" rel="category tag">Motion Pictures</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Bond, Paul. (2011, April 27). &#8216;Atlas Shrugged&#8217; producer promises two sequels despite terrible reviews, poor box office. <em>The Hollywood Reporter</em>. Retrieved from <a href="http://www.hollywoodreporter.com/news/atlas-shrugged-producer-promises-two-182714">http://www.hollywoodreporter.com/news/atlas-shrugged-producer-promises-two-182714</a></p>
+<p>Typically <a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/3446081393_afc9210f55.jpg"><img class="alignleft size-medium wp-image-1165" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/3446081393_afc9210f55-239x300.jpg" alt="" width="239" height="300" srcset="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/3446081393_afc9210f55-239x300.jpg 239w, http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/3446081393_afc9210f55.jpg 399w" sizes="(max-width: 239px) 100vw, 239px" /></a>when critics review films , the range of responses vary; however, in the case of &#8220;Atlas Shrugged: Part 1,&#8221; everyone seems to agree&#8230;it sucks. The film, based on Ayn Rand&#8217;s long controversial 1957 novel of the same name, opened on April 15. This is probably news to many of this blog&#8217;s readers, and it&#8217;s news to us as well. In writing the novel &#8220;Atlas Shrugged,&#8221; Rand incorporated her philosophical viewpoints into a highly debated novel that has been drawing negative criticism but a devoted fanbase for decades. Rand, a philosopher and author, was known for developing the philosophical system of Objectivism, which advocated reason as the only method of gaining knowledge and emphasized laissez-faire (or hands-off) capitalism in politics. This should sound familiar, as the recent rapid rise of the Tea Party in American politics gave John Aglialoro, a producer/financier, the idea to finally bring a film version of the &#8220;unfilmable&#8221; &#8220;Atlas Shrugged&#8221; to the big screen. However, the film received an atrocious 9% score on Rotten Tomatoes (which measures critics&#8217; reviews), with only 3 positive reviews out of 35 overall. And with middling box office returns added to the public perception of the film, Aglialoro has spoken out against film critics for their hatred of &#8220;individualism&#8221; and stated his plans to make two follow-up films.<a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/29/your-movie-is-bad-please-stop/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1155 post type-post status-publish format-standard hentry category-television tag-advertising tag-commercials tag-embedded-auditions tag-tagging missing-thumbnail" id="post-1155">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/28/the-new-face-of-commercials/" title="The New Face of Commercials">April 28, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/28/the-new-face-of-commercials/" title="The New Face of Commercials">The New Face of Commercials</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/emmat312/" title="Posts by emmat312" rel="author">emmat312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/television/" rel="category tag">Television</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Steinberg, B. (2011) Turner Experiements with Building a Smarter Ad for its Cable Networks, 	Advertising age, 82(15), 3-20. Retrieved April 25, 2011 from <a href="http://0-web.ebscohost.com.library.muhlenberg.edu/ehost/detail?vid=3&amp;hid=113&amp;sid=0b516150-c5ae-49a4-bc98-d9b18ce60e82%40sessionmgr114&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#db=bsh&amp;AN=59915490">detail?vid=3&amp;hid=113&amp;sid=0b516150-c5ae-	49a4-bc98-	d9b18ce60e82%40sessionmgr114&amp;bdata=JnNpdGU9ZWhvc3QtbGl2ZSZzY29wZT1zaXRl#db=bsh &amp;AN=59915490</a></p>
+<p><a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/turner_logo1.jpg"><img class="alignleft size-full wp-image-1159" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/turner_logo1.jpg" alt="" width="132" height="99" /></a>As we have seen again and again, television companies and advertisers alike are increasingly worried that audiences just aren’t watching commercials anymore.  And why should they when the DVR makes it so easy to avoid them?  But the Turner Company, a cable unit owned by the media conglomerate Time Warner, is developing a new strategy to save commercials from falling to their death (ouch!).  The company has undergone a four year effort to create a new kind of advertising strategy that will offer advertisers on the cable networks TBX, TNT, and True something that many others do not: a strong link between the commercial and the TV show that the consumers are viewing. The goal of this effort is to bring consumers back to commercials by making these ads relevant to the specific program and the specific audience.</p>
+<p>Turner’s idea is similar to a technique that other networks have come up with, the technique of embedding show content within the commercial breaks.  We saw American Idol trying out this strategy with their “embedded auditions” that ran between commercials.  Networks and advertisers hoped that when viewers saw a flash of that familiar American Idol logo, they would stop fast-forwarding to see the show content, and, with any luck, see some other ads in the process.<a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/28/the-new-face-of-commercials/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1145 post type-post status-publish format-standard hentry category-recording tag-authority tag-biden tag-digital tag-downloading tag-facilitator tag-riaa missing-thumbnail" id="post-1145">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/24/the-white-house-scolds-illegal-downloaders/" title="The White House Scolds Illegal Downloaders">April 24, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/24/the-white-house-scolds-illegal-downloaders/" title="The White House Scolds Illegal Downloaders">The White House Scolds Illegal Downloaders</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/kristinl312/" title="Posts by kristinl312" rel="author">kristinl312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/recording/" rel="category tag">Recording</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Peoples, G. (15 April 2011). Vice President Joe Biden calls piracy ‘outright theft.’ <em>Billboard</em>. Retrieved from <a href="http://www.billboard.biz/bbbiz/industry/legal-and-management/vice-president-joe-biden-calls-piracy-outright-1005136622.story">http://www.billboard.biz/bbbiz/industry/legal-and-management/vice-president-joe-biden-calls-piracy-outright-1005136622.story</a></p>
+<p>&nbsp;</p>
+<p><img class="alignleft" src="http://images1.variety.com/graphics/photos/_storypics/biden_joe_piracy.jpg" alt="" width="175" height="117" />Stricter copyright laws may be looming, if comments by Vice President Joe Biden are any indication. In an <a href="http://www.billboard.biz/bbbiz/industry/legal-and-management/vice-president-joe-biden-calls-piracy-outright-1005136622.story">interview</a> with the Hollywood trade magazine <em><a href="http://www.variety.com/Home/">Variety</a></em>, he took a personal stand against piracy (both music and movies), calling it “outright theft.” Industry executives are hopeful that this strong language indicates that Washington is willing to push through new regulations on streaming and downloading despite other drastically more important issues that the White House and Congress should be tackling instead.</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/24/the-white-house-scolds-illegal-downloaders/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1129 post type-post status-publish format-standard hentry category-computervideo-game-industry tag-google tag-next-new-networks tag-vertical-integration tag-yahoo tag-youtube missing-thumbnail" id="post-1129">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/18/google-to-increase-producer-role/" title="Google to Increase Producer Role">April 18, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/18/google-to-increase-producer-role/" title="Google to Increase Producer Role">Google to Increase Producer Role</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/jonf312/" title="Posts by Jonathan Flint" rel="author">Jonathan Flint</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/computervideo-game-industry/" rel="category tag">Computer/Video game industry</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<div>
+<p><img class="alignleft" src="http://blog.ajchristian.org/wp-content/uploads/2010/12/youtube-google-next-new-networks.jpg" alt="" width="360" height="254" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Lee, E. (April 14, 2011). Google Turns in Mixed Quarter; Loses Search-Market Share. <em>Advertising Age</em>. Retrieved from <a id="internal-source-marker_0.5988184520974755" href="http://adage.com/article/digital/google-turns-mixed-quarter-loses-search-market-share/227004/">http://adage.com/article/digital/google-turns-mixed-quarter-loses-search-market-share/227004/</a></p>
+<div>When Google posted its second quarter financial reports, the big news that sent Google’s shares down 5 percent was not a 27% increase in revenue to $8.58 billion, $2.3 billion in profit, or a statement by Susan Wojcicki, head of advertising products, that YouTube “is doubling revenue year over year.” Edmond Lee writes “according to search-marketing firm Experian Hitwise, Google dropped its slice of the market from 71% in the first quarter of 2010 to 66% this quarter.” Although still the dominant player in search, Google’s power as a content distributor is lessened, although from the consumers perspective the search engine distributor power role is dominated by a handful of major players, including Bing and Yahoo!.&nbsp;</p>
+<div><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/18/google-to-increase-producer-role/">Read More</a></div>
+</div>
+</div>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1116 post type-post status-publish format-standard hentry category-radio tag-canadian-satellite-radio tag-sirius tag-sirius-xm-merger tag-xm missing-thumbnail" id="post-1116">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/sirius-and-xm-tie-the-knot-in-canada/" title="Sirius and XM Tie the Knot in Canada">April 17, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/sirius-and-xm-tie-the-knot-in-canada/" title="Sirius and XM Tie the Knot in Canada">Sirius and XM Tie the Knot in Canada</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/peterf312/" title="Posts by peterf312" rel="author">peterf312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/radio/" rel="category tag">Radio</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p><a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/images1.jpg"><img class="alignleft size-full wp-image-1126" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/images1.jpg" alt="" width="244" height="207" /></a>(2011, 17 April) Sirius and XM approved for merger. <em>RBR</em>. Retrieved from <a href="http://www.rbr.com/radio/sirius-and-xm-approved-for-merger.html">http://www.rbr.com/radio/sirius-and-xm-approved-for-merger.html</a></p>
+<p>(2011, 12 April) Sirius And XM Allowed To Merge In Canada. <em>FMQB</em>. Retrieved from <a href="http://www.fmqb.com/article.asp?id=2159191">http://www.fmqb.com/article.asp?id=2159191</a></p>
+<p>The CRTC (Canadian Radio-television and Telecommunications Commission allowing Canadian Satellite Radio Inc. to merge with Sirius Canada Inc. and renewed each of their one-year licenses. CSR is the XM affiliate in Canada. The CRTC claimed that the merger would &#8220;offer clear benefits to the Canadian broadcasting system and to Canadian consumers.&#8221;</p>
+<p>The new company will be named Canadian Satellite Radio Holdings, , and its largest shareholders will be John Bitove, the owner of CSRI Inc., US-based Sirius XM, CBC/Radio Canada, and Slaight Communications.</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/sirius-and-xm-tie-the-knot-in-canada/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1109 post type-post status-publish format-standard hentry category-recording tag-awards tag-facilitators tag-grammys tag-homogenization tag-mtv tag-video-games missing-thumbnail" id="post-1109">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/video-game-music-gets-grammy-award-nod/" title="Video Game Music Gets Grammy Award Nod">April 17, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/video-game-music-gets-grammy-award-nod/" title="Video Game Music Gets Grammy Award Nod">Video Game Music Gets Grammy Award Nod</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/kristinl312/" title="Posts by kristinl312" rel="author">kristinl312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/recording/" rel="category tag">Recording</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Bruno, A. (12 April 2011). New Grammy rules (finally) acknowledge videogame music. <em>Billboard</em>. Retrieved from <a href="http://www.billboard.biz/bbbiz/industry/digital-and-mobile/new-grammy-rules-finally-acknowledge-videogame-1005127322.story">http://www.billboard.biz/bbbiz/industry/digital-and-mobile/new-grammy-rules-finally-acknowledge-videogame-1005127322.story</a></p>
+<p><img class="alignleft" src="http://echoesblog.files.wordpress.com/2011/02/grammy-logo-gold.jpg" alt="" width="140" height="178" />In a long-overdue decision, the <a href="http://www.grammy.org/recording-academy">Recording Academy</a> recently announced that it would consider video game music for <a href="http://www.grammy.com/">Grammy Awards</a>. Although video games won’t have their own category (yet), they’ll be included in a general category encompassing “Music for Visual Media.” Nobody in the general public cares about this, of course, but the interesting question is whether they should.</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/17/video-game-music-gets-grammy-award-nod/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1104 post type-post status-publish format-standard hentry category-motion-pictures tag-blockbuster tag-cross-promotion tag-green-lantern tag-kung-fu-panda-2 tag-linking-pins tag-product-placement tag-summer missing-thumbnail" id="post-1104">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/14/summer-blockbusters-cross-promotions-happy-meal/" title="Summer Blockbusters Cross Promotions (Happy Meal)">April 14, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/14/summer-blockbusters-cross-promotions-happy-meal/" title="Summer Blockbusters Cross Promotions (Happy Meal)">Summer Blockbusters Cross Promotions (Happy Meal)</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/amandas312/" title="Posts by amandas312" rel="author">amandas312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/motion-pictures/" rel="category tag">Motion Pictures</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>Fernandez, Jay A. (2011, April 14). Roundtable: the writers behind summer&#8217;s biggest blockbusters (exclusive video). <em>The Hollywood Reporter. </em>Retrieved from <a href="http://www.hollywoodreporter.com/risky-business/roundtable-writers-summers-biggest-blockbusters-177491">http://www.hollywoodreporter.com/risky-business/roundtable-writers-summers-biggest-blockbusters-177491</a><a href="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/2558435938_dc8097fd79.jpg"><img class="alignleft size-medium wp-image-1106" src="http://mediaindustries11.blogs.muhlenberg.edu/files/2011/04/2558435938_dc8097fd79-300x260.jpg" alt="" width="184" height="111" /></a></p>
+<p>With the summer fast approaching, the pressure on Hollywood screenwriters is beginning to mount. Summer blockbusters or &#8220;tentpoles&#8221;, while not necessarily containing the same topics or plotlines, tend to share a lot of the same elements. Much like the season itself, summer blockbusters are designed by filmmakers and marketed by studios to &#8220;make you cheer, make you gasp, and make you laugh,&#8221; according to Ehren Kruger, screenwriter of <em>Transformers: Revenge of the Fallen, </em>in a Hollywood Reporter roundtable discussion with Hollywood screenwriters. These blockbusters are not typically designed to capture the attention of Oscar voters; instead, studios pour countless amounts of money into these films&#8217; budgets in order to regain profits and more. &#8220;These movies are greenlit now based on pre-visualized animated sequences that are the action sequences or moments that are really designed to wow the audience or stand out in a trailer,&#8221; said Kruger. Kruger&#8217;s quote exemplifies how summer blockbusters are designed first and foremost to appeal to a widespread audience. In order to accomplish this, studios look at past moneymakers and formulas that tend to appeal to the masses, and often design these summer blockbusters with these precedents in mind. Fundamentally, the studios are out to maximize profits when making these blockbusters. The main objective isn&#8217;t always necessarily making a film with quality of the highest caliber. Instead, money is what makes the industries continue churning out these massively-budgeted films year after year.<a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/14/summer-blockbusters-cross-promotions-happy-meal/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+<article class="post-1100 post type-post status-publish format-standard hentry category-radio tag-internet tag-pandora tag-privacy tag-radio tag-smartphones missing-thumbnail" id="post-1100">
+
+	<header class="post-header">
+
+		
+			<p class="header-meta subheading">
+
+									<a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/10/pandora-attacked/" title="Pandora Attacked">April 10, 2011</a>
+				
+			</p><!-- .post-top-meta -->
+
+							<h1 class="post-title"><a href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/10/pandora-attacked/" title="Pandora Attacked">Pandora Attacked</a></h1>
+			
+	</header><!-- .post-header -->
+
+	
+	<div class="post-inner between">
+
+		
+		
+			<div class="post-meta top">
+
+									<p class="post-author">
+						<span class="meta-title subheading">Posted by</span>
+						<span class="meta-title mobile-meta-title subheading">By </span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/author/samanthaa312/" title="Posts by samanthaa312" rel="author">samanthaa312</a></span>
+					</p>
+										<p class="post-categories">
+						<span class="meta-title subheading">Posted in</span>
+						<span class="meta-content"><a href="http://mediaindustries11.blogs.muhlenberg.edu/category/radio/" rel="category tag">Radio</a></span>
+					</p>
+					
+			</div><!-- .post-meta -->
+
+		
+		<div class="post-content-wrapper">
+
+			
+			<div class="entry-content post-content">
+
+				<p>The Associated Press (4, April 2011). Pandora Discloses a Privacy-Related U.S. Inquiry On Apps. <em>The New York Times.</em> Retrieved from <a href="http://www.nytimes.com/2011/04/05/technology/05pandora.html?_r=1&amp;scp=1&amp;sq=pandora%20radio&amp;st=cse">http://www.nytimes.com/2011/04/05/technology/05pandora.html?_r=1&amp;scp=1&amp;sq=pandora%20radio&amp;st=cse</a></p>
+<p>Cecillia Kang. (8, April 2011). Web firms face increased federal scrutiny over Internet privacy. <em>The Washington Post. </em>Retrieved from <a href="http://www.washingtonpost.com/business/economy/web-firms-face-increased-federal-scrutiny-over-internet-privacy/2011/04/06/AFvREp1C_story.html">http://www.washingtonpost.com/business/economy/web-firms-face-increased-federal-scrutiny-over-internet-privacy/2011/04/06/AFvREp1C_story.html</a></p>
+<p>&nbsp;</p>
+<p>Internet radio, such as Pandora, used with linking pin power roles such as the smartphone mobile industry, was recently subpoenaed by the government on the terms of illegal distribution of personal information.  When a user logs into an internet related radio site on their smartphone, their private information is given to that certain company to be distributed to their client power role, the advertisers.  Using Pandora, (although other internet related radio websites have been included in this court hearing) a federal grand jury served this subpoena in order to justify that these services disclose users personal information such as telephone number, gender, personal interests, and other information, illegally.</p>
+<p><a class="more-link button" href="http://mediaindustries11.blogs.muhlenberg.edu/2011/04/10/pandora-attacked/">Read More</a></p>
+				
+			</div><!-- .entry-content -->
+
+		</div><!-- .post-content-wrapper -->
+
+	</div><!-- .post-inner -->
+
+	
+</article>
+
+				</div><!-- .posts -->
+
+				
+	<ul class="site-pagination only-next">
+
+		<li class="number active"><a href="http://mediaindustries11.blogs.muhlenberg.edu/">1</a></li>
+<li class="number"><a href="http://mediaindustries11.blogs.muhlenberg.edu/page/2/">2</a></li>
+<li class="number"><a href="http://mediaindustries11.blogs.muhlenberg.edu/page/3/">3</a></li>
+<li class="number"><span>...</span></li>
+<li class="number"><a href="http://mediaindustries11.blogs.muhlenberg.edu/page/5/">5</a></li>
+<li class="next"><a href="http://mediaindustries11.blogs.muhlenberg.edu/page/2/" >Next</a></li>
+	</ul><!-- .pagination -->
+
+
+			
+		</div><!-- .content -->
+
+		<aside class="sidebar">
+
+	
+</aside>
+
+	</div><!-- .section-inner -->
+
+</main>
+
+			<footer id="site-footer" class="bg-black">
+
+				
+				<div class="section-inner credits">
+
+					<p>
+						<span>&copy; 2020 <a href="http://mediaindustries11.blogs.muhlenberg.edu/" class="site-name">Media Industries Course Blog 2011</a></span>
+												<span>Theme by <a href="https://www.andersnoren.se">Anders Norén</a></span>
+					</p>
+
+					
+				</div><!-- .section-inner.credits -->
+
+			</footer><!-- .footer -->
+
+		</div><!-- .body-inner -->
+		
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sullivan_ajax_search = {"ajaxurl":"http:\/\/mediaindustries11.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","query_vars":"[]"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-content/themes/sullivan/assets/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediaindustries11.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mediaindustries11.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediaindustries11.blogs.muhlenberg.edu%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mediaindustries11.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+	</body>
+</html>

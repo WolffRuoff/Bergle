@@ -1,0 +1,661 @@
+http://admissions.blogs.muhlenberg.edu/page/20/
+49
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+Muhlenberg College Blogs | Hear from our students what Muhlenberg is all about. | Page 20	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://admissions.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://admissions.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Muhlenberg College Blogs &raquo; Feed" href="http://admissions.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Muhlenberg College Blogs &raquo; Comments Feed" href="http://admissions.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/admissions.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/admissions.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://admissions.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://admissions.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://admissions.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://admissions.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://admissions.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://admissions.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://admissions.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//admissions.blogs.muhlenberg.edu/?wordfence_lh=1&hid=C35FC1F46936D6A199C5FDBF18C80DFE');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #cc092f; background-image: url("http://admissions.blogs.muhlenberg.edu/files/2010/12/webcolors1.jpg"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: fixed; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support custom-background paged-20 no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<h1 id="site-title">
+					<span>
+						<a href="http://admissions.blogs.muhlenberg.edu/" title="Muhlenberg College Blogs" rel="home">Muhlenberg College Blogs</a>
+					</span>
+				</h1>
+				<div id="site-description">Hear from our students what Muhlenberg is all about.</div>
+
+									<img src="http://admissions.blogs.muhlenberg.edu/files/2012/08/cropped-admissionsheader.jpg" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-authors" class="menu"><li id="menu-item-1131" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1131"><a href="http://admissions.blogs.muhlenberg.edu/author/mattlawsky12/">Matt</a></li>
+<li id="menu-item-1130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1130"><a href="http://admissions.blogs.muhlenberg.edu/author/as246905/">Ariel</a></li>
+<li id="menu-item-2406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2406"><a href="http://admissions.blogs.muhlenberg.edu/author/swedberg/">Drew</a></li>
+<li id="menu-item-2404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2404"><a href="http://admissions.blogs.muhlenberg.edu/author/felisa/">Felisa</a></li>
+<li id="menu-item-2405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2405"><a href="http://admissions.blogs.muhlenberg.edu/author/jakegordon42/">Jake</a></li>
+<li id="menu-item-3039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3039"><a href="http://admissions.blogs.muhlenberg.edu/author/zoebriggs/">Zoe</a></li>
+<li id="menu-item-3794" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3794"><a href="http://admissions.blogs.muhlenberg.edu/author/aria/">Aria</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://admissions.blogs.muhlenberg.edu/page/21/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"><a href="http://admissions.blogs.muhlenberg.edu/page/19/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+	</div><!-- #nav-above -->
+
+
+
+	
+			<div id="post-3832" class="post-3832 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2015/01/dante-stallworth-speaks-to-muhlenberg-about-alcohol-awareness/" rel="bookmark">Donte Stallworth speaks to Muhlenberg about alcohol awareness</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2015/01/dante-stallworth-speaks-to-muhlenberg-about-alcohol-awareness/" title="12:27 pm" rel="bookmark"><span class="entry-date">January 26, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/jakegordon42/" title="View all posts by Jake Gordon">Jake Gordon</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>College students across the country are faced with pressures, both substance related and otherwise, regularly. Some say the usage of these substances, such as alcohol and drugs, is just a part of college life. However, statistics show that the rampant drinking has had extremely detrimental and in some cases morbid effects on these young adults trying to have fun.</p>
+<p>College athletes in fact, statistically drink more then any other group. To help make the Muhlenberg athletes more aware, on Sunday, January 25, ex NFL player Donte Stallworth came to speak. In front of a packed gymnasium, Stallworth told us his story of killing a man while driving under the influence of alcohol. Dispelling common perceptions of intoxication, Stallworth claims he did not feel drunk at all when he got behind the wheel. Yet after a blood test, he was far over the legal limit. Regardless of the face that he had already been sleeping for a couple of hours, he failed the test. For the rest of his life he told us he will not only be a convicted felon, but more personally have to know he deprived a family of a husband, father, and friend. That is what haunts Stallworth the most.</p>
+<p>He implored upon us to always &#8220;be smart&#8221; when making decisions because there is always a ripple effect. People who you don&#8217;t intend to hurt with a mistake may become devastated.</p>
+<p>The crowd gave Donte a booming clap when he finished speaking and a clear sense of appreciation and clarity permeated the gym. It is Donte&#8217;s goal that he can help save lives, and by speaking across the country regularly, he is doing just that.</p>
+<p>I commend his courage to speak and wish him the best in the future.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Donte Stallworth speaks to Muhlenberg about alcohol awareness</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-3832 -->
+
+		
+	
+
+	
+			<div id="post-3808" class="post-3808 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2015/01/mlk-week-desiree-sedehi/" rel="bookmark">MLK Week- Desiree Sedehi</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2015/01/mlk-week-desiree-sedehi/" title="6:57 pm" rel="bookmark"><span class="entry-date">January 25, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/felisa/" title="View all posts by Felisa W">Felisa W</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>BSA has been planning MLK week for the past four years(?) and it only gets better and better every year.</p>
+<p>They had a kickoff event on Sunday and had students perform songs and <a href="http://youtu.be/GiUcJrEA8Kk" target="_blank">poetry</a>. The Acafellas (my favorite acapella group on campus) performed as well (they&#8217;re <a href="http://youtu.be/lMU7DBIynN0" target="_blank">fantastic</a>), and BSA brought in Desiree Sedehi, the founder of the Sedehi Diversity Project, as the speaker. The Sedehi Diversity Project is a documentary theatre piece that is performed for incoming freshmen during Orientation Weekend. The play&#8217;s script is solely made up of the words from actual Muhlenberg students, staff, faculty members and administrators about what diversity means to them. This theatre piece hopes to spark conversions about diversity and on-campus issues surrounding it.</p>
+<p>Desiree came up with the idea because she was frustrated with the lack of discussion on Muhlenberg College campus surrounding issues of race, culture and religion. When asking others for support, she did not get any. She was rejected numerous times, but when an opportunity presented itself, she worked her way into a Board of Trustees meeting falsely telling them that she had a script written, a cast, and the experience needed. Luckily, they did not see past her little white lies and they gave her permission to direct the play. Her determination, perseverance and passion for change helped her when others would not. The main point of her speech was that one should not be “silent about things that matter”. If you see a problem, don’t be afraid to be the first to speak up. Don’t be discouraged when others reject your ideas and keep fighting for what you believe for, despite the difficulties.</p>
+<p>Sedehi’s willpower is truly inspiring. Unfortunately, it’s becoming more and more rare to find those with such passion for change and development. She made a difference on Muhlenberg campus and her legacy will live on, but she didn’t set out to make a legacy for herself, she set out to make a difference and to bring about authentic, and straightforward conversations about race, religion and culture on Muhlenberg campus. Go Desiree! Thanks for taking time out of your schedule to speak to us, you are so inspirational!</p>
+<p>I&#8217;ll be posting about all of the MLK Week events. But make sure the click on the links above to see some of the performances!</p>
+<p>Until next time,</p>
+<p>Felisa</p>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on MLK Week- Desiree Sedehi</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-3808 -->
+
+		
+	
+
+	
+			<div id="post-3819" class="post-3819 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2015/01/im-abroad/" rel="bookmark">I&#8217;m Abroad!</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2015/01/im-abroad/" title="12:42 pm" rel="bookmark"><span class="entry-date">January 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/as246905/" title="View all posts by Ariel">Ariel</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Shalom (hello) from Israel!</p>
+<p>I cannot believe that I am already one week into my semester abroad in Israel. So far, it has been one very interesting experience. My trip started out a little rocky because the airline lost my luggage. So, until they were able to find it (thank goodness) I spent the first two days wearing the same clothing (gross, I know). I have some words of advice for people traveling anywhere, put SOME clothes in your carryon bag. That was definitely a learning experience.</p>
+<p>Anyway, I have the most beautiful view from my apartment window, which overlooks the Jerusalem hills. Sometimes it’s nice to open the window and just stare outside. If you’re lucky, you’ll be able to hear the Islamic call to prayer, a beautiful sound that plays five times a day in Jerusalem.</p>
+<p><a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-7.aspx_.jpeg"><img class="alignnone size-medium wp-image-3820" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-7.aspx_-225x300.jpeg" alt="get-attachment-7.aspx" width="225" height="300" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-7.aspx_-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-7.aspx_-768x1024.jpeg 768w" sizes="(max-width: 225px) 100vw, 225px" /></a></p>
+<p>In Israel, it is common for any study abroad program to have about a month of Ulpan, an intensive Hebrew class for about five hours a day, before we start our actual classes for the semester. Because I didn’t know any Hebrew coming into this program, I get to start with level “aleph”, the baby beginners level! It’s actually surprisingly a lot of fun. I have some really interesting people in my class from all over the world, including China, Korea, Spain, and the Netherlands!</p>
+<p>In addition to my five hours of Ulpan, I have spent every day so far at the Mahane Yehuda Market, also known as “The Shuk”. The Shuk is a buzzing market in the middle of Jerusalem. At the Shuk you can find fresh vegetables, fruits, seeds, nuts, cheese, fish, and everything else you can imagine.</p>
+<p><a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment.aspx_2.jpeg"><img class="alignnone  wp-image-3821" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment.aspx_2-225x300.jpeg" alt="get-attachment.aspx" width="206" height="274" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment.aspx_2-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment.aspx_2-768x1024.jpeg 768w" sizes="(max-width: 206px) 100vw, 206px" /></a> <a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-1.aspx_1.jpeg"><img class="alignnone  wp-image-3822" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-1.aspx_1-225x300.jpeg" alt="get-attachment-1.aspx" width="207" height="276" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-1.aspx_1-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-1.aspx_1-768x1024.jpeg 768w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-1.aspx_1.jpeg 1536w" sizes="(max-width: 207px) 100vw, 207px" /></a> <a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-3.aspx_1.jpeg"><img class="alignnone  wp-image-3824" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-3.aspx_1-225x300.jpeg" alt="get-attachment-3.aspx" width="207" height="275" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-3.aspx_1-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-3.aspx_1-768x1024.jpeg 768w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-3.aspx_1.jpeg 1536w" sizes="(max-width: 207px) 100vw, 207px" /></a></p>
+<p>Honestly, I don’t really go there to buy food, I just love people watching and experiencing the culture. I especially loved going to the Shuk right before Shabbat (the Jewish day of rest) on Friday afternoon. Because everything shuts down in Jerusalem on Shabbat, including all stores and public transportation, there are hundreds of people at the Shuk trying to get everything they need before Shabbat begins that evening. My friends and I just stayed at The Shuk and watched some really cool street performers until Shabbat.</p>
+<p><a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-6.aspx_.jpeg"><img class="alignnone  wp-image-3826" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-6.aspx_-225x300.jpeg" alt="get-attachment-6.aspx" width="209" height="279" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-6.aspx_-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-6.aspx_-768x1024.jpeg 768w" sizes="(max-width: 209px) 100vw, 209px" /></a> <a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-4.aspx_1.jpeg"><img class="alignnone  wp-image-3828" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-4.aspx_1-225x300.jpeg" alt="get-attachment-4.aspx" width="209" height="279" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-4.aspx_1-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-4.aspx_1-768x1024.jpeg 768w" sizes="(max-width: 209px) 100vw, 209px" /></a> <a href="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-5.aspx_.jpeg"><img class="alignnone  wp-image-3827" src="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-5.aspx_-225x300.jpeg" alt="get-attachment-5.aspx" width="209" height="279" srcset="http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-5.aspx_-225x300.jpeg 225w, http://admissions.blogs.muhlenberg.edu/files/2015/01/get-attachment-5.aspx_-768x1024.jpeg 768w" sizes="(max-width: 209px) 100vw, 209px" /></a></p>
+<p>‘Till next time,</p>
+<p>Ariel</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on I&#8217;m Abroad!</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-3819 -->
+
+		
+	
+
+	
+			<div id="post-3817" class="post-3817 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2015/01/winter-2/" rel="bookmark">Winter</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2015/01/winter-2/" title="8:15 pm" rel="bookmark"><span class="entry-date">January 23, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/mattlawsky12/" title="View all posts by Matt Lawsky">Matt Lawsky</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>When it comes to looking at this winter compared to the last one, I must say it hasn&#8217;t been nearly as bad to this point (knock on wood). It has been cold and yes there has been snow, but nothing can compete with blizzard after blizzard that we had a year ago. There was an overwhelming amount of shoveling that had to be done, and on top of that my car was stuck in a mix of ice and snow for a month and a half. It was a great day when I finally got it out.</p>
+<p>On Saturday, we are supposed to have our formal for baseball. As of now there is going to be snow, but all we can do is hope it stops soon enough in the afternoon that the buses can come and pick us up. Formal night is always a lot of fun and with all the work we have done to make this happen it would really be a bummer if we had to postpone it due to the weather. Everyone that sees this, I hope you are pulling for us to get this in and beat the snow.</p>
+<p>In just a couple weeks we will be out of the heart of the winter. Now that February is only a week away, the spring and warm weather doesn&#8217;t seem like such a crazy thought, we are almost there.</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Winter</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-3817 -->
+
+		
+	
+
+	
+			<div id="post-3805" class="post-3805 post type-post status-publish format-standard hentry category-admissions-blog">
+			<h2 class="entry-title"><a href="http://admissions.blogs.muhlenberg.edu/2015/01/spring-2015-classes/" rel="bookmark">Spring 2015 Classes</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://admissions.blogs.muhlenberg.edu/2015/01/spring-2015-classes/" title="2:41 pm" rel="bookmark"><span class="entry-date">January 20, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://admissions.blogs.muhlenberg.edu/author/felisa/" title="View all posts by Felisa W">Felisa W</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>This semester I am taking 5.5 credits, and it&#8217;s going to busy, but worth it. Classes have been in session for a week now and I know for a fact that I am going to love each and every one of them.</p>
+<p>I luckily got into Social Media and the Self. During registration last semester, I noticed how fast the class was filling up so I emailed the professor about a week before I was assigned to register and asked him to put me on the wait list. I was the first person on the wait list and someone dropped the class which allowed me to snag the spot. After I graduate I want to work with Marketing and Social Media so this class is perfect for me. My internship last semester definitely played an important role in deciding what I want to do after graduation (S/o to my onsite supervisor and the Career Center for all that they do).</p>
+<p>I have been trying to take Race and Representation for the last 3 semesters but it never fit into my schedule, but this semester it did. I absolutely adore the professor and her style of teaching so it&#8217;s going to be really nice having another class with her. In this class we are going to be examining race and its social construction in the US and how races are represented in the media and dominant culture. It is kind of strange because I&#8217;m the only African-American female in the class, so I&#8217;m not sure how comfortable I&#8217;ll be in discussions and whatnot, but I just have to get over that internal struggle and everything will be fine.</p>
+<p>I&#8217;m also taking two philosophy courses: Philosophy of Mind and Philosophies of China. I&#8217;m also taking them back to back and have already discovered similarities between the courses and can easily pull some notes from one to use in the other. In Philosophies of China we are now learning the meanings of words to better help us understand the readings before we get into the actual philosophical texts, and we are also learning how to distinguish Western concepts from Asian concepts. In Philosophy of Mind we are examining classic theories that deal with the mind and the self. This course is also popular amongst Neuroscience majors so it&#8217;s interesting how both of theses disciplines are interconnected.</p>
+<p>Then I&#8217;m taking Arabic (again). For my language credit I need to take 2 semesters of the same language so that&#8217;s why&#8230; It&#8217;s still going to be difficult, but I don&#8217;t mind the struggle.</p>
+<p>My half credit is for my Career Center internship. I&#8217;m the Marketing and Promotion Intern and will be working to create multimedia works to highlight the mission and impact of the Career Center on campus. This is going to be nice since I came to Muhlenberg wanting to be a Film major and work in Post-Production (focusing on editing). I dropped the major, but still hold the art of editing dear to my heart and this internship will allow me to start practicing it again.</p>
+<p>Until next time unless I freeze,</p>
+<p>Felisa</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://admissions.blogs.muhlenberg.edu/category/admissions-blog/" rel="category tag">Admissions Blog</a>					</span>
+					<span class="meta-sep">|</span>
+				
+				
+				<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Spring 2015 Classes</span></span></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-3805 -->
+
+		
+	
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://admissions.blogs.muhlenberg.edu/page/21/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"><a href="http://admissions.blogs.muhlenberg.edu/page/19/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+			</ul>
+		</div><!-- #primary .widget-area -->
+
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+				<li id="search-3" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://admissions.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="calendar-3" class="widget-container widget_calendar"><h3 class="widget-title">Recent Posts</h3><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>December 2020</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://admissions.blogs.muhlenberg.edu/2015/05/">&laquo; May</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td id="today">4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></li>			</ul>
+		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="footer-widget-area" role="complementary">
+
+				<div id="first" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-5" class="widget-container widget_text">			<div class="textwidget"><a href="http://muhlenberg.edu/" target="_blank" rel="noopener noreferrer">Muhlenberg College Home</a><br />
+2400 Chew St. Allentown, PA 18104-5586 484-664-3100 484-664-3623 (TTY)</div>
+		</li>					</ul>
+				</div><!-- #first .widget-area -->
+
+				<div id="second" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-3" class="widget-container widget_text">			<div class="textwidget">&nbsp;</div>
+		</li>					</ul>
+				</div><!-- #second .widget-area -->
+
+				<div id="third" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-6" class="widget-container widget_text">			<div class="textwidget">&nbsp;</div>
+		</li>					</ul>
+				</div><!-- #third .widget-area -->
+
+				<div id="fourth" class="widget-area">
+					<ul class="xoxo">
+						<li id="text-2" class="widget-container widget_text">			<div class="textwidget"><p align="right"><a href="http://www.facebook.com/MuhlenbergCollege"><img src="http://muhlenberg.edu/images/facebook-w.jpg" border="0"></a>
+		<a href="http://twitter.com/muhlenberg"><img src="http://muhlenberg.edu/images/twitter-w.jpg" border="0"></a></p></div>
+		</li>					</ul>
+				</div><!-- #fourth .widget-area -->
+
+			</div><!-- #footer-widget-area -->
+
+			<div id="site-info">
+				<a href="http://admissions.blogs.muhlenberg.edu/" title="Muhlenberg College Blogs" rel="home">
+					Muhlenberg College Blogs				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://admissions.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://admissions.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fadmissions.blogs.muhlenberg.edu%2Fpage%2F20%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://admissions.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

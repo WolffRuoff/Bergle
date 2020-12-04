@@ -31,15 +31,13 @@ and the converts numbers to "<Number>"
 
 @param {string} fileName name of the file to open
 @param {boolean} scrubURL pop URL from top spot if true
-@param {string} folder1 directory name for project
-@param {string} folder2 directory name to store site text files
 @param {boolean} useStemming stem words if selected in menu
 @param {boolean} useStopwords remove stopwords if selected in menu
 @return {list} If scrubURL = True: A sanitized list of unigrams
 @return {list} If scrubURL = False: [0] = Title, [1] = URL, [2] = A sanitized list of unigrams
 @see cleanWord()
 '''
-def cleanFile(fileName, scrubURL=True, folder1="Bergle", folder2="sites", useStemming=True, useStopwords=True):
+def cleanFile(fileName, scrubURL=True, useStemming=True, useStopwords=True):
     f = open("..\\Bergle\\sites\\" + str(fileName), encoding="utf-8")
     text = f.read()
     

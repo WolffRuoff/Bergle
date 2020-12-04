@@ -1,0 +1,563 @@
+http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013rehearsals/
+58
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) & !(IE 8)]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>SDP2013Rehearsals | The Sedehi Diversity Project at Muhlenberg College</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://sedehidiversityproject.blogs.muhlenberg.edu/xmlrpc.php">
+<!--[if lt IE 9]>
+<script src="http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/themes/twentytwelve/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="The Sedehi Diversity Project at Muhlenberg College &raquo; Feed" href="http://sedehidiversityproject.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Sedehi Diversity Project at Muhlenberg College &raquo; Comments Feed" href="http://sedehidiversityproject.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Sedehi Diversity Project at Muhlenberg College &raquo; SDP2013Rehearsals Tag Feed" href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013rehearsals/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/sedehidiversityproject.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/sedehidiversityproject.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentytwelve-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentytwelve.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-style-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/themes/twentytwelve/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='twentytwelve-block-style-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/themes/twentytwelve/css/blocks.css?ver=20181230' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://sedehidiversityproject.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://sedehidiversityproject.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//sedehidiversityproject.blogs.muhlenberg.edu/?wordfence_lh=1&hid=C1F039B85668DB42B6BA64959D308857');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>	<style type="text/css" id="twentytwelve-header-css">
+			.site-header h1 a,
+		.site-header h2 {
+			color: #444;
+		}
+		</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive tag tag-sdp2013rehearsals tag-14992 admin-bar no-customize-support wp-embed-responsive custom-font-enabled no-js">
+<div id="page" class="hfeed site">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<h1 class="site-title"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/" title="The Sedehi Diversity Project at Muhlenberg College" rel="home">The Sedehi Diversity Project at Muhlenberg College</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle">Menu</button>
+			<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+			<div class="menu-main-menu-container"><ul id="menu-main-menu" class="nav-menu"><li id="menu-item-5" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5"><a href="http://www.muhlenberg.edu/diversityproject/">About the Project</a></li>
+<li id="menu-item-424" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-424"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2017-2/">2017 Archives</a></li>
+<li id="menu-item-359" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-359"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2017/">2016 Archives</a></li>
+<li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-299"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2014/">2014 Archives</a></li>
+<li id="menu-item-217" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-217"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2013/">2013 Archives</a></li>
+</ul></div>		</nav><!-- #site-navigation -->
+
+				<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/"><img src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2016/07/logo-2016.jpg" class="header-image" width="1999" height="505" alt="The Sedehi Diversity Project at Muhlenberg College" /></a>
+			</header><!-- #masthead -->
+
+	<div id="main" class="wrapper">
+
+	<section id="primary" class="site-content">
+		<div id="content" role="main">
+
+					<header class="archive-header">
+				<h1 class="archive-title">Tag Archives: <span>SDP2013Rehearsals</span></h1>
+
+						</header><!-- .archive-header -->
+
+			
+	<article id="post-153" class="post-153 post type-post status-publish format-standard hentry category-8749 category-about-the-project tag-allnighters tag-scriptbuilding tag-sdp2013 tag-sdp2013rehearsals">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/10/giving-birth-a-how-to-guide-to-losing-your-mind-in-14-hours/" rel="bookmark">Giving Birth: A How-To Guide to Losing Your Mind in 14 Hours</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>These last 24 hours are, I think, the most intense 24 hours of the project.<br />
+Yesterday morning the ensemble slept in, and then, even once we got up, we really didn’t speak to each other. A sense of angst permeated the entire space.</p>
+<p>&nbsp;</p>
+<p>I think we were all dreading rehearsal too much.</p>
+<p>&nbsp;</p>
+<p>Last night was script building night. For more information on our process, you can check out <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/06/how-we-do-it/">Ben’s awesome post</a>. But let it be said that last night was final trimmings and ordering the lines, as well as preffing which lines we want. We finished Thursday night’s rehearsal with 35 pages of script and we absolutely LOVED every word in it. Unfortunately, the script had to be capped at 18 pages. And we needed to finish the evening’s rehearsal with a finished product</p>
+<p>&nbsp;</p>
+<p>We were all less concerned than we could’ve been – last year’s ensemble began their final script building night with 100 pages of material, and they were there for 12 hours. Starting at 35 we all kind of figured we’d be out by 1am, or maybe 2am at the latest. That’s late, and 7 or 8 hours of rehearsal late respectively, but still offers a decent night’s sleep. Early in the week we’d worked till 3 anyways, so we figured we were set.</p>
+<p>&nbsp;</p>
+<p>So why the pervasive angst?</p>
+<p>&nbsp;</p>
+<p>All nine of us have very different identities. We all believe in the incredible importance of these conversations, but because our lived experiences are different, there was a high chance that the particular topics we’d want addressed would differ. For instance, a lesbian member of the ensemble would want to make sure certain lesbian issues on campus are addressed (for instance the objectification of girl-girl couples or the fact that there are so few out lesbians on campus) while a male gay member of the ensemble would want to make sure certain gay male issues on campus are addressed (for instance the commoditization of the flamboyant gay man in terms of GBF or how performances of masculinity intersect with sexual identity.) These kinds of conflicts exist in multitude for each of our 9 areas we intended to address.</p>
+<p>&nbsp;</p>
+<p>The angst in our apartment, I think, was tension building up among all of us, ready to fight for the importance of our individual identities. We all love each other incredible amounts and would never want to hurt each other, so the looming decisions between what stories we need told and what stories those we love need told was scary. And stressing everybody out a bit.</p>
+<p>&nbsp;</p>
+<p>We tried to make rehearsal as painless as possible from the beginning. We all ordered take out and it sort of had that party atmosphere. We knew it would be painful, but we were still intending a 1 or 2 am bed time.</p>
+<p>&nbsp;</p>
+<p>We started sorting lines and were doing great! We had a whole 2 pages of the script before we came to a halt. We just couldn’t find anything to fit and were really struggling to continue. At that point Mel, with all her directorial powers, told us that we needed to start cutting lines. We got 20 lines on each subject – it was time to make some choices.</p>
+<p>&nbsp;</p>
+<p>Cutting out entire dialogues was really hard. There were so many topics that were so important to so many of us. We poured over all the tiny slips of paper for hours. And hours. And hours. But everyone was more civil than I ever could have imagined possible. If our stories had to be cut, it was always in service of the project, because we understood that other stories<i> needed</i> to be told and it was only that our stories should be told. And nothing stops us from telling our stories here or to others elsewhere.</p>
+<p>&nbsp;</p>
+<p>Flow was maybe more important to all of us than it should’ve been. Deciding which lines fit with each other and which experiences were similar in tone despite differences in topic was difficult and grueling but thought provoking in a lot of ways, too. It passed 1am and we definitely weren’t done. It passed 2am and there was no end in sight.</p>
+<p>&nbsp;</p>
+<p>Around 3:45am we had a finished script. In the form of hundreds of tiny slips of paper laid out across a long table. Precisely in order based on our previous 9.75 hours of discussion. Mel typed each slip of paper into an open document on her computer while we watch music videos of ridiculous songs (some of which may be featured in our pre-show! So get excited for that.)</p>
+<p>&nbsp;</p>
+<p>By 4:30am the script was finish, typed, printed, and in our hands. It was 18 pages long, but we couldn’t go to bed without a read-through – we had to make sure the script came in under time as well as under length.</p>
+<p>At 5am we finished the read through – the script was the perfect length. But also so totally wrong. Things were lost that were absolutely necessary to the conversation. Things were present that were maybe not so important. It felt absolutely horrible for our finished product to feel so wrong after 11 hours of work. So, in we dove again.</p>
+<p>&nbsp;</p>
+<p>Ripping apart a script that’s taken months of research and transcribing and discussion and decision honestly feels like killing your child. From 6am-7am ensemble members were maybe the most hopeless we’d been. We needed to go through each and every line again, decide how necessary it is, whether or not it flows from the previous line and into the following line, and how we can trim it for length. It just suddenly seemed like such an endless task.</p>
+<p>&nbsp;</p>
+<p>But then, all of a sudden, around 7:15, everything fit again. We’d cut enough and added enough that maybe we could try another read through.</p>
+<p>&nbsp;</p>
+<p>This one was largely successful. Maybe that’s because we were so tired that any script would feel like success, but I do truly think this is an amazing project. Considering the time limitations, I think this says everything we want to say, and is still engaging and beautiful and funny and entertaining and everything the Sedehi Diversity Project should be.  Everyone else agreed.</p>
+<p>&nbsp;</p>
+<p>At 8am we were finally finally finally done building our script. We were all so giddy and happy that no one was holding it together. Well, with the exception of Ben Sam and Will R who still sort of were. Someone has our celebratory video (composed of lots of screams of success) so get excited for that!</p>
+<p>&nbsp;</p>
+<p>When we left our windowless prison and saw the sun I’m pretty sure Mel melted. She’s probably actually a vampire. Or just hadn’t really realized how late in the day 8am is to still be awake. But probably the former.</p>
+<p>&nbsp;</p>
+<p>After we got back to our apartment I was so wide awake. We’d created something wonderful and put an entire new set of energy into the world! And remained as close, if not closer because of it! How was I supposed to sleep! So I’ve tried to be productive this morning – going on a run, doing my laundry, writing blog posts. But the crash has got to come soon! After being awake for 24 hours, and 14 straight hours of rehearsal, I don’t know how much longer I can function. My condolences go out to Mel, Will R, and Vernon who can’t go to sleep for quite some time. Mel and Will are busy divvying up the script to the performers and giving everybody lines, and Vernon has tour guide duties. I’m sure those prospectives are going to be absolutely overwhelmed with his enthusiasm!</p>
+<p>&nbsp;</p>
+<p>And on that note, I am off to bed. The past 24 hours have cemented our bond as an ensemble, I think. In addition to creating something I think is really wonderful and I hope we can all feel really proud of. So, at 10:30am, I say to you, good night!</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2013/" rel="category tag">2013</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/about-the-project/" rel="category tag">Behind the Scenes</a> and tagged <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/allnighters/" rel="tag">allnighters</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/scriptbuilding/" rel="tag">scriptbuilding</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013/" rel="tag">SDP2013</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013rehearsals/" rel="tag">SDP2013Rehearsals</a> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/10/giving-birth-a-how-to-guide-to-losing-your-mind-in-14-hours/" title="10:33 am" rel="bookmark"><time class="entry-date" datetime="2013-08-10T10:33:31-04:00">August 10, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://sedehidiversityproject.blogs.muhlenberg.edu/author/ks246531/" title="View all posts by Kyra Smith" rel="author">Kyra Smith</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-135" class="post-135 post type-post status-publish format-standard hentry category-8749 category-about-the-project tag-bonding tag-dancebreak tag-sdp2013 tag-sdp2013rehearsals tag-transcriptions">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/07/last-nightthis-mornings-rehearsal/" rel="bookmark">Last Night/This Morning&#8217;s Rehearsal</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>In our determination to finish going through all of the transcriptions, the majority of the cast stayed up until 3AM!  I applaud us for sticking through and working hard.  I will say that some of us reached that point of being slap happy.  And in the middle of rehearsal we it was decided that some of us needed a dance break&#8230;.</p>
+<div id="attachment_136" style="width: 310px" class="wp-caption alignnone"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130806_231151.jpg"><img aria-describedby="caption-attachment-136" class="size-medium wp-image-136" alt="Emeley, Kittrell, Ben, Kyra, Mel, and Will Kellog take a dance break led by our project manager Will Raynor" src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130806_231151-300x225.jpg" width="300" height="225" srcset="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130806_231151-300x225.jpg 300w, http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130806_231151-1024x768.jpg 1024w, http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130806_231151-624x467.jpg 624w" sizes="(max-width: 300px) 100vw, 300px" /></a><p id="caption-attachment-136" class="wp-caption-text">Emeley, Kittrell, Ben, Kyra, Mel, and Will Kellog take a dance break led by our project manager Will Raynor</p></div>
+<p>Now Vernon, Ben, and myself stayed up &#8217;til 8am that previous night/morning? and only received about 4-6 hours asleep.  I was particularly impressed with myself.  I didn&#8217;t wake up until 12:50! That&#8217;s so late for me and I felt so unproductive!  Unfortunately it looks like another late night&#8230;</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2013/" rel="category tag">2013</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/about-the-project/" rel="category tag">Behind the Scenes</a> and tagged <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/bonding/" rel="tag">bonding</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/dancebreak/" rel="tag">DanceBreak</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013/" rel="tag">SDP2013</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013rehearsals/" rel="tag">SDP2013Rehearsals</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/transcriptions/" rel="tag">Transcriptions</a> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/07/last-nightthis-mornings-rehearsal/" title="3:56 pm" rel="bookmark"><time class="entry-date" datetime="2013-08-07T15:56:13-04:00">August 7, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://sedehidiversityproject.blogs.muhlenberg.edu/author/sc246273/" title="View all posts by Sam Chu" rel="author">Sam Chu</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+	<article id="post-102" class="post-102 post type-post status-publish format-standard hentry category-8749 category-about-the-project tag-bonding tag-fireworks tag-sdp2013rehearsals">
+				<header class="entry-header">
+			
+						<h1 class="entry-title">
+				<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/07/fireworks-during-rehearsals/" rel="bookmark">Fireworks During Rehearsals</a>
+			</h1>
+								</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>Monday, July 6th</p>
+<p>While rehearsing tonight, we were startled by this loud BOOM and upon further inspection we realized there were fireworks outside!</p>
+<p>We took a break from the script and viewed the amazing fireworks that were held in Trexler Park, which is across the way from the Village.</p>
+<p><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213009.jpg"><img alt="SDP 2013 fireworks" src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213009-300x225.jpg" width="300" height="225" /></a><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213038.jpg"><img alt="more fireworks" src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213038-300x225.jpg" width="300" height="225" /></a></p>
+<p><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213039.jpg"><img alt="and more fireworks!" src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213039-300x225.jpg" width="300" height="225" /></a><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213220.jpg"><img alt="Firework Finale!" src="http://sedehidiversityproject.blogs.muhlenberg.edu/files/2013/08/20130805_213220-225x300.jpg" width="225" height="300" /></a></p>
+<p>and here is a link to the Sedehi Diversity Project&#8217;s youtube page which features two videos of the fireworks! (it also features the cast in our natural crazy selves)</p>
+<p><a href="http://www.youtube.com/watch?v=XK1TVZVoFS0">http://www.youtube.com/watch?v=XK1TVZVoFS0</a></p>
+<p><a href="http://www.youtube.com/watch?v=DQoQn3UK9KA">http://www.youtube.com/watch?v=DQoQn3UK9KA</a></p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+			This entry was posted in <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2013/" rel="category tag">2013</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/about-the-project/" rel="category tag">Behind the Scenes</a> and tagged <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/bonding/" rel="tag">bonding</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/fireworks/" rel="tag">Fireworks</a>, <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/tag/sdp2013rehearsals/" rel="tag">SDP2013Rehearsals</a> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/07/fireworks-during-rehearsals/" title="12:49 am" rel="bookmark"><time class="entry-date" datetime="2013-08-07T00:49:28-04:00">August 7, 2013</time></a><span class="by-author"> by <span class="author vcard"><a class="url fn n" href="http://sedehidiversityproject.blogs.muhlenberg.edu/author/sc246273/" title="View all posts by Sam Chu" rel="author">Sam Chu</a></span></span>.								</footer><!-- .entry-meta -->
+	</article><!-- #post -->
+
+		
+		</div><!-- #content -->
+	</section><!-- #primary -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://sedehidiversityproject.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/24/week-3-building-building-building/">Week 3: Building, Building, Building</a>
+									</li>
+											<li>
+					<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/24/a-quiet-moment/">A Quiet Moment</a>
+									</li>
+											<li>
+					<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/24/how-to-adult/">How to Adult</a>
+									</li>
+											<li>
+					<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/12/sdp-turned-my-hair-purple/">SDP turned my hair purple</a>
+									</li>
+											<li>
+					<a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/10/excited-and-ready/">Excited and Ready</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jim Esposito</span> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2017/08/22/week-4-update/#comment-6">Week 4 Update</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.roxyschoenfeld.com' rel='external nofollow ugc' class='url'>Roxy Schoenfeld</a></span> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/07/seeing-the-project-a-freshman-experience/#comment-5">Seeing the Project (A Freshman Experience)</a></li><li class="recentcomments"><span class="comment-author-link">Sam Chu</span> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/06/welp/#comment-4">Welp</a></li><li class="recentcomments"><span class="comment-author-link">Kyra Smith</span> on <a href="http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/03/cast-bonding/#comment-3">Cast Bonding!</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+				<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2018/08/'>August 2018</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2017/09/'>September 2017</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2017/08/'>August 2017</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2016/08/'>August 2016</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2016/07/'>July 2016</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2014/08/'>August 2014</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2013/09/'>September 2013</a></li>
+	<li><a href='http://sedehidiversityproject.blogs.muhlenberg.edu/2013/08/'>August 2013</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-8749"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2013/">2013</a>
+</li>
+	<li class="cat-item cat-item-15578"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2014/">2014</a>
+</li>
+	<li class="cat-item cat-item-15580"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2017/">2016</a>
+</li>
+	<li class="cat-item cat-item-15581"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2017-2/">2017</a>
+</li>
+	<li class="cat-item cat-item-15582"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/2018/">2018</a>
+</li>
+	<li class="cat-item cat-item-15555"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/about-the-project/">Behind the Scenes</a>
+</li>
+	<li class="cat-item cat-item-15005"><a href="http://sedehidiversityproject.blogs.muhlenberg.edu/category/diversity-vocabulary/">Diversity Vocabulary</a>
+</li>
+		</ul>
+			</aside>		</div><!-- #secondary -->
+		</div><!-- #main .wrapper -->
+	<footer id="colophon" role="contentinfo">
+		<div class="site-info">
+									<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+				Proudly powered by WordPress			</a>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-content/themes/twentytwelve/js/navigation.js?ver=20140711'></script>
+<script type='text/javascript' src='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://sedehidiversityproject.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fsedehidiversityproject.blogs.muhlenberg.edu%2Ftag%2Fsdp2013rehearsals%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://sedehidiversityproject.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

@@ -1,0 +1,1205 @@
+http://it.blogs.muhlenberg.edu/2016/11/01/phone-system-update/?paged=6/
+170
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://it.blogs.muhlenberg.edu/xmlrpc.php">
+
+<title>Office of Information Technology &#8211; Page 6 &#8211; at Muhlenberg College</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Feed" href="http://it.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Comments Feed" href="http://it.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather Sans-css'  href='http://fonts.googleapis.com/css?family=Merriweather+Sans&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather-css'  href='http://fonts.googleapis.com/css?family=Merriweather&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wpstatistics-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-statistics/assets/css/frontend.css?ver=12.6.13' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-font-awesome-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/fontawesome/font-awesome.css?ver=4.1.0' type='text/css' media='screen' />
+<!--[if IE]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/styles/ie.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='editor-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic%7CRoboto+Condensed%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wptt_front-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-twitter-feeds/controller/../css/admin_style.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css'  href='http://it.blogs.muhlenberg.edu?sccss=1&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var elp_data = {"messages":{"elp_name_required":"Please enter name.","elp_email_required":"Please enter email address.","elp_invalid_name":"Name seems invalid.","elp_invalid_email":"Email address seems invalid.","elp_unexpected_error":"Oops.. Unexpected error occurred.","elp_invalid_captcha":"Robot verification failed, please try again.","elp_invalid_key":"Robot verification failed, invalid key.","elp_successfull_single":"You have successfully subscribed.","elp_successfull_double":"You have successfully subscribed. You will receive a confirmation email in few minutes. Please follow the link in it to confirm your subscription. If the email takes more than 15 minutes to appear in your mailbox, please check your spam folder.","elp_email_exist":"Email already exist.","elp_email_squeeze":"You are trying to submit too fast. try again in 1 minute."},"elp_ajax_url":"http:\/\/it.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers//inc/email-posts-to-subscribers.js?ver=2.2'></script>
+<link rel='https://api.w.org/' href='http://it.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://it.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://it.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://it.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//it.blogs.muhlenberg.edu/?wordfence_lh=1&hid=705A11186D34D51809825C8D8921E1FB');
+</script><style>.elp_form_message.success { color: #008000;font-weight: bold; } .elp_form_message.error { color: #ff0000; } .elp_form_message.boterror { color: #ff0000; } </style><!-- Analytics by WP-Statistics v12.6.13 - https://wp-statistics.com/ -->
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css">
+						h1 { font-family: Merriweather; } h2 { font-family: Merriweather Sans; } h3 { font-family: Merriweather; } h4 { font-family: Merriweather; } h5 { font-family: Merriweather; } h6 { font-family: Merriweather; } body, p { font-family: Merriweather Sans; } blockquote, blockquote p { font-family: Merriweather; } 	</style>
+
+</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support paged-6 group-blog no-js">
+
+<div id="page" class="hfeed site container">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
+		<header id="masthead" class="site-header light" role="banner">
+		<!-- Tab navigation -->
+		<ul class="toggle-bar" role="tablist">
+			<!-- Main navigation -->
+			<li id="panel-1" class="current" role="presentation">
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text">View menu</span></a>
+			</li>
+
+			<!-- Featured Posts navigation -->
+							<li id="panel-2" role="presentation">
+					<a href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" data-tab="tab-2"><i class="fa fa-thumb-tack"></i><span class="screen-reader-text">View featured posts</span></a>
+				</li>
+			
+			<!-- Sidebar widgets navigation -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text">View sidebar</span></a>
+			</li>
+		</ul>
+
+		<div id="tabs" class="toggle-tabs">
+			<div class="site-header-inside">
+				<!-- Logo, description and main navigation -->
+				<div id="tab-1" class="tab-content current fadeIn">
+					<div class="site-branding">
+						<!-- Get the site branding -->
+													<h1 class="site-logo">
+								<a href="http://it.blogs.muhlenberg.edu/"><img class="site-logo" src="http://it.blogs.muhlenberg.edu/files/muhl_icon_RGB_color.png" alt="Office of Information Technology" /></a>
+							</h1>
+											</div>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<div class="menu"><ul>
+<li ><a href="http://it.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-2"><a href="http://it.blogs.muhlenberg.edu/?page_id=2">About</a></li>
+</ul></div>
+					</nav><!-- #site-navigation -->
+
+									</div><!-- #tab-1 -->
+
+				<!-- Featured Posts template (template-featured-posts.php) -->
+				
+									<div id="tab-2" class="widget-area tab-content animated fadeIn">
+						<div class="widget featured-posts-widget">
+							<h2 class="widget-title">Announcements</h2>
+
+							<div class="featured-posts">
+							    
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark">IT Connects!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark"><time class="entry-date published" datetime="2020-05-27T10:25:17-04:00">May 27, 2020</time><time class="updated" datetime="2020-05-27T10:25:20-04:00">May 27, 2020</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark">Google Drive Feature Release: Team Drive and Drive File Stream</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark"><time class="entry-date published" datetime="2018-02-20T12:53:10-04:00">February 20, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark">A new way to TV- Philo Internet Television</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark"><time class="entry-date published" datetime="2017-10-23T11:12:08-04:00">October 23, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark">OIT Open House &#8211; April 28</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark"><time class="entry-date published" datetime="2017-04-11T14:18:31-04:00">April 11, 2017</time><time class="updated" datetime="2017-04-27T15:52:51-04:00">April 27, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark">Coming Soon: G Suite &amp; Google Day!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark"><time class="entry-date published" datetime="2016-12-23T11:43:32-04:00">December 23, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark">GSuite Info Sessions Announced</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark"><time class="entry-date published" datetime="2016-11-23T15:22:53-04:00">November 23, 2016</time><time class="updated" datetime="2016-12-06T10:21:21-04:00">December 6, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark">Instructional Technology and Digital Learning Team Updates&#8230;.</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark"><time class="entry-date published" datetime="2016-10-13T17:01:09-04:00">October 13, 2016</time><time class="updated" datetime="2016-10-13T17:26:02-04:00">October 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1682">Thomas Sciarrino</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark">Qualtrics</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark"><time class="entry-date published" datetime="2016-09-13T14:59:26-04:00">September 13, 2016</time><time class="updated" datetime="2016-09-13T15:37:08-04:00">September 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1478">Tim</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark">Office 2016 Deployment</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark"><time class="entry-date published" datetime="2016-08-25T15:26:52-04:00">August 25, 2016</time><time class="updated" datetime="2016-08-26T16:02:15-04:00">August 26, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark">Lynda.com &#8211; Our New Online Training Resource</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark"><time class="entry-date published" datetime="2016-08-10T15:53:12-04:00">August 10, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																							</div><!-- .featured-posts -->
+						</div><!-- .featured-posts-widget -->
+					</div><!-- #tab-2 .widget-area -->
+				
+				<!-- Sidebar widgets -->
+				<div id="tab-3" class="tab-content animated fadeIn" role="tabpanel" aria-labelledby="panel-3" aria-hidden="true">
+						<div id="secondary" class="widget-area" role="complementary">
+		<aside id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+				<li class="cat-item cat-item-22152"><a href="http://it.blogs.muhlenberg.edu/?cat=22152">Announcements</a> (14)
+</li>
+	<li class="cat-item cat-item-172350"><a href="http://it.blogs.muhlenberg.edu/?cat=172350">Client Support Services</a> (13)
+</li>
+	<li class="cat-item cat-item-172364"><a href="http://it.blogs.muhlenberg.edu/?cat=172364">General News</a> (2)
+</li>
+	<li class="cat-item cat-item-172396"><a href="http://it.blogs.muhlenberg.edu/?cat=172396">Instructional Technology</a> (7)
+</li>
+	<li class="cat-item cat-item-172349"><a href="http://it.blogs.muhlenberg.edu/?cat=172349">IT Connects! Newsletter</a> (5)
+</li>
+	<li class="cat-item cat-item-20867"><a href="http://it.blogs.muhlenberg.edu/?cat=20867">Projects</a> (26)
+<ul class='children'>
+	<li class="cat-item cat-item-170064"><a href="http://it.blogs.muhlenberg.edu/?cat=170064">Communication &amp; Collaboration</a> (4)
+</li>
+	<li class="cat-item cat-item-172356"><a href="http://it.blogs.muhlenberg.edu/?cat=172356">ERP</a> (5)
+</li>
+	<li class="cat-item cat-item-172338"><a href="http://it.blogs.muhlenberg.edu/?cat=172338">Google Apps</a> (10)
+</li>
+	<li class="cat-item cat-item-172334"><a href="http://it.blogs.muhlenberg.edu/?cat=172334">Phone System</a> (3)
+</li>
+	<li class="cat-item cat-item-172331"><a href="http://it.blogs.muhlenberg.edu/?cat=172331">Printing and WEPA</a> (5)
+</li>
+	<li class="cat-item cat-item-172365"><a href="http://it.blogs.muhlenberg.edu/?cat=172365">WiFi</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8070"><a href="http://it.blogs.muhlenberg.edu/?cat=8070">Security</a> (23)
+<ul class='children'>
+	<li class="cat-item cat-item-1"><a href="http://it.blogs.muhlenberg.edu/?cat=1">cybersecurity</a> (14)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8028"><a href="http://it.blogs.muhlenberg.edu/?cat=8028" title="Stay up-to-date on technology related issues. ">Status</a> (3)
+</li>
+	<li class="cat-item cat-item-172342"><a href="http://it.blogs.muhlenberg.edu/?cat=172342">Upgrades and Updates</a> (2)
+</li>
+		</ul>
+			</aside><aside id="email-posts-to-subscribers-2" class="widget widget_text elp-widget"><h2 class="widget-title">Subscribe to Blog</h2>				<div class="email_posts_subscribers">
+						<form action="#" method="post" class="elp_form" id="elp_form_1607055172">
+				<p><span class="name">Name</span><br /><input type="text" name="name" id="name" placeholder="Name" value="" maxlength="50" required/></p>				<p><span class="email">Email</span><br /><input type="email" id="email" name="email" value="" placeholder="Email"  maxlength="225" required/></p>								<input name="submit" id="elp_form_submit_1607055172" value="Submit" type="submit" />
+				<span class="elp_form_spinner" id="elp-loading-image" style="display:none;">
+					<img src="http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers/inc/ajax-loader.gif" />
+				</span>
+				<input name="nonce" id="nonce" value="055af9ec8a" type="hidden"/>
+				<input name="group" id="group" value="" type="hidden"/>
+				<input type="text" style="display:none;" id="email_name" name="email_name" value="" type="hidden"/>
+			</form>	
+			<span class="elp_form_message" id="elp_form_message_1607055172"></span>
+		</div>
+		<br />
+	</aside><aside id="archives-3" class="widget widget_archive"><h2 class="widget-title">Post Archive</h2>		<ul>
+				<li><a href='http://it.blogs.muhlenberg.edu/?m=202009'>September 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202007'>July 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202005'>May 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202004'>April 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202003'>March 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202002'>February 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202001'>January 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201912'>December 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201911'>November 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201910'>October 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201909'>September 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201908'>August 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201907'>July 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201905'>May 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201904'>April 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201809'>September 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201808'>August 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201807'>July 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201806'>June 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201805'>May 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201804'>April 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201802'>February 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201801'>January 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201711'>November 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201710'>October 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201709'>September 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201708'>August 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201706'>June 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201705'>May 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201704'>April 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201703'>March 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201701'>January 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201612'>December 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201611'>November 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201610'>October 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201609'>September 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201608'>August 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201607'>July 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201605'>May 2016</a></li>
+		</ul>
+			</aside>	</div><!-- #secondary -->
+				</div><!-- #tab-3 -->
+			</div><!-- .site-header-inside -->
+		</div><!-- #tabs -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content fadeInFast">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+						
+				
+<article id="post-581" class="post post-581 type-post status-publish format-standard hentry category-client-support-services category-communication-collaboration category-google-apps tag-email tag-g-suite tag-google tag-google-apps">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=581" rel="bookmark"><time class="entry-date published" datetime="2017-01-17T16:46:35-04:00">January 17, 2017</time><time class="updated" datetime="2017-01-20T10:52:05-04:00">January 20, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=581" rel="bookmark">G Suite &#8211; The More You Know</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172350" rel="category">Client Support Services</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=170064" rel="category">Communication &amp; Collaboration</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=email" rel="tag">email</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=g-suite" rel="tag">g suite</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=google" rel="tag">google</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=google-apps" rel="tag">Google Apps</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=581#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Welcome back! We&#8217;ve been an official G Suite campus for three+ weeks and going strong. Thank you for your participation in G Suite related events pre and post launch. Your feedback has been invaluable.</p>
+<h3>Are you interested in training? Come to one of our upcoming brown bag sessions!</h3>
+<ul>
+<li>January 20th 12pm &#8211; 1pm Seegers Union GQ Annex
+<ul>
+<li>Topic: Beyond the basics &#8211; Gmail</li>
+<li>Includes: Setting Gmail as your default mail client, sending email from another address or alias and customizing your Gmail environment</li>
+</ul>
+</li>
+<li>January 25th 12pm &#8211; 1pm Seegers Union GQ Annex
+<ul>
+<li>Topic: Contacts and Groups</li>
+<li>Includes: Creating/managing groups in the Contacts app, Groups in delegated accounts and System Groups.</li>
+</ul>
+</li>
+<li>January 27th 12pm &#8211; 1pm Seegers Union 113
+<ul>
+<li>Topic: Labels, filters and maximizing search capabilities</li>
+<li>Includes: Managing existing labels and filters, moving vs labeling, creating a filter from a search</li>
+</ul>
+</li>
+</ul>
+<h3>IT Protects: Be aware of a current Gmail Phishing Scam</h3>
+<p>A highly effective phishing scam is targeting Gmail users. DO NOT login to your account from any location other than our <a href="http://login.muhlenberg.edu">Application Portal</a>. <a href="http://it.blogs.muhlenberg.edu/2017/01/20/it-protects-gmail-phishing-scam/">Learn more about this scam</a>.</p>
+<h3>Want to learn more about G Suite?</h3>
+<ul>
+<li><a href="http://www.muhlenberg.edu/gsuite/documentation/">Visit our documentation library</a> and <a href="http://www.muhlenberg.edu/gsuite/videos">video library</a></li>
+<li>Check out the <a href="https://gsuite.google.com/learning-center/">G Suite Learning Center</a></li>
+<li>Learn more at lynda.com (accessible from the Application Portal)
+<ul>
+<li>Recommended &#8211; <a class="headline-course-title ga" href="https://www.lynda.com/Google-Apps-Education-tutorials/Google-Apps-2016-Education-Essential-Training/504793-2.html">Google Apps 2016 for Education Essential Training</a></li>
+</ul>
+</li>
+</ul>
+<h3>G Suite: Frequently Asked Questions</h3>
+<div class="content-add05">
+<p dir="ltr">This list is derived from engagement during training, as well as, support inquiries. We will be adding to this resource, as well as, the <a href="http://www.muhlenberg.edu/gsuite/documentation/">G Suite documentation library</a> and <a href="http://www.muhlenberg.edu/gsuite/videos">video library</a>.</p>
+<p dir="ltr"><strong>Why am I still receiving emails in GroupWise?</strong><br />
+Email will continue to flow into GroupWise. Gmail is the only email from which you should send mail. Emails sent to any muhlenberg.edu address within GroupWise will NOT flow to Muhlenberg Gmail accounts. We are asking people to use GroupWise as a cross-reference only, reporting any anomalies. If you wish to forward any emails from GroupWise (or grouped as attachments), you must forward to your Google Test Domain Address which is username@muhlenberg.edu.test-google-a.com. For example janesmith@<a href="http://muhlenberg.edu.test-google-a.com/">muhlenberg.edu.test-google-a.com</a> Use it for no other purpose except forwarding your mail to Google.</p>
+<p dir="ltr"><strong>Is there a restriction on the number of email addresses I send to in a single email? Does it matter if they are internal or external email addresses?<br />
+</strong>G Suite limits the amount of mail one user can send. Limits restrict the number of messages sent per day and the number of recipients per message.</p>
+<p dir="ltr">If users exceed a G Suite email sending limit, they’ll see an error message, such as:</p>
+<ul>
+<li>You have reached a limit for sending email.</li>
+<li>You reached a Gmail sending limit.</li>
+<li>You exceeded the maximum number of recipients.</li>
+</ul>
+<p>After reaching one of these limits, a user can&#8217;t send new messages for up to 24 hours. However, they can still access their G Suite account and receive incoming email. The user can also access their other Google services. After this suspension period, sending limits are automatically reset and the user can resume sending mail.</p>
+<p dir="ltr">To learn more about these restrictions read “<a href="https://support.google.com/a/answer/166852?hl=en">Gmail sending limits in G Suite</a>”</p>
+<p dir="ltr"><strong>How do I access email Groups (formerly distributed lists in GroupWise)?</strong> <br class="kix-line-break" />Distributed email lists are now referred to as &#8220;Groups&#8221;. The ability to add Groups to our muhlenberg.edu directory is not an available feature &#8211; they will not auto-populate as you type if it is the first time you are sending to that Group. They are, however, available in the Groups apps, currently visible based on membership.</p>
+<p dir="ltr">Note: Once you email your Group, they will be added to your Contacts and will auto-populate.</p>
+<p dir="ltr">We are currently working on a new group management model. Departments &amp; offices will be contacted regarding the management of their group&#8217;s membership.</p>
+<p dir="ltr">Supporting documentation: <a href="http://www.muhlenberg.edu/media/contentassets/pdf/about/oit/gsuite/MuhlenbergGroups.pdf">Contacting Muhlenberg Groups (formerly distribution lists)</a>‌</p>
+<p dir="ltr"><strong>Do I need to logout of G Suite apps?</strong> <br class="kix-line-break" />Yes. There is no imposed timeout on G Suite apps. While we have a 15 minute timeout on the Application Portal, you are still logged into G Suite. It is important that you logout of G Suite (and other apps) accessed via the Application Portal if you wish to end the session. This is critically important when accessing your account on a public computer.</p>
+<p dir="ltr">Supporting documentation: <a href="http://www.muhlenberg.edu/media/contentassets/pdf/about/oit/gsuite/LoggingoutofGSuiteapps.pdf">Logging out of GSuite apps</a></p>
+<p><strong>Can I send an email from an alias?<br />
+</strong>If you want to always send from your other address, you&#8217;ll need to change both your default &#8220;From&#8221; and &#8220;reply-to&#8221; address. If you only change the &#8220;From&#8221; address, replies will go to your original Gmail address by default.</p>
+<p dir="ltr">Supporting documentation: <a href="http://www.muhlenberg.edu/media/contentassets/pdf/about/oit/gsuite/Sendingemailfromanotheraddressoralias.pdf">Sending email from another address or alias</a>‌</p>
+<p><strong>I sent an email to myself and did not receive. Why?</strong><br />
+By default, Google does not send an email sent to an alias to your inbox &#8211; Google presumes you do not want the clutter of such emails. If you sent a message to yourself using an alias and NOT your official muhlenberg email address (<a href="mailto:firstnamelastname@muhlenberg.edu">firstnamelastname@muhlenberg.edu</a>), it will not be delivered to your inbox. For example, johnsmith will work but jsmith will not. However, this email will appear in your Sent mail and All Mail. If you wish to send emails to yourself and see them in your inbox, please use your official email address, not an alias.</p>
+<p><strong>When I click on an email address in a browser window or MS Office application, I am kicked to GroupWise. How do I get this work in Gmail?<br />
+</strong>You need to set Gmail as your default email client. To do this you will need to install Chrome and walk through a series of steps, after which, Gmail will be the default.</p>
+<p dir="ltr">Supporting documentation: <a href="http://www.muhlenberg.edu/media/contentassets/pdf/about/oit/gsuite/Gmailasyourdefaultemailclient.pdf">How to set Gmail as your default email client</a>‌</p>
+<p dir="ltr"><strong>Is there an official logo I can use when setting my signature in Gmail?</strong><br />
+Yes! Please use the following web URL for the official Muhlenberg “M”: <a href="http://www.muhlenberg.edu/images/muhl-email.png">http://www.muhlenberg.edu/images/muhl-email.png</a>.</p>
+</div>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-578" class="post post-578 type-post status-publish format-standard hentry category-google-apps">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=578" rel="bookmark"><time class="entry-date published" datetime="2017-01-02T08:39:50-04:00">January 2, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=578" rel="bookmark">G Day is here!</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=578#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>The day has come! Check out our <a href="https://video.muhlenberg.edu/media/G-Day+is+Here/1_y25iphh1">latest video announcing the start of Google Day</a>, or G Day. Come to the Event Space for Information Sessions and drop-in support for email, calendar, your mobile devices and some of the &#8220;Beyond the Basics&#8221; topics that we&#8217;ll get to down the road. And don&#8217;t forget the prizes! Amazon gift cards, a Kindle, and a Chromebook!</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-576" class="post post-576 type-post status-publish format-standard hentry category-connect-it-newsletter">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=576" rel="bookmark"><time class="entry-date published" datetime="2016-12-23T12:12:30-04:00">December 23, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=576" rel="bookmark">IT Connects! Newsletter, December 2016</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172349" rel="category">IT Connects! Newsletter</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=576#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Just under the wire! It&#8217;s been a really full month with projects running right up to and through the break. Here are the highlights from the past 23 days:</p>
+<p><strong>G Suite and G Day</strong></p>
+<p>We&#8217;re moving ahead full speed with the transition to Google. <a href="http://it.blogs.muhlenberg.edu/2016/12/23/coming-soon-g-suite-google-day/">Google Day, or G Day, is on January 2</a>. Come to the Event Space that whole day for information sessions, drop-in support, and a chance to win some prizes.</p>
+<p>Actual go-live will be across the 27th-29th of December (yes, some of OIT will be coming in over break to make this happen!). By then we&#8217;ll have moved over 20 million emails and thousands of calendar events.</p>
+<p>A quick reminder &#8211; all faculty and staff emails and calendar items are migrating over, but students will get a &#8220;pristine&#8221; Inbox when they return. Groupwise will still work as a reference tool, and students can forward email to themselves (special instructions forthcoming).</p>
+<p>For all the news on G Suite at Muhlenberg, check out the <a href="http://it.blogs.muhlenberg.edu/category/projects/google-apps/">entire category of posts</a>. And don&#8217;t forget to log into the <a href="http://login.muhlenberg.edu">Application Portal</a> today to get it all set up, and on December 27, 28 or 29 to start using G Suite.</p>
+<p><strong>Phones</strong></p>
+<p>The phone system is installed! We have a few random phones here and there and some configuration work that still needs to be polished to a shine, but the last building has been cut-over. This has been a highly successful project considering the impact of telecommunications across the campus, and a big thanks to the Networking and Infrastructure and Client Support Services teams, in particular, for all their hard work.</p>
+<p><strong>Printing</strong></p>
+<p>The <a href="http://it.blogs.muhlenberg.edu/2016/12/19/update-on-print-quota-usage/">stats are in for Fall term</a>, and they are pretty impressive. Not only did we reduce paper usage by an equivalent of nearly 400,000 sheets of B&amp;W single-sided prints, but only 1.7% of students ran out of quota. As we say in the article, we know that some tough decisions about what to print or not still happened, but we&#8217;re excited to see these numbers. The quota ($75) and supplement ($50 for those with print-heavy courses) stay the same for Spring term.</p>
+<p>That&#8217;s it for this newsletter. Happy holidays to all from OIT!</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-565" class="post post-565 type-post status-publish format-standard hentry category-announcements category-google-apps tag-g-suite tag-google">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark"><time class="entry-date published" datetime="2016-12-23T11:43:32-04:00">December 23, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark">Coming Soon: G Suite &amp; Google Day!</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=22152" rel="category">Announcements</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=g-suite" rel="tag">g suite</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=google" rel="tag">google</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=565#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Are you ready for our big switch to G Suite for communication &amp; collaboration? Check out our <a href="https://video.muhlenberg.edu/media/G-Day+is+Coming/1_3al5jtlt">new announcement video</a>, and see below for more information.</p>
+<p>First and foremost, be sure to check in on our <a href="http://www.muhlenberg.edu/gsuite/">G Suite Launch web page</a> for the latest info. Tune into <a href="https://twitter.com/search?q=%23BergGDay&amp;src=typd">#BergGDay on Twitter</a> as well for all the latest news as it breaks.</p>
+<p>Here are some highlights:</p>
+<ul>
+<li><a href="https://video.muhlenberg.edu/media/G-Suite+Info+Session/1_sei89ahg">Recorded version of our information session presentation</a></li>
+<li><a href="http://www.muhlenberg.edu/gsuite/checklist/">Checklist &#8211; know what you need to do to get connected</a></li>
+<li>Once G Suite is live, <a href="https://support.google.com/quickfixes/answer/6252399?hl=en">set up your phone or other mobile device</a></li>
+</ul>
+<p>On January 2, it&#8217;ll be Google-Day (or G Day, as we&#8217;ve been calling it). OIT &#8211; in particular Client Support Services and the Instructional Technology &amp; Digital Learning teams &#8211; will be on hand in the Event Space <em>all day</em> to help get everyone onto and comfortable with Google. We&#8217;ll have repeats of our Information Sessions, which are focused on the details of transitioning from GroupWise to Google. There will also be drop-in slots where you can swing by various tables and get help on specific topics. These include Gmail, Calendar, Phones &amp; Mobile Devices and &#8220;Beyond the Basics&#8221; (e.g. Google Drive, Docs, etc.). Our full agenda is below.</p>
+<ul>
+<li>8:30am – 9:00am Welcome to G Day with CIO Allan Chen</li>
+<li>9:00am – 10:30am Info Session</li>
+<li>10:30am – 1:00pm Drop-in hours</li>
+<li>1:00pm – 2:30pm Info Session</li>
+<li>2:30pm – 5:30pm Drop-in hours</li>
+</ul>
+<p>Last but not least, we&#8217;ll have raffle prizes for those that come to G Day! Giveaways include meal tickets for the Wood Dining Commons, $25 Amazon Gift Cards (6 to be exact), and drawings for 2 Grand Prizes &#8211; an Amazon Kindle and an Acer 11&#8243; Chromebook (eligibility based on participation).</p>
+<p>Join us on G Day to find out how to make the most of out of G Suite and earn the chance to walk away with some great bonus items.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-558" class="post post-558 type-post status-publish format-standard hentry category-printing-and-wepa">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=558" rel="bookmark"><time class="entry-date published" datetime="2016-12-19T16:04:51-04:00">December 19, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=558" rel="bookmark">Update on Print Quota Usage</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172331" rel="category">Printing and WEPA</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=558#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Now that fall term has completed, we&#8217;ve grabbed the latest print usage data. I want to be clear about one thing &#8211; this data will not change our quota. The same policy is in place as before &#8211; $75 standard quota for full time students with the option to supplement with a once-per-semester $50 if there is a &#8220;print-heavy&#8221; course. But it&#8217;s worth looking at the data.</p>
+<p>I want to present the results as close to the exact academic term as possible, without any skewing from post-finals printing (small volume as that is, admittedly). I originally broke apart use pre and post finals, but there actually wasn&#8217;t as much of a spike as one might expect from exams, so I&#8217;m keeping all the data lumped together. The biggest comparisons are from last term, when we first rolled out WEPA and did not have a quota.</p>
+<p>First, the overall quota usage chart. This is the amount of quota used, by student. Note that the numbers on the x-axis are just a count of users, and are not Berg IDs or anything else that ties a specific amount of quota usage with a specific student. The user population includes Wescoe students.</p>
+<p><a href="http://it.blogs.muhlenberg.edu/files/Fall-2016-Print-Usage.png"><img class="alignnone wp-image-559 size-full" src="http://it.blogs.muhlenberg.edu/files/Fall-2016-Print-Usage.png" alt="fall-2016-print-usage" width="653" height="414" srcset="http://it.blogs.muhlenberg.edu/files/Fall-2016-Print-Usage.png 653w, http://it.blogs.muhlenberg.edu/files/Fall-2016-Print-Usage-300x190.png 300w" sizes="(max-width: 653px) 100vw, 653px" /></a></p>
+<p>You&#8217;ll notice a few things right off the bat. First, the graph is very linear. R2 is .905. This compares to an R2 of only .63 in Spring. The lower score in the spring was because we saw a dramatic and non-linear rise in usage at the extreme right. The heaviest of users printed far more than others. A smooth graph is neither &#8220;good&#8221; nor &#8220;bad&#8221; but I am highlighting that usage did not have the same spike as in the Spring. I think this does mean a more egalitarian printing environment &#8211; it&#8217;s not 5% of users accounting for 50% of all printing.</p>
+<p>Some stats are below. Note that &#8220;quota&#8221; means &#8220;however much money we loaded to given user.&#8221; For most students this was $75. For Pell-eligible students it was $120, and for 115 students there was an additional $50 added as a &#8220;supplement&#8221; for print-heavy courses (note: this is an option for all students, once per term). While the good news is that this let&#8217;s us measure sufficiency of quota, the bad news is that I can&#8217;t directly gather an &#8220;average dollar amount spent&#8221; for the entire student community.</p>
+<ul>
+<li>90th percentile was 74.3% quota usage</li>
+<li>17% of students did not print at all</li>
+<li>27% of students used less than 5% of quota</li>
+<li>76% of students used less than 50% of quota</li>
+<li>1.7% (43 students) used up 100% of their quota</li>
+<li>Equivalent of 693,433 single-sided Black and White pages printed based on total amount spent (compared to 1,119,405 equivalent pages in Spring)</li>
+</ul>
+<p>So what does this mean? We certainly don&#8217;t think it means that all but 43 students had &#8220;enough&#8221; print quota. We realize that some rationing did happen and that tough choices had to be made. But we also see that a large number of users did not use up all of the quota allotted, and more than 3/4 did not even use up half of their quota. Our hope is that this means fewer of those tough calls had to happen because we chose an appropriate quota amount.</p>
+<p>The biggest number, though, is the decrease in printing from Spring. Instituting a quota, even with a supplement available to all students and concessions based on Pell-eligibility, decreased printing by a huge margin compared to Spring. And our ultimate goal with the quota is about sustainability and reducing paper usage on campus. As we&#8217;ve said before &#8211; decreasing student printing is only half of the equation, and conversations with faculty are ongoing. But we have to start somewhere, and we&#8217;re off to a great one.</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-538" class="post post-538 type-post status-publish format-standard hentry category-communication-collaboration category-google-apps tag-g-suite">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=538" rel="bookmark"><time class="entry-date published" datetime="2016-11-30T17:02:20-04:00">November 30, 2016</time><time class="updated" datetime="2016-12-08T12:04:10-04:00">December 8, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=538" rel="bookmark">Getting to Google in 20  Million Short Steps</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=170064" rel="category">Communication &amp; Collaboration</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=g-suite" rel="tag">g suite</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=538#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Getting the campus to Google &#8211; which involves moving nearly 20 million emails &#8211; is no small task. We thought we&#8217;d shed some light on the actual process.</p>
+<p><strong>Final cut-over will be on December 27, 28, or 29</strong>. This is a few days before &#8220;G-Day&#8221; on January 2 when we&#8217;ll have workshops, training, and a number of other support options. But moving ahead a few days early is necessary &#8211; we need to make sure everything moves over correctly and time to make any needed course corrections.</p>
+<p>First, a few reminders:</p>
+<ul>
+<li>data/old emails will not be migrated for student accounts</li>
+<li>all faculty/staff old emails <em>not in an archive</em> will be migrated</li>
+<li>GroupWise will keep working after December 29, but only as a back-up (see below)</li>
+<li>The <a href="http://login.muhlenberg.edu">Application Porta</a>l will your access path to Google Suite (Muhlenberg Network Username for login, usually firstnamelastname for faculty &amp; staff or ab123456 for students)</li>
+</ul>
+<p><strong>GroupWise Archives</strong></p>
+<p>GroupWise offers an &#8220;archive&#8221; feature that allows one to move emails out of one&#8217;s &#8220;live&#8221; mailbox into an offline space. This saves on quota, among other benefits. We have discouraged using this feature in preference to simply increasing quota, so most likely you aren&#8217;t using it. In fact, if you don&#8217;t distinctly remember configuring and turning on your archive, you almost certainly aren&#8217;t using it. Technically, however, if you have emails in your archive, they will <em>not</em> migrate over. We can only migrate emails in your live mailbox. If you have questions, contact the Support Desk.</p>
+<p><strong>GroupWise Moving Forward</strong></p>
+<p>As mentioned, GroupWise should only be used to cross-reference your GMail account during the first few days following the switch-up. Emails sent within the system &#8211; from one campus user to another &#8211; stay entirely internal. They never get off campus, and therefore never reach Google. This means that your Google inbox will not receive any email you send from GroupWise to another member of the college community. So it&#8217;s still there, it still works, but please don&#8217;t use it unless you have to.</p>
+<p><strong>Migration</strong></p>
+<p>The actual migration process has taken place in iterative steps. We did a first, large migration of all emails in the entire system up to those dated August 31, 2016 almost 2 months ago. For some users this took close to a month to complete. We then ran multiple successive migrations covering emails from shorter and shorter periods of time, slowly catching up to the latest emails. We&#8217;ve already run 2 migrations to get to 10/31. In a couple of weeks we&#8217;ll get to 11/30. We&#8217;ll probably run 3 to 4 more migrations in smaller and smaller chunks of time until we run just 1 day&#8217;s worth on 12/28 and then flip the switch.</p>
+<p>All told, we&#8217;ll have spent 3 months on migrating email alone.</p>
+<p><strong>What you can do to get ready for G Suite</strong></p>
+<ul>
+<li><a href="http://it.blogs.muhlenberg.edu/2016/11/23/gsuite-info-sessions-announced/">Attend a G Suite Information Session</a></li>
+<li>Visit our Application portal at <a href="http://login.muhlenberg.edu">login.muhlenberg.edu</a> to ensure you are able to login successfully.</li>
+<li>Learn about G Suite on lynda.com (available via the application portal) and by visiting the <a href="https://gsuite.google.com/learning-center/" target="_blank">G Suite Learning Center</a>.</li>
+</ul>
+<p><strong>Actual Cut-Over</strong></p>
+<p>The switch itself is nearly instantaneous after the last migration. By the end of the day of 12/28, you will see G Suite among the options in the Application Portal. Simply click here and you&#8217;ll be routed to G Suite. It&#8217;s single sign-on so no need to log in again.</p>
+<p>You&#8217;ll see a welcome screen the first time, but after that you can go straight into G Suite.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-524" class="post post-524 type-post status-publish format-standard hentry category-announcements category-client-support-services category-google-apps tag-google tag-gsuite tag-training">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark"><time class="entry-date published" datetime="2016-11-23T15:22:53-04:00">November 23, 2016</time><time class="updated" datetime="2016-12-06T10:21:21-04:00">December 6, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark">GSuite Info Sessions Announced</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=22152" rel="category">Announcements</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172350" rel="category">Client Support Services</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=google" rel="tag">google</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=gsuite" rel="tag">gsuite</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=training" rel="tag">training</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=524#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p><a href="http://it.blogs.muhlenberg.edu/files/missionpatch-gsuite.png"><img class="size-medium wp-image-525 aligncenter" src="http://it.blogs.muhlenberg.edu/files/missionpatch-gsuite-300x300.png" alt="missionpatch-gsuite" width="300" height="300" srcset="http://it.blogs.muhlenberg.edu/files/missionpatch-gsuite-300x300.png 300w, http://it.blogs.muhlenberg.edu/files/missionpatch-gsuite-150x150.png 150w, http://it.blogs.muhlenberg.edu/files/missionpatch-gsuite.png 400w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Get ready, set, mark your calendars! GSuite Info Sessions are scheduled!</p>
+<p>Our resident GWhiz crew will be hosting multiple information sessions leading up to our GDay launch event.</p>
+<p>Please join us for one of the sessions below, where you’ll learn all about how to successfully transition from GroupWise to GSuite.</p>
+<p>Tuesday, November 29<br />
+1:30pm to 3:00pm<br />
+Seegers Union Events Space</p>
+<p>Thursday, December 1<br />
+10:00am to 11:30am<br />
+Moyer Forum</p>
+<p>Tuesday, December 6<br />
+6:00pm to 7:30pm<br />
+Seegers Union 111-113</p>
+<p>Wednesday, December 21<br />
+10:30am to 12:00pm<br />
+Seegers Union Events Space</p>
+<p><strong>GDay LAUNCH EVENT!</strong></p>
+<p><strong> Monday, January 2<br />
+</strong><strong>8:00am &#8211; 5:30pm<br />
+Seegers Union Events Space</strong></p>
+<p>Our resident GWhiz Crew and supporting members of OIT will be available throughout the day to answer your questions providing hands-on assistance with GSuite.</p>
+<p>Stop by for a info session or during drop-in hours throughout the day. There will be chances to win raffle prizes for those that stop by!</p>
+<p>See the schedule below!</p>
+<ul>
+<li>8:30am – 9:00am Welcome to GDay with CIO Allan Chen</li>
+<li>9:00am – 10:30am Info Session</li>
+<li>10:30am – 1:00pm Drop-in hours</li>
+<li>1:00pm – 2:30pm Info Session</li>
+<li>2:30pm – 5:30pm Drop-in hours</li>
+</ul>
+<p>Stay tuned for a special announcement with more details as we get closer to GDay!</p>
+<p>Note: Info sessions and training opportunities will continue throughout the spring semester.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-472" class="post post-472 type-post status-publish format-standard hentry category-connect-it-newsletter">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=472" rel="bookmark"><time class="entry-date published" datetime="2016-11-01T13:14:52-04:00">November 1, 2016</time><time class="updated" datetime="2016-11-01T13:16:31-04:00">November 1, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=472" rel="bookmark">IT Connects! Newsletter, November 2016</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172349" rel="category">IT Connects! Newsletter</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=472#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Welcome to the first issue of our monthly newsletter! Our hope is to provide updates on our projects, address any concerns that have arisen since the last article, and speak towards the challenges facing information technology at Muhlenberg and in higher education.</p>
+<p>Not all posts will be the same length with the same types of content, and it&#8217;s possible that we&#8217;ll miss the deadlines now and then. But these are our goals, along with advancing transparency into our operations and communication between OIT and the college community.</p>
+<p><a href="#news">IT News</a><br />
+<a href="#spotlight1">Project Spotlight: Google Suite for Education</a><br />
+<a href="#spotlight2">Project Spotlight: Phone System Roll-Out</a></p>
+<h3 id="news">First, some IT News</h3>
+<p>We&#8217;ve had a number of major announcements since the start of the fall. We&#8217;ve launched a new <a href="http://it.blogs.muhlenberg.edu/2016/08/10/a-single-application-portal-for-muhlenberg-web-services/">Application Portal</a> and released <a href="http://it.blogs.muhlenberg.edu/2016/09/13/qualtrics/">Qualtrics</a> <a href="http://it.blogs.muhlenberg.edu/files/q_logo_banner-300x135-1.png"><img class="size-medium wp-image-490 alignleft" src="http://it.blogs.muhlenberg.edu/files/q_logo_banner-300x135-1-300x135.png" alt="q_logo_banner-300x135" width="300" height="135" /></a>as a new campus-wide survey software solution, for instance. <a href="http://it.blogs.muhlenberg.edu/2016/08/10/lynda-com-our-new-online-training-resource/">Lynda.com</a> comes to campus, as well, as a new powerful training tool for the whole community. We also went live across campus with the new Canvas Learning Management System, and have started on projects involving Zoom video conferencing <a href="http://login.muhlenberg.edu"><img class="alignright wp-image-492 size-medium" src="http://it.blogs.muhlenberg.edu/files/Lynda.com-logo-300x197.jpg" alt="lynda-com-logo" width="300" height="197" srcset="http://it.blogs.muhlenberg.edu/files/Lynda.com-logo-300x197.jpg 300w, http://it.blogs.muhlenberg.edu/files/Lynda.com-logo-768x504.jpg 768w, http://it.blogs.muhlenberg.edu/files/Lynda.com-logo-1024x671.jpg 1024w, http://it.blogs.muhlenberg.edu/files/Lynda.com-logo-1200x787.jpg 1200w, http://it.blogs.muhlenberg.edu/files/Lynda.com-logo.jpg 1600w" sizes="(max-width: 300px) 100vw, 300px" /></a>among many others. Back in June, we launched a new version of the iMuhlenberg mobile app that will bring some new capabilities to our mobile efforts.</p>
+<p>A big piece of news is the <a href="http://it.blogs.muhlenberg.edu/category/projects/printing-and-wepa/">institution of a print quota</a>. With sustainability in mind, we&#8217;ve started a new system whereby the first $75 of printing is provided &#8220;free&#8221; to all full-time students, with printing after that on a fee-per-page basis. We&#8217;ve already seen a marked dip in print usage this September, and hope that it&#8217;s a result of greater awareness of what and when to print. We are still working on classes or other training materials on digital note-taking and similar tools.</p>
+<p>Finally, October was Cybersecurity Awareness Month. We have a <a href="http://it.blogs.muhlenberg.edu/2016/10/19/it-protects-working-together-to-create-a-secure-environment/">new blog post</a> about all the efforts we&#8217;re making for data security, including bits on encryption, dealing with Personal Identifying Information, and how to spot phishing scams.</p>
+<h3 id="spotlight1">Project Spotlight: Google Suite for Education</h3>
+<p>Google Suite for Education, formerly Google Apps for Education, is still on pace for a January 1 launch for all of campus. We&#8217;ve been relatively quiet on this project so far, as we&#8217;ve been in a &#8220;steady state&#8221; of testing, <a href="http://it.blogs.muhlenberg.edu/files/g-suite-logo.jpg"><img class="size-medium wp-image-488 alignright" src="http://it.blogs.muhlenberg.edu/files/g-suite-logo-300x158.jpg" alt="g-suite-logo" width="300" height="158" srcset="http://it.blogs.muhlenberg.edu/files/g-suite-logo-300x158.jpg 300w, http://it.blogs.muhlenberg.edu/files/g-suite-logo-768x404.jpg 768w, http://it.blogs.muhlenberg.edu/files/g-suite-logo-1024x539.jpg 1024w, http://it.blogs.muhlenberg.edu/files/g-suite-logo-1200x632.jpg 1200w, http://it.blogs.muhlenberg.edu/files/g-suite-logo.jpg 1900w" sizes="(max-width: 300px) 100vw, 300px" /></a>but things will start to get &#8220;noisier&#8221; quite<br />
+soon. We&#8217;ll have announcements on training, documents comparing features and tools between GroupWise and Google, and various other items intended to ease the transition.</p>
+<p>Note that while faculty &amp; staff accounts will be fully migrated, with all existing GroupWise emails shifting over to the Google environment, students will receive an empty, pristine inbox. GroupWise will still be available through Spring term, and students can forward any needed emails to themselves from the old system. This decision is due to limitations on Google&#8217;s end on how much data we can migrate during our window of time.</p>
+<p>OIT will be fully on Google by the end of October, so that we are actively working in the environment. Training for the college will start mid-November and run through the end of the semester. Moving email data takes multiple weeks, and we&#8217;ll start doing that for faculty and staff as soon as we can (there are a number of measures to make sure we have everything accurate right to the last minute before cut-over, so that nothing will be missed). Then we&#8217;ll modify some records and settings on the network and be ready to go in Google Suite when everyone returns for the new year.</p>
+<p>During the first phase of implementation, training will focus on providing a smooth transition from GroupWise to Google Suite.  We want to ensure that the necessary information is available so that users can successfully perform their daily tasks.  Topics will include, but are not limited to:</p>
+<ul>
+<li>GMail – composing emails, moving from folders to labels, connecting with a mobile device</li>
+<li>Calendar – scheduling events, creating reminders, creating new calendars, shared calendars &amp; settings</li>
+<li>Contacts – Groups, Directory</li>
+</ul>
+<p>Training will be ongoing after the initial phase of implementation. Our team will continue to offer learning opportunities focused on the collaborative capabilities offered with the Google Suite. Topics will include, but are not limited to:</p>
+<ul>
+<li>Drive &#8211; uploading files, sharing files and folders, version control</li>
+<li>Docs/Sheets/Slides &#8211; creating files, concurrent editing</li>
+<li>Groups &#8211; Host discussions, create forums, organize meetings and events</li>
+<li>Integration of Google with Canvas and other systems</li>
+</ul>
+<h3 id="spotlight2">Project Spotlight: Phone Roll-Out</h3>
+<p>The new phone system has been deployed to a number of buildings around campus. We&#8217;re excited to be expanding to more and more locations over the next few months. Check out <a href="http://it.blogs.muhlenberg.edu/2016/08/31/phone-system-installation-schedule/">the schedule online</a>, and see our latest post on <a href="http://it.blogs.muhlenberg.edu/2016/11/01/phone-system-update/">What to Expect When You&#8217;re Expecting a New Phone System.</a></p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-508" class="post post-508 type-post status-publish format-standard hentry category-phone-system tag-mitel tag-phone">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=508" rel="bookmark"><time class="entry-date published" datetime="2016-11-01T09:17:34-04:00">November 1, 2016</time><time class="updated" datetime="2016-12-20T16:48:31-04:00">December 20, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=508" rel="bookmark">What to expect while you are expecting the new phone system</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172334" rel="category">Phone System</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=mitel" rel="tag">mitel</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=phone" rel="tag">phone</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=508#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>OIT is in the midst of the installation of the new campus wide phone system, based on Mitel. We want to provide further clarity about the project and additional details about what you can expect during this transition.</p>
+<p><strong>Project Goals</strong></p>
+<p>The goal of the first phase, to be completed in 2016, is to replace our aging legacy architecture, which is past its maintenance life and viability in a crisis. Detailed information about the early planning stages of this project are posted on our <a href="http://it.blogs.muhlenberg.edu/2016/08/09/new-phone-system/">IT blog</a>.</p>
+<p>The new system provides the same capabilities you have today, as well as some popular, easy-to-use new features. After the initial installation is complete campus wide, we will be expanding the range of supported features and options. Your new Mitel phone is just the beginning.</p>
+<p><strong>What to Expect</strong></p>
+<p>There is an enormous amount of behind the scenes work accomplished by three different teams. This takes place over a three-week period prior to switching over each campus location to the new system; each week, we start the cycle over again for the next building.</p>
+<p>The last time we replaced the phone system was 17 years ago. We will need access to the wall jacks and cables, often behind your desks.  This may require moving books, paperwork, and so on.  We are on tight schedules, and apologize if we ever seem hurried. We will strive to do the work with minimum disruption. Your understanding is greatly appreciated.</p>
+<p><strong>Timeline<br />
+</strong></p>
+<ul>
+<li><strong>1-3 weeks prior to cut-over &#8211; Wiring work</strong>
+<ul>
+<li>Our wiring partner, Westside Hammer, will upgrade existing wiring or repair/improve wall jacks prior to the phones being placed.</li>
+</ul>
+</li>
+<li><strong>1-2 weeks prior to cut-over &#8211; Network upgrades</strong>
+<ul>
+<li>OIT staff will install and configure new network equipment in wiring closets. This may result in an early morning interruption of service, depending on your desktop configuration. We usually get these done prior to 7am. If we expect an extended outage, we will communicate that to you.</li>
+</ul>
+</li>
+<li><strong>1 week prior to cut-over &#8211; Placing the new phones</strong>
+<ul>
+<li>Staff from Frontier Communications, our phone partner, will set up your new phone. Your new Mitel phone is NOT ready for use; it still needs to be programmed and tested.</li>
+</ul>
+</li>
+<li><strong>Cut-over day</strong><strong>– Go live</strong>
+<ul>
+<li>The specific day your new phone goes live, or is <strong>cut-over</strong><em>, </em>will be communicated in an e-mail when the date has been scheduled. We usually know about a week ahead of time and will provide that date as early as we can. Dates have been posted on the <a href="http://it.blogs.muhlenberg.edu/2016/08/31/phone-system-installation-schedule/">IT blog</a>, but are subject to change as we move across campus. We will be on-site making sure the new phones work. Documentation basic phone functionality, including how to setup your voicemail, will be provided in a hard copy at the time of service and is <a href="http://muhlenberg.edu/media/contentassets/pdf/about/oit/documentation/Mitel-3300-training-guide.pdf">available online</a>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>&#8220;Who are these people?&#8221;<br />
+</strong></p>
+<p><strong>OIT Staff (Sergio Maciujec, Stephen Small, and Joe Shigo)</strong></p>
+<p>They are doing site surveys to assess what work needs to be done. They are also installing new network equipment in each building to prepare the infrastructure for the new phone system. In many cases they will be speaking with you personally to address any concerns you have and/or better understand your phone needs.</p>
+<p><strong>Westside Hammer (Todd Hanzl and his team)</strong></p>
+<p>They are preparing the building wiring to accept the new phones, which use a technology called &#8220;power over Ethernet&#8221; or POE. Some buildings required more work than others.</p>
+<p><strong>Frontier Communications (Jim and Steve and their team)</strong></p>
+<p>They are the Mitel experts and are deploying, configuring and generally doing the work of installing the new phone system.</p>
+<p><strong>Frequently Asked Questions</strong></p>
+<p>&nbsp;</p>
+<ul>
+<li><strong>What is &#8220;Cut-over&#8221;?</strong><br />
+This is the process of actually “moving” your line from the old system to the new. It is very simple and should only take a few minutes per desk. The new phones can already accomplish most functions &#8211; we just need to route incoming calls to them. The only things we need to do are make the actual change in our database, then a few test calls to make sure everything is working.</li>
+<li><strong>How can I access my voicemail?</strong><br />
+Voicemail will work as soon as the phone is live. Because they are separate systems, though, you will need to remove all voicemails (listen and delete) from the old system before the cut-over. You may do so by dialing <a href="tel:4846643000">484-664-3000</a> to access the messages on the old system.New voicemail will start working immediately, but you won&#8217;t be able to retrieve messages until you go through the activation process, which includes setting a new PIN. The temporary PIN is “1111”.</li>
+<li><strong>What type of support will be provided?</strong><br />
+Members of OIT and Frontier will be visiting offices to answer any questions and do on-the-spot training throughout the day. We will also provide documentation on the basic functionality of the phone and it is <a href="http://muhlenberg.edu/media/contentassets/pdf/about/oit/documentation/Mitel-3300-training-guide.pdf">available online</a>. Additional training materials are being developed and will be released at a later date.</li>
+<li><strong>What are the new features?</strong>There are many new features with the phones, but some notable ones are:
+<ul>
+<li>Voicemail to email &#8211; receive messages straight to your inbox for listening on the go, on your phone, etc. This is on by default.</li>
+<li>Twinning &#8211; concurrent ringing of your desk phone to your cell phone. We have to configure this, and you have the ability to turn it on and off at will. If you are interested in this feature, please contact <a href="mailto:support@muhlenberg.edu">support@muhlenberg.edu</a>.</li>
+<li>The new system gives us a great deal of additional functionality and control that will allow for easier management, easier support for people changing offices or new faculty and staff coming on board.</li>
+<li>There are many other features, as well. Our plan is to slowly implement these over time to those interested. For example, there are powerful desktop and mobile software clients that some may be interested.</li>
+</ul>
+</li>
+</ul>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-489" class="post post-489 type-post status-publish format-standard hentry category-client-support-services tag-cyber-security tag-passwords tag-support tag-virus-scan">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=489" rel="bookmark"><time class="entry-date published" datetime="2016-10-19T12:06:52-04:00">October 19, 2016</time><time class="updated" datetime="2016-10-19T12:21:14-04:00">October 19, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=489" rel="bookmark">IT Protects: Working together to create a secure environment</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172350" rel="category">Client Support Services</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=cyber-security" rel="tag">cyber security</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=passwords" rel="tag">passwords</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=support" rel="tag">support</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=virus-scan" rel="tag">virus scan</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=489#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>October is National Cyber Security Awareness Month. This week’s theme is “Cyber from the Break Room to the Board Room” which focuses on the protection of personal and organizational data in the workplace. What better time to mention some of the processes already in place that contribute to protecting our digital work environment.</p>
+<ul>
+<li><strong>Weekly Virus Scan<br />
+</strong>IT runs a weekly virus scan using Kaspersky anti-virus software. A weekly reminder is sent via email. Please remember to <strong>leave your computer on Wednesday nights</strong>. We encourage you to turn off your monitor.  Since launching Kaspersky in 2013 we’ve seen a dramatic decrease in virus outbreaks, and your cooperation is needed to keep this up.</li>
+<li><strong>Managing College owned devices</strong>
+<ul>
+<li>College-owned Windows devices are managed using ZENworks. This tool, in use for many years, helps us deploy and update applications remotely and configure computers. The <strong>Zenworks Application Window</strong> allows the user to install select campus standard software (e.g., Office 2016).</li>
+<li>College-owned Apple devices are managed using JAMF Casper Suite. This management software allows the College to supply applications and configuration settings on a large scale, improving the maintenance and security of these devices. In addition, this software includes a self-service application that allows the user to install select campus standard software (e.g., Office 2016).</li>
+</ul>
+</li>
+</ul>
+<p>Here are simple ways you can personally help secure your data and work environment.</p>
+<ol>
+<li><strong>Increase personal awareness</strong>
+<ol>
+<li>Lock your computer<br />
+Perform a simple <strong>ctrl+alt+delete</strong> and lock your computer when leaving your desk.</li>
+<li>Our department works diligently to filter out SPAM and phishing emails, but we can’t catch them all. If you question the validity of an email and/or see a suspicious attachment do not open the email, particularly the attachment. If someone is asking for personal information DO NOT share it. Be vigilant in the art of protecting your digital environment. Remember: OIT will NEVER ask for your username and password in an email, and will always direct you to one of our standard sites to login (e.g. – <a href="http://login.muhlenberg.edu" target="_blank">http://login.muhlenberg.edu</a>).</li>
+</ol>
+</li>
+<li><strong>Strong passwords</strong><br />
+The Office of IT (OIT) requires that passwords used to access any Muhlenberg College system be strong. It is advisable that all passwords used to access any system, even those not associated with Muhlenberg (e.g. Facebook, Google), be strong. Read IT’s “<a href="http://www.muhlenberg.edu/main/aboutus/oit/about/policies_procedures/strong-passwords.html" target="_blank">Guidelines for Strong Passwords</a>”.</li>
+<li><strong>Update and reboot</strong><br />
+While we centrally manage College owned devices, providing security and the ability to rollout updates; it’s a healthy practice to check for Windows Updates on a regular basis. If you are not sure how to check for updates, contact <a href="mailto:support@muhlenberg.edu">support@muhlenberg.edu</a> for assistance. In addition to performing Windows Updates, make sure you reboot your computer on a regular basis. A simple reboot can clean up a whole host of issues that have resulted from multiple processes running for an extended period of time.</li>
+<li><strong>Backup your data<br />
+</strong>Institutional data should be stored on the Network. If you are storing any data locally on the device itself, please remember to back it up. If the device is corrupted during its lifecycle and needs to be rebuilt, any data stored locally will not be retrievable.</li>
+</ol>
+<p><strong>Some upcoming cybersecurity projects</strong></p>
+<ol>
+<li><strong>Encryption<br />
+</strong>Over the next 6 months, we will be rolling out “full disk encryption” to select computers across campus. Users must enter an additional password to access data on a computer or even boot it up in some cases. Without this credential, the computer is effectively useless. Not only is this best practice in general, but a lost but encrypted computer is not considered a data breach. Best of all – it’s only an additional password and nothing else required of the user. All college-owned laptops will be encrypted first, then moving onto all computers of any kind that access covered data.</li>
+<li><strong>Improved Windows Update Procedures<br />
+</strong>We are looking into new, more reliable and less intrusive ways to update Windows machines.</li>
+<li><strong>Cybersecurity training<br />
+</strong>Topics such as how to avoid phishing scams, what is included under Personal Identifying Information, and how to use password managers will be covered in a series of short, easy-to-consume training videos. We hope to roll these out over the remainder of the academic year and the make it an ongoing offering.</li>
+</ol>
+<p><strong>Additional resources on Cyber Security</strong></p>
+<ul>
+<li><a href="https://www.dhs.gov/topic/cybersecurity" target="_blank">Department of Homeland Security</a></li>
+<li><a href="http://securingthehuman.sans.org/resources/newsletters/ouch/2016" target="_blank">OUCH! Security Awareness Newsletter</a> (securingthehumans.sans.org)</li>
+<li><a href="https://staysafeonline.org/" target="_blank">StaySafeOnline.org</a></li>
+</ul>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text">Posts navigation</h1>
+		<div class="nav-links">
+
+							<div class="nav-previous"><a href="http://it.blogs.muhlenberg.edu/2016/11/01/phone-system-update/?paged=7" class="button"><span class="meta-nav"><i class="fa fa-arrow-circle-o-left"></i> Older posts</span></a></div>
+			
+							<div class="nav-next"><a href="http://it.blogs.muhlenberg.edu/2016/11/01/phone-system-update/?paged=5" class="button"><span class="meta-nav">Newer posts <i class="fa fa-arrow-circle-o-right"></i></span></a></div>
+			
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a class="powered-by" href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: editor by <a href="https://array.is/">Array</a>		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/jquery.fitvids.js?ver=20140820'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/editor.js?ver=20120206'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://it.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fit.blogs.muhlenberg.edu%2F2016%2F11%2F01%2Fphone-system-update%2F%3Fpaged%3D6%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://it.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

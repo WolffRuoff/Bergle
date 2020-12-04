@@ -1,0 +1,1031 @@
+http://it.blogs.muhlenberg.edu/?paged=4/
+145
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://it.blogs.muhlenberg.edu/xmlrpc.php">
+
+<title>Office of Information Technology &#8211; Page 4 &#8211; at Muhlenberg College</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Feed" href="http://it.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Office of Information Technology &raquo; Comments Feed" href="http://it.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/it.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://it.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather Sans-css'  href='http://fonts.googleapis.com/css?family=Merriweather+Sans&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='font-style-Merriweather-css'  href='http://fonts.googleapis.com/css?family=Merriweather&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wpstatistics-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-statistics/assets/css/frontend.css?ver=12.6.13' type='text/css' media='all' />
+<link rel='stylesheet' id='wpt-twitter-feed-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-to-twitter/css/twitter-feed.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='editor-font-awesome-css-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/fontawesome/font-awesome.css?ver=4.1.0' type='text/css' media='screen' />
+<!--[if IE]>
+<link rel='stylesheet' id='ie7-style-css'  href='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/inc/styles/ie.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='editor-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C400italic%2C600italic%2C700italic%7CRoboto+Condensed%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='wptt_front-css'  href='http://it.blogs.muhlenberg.edu/wp-content/plugins/wp-twitter-feeds/controller/../css/admin_style.min.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='sccss_style-css'  href='http://it.blogs.muhlenberg.edu?sccss=1&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var elp_data = {"messages":{"elp_name_required":"Please enter name.","elp_email_required":"Please enter email address.","elp_invalid_name":"Name seems invalid.","elp_invalid_email":"Email address seems invalid.","elp_unexpected_error":"Oops.. Unexpected error occurred.","elp_invalid_captcha":"Robot verification failed, please try again.","elp_invalid_key":"Robot verification failed, invalid key.","elp_successfull_single":"You have successfully subscribed.","elp_successfull_double":"You have successfully subscribed. You will receive a confirmation email in few minutes. Please follow the link in it to confirm your subscription. If the email takes more than 15 minutes to appear in your mailbox, please check your spam folder.","elp_email_exist":"Email already exist.","elp_email_squeeze":"You are trying to submit too fast. try again in 1 minute."},"elp_ajax_url":"http:\/\/it.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers//inc/email-posts-to-subscribers.js?ver=2.2'></script>
+<link rel='https://api.w.org/' href='http://it.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://it.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://it.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://it.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://it.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//it.blogs.muhlenberg.edu/?wordfence_lh=1&hid=71C6B257A3542F07031EB9C0F7F1D3EB');
+</script><style>.elp_form_message.success { color: #008000;font-weight: bold; } .elp_form_message.error { color: #ff0000; } .elp_form_message.boterror { color: #ff0000; } </style><!-- Analytics by WP-Statistics v12.6.13 - https://wp-statistics.com/ -->
+<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css">
+						h1 { font-family: Merriweather; } h2 { font-family: Merriweather Sans; } h3 { font-family: Merriweather; } h4 { font-family: Merriweather; } h5 { font-family: Merriweather; } h6 { font-family: Merriweather; } body, p { font-family: Merriweather Sans; } blockquote, blockquote p { font-family: Merriweather; } 	</style>
+
+</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support paged-4 group-blog no-js">
+
+<div id="page" class="hfeed site container">
+
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	<!-- Get sidebar color option (Appearance -> Customize -> Theme Options) -->
+		<header id="masthead" class="site-header light" role="banner">
+		<!-- Tab navigation -->
+		<ul class="toggle-bar" role="tablist">
+			<!-- Main navigation -->
+			<li id="panel-1" class="current" role="presentation">
+				<a href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true" class="current nav-toggle" data-tab="tab-1"><i class="fa fa-bars"></i><span class="screen-reader-text">View menu</span></a>
+			</li>
+
+			<!-- Featured Posts navigation -->
+							<li id="panel-2" role="presentation">
+					<a href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false" data-tab="tab-2"><i class="fa fa-thumb-tack"></i><span class="screen-reader-text">View featured posts</span></a>
+				</li>
+			
+			<!-- Sidebar widgets navigation -->
+			<li id="panel-3" role="presentation">
+				<a href="#tab-3" role="tab" aria-controls="tab-3" aria-selected="false" class="folder-toggle" data-tab="tab-3"><i class="fa fa-folder"></i><i class="fa fa-folder-open"></i><span class="screen-reader-text">View sidebar</span></a>
+			</li>
+		</ul>
+
+		<div id="tabs" class="toggle-tabs">
+			<div class="site-header-inside">
+				<!-- Logo, description and main navigation -->
+				<div id="tab-1" class="tab-content current fadeIn">
+					<div class="site-branding">
+						<!-- Get the site branding -->
+													<h1 class="site-logo">
+								<a href="http://it.blogs.muhlenberg.edu/"><img class="site-logo" src="http://it.blogs.muhlenberg.edu/files/muhl_icon_RGB_color.png" alt="Office of Information Technology" /></a>
+							</h1>
+											</div>
+
+					<nav id="site-navigation" class="main-navigation" role="navigation">
+						<div class="menu"><ul>
+<li ><a href="http://it.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-2"><a href="http://it.blogs.muhlenberg.edu/?page_id=2">About</a></li>
+</ul></div>
+					</nav><!-- #site-navigation -->
+
+									</div><!-- #tab-1 -->
+
+				<!-- Featured Posts template (template-featured-posts.php) -->
+				
+									<div id="tab-2" class="widget-area tab-content animated fadeIn">
+						<div class="widget featured-posts-widget">
+							<h2 class="widget-title">Announcements</h2>
+
+							<div class="featured-posts">
+							    
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark">IT Connects!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=1013" rel="bookmark"><time class="entry-date published" datetime="2020-05-27T10:25:17-04:00">May 27, 2020</time><time class="updated" datetime="2020-05-27T10:25:20-04:00">May 27, 2020</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark">Google Drive Feature Release: Team Drive and Drive File Stream</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark"><time class="entry-date published" datetime="2018-02-20T12:53:10-04:00">February 20, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark">A new way to TV- Philo Internet Television</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark"><time class="entry-date published" datetime="2017-10-23T11:12:08-04:00">October 23, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark">OIT Open House &#8211; April 28</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=623" rel="bookmark"><time class="entry-date published" datetime="2017-04-11T14:18:31-04:00">April 11, 2017</time><time class="updated" datetime="2017-04-27T15:52:51-04:00">April 27, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark">Coming Soon: G Suite &amp; Google Day!</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=565" rel="bookmark"><time class="entry-date published" datetime="2016-12-23T11:43:32-04:00">December 23, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark">GSuite Info Sessions Announced</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=524" rel="bookmark"><time class="entry-date published" datetime="2016-11-23T15:22:53-04:00">November 23, 2016</time><time class="updated" datetime="2016-12-06T10:21:21-04:00">December 6, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark">Instructional Technology and Digital Learning Team Updates&#8230;.</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=477" rel="bookmark"><time class="entry-date published" datetime="2016-10-13T17:01:09-04:00">October 13, 2016</time><time class="updated" datetime="2016-10-13T17:26:02-04:00">October 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1682">Thomas Sciarrino</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark">Qualtrics</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=460" rel="bookmark"><time class="entry-date published" datetime="2016-09-13T14:59:26-04:00">September 13, 2016</time><time class="updated" datetime="2016-09-13T15:37:08-04:00">September 13, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1478">Tim</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark">Office 2016 Deployment</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=448" rel="bookmark"><time class="entry-date published" datetime="2016-08-25T15:26:52-04:00">August 25, 2016</time><time class="updated" datetime="2016-08-26T16:02:15-04:00">August 26, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																	<div class="featured-post">
+																	            <h3><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark">Lynda.com &#8211; Our New Online Training Resource</a></h3>
+
+							            <div class="featured-post-meta">
+								            <div class="featured-post-date">
+								            	<i class="fa fa-clock-o"></i>
+								            	<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=428" rel="bookmark"><time class="entry-date published" datetime="2016-08-10T15:53:12-04:00">August 10, 2016</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>								            </div>
+							            </div>
+									</div>
+																							</div><!-- .featured-posts -->
+						</div><!-- .featured-posts-widget -->
+					</div><!-- #tab-2 .widget-area -->
+				
+				<!-- Sidebar widgets -->
+				<div id="tab-3" class="tab-content animated fadeIn" role="tabpanel" aria-labelledby="panel-3" aria-hidden="true">
+						<div id="secondary" class="widget-area" role="complementary">
+		<aside id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2>		<ul>
+				<li class="cat-item cat-item-22152"><a href="http://it.blogs.muhlenberg.edu/?cat=22152">Announcements</a> (14)
+</li>
+	<li class="cat-item cat-item-172350"><a href="http://it.blogs.muhlenberg.edu/?cat=172350">Client Support Services</a> (13)
+</li>
+	<li class="cat-item cat-item-172364"><a href="http://it.blogs.muhlenberg.edu/?cat=172364">General News</a> (2)
+</li>
+	<li class="cat-item cat-item-172396"><a href="http://it.blogs.muhlenberg.edu/?cat=172396">Instructional Technology</a> (7)
+</li>
+	<li class="cat-item cat-item-172349"><a href="http://it.blogs.muhlenberg.edu/?cat=172349">IT Connects! Newsletter</a> (5)
+</li>
+	<li class="cat-item cat-item-20867"><a href="http://it.blogs.muhlenberg.edu/?cat=20867">Projects</a> (26)
+<ul class='children'>
+	<li class="cat-item cat-item-170064"><a href="http://it.blogs.muhlenberg.edu/?cat=170064">Communication &amp; Collaboration</a> (4)
+</li>
+	<li class="cat-item cat-item-172356"><a href="http://it.blogs.muhlenberg.edu/?cat=172356">ERP</a> (5)
+</li>
+	<li class="cat-item cat-item-172338"><a href="http://it.blogs.muhlenberg.edu/?cat=172338">Google Apps</a> (10)
+</li>
+	<li class="cat-item cat-item-172334"><a href="http://it.blogs.muhlenberg.edu/?cat=172334">Phone System</a> (3)
+</li>
+	<li class="cat-item cat-item-172331"><a href="http://it.blogs.muhlenberg.edu/?cat=172331">Printing and WEPA</a> (5)
+</li>
+	<li class="cat-item cat-item-172365"><a href="http://it.blogs.muhlenberg.edu/?cat=172365">WiFi</a> (1)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8070"><a href="http://it.blogs.muhlenberg.edu/?cat=8070">Security</a> (23)
+<ul class='children'>
+	<li class="cat-item cat-item-1"><a href="http://it.blogs.muhlenberg.edu/?cat=1">cybersecurity</a> (14)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-8028"><a href="http://it.blogs.muhlenberg.edu/?cat=8028" title="Stay up-to-date on technology related issues. ">Status</a> (3)
+</li>
+	<li class="cat-item cat-item-172342"><a href="http://it.blogs.muhlenberg.edu/?cat=172342">Upgrades and Updates</a> (2)
+</li>
+		</ul>
+			</aside><aside id="email-posts-to-subscribers-2" class="widget widget_text elp-widget"><h2 class="widget-title">Subscribe to Blog</h2>				<div class="email_posts_subscribers">
+						<form action="#" method="post" class="elp_form" id="elp_form_1607056289">
+				<p><span class="name">Name</span><br /><input type="text" name="name" id="name" placeholder="Name" value="" maxlength="50" required/></p>				<p><span class="email">Email</span><br /><input type="email" id="email" name="email" value="" placeholder="Email"  maxlength="225" required/></p>								<input name="submit" id="elp_form_submit_1607056289" value="Submit" type="submit" />
+				<span class="elp_form_spinner" id="elp-loading-image" style="display:none;">
+					<img src="http://it.blogs.muhlenberg.edu/wp-content/plugins/email-posts-to-subscribers/inc/ajax-loader.gif" />
+				</span>
+				<input name="nonce" id="nonce" value="055af9ec8a" type="hidden"/>
+				<input name="group" id="group" value="" type="hidden"/>
+				<input type="text" style="display:none;" id="email_name" name="email_name" value="" type="hidden"/>
+			</form>	
+			<span class="elp_form_message" id="elp_form_message_1607056289"></span>
+		</div>
+		<br />
+	</aside><aside id="archives-3" class="widget widget_archive"><h2 class="widget-title">Post Archive</h2>		<ul>
+				<li><a href='http://it.blogs.muhlenberg.edu/?m=202009'>September 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202007'>July 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202005'>May 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202004'>April 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202003'>March 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202002'>February 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=202001'>January 2020</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201912'>December 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201911'>November 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201910'>October 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201909'>September 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201908'>August 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201907'>July 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201905'>May 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201904'>April 2019</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201809'>September 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201808'>August 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201807'>July 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201806'>June 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201805'>May 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201804'>April 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201802'>February 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201801'>January 2018</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201711'>November 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201710'>October 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201709'>September 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201708'>August 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201706'>June 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201705'>May 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201704'>April 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201703'>March 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201701'>January 2017</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201612'>December 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201611'>November 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201610'>October 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201609'>September 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201608'>August 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201607'>July 2016</a></li>
+	<li><a href='http://it.blogs.muhlenberg.edu/?m=201605'>May 2016</a></li>
+		</ul>
+			</aside>	</div><!-- #secondary -->
+				</div><!-- #tab-3 -->
+			</div><!-- .site-header-inside -->
+		</div><!-- #tabs -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content fadeInFast">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+						
+				
+<article id="post-739" class="post post-739 type-post status-publish format-standard hentry category-security tag-cyber-security tag-phishing">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=739" rel="bookmark"><time class="entry-date published" datetime="2018-04-18T11:44:37-04:00">April 18, 2018</time><time class="updated" datetime="2018-05-17T14:33:24-04:00">May 17, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=739" rel="bookmark">IT Protects! &#8211; Campus Phishing Simulation</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=8070" rel="category">Security</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=cyber-security" rel="tag">cyber security</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=phishing" rel="tag">phishing</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=739#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p dir="ltr">Each year, we run a number of drills for awareness and training &#8211; fire drills, lockdown drills, etc. In the same vein, we sometimes need to run cyber security simulations to prepare for those kinds of incidents. This is simply best practice for a community such as ours. Sometime between April-July 2018, we will be running a phishing simulation, impacting all faculty and staff.</p>
+<p dir="ltr"><strong>Why are we doing this?</strong></p>
+<p dir="ltr">More than 90% of all attacks on systems around the world start off with phishing schemes. 43% of successful breaches included such tactics, and 28% of phishing breaches were targeted and specific. This all comes from the <a href="http://www.verizonenterprise.com/verizon-insights-lab/dbir/2017/">Verizon Data Breach Investigations Report</a> (DBIR), an authoritative source on the state of cyber security.</p>
+<p dir="ltr">In a phishing scheme, a bad actor poses to be a credible person in an attempt to steal your login credentials. Once your login credentials are obtained, that person can access various systems, including the Application Portal, which is a one-stop shop with access to Workday, G Suite/email, and Canvas. Phishing is also an entry point for malware, including viruses and ransomware.</p>
+<p dir="ltr">For some training on phishing, check out the KnowBe4 ModStore videos, available via <a href="http://login.muhlenberg.edu">the Application Portal</a>.</p>
+<p dir="ltr"><strong>Remember the <a href="https://security.berkeley.edu/faq/phishing/what-can-i-do-avoid-phishing-attacks" target="_blank" rel="noopener">tell-tale signs of a phishing email</a>:</strong></p>
+<ul>
+<li>
+<p dir="ltr">Does the email contain a vague salutation, spelling or grammatical errors, an urgent request, and/or an offer that seems impossibly good? <b><a href="https://support.google.com/mail/answer/8253?hl=en">Report the phish via GMail&#8217;s built-in feature, </a>then click the delete button.</b></p>
+</li>
+<li>
+<p dir="ltr"><a href="https://www.online-tech-tips.com/computer-tips/worry-verification-emails-google/" target="_blank" rel="noopener">Check the sender’s e-mail address</a> to make sure it’s legitimate. Does it appears that the Support Desk is asking you to click on a link but it comes from “support@yahoo.com?” What if it’s “support@muhlenberg.edu” but it says it’s “via” another address? If it lists anything anywhere that says something other than “muhlenberg.edu<a href="http://muhlenberg.edu/?" target="_blank" rel="noopener">?</a>” <b>Report it, then delete it</b>.</p>
+</li>
+<li>
+<p dir="ltr">OIT will never ask you for your password through email. Any request for one should be treated as suspicious and reported as phishing. Your password is the key to your identity, your data, and your classmates’ and colleagues’ data. Read <a href="https://www.muhlenberg.edu/media/contentassets/pdf/about/oit/Requiringauserpassword.pdf">Password Requirements for OIT Support</a> to learn more.</p>
+</li>
+<li>
+<p dir="ltr">Avoid opening links and attachments from unknown senders. Get into the habit of typing known URLs into your browser. Don’t open attachments unless you’re expecting a file from someone. Give them a call if you’re suspicious.</p>
+</li>
+<li>
+<p dir="ltr">Take extra care with mobile devices, as some of these signs are not as easily seen</p>
+</li>
+</ul>
+<p><strong>What happens if I click on the link?</strong></p>
+<p>First, no one that clicks on the links will be publicly identified. The purpose of this campaign is educational. Information about individual responses will not be shared with supervisors, Human Resources, or the community. The goal of this simulation is to help you learn how to spot a phish! To that end, we will assign a basic, 25 minute training to anyone that clicks on the link. This training will provide some fundamentals of cyber security and what to look for in a phishing attack.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-746" class="post post-746 type-post status-publish format-standard hentry category-client-support-services category-status">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=746" rel="bookmark"><time class="entry-date published" datetime="2018-04-13T10:45:30-04:00">April 13, 2018</time><time class="updated" datetime="2018-04-13T17:56:13-04:00">April 13, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=746" rel="bookmark">Outage affecting campus systems</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172350" rel="category">Client Support Services</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=8028" rel="category">Status</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=746#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p><strong>Revisit this post for updates on this outage. </strong></p>
+<p><strong>Latest update</strong> (4/13 at 5:51pm): OIT has restored the systems and services affected by today&#8217;s outage. If you are still experiencing an issue,  <strong><a href="https://support.muhlenberg.edu/catalog_items/718640-report-an-outage/service_requests/new" target="_blank" rel="noopener">report an outage through our support request system</a></strong> (login required).</p>
+<p><strong>IMPORTANT NOTICE</strong> (4/13 at 3:26pm)<strong>: </strong>OIT has identified and resolved the source of the problem. Systems are currently being restored. This recovery may take several hours. We appreciate your patience and understanding.</p>
+<p><a href="https://docs.google.com/spreadsheets/d/1aVR-XDtrPnB6lpSk2ImpqcPOc2hgcFO7FhSKPDwJ3Us/edit?usp=sharing">Current list of systems/services affected by outage</a>.<br />
+Note: This is a working list. You may <strong><a href="https://support.muhlenberg.edu/catalog_items/718640-report-an-outage/service_requests/new" target="_blank" rel="noopener">Report an Outage through our support request system</a></strong> (login required).</p>
+<p>This morning at approximately 8:00am the College network began experiencing technical issues related to locally hosted systems.</p>
+<p>You may be experiencing slowness or connection errors when accessing a number of systems on campus (e.g., CapStone, Millenium, TMA). In addition to connection issues, certain services may not be functioning (e.g, Support Desk/Help Desk queue, voicemail, Berg Bulletin). The examples listed are only a small sampling of our exhaustive list.</p>
+<p>You may <strong><a href="https://support.muhlenberg.edu/catalog_items/718640-report-an-outage/service_requests/new" target="_blank" rel="noopener">Report an Outage through our support request system</a></strong> (login required).</p>
+<p>OIT is currently working to restore service as quickly as possible. In order to move towards resolution, OIT will be shutting down the systems and bringing them back up. At this point, we do not know how long a particular system or service will be down.</p>
+<p>If you need to contact the <a href="mailto:supportdesk@muhlenberg.edu">Support Desk</a> or <a href="mailto:helpdesk@muhlenberg.edu">Help Desk</a>, please use email.</p>
+<p>Thank you for your patience.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-737" class="post post-737 type-post status-publish format-standard hentry category-security tag-2-factor-authentication tag-2fa tag-cyber-security tag-knowbe4 tag-mfa tag-security tag-two-step-authentication">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=737" rel="bookmark"><time class="entry-date published" datetime="2018-04-05T11:29:45-04:00">April 5, 2018</time><time class="updated" datetime="2018-06-11T09:49:34-04:00">June 11, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=737" rel="bookmark">IT Protects! &#8211; Cyber Security Awareness Series</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=8070" rel="category">Security</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=2-factor-authentication" rel="tag">2 factor authentication</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=2fa" rel="tag">2fa</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=cyber-security" rel="tag">cyber security</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=knowbe4" rel="tag">knowbe4</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=mfa" rel="tag">mfa</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=security" rel="tag">Security</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=two-step-authentication" rel="tag">two-step authentication</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=737#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>With this post, OIT kicks off a new series, under the IT Protects! banner, on Cyber Security Awareness. Our goal is to post once a month or so on some new or upcoming initiative related to security awareness.</p>
+<p>Coming up, we&#8217;ll be covering topics such as:</p>
+<ul>
+<li>Phishing Simulations</li>
+<li>Two-Step Authentication</li>
+<li>What Counts as a Data Breach &amp; Computer Disk Encryption</li>
+<li>Cyber Security Awareness Month (October)</li>
+</ul>
+<p>In this first &#8220;issue,&#8221; we&#8217;re talking about training and general awareness. The number one vector for attacks is through social engineering, and the biggest weakness in most cyber security programs is end user training and awareness. While everyone at Muhlenberg is already well versed in many of the finer points of security, we can never be too prepared. It only takes one breach &#8211; some kind of unauthorized access &#8211; to create a major problem for the College. And training and awareness ranges across many different topics, from what constitutes a strong password to how to spot suspicious emails to how to avoid new threats such as voice phishing (vishing).</p>
+<p>OIT has added the <a href="http://www.knowbe4.com">KnowBe4</a> training platform to our suite of solutions. They claim to be the leading training solution out on the market, and their large catalog of training videos supports this statement. Some examples of training videos:</p>
+<ul>
+<li>Free WiFi: Thank Again!</li>
+<li>Security Awareness Fundamentals</li>
+<li>Intro to Phishing</li>
+<li>Common Threats Series</li>
+<li>Social Engineering</li>
+<li>Kevin Mitnick Security Awareness Training</li>
+<li>Creating Strong Passwords</li>
+</ul>
+<p>KnowBe4 will be added to the Application Portal shortly. We are currently still testing its features in OIT.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-731" class="post post-731 type-post status-publish format-standard hentry category-announcements category-client-support-services category-communication-collaboration category-google-apps tag-drive tag-g-suite tag-google-apps">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark"><time class="entry-date published" datetime="2018-02-20T12:53:10-04:00">February 20, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=61">Phedra Henninger</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=731" rel="bookmark">Google Drive Feature Release: Team Drive and Drive File Stream</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=22152" rel="category">Announcements</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172350" rel="category">Client Support Services</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=170064" rel="category">Communication &amp; Collaboration</a>, <a href="http://it.blogs.muhlenberg.edu/?cat=172338" rel="category">Google Apps</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=drive" rel="tag">Drive</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=g-suite" rel="tag">g suite</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=google-apps" rel="tag">Google Apps</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=731#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p><span style="font-weight: 400">You’ve got GBs upon GBs of files stored and shared in My Drive. So what’s next?</span></p>
+<p><span style="font-weight: 400">Are you looking for a way to share files with a group without taking on ownership in YOUR Drive? </span></p>
+<p><span style="font-weight: 400">Have you ever wished you could view and organize your files in your computer’s file system? </span></p>
+<p><b>New Google Drive features are coming to the rescue! Release date &#8211; February 27.</b></p>
+<p><span style="font-weight: 400">OIT and a group of early adopters have been testing Team Drive and Drive File Stream in preparation for release to the campus. </span></p>
+<p><b>What is Team Drive? </b><span style="font-weight: 400">Google Team Drives are shared spaces where teams can easily store, search, and access their files anywhere, from any device.</span></p>
+<p><span style="font-weight: 400">Unlike files in My Drive, files in Team Drive belong to the team instead of an individual. Even if members leave, the files stay exactly where they are so your team can continue to share information and get work done.</span></p>
+<p><b>What is Drive File Stream?</b><b><br />
+</b><span style="font-weight: 400">If you want to work on files from your desktop, install Drive File Stream. All your Drive files appear and can be streamed on demand, so they don’t take up all your storage space on your computer.</span></p>
+<p><span style="font-weight: 400">Want to learn more about <a href="https://www.muhlenberg.edu/gsuite/coreapps/teamdrive/">Team Drive</a> and <a href="https://www.muhlenberg.edu/gsuite/coreapps/drivefilestream/">Drive File Stream</a>? Visit <a href="https://www.muhlenberg.edu/gsuite/">muhlenberg.edu/gsuite</a> for more details.  </span></p>
+<p><span style="font-weight: 400">Join the <a href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=M2JkZmUwdTI4c2N2ZWxkcmJ0cXBjMnE4Z2cgc3VwcG9ydGRlc2tAbXVobGVuYmVyZy5lZHU&amp;tmsrc=supportdesk%40muhlenberg.edu">live Google Team Drive/File Stream Zoomcast on Thursday, March 15 from 2-3pm</a></span></p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-720" class="post post-720 type-post status-publish format-standard hentry category-security tag-cybersecurity tag-meltdown tag-os-patching tag-security tag-spectre">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=720" rel="bookmark"><time class="entry-date published" datetime="2018-01-10T15:59:45-04:00">January 10, 2018</time><time class="updated" datetime="2018-01-11T16:15:08-04:00">January 11, 2018</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=720" rel="bookmark">Spectre, Meltdown and OS Patching</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=8070" rel="category">Security</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=cybersecurity" rel="tag">cybersecurity</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=meltdown" rel="tag">meltdown</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=os-patching" rel="tag">os patching</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=security" rel="tag">Security</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=spectre" rel="tag">spectre</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=720#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Information and cyber security is one of the highest priority items for OIT. As a combination of existing plans and the <a href="http://money.cnn.com/2018/01/03/technology/computer-chip-flaw-security/index.html">l</a><a href="http://money.cnn.com/2018/01/03/technology/computer-chip-flaw-security/index.html">atest news on the Spectre and Meltdown computer vulnerabilities</a>, OIT is making some changes in how it handles security patches to software. As per the linked article, these new exploits affect essentially all processors in all computers and devices, with very few exceptions. This ranges from desktops and laptops to smartphones, and from Windows to Macintosh to Linux. This affects both applications such as Flash and Adobe Reader as well as the core operating system.</p>
+<p>On the Windows platform, we have been for several months planning on changing our patching policy. Through an upgrade to the already-installed Novell/MicroFocus Zenworks utility, we can do automated patch management. This means we can proactively push software updates for both the operating system and third-party applications to desktops and laptops. More importantly, we can check for compliance and identify trouble-spots that need to be addressed. This is compared to our method today, which relies on Microsoft&#8217;s automated system, which cannot be monitored in our environment. Note that we already roll out Windows Updates as Microsoft releases them. This is merely creating a pro-active configuration with compliance-checking.</p>
+<p>This change in process was already scheduled for Winter Break, and some of you have received notice that we&#8217;ll be updating the Zenworks utility on your computer in the coming days and weeks. In the wake of Meltdown in particular, we&#8217;ll be accelerating the pace of this deployment to the rest of campus.</p>
+<p>On the Apple Macintosh side, we have traditionally not done regular updates for a variety of reasons. Because both Meltdown and Spectre affect <em>all</em> computers, regardless of platform, it is critical that we make a change in this policy. Utilizing our existing management software, we will be turning on critical system updates to run <em>as soon as they are deployed by Apple</em>. In the past, our policy has been on between Friday 8PM to Saturday 5AM, but many machines are turned off by this time and do not receive the updates.</p>
+<p>In addition, at a later date we will be addressing the need for major OS X updates on the Macintosh platform. Today we have computers with 4 different versions of the operating system in place. It is critical that we upgrade all machines to the latest version (currently 10.13, High Sierra) but this will be a much larger undertaking. Our goal for now is to get all machines at least up to date for the installed OS version.</p>
+<p>This is unlikely to be the end of the Spectre and Meltdown story. Please stay tuned for more information. We will be updating this post and posting new material as it becomes available.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-708" class="post post-708 type-post status-publish format-standard hentry category-erp">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=708" rel="bookmark"><time class="entry-date published" datetime="2017-11-07T10:35:25-04:00">November 7, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=708" rel="bookmark">Workday@Muhlenberg &#8211; What&#8217;s In It For Me?</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172356" rel="category">ERP</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=708#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<div>With Workday@Muhlenberg moving along at a rapid clip, it&#8217;s time to look at some of the specific changes that we&#8217;ll see. The real question is &#8211; <em>What&#8217;s In It For Me</em>?</div>
+<div></div>
+<div>In this blog post we&#8217;ll highlight changes that the Human Resource Module (Human Capital Management, or HCM) presents. In truth, the bulk of changes for the community will take place with the HCM implementation on January 1. We&#8217;ve highlighted several items below.</div>
+<div></div>
+<div>First, the terminology can be a bit confusing. Muhlenberg uses Manager to mean exempt, salaried individuals. Staff Associates are non-exempt, hourly employees. Workday, in contrast uses Manager only for those that supervise other staff. All other employees are called &#8220;Colleagues.&#8221; One&#8217;s &#8220;Supervisory Organization&#8221; is your organization chart, basically &#8211; the structure of whom you manage, who manages you, etc. Please bear this terminology in mind as we highlight some of the new features available to Muhlenberg.</div>
+<div></div>
+<div>Faculty and Staff (&#8220;Colleagues&#8221; in Workday):</div>
+<ul>
+<li>Ability to view benefit elections</li>
+<li>Ability to request time off</li>
+<li>View available vacation balances</li>
+<li>Apply for internal openings</li>
+<li>Refer others for open positions</li>
+<li>Report life events (births, marriage, divorce) and make benefits changes accordingly (including adding new dependents to insurance coverage)</li>
+<li>Submit W4 forms</li>
+</ul>
+<p>In addition, for Managers/Supervisors:</p>
+<ul>
+<li>Receive and approve vacation requests electronically</li>
+<li>Easily view vacation/time off scheduled by those in their supervisory organization</li>
+<li>Use the recruiting module to facilitate searches and track the progression of candidates through the process</li>
+</ul>
+<p>Coming soon:</p>
+<ul>
+<li>Non-exempt staff will no longer have to use paper timesheets and instead be able to report time electronically</li>
+<li>Ability to review time submitted and approve time electronically</li>
+</ul>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-706" class="post post-706 type-post status-publish format-standard hentry category-announcements tag-iptv tag-philo tag-television tag-tv tag-wifi">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark"><time class="entry-date published" datetime="2017-10-23T11:12:08-04:00">October 23, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=706" rel="bookmark">A new way to TV- Philo Internet Television</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=22152" rel="category">Announcements</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=iptv" rel="tag">iptv</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=philo" rel="tag">philo</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=television" rel="tag">television</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=tv" rel="tag">tv</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=wifi" rel="tag">WiFi</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=706#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>Earlier this month, we launched Philo Internet Television (IPTV) on campus. At its functional root, this service lets students, faculty and staff access our current television programming via mobile devices (tablets, phones) on computers, and via the Roku family of streaming devices. It also offers a 20 hours Digital Video Recorder (DVR) so that users can save their favorite programming.</p>
+<p>The more fundamental benefits are plentiful. First, all of the video is stored locally on campus. It&#8217;s encoded at the Service Electric headquarters then pushed to us via a dedicated, extremely high speed connection. This means that it doesn&#8217;t use our campus bandwidth either getting her, or when streaming. It all happens on campus, which is also a very fast connection. This compares to Netflix or Hulu, both of which stream across the open internet. Second, the DVR means that faculty can queue up video footage easily for class use. Finally, this is a great example of how we&#8217;re not just about infrastructure. The WiFi network is great, but this is an example of the cool things we can do with it.</p>
+<p>Virtually all channels available previously across the traditional coaxial cable connection in each residence is on Philo, in high definition where possible. The service is available to residential students and all faculty and staff. It works only on campus.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-697" class="post post-697 type-post status-publish format-standard hentry category-erp tag-erp tag-workday">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=697" rel="bookmark"><time class="entry-date published" datetime="2017-09-29T14:07:50-04:00">September 29, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=697" rel="bookmark">Workday @ Muhlenberg &#8211; September Update</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172356" rel="category">ERP</a></li>
+							<li class="meta-tag"><a href="http://it.blogs.muhlenberg.edu/?tag=erp" rel="tag">ERP</a>, <a href="http://it.blogs.muhlenberg.edu/?tag=workday" rel="tag">Workday</a></li>
+						<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=697#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>This month&#8217;s update highlights the Workday modules we will be implementing.</p>
+<p>Human Capital Management, or HCM, is the Human Resources component to Workday. It will be the first such system at Muhlenberg, and as such represents a major operational benefit to the College. Having all of the data in a the same place means a single master record. Also, because HCM runs the gamut from recruiting to time tracking to benefits, it&#8217;s a full lifecycle system, from &#8220;hire to retire.&#8221;</p>
+<p>In addition, we are replacing Blackbaud Financial Edge with a new, comprehensive financial product: Workday Finance. Integrated fully with the HCM module, data will flow naturally from time entered in electronic time sheets to financial statements over to our legacy payroll system.</p>
+<p>Starting March 2018, we will begin implementing Workday Payroll, with a tentative launch date of January 1, 2019. This will complete the implementation of the &#8220;Core ERP&#8221; components of Workday. Again, with Worday’s centralized system, the feed from HCM to Payroll to Finance is seamless and automated. There will not be a need for integrations or moving back and forth of data.</p>
+<p>Training will be provided to Muhlenberg on Workday to help everyone gain familiarity with the system and how to use it. Stay tuned as these dates/times will be released in the coming monthly updates. As always, please feel free to share any feedback or questions.</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-683" class="post post-683 type-post status-publish format-standard hentry category-erp">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=683" rel="bookmark"><time class="entry-date published" datetime="2017-08-30T09:22:11-04:00">August 30, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=683" rel="bookmark">Benefits of Workday</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=172356" rel="category">ERP</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=683#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>With something the size of Workday@Muhlenberg, it&#8217;s reasonable to ask why we are making this change. Some of it is certainly based on the need to replace the aging Capstone program. But Workday provides a number of other important benefits, as well. For instance, it is built in the cloud, from the ground up, and mobile-first. This means no hardware for us to manage on our end, better resiliency and disaster recovery capabilities, and newer design and architecture. It&#8217;s also a &#8220;single line of code&#8221; &#8211; all Workday customers run the same version of the software. We are always up to date, with all the latest features, and always with a clear path to the next upgrade. Nothing we&#8217;ll do will ever block us from upgrading, as might happen with significant customization. Most importantly, Workday provides us with a unified solution for HR, Finance and Payroll (and eventually Student) with a single source of data, pulled from a definitive system of record.</p>
+<p>Workday is also part of our digital transformation journey. For example, our transition away from paper to digital document repositories is a major part of what Workday offers. We&#8217;ll also see improvements in how we submit expense reports, do time-tracking and entry, and approve various requests.</p>
+<p>If you have any questions or concerns about this significant project, feel free to reach out either via <a href="mailto:allanchen@muhlenberg.edu">email</a> or phone. I and the rest of the Workday@Muhlenberg team are here to help, and to make this successful. And keep an eye out of the next update!</p>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				
+<article id="post-677" class="post post-677 type-post status-publish format-standard hentry category-uncategorized">
+	<!-- Grab the featured image -->
+	
+	<header class="entry-header">
+				<div class="entry-date">
+			<span class="posted-on"><a href="http://it.blogs.muhlenberg.edu/?p=677" rel="bookmark"><time class="entry-date published" datetime="2017-08-16T11:33:31-04:00">August 16, 2017</time></a></span><span class="byline"> by </span> <span class="author vcard"><a class="url fn n" href="http://it.blogs.muhlenberg.edu/?author=1499">Allan Chen</a></span>		</div><!-- .entry-meta -->
+		
+		<h1 class="entry-title"><a href="http://it.blogs.muhlenberg.edu/?p=677" rel="bookmark">Application Portal Update &#8211; Zoom Video Conferencing</a></h1>	</header><!-- .entry-header -->
+
+	
+<div class="entry-meta">
+	
+	<ul class="meta-list">
+					<li class="meta-cat"><a href="http://it.blogs.muhlenberg.edu/?cat=1" rel="category">cybersecurity</a></li>
+								<li class="meta-comment">
+			<span class="comments-link"><a href="http://it.blogs.muhlenberg.edu/?p=677#respond">Leave a comment</a></span>
+		</li>
+					</ul>
+</div>
+	<div class="entry-content">
+		<p>We are adding <a href="http://www.zoom.us">Zoom</a> video conferencing to the <a href="http://login.muhlenberg.edu">Application Portal</a>, effective August 21. Zoom is a great web-based collaboration tool that offers a user-friendly audio and video conferencing solution for all members of the Muhlenberg community. You can hold full video conference sessions, or just use the audio part for a phone conference.</p>
+<div>
+<p>With Zoom each user is issued a dedicated virtual meeting room that can be used to conduct meetings, hold classes, and <span id="m_-3559586123182918824gmail-:15g.2" class="m_-3559586123182918824J-JK9eJ-PJVNOc">advising </span>sessions with real-time audio/video and screen sharing for up to 100 participants.</p>
+<div>Having Zoom on the Application Portal will make it easier to access current accounts and create new accounts.</div>
+</div>
+<div>
+<div></div>
+<div><b>If you currently have a Zoom account, </b>it will continue to work unless you were contacted directly about updating your email address.</div>
+<div></div>
+<div><b>New to Zoom and want an account?</b> Just click on the Zoom icon in the application portal and it will automatically create a basic account for you. Basic accounts support up to 100 participants for up to a 40 minute meeting.</div>
+</div>
+			</div><!-- .entry-content -->
+
+</article><!-- #post-## -->
+
+			
+				<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text">Posts navigation</h1>
+		<div class="nav-links">
+
+							<div class="nav-previous"><a href="http://it.blogs.muhlenberg.edu/?paged=5" class="button"><span class="meta-nav"><i class="fa fa-arrow-circle-o-left"></i> Older posts</span></a></div>
+			
+							<div class="nav-next"><a href="http://it.blogs.muhlenberg.edu/?paged=3" class="button"><span class="meta-nav">Newer posts <i class="fa fa-arrow-circle-o-right"></i></span></a></div>
+			
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+			<a class="powered-by" href="http://wordpress.org/">Proudly powered by WordPress</a>
+			<span class="sep"> | </span>
+			Theme: editor by <a href="https://array.is/">Array</a>		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/jquery.fitvids.js?ver=20140820'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-content/themes/editor/js/editor.js?ver=20120206'></script>
+<script type='text/javascript' src='http://it.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://it.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fit.blogs.muhlenberg.edu%2F%3Fpaged%3D4%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://it.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

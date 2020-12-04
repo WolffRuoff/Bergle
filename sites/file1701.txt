@@ -1,0 +1,694 @@
+http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/
+42
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>Sexual Health | Peer Health Advocates at Muhlenberg</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/style.css" />
+<link rel="pingback" href="http://muhlenbergpham.blogs.muhlenberg.edu/xmlrpc.php" />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Peer Health Advocates at Muhlenberg &raquo; Feed" href="http://muhlenbergpham.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Peer Health Advocates at Muhlenberg &raquo; Comments Feed" href="http://muhlenbergpham.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Peer Health Advocates at Muhlenberg &raquo; Sexual Health Category Feed" href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/muhlenbergpham.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/muhlenbergpham.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://muhlenbergpham.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://muhlenbergpham.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//muhlenbergpham.blogs.muhlenberg.edu/?wordfence_lh=1&hid=9FAFD3371DB5BF896733172EEBB62B8E');
+</script>
+<!-- This site is using 2010 Weaver V1.4 subtheme: Wheat -->
+
+<style type="text/css">
+#main { padding: 15px 0 0 0; }
+#container, #primary, #secondary, #ttw-top-widget, #ttw-bot-widget {-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;}
+#access {-moz-border-radius-bottomleft: 7px; -moz-border-radius-bottomright: 7px;
+  -webkit-border-bottom-left-radius: 7px; -webkit-border-bottom-right-radius: 7px;border-bottom-left-radius: 7px; border-bottom-right-radius: 7px;}#access2 {-moz-border-radius-topleft: 7px; -moz-border-radius-topright: 7px;
+  -webkit-border-top-left-radius: 7px; -webkit-border-top-right-radius: 7px;border-top-left-radius: 7px; border-top-right-radius: 7px;}#wrapper {-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; margin-top: 15px; margin-bottom: 15px;}
+#wrapper {border: 1px solid #222222; padding-right: 20px; margin-top: 15px; margin-bottom: 15px;}
+#header {margin-top: 0px;}#primary, #secondary, #ttw-top-widget, #ttw-bot-widget {border: 1px solid #222222;}
+body, input, textarea { color: #333333; }
+#content, #content input, #content textarea { color: #292929; }
+#content {font-size: 120%; line-height: 125%; }
+#comments {font-size: 90%; line-height: 90%; }
+#comments .pingback p { color: #706752; }
+#respond label, #respond dt, #respond dd { color: #706752; }
+.entry-meta, .entry-content label, .entry-utility { color: #706752; }
+#content .wp-caption, #content .gallery .gallery-caption { color: #706752; }
+.navigation { color: #706752; }
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 { color: #0A0A0A; }
+h1, h2, h3, h4, h5, h6 { color: #0A0A0A; }
+.page-title { color: #0A0A0A; }
+#content .entry-title { color: #0A0A0A; }
+.page-link { color: #0A0A0A; }
+#entry-author-info h2 { color: #0A0A0A; }
+h3#comments-title, h3#reply-title { color: #0A0A0A; }
+.comment-author cite { color: #0A0A0A; }
+.entry-content fieldset legend { color: #0A0A0A; }
+#colophon { border-top: 4px solid #AB9B7D ;  }
+hr { background-color: #AB9B7D; }
+.entry-title {border-bottom: 1px solid #0A0A0A; }
+.widget-title {border-bottom: 1px solid #222222; }
+#wrapper { background-color: #FEF3DD; }
+#main { background-color: transparent; }
+#container { background-color: transparent; }
+#content { background-color: transparent; }
+#footer { background-color: #F5DEB3; }
+#primary { background-color: #F5DEB3; padding-left: 10px; padding-top: 10px; margin-bottom: 5px;}
+#secondary { background-color: #F5DEB3; padding-left: 10px; padding-top: 10px; margin-bottom: 5px;}
+#ttw-top-widget, #ttw-bot-widget { background-color: #F5DEB3; padding-left: 10px; padding-top: 10px; margin-bottom: 5px;}
+body {background-image: url(http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/gr.png); background-attachment: scroll; background-repeat: repeat-x;}
+a:link { color: #474134; }
+a:visited { color: #706752; }
+a:active, a:hover { color: #C91640; }
+#primary a:link, #secondary a:link, #footer-widget-area a:link { color: #474134; }
+#primary a:visited, #secondary a:visited, #footer-widget-area a:visited { color: #706752; }
+#primary a:hover, #secondary a:hover, #footer-widget-area a:hover { color: #C91640; }
+.entry-title a:link { color: #0A0A0A; }
+.widget_rss a.rsswidget:link { color: #0A0A0A; }
+.entry-title a:visited { color: #0A0A0A; }
+.widget_rss a.rsswidget:visited { color: #0A0A0A; }
+.entry-title a:active, .entry-title a:hover { color: #C91640; }
+.widget_rss a.rsswidget:active, .widget_rss a.rsswidget:hover { color: #C91640; }
+.page-title a:link { color: #474134; }
+.entry-meta a:link { color: #474134; }
+.entry-utility a:link { color: #474134; }
+.navigation a:link { color: #474134; }
+.comment-meta a:link { color: #474134; }
+.reply a:link, a.comment-edit-link:link { color: #474134; }
+.page-title a:visited { color: #706752; }
+.entry-meta a:visited { color: #706752; }
+.entry-utility a:visited { color: #706752; }
+.navigation a:visited { color: #706752; }
+.comment-meta a:visited { color: #706752; }
+.reply a:visited, a.comment-edit-link:visited { color: #706752; }
+.page-title a:active, .page-title a:hover { color: #C91640; }
+.entry-meta a:hover, .entry-meta a:active { color: #C91640; }
+.entry-utility a:hover, .entry-utility a:active { color: #C91640; }
+.navigation a:active, .navigation a:hover { color: #C91640; }
+.comment-meta a:active, .comment-meta a:hover { color: #C91640; }
+.reply a:active, a.comment-edit-link:active, .reply a:hover, a.comment-edit-link:hover { color: #C91640; }
+#access, #access2 { background-color: #AB9B7D; }
+#access, #access li ul ul > a {font-weight:bold;}#access2, #access2 li ul ul > a {font-weight:bold;}#access ul ul a, #access li:hover > a, #access ul ul :hover > a  { background-color: #BAA987; }
+#access2 ul ul a, #access2 li:hover > a, #access2 ul ul :hover > a  { background-color: #BAA987; }
+#access a { color: #FFFAEF; }
+#access2 a { color: #FFFAEF; }
+#access li:hover > a, #access ul ul :hover > a { color: #F0EBE0; }
+#access2 li:hover > a, #access2 ul ul :hover > a { color: #F0EBE0; }
+#access ul li.current_page_item > a, #access ul li.current-menu-ancestor > a,
+#access ul li.current-menu-item > a, #access ul li.current-menu-parent > a { color: #474134; }
+#access2 ul li.current_page_item > a, #access2 ul li.current-menu-ancestor > a,
+#access2 ul li.current-menu-item > a, #access ul li.current-menu-parent > a { color: #474134; }
+#site-title a { color: #FEF9EE; }
+#site-description { color: #FFFAEF; }
+#site-title {position: absolute; margin-top: 44px; margin-left: 40px; }
+#site-description { text-align:left; clear: both; float: left; position:absolute;  margin-top: 90px;  margin-left: 40px;}
+body, input, textarea, .page-title span, .pingback a.url { font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}
+h3#comments-title, h3#reply-title, #access .menu, #access div.menu ul, #access2 .menu, #access2 div.menu ul,
+#cancel-comment-reply-link, .form-allowed-tags, #site-info, #site-title, #wp-calendar,
+.comment-meta, .comment-body tr th, .comment-body thead th, .entry-content label, .entry-content tr th,
+.entry-content thead th, .entry-meta, .entry-title, .entry-utility, #respond label, .navigation,
+.page-title, .pingback p, .reply, .widget_search label, .widget-title, input[type=submit] { font-family: "Helvetica Neue", serif;}
+#site-description {font-size:130%; font-style:bold;}#access, #access2 { background-image: url(http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/weaver/fade.png);}
+#access ul ul a, #access li:hover > a, #access ul ul :hover > a  { background-image: url(http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/weaver/fadeup.png);}
+#access2 ul ul a, #access2 li:hover > a, #access2 ul ul :hover > a  { background-image: url(http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/weaver/fadeup.png);}
+body { background-color: #C7B491; }
+body {background-image: url(http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/gr.png); background-attachment: scroll; background-repeat: repeat-x;}
+#wrapper {box-shadow: 0 0 3px 3px rgba(0,0,0,0.25); -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25); -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,0.25);}
+</style> <!-- end of style section -->
+
+
+<!-- End of TT Weaver options -->
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #dd0f0f; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive category category-uncategorized category-1 admin-bar no-customize-support custom-background no-js">
+<div id="wrapper" class="hfeed">
+
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+				<div id="ttw-site-logo"></div>
+				<div id="ttw-site-logo-link" onclick="location.href='http://muhlenbergpham.blogs.muhlenberg.edu/';" style="cursor:pointer;"></div>
+												<div id="site-title">
+					<span>
+						<a href="http://muhlenbergpham.blogs.muhlenberg.edu/" title="Peer Health Advocates at Muhlenberg" rel="home">Peer Health Advocates at Muhlenberg</a>
+					</span>
+				</div>
+				<div id="site-description"></div>
+				
+													<div id="access2" role="navigation">
+										<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+															</div><!-- #access2 -->
+														<img src="http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/themes/2010-weaver/images/headers/path.jpg" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+						<div id="access" role="navigation">
+			  				<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+								<div class="menu"><ul>
+<li ><a href="http://muhlenbergpham.blogs.muhlenberg.edu/">Home</a></li><li class="page_item page-item-2"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/sample-page/">About Us</a></li>
+<li class="page_item page-item-16"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/meet-the-members/">Meet the Members</a></li>
+<li class="page_item page-item-18"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/pham-programs/">PHAM Programs</a></li>
+</ul></div>
+			</div><!-- #access -->
+								</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+		<div id="container">
+			<div id="content" role="main">
+
+				<h1 class="page-title">Category Archives: <span>Sexual Health</span></h1>
+				
+
+
+
+
+			<div id="post-101" class="post-101 post type-post status-publish format-standard hentry category-uncategorized">
+			<h2 class="entry-title"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/february2016-newsletter/" title="Permalink to February2016 Newsletter" rel="bookmark">February2016 Newsletter</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/february2016-newsletter/" title="4:05 pm" rel="bookmark"><span class="entry-date">February 28, 2016</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://muhlenbergpham.blogs.muhlenberg.edu/author/muhlenbergpham/" title="View all posts by Peer Health Advocates at Muhlenberg">Peer Health Advocates at Muhlenberg</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-summary">
+				<p>final february newsletter</p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Sexual Health</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on February2016 Newsletter</span></span></span>
+							</div><!-- .entry-utility -->
+		</div><!-- #post-## -->
+
+		
+	
+
+
+			<div id="post-98" class="post-98 post type-post status-publish format-standard hentry category-uncategorized">
+			<h2 class="entry-title"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/november-2015-news-letter/" title="Permalink to November 2015 News Letter" rel="bookmark">November 2015 News Letter</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/november-2015-news-letter/" title="4:04 pm" rel="bookmark"><span class="entry-date">February 28, 2016</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://muhlenbergpham.blogs.muhlenberg.edu/author/muhlenbergpham/" title="View all posts by Peer Health Advocates at Muhlenberg">Peer Health Advocates at Muhlenberg</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-summary">
+				<p>PHAM Newsletter Outline(1)</p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Sexual Health</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on November 2015 News Letter</span></span></span>
+							</div><!-- .entry-utility -->
+		</div><!-- #post-## -->
+
+		
+	
+
+
+			<div id="post-51" class="post-51 post type-post status-publish format-standard hentry category-health category-uncategorized">
+			<h2 class="entry-title"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/2015/01/29/happy-valentines-day/" title="Permalink to Happy Valentine&#8217;s Day!" rel="bookmark">Happy Valentine&#8217;s Day!</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/2015/01/29/happy-valentines-day/" title="12:49 am" rel="bookmark"><span class="entry-date">January 29, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://muhlenbergpham.blogs.muhlenberg.edu/author/muhlenbergpham/" title="View all posts by Peer Health Advocates at Muhlenberg">Peer Health Advocates at Muhlenberg</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-summary">
+				<p>Valentine’s Day, also known as Saint Valentine’s Day, is observed on February 14th.  Saint Valentine is the patron saint of love, young people, and happy marriages. The tradition of giving a Valentine’s day card comes from Saint Valentine giving the &hellip; <a href="http://muhlenbergpham.blogs.muhlenberg.edu/2015/01/29/happy-valentines-day/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/health/" rel="category tag">General Health</a>, <a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Sexual Health</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Happy Valentine&#8217;s Day!</span></span></span>
+							</div><!-- .entry-utility -->
+		</div><!-- #post-## -->
+
+		
+	
+
+
+			<div id="post-7" class="post-7 post type-post status-publish format-standard hentry category-uncategorized">
+			<h2 class="entry-title"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/2014/10/16/welcome/" title="Permalink to Welcome" rel="bookmark">Welcome</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/2014/10/16/welcome/" title="1:21 pm" rel="bookmark"><span class="entry-date">October 16, 2014</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://muhlenbergpham.blogs.muhlenberg.edu/author/muhlenbergpham/" title="View all posts by Peer Health Advocates at Muhlenberg">Peer Health Advocates at Muhlenberg</a></span>			</div><!-- .entry-meta -->
+
+				<div class="entry-summary">
+				<p>Welcome to PHAM&#8217;s new blog where we post monthly about nutrition, mental health, sexual health, fitness, and wellness.</p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Sexual Health</a>					</span>
+					<span class="meta-sep">|</span>
+												<span class="comments-link"><span>Comments Off<span class="screen-reader-text"> on Welcome</span></span></span>
+							</div><!-- .entry-utility -->
+		</div><!-- #post-## -->
+
+		
+	
+
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="calendar-2" class="widget-container widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>December 2020</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Sunday">S</th>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/">&laquo; Feb</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td id="today">3</td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></li><li id="text-3" class="widget-container widget_text"><h3 class="widget-title">Weekly Events</h3>			<div class="textwidget"><p>May 4-8, 2015</p>
+<p>FINALS WEEK!!</p>
+</div>
+		</li>		<li id="recent-posts-3" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/february2016-newsletter/">February2016 Newsletter</a>
+									</li>
+											<li>
+					<a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/november-2015-news-letter/">November 2015 News Letter</a>
+									</li>
+											<li>
+					<a href="http://muhlenbergpham.blogs.muhlenberg.edu/2016/02/28/october-2015-news-letter/">October 2015 News letter</a>
+									</li>
+											<li>
+					<a href="http://muhlenbergpham.blogs.muhlenberg.edu/2015/05/03/good-luck-on-finals/">GOOD LUCK ON FINALS!</a>
+									</li>
+											<li>
+					<a href="http://muhlenbergpham.blogs.muhlenberg.edu/2015/03/26/april-showers-bring-may-flowers/">April Showers Bring May Flowers!</a>
+									</li>
+					</ul>
+		</li><li id="categories-3" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-32728"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/alcohol-and-drugs/">Alcohol and Drugs</a>
+</li>
+	<li class="cat-item cat-item-42502"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/stress/">Coping with Stress</a>
+</li>
+	<li class="cat-item cat-item-42501"><a href="http://muhlenbergpham.blogs.muhlenberg.edu/category/health/">General Health</a>
+</li>
+	<li class="cat-item cat-item-1 current-cat"><a aria-current="page" href="http://muhlenbergpham.blogs.muhlenberg.edu/category/uncategorized/">Sexual Health</a>
+</li>
+		</ul>
+			</li><li id="search-3" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://muhlenbergpham.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">Contact Information</h3>			<div class="textwidget"><p>Emergency Services: 911<br />
+Allentown Police Department:<br />
+610-437-7751<br />
+Campus Safety Emergency:<br />
+484-664-3110<br />
+Campus safety Non-Emergency: 484-664-3112<br />
+Counseling Services:<br />
+484-664-3178<br />
+Crime Victims Council:<br />
+610-437-6611<br />
+Health Services:<br />
+484-664-3199<br />
+Sexual Assault Support Services: 610-737-6103</p>
+</div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+	<div id="footer">
+		<div id="colophon">
+
+<table id='ttw_ftable'><tr>
+ <td id='ttw_ftdl'><div id="site-info">
+ &copy; 2020 - <a href="http://muhlenbergpham.blogs.muhlenberg.edu/" title="Peer Health Advocates at Muhlenberg" rel="home">Peer Health Advocates at Muhlenberg</a>
+ </div></td>  
+ <td id='ttw_ftdr'><div id="site-generator">
+  <a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">Proudly powered by WordPress.</a>
+ 2010 Weaver by WPWeaver.info
+ </div></td> </tr></table>
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://muhlenbergpham.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://muhlenbergpham.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmuhlenbergpham.blogs.muhlenberg.edu%2Fcategory%2Funcategorized%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://muhlenbergpham.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

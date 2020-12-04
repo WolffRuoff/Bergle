@@ -1,0 +1,598 @@
+http://fys142f15.blogs.muhlenberg.edu/tag/depression/
+108
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+depression | Who Controls Your Digital World?	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Feed" href="http://fys142f15.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Comments Feed" href="http://fys142f15.blogs.muhlenberg.edu/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; depression Tag Feed" href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f15.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f15.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f15.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f15.blogs.muhlenberg.edu/?wordfence_lh=1&hid=A05C8FE20BC89D4BE0D56AEC6BD2B484');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://fys142f15.blogs.muhlenberg.edu/files/2015/08/fyswordcloud3.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="bp-legacy archive tag tag-depression tag-24819 admin-bar no-customize-support custom-background no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<div id="site-title">
+					<span>
+						<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">Who Controls Your Digital World?</a>
+					</span>
+				</div>
+				<div id="site-description">FYS 142 Course Site</div>
+
+									<img src="" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-2344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344"><a href="http://fys142f15.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345"><a href="http://fys142f15.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="http://fys142f15.blogs.muhlenberg.edu/course-requirements-and-grading/">Course Requirements and Grading</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2347"><a href="http://fys142f15.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2348"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/">Class Schedule and Topic Outline</a></li>
+<li id="menu-item-2349" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2349"><a href="http://fys142f15.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+				<h1 class="page-title">
+				Tag Archives: <span>depression</span>				</h1>
+
+				
+
+
+
+	
+			<div id="post-2846" class="post-2846 post type-post status-publish format-standard hentry category-blog-assignment category-peer-reviewed-article tag-depression tag-envy tag-social-comparison">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/15/the-truth-behind-facebook-envy/" rel="bookmark">The Truth Behind Facebook Envy</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/15/the-truth-behind-facebook-envy/" title="3:34 am" rel="bookmark"><span class="entry-date">October 15, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/kirving/" title="View all posts by Kevin">Kevin</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-summary">
+				<p>As online social networking sites are expanding their popularity, a phenomenon termed “Facebook envy” seems to be on the rise (Appel, 2015). The frustration of logging on to Facebook and being flooded with endless pictures, status updates and friends’ notifications showing &hellip; <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/15/the-truth-behind-facebook-envy/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/peer-reviewed-article/" rel="category tag">Peer Reviewed Article</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" rel="tag">depression</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" rel="tag">envy</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/social-comparison/" rel="tag">Social Comparison</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/15/the-truth-behind-facebook-envy/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2846 -->
+
+		
+	
+
+	
+			<div id="post-2710" class="post-2710 post type-post status-publish format-standard hentry category-article tag-depression tag-expression tag-tumblr">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/" rel="bookmark">Tumblr and Depression, Where Do You Draw the Line?</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/" title="8:54 pm" rel="bookmark"><span class="entry-date">September 24, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/rachelnorman113/" title="View all posts by Rachel Norman">Rachel Norman</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-summary">
+				<p>In the article, Social Media Is Redefining ‘Depression’, Bine discusses how Tumblr has become a major platform for teenage girls with mental illness to express themselves publicly in an anonymous way. Tumblr is a form of social media that was &hellip; <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/">Continue reading <span class="meta-nav">&rarr;</span></a></p>
+			</div><!-- .entry-summary -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" rel="tag">depression</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" rel="tag">expression</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" rel="tag">tumblr</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/24/tumblr-and-depression-where-do-you-draw-the-line/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2710 -->
+
+		
+	
+
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://fys142f15.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="nav_menu-3" class="widget-container widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-2520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2520"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-2685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685"><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-2714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2714"><a href="http://fys142f15.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="http://fys142f15.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+</ul></div></li><li id="nav_menu-4" class="widget-container widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2354"><a href="http://fys142f15.blogs.muhlenberg.edu/da1-tech-profile/">DA1: Technology Profile Survey</a></li>
+<li id="menu-item-2581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2581"><a href="http://fys142f15.blogs.muhlenberg.edu/da-zotero/">DA2: Zotero</a></li>
+<li id="menu-item-2664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664"><a href="http://fys142f15.blogs.muhlenberg.edu/da3-twitter/">DA3: Twitter</a></li>
+<li id="menu-item-2684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684"><a href="http://fys142f15.blogs.muhlenberg.edu/da4-linkedin-profile/">DA4: Create a LinkedIn Profile</a></li>
+<li id="menu-item-2747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2747"><a href="http://fys142f15.blogs.muhlenberg.edu/da5-digital-distractions/">DA5: Digital Distractions</a></li>
+<li id="menu-item-2807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2807"><a href="http://fys142f15.blogs.muhlenberg.edu/da6-dropbox/">DA6: Dropbox for File Management</a></li>
+<li id="menu-item-2866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2866"><a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/">DA7: Word Clouds</a></li>
+<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="http://fys142f15.blogs.muhlenberg.edu/da8-google-docs/">DA8: Google Docs</a></li>
+<li id="menu-item-3028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3028"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/#nov18">DA9: Internet Companies</a></li>
+<li id="menu-item-3032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3032"><a href="http://fys142f15.blogs.muhlenberg.edu/da-10-website-tips-hacks/">DA 10: Implicit Association</a></li>
+</ul></div></li><li id="nav_menu-6" class="widget-container widget_nav_menu"><h3 class="widget-title">Additional Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-2510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2510"><a href="http://fys142f15.blogs.muhlenberg.edu/files/2015/08/FYS142DigitalWorldF15.pdf">Syllabus</a></li>
+<li id="menu-item-2493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2493"><a href="http://fys142f15.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-2524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2524"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-2521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2521"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+<li id="menu-item-2522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2522"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-2523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2523"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+</ul></div></li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/2946/">Is Anonymity a Bad Thing?</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/a-walk-through-the-future/">A Walk through the Future</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-art-of-deception/">The Art of Deception</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-deterioration-of-our-privacy-whos-reading-your-emails-everyone/">The Deterioration of Our Privacy: Who&#8217;s Reading Your Emails? Everyone.</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/fame-fiends/">Fame Fiends</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/#comment-22">Yik Yak Attack</a></li><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/#comment-21">Technology&#8217;s Movement into Education</a></li><li class="recentcomments"><span class="comment-author-link">Maddy Mummey</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-misinterpretations/#comment-17">Digital Misinterpretations</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/#comment-16">How Uber Has Changed Transportation</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/#comment-15">The New Wave of Music: A SoundCloud Revolution</a></li></ul></li><li id="categories-4" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3><form action="http://fys142f15.blogs.muhlenberg.edu" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="20859">Article&nbsp;&nbsp;(30)</option>
+	<option class="level-0" value="64806">Blog Assignment&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="93877">Book Chapter&nbsp;&nbsp;(12)</option>
+	<option class="level-0" value="65684">Encyclopedia/Wikipedia&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="65899">FYS 142 Update&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="66182">Multimedia&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="66833">Peer Reviewed Article&nbsp;&nbsp;(9)</option>
+	<option class="level-0" value="93912">Reading Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="67420">Resource Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="93960">Technology Tip&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(25)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</li><li id="tag_cloud-3" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/advance/" class="tag-cloud-link tag-link-93941 tag-link-position-1" style="font-size: 8pt;" aria-label="#advance (1 item)">#advance</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/anonymity/" class="tag-cloud-link tag-link-93922 tag-link-position-2" style="font-size: 12.581818181818pt;" aria-label="#anonymity (2 items)">#anonymity</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/betterfuture/" class="tag-cloud-link tag-link-93898 tag-link-position-3" style="font-size: 12.581818181818pt;" aria-label="#betterfuture (2 items)">#betterfuture</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/ethicsoftechnology-consequencesofouractions/" class="tag-cloud-link tag-link-93959 tag-link-position-4" style="font-size: 8pt;" aria-label="#ethicsoftechnology #consequencesofouractions (1 item)">#ethicsoftechnology #consequencesofouractions</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/evolution/" class="tag-cloud-link tag-link-93992 tag-link-position-5" style="font-size: 12.581818181818pt;" aria-label="#evolution (2 items)">#evolution</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/iphone6s-voicerecognition-siri/" class="tag-cloud-link tag-link-93953 tag-link-position-6" style="font-size: 8pt;" aria-label="#IPhone6s #VoiceRecognition #Siri (1 item)">#IPhone6s #VoiceRecognition #Siri</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/lifeskills/" class="tag-cloud-link tag-link-93905 tag-link-position-7" style="font-size: 12.581818181818pt;" aria-label="#lifeskills (2 items)">#lifeskills</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/newgeneration/" class="tag-cloud-link tag-link-93940 tag-link-position-8" style="font-size: 8pt;" aria-label="#newgeneration (1 item)">#newgeneration</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/perspective/" class="tag-cloud-link tag-link-38704 tag-link-position-9" style="font-size: 8pt;" aria-label="#perspective (1 item)">#perspective</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/readingiscool/" class="tag-cloud-link tag-link-93904 tag-link-position-10" style="font-size: 12.581818181818pt;" aria-label="#readingiscool (2 items)">#readingiscool</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/strongerbrain/" class="tag-cloud-link tag-link-93897 tag-link-position-11" style="font-size: 12.581818181818pt;" aria-label="#strongerbrain (2 items)">#strongerbrain</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/comparison/" class="tag-cloud-link tag-link-93947 tag-link-position-12" style="font-size: 8pt;" aria-label="comparison (1 item)">comparison</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberattack/" class="tag-cloud-link tag-link-93954 tag-link-position-13" style="font-size: 8pt;" aria-label="cyberattack (1 item)">cyberattack</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberbullying/" class="tag-cloud-link tag-link-93957 tag-link-position-14" style="font-size: 8pt;" aria-label="Cyberbullying (1 item)">Cyberbullying</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/dangers-of-the-cloud/" class="tag-cloud-link tag-link-93958 tag-link-position-15" style="font-size: 8pt;" aria-label="Dangers of &quot;The Cloud&quot; (1 item)">Dangers of &quot;The Cloud&quot;</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" class="tag-cloud-link tag-link-24819 tag-link-position-16" style="font-size: 12.581818181818pt;" aria-label="depression (2 items)">depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/editing-apps/" class="tag-cloud-link tag-link-93951 tag-link-position-17" style="font-size: 8pt;" aria-label="editing apps (1 item)">editing apps</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" class="tag-cloud-link tag-link-5226 tag-link-position-18" style="font-size: 20.218181818182pt;" aria-label="Education (5 items)">Education</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" class="tag-cloud-link tag-link-93946 tag-link-position-19" style="font-size: 12.581818181818pt;" aria-label="envy (2 items)">envy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy-spiral/" class="tag-cloud-link tag-link-93952 tag-link-position-20" style="font-size: 8pt;" aria-label="envy spiral (1 item)">envy spiral</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" class="tag-cloud-link tag-link-37337 tag-link-position-21" style="font-size: 8pt;" aria-label="expression (1 item)">expression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-22" style="font-size: 18.181818181818pt;" aria-label="Facebook (4 items)">Facebook</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-depression/" class="tag-cloud-link tag-link-93956 tag-link-position-23" style="font-size: 8pt;" aria-label="Facebook depression (1 item)">Facebook depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-24" style="font-size: 8pt;" aria-label="Google (1 item)">Google</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/how-to/" class="tag-cloud-link tag-link-93963 tag-link-position-25" style="font-size: 8pt;" aria-label="How-To (1 item)">How-To</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-26" style="font-size: 15.636363636364pt;" aria-label="Instagram (3 items)">Instagram</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-27" style="font-size: 15.636363636364pt;" aria-label="Internet (3 items)">Internet</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learn/" class="tag-cloud-link tag-link-93888 tag-link-position-28" style="font-size: 12.581818181818pt;" aria-label="learn (2 items)">learn</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" class="tag-cloud-link tag-link-93198 tag-link-position-29" style="font-size: 20.218181818182pt;" aria-label="learning (5 items)">learning</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/monitor-set-up/" class="tag-cloud-link tag-link-93961 tag-link-position-30" style="font-size: 8pt;" aria-label="Monitor Set-up (1 item)">Monitor Set-up</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/new-age/" class="tag-cloud-link tag-link-93927 tag-link-position-31" style="font-size: 12.581818181818pt;" aria-label="new age (2 items)">new age</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/online-safety/" class="tag-cloud-link tag-link-93939 tag-link-position-32" style="font-size: 8pt;" aria-label="online safety (1 item)">online safety</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-33" style="font-size: 15.636363636364pt;" aria-label="privacy (3 items)">privacy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/reading/" class="tag-cloud-link tag-link-190 tag-link-position-34" style="font-size: 22pt;" aria-label="reading (6 items)">reading</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/security/" class="tag-cloud-link tag-link-8070 tag-link-position-35" style="font-size: 12.581818181818pt;" aria-label="security (2 items)">security</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/snapchat/" class="tag-cloud-link tag-link-11233 tag-link-position-36" style="font-size: 12.581818181818pt;" aria-label="Snapchat (2 items)">Snapchat</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/sports/" class="tag-cloud-link tag-link-5237 tag-link-position-37" style="font-size: 12.581818181818pt;" aria-label="Sports (2 items)">Sports</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/steve-jobs/" class="tag-cloud-link tag-link-372 tag-link-position-38" style="font-size: 12.581818181818pt;" aria-label="Steve Jobs (2 items)">Steve Jobs</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-39" style="font-size: 18.181818181818pt;" aria-label="Technology (4 items)">Technology</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologys-impact/" class="tag-cloud-link tag-link-93964 tag-link-position-40" style="font-size: 8pt;" aria-label="Technology&#039;s impact (1 item)">Technology&#039;s impact</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" class="tag-cloud-link tag-link-93944 tag-link-position-41" style="font-size: 8pt;" aria-label="tumblr (1 item)">tumblr</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" class="tag-cloud-link tag-link-405 tag-link-position-42" style="font-size: 20.218181818182pt;" aria-label="twitter (5 items)">twitter</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/wiki/" class="tag-cloud-link tag-link-93984 tag-link-position-43" style="font-size: 12.581818181818pt;" aria-label="Wiki (2 items)">Wiki</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 18.181818181818pt;" aria-label="Writing (4 items)">Writing</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/yikyak/" class="tag-cloud-link tag-link-93955 tag-link-position-45" style="font-size: 8pt;" aria-label="yikyak (1 item)">yikyak</a></li>
+</ul>
+</div>
+</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">#fys142 Twitter feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">
+					Who Controls Your Digital World?				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f15.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f15.blogs.muhlenberg.edu%2Ftag%2Fdepression%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f15.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>

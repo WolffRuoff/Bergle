@@ -1,0 +1,1046 @@
+http://mediacom.internship.blogs.muhlenberg.edu/?cat=17764%2F&/
+65
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head profile="http://gmpg.org/xfn/11">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+																		
+		<title>Archives | Media &amp; Communication Internships</title>
+		 
+		<meta name='robots' content='noindex,nofollow' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Media &amp; Communication Internships &raquo; Feed" href="http://mediacom.internship.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Media &amp; Communication Internships &raquo; Comments Feed" href="http://mediacom.internship.blogs.muhlenberg.edu/?feed=comments-rss2" />
+<link rel="alternate" type="application/rss+xml" title="Media &amp; Communication Internships &raquo; Archives Category Feed" href="http://mediacom.internship.blogs.muhlenberg.edu/?feed=rss2&#038;cat=17764" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/mediacom.internship.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/mediacom.internship.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wilson_googleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic%7CRaleway%3A400%2C700&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wilson_style-css'  href='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/themes/wilson-child/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://mediacom.internship.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://mediacom.internship.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://mediacom.internship.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://mediacom.internship.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//mediacom.internship.blogs.muhlenberg.edu/?wordfence_lh=1&hid=F942CCB03469A6D3C5FA12C461A6B3AA');
+</script>      
+	      <!--Customizer CSS--> 
+	      
+	      <style type="text/css">
+	           .blog-title a:hover { color:#ce2d48; }	           .blog-menu a:hover { color:#ce2d48; }	           .featured-media .sticky-post { background-color:#ce2d48; }	           .post-title a:hover { color:#ce2d48; }	           .post-meta a:hover { color:#ce2d48; }	           .post-content a { color:#ce2d48; }	           .post-content a:hover { color:#ce2d48; }	           .blog .format-quote blockquote cite a:hover { color:#ce2d48; }	           .post-content a.more-link:hover { background-color:#ce2d48; }	           .post-content fieldset legend { background-color:#ce2d48; }	           .post-content input[type="submit"]:hover { background-color:#ce2d48; }	           .post-content input[type="reset"]:hover { background-color:#ce2d48; }	           .post-content input[type="button"]:hover { background-color:#ce2d48; }	           .content .button:hover { background-color:#ce2d48; }	           .post-cat-tags a { color:#ce2d48; }	           .post-cat-tags a:hover { color:#ce2d48; }	           .archive-nav a:hover { background-color:#ce2d48; }	           .logged-in-as a { color:#ce2d48; }	           .logged-in-as a:hover { color:#ce2d48; }	           .content #respond input[type="submit"]:hover { background-color:#ce2d48; }	           .comment-meta-content cite a:hover { color:#ce2d48; }	           .comment-meta-content p a:hover { color:#ce2d48; }	           .comment-actions a:hover { color:#ce2d48; }	           #cancel-comment-reply-link { color:#ce2d48; }	           #cancel-comment-reply-link:hover { color:#ce2d48; }	           .comment-nav-below a:hover { color:#ce2d48; }	           .widget-title a { color:#ce2d48; }	           .widget-title a:hover { color:#ce2d48; }	           .widget_text a { color:#ce2d48; }	           .widget_text a:hover { color:#ce2d48; }	           .widget_rss a { color:#ce2d48; }	           .widget_rss a:hover { color:#ce2d48; }	           .widget_archive a { color:#ce2d48; }	           .widget_archive a:hover { color:#ce2d48; }	           .widget_links a { color:#ce2d48; }	           .widget_links a:hover { color:#ce2d48; }	           .widget_recent_comments a { color:#ce2d48; }	           .widget_recent_comments a:hover { color:#ce2d48; }	           .widget_recent_entries a { color:#ce2d48; }	           .widget_recent_entries a:hover { color:#ce2d48; }	           .widget_categories a { color:#ce2d48; }	           .widget_categories a:hover { color:#ce2d48; }	           .widget_meta a { color:#ce2d48; }	           .widget_meta a:hover { color:#ce2d48; }	           .widget_recent_comments a { color:#ce2d48; }	           .widget_pages a { color:#ce2d48; }	           .widget_pages a:hover { color:#ce2d48; }	           #wp-calendar a { color:#ce2d48; }	           #wp-calendar a:hover { color:#ce2d48; }	           #wp-calendar tfoot a:hover { color:#ce2d48; }	           .dribbble-shot:hover { background:#ce2d48; }	           .widgetmore a { color:#ce2d48; }	           .widgetmore a:hover { color:#ce2d48; }	           .flickr_badge_image a:hover img { background:#ce2d48; }	           .tagcloud a:hover { background:#ce2d48; }	           .credits a:hover { color:#ce2d48; }	           .mobile-menu a:hover { background:#ce2d48; }	      </style> 
+	      
+	      <!--/Customizer CSS-->
+	      
+      <style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+		
+	</head>
+	
+	<body class="bp-legacy archive category category-archives category-17764 admin-bar no-customize-support no-js">
+	
+		<div class="wrapper">
+	
+			<div class="sidebar">
+							
+				<div class="blog-header">
+				
+									
+						<h1 class="blog-title">
+							<a href="http://mediacom.internship.blogs.muhlenberg.edu" title="Media &amp; Communication Internships &mdash; Get the Right Internship, Right Away!" rel="home">Media &amp; Communication Internships</a>
+						</h1>
+						
+						<h3 class="blog-description">Get the Right Internship, Right Away!</h3>
+					
+					
+				</div> <!-- /blog-header -->
+				
+				<div class="nav-toggle toggle">
+				
+					<p>
+						<span class="show">Show menu</span>
+						<span class="hide">Hide menu</span>
+					</p>
+				
+					<div class="bars">
+							
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+						
+						<div class="clear"></div>
+						
+					</div>
+				
+				</div> <!-- /nav-toggle -->
+				
+				<div class="blog-menu">
+			
+					<ul class="navigation">
+					
+						<li class="page_item page-item-138"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=138">MediaCom Home</a></li>
+<li class="page_item page-item-1085"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1085">Summer internships</a></li>
+<li class="page_item page-item-2"><a href="http://mediacom.internship.blogs.muhlenberg.edu/">Welcome!</a></li>
+<li class="page_item page-item-739"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=739">Internship vs. Practicum</a></li>
+<li class="page_item page-item-70"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=70">How To Register</a></li>
+<li class="page_item page-item-11 current_page_parent"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=11">Opportunities (Updated)</a></li>
+<li class="page_item page-item-767"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=767">Student endorsements</a></li>
+<li class="page_item page-item-832"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=832">Career Connections</a></li>
+<li class="page_item page-item-1121"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1121">Forms</a></li>
+<li class="page_item page-item-1168"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1168">Faculty recommendations</a></li>
+												
+					 </ul>
+					 
+					 <div class="clear"></div>
+					 
+				</div> <!-- /blog-menu -->
+				
+				<div class="mobile-menu">
+						 
+					 <ul class="navigation">
+					
+						<li class="page_item page-item-138"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=138">MediaCom Home</a></li>
+<li class="page_item page-item-1085"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1085">Summer internships</a></li>
+<li class="page_item page-item-2"><a href="http://mediacom.internship.blogs.muhlenberg.edu/">Welcome!</a></li>
+<li class="page_item page-item-739"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=739">Internship vs. Practicum</a></li>
+<li class="page_item page-item-70"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=70">How To Register</a></li>
+<li class="page_item page-item-11 current_page_parent"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=11">Opportunities (Updated)</a></li>
+<li class="page_item page-item-767"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=767">Student endorsements</a></li>
+<li class="page_item page-item-832"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=832">Career Connections</a></li>
+<li class="page_item page-item-1121"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1121">Forms</a></li>
+<li class="page_item page-item-1168"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?page_id=1168">Faculty recommendations</a></li>
+						
+					 </ul>
+					 
+				</div> <!-- /mobile-menu -->
+				
+				
+					<div class="widgets" role="complementary">
+					
+								<div class="widget widget_recent_entries"><div class="widget-content">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1924">Muhlenberg (Intern)Yearbook Content Manager</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1922">PR summer internship at The Lippin Group</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1920">PR Summer Internship (BCW Harold Internship Program) (paid!)</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1913">Summer Internship- Multimedia/Video Production &#8211; Information Technology Services (Paid)</a>
+									</li>
+											<li>
+					<a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1908">Summer Internship Stipend Application &#8211; Alumni Board Career Scholarship</a>
+									</li>
+					</ul>
+		</div><div class="clear"></div></div>						
+					</div><!-- /widgets -->
+					
+													
+			</div> <!-- /sidebar -->	
+	<div class="content">
+	
+		<div class="page-title">
+	
+			<h4>
+			
+									Category<span class="name">Archives</span>
+							
+			</h4>
+						
+						
+		</div> <!-- /page-title -->
+			
+		<div class="posts">
+	
+					
+							
+								
+					<div id="post-1837" class="post-1837 post type-post status-publish format-standard hentry category-archives category-graphic-design category-internet category-journalism category-media-relations category-social-media category-television category-web-design">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1837" rel="bookmark" title="Democracy Now! Summer Internships (New York)">Democracy Now! Summer Internships (New York)</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1837" title="Democracy Now! Summer Internships (New York)">May 6, 2019</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=8" title="Posts by Dr. Sullivan" rel="author">Dr. Sullivan</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Democracy Now! Summer Internships (New York)</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p><a href="https://www.democracynow.org/about"><img class="size-medium alignleft" src="https://upload.wikimedia.org/wikipedia/en/thumb/0/01/Democracy_Now%21_logo.svg/1200px-Democracy_Now%21_logo.svg.png" width="1200" height="840" />Democracy Now!</a> produces a daily, global, independent news hour hosted by award-winning journalists Amy Goodman and Juan González. Democracy Now! Internships are paid, 20 hour per week, temporary work placements to help students, people early in their careers and career changers to gain entry-level skills and experience in the fields of outreach, social media, education, fundraising, translation and archiving in a non-profit setting. All internships take place at our Manhattan studio where we produce our daily TV and radio news hour.</p>
+<h3>Eligibility Requirements</h3>
+<p>Applicants must have completed a high school diploma, <span class="caps">GED</span> or equivalent and must have a valid US work authorization.</p>
+<p>Democracy Now! is an equal opportunity employer. People of color, people with disabilities, women and <span class="caps">LGBTQ</span>-identified people are encouraged to apply.</p>
+<h3>To Apply</h3>
+<p>Review the Internship Descriptions below to choose which department you’d like to work with. Candidates may only apply for one internship per session. <a href="https://www.democracynow.org/about/jobs/internships">Click here for more information</a>.</p>
+<p>Interns may work in one of five departments:</p>
+<p><strong>– <a href="https://democracynow.recruiterbox.com/jobs/fk0jomr/">Archives Intern</a>.</strong> Archives interns are responsible for cataloging videos, turning paper and tape records into digital media and processing all incoming news feeds. The individuals must have experience working with Mac OS X and Office.</p>
+<p><strong>– <a href="https://democracynow.recruiterbox.com/jobs/fk0jtom/"><em><u>Democracy Now!</u></em> en Español</a>.</strong> This internship involves translating English content to Spanish, updating social media accounts and assisting with efforts to grow a Spanish-speaking audience. Individuals must be bilingual and have basic journalism skills.</p>
+<p><strong>– <a href="https://democracynow.recruiterbox.com/jobs/fk0jomi">Development &amp; Outreach</a>.</strong> Interns in this area are responsible for maintaining the donor database and processing contributions. Familiarity with Microsoft Word and Excel is preferred.</p>
+<p><strong>– <a href="https://democracynow.recruiterbox.com/jobs/fk0jomg/">Education Intern</a>.</strong> Interns in this area invite educators and their classes to visit the set and use the broadcast as a part of their curricula. Previous experience with teaching is beneficial for the role.</p>
+<p><strong>– <a href="https://democracynow.recruiterbox.com/jobs/fk0jo6k/">Digital Intern</a>.</strong> Digital interns produce content for <em><u>Democracy Now!</u></em> social media platforms and are responsible for updating social media accounts. Knowledge of social media and basic journalism skills are required.</p>
+<p>To apply, send a one page resume, a cover letter, and two work or academic references to the email address specified in the appropriate internship description. In your cover letter, please address these questions:</p>
+<ol>
+<li>How did you discover Democracy Now!?</li>
+<li>What are your goals in seeking out this internship?</li>
+<li>What makes you a good candidate for this internship?</li>
+</ol>
+<p>For summer internship applications, the <span style="color: #ff0000"><strong>deadline is May 15, 2019</strong></span>. Due to the volume of applications received, you will only be contacted if you are selected for an interview. No mail submissions or phone calls please.</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-1469" class="post-1469 post type-post status-publish format-standard hentry category-archives category-communication-campaigns category-media-relations category-on-campus category-social-media">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1469" rel="bookmark" title="Social Media Assistant, Muhlenberg Alumni Relations, Spring 2016">Social Media Assistant, Muhlenberg Alumni Relations, Spring 2016</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1469" title="Social Media Assistant, Muhlenberg Alumni Relations, Spring 2016">November 18, 2015</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=34" title="Posts by elizabethnathanson" rel="author">elizabethnathanson</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Social Media Assistant, Muhlenberg Alumni Relations, Spring 2016</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p><strong>­­Social Media Assistant, Alumni Relations</strong></p>
+<p><strong>Muhlenberg College, Spring 2016</strong></p>
+<p><strong><u>On-site Internship Advisor:</u></strong> Heather Lavin ’08, Associate Director of Alumni Affairs</p>
+<p><strong><u>Goals </u></strong></p>
+<p>The goals of Alumni Affair’s Social Media Assistant are to:</p>
+<ul>
+<li>Gain understanding of social media marketing and communication strategies.</li>
+<li>Develop a comprehensive content calendar for Alumni Relations’ Facebook, Twitter and Instagram accounts.</li>
+<li>Provide student perspective in the development of young alumni programs and social media marketing.</li>
+<li>Develop comprehensive communication campaigns that engage our online audience.</li>
+<li>Write short news stories for MuhlenbergConnect.com, our alumni online community.</li>
+<li>Execute social media marketing plan for events and mini-campaigns, including real-time photo sharing during the weekend.</li>
+<li>Support the Associate Director of Alumni Relations in aspects of young alumni communication and department goals.</li>
+<li>Write a CUE paper on a topic to be determined.</li>
+</ul>
+<p><strong><u>Job Duties</u></strong></p>
+<ul>
+<li>Interviews in April-summer; internship begins the first week of classes in the fall</li>
+<li>Attend weekly meetings with the Associate Director of Alumni Relations to discuss strategy, ideas, and project feedback</li>
+<li>Create and implement social media marketing plans for regional alumni events, campus and alumni. This includes marketing design, social networking updates and scheduling.</li>
+<li>Submit regular social media analytics and monthly overviews of online activity.</li>
+<li>Archiving for our online media through collecting old and current campus photos, documents, Weekly articles and yearbook photos.</li>
+<li>End of semester presentation to Development &amp; Alumni Relations staff on alumni social media activity, strategy, future goals and recommendations.</li>
+</ul>
+<p>Work 10-12 hours per week to meet the Media &amp; Comm. required time.</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-976" class="post-976 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=976" rel="bookmark" title="Communication and Donor Relations Intern at Berg">Communication and Donor Relations Intern at Berg</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=976" title="Communication and Donor Relations Intern at Berg">April 16, 2014</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Communication and Donor Relations Intern at Berg</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p>There are two positions available through the Communication and Donor Relations Department, Office of Development and Alumni Relations.</p>
+<p><strong>Media Marketing and Writing Intern</strong></p>
+<ul>
+<li><span class="Apple-style-span" style="line-height: 12px">Assist with web content by writing and publishing news stories for Muhlenberg Connect, the alumni website</span></li>
+<li>Design electronic greetings, slideshows and videos for College constituents</li>
+<li>Assist with compiling historical data from our previous email marketing system</li>
+<li>Various other projects within the Development Office</li>
+</ul>
+<p>Qualifications: Strong writing skills, creativity, design skills for e-greetings and videos (PowerPoint, iMovie, Final Cut, Pro, Flickr, etc), and careful attention to detail and accuracy.</p>
+<p>&nbsp;</p>
+<p><strong>Video Production Intern</strong></p>
+<ul>
+<li><span class="Apple-style-span" style="line-height: 12px">Create a one-minute video compiling highlights from the Scholarship Luncheon Event</span></li>
+<li>Create a five-minute thank-you video for the Lifetime Giving Society Dinner, featuring student interviews and campus footage.</li>
+</ul>
+<p>Qualifications: Video filming, editorial and production skills, and ability to work with deadlines.</p>
+<p>&nbsp;</p>
+<p>Contact Romina Weikel, Associate Director of Communication and Donor Relations at rweikel@muhlenberg.edu or x3136</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-1116" class="post-1116 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1116" rel="bookmark" title="Parkland School District: Graphic design internship">Parkland School District: Graphic design internship</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1116" title="Parkland School District: Graphic design internship">March 29, 2014</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Parkland School District: Graphic design internship</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p><b>Department: </b>Community Relations &amp; Development<b> </b></p>
+<p><b>Reports to: </b>Director of Community Relations &amp; Development</p>
+<p><strong>Status: </strong>Unpaid internship</p>
+<p>The Graphic Design intern will be involved in a number of activities supporting the Office of Community Relations &amp; Development, working closely with the Director. He or she will gain firsthand experience designing print marketing materials that promote public education and student achievement as well as develop ads for sponsors of the District in the District newsletter and calendar.   The culminating event will include a field trip/tour of a printing press company to view the calendar cover on the printing press and to learn how the printing process brings projects to life for its clients.</p>
+<p><b>Dates:  May 20, 2014 – mid-August, 2014</b></p>
+<p><b>Essential Functions:</b></p>
+<ul>
+<li>Design the District’s printed calendar around a theme and lay out ads from vendor sponsorships.  At the end of the summer, intern will have a professionally printed 36-page full color piece for their portfolio.</li>
+<li>Design Advertising Rate Card, Foundation Brochure, Foundation Case Studies, Ad to put in newsletter that features all sponsorship activities, invitations for Foundation events, greeting cards, and alumni outreach mail pieces and posters.</li>
+<li>Update design of the Parkland High School annual report.</li>
+<li>Support administrative efforts including copying, filing, and archiving.</li>
+</ul>
+<p><b>Minimum Qualifications:</b></p>
+<ul>
+<li>Proficient in Adobe’s Creative Suite including Photoshop, Illustrator and InDesign.</li>
+<li>Excellent communication and interpersonal skills.</li>
+<li>Ability to prioritize multiple projects.</li>
+<li>Ability to handle information in a confidential, objective and professional manner.</li>
+<li>Ability to work a minimum of 10-12 hours per week in the office (between the hours of 9 AM and 5 PM, Monday &#8211; Friday).</li>
+</ul>
+<p>To apply for this position, send your resume and letter of interest along with your start/end dates of availability to Nicole McGalla, Parkland School District, 1210 Springhouse Rd, Allentown, PA 18104 or via email to <a href="mailto:mcgallan@parklandsd.org">mcgallan@parklandsd.org</a> or fax 610-351-5509.</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-1095" class="post-1095 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1095" rel="bookmark" title="Research and Production Intern with Jesse Neider, Spring 2014">Research and Production Intern with Jesse Neider, Spring 2014</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=1095" title="Research and Production Intern with Jesse Neider, Spring 2014">January 12, 2014</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Research and Production Intern with Jesse Neider, Spring 2014</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p>Photographer and Filmmaker, Jesse Neider, is seeking a candidate to fill an internship position.</p>
+<p>This is a great opportunity for someone interested in journalism, social advocacy, filmmaking, photography, and multimedia. You will be exposed to the process of developing and producing documentary film and photography projects. Time will also be set aside in order to discuss and provide guidance on the student’s related project work.</p>
+<p>The candidate must be an excellent researcher with great writing and communication skills, and the ability to work independently. The internship requires great organizational skills, a positive attitude, and the ability to multi-task and adapt. Efficiency, punctuality, and a willingness to learn are critical. Knowledge of Premiere Pro, Adobe Lightroom, and Photoshop are a bonus. Intern must be proficient with Macs and Microsoft Word.</p>
+<p>Duties of the intern will include (but not be limited to):</p>
+<ul>
+<li>&#8211; Online research</li>
+<li>&#8211; Archiving/Workflow/Editing of Still Images</li>
+<li>&#8211; Capturing and Logging footage</li>
+<li>&#8211; Transcribing</li>
+<li>&#8211; Editing of Video</li>
+<li>&#8211; Researching music and archival footage</li>
+<li>&#8211; May also include writing for social media, blog posts, and grant proposals.</li>
+</ul>
+<p>While the majority of the time will be spent working with Jesse in the office, there may also be opportunities to spend time working together in the field.</p>
+<p>Contact Jesse at Jesse.Neider@gw.muhlenberg.edu</p>
+<p>&nbsp;</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-991" class="post-991 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=991" rel="bookmark" title="Kicking Mule Theatre Company">Kicking Mule Theatre Company</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=991" title="Kicking Mule Theatre Company">October 22, 2013</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Kicking Mule Theatre Company</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p>Dr. Francine Roussel is in the process of creating a not-for-profit theatre company, The Kicking Mule Theatre Company, and is looking for a student intern interested with theatre and business interests.  Goals are to incorporate the company, constitute a board of directors, use legal assistance, find sponsors, establish a budget, write grants, and plan publicity and marketing.  Interested students should contact Dr. Roussel directly at roussel@muhlenberg.edu.</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-803" class="post-803 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=803" rel="bookmark" title="Communication and Donor Relations Intern">Communication and Donor Relations Intern</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=803" title="Communication and Donor Relations Intern">August 21, 2013</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=87" title="Posts by skahlenb" rel="author">skahlenb</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Communication and Donor Relations Intern</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<table width="455" border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td width="455"><b>Duties and Responsibilities</b></p>
+<ul>
+<li><span class="Apple-style-span" style="line-height: 15px">Assist with web content by writing and publishing news stories for Muhlenberg Connect, the alumni website</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Design electronic greetings and slide shows for College constituents</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Assist with compiling historical data from our previous email marketing system</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Various other projects within the Development Office</span></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td valign="top" width="455">
+<ul>
+<li><span class="Apple-style-span" style="line-height: 15px"><b>Job Qualifications</b></span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Strong writing skills</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Creativity</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Design skills for e-greetings (format is flexible: PowerPoint, Final Cut Pro, etc.)</span></li>
+<li><span class="Apple-style-span" style="line-height: 15px">Careful attention to detail and accuracy</span></li>
+</ul>
+<p><b>Contact: </b>Romina Weikel, Associate Director of Communication and Donor Relations at 484-664-3136.  Student applicants are strongly recommended to apply by <strong>AUGUST 30</strong> to be considered for a fall 2013 internship.</td>
+</tr>
+</tbody>
+</table>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-715" class="post-715 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=715" rel="bookmark" title="Larry Singer Studios Marketing">Larry Singer Studios Marketing</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=715" title="Larry Singer Studios Marketing">December 7, 2012</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=43" title="Posts by pmcewan" rel="author">pmcewan</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Larry Singer Studios Marketing</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p>In the summer of 2013, Larry Singer Studios will be offering acting workshops at Muhlenberg in partnership with the college. Muhlenberg Theatre Professor Larry Singer is seeking a spring intern to help with the development and marketing of the program. Specifically, the position would involve:</p>
+<p>Working with Constant Contact (email program)</p>
+<p>Facebook/Twitter</p>
+<p>Creating a presence in colleges and universities where theater training is taught either intensely or not intensely.</p>
+<p>Marketing</p>
+<p>Kick off promotional events</p>
+<p>Assist with networking</p>
+<p>Graphic design / brochures</p>
+<p>Building Database and Mailing lists.</p>
+<p>Apply immediately to Larry Singer (lsinger@muhlenberg.edu)</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-684" class="post-684 post type-post status-publish format-standard hentry category-archives">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=684" rel="bookmark" title="On-Campus Internship with Conference Services">On-Campus Internship with Conference Services</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=684" title="On-Campus Internship with Conference Services">August 24, 2012</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=43" title="Posts by pmcewan" rel="author">pmcewan</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on On-Campus Internship with Conference Services</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<div>
+<p>As part of the Muhlenberg College’s Strategic Plan for 2010-2015, Seegers Union implemented a formal summer conference program to maximize utilization of college resources and generate additional revenue to support college programming.</p>
+<p>Working for conference services, an intern will concentrate on the following tasks:</p>
+<ul>
+<li> Prepare a cost analysis on print media options available (ie: Morning Call, LV Marketplace, Hakol).</li>
+<li> Implement and maintain a facebook page on the Conference Services website.</li>
+<li> Prepare the monthly Conference and Event Services newsletter.</li>
+<li> Make changes / updates to the conference webpage. Knowledge of Contribute is preferred.</li>
+<li> Prepare a thorough competitive market study and recommend changes to our program as you see fit.</li>
+<li> Participate in e-mail marketing campaigns, social networking efforts and online community management opportunities.Email your resume and letter of application to JoEllen Rooney, Conference Services Manager to: jrooney@muhlenberg.edu.</li>
+</ul>
+<p>Apply immediately!</p>
+</div>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+								
+					<div id="post-682" class="post-682 post type-post status-publish format-standard hentry category-archives category-youth-media">
+								
+						
+<div class="post-inner">
+
+	<div class="post-header">
+		
+	    <h2 class="post-title"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=682" rel="bookmark" title="Internships with Philly Youth Media">Internships with Philly Youth Media</a></h2>
+	    
+	    <div class="post-meta">
+		
+			<span class="post-date"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?p=682" title="Internships with Philly Youth Media">August 24, 2012</a></span>
+			
+			<span class="date-sep"> / </span>
+				
+			<span class="post-author"><a href="http://mediacom.internship.blogs.muhlenberg.edu/?author=43" title="Posts by pmcewan" rel="author">pmcewan</a></span>
+			
+			<span class="date-sep"> / </span>
+			
+			<span>Comments Off<span class="screen-reader-text"> on Internships with Philly Youth Media</span></span>			
+						
+												
+		</div>
+	    
+	</div> <!-- /post-header -->
+										                                    	    
+	<div class="post-content">
+		    		            			            	                                                                                            
+		<p>Get some experience in radio and other media while working with city youth. Details on their website:</p>
+<p>http://www.phillyyouthmedia.org/opportunities/internships/</p>
+					
+							        
+	</div> <!-- /post-content -->
+	            
+	<div class="clear"></div>
+
+</div>						
+					</div> <!-- /post -->
+					
+											
+		</div> <!-- /posts -->
+					
+				
+			<div class="archive-nav">
+			
+				<a href="http://mediacom.internship.blogs.muhlenberg.edu/?cat=17764%2F&#038;/&#038;paged=2" class="post-nav-older">Older<span> posts</span></a>							
+								
+				<div class="clear"></div>
+				
+			</div> <!-- /post-nav archive-nav -->
+						
+						
+	
+	  	<div class="credits">
+		
+			<div class="credits-inner">
+			
+				<p class="credits-left">
+				
+					<p> &copy; 2020 <a href="http://mediacom.internship.blogs.muhlenberg.edu" title="Media &amp; Communication Internships">Media &amp; Communication Internships</a></p>
+				
+<p><a href="http://www.muhlenberg.edu" target="_blank">Muhlenberg College</a></p>
+          <p>2400 Chew St. Allentown, PA 18104-5586</p>
+          <p>484-664-3100 -- 484-664-3623 (TTY)</p>
+				
+				<div class="clear"></div>
+			
+			</div> <!-- /credits-inner -->
+			
+		</div> <!-- /credits -->
+	
+	</div> <!-- /content -->
+	
+	<div class="clear"></div>
+	
+</div> <!-- /wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-content/themes/wilson-child/js/global.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://mediacom.internship.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://mediacom.internship.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fmediacom.internship.blogs.muhlenberg.edu%2F%3Fcat%3D17764%252F%26%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://mediacom.internship.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

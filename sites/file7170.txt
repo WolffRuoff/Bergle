@@ -1,0 +1,533 @@
+http://abigaillinnemeyer.blogs.muhlenberg.edu/?m=20181201/
+23
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>December 1, 2018 &#8211; Abigail Linnemeyer</title>
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Abigail Linnemeyer &raquo; Feed" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?feed=rss2" />
+<link rel="alternate" type="application/rss+xml" title="Abigail Linnemeyer &raquo; Comments Feed" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?feed=comments-rss2" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/abigaillinnemeyer.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/abigaillinnemeyer.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='multipurpose-blog-font-css'  href='//fonts.googleapis.com/css?family=PT+Sans%3A300%2C400%2C600%2C700%2C800%2C900%7CRoboto%3A400%2C700%7CRoboto+Condensed%3A400%2C700%7COpen+Sans%7CAlex+Brush%7COverpass%7CMontserrat%3A300%2C400%2C600%2C700%2C800%2C900%7CPlayball%3A300%2C400%2C600%2C700%2C800%2C900%7CAlegreya%3A300%2C400%2C600%2C700%2C800%2C900%7CJulius+Sans+One%7CArsenal%7CSlabo%7CLato%7COverpass+Mono%7CSource+Sans+Pro%7CRaleway%7CMerriweather%7CDroid+Sans%7CRubik%7CLora%7CUbuntu%7CCabin%7CArimo%7CPlayfair+Display%7CQuicksand%7CPadauk%7CMuli%7CInconsolata%7CBitter%7CPacifico%7CIndie+Flower%7CVT323%7CDosis%7CFrank+Ruhl+Libre%7CFjalla+One%7COxygen%7CArvo%7CNoto+Serif%7CLobster%7CCrimson+Text%7CYanone+Kaffeesatz%7CAnton%7CLibre+Baskerville%7CBree+Serif%7CGloria+Hallelujah%7CJosefin+Sans%7CAbril+Fatface%7CVarela+Round%7CVampiro+One%7CShadows+Into+Light%7CCuprum%7CRokkitt%7CVollkorn%7CFrancois+One%7COrbitron%7CPatua+One%7CAcme%7CSatisfy%7CJosefin+Slab%7CQuattrocento+Sans%7CArchitects+Daughter%7CRusso+One%7CMonda%7CRighteous%7CLobster+Two%7CHammersmith+One%7CCourgette%7CPermanent+Marker%7CCherry+Swash%7CCormorant+Garamond%7CPoiret+One%7CBenchNine%7CEconomica%7CHandlee%7CCardo%7CAlfa+Slab+One%7CAveria+Serif+Libre%7CCookie%7CChewy%7CGreat+Vibes%7CComing+Soon%7CPhilosopher%7CDays+One%7CKanit%7CShrikhand%7CTangerine%7CIM+Fell+English+SC%7CBoogaloo%7CBangers%7CFredoka+One%7CBad+Script%7CVolkhov%7CShadows+Into+Light+Two%7CMarck+Script%7CSacramento%7CUnica+One%7CDancing+Script%3A400%2C700&#038;ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/css/bootstrap.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='multipurpose-blog-basic-style-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<style id='multipurpose-blog-basic-style-inline-css' type='text/css'>
+
+		p,span{
+		    color:!important;
+		    font-family: ;
+		    font-size: ;
+		}
+		a{
+		    color:!important;
+		    font-family: ;
+		}
+		li{
+		    color:!important;
+		    font-family: ;
+		}
+		h1{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+		h2{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+		h3{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+		h4{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+		h5{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+		h6{
+		    color:!important;
+		    font-family: !important;
+		    font-size: !important;
+		}
+	
+.slide-button a, #sidebar button, #comments input[type="submit"].submit, #sidebar .tagcloud a:hover, .read-moresec a, .footer-wp .tagcloud a:hover, .pagination a:hover, .woocommerce span.onsale, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button,.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, nav.woocommerce-MyAccount-navigation ul li, #navbar-header .socialbox, input[type="submit"], #comments a.comment-reply-link, .primary-navigation ul ul a:hover, .primary-navigation ul ul a:focus, #scrollbutton i{background-color: ;}.menubar .social-media a:hover, #header .socialbox i:hover , primary-navigation ul ul a:hover, .primary-navigation ul ul a:focus, .entry-date a:hover, .entry-author a:hover,  .cat-box ul.post-categories a:hover, .date-box a:hover, .footer-wp li a:hover, .woocommerce-message::before, .woocommerce-info a, .star-rating{color: ;}.slide-button a, #comments input[type="submit"].submit, .read-moresec a, #scrollbutton i{border-color: ;}.woocommerce-message{border-top-color: ;}body{max-width: 100%;}#slider .carousel-caption, #slider .inner_carousel, #slider .inner_carousel h1, #slider .inner_carousel p, #slider .slide-button {text-align:left; left:25%; right:20%;}#slider img{opacity:0.7}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{padding-top: 15px; padding-bottom: 15px;}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{padding-left: 15px; padding-right: 15px;}.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt{border-radius: px;}.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{padding-top: 10px !important; padding-bottom: 10px !important;}.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{padding-left: 10px !important; padding-right: 10px !important;}.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{border-radius: px;}.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{box-shadow: px px px #eee;}.woocommerce span.onsale{padding-top: 0px; padding-bottom: 0px; padding-left: 0px; padding-right: 0px; display:inline-block;}.woocommerce span.onsale {border-radius: 100%;}.woocommerce ul.products li.product .onsale{ left:auto; right:0;}.footer-wp{background-color: ;}#scrollbutton i{border-radius: px;}#scrollbutton i{font-size: 22px;}#scrollbutton i{padding-top: 12px; padding-bottom: 12px;}#scrollbutton i{padding-left: 17px; padding-right: 17px;}.frame{background-color: ;}.dot-1,.dot-2,.dot-3{background-color: ;}.dot-1, .dot-2, .dot-3{}.primary-navigation a{font-size: 12px;}@media screen and (max-width:575px){#slider{display:none;} }@media screen and (max-width:575px) {.slide-button{display:block;} }@media screen and (max-width:575px) {#sidebar{display:block;} }@media screen and (max-width:575px) {#scrollbutton i{display:block;} }@media screen and (max-width:575px) {.frame{display:block;} }@media screen and (max-width:575px) {.fixed-header{display:block;} }#comments textarea{width: %;}#slider img{height: px;}#header .logo a{font-size: 45px;}
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/css/fontawesome-all.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<!--[if IE]>
+<link rel='stylesheet' id='multipurpose-blog-ie-css'  href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/css/ie.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/js/custom.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<link rel='https://api.w.org/' href='http://abigaillinnemeyer.blogs.muhlenberg.edu/index.php?rest_route=/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//abigaillinnemeyer.blogs.muhlenberg.edu/?wordfence_lh=1&hid=6FF9A52D4F8C9A25F2ACE96F99403686');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #f7f7f7; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<link rel="icon" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/files/2018/11/cropped-002C16F8-AC29-4BA4-9E4C-C51C001BF757-1-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/files/2018/11/cropped-002C16F8-AC29-4BA4-9E4C-C51C001BF757-1-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://abigaillinnemeyer.blogs.muhlenberg.edu/files/2018/11/cropped-002C16F8-AC29-4BA4-9E4C-C51C001BF757-1-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://abigaillinnemeyer.blogs.muhlenberg.edu/files/2018/11/cropped-002C16F8-AC29-4BA4-9E4C-C51C001BF757-1-270x270.jpg" />
+</head>
+<body class="bp-legacy archive date admin-bar no-customize-support custom-background no-js">
+        <div class="frame">
+      <div class="loader">
+        <div class="dot-1"></div>
+        <div class="dot-2"></div>
+        <div class="dot-3"></div>
+      </div>
+    </div>
+    <header role="banner">
+    <a class="screen-reader-text skip-link" href="#skip_content">Skip to content</a>
+    <div id="header">
+            <div class="logo_bar">
+        <div class="logo">
+                                                                        <p class="site-title"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/" rel="home">Abigail Linnemeyer</a></p>
+                                                                        <p class="site-description">
+                Performer, Choreographer, Administrator              </p>
+                              </div>
+      </div>
+              <div class="toggle-menu responsive-menu close-sticky ">
+          <button role="tab" class="mobiletoggle" onclick="multipurpose_blog_responsive_menu_open()"><i class="fas fa-bars"></i><span class="screen-reader-text">Open Menu</span>
+          </button>
+        </div>
+            <div id="navbar-header" class="menu-brand">
+        <div id="search">
+          <form role="search" method="get" class="search-form" action="http://abigaillinnemeyer.blogs.muhlenberg.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form>        </div>
+        <div class="responsive-menu close-sticky ">
+          <nav id="site-navigation" class="primary-navigation" role="navigation" aria-label="Top Menu">        
+          <div class="clearfix"><ul>
+<li class="page_item page-item-224"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=224">Artist Philosophy</a></li>
+<li class="page_item page-item-127"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/">Bio</a></li>
+<li class="page_item page-item-2"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=2">Career Plan</a></li>
+<li class="page_item page-item-238"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=238">Communication Skills</a></li>
+<li class="page_item page-item-199"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=199">Global Perspective</a></li>
+<li class="page_item page-item-236"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=236">Innovation</a></li>
+<li class="page_item page-item-218"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=218">Leadership Skills</a></li>
+<li class="page_item page-item-84"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=84">Resume</a></li>
+<li class="page_item page-item-190"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?page_id=190">Teamwork Skills</a></li>
+</ul></div>
+          </nav>
+        </div>
+        <div class="top-contact">
+                  </div>   
+        <div class="top-contact">
+                  </div>
+        <div class="socialbox">
+                                                </div>
+        <div class="clearfix"></div>
+          <a href="javascript:void(0)" class="closebtn responsive-menu" onclick="multipurpose_blog_responsive_menu_close()"><i class="fas fa-times"></i><span class="screen-reader-text">Close Menu</span></a>
+      </div>
+    </div>
+  </header>
+<main id="skip_content" role="main">
+    <div class="container">
+                    <div class="row">
+                <div id="our-services" class="services col-lg-8 col-md-8">
+                    <h1 class="page-title">Day: December 1, 2018</h1>                    <article id="post-183" class="inner-service post-183 post type-post status-publish format-standard hentry category-uncategorized">  
+    <h2 class="section-title"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?p=183" title="Management">Management<span class="screen-reader-text">Management</span></a></h2>
+         <div class="date-box"><i class="far fa-calendar-alt"></i><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?m=20181201">December 1, 2018<span class="screen-reader-text">December 1, 2018</span></a></div>  
+        <div class="box-image">
+          </div>
+    <div class="new-text">
+      <p>&nbsp; In my management course at Muhlenberg I was assigned a a team that I would be working with for the entirety of the semester. The four of us had[...]</p>
+    </div>  
+    <div class="cat-box">
+      <i class="fas fa-folder-open"></i><ul class="post-categories">
+	<li><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?cat=1" rel="category">Uncategorized</a></li></ul>    </div>
+    <div class="clearfix"></div>
+</article>                    <div class="navigation">
+                                                <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4"><div id="sidebar">    
+    <aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="http://abigaillinnemeyer.blogs.muhlenberg.edu/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-field" placeholder="Search" value="" name="s">
+	</label>
+	<input type="submit" class="search-submit" value="Search">
+</form></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?p=183">Management</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+				<li><a href='http://abigaillinnemeyer.blogs.muhlenberg.edu/?m=201812'>December 2018</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+				<li class="cat-item cat-item-1"><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?cat=1">Uncategorized</a>
+</li>
+		</ul>
+			</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+			<li><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?feed=rss2">Entries feed</a></li>
+			<li><a href="http://abigaillinnemeyer.blogs.muhlenberg.edu/?feed=comments-rss2">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</aside>  
+</div></div>
+            </div>
+            </div>
+</main>
+
+<div class="clearfix"></div>
+
+                <a href="#" id="scrollbutton"><i class="fas fa-long-arrow-alt-up"></i><span class="screen-reader-text">Back to Top</span></a>
+    <footer role="contentinfo">
+        <aside id="sidebar-footer" class="footer-wp" role="complementary" aria-label="Footer">
+        <div class="container">
+            <div class="row">
+                 
+                 
+                 
+                            </div> 
+        </div>  
+    </aside>
+    <div class="inner">
+        <div class="copyright-wrapper">
+            <p><a href=https://www.buywptemplates.com/themes/wp-multipurpose-blog-wordpress-theme/>Blog WordPress Theme</a> By Buywptemplate</p>
+        </div>
+        <div class="clear"></div>
+    </div>
+</footer>
+    
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/js/tether.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/js/bootstrap.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-content/themes/multipurpose-blog/js/jquery.superfish.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://abigaillinnemeyer.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fabigaillinnemeyer.blogs.muhlenberg.edu%2F%3Fm%3D20181201%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://abigaillinnemeyer.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		
+</body>
+</html>

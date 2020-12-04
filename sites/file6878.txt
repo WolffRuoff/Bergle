@@ -1,0 +1,737 @@
+http://thewescoeschool.blogs.muhlenberg.edu/2019/04/
+51
+
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" class="no-js">
+<!--<![endif]-->
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="profile"  href="https://gmpg.org/xfn/11" />
+  <link rel="pingback" href="http://thewescoeschool.blogs.muhlenberg.edu/xmlrpc.php" />
+  <!-- scripts for IE8 and less  -->
+  <!--[if lt IE 9]>
+    <script src="http://thewescoeschool.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/html5.js"></script>
+  <![endif]-->
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>April 2019</title>
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Feed" href="http://thewescoeschool.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title=" &raquo; Comments Feed" href="http://thewescoeschool.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='email-subscribers-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/email-subscribers/lite/public/css/email-subscribers-public.css?ver=4.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='customizr-main-css'  href='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/css/style.min.css?ver=4.3.4' type='text/css' media='all' />
+<style id='customizr-main-inline-css' type='text/css'>
+::-moz-selection{background-color:#a41d36}::selection{background-color:#a41d36}a,.btn-skin:active,.btn-skin:focus,.btn-skin:hover,.btn-skin.inverted,.grid-container__classic .post-type__icon,.post-type__icon:hover .icn-format,.grid-container__classic .post-type__icon:hover .icn-format,[class*='grid-container__'] .entry-title a.czr-title:hover,input[type=checkbox]:checked::before{color:#a41d36}.czr-css-loader > div ,.btn-skin,.btn-skin:active,.btn-skin:focus,.btn-skin:hover,.btn-skin-h-dark,.btn-skin-h-dark.inverted:active,.btn-skin-h-dark.inverted:focus,.btn-skin-h-dark.inverted:hover{border-color:#a41d36}.tc-header.border-top{border-top-color:#a41d36}[class*='grid-container__'] .entry-title a:hover::after,.grid-container__classic .post-type__icon,.btn-skin,.btn-skin.inverted:active,.btn-skin.inverted:focus,.btn-skin.inverted:hover,.btn-skin-h-dark,.btn-skin-h-dark.inverted:active,.btn-skin-h-dark.inverted:focus,.btn-skin-h-dark.inverted:hover,.sidebar .widget-title::after,input[type=radio]:checked::before{background-color:#a41d36}.btn-skin-light:active,.btn-skin-light:focus,.btn-skin-light:hover,.btn-skin-light.inverted{color:#db3352}input:not([type='submit']):not([type='button']):not([type='number']):not([type='checkbox']):not([type='radio']):focus,textarea:focus,.btn-skin-light,.btn-skin-light.inverted,.btn-skin-light:active,.btn-skin-light:focus,.btn-skin-light:hover,.btn-skin-light.inverted:active,.btn-skin-light.inverted:focus,.btn-skin-light.inverted:hover{border-color:#db3352}.btn-skin-light,.btn-skin-light.inverted:active,.btn-skin-light.inverted:focus,.btn-skin-light.inverted:hover{background-color:#db3352}.btn-skin-lightest:active,.btn-skin-lightest:focus,.btn-skin-lightest:hover,.btn-skin-lightest.inverted{color:#df4864}.btn-skin-lightest,.btn-skin-lightest.inverted,.btn-skin-lightest:active,.btn-skin-lightest:focus,.btn-skin-lightest:hover,.btn-skin-lightest.inverted:active,.btn-skin-lightest.inverted:focus,.btn-skin-lightest.inverted:hover{border-color:#df4864}.btn-skin-lightest,.btn-skin-lightest.inverted:active,.btn-skin-lightest.inverted:focus,.btn-skin-lightest.inverted:hover{background-color:#df4864}.pagination,a:hover,a:focus,a:active,.btn-skin-dark:active,.btn-skin-dark:focus,.btn-skin-dark:hover,.btn-skin-dark.inverted,.btn-skin-dark-oh:active,.btn-skin-dark-oh:focus,.btn-skin-dark-oh:hover,.post-info a:not(.btn):hover,.grid-container__classic .post-type__icon .icn-format,[class*='grid-container__'] .hover .entry-title a,.widget-area a:not(.btn):hover,a.czr-format-link:hover,.format-link.hover a.czr-format-link,button[type=submit]:hover,button[type=submit]:active,button[type=submit]:focus,input[type=submit]:hover,input[type=submit]:active,input[type=submit]:focus,.tabs .nav-link:hover,.tabs .nav-link.active,.tabs .nav-link.active:hover,.tabs .nav-link.active:focus{color:#701425}.grid-container__classic.tc-grid-border .grid__item,.btn-skin-dark,.btn-skin-dark.inverted,button[type=submit],input[type=submit],.btn-skin-dark:active,.btn-skin-dark:focus,.btn-skin-dark:hover,.btn-skin-dark.inverted:active,.btn-skin-dark.inverted:focus,.btn-skin-dark.inverted:hover,.btn-skin-h-dark:active,.btn-skin-h-dark:focus,.btn-skin-h-dark:hover,.btn-skin-h-dark.inverted,.btn-skin-h-dark.inverted,.btn-skin-h-dark.inverted,.btn-skin-dark-oh:active,.btn-skin-dark-oh:focus,.btn-skin-dark-oh:hover,.btn-skin-dark-oh.inverted:active,.btn-skin-dark-oh.inverted:focus,.btn-skin-dark-oh.inverted:hover,button[type=submit]:hover,button[type=submit]:active,button[type=submit]:focus,input[type=submit]:hover,input[type=submit]:active,input[type=submit]:focus{border-color:#701425}.btn-skin-dark,.btn-skin-dark.inverted:active,.btn-skin-dark.inverted:focus,.btn-skin-dark.inverted:hover,.btn-skin-h-dark:active,.btn-skin-h-dark:focus,.btn-skin-h-dark:hover,.btn-skin-h-dark.inverted,.btn-skin-h-dark.inverted,.btn-skin-h-dark.inverted,.btn-skin-dark-oh.inverted:active,.btn-skin-dark-oh.inverted:focus,.btn-skin-dark-oh.inverted:hover,.grid-container__classic .post-type__icon:hover,button[type=submit],input[type=submit],.czr-link-hover-underline .widgets-list-layout-links a:not(.btn)::before,.czr-link-hover-underline .widget_archive a:not(.btn)::before,.czr-link-hover-underline .widget_nav_menu a:not(.btn)::before,.czr-link-hover-underline .widget_rss ul a:not(.btn)::before,.czr-link-hover-underline .widget_recent_entries a:not(.btn)::before,.czr-link-hover-underline .widget_categories a:not(.btn)::before,.czr-link-hover-underline .widget_meta a:not(.btn)::before,.czr-link-hover-underline .widget_recent_comments a:not(.btn)::before,.czr-link-hover-underline .widget_pages a:not(.btn)::before,.czr-link-hover-underline .widget_calendar a:not(.btn)::before,[class*='grid-container__'] .hover .entry-title a::after,a.czr-format-link::before,.comment-author a::before,.comment-link::before,.tabs .nav-link.active::before{background-color:#701425}.btn-skin-dark-shaded:active,.btn-skin-dark-shaded:focus,.btn-skin-dark-shaded:hover,.btn-skin-dark-shaded.inverted{background-color:rgba(112,20,37,0.2)}.btn-skin-dark-shaded,.btn-skin-dark-shaded.inverted:active,.btn-skin-dark-shaded.inverted:focus,.btn-skin-dark-shaded.inverted:hover{background-color:rgba(112,20,37,0.8)}.tc-header,#tc-sn .tc-sn-inner,.czr-overlay,.add-menu-button,.tc-header .socials a,.tc-header .socials a:focus,.tc-header .socials a:active,.nav__utils,.nav__utils a,.nav__utils a:focus,.nav__utils a:active,.header-contact__info a,.header-contact__info a:focus,.header-contact__info a:active,.czr-overlay a:hover,.dropdown-menu,.tc-header .navbar-brand-sitename,[class*=nav__menu] .nav__link,[class*=nav__menu] .nav__link-wrapper .caret__dropdown-toggler,[class*=nav__menu] .dropdown-menu .nav__link,[class*=nav__menu] .dropdown-item .nav__link:hover,.tc-header form.czr-form label,.czr-overlay form.czr-form label,.tc-header .czr-form input:not([type='submit']):not([type='button']):not([type='number']):not([type='checkbox']):not([type='radio']),.tc-header .czr-form textarea,.tc-header .czr-form .form-control,.czr-overlay .czr-form input:not([type='submit']):not([type='button']):not([type='number']):not([type='checkbox']):not([type='radio']),.czr-overlay .czr-form textarea,.czr-overlay .czr-form .form-control,.tc-header h1,.tc-header h2,.tc-header h3,.tc-header h4,.tc-header h5,.tc-header h6{color:#d1d3d3}.tc-header .czr-form input:not([type='submit']):not([type='button']):not([type='number']):not([type='checkbox']):not([type='radio']),.tc-header .czr-form textarea,.tc-header .czr-form .form-control,.czr-overlay .czr-form input:not([type='submit']):not([type='button']):not([type='number']):not([type='checkbox']):not([type='radio']),.czr-overlay .czr-form textarea,.czr-overlay .czr-form .form-control{border-color:#d1d3d3}.ham__toggler-span-wrapper .line,[class*=nav__menu] .nav__title::before{background-color:#d1d3d3}.header-tagline,[class*=nav__menu] .nav__link:hover,[class*=nav__menu] .nav__link-wrapper .caret__dropdown-toggler:hover,[class*=nav__menu] .show:not(.dropdown-item) > .nav__link,[class*=nav__menu] .show:not(.dropdown-item) > .nav__link-wrapper .nav__link,.czr-highlight-contextual-menu-items [class*=nav__menu] li:not(.dropdown-item).current-active > .nav__link,.czr-highlight-contextual-menu-items [class*=nav__menu] li:not(.dropdown-item).current-active > .nav__link-wrapper .nav__link,.czr-highlight-contextual-menu-items [class*=nav__menu] .current-menu-item > .nav__link,.czr-highlight-contextual-menu-items [class*=nav__menu] .current-menu-item > .nav__link-wrapper .nav__link,[class*=nav__menu] .dropdown-item .nav__link,.czr-overlay a,.tc-header .socials a:hover,.nav__utils a:hover,.czr-highlight-contextual-menu-items .nav__utils a.current-active,.header-contact__info a:hover,.tc-header .czr-form .form-group.in-focus label,.czr-overlay .czr-form .form-group.in-focus label{color:rgba(209,211,211,0.7)}.nav__utils .ham-toggler-menu.czr-collapsed:hover .line{background-color:rgba(209,211,211,0.7)}.topbar-navbar__wrapper,.dropdown-item:not(:last-of-type){border-color:rgba(209,211,211,0.09)}.tc-header{border-bottom-color:rgba(209,211,211,0.09)}#tc-sn{outline-color:rgba(209,211,211,0.09)}.mobile-nav__container,.header-search__container,.mobile-nav__nav,.vertical-nav > li:not(:last-of-type){border-color:rgba(209,211,211,0.075)}.tc-header,#tc-sn .tc-sn-inner,.dropdown-menu,.dropdown-item:active,.dropdown-item:focus,.dropdown-item:hover{background-color:#7d868c}.sticky-transparent.is-sticky .mobile-sticky,.sticky-transparent.is-sticky .desktop-sticky,.sticky-transparent.is-sticky .mobile-nav__nav,.header-transparent:not(.is-sticky) .mobile-nav__nav,.header-transparent:not(.is-sticky) .dropdown-menu{background-color:rgba(125,134,140,0.9)}.czr-overlay{background-color:rgba(125,134,140,0.98)}.dropdown-item:before,.vertical-nav .caret__dropdown-toggler{background-color:rgba(130,121,115,0.045)}
+.grid-container__classic .czr__r-wGOC::before{padding-top:61.803398%}
+
+@media (min-width: 768px) {.grid-container__classic .czr__r-wGOC::before{padding-top:40%}}
+
+#czr-push-footer { display: none; visibility: hidden; }
+        .czr-sticky-footer #czr-push-footer.sticky-footer-enabled { display: block; }
+        
+</style>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var es_data = {"messages":{"es_empty_email_notice":"Please enter email address","es_rate_limit_notice":"You need to wait for sometime before subscribing again","es_single_optin_success_message":"Successfully Subscribed.","es_email_exists_notice":"Email Address already exists!","es_unexpected_error_notice":"Oops.. Unexpected error occurred.","es_invalid_email_notice":"Invalid email address","es_try_later_notice":"Please try after some time"},"es_ajax_url":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/email-subscribers/lite/public/js/email-subscribers-public.js?ver=4.6.0'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/libs/modernizr.min.js?ver=4.3.4'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CZRParams = {"assetsPath":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-content\/themes\/customizr\/assets\/front\/","mainScriptUrl":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-content\/themes\/customizr\/assets\/front\/js\/tc-scripts.min.js?4.3.4","deferFontAwesome":"1","fontAwesomeUrl":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-content\/themes\/customizr\/assets\/shared\/fonts\/fa\/css\/fontawesome-all.min.css?4.3.4","_disabled":[],"centerSliderImg":"1","isLightBoxEnabled":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"isAnchorScrollEnabled":"","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"czr-dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"czr-collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[data-toggle=\"czr-pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"timerOnScrollAllBrowsers":"1","centerAllImg":"1","HasComments":"","LoadModernizr":"1","stickyHeader":"","extLinksStyle":"","extLinksTargetExt":"","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn"],"id":[]},"imgSmartLoadEnabled":"1","imgSmartLoadOpts":{"parentSelectors":["[class*=grid-container], .article-container",".__before_main_wrapper",".widget-front",".post-related-articles",".tc-singular-thumbnail-wrapper"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"1","pluginCompats":[],"isWPMobile":"","menuStickyUserSettings":{"desktop":"stick_up","mobile":"stick_up"},"adminAjaxUrl":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/wp-admin\/admin-ajax.php","ajaxUrl":"http:\/\/thewescoeschool.blogs.muhlenberg.edu\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"74565b19d9"},"isDevMode":"","isModernStyle":"1","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"welcome":{"enabled":false,"content":"","dismissAction":"dismiss_welcome_note_front"}},"preloadGfonts":"1","googleFonts":"Source+Sans+Pro"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/themes/customizr/assets/front/js/tc-scripts.min.js?ver=4.3.4' defer></script>
+<link rel='https://api.w.org/' href='http://thewescoeschool.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://thewescoeschool.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://thewescoeschool.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://thewescoeschool.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//thewescoeschool.blogs.muhlenberg.edu/?wordfence_lh=1&hid=CD1A88BEC406D134A25064454CF88409');
+</script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	<link rel="icon" href="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/01/cropped-New-Wescoe-Logo-11-23-15-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/01/cropped-New-Wescoe-Logo-11-23-15-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/01/cropped-New-Wescoe-Logo-11-23-15-180x180.jpg" />
+<meta name="msapplication-TileImage" content="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/01/cropped-New-Wescoe-Logo-11-23-15-270x270.jpg" />
+</head>
+
+  <body class="bp-legacy archive date admin-bar no-customize-support wp-custom-logo wp-embed-responsive czr-link-hover-underline header-skin-custom footer-skin-dark czr-no-sidebar tc-center-images czr-full-layout customizr-4-3-4 czr-post-list-context czr-sticky-footer no-js">
+          <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+    
+    
+    <div id="tc-page-wrap" class="">
+
+      <header class="tpnav-header__header tc-header sl-logo_left sticky-brand-shrink-on sticky-transparent czr-submenu-fade czr-submenu-move" >
+    <div class="topbar-navbar__wrapper " >
+  <div class="container">
+        <div class="row flex-row flex-lg-nowrap justify-content-start justify-content-lg-end align-items-center topbar-navbar__row">
+                    <div class="topbar-nav__container col col-auto d-none d-lg-flex">
+          <nav id="topbar-nav" class="topbar-nav__nav">
+            <div class="nav__menu-wrapper topbar-nav__menu-wrapper czr-open-on-hover" >
+</div>          </nav>
+        </div>
+                          <div class="topbar-nav__socials social-links col col-auto ">
+          <ul class="socials " >
+  <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-facebook"  title="Follow us on Facebook" aria-label="Follow us on Facebook" href="http://www.facebook.com/wescoeschool"  target="_blank" ><i class="fab fa-facebook"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-twitter"  title="Follow us on Twitter" aria-label="Follow us on Twitter" href="http://www.twitter.com/wescoeschool"  target="_blank" ><i class="fab fa-twitter"></i></a></li></ul>
+        </div>
+                </div>
+      </div>
+</div>    <div class="primary-navbar__wrapper d-none d-lg-block has-horizontal-menu has-branding-aside desktop-sticky" >
+  <div class="container">
+    <div class="row align-items-center flex-row primary-navbar__row">
+      <div class="branding__container col col-auto" >
+  <div class="branding align-items-center flex-column ">
+    <div class="branding-row d-flex align-self-start flex-row align-items-center">
+      <div class="navbar-brand col-auto " >
+  <a class="navbar-brand-sitelogo" href="http://thewescoeschool.blogs.muhlenberg.edu/"  aria-label=" | Continuing Education for Adult Students" >
+    <img src="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/06/cropped-muhl_wescoe_RGB_color-e1556733729613.png" alt="Back Home" class="" width="400" height="115" style="max-width:250px;max-height:100px" data-no-retina>  </a>
+</div>
+          <div class="branding-aside col-auto flex-column d-flex">
+          <span class="navbar-brand col-auto " >
+    <a class="navbar-brand-sitename " href="http://thewescoeschool.blogs.muhlenberg.edu/">
+    <span></span>
+  </a>
+</span>
+          </div>
+                </div>
+    <span class="header-tagline " >
+  Continuing Education for Adult Students</span>
+
+  </div>
+</div>
+      <div class="primary-nav__container justify-content-lg-around col col-lg-auto flex-lg-column" >
+  <div class="primary-nav__wrapper flex-lg-row align-items-center justify-content-end">
+              <nav class="primary-nav__nav col" id="primary-nav">
+          <div class="nav__menu-wrapper primary-nav__menu-wrapper justify-content-end czr-open-on-hover" >
+<ul id="main-menu" class="primary-nav__menu regular-nav nav__menu nav"><li id="menu-item-523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-523"><a href="http://www.muhlenberg.edu/wescoe" class="nav__link"><span class="nav__title">Home</span></a></li>
+<li id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="https://wescoeadmissions.muhlenberg.edu/register/RequestInformation" class="nav__link"><span class="nav__title">Contact</span></a></li>
+</ul></div>        </nav>
+    <div class="primary-nav__utils nav__utils col-auto" >
+    <ul class="nav utils flex-row flex-nowrap regular-nav">
+      <li class="nav__search " >
+  <a href="#" class="search-toggle_btn icn-search czr-overlay-toggle_btn"  aria-expanded="false"><span class="sr-only">Search</span></a>
+        <div class="czr-search-expand">
+      <div class="czr-search-expand-inner"><div class="search-form__container " >
+  <form action="http://thewescoeschool.blogs.muhlenberg.edu/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-5fca2fa78f39f" id="lsearch-5fca2fa78f39f">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-5fca2fa78f39f" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-5fca2fa78f39f" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></div>
+    </div>
+    </li>
+    </ul>
+</div>  </div>
+</div>
+    </div>
+  </div>
+</div>    <div class="mobile-navbar__wrapper d-lg-none mobile-sticky" >
+    <div class="branding__container justify-content-between align-items-center container" >
+  <div class="branding flex-column">
+    <div class="branding-row d-flex align-self-start flex-row align-items-center">
+      <div class="navbar-brand col-auto " >
+  <a class="navbar-brand-sitelogo" href="http://thewescoeschool.blogs.muhlenberg.edu/"  aria-label=" | Continuing Education for Adult Students" >
+    <img src="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/06/cropped-muhl_wescoe_RGB_color-e1556733729613.png" alt="Back Home" class="" width="400" height="115" style="max-width:250px;max-height:100px" data-no-retina>  </a>
+</div>
+            <div class="branding-aside col-auto">
+              <span class="navbar-brand col-auto " >
+    <a class="navbar-brand-sitename " href="http://thewescoeschool.blogs.muhlenberg.edu/">
+    <span></span>
+  </a>
+</span>
+            </div>
+            </div>
+    <span class="header-tagline col col-auto" >
+  Continuing Education for Adult Students</span>
+
+  </div>
+  <div class="mobile-utils__wrapper nav__utils regular-nav">
+    <ul class="nav utils row flex-row flex-nowrap">
+      <li class="nav__search " >
+  <a href="#" class="search-toggle_btn icn-search czr-dropdown" data-aria-haspopup="true" aria-expanded="false"><span class="sr-only">Search</span></a>
+        <div class="czr-search-expand">
+      <div class="czr-search-expand-inner"><div class="search-form__container " >
+  <form action="http://thewescoeschool.blogs.muhlenberg.edu/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-5fca2fa78fb5b" id="lsearch-5fca2fa78fb5b">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-5fca2fa78fb5b" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-5fca2fa78fb5b" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></div>
+    </div>
+        <ul class="dropdown-menu czr-dropdown-menu">
+      <li class="header-search__container container">
+  <div class="search-form__container " >
+  <form action="http://thewescoeschool.blogs.muhlenberg.edu/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-5fca2fa78fd7c" id="lsearch-5fca2fa78fd7c">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-5fca2fa78fd7c" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-5fca2fa78fd7c" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></li>    </ul>
+  </li>
+<li class="hamburger-toggler__container " >
+  <button class="ham-toggler-menu czr-collapsed" data-toggle="czr-collapse" data-target="#mobile-nav"><span class="ham__toggler-span-wrapper"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></span><span class="screen-reader-text">Menu</span></button>
+</li>
+    </ul>
+  </div>
+</div>
+<div class="mobile-nav__container " >
+   <nav class="mobile-nav__nav flex-column czr-collapse" id="mobile-nav">
+      <div class="mobile-nav__inner container">
+      <div class="nav__menu-wrapper mobile-nav__menu-wrapper czr-open-on-click" >
+<ul id="mobile-nav-menu" class="mobile-nav__menu vertical-nav nav__menu flex-column nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-523"><a href="http://www.muhlenberg.edu/wescoe" class="nav__link"><span class="nav__title">Home</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-13"><a href="https://wescoeadmissions.muhlenberg.edu/register/RequestInformation" class="nav__link"><span class="nav__title">Contact</span></a></li>
+</ul></div>      </div>
+  </nav>
+</div></div></header>
+
+
+  
+    <div id="main-wrapper" class="section">
+
+                      
+
+          <div class="czr-hot-crumble container page-breadcrumbs" role="navigation" >
+  <div class="row">
+        <nav class="breadcrumbs col-12"><span class="trail-begin"><a href="http://thewescoeschool.blogs.muhlenberg.edu" title="" rel="home" class="trail-begin">Home</a></span> <span class="sep">&raquo;</span> <a href="http://thewescoeschool.blogs.muhlenberg.edu/2019/" title="2019">2019</a> <span class="sep">&raquo;</span> <span class="trail-end">April</span></nav>  </div>
+</div>
+          <div class="container" role="main">
+
+            
+            <div class="flex-row row column-content-wrapper">
+
+                
+                <div id="content" class="col-12 article-container">
+
+                  <header class="archive-header " >
+  <div class="archive-header-inner">
+        <h1 class="archive-title">
+      Monthly Archives:&nbsp;<span>April 2019</span>    </h1>
+          <div class="header-bottom">
+        <span>
+          3 posts        </span>
+      </div>
+                    <hr class="featurette-divider">
+        </div>
+</header><div id="czr_grid-5fca2fa7859d4" class="grid-container grid-container__classic tc-grid-shadow tc-grid-border tc-grid-hover-move" >
+  <div class="grid__wrapper grid">
+  <section class="row grid__section cols-3 grid-section-not-featured">
+  <article id="post-730" class="grid-item col-12 col-md-6 col-xl-4 col-lg-4 post-730 post type-post status-publish format-standard has-post-thumbnail category-continuing-education-2 tag-communication tag-critical-thinking tag-hiring tag-ideal-employees tag-ideal-job-candidates tag-interviews tag-skill-development tag-soft-skills tag-workplace-essentials tag-workplace-skills czr-hentry" >
+  <section class="grid__item">
+    <div class="tc-grid-figure entry-media__holder has-thumb czr__r-wGR js-centering">
+      <div class="entry-media__wrapper czr__r-i">
+        <a class="bg-link" href="http://thewescoeschool.blogs.muhlenberg.edu/essential-workplace-skills-how-to-succeed-at-any-modern-company/"></a>
+        <img  width="570" height="350"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/01/WescoeLVHN-1110-570x350.jpg"  class="attachment-tc-grid tc-thumb-type-thumb czr-img wp-post-image" alt="" />      </div>
+      <div class="tc-grid-caption">
+          <div class="entry-summary ">
+                        <div class="tc-g-cont czr-talign"><p>In today’s typical job interview, employers spend less time testing candidates on specific technical knowledge or practiced tasks like typing, math knowledge, and industry related procedures than before. What’s their new focus? Soft skills. Soft skills are less about memorization, more about interpersonal interaction like critical thinking, team-building, and communication. [&hellip;]</p></div>
+                      </div>
+                </div>
+
+          </div>
+      <div class="tc-content">
+      <header class="entry-header " >
+  <div class="entry-header-inner ">
+            <div class="tax__container post-info entry-meta">
+          <a class="tax__link" href="http://thewescoeschool.blogs.muhlenberg.edu/category/continuing-education-2/" title="View all posts in Continuing Education"> <span>Continuing Education</span> </a>        </div>
+              <h2 class="entry-title">
+      <a class="czr-title" href="http://thewescoeschool.blogs.muhlenberg.edu/essential-workplace-skills-how-to-succeed-at-any-modern-company/" rel="bookmark">Essential Workplace Skills: How to Succeed at any Modern Company</a>
+    </h2>
+            </div>
+</header>      <footer class="entry-footer" >      <div class="post-tags entry-meta">
+        <ul class="tags">
+          <li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/communication/" title="View all posts in communication"> <span>communication</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/critical-thinking/" title="View all posts in critical thinking"> <span>critical thinking</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/hiring/" title="View all posts in hiring"> <span>hiring</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/ideal-employees/" title="View all posts in ideal employees"> <span>ideal employees</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/ideal-job-candidates/" title="View all posts in ideal job candidates"> <span>ideal job candidates</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/interviews/" title="View all posts in interviews"> <span>interviews</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/skill-development/" title="View all posts in skill development"> <span>skill development</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/soft-skills/" title="View all posts in soft skills"> <span>soft skills</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/workplace-essentials/" title="View all posts in workplace essentials"> <span>workplace essentials</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/workplace-skills/" title="View all posts in workplace skills"> <span>workplace skills</span> </a></li>        </ul>
+      </div>
+            <div class="post-info clearfix entry-meta">
+
+          <div class="row flex-row">
+            <div class="col col-auto"><span class="author-meta">by <span class="author vcard"><span class="author_name"><a class="url fn n" href="http://thewescoeschool.blogs.muhlenberg.edu/author/amybeeee/" title="View all posts by Amy Benninger" rel="author">Amy Benninger</a></span></span></span></div>              <div class="col col-auto">
+                <div class="row">
+                  <div class="col col-auto">Published <a href="http://thewescoeschool.blogs.muhlenberg.edu/essential-workplace-skills-how-to-succeed-at-any-modern-company/" title="Permalink to:&nbsp;Essential Workplace Skills: How to Succeed at any Modern Company" rel="bookmark"><time class="entry-date published updated" datetime="April 26, 2019">April 26, 2019</time></a></div>                </div>
+              </div>
+                      </div>
+        </div>
+            </footer>    </div>
+    </section>
+</article><article id="post-726" class="grid-item col-12 col-md-6 col-xl-4 col-lg-4 post-726 post type-post status-publish format-standard has-post-thumbnail category-continuing-education-2 tag-career-change tag-career-changes tag-continuing-ed tag-continuing-ed-classes tag-continuing-education czr-hentry" >
+  <section class="grid__item">
+    <div class="tc-grid-figure entry-media__holder has-thumb czr__r-wGR js-centering">
+      <div class="entry-media__wrapper czr__r-i">
+        <a class="bg-link" href="http://thewescoeschool.blogs.muhlenberg.edu/returning-to-school-for-a-career-change/"></a>
+        <img  width="570" height="350"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://thewescoeschool.blogs.muhlenberg.edu/files/2019/04/IMG_5063-1024x683-570x350.jpg"  class="attachment-tc-grid tc-thumb-type-thumb czr-img wp-post-image" alt="" />      </div>
+      <div class="tc-grid-caption">
+          <div class="entry-summary ">
+                        <div class="tc-g-cont czr-talign"><p>Unfortunately, too many people often find themselves unable to find a job in a career they wanted to pursue or find themselves pondering if they’re truly passionate about what they received their degree in. These are frustrating dilemmas to face. Luckily, there are options available for students wishing to change [&hellip;]</p></div>
+                      </div>
+                </div>
+
+          </div>
+      <div class="tc-content">
+      <header class="entry-header " >
+  <div class="entry-header-inner ">
+            <div class="tax__container post-info entry-meta">
+          <a class="tax__link" href="http://thewescoeschool.blogs.muhlenberg.edu/category/continuing-education-2/" title="View all posts in Continuing Education"> <span>Continuing Education</span> </a>        </div>
+              <h2 class="entry-title">
+      <a class="czr-title" href="http://thewescoeschool.blogs.muhlenberg.edu/returning-to-school-for-a-career-change/" rel="bookmark">Returning to School for a Career Change</a>
+    </h2>
+            </div>
+</header>      <footer class="entry-footer" >      <div class="post-tags entry-meta">
+        <ul class="tags">
+          <li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/career-change/" title="View all posts in career change"> <span>career change</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/career-changes/" title="View all posts in career changes"> <span>career changes</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/continuing-ed/" title="View all posts in continuing ed"> <span>continuing ed</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/continuing-ed-classes/" title="View all posts in continuing ed classes"> <span>continuing ed classes</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="http://thewescoeschool.blogs.muhlenberg.edu/tag/continuing-education/" title="View all posts in Continuing education"> <span>Continuing education</span> </a></li>        </ul>
+      </div>
+            <div class="post-info clearfix entry-meta">
+
+          <div class="row flex-row">
+            <div class="col col-auto"><span class="author-meta">by <span class="author vcard"><span class="author_name"><a class="url fn n" href="http://thewescoeschool.blogs.muhlenberg.edu/author/amybeeee/" title="View all posts by Amy Benninger" rel="author">Amy Benninger</a></span></span></span></div>              <div class="col col-auto">
+                <div class="row">
+                  <div class="col col-auto">Published <a href="http://thewescoeschool.blogs.muhlenberg.edu/returning-to-school-for-a-career-change/" title="Permalink to:&nbsp;Returning to School for a Career Change" rel="bookmark"><time class="entry-date published updated" datetime="April 25, 2019">April 25, 2019</time></a></div>                </div>
+              </div>
+                      </div>
+        </div>
+            </footer>    </div>
+    </section>
+</article><article id="post-723" class="grid-item col-12 col-md-6 col-xl-4 col-lg-4 post-723 post type-post status-publish format-standard has-post-thumbnail category-continuing-education-2 czr-hentry" >
+  <section class="grid__item">
+    <div class="tc-grid-figure entry-media__holder has-thumb czr__r-wGR js-centering">
+      <div class="entry-media__wrapper czr__r-i">
+        <a class="bg-link" href="http://thewescoeschool.blogs.muhlenberg.edu/make-your-dream-of-teaching-a-reality/"></a>
+        <img  width="570" height="350"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="http://thewescoeschool.blogs.muhlenberg.edu/files/2018/06/casey-j-570x350.png"  class="attachment-tc-grid tc-thumb-type-thumb czr-img wp-post-image" alt="" />      </div>
+      <div class="tc-grid-caption">
+          <div class="entry-summary ">
+                        <div class="tc-g-cont czr-talign"><p>According to a report by the National Commission on Teaching and America’s Future, the United States will lose approximately 2 million teachers in the next ten years to retirement. On top of that staggering number, over one-third of new teachers will leave the classroom within five years for other reasons. [&hellip;]</p></div>
+                      </div>
+                </div>
+
+          </div>
+      <div class="tc-content">
+      <header class="entry-header " >
+  <div class="entry-header-inner ">
+            <div class="tax__container post-info entry-meta">
+          <a class="tax__link" href="http://thewescoeschool.blogs.muhlenberg.edu/category/continuing-education-2/" title="View all posts in Continuing Education"> <span>Continuing Education</span> </a>        </div>
+              <h2 class="entry-title">
+      <a class="czr-title" href="http://thewescoeschool.blogs.muhlenberg.edu/make-your-dream-of-teaching-a-reality/" rel="bookmark">Make Your Dream of Teaching a Reality</a>
+    </h2>
+            </div>
+</header>      <footer class="entry-footer" >        <div class="post-info clearfix entry-meta">
+
+          <div class="row flex-row">
+            <div class="col col-auto"><span class="author-meta">by <span class="author vcard"><span class="author_name"><a class="url fn n" href="http://thewescoeschool.blogs.muhlenberg.edu/author/amybeeee/" title="View all posts by Amy Benninger" rel="author">Amy Benninger</a></span></span></span></div>              <div class="col col-auto">
+                <div class="row">
+                  <div class="col col-auto">Published <a href="http://thewescoeschool.blogs.muhlenberg.edu/make-your-dream-of-teaching-a-reality/" title="Permalink to:&nbsp;Make Your Dream of Teaching a Reality" rel="bookmark"><time class="entry-date published updated" datetime="April 25, 2019">April 25, 2019</time></a></div>                </div>
+              </div>
+                      </div>
+        </div>
+            </footer>    </div>
+    </section>
+</article>  </section>
+    </div>
+</div>
+
+<div id="czr-comments" class="comments-area " >
+      </div>                </div>
+
+                
+            </div><!-- .column-content-wrapper -->
+
+            
+
+          </div><!-- .container -->
+
+          <div id="czr-push-footer" ></div>
+    </div><!-- #main-wrapper -->
+
+    
+          <div class="container-fluid">
+              </div>
+    
+<footer id="footer" class="footer__wrapper" >
+  <div id="footer-widget-area" class="widget__wrapper" role="complementary" >
+  <div class="container widget__container">
+    <div class="row">
+                      <div id="footer_one" class="col-md-4 col-12">
+            <aside id="pages-3" class="widget widget_pages"><h5 class="widget-title">Pages</h5>		<ul>
+			<li class="page_item page-item-2"><a href="http://thewescoeschool.blogs.muhlenberg.edu/sample-page/">Contact</a></li>
+		</ul>
+			</aside>          </div>
+                  <div id="footer_two" class="col-md-4 col-12">
+            <aside id="archives-4" class="widget widget_archive"><h5 class="widget-title">Archives</h5>		<ul>
+				<li><a href='http://thewescoeschool.blogs.muhlenberg.edu/2019/04/' aria-current="page">April 2019</a></li>
+		</ul>
+			</aside>          </div>
+                  <div id="footer_three" class="col-md-4 col-12">
+            <aside id="meta-4" class="widget widget_meta"><h5 class="widget-title">Meta</h5>			<ul>
+						<li><a href="http://thewescoeschool.blogs.muhlenberg.edu/wp-login.php">Log in</a></li>
+			<li><a href="http://thewescoeschool.blogs.muhlenberg.edu/feed/">Entries feed</a></li>
+			<li><a href="http://thewescoeschool.blogs.muhlenberg.edu/comments/feed/">Comments feed</a></li>
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>			</ul>
+			</aside>          </div>
+                  </div>
+  </div>
+</div>
+<div id="colophon" class="colophon " >
+  <div class="container">
+    <div class="colophon__row row flex-row justify-content-between">
+      <div class="col-12 col-sm-auto">
+        <div id="footer__credits" class="footer__credits" >
+  <p class="czr-copyright">
+    <span class="czr-copyright-text">&copy;&nbsp;2020&nbsp;</span><a class="czr-copyright-link" href="http://thewescoeschool.blogs.muhlenberg.edu" title=""></a><span class="czr-rights-text">&nbsp;&ndash;&nbsp;All rights reserved</span>
+  </p>
+  <p class="czr-credits">
+    <span class="czr-designer">
+      <span class="czr-wp-powered"><span class="czr-wp-powered-text">Powered by&nbsp;</span><a class="czr-wp-powered-link fab fa-wordpress" title="Powered by WordPress" href="https://wordpress.org/" target="_blank" rel="noopener noreferrer"></a></span><span class="czr-designer-text">&nbsp;&ndash;&nbsp;Designed with the <a class="czr-designer-link" href="https://presscustomizr.com/customizr" title="Customizr theme">Customizr theme</a></span>
+    </span>
+  </p>
+</div>
+      </div>
+            <div class="col-12 col-sm-auto">
+        <div class="social-links">
+          <ul class="socials " >
+  <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-facebook"  title="Follow us on Facebook" aria-label="Follow us on Facebook" href="http://www.facebook.com/wescoeschool"  target="_blank" ><i class="fab fa-facebook"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-twitter"  title="Follow us on Twitter" aria-label="Follow us on Twitter" href="http://www.twitter.com/wescoeschool"  target="_blank" ><i class="fab fa-twitter"></i></a></li></ul>
+        </div>
+      </div>
+          </div>
+  </div>
+</div>
+</footer>
+    </div><!-- end #tc-page-wrap -->
+
+    <button class="btn czr-btt czr-btta right" ><i class="icn-up-small"></i></button>
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='http://thewescoeschool.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://thewescoeschool.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Fthewescoeschool.blogs.muhlenberg.edu%2F2019%2F04%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://thewescoeschool.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		  </body>
+  </html>

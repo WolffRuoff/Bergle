@@ -1,0 +1,875 @@
+http://fys142f15.blogs.muhlenberg.edu/page/5/
+176
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>
+Who Controls Your Digital World? | FYS 142 Course Site | Page 5	</title>
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<link rel="stylesheet" type="text/css" media="all" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/style.css?ver=20190507" />
+<link rel="pingback" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php">
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Feed" href="http://fys142f15.blogs.muhlenberg.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Who Controls Your Digital World? &raquo; Comments Feed" href="http://fys142f15.blogs.muhlenberg.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/wp-emoji.js?ver=a53ced0a4e7746787c23520c6012a8e7","twemoji":"http:\/\/fys142f15.blogs.muhlenberg.edu\/wp-includes\/js\/twemoji.js?ver=a53ced0a4e7746787c23520c6012a8e7"}};
+			/**
+ * @output wp-includes/js/wp-emoji-loader.js
+ */
+
+( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	// Create a canvas element for testing native browser support of emoji.
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Checks if two sets of Emoji characters render the same visually.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @private
+	 *
+	 * @param {number[]} set1 Set of Emoji character codes.
+	 * @param {number[]} set2 Set of Emoji character codes.
+	 *
+	 * @return {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detects if the browser supports rendering emoji or flag emoji.
+	 *
+	 * Flag emoji are a single glyph made of two characters, so some browsers
+	 * (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @private
+	 *
+	 * @param {string} type Whether to test for support of "flag" or "emoji".
+	 *
+	 * @return {boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for Transgender flag compatibility. This flag is shortlisted for the Emoji 13 spec,
+				 * but has landed in Twemoji early, so we can add support for it, too.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + transgender symbol).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0x1F3F3, 0xFE0F, 0x200D, 0x26A7, 0xFE0F ],
+					[ 0x1F3F3, 0xFE0F, 0x200B, 0x26A7, 0xFE0F ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDDFA, 0xD83C, 0xDDF3 ],
+					[ 0xD83C, 0xDDFA, 0x200B, 0xD83C, 0xDDF3 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 0xD83C, 0xDFF4, 0xDB40, 0xDC67, 0xDB40, 0xDC62, 0xDB40, 0xDC65, 0xDB40, 0xDC6E, 0xDB40, 0xDC67, 0xDB40, 0xDC7F ],
+					[ 0xD83C, 0xDFF4, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC62, 0x200B, 0xDB40, 0xDC65, 0x200B, 0xDB40, 0xDC6E, 0x200B, 0xDB40, 0xDC67, 0x200B, 0xDB40, 0xDC7F ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * Love is love.
+				 *
+				 * To test for Emoji 12 support, try to render a new emoji: men holding hands, with different skin
+				 * tone modifiers.
+				 *
+				 * When updating this test for future Emoji releases, ensure that individual emoji that make up the
+				 * sequence come from older emoji standards.
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200D, 0xD83E, 0xDD1D, 0x200D, 0xD83D, 0xDC68, 0xD83C, 0xDFFC],
+					[0xD83D, 0xDC68, 0xD83C, 0xDFFE, 0x200B, 0xD83E, 0xDD1D, 0x200B, 0xD83D, 0xDC68, 0xD83C, 0xDFFC]
+				);
+
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	/**
+	 * Adds a script to the head of the document.
+	 *
+	 * @ignore
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param {Object} src The url where the script is located.
+	 * @return {void}
+	 */
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	/*
+	 * Tests the browser support for flag emojis and other emojis, and adjusts the
+	 * support settings accordingly.
+	 */
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	// Sets DOMReady to false and assigns a ready function to settings.
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	// When the browser can not render everything we need to load a polyfill.
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		/*
+		 * Cross-browser version of adding a dom ready event.
+		 */
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='dashicons-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dashicons.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/admin-bar.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/style.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-includes/css/dist/block-library/theme.css?ver=a53ced0a4e7746787c23520c6012a8e7' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-member-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-members/css/blocks/member.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-group-block-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-groups/css/blocks/group.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-admin-bar-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/css/admin-bar.css?ver=6.3.0' type='text/css' media='all' />
+<link rel='stylesheet' id='bp-legacy-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/buddypress.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='bp-twentyten-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/css/twentyten.css?ver=6.3.0' type='text/css' media='screen' />
+<link rel='stylesheet' id='collapseomatic-css-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/light_style.css?ver=1.6' type='text/css' media='all' />
+<link rel='stylesheet' id='twentyten-block-style-css'  href='http://fys142f15.blogs.muhlenberg.edu/wp-content/themes/twentyten/blocks.css?ver=20181218' type='text/css' media='all' />
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/confirm.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/widget-members.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/jquery-query.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-cookie.js?ver=6.3.0'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-core/js/vendor/jquery-scroll-to.js?ver=6.3.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var BP_DTheme = {"accepted":"Accepted","close":"Close","comments":"comments","leave_group_confirm":"Are you sure you want to leave this group?","mark_as_fav":"Favorite","my_favs":"My Favorites","rejected":"Rejected","remove_fav":"Remove Favorite","show_all":"Show all","show_all_comments":"Show all comments for this thread","show_x_comments":"Show all comments (%d)","unsaved_changes":"Your profile has unsaved changes. If you leave the page, the changes will be lost.","view":"View","store_filter_settings":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/buddypress/bp-templates/bp-legacy/js/buddypress.js?ver=6.3.0'></script>
+<link rel='https://api.w.org/' href='http://fys142f15.blogs.muhlenberg.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://fys142f15.blogs.muhlenberg.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://fys142f15.blogs.muhlenberg.edu/wp-includes/wlwmanifest.xml" /> 
+
+<link rel="stylesheet" type="text/css" href="http://fys142f15.blogs.muhlenberg.edu/wp-content/mu-plugins/wp-recaptcha/recaptcha.css" />
+	<script type="text/javascript">var ajaxurl = 'http://fys142f15.blogs.muhlenberg.edu/wp-admin/admin-ajax.php';</script>
+
+<meta name="framework" content="Alkivia Framework 0.8" />
+<script type="text/javascript">
+	window._se_plugin_version = '8.1.9';
+</script>
+<script type="text/javascript">
+(function(url){
+	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
+	var addEvent = function(evt, handler) {
+		if (window.addEventListener) {
+			document.addEventListener(evt, handler, false);
+		} else if (window.attachEvent) {
+			document.attachEvent('on' + evt, handler);
+		}
+	};
+	var removeEvent = function(evt, handler) {
+		if (window.removeEventListener) {
+			document.removeEventListener(evt, handler, false);
+		} else if (window.detachEvent) {
+			document.detachEvent('on' + evt, handler);
+		}
+	};
+	var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+	var logHuman = function() {
+		if (window.wfLogHumanRan) { return; }
+		window.wfLogHumanRan = true;
+		var wfscr = document.createElement('script');
+		wfscr.type = 'text/javascript';
+		wfscr.async = true;
+		wfscr.src = url + '&r=' + Math.random();
+		(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(wfscr);
+		for (var i = 0; i < evts.length; i++) {
+			removeEvent(evts[i], logHuman);
+		}
+	};
+	for (var i = 0; i < evts.length; i++) {
+		addEvent(evts[i], logHuman);
+	}
+})('//fys142f15.blogs.muhlenberg.edu/?wordfence_lh=1&hid=CD13A2FD43B80727654774555BAD3D4E');
+</script><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("http://fys142f15.blogs.muhlenberg.edu/files/2015/08/fyswordcloud3.png"); background-position: left top; background-size: auto; background-repeat: repeat; background-attachment: scroll; }
+</style>
+	<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+	<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+	</head>
+
+<body class="home-page bp-legacy home blog paged admin-bar no-customize-support custom-background paged-5 no-js">
+<div id="wrapper" class="hfeed">
+	<div id="header">
+		<div id="masthead">
+			<div id="branding" role="banner">
+								<h1 id="site-title">
+					<span>
+						<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">Who Controls Your Digital World?</a>
+					</span>
+				</h1>
+				<div id="site-description">FYS 142 Course Site</div>
+
+									<img src="" width="940" height="198" alt="" />
+								</div><!-- #branding -->
+
+			<div id="access" role="navigation">
+								<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+				<div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-2344" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2344"><a href="http://fys142f15.blogs.muhlenberg.edu/about-2/">FYS 142</a></li>
+<li id="menu-item-2345" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2345"><a href="http://fys142f15.blogs.muhlenberg.edu/contact/">Contact</a></li>
+<li id="menu-item-2346" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2346"><a href="http://fys142f15.blogs.muhlenberg.edu/course-requirements-and-grading/">Course Requirements and Grading</a></li>
+<li id="menu-item-2347" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2347"><a href="http://fys142f15.blogs.muhlenberg.edu/course-calendar/">Course Calendar</a></li>
+<li id="menu-item-2348" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2348"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/">Class Schedule and Topic Outline</a></li>
+<li id="menu-item-2349" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-home menu-item-2349"><a href="http://fys142f15.blogs.muhlenberg.edu/">Class Blog</a></li>
+</ul></div>			</div><!-- #access -->
+		</div><!-- #masthead -->
+	</div><!-- #header -->
+
+	<div id="main">
+
+		<div id="container">
+			<div id="content" role="main">
+
+			
+	<div id="nav-above" class="navigation">
+		<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/6/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+		<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/page/4/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+	</div><!-- #nav-above -->
+
+
+
+	
+			<div id="post-2774" class="post-2774 post type-post status-publish format-standard hentry category-blog-assignment category-encyclopediawikipedia tag-does-facebook-really-bring-people-closer-together tag-facebook-envy tag-jealousy">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-fire-of-facebook-envy/" rel="bookmark">The Fire of Facebook Envy</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-fire-of-facebook-envy/" title="8:58 pm" rel="bookmark"><span class="entry-date">October 7, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/kirving/" title="View all posts by Kevin">Kevin</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Facebook is a social media website used by over 500 million different people. It connects the world and brings people closer together but pushes people further apart at the same time.</p>
+<p>Do you ever get jealous of that kid with that really cool house? Or that girl who has it all, nice clothes, shoes and jewelry? Imagine that jealousy and multiply it by thirty. Doesn’t feel too good does it? Kids on Facebook today are envious and some very unhappy due to the exposure of positive, yet misrepresented highlights from their peers. The reason I say multiply your jealousy by thirty is because online the jealousy is everywhere, there’s no getting around it, there’s no way out. Three hundred and forty eight. That is the average number of friends each Facebook user has. That is three hundred and forty eight people who display on Facebook only the positive aspects of their lives while keeping the negative out of reach of the internet and hidden within themselves. The distorted view Facebook users’ get of their friends has them logging off at night doubting themselves and not appreciating everything in their lives. This creates a sort of envy firing up in the stomachs of Facebooks many users. And while this type of envy not only has Facebook users drooling over what others have that they don’t have, it has profound effects on other aspects of life as well. The dangers of Facebook may even come from within the users themselves as the article states, “Facebook can lead to severe depression, <a href="https://en.wikipedia.org/wiki/Self-hatred">self-loathing</a>, <a href="https://en.wikipedia.org/wiki/Rage_(emotion)">rage</a> and hatred, <a href="https://en.wikipedia.org/wiki/Resentment">resentment</a>, feelings of inferiority and insecurity, pessimism, suicidal tendencies and desires, <a href="https://en.wikipedia.org/wiki/Social_isolation">social isolation</a>, and other issues that can prove very serious” (Wikipedia, 2015). The problems quoted above are all very real. Depression, personal resentment, insecurities and suicidal tendencies are no joke. For the social networking site that supposedly better connects the world it certainly connects these mental health issues first hand to its users. Facebook needs to take immediate action with regards to fixing its web of endless jealousy. What appears to be a harmless photo of somebody’s vacation to the Bahamas or the new car a friend got for their birthday can turn into much worse. These photos mislead Facebook users into thinking negatively about themselves, harming their physical and mental state of being.  It has been generated from studies over the conflict of Facebook envy that at least 1 and 3 users leave the site feeling less satisfied with their lives (Wikipedia, 2015).  Facebook needs to act and act fast on this issue, because if Facebook wishes to expand even further, that entails bringing Facebook envy to the next level. And I strongly believe young Facebook users have been through enough already.</p>
+<p>&nbsp;</p>
+<p>Criticisms of Facebook. (2015, October 7.) <em>Wikipedia, the free encyclopedia</em>. Retrieved from <a href="https://en.wikipedia.org/wiki/Criticism_of_Facebook#Envy">https://en.wikipedia.org/wiki/Criticism_of_Facebook#Envy</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/does-facebook-really-bring-people-closer-together/" rel="tag">"Does Facebook really bring people closer together?</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-envy/" rel="tag">Facebook Envy</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/jealousy/" rel="tag">Jealousy</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-fire-of-facebook-envy/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2774 -->
+
+		
+	
+
+	
+			<div id="post-2772" class="post-2772 post type-post status-publish format-standard hentry category-article category-blog-assignment category-encyclopediawikipedia tag-deleted tag-privacy tag-snapchat tag-too-much-trust">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/sneaky-snapchat-vs-too-trusting-teens/" rel="bookmark">Sneaky Snapchat vs Too-Trusting Teens</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/sneaky-snapchat-vs-too-trusting-teens/" title="6:52 pm" rel="bookmark"><span class="entry-date">October 7, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/mm251310/" title="View all posts by Maddy Mummey">Maddy Mummey</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>In the ever evolving world today, teens have become so accustomed to the presence and use of technology in their day to day lives. With the existence of technology, comes the ever-growing want and need of two top priorities: to be connected to friends, family, and strangers around the world and to have one’s privacy remain intact while doing so. In July 2011, the wants and needs of the aforementioned teens came true via the release of Snapchat. The app was created by Evan Spiegel, Bobby Murphy, and Reggie Brown as a requirement for a course at Stanford University (“Snapchat,” 2015).  The app’s platform encourages users to send candid pictures of whatever it is that they are doing in that moment. The unsaved photos are then sent to user’s friends and are deleted after a maximum of ten seconds which is set by the sender. Although this form of social media sounds utopic, are teens relying so heavily on the assumption that the pictures are deleted forever that they let their guard down? The answer is yes.</p>
+<p>An increased sense of privacy is typically accompanied by an increased sense of indestructibility. Within the four years that Snapchat has been up and running, sexting has become overwhelmingly popular because users believe that once the content disappears after the time limit expires, it is gone forever (“Snapchat,” 2015). Contrary to popular belief, Snapchat’s main privacy page states that “there may be ways to access messages while still in temporary storage on recipients’ devices or, forensically, even after they are deleted (“Privacy Policy,” 2014).” Therefore, users of Snapchat are being deceived by themselves. By not knowing the full parameters of the app, one is acting in ways that they would not if they did not believe the app was private. The fact that this not-really-private-privacy is not hidden but rather in regular sized text on the main webpage of Snapchat, shows that teens are not looking carefully at what they are agreeing to when signing up for an account. Consequently, I believe that teens today allow themselves to get into the trouble that they are getting in because they are too quick to believe what they want to be true.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>References:</p>
+<p>Privacy Policy. (2014, November 17). Retrieved from <a href="https://www.snapchat.com/privacy">https://www.snapchat.com/privacy</a></p>
+<p>Snapchat. (2015, October 2). In <em>Wikipedia, the free encyclopedia. </em>Retrieved October 5, 2015, from <a href="https://en.wikipedia.org/wiki/Snapchat#Deleted_images">https://en.wikipedia.org/wiki/Snapchat#Deleted_images</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/deleted/" rel="tag">deleted</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" rel="tag">privacy</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/snapchat/" rel="tag">Snapchat</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/too-much-trust/" rel="tag">too much trust</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/sneaky-snapchat-vs-too-trusting-teens/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2772 -->
+
+		
+	
+
+	
+			<div id="post-2767" class="post-2767 post type-post status-publish format-standard hentry category-blog-assignment category-encyclopediawikipedia tag-globalcapacity tag-originalmusicatnoexpense tag-soundcloud">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/" rel="bookmark">The New Wave of Music: A SoundCloud Revolution</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/" title="3:56 am" rel="bookmark"><span class="entry-date">October 7, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/rachelnorman113/" title="View all posts by Rachel Norman">Rachel Norman</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>SoundCloud has become an underground music source for people around the world. It was established in Sweden by Swedish music artists as a collaborative tool. However, SoundCloud eventually developed into a mechanism of self promotion and distribution catered towards bands and vocalists. One of the main attributes that makes SoundCloud attractive to so many people is that it’s completely free to use the website. Money is a significant problem among music artists. The lack of fiscal stress enables people to explore and pursue their music careers freely and from an international platform. In addition to the cost effective nature of SoundCloud, its initial release in 2011 was simultaneous with the popularity of tablets and mobile browsing. Wikipedia states that in 2012, “the new SoundCloud version was released to the general public…The enhanced platform offered new features such as: redesigned profiles; more sharing options; real-time notifications…” (Wikipedia, 2015), etc. These enhanced visualizations and connectivity between SoundCloud’s users made the website and app initially less appealing to the public, but statistically gained higher ratings than ever before.</p>
+<p>One of the most significant contributions to SoundCloud as a global company was the partnership with Twitter in 2013. Many people had doubts about the credibility of SoundCloud when, “talks with major music labels about licensing…did not amount to anything substantial”, for the, “negotiation process was initiated in an attempt to avoid the problems faced by Google” (Wikipedia, 2015) about copyrighted material. However, with Twitter’s newfound stake in the company, SoundCloud started to appear to the social media community as a company to be taken seriously. Through ads, royalty agreements, and participation between various music labels, artists, and specifically Warner Music, SoundCloud has been able to handle the conflict of copyright and has officially dominated the music scene throughout the world.</p>
+<p>As a young vocalist, SoundCloud makes pursuing a career in music more easily attainable. It allows artists to have complete control over their work and easily spread it around the world. Its combined use of sharing throughout various social media sites, such as Twitter, Facebook, Tumblr, and Google Plus, makes self promotion and self-acclaimed fame possible and imaginable. It’s the American Dream want to start a business from scratch and make a fortune from it. This social media tool makes it possible for artists to do just that, and to do it themselves about something they’re passionate about.</p>
+<p>References</p>
+<p>SoundCloud. (2015, October 7.) <em>Wikipedia, the free encyclopedia</em>. Retrieved from <a href="https://en.wikipedia.org/wiki/SoundCloud">https://en.wikipedia.org/wiki/SoundCloud</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/globalcapacity/" rel="tag">globalcapacity</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/originalmusicatnoexpense/" rel="tag">OriginalMusicAtNoExpense</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/soundcloud/" rel="tag">SoundCloud</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/#comments">1 Comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2767 -->
+
+		
+	
+
+	
+			<div id="post-2765" class="post-2765 post type-post status-publish format-standard hentry category-blog-assignment tag-athletes-instagram">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/athletes-and-their-social-media/" rel="bookmark">Athletes and their Social Media</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/athletes-and-their-social-media/" title="1:23 am" rel="bookmark"><span class="entry-date">October 7, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/shaunbartholomew13/" title="View all posts by Shaun">Shaun</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>“I’m Going to Instagram It! An Analysis of Athlete Self-Presentation on Instagram”, by Lauren Reichart Smith and Jimmy Sanderson, is a well developed research article that discusses how athletes portray themselves over Social Media. Sanderson and Smith’s study was fabricated from the principles of Goffman’s notion of self presentation and gender displays. They took this already gratified research and used it as a tool to find a more accurate truth when examining 27 professional athletes&#8217; Instagram feeds to determine how these athletes are using this new visual resource to present themselves to the public and to their fans. Throughout this study we see the capabilities that Social Media has towards athletes who are inaccurately depicted under the public eye solely because of the media. Sanderson and Smith focus in on the influence that Social Media has towards fighting the norm that history has set when discussing gender roles.</p>
+<p>Almost every athlete that I know conforms to some type of Social Media. Their reasoning behind which Social Media they elect to partake in varies tremendously, but the benefits of each resource remains consistent. As described by Sanderson and Smith, Social Media is ‘‘Architected by design to readily support participation, peer-to-peer conversation, collaboration, and community’’, so even though their motives differ, Social Media still appears to touch all athletes due to the fact that it’s easily accessible; it allows each athlete as an individual to reach out to his or her fans on a more personal level and it offers them a sense of community and belonging. Seemingly enough, we find all of those same incentives that are instilled within Social Media can be found in every major sport in our society. As well as containing the ability to depict a certain aspect of community, Social Media also gives each athlete a say on a personal level. Sanderson and Smith prove that the influence of Social Media gives professional athletes the capability to express their stance when analyzing a prior dispute between Boston Red Sox pitcher Curt Schilling after he was accused of faking an injury along with criticizing fellow player Barry Bonds. Immediately after hearing the allegations, Schilling fought back with the only credible resource he has access to, his blog. Curt opposed the rumors that the media had been spreading and defended his well being. Interestingly enough while in the process of setting his story straight, Curt developed a sense of respect from his fans for taking the offense against the media critics. So, not only did Social Media give Schilling the ability to maintain his reputation, but it also improved it in the process. Just one of the many stories that Sanderson and Smith touch upon that illustrate the idea that the power of Social Media is infinite.</p>
+<p>Although this study found that Social Media gives athletes a declaration when confronting issues derived from the media, it focused more on some very compelling findings on the conventions, habits, and deeper meanings behind professional athlete’s photos along with their captions when looking at posts on Instagram. Social media not only combats the media, but it also creates opportunities for each athlete to show a more accurate depiction of who they truly are. Within these findings, Sanderson and Smith found that the “Majority of the photos framed the athlete from a distant perspective, showing off the entire body”. The reason this is so fascinating is because throughout history, people that upheld immense stature within our society veered towards having head shots to display themselves rather than a whole body shot. Social media unintentionally established a method to alter the standard that society had set on how a high standard individual “should” portray themselves. When pertaining to female athletes, Sanderson and Smith noticed that many “take this opportunity to buck the trend of visual representations found in the media, and present themselves as athletes first, females second”. Once again, we see how Social media takes a stand towards the image that history has created for our society. Using Social Media, female athletes now have a legitimate resource, allowing them to provide valid “hype” and “status” as to why they should be considered serious athletes.</p>
+<p>Ultimately, Social Media contains the ability to give not only professional athletes, but every man and woman fair representation of who they truly are. In addition to allowing them to illustrate themselves, it allows a window of creativity, to simulate an image of what they want to be. Social Media has no laws, prejudgments, or set norms of what an individual can be. It only assists each person, allowing them to find who they truly are as an individual. As Social Media continues to grow, one can only imagine the impacts it will have on not only our self representation but our society as well.</p>
+<p>Smith, Lauren Reichart and Sanderson, Jimmy. &#8220;I&#8217;m Going to Instagram It! An Analysis of Athlete Self-Presentation on Instagram&#8221;. Retrieved on October 6th, 2015 from http://www.tandfonline.com/doi/abs/10.1080/08838151.2015.1029125?journalCode=hbem20#/doi/abs/10.1080/08838151.2015.1029125?journalCode=hbem20</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/athletes-instagram/" rel="tag">#Athletes #Instagram</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/athletes-and-their-social-media/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2765 -->
+
+		
+	
+
+	
+			<div id="post-2761" class="post-2761 post type-post status-publish format-standard hentry category-blog-assignment category-encyclopediawikipedia tag-business-promotions tag-origin-of-the-hashtag tag-twitter">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-hashtag-revolution/" rel="bookmark">The Hashtag Revolution</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-hashtag-revolution/" title="12:49 am" rel="bookmark"><span class="entry-date">October 7, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/jsilber426/" title="View all posts by Jennie Silber">Jennie Silber</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>If you have a twitter account or are involved in any type of social media, you have probably seen a “hashtag” before. We know hashtags most popularly as simple ways for people to search for tweets that have a common theme or topic. “Hashtags can be used to collect public opinion on events and ideas at the local, corporate, or world level” (&#8220;Hashtag&#8221;, 2015). For example, if you wanted to see people’s opinions of Donald Trump, you could simply search #DonaldTrump in the twitter search bar and get an entire feed of tweets pertaining to him. Hashtags are used for a variety of reasons and if promoted by enough people, can even “trend” and therefore attract more people to the topic at hand.</p>
+<p>While many people may believe the “hashtag” originated on Twitter, it is actually not a Twitter function. Also known as the “number sign,” hashtags were first used in information technology to highlight a specific meaning. For example, “In 1978, Brian Kernighan and Dennis Ritchie used # in the C programming language for special keywords that had to be processed first by the C preprocessor” (&#8220;Hashtag&#8221;, 2015). Later on, IRC networks began to use number signs to label channels or topics. A man named Chris Messina was inspired by the IRC and proposed a similar system to be used on Twitter, tweeting, “how do you feel about using # (pound) for groups. As in #barcamp?” (&#8220;Hashtag&#8221;, 2015) on August 23, 2007. This proposal became extremely popular and continued to grow as Twitter began to hyperlink all hashtags and eventually introduce “Trending Topics” on its front page. Hashtags are now used on a variety of different platforms, including Instagram, YouTube, Google, and even on television.</p>
+<p>Businesses and advocacy organizations have especially taken advantage of the “hashtag” by connecting the popularity of social media with the promotion of their products, services, or campaigns. For example, “There is a collaboration between the social networking site Twitter and American Express that makes it possible to buy discounted goods online by tweeting a special hashtag. American Express members can sync their card with Twitter and use the offers by tweeting and look for a response in a tweet with the confirmation from American Express” (&#8220;Hashtag&#8221;, 2015). Not only can hashtags positively affect a business’ market, but they can also be used with a negative connotation, where they are better known as “bashtags.” Nowadays, it is extremely common for people to use social media platforms in order to complain about poor customer service or to criticize a company. Hashtags have the power of drawing attention to important issues and controversial topics.</p>
+<p>Overall, people have found a countless amount of ways to use hashtags for their own benefit; whether to spark a conversation, start a trend, gain more followers, or to promote a specific event or campaign. For better or for worse, hashtags have become extremely powerful tools not only in social media, but in our everyday lives.</p>
+<p>References</p>
+<p>Hashtag. (2015, October 7.) <em>Wikipedia, the free encyclopedia</em>. Retrieved from https://en.wikipedia.org/wiki/Hashtag</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/business-promotions/" rel="tag">business promotions</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/origin-of-the-hashtag/" rel="tag">origin of the hashtag</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" rel="tag">twitter</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-hashtag-revolution/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2761 -->
+
+		
+	
+
+	
+			<div id="post-2758" class="post-2758 post type-post status-publish format-standard hentry category-uncategorized tag-gaming">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/what-microsoft-has-to-offer/" rel="bookmark">What Microsoft has to offer.</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/what-microsoft-has-to-offer/" title="11:21 pm" rel="bookmark"><span class="entry-date">October 6, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/willlerrick/" title="View all posts by Will Lerrick">Will Lerrick</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p><span style="font-weight: 400">When people talk about Microsoft, the first thing that usually comes to people’s mind is Bill Gates and the software that he developed that made people’s lives so much easier. What a lot of people do not know however, is that Microsoft has many more services and software products marketed toward teens and gamers. The Wikipedia article I read was on Xbox Live which is an online multiplayer gaming and digital media delivery service developed by Microsoft. Most teens know about Xbox Live because it allows you to play video games online with your friends. It is an extremely popular service and mostly everyone that has ever owned a Microsoft gaming product has used it at least once. Xbox Live comes in two forms, Xbox Live Free and Xbox Live Gold. Xbox Live Gold being a subscription based service. Xbox Live offers a wide variety of features for the user. The most popular being the online gaming portion of the service.</span></p>
+<p><span style="font-weight: 400">One main theme that occurs from a lot of these gaming services is immersion. Most of them allow you to create and control an avatar and become fully immersed in the gaming world. As well as creating avatars, players can create and customize profiles based on their offline personalities and interests. Some people are skeptical of this because more and more kids are spending the majority of their time with online gaming. All these different elements of Xbox Live make it difficult for the user to get off. It has become addicting to some people to the point where they do not want to leave the gaming world.</span></p>
+<p><span style="font-weight: 400">Microsoft has done something really smart with Xbox Live. They have made so many first and third party apps available on the service that it makes the user feel like he or she will never have to go anywhere else to use them. This means that Microsoft has essentially made Xbox Live the go to service to use these apps. Microsoft figures that the people using Xbox Live are most likely digital natives, so they market and sell Xbox Live accordingly. They also supply features on Xbox Live that fit that description. This is smart because as a digital native I figure that any apps I want to use will probably be on my Xbox. This maximizes the amount of users Xbox Live will have at any given moment.</span></p>
+<p><span style="font-weight: 400">With online interaction also comes the dangers of cyberbullying, but what Xbox Live has done is that it has integrated different features to be safe online like muting, reporting, and blocking. It even has a “reputation” feature that allows people to see how good your in game conduct is. The truth is Xbox Live is expanding and it will keep getting bigger and more popular. Wikipedia writes, “As of December 16, 2012, Xbox Live is currently available in 42 countries/territories” and “Bloomberg estimates that Xbox Live likely generated over </span><a href="https://en.wikipedia.org/wiki/United_States_dollar"><span style="font-weight: 400">$</span></a><span style="font-weight: 400">1 billion in revenue in the 2010 fiscal year, which ended on June 30, 2010.” These facts are only a little bit of information on how big Xbox Live could become especially with the progression of technology and gaming. I agree on the fact that Xbox Live is getting bigger because I know gaming is too. Online gaming can only get more popular as more people are looking for services to allow them to play online.</span></p>
+<p><span style="font-weight: 400">Overall, I believe Xbox Live is an extremely useful and popular service that lets you connect with people and friends all around the world, 42 countries to be exact. Gaming and online gaming services have just began to scratch the surface of all the different possibilities. It will be exciting to see in the future how much it can potentially expand.</span></p>
+<p>&nbsp;</p>
+<p><span style="font-weight: 400">References</span></p>
+<p><span style="font-weight: 400">Xbox Live. (2015, September 26). In </span><i><span style="font-weight: 400">Wikipedia, the free encyclopedia</span></i><span style="font-weight: 400">. Retrieved from </span></p>
+<p><span style="font-weight: 400">https://en.wikipedia.org/w/index.php?title=Xbox_Live&amp;oldid=6827942</span></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/uncategorized/" rel="category tag">Uncategorized</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/gaming/" rel="tag">#gaming</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/what-microsoft-has-to-offer/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2758 -->
+
+		
+	
+
+	
+			<div id="post-2756" class="post-2756 post type-post status-publish format-standard hentry category-blog-assignment category-encyclopediawikipedia tag-new-age tag-smartphone tag-transportation">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/" rel="bookmark">How Uber Has Changed Transportation</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/" title="7:21 pm" rel="bookmark"><span class="entry-date">October 6, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/jsaperstein/" title="View all posts by Jesse Saperstein">Jesse Saperstein</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p><span style="font-weight: 400">In 2010, co-founders Travis Kalanick and Garrett Camp released an app that would change transportation forever. With technology growing at a rapid rate as well as apps and social media starting to become increasingly important in everyday life, Uber was created as an easier, quicker, and cheaper way to transport. Starting in only big cities such as New York, Los Angeles, and Chicago, Uber proved to be the mode of transportation that each city was lacking. In New York, the iconic yellow taxi ruled the streets but with such a high demand all the time, finding an unoccupied cab was easier said than done. In a matter of seconds Uber lets each user set their location, destination, gives a fare estimate, and labels what time the cab will arrive at your given destination. Uber gives smartphone users the ability to connect with their driver in the easiest and cheapest way possible. The best part about Uber is not having to directly pay the driver for their services. All payments are linked through a credit or debit card account that charges the passenger once their ride is over. The creation of Uber has changed the way people travel from place to place. </span></p>
+<p><span style="font-weight: 400">With Uber’s massive success in the United States throughout limited cities, the company decided to expand globally. As of 2015, Uber has launched in 60 cities worldwide including countries all over Asia, Africa, and Europe. Traveling through a foreign country can be extremely difficult in terms of navigation but Uber has given people the ability to not have to be able to communicate in an unfamiliar language in order to get from place to place. With the ability to use your current location and set a destination where you would like to go, Uber has eliminated helplessly looking for historics sites, a restaurant, or any other specific location. </span></p>
+<p><span style="font-weight: 400">Uber is not just available in big cities but has also branched out to rural and suburb areas. In a small town, rarely does anyone ever see a taxi just driving around looking for a customer and not every small town has a taxi service willing to pick someone up and drive that passenger long distances. Uber has given people in less populated areas the ability to get from place to place at the with just a few taps on their smartphones. </span></p>
+<p><span style="font-weight: 400">The requirements for becoming an Uber driver include being able to pass a background check as well as having a license and car. Once these tasks are passed, you are free to be an Uber driver. This proves to be one of the reasons along with cheaper prices why Uber is currently taking over cities around the world. In a place like London, it takes up to four years to become a taxi driver. Each candidate must drive around the city on a motorcycle learning all the streets from a book that they are given by the taxi service. In New York, each candidate must attend a training course to become a yellow cab driver. Uber does not require any of these steps which makes people more inclined to become an Uber driver rather than a Taxi company. With Uber’s growing presence in places all over the world, taxi drivers have become more and more irritated by Uber drivers taking their business. Just this summer in Paris, violent protests broke out between Uber drivers and Taxi company drivers. The protests definitely indicate a shift from taxi companies to Uber controlling the roads. With Uber working everyday to improve their services, it&#8217;s only a matter of time before they eliminate taxi companies forever and continue changing the way we travel. </span></p>
+<p>Uber (company). (2015, October 5.) <em>Wikipedia, the free encyclopedia</em>. Retrieved from https://en.wikipedia.org/wiki/Uber_(company)</p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/new-age/" rel="tag">new age</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/smartphone/" rel="tag">smartphone</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/transportation/" rel="tag">Transportation</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/#comments">1 Comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2756 -->
+
+		
+	
+
+	
+			<div id="post-2754" class="post-2754 post type-post status-publish format-standard hentry category-blog-assignment category-encyclopediawikipedia tag-education tag-learning tag-technologys-impact">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/05/the-role-of-technology-in-education/" rel="bookmark">The role of Technology in Education</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/05/the-role-of-technology-in-education/" title="11:48 pm" rel="bookmark"><span class="entry-date">October 5, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/dd251040/" title="View all posts by Doug D">Doug D</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p><span class="mceItemHidden">Technology and smart devices are coming to new places in a variety of forms. Moving forward, technology is increasingly becoming a part of our daily lives. More than we even know it. But what does this mean for our generation? The goal is simple. To better the lives of many, keep everyone connected and make lives hassle free. But the transformation is easier said than done. Education is among one of the biggest undergoing changes. Current students have more ways than ever to explore new ideas and solve problems. And the growth is not coming to an end any time soon.</span></p>
+<p><span class="mceItemHidden">The world is moving at a rapid pace and it’s directly led by recent technological innovations. Some of the most significant improvements are those taking place inside the classroom. Most say Technology’s integration with education enhances a student’s learning experience. However, <span class="hiddenSpellError">unrelatedly</span>, many see it as overwhelming, more time-consuming and difficult to make the change. However, this can’t be agreed to by everyone. New programs are allowing students to complete assignments entirely on their wireless devices without the need to pick up a pencil. Many find this very intriguing. New sharing options let students send off their assignments to teachers with ease. In addition, technology helps students stay in contact over weekends and school breaks.</span></p>
+<p><span class="mceItemHidden">Another major strength of technology in the classroom is research, which has become easier than ever. The wide range of sources available right at one’s fingertips <span class="hiddenSuggestion">provide</span> students with speed and accuracy. Many agree, however, there is also a large <span class="hiddenSuggestion">selection</span> of garbage and irrelevant inaccurate information and people need <span class="hiddenGrammarError">to be</span> aware of. Throughout the encyclopedia article, the idea that mobile learning is controversial repeatedly comes up. But why? While technology in the classroom may seem useful to the <span class="hiddenSuggestion">majority</span>, many see it as distracting. Others say it’s even more time-consuming than standard learning and can cause stress due to common system errors making productivity a challenge. Additionally, many see it as unreliable and <span class="hiddenGrammarError">an invasion of</span> privacy. Being a student myself, it’s sometimes hard to disagree. According to (&#8220;Technology integration,&#8221; 2015), another concern <span class="hiddenGrammarError">is cost</span>. With all that one gets with access to a mobile device, it can become costly when having to <span class="hiddenSuggestion">provide</span> devices for a whole class. It’s believed by many that technology for the classroom is a work in progress that’s constantly growing and expanding.</span></p>
+<p><span class="mceItemHidden">One key benefit of technology’s integration in the classroom is interactive learning. According to (&#8220;Technology integration,&#8221; 2015), the thought process and conceptual experience makes for an easier learning process. But why? By learning from one’s mistakes, students can make changes, review and perfect assignments and thus learn by doing. So what? This method has been proven <span class="hiddenGrammarError">to be</span> one of the best ways for the brain to absorb information.</span></p>
+<p><span class="mceItemHidden">Being able to work on projects simultaneously with one another submit to the teacher for review all though a handheld device is something people in the past have only dreamed about. This relates to the class reading on how technology has evolved over time. According to (&#8220;Technology integration,&#8221; 2015), a project-based activity can enhance one’s ability to work in groups and solve more complex problems that one couldn’t normally complete on their own. In addition, interactive learning can also be fun and enjoyable. So What? This keeps the mind flowing and ultimately keeps students focused for longer periods at a time. This <span class="hiddenGrammarError">can be</span> very noticeable. As a result of recent technological advancements, it’s clear that collaboration plays a major role in the learning process. </span></p>
+<p><span class="mceItemHidden">Technology in the classroom has come a long way. With <span class="hiddenGrammarError">the addition of</span> new programs and services, the methods to learning have changed drastically. Despite high costs, privacy issues, distractions, and often less reliability, technology in the classroom is becoming increasingly common throughout school districts around the globe. In relation to class discussions, many agree that technology is always growing and the only thing that stands in the way of adoption is time and effort. <span class="hiddenSpellError">Infographics</span> in recent class assignments have shown us the numbers <span class="hiddenSuggestion">pertaining to</span> the increasing adoption of digital media. Major brands are hard at work attempting to bring the latest and greatest to everyone so that lives <span class="hiddenGrammarError">will</span> be made easier and education <span class="hiddenGrammarError">can be</span> improved for all. </span></p>
+<p>Technology integration. (2015, September 29). In <em>Wikipedia, the free encyclopedia</em>. Retrieved from <a href="https://en.wikipedia.org/w/index.php?title=Technology_integration&amp;oldid=683270023">https://en.wikipedia.org/w/index.php?title=Technology_integration&amp;oldid=683270023</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/encyclopediawikipedia/" rel="category tag">Encyclopedia/Wikipedia</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" rel="tag">Education</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" rel="tag">learning</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologys-impact/" rel="tag">Technology's impact</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/05/the-role-of-technology-in-education/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2754 -->
+
+		
+	
+
+	
+			<div id="post-2750" class="post-2750 post type-post status-publish format-standard hentry category-fys-142-update category-technology-tip tag-how-to tag-monitor-set-up tag-technology">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/01/mirror-display-on-pcs-and-macs/" rel="bookmark">Mirror Display on PCs and Macs</a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/01/mirror-display-on-pcs-and-macs/" title="1:15 am" rel="bookmark"><span class="entry-date">October 1, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/thertel/" title="View all posts by Tina Hertel">Tina Hertel</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>How-tos for display options on PCs and Macs.</p>
+<p>For PCs: <a href="http://windows.microsoft.com/en-us/windows-vista/understanding-multiple-monitors" target="_blank">http://windows.microsoft.com/en-us/windows-vista/understanding-multiple-monitors</a></p>
+<p>For Macs: <a href="https://support.apple.com/en-us/HT202351" target="_blank">https://support.apple.com/en-us/HT202351</a></p>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/fys-142-update/" rel="category tag">FYS 142 Update</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/technology-tip/" rel="category tag">Technology Tip</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/how-to/" rel="tag">How-To</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/monitor-set-up/" rel="tag">Monitor Set-up</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" rel="tag">Technology</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/01/mirror-display-on-pcs-and-macs/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2750 -->
+
+		
+	
+
+	
+			<div id="post-2740" class="post-2740 post type-post status-publish format-standard hentry category-article category-blog-assignment tag-ethicsoftechnology-consequencesofouractions">
+			<h2 class="entry-title"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/2740/" rel="bookmark"></a></h2>
+
+			<div class="entry-meta">
+				<span class="meta-prep meta-prep-author">Posted on</span> <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/2740/" title="1:58 am" rel="bookmark"><span class="entry-date">September 26, 2015</span></a> <span class="meta-sep">by</span> <span class="author vcard"><a class="url fn n" href="http://fys142f15.blogs.muhlenberg.edu/author/ayousefi/" title="View all posts by Ashley Yousefi">Ashley Yousefi</a></span>			</div><!-- .entry-meta -->
+
+					<div class="entry-content">
+				<p>Social media as we know it has become so widely accessible and weaved into every aspect of our lives that tit has given our generation a name of digital natives. From Twitter to Instagram and all social media platforms in-between, technology today has the ability to satisfy our need for human connection. Whether it be by seeing updated photos of events or phrases of our night being limited to a tweet, it is hard to  escape knowing peoples whereabouts. One of the many dangers of this though is the increasing  amount of platforms to bully and hurt people on. Numerous social media apps gain fame and net worth through their fan bases but their initial  start up point is in investors willing to put money towards their ideas. Yik Yak was able to be valued at almost $300 million because of its investors believed in the app&#8217;s ability to  create &#8220;hyper local forums [providing] a sense of community  and a place to be our genuine selves&#8221;. The consequences though are threats and demeaning comments that are becoming increasingly more prevalent even as the apps owners try to control exactly what is allowed on the platform. Author William D. Cohan of  the article &#8220;In the Rise of Yik Yak App, Profits and Ethics Collide&#8221;, he brings up the question if the initial investors should be held responsible for these actions. Whether of not theses investors foresaw the possible down sides of this app or not comes into question and we must consider if introducing new technology in general should be monitored more closely in order to provide a safe environment for the use of these tools. In the new age of digital natives it is arguable that no generation has had more access to being connected to one another than any before. Social media platforms have the ability to connect people from within one and half miles of each other, such as in Yik Yak, to across the globe with apps like Instagram or Twitter.</p>
+<p>In Rise of Yik Yak App, Profit and Ethics Collide. (2015, April 7). Retrieved September 25, 2015,</p>
+<p>Retrieved from New York Times website: <a href="http://www.nytimes.com/2015/04/08/business/dealbook/profits-and-ethics-collide-in-nameless-turmoil.html" target="_blank">http://www.nytimes.com/2015/04/08/business/dealbook/ </a></p>
+<p><a href="http://www.nytimes.com/2015/04/08/business/dealbook/profits-and-ethics-collide-in-nameless-turmoil.html" target="_blank">     profits-and-ethics-collide-in-nameless-turmoil.html </a></p>
+<pre></pre>
+<pre></pre>
+							</div><!-- .entry-content -->
+	
+			<div class="entry-utility">
+									<span class="cat-links">
+						<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://fys142f15.blogs.muhlenberg.edu/category/article/" rel="category tag">Article</a>, <a href="http://fys142f15.blogs.muhlenberg.edu/category/blog-assignment/" rel="category tag">Blog Assignment</a>					</span>
+					<span class="meta-sep">|</span>
+				
+								<span class="tag-links">
+					<span class="entry-utility-prep entry-utility-prep-tag-links">Tagged</span> <a href="http://fys142f15.blogs.muhlenberg.edu/tag/ethicsoftechnology-consequencesofouractions/" rel="tag">#ethicsoftechnology #consequencesofouractions</a>				</span>
+				<span class="meta-sep">|</span>
+				
+				<span class="comments-link"><a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/26/2740/#respond">Leave a comment</a></span>
+
+							</div><!-- .entry-utility -->
+		</div><!-- #post-2740 -->
+
+		
+	
+
+				<div id="nav-below" class="navigation">
+					<div class="nav-previous"><a href="http://fys142f15.blogs.muhlenberg.edu/page/6/" ><span class="meta-nav">&larr;</span> Older posts</a></div>
+					<div class="nav-next"><a href="http://fys142f15.blogs.muhlenberg.edu/page/4/" >Newer posts <span class="meta-nav">&rarr;</span></a></div>
+				</div><!-- #nav-below -->
+			</div><!-- #content -->
+		</div><!-- #container -->
+
+
+		<div id="primary" class="widget-area" role="complementary">
+			<ul class="xoxo">
+
+<li id="search-2" class="widget-container widget_search"><form role="search" method="get" id="searchform" class="searchform" action="http://fys142f15.blogs.muhlenberg.edu/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form></li><li id="nav_menu-3" class="widget-container widget_nav_menu"><h3 class="widget-title">Assignments</h3><div class="menu-assignments-container"><ul id="menu-assignments" class="menu"><li id="menu-item-2520" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2520"><a href="http://fys142f15.blogs.muhlenberg.edu/blog-posts/">Blog Posts</a></li>
+<li id="menu-item-2685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2685"><a href="http://fys142f15.blogs.muhlenberg.edu/photo-essay/">Photo Essay</a></li>
+<li id="menu-item-2714" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2714"><a href="http://fys142f15.blogs.muhlenberg.edu/research-paper/">Research Paper</a></li>
+<li id="menu-item-3033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3033"><a href="http://fys142f15.blogs.muhlenberg.edu/reflective-essay/">Reflective Essay</a></li>
+</ul></div></li><li id="nav_menu-4" class="widget-container widget_nav_menu"><h3 class="widget-title">Digital Activities</h3><div class="menu-digital-activities-container"><ul id="menu-digital-activities" class="menu"><li id="menu-item-2354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2354"><a href="http://fys142f15.blogs.muhlenberg.edu/da1-tech-profile/">DA1: Technology Profile Survey</a></li>
+<li id="menu-item-2581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2581"><a href="http://fys142f15.blogs.muhlenberg.edu/da-zotero/">DA2: Zotero</a></li>
+<li id="menu-item-2664" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2664"><a href="http://fys142f15.blogs.muhlenberg.edu/da3-twitter/">DA3: Twitter</a></li>
+<li id="menu-item-2684" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2684"><a href="http://fys142f15.blogs.muhlenberg.edu/da4-linkedin-profile/">DA4: Create a LinkedIn Profile</a></li>
+<li id="menu-item-2747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2747"><a href="http://fys142f15.blogs.muhlenberg.edu/da5-digital-distractions/">DA5: Digital Distractions</a></li>
+<li id="menu-item-2807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2807"><a href="http://fys142f15.blogs.muhlenberg.edu/da6-dropbox/">DA6: Dropbox for File Management</a></li>
+<li id="menu-item-2866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2866"><a href="http://fys142f15.blogs.muhlenberg.edu/da7-word-clouds/">DA7: Word Clouds</a></li>
+<li id="menu-item-2929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2929"><a href="http://fys142f15.blogs.muhlenberg.edu/da8-google-docs/">DA8: Google Docs</a></li>
+<li id="menu-item-3028" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3028"><a href="http://fys142f15.blogs.muhlenberg.edu/syllabus/#nov18">DA9: Internet Companies</a></li>
+<li id="menu-item-3032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3032"><a href="http://fys142f15.blogs.muhlenberg.edu/da-10-website-tips-hacks/">DA 10: Implicit Association</a></li>
+</ul></div></li><li id="nav_menu-6" class="widget-container widget_nav_menu"><h3 class="widget-title">Additional Resources</h3><div class="menu-additional-resources-container"><ul id="menu-additional-resources" class="menu"><li id="menu-item-2510" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2510"><a href="http://fys142f15.blogs.muhlenberg.edu/files/2015/08/FYS142DigitalWorldF15.pdf">Syllabus</a></li>
+<li id="menu-item-2493" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2493"><a href="http://fys142f15.blogs.muhlenberg.edu/topic-suggestions/">Topic Suggestions</a></li>
+<li id="menu-item-2524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2524"><a href="https://www.diigo.com/list/serendipitina/FYS142">FYS 142 Related Websites</a></li>
+<li id="menu-item-2521" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2521"><a href="https://owl.english.purdue.edu/owl/">Purdue OWL</a></li>
+<li id="menu-item-2522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2522"><a href="http://libraryguides.muhlenberg.edu/getstartedguides">Getting Start w/Research</a></li>
+<li id="menu-item-2523" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2523"><a href="http://trexler.muhlenberg.edu/research/citation-guides.html">Citation Guides</a></li>
+</ul></div></li>		<li id="recent-posts-2" class="widget-container widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/2946/">Is Anonymity a Bad Thing?</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/a-walk-through-the-future/">A Walk through the Future</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-art-of-deception/">The Art of Deception</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/the-deterioration-of-our-privacy-whos-reading-your-emails-everyone/">The Deterioration of Our Privacy: Who&#8217;s Reading Your Emails? Everyone.</a>
+									</li>
+											<li>
+					<a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/11/fame-fiends/">Fame Fiends</a>
+									</li>
+					</ul>
+		</li><li id="recent-comments-2" class="widget-container widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/09/25/yik-yak-attack/#comment-22">Yik Yak Attack</a></li><li class="recentcomments"><span class="comment-author-link">Jesse Saperstein</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/03/technologys-movement-into-education/#comment-21">Technology&#8217;s Movement into Education</a></li><li class="recentcomments"><span class="comment-author-link">Maddy Mummey</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/11/05/digital-misinterpretations/#comment-17">Digital Misinterpretations</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/06/how-uber-has-changed-transportation/#comment-16">How Uber Has Changed Transportation</a></li><li class="recentcomments"><span class="comment-author-link">Chris Funge</span> on <a href="http://fys142f15.blogs.muhlenberg.edu/2015/10/07/the-new-wave-of-music-a-soundcloud-revolution/#comment-15">The New Wave of Music: A SoundCloud Revolution</a></li></ul></li><li id="categories-4" class="widget-container widget_categories"><h3 class="widget-title">Categories</h3><form action="http://fys142f15.blogs.muhlenberg.edu" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="20859">Article&nbsp;&nbsp;(30)</option>
+	<option class="level-0" value="64806">Blog Assignment&nbsp;&nbsp;(64)</option>
+	<option class="level-0" value="93877">Book Chapter&nbsp;&nbsp;(12)</option>
+	<option class="level-0" value="65684">Encyclopedia/Wikipedia&nbsp;&nbsp;(10)</option>
+	<option class="level-0" value="65899">FYS 142 Update&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="66182">Multimedia&nbsp;&nbsp;(6)</option>
+	<option class="level-0" value="66833">Peer Reviewed Article&nbsp;&nbsp;(9)</option>
+	<option class="level-0" value="93912">Reading Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="67420">Resource Recommendation&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="93960">Technology Tip&nbsp;&nbsp;(1)</option>
+	<option class="level-0" value="1">Uncategorized&nbsp;&nbsp;(25)</option>
+</select>
+</form>
+<script type="text/javascript">
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</li><li id="tag_cloud-3" class="widget-container widget_tag_cloud"><h3 class="widget-title">Tags</h3><div class="tagcloud"><ul class='wp-tag-cloud' role='list'>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/advance/" class="tag-cloud-link tag-link-93941 tag-link-position-1" style="font-size: 8pt;" aria-label="#advance (1 item)">#advance</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/anonymity/" class="tag-cloud-link tag-link-93922 tag-link-position-2" style="font-size: 12.581818181818pt;" aria-label="#anonymity (2 items)">#anonymity</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/betterfuture/" class="tag-cloud-link tag-link-93898 tag-link-position-3" style="font-size: 12.581818181818pt;" aria-label="#betterfuture (2 items)">#betterfuture</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/ethicsoftechnology-consequencesofouractions/" class="tag-cloud-link tag-link-93959 tag-link-position-4" style="font-size: 8pt;" aria-label="#ethicsoftechnology #consequencesofouractions (1 item)">#ethicsoftechnology #consequencesofouractions</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/evolution/" class="tag-cloud-link tag-link-93992 tag-link-position-5" style="font-size: 12.581818181818pt;" aria-label="#evolution (2 items)">#evolution</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/iphone6s-voicerecognition-siri/" class="tag-cloud-link tag-link-93953 tag-link-position-6" style="font-size: 8pt;" aria-label="#IPhone6s #VoiceRecognition #Siri (1 item)">#IPhone6s #VoiceRecognition #Siri</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/lifeskills/" class="tag-cloud-link tag-link-93905 tag-link-position-7" style="font-size: 12.581818181818pt;" aria-label="#lifeskills (2 items)">#lifeskills</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/newgeneration/" class="tag-cloud-link tag-link-93940 tag-link-position-8" style="font-size: 8pt;" aria-label="#newgeneration (1 item)">#newgeneration</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/perspective/" class="tag-cloud-link tag-link-38704 tag-link-position-9" style="font-size: 8pt;" aria-label="#perspective (1 item)">#perspective</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/readingiscool/" class="tag-cloud-link tag-link-93904 tag-link-position-10" style="font-size: 12.581818181818pt;" aria-label="#readingiscool (2 items)">#readingiscool</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/strongerbrain/" class="tag-cloud-link tag-link-93897 tag-link-position-11" style="font-size: 12.581818181818pt;" aria-label="#strongerbrain (2 items)">#strongerbrain</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/comparison/" class="tag-cloud-link tag-link-93947 tag-link-position-12" style="font-size: 8pt;" aria-label="comparison (1 item)">comparison</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberattack/" class="tag-cloud-link tag-link-93954 tag-link-position-13" style="font-size: 8pt;" aria-label="cyberattack (1 item)">cyberattack</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/cyberbullying/" class="tag-cloud-link tag-link-93957 tag-link-position-14" style="font-size: 8pt;" aria-label="Cyberbullying (1 item)">Cyberbullying</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/dangers-of-the-cloud/" class="tag-cloud-link tag-link-93958 tag-link-position-15" style="font-size: 8pt;" aria-label="Dangers of &quot;The Cloud&quot; (1 item)">Dangers of &quot;The Cloud&quot;</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/depression/" class="tag-cloud-link tag-link-24819 tag-link-position-16" style="font-size: 12.581818181818pt;" aria-label="depression (2 items)">depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/editing-apps/" class="tag-cloud-link tag-link-93951 tag-link-position-17" style="font-size: 8pt;" aria-label="editing apps (1 item)">editing apps</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/education/" class="tag-cloud-link tag-link-5226 tag-link-position-18" style="font-size: 20.218181818182pt;" aria-label="Education (5 items)">Education</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy/" class="tag-cloud-link tag-link-93946 tag-link-position-19" style="font-size: 12.581818181818pt;" aria-label="envy (2 items)">envy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/envy-spiral/" class="tag-cloud-link tag-link-93952 tag-link-position-20" style="font-size: 8pt;" aria-label="envy spiral (1 item)">envy spiral</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/expression/" class="tag-cloud-link tag-link-37337 tag-link-position-21" style="font-size: 8pt;" aria-label="expression (1 item)">expression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook/" class="tag-cloud-link tag-link-91 tag-link-position-22" style="font-size: 18.181818181818pt;" aria-label="Facebook (4 items)">Facebook</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/facebook-depression/" class="tag-cloud-link tag-link-93956 tag-link-position-23" style="font-size: 8pt;" aria-label="Facebook depression (1 item)">Facebook depression</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/google/" class="tag-cloud-link tag-link-112 tag-link-position-24" style="font-size: 8pt;" aria-label="Google (1 item)">Google</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/how-to/" class="tag-cloud-link tag-link-93963 tag-link-position-25" style="font-size: 8pt;" aria-label="How-To (1 item)">How-To</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/instagram/" class="tag-cloud-link tag-link-8178 tag-link-position-26" style="font-size: 15.636363636364pt;" aria-label="Instagram (3 items)">Instagram</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/internet/" class="tag-cloud-link tag-link-124 tag-link-position-27" style="font-size: 15.636363636364pt;" aria-label="Internet (3 items)">Internet</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learn/" class="tag-cloud-link tag-link-93888 tag-link-position-28" style="font-size: 12.581818181818pt;" aria-label="learn (2 items)">learn</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/learning/" class="tag-cloud-link tag-link-93198 tag-link-position-29" style="font-size: 20.218181818182pt;" aria-label="learning (5 items)">learning</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/monitor-set-up/" class="tag-cloud-link tag-link-93961 tag-link-position-30" style="font-size: 8pt;" aria-label="Monitor Set-up (1 item)">Monitor Set-up</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/new-age/" class="tag-cloud-link tag-link-93927 tag-link-position-31" style="font-size: 12.581818181818pt;" aria-label="new age (2 items)">new age</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/online-safety/" class="tag-cloud-link tag-link-93939 tag-link-position-32" style="font-size: 8pt;" aria-label="online safety (1 item)">online safety</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/privacy/" class="tag-cloud-link tag-link-989 tag-link-position-33" style="font-size: 15.636363636364pt;" aria-label="privacy (3 items)">privacy</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/reading/" class="tag-cloud-link tag-link-190 tag-link-position-34" style="font-size: 22pt;" aria-label="reading (6 items)">reading</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/security/" class="tag-cloud-link tag-link-8070 tag-link-position-35" style="font-size: 12.581818181818pt;" aria-label="security (2 items)">security</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/snapchat/" class="tag-cloud-link tag-link-11233 tag-link-position-36" style="font-size: 12.581818181818pt;" aria-label="Snapchat (2 items)">Snapchat</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/sports/" class="tag-cloud-link tag-link-5237 tag-link-position-37" style="font-size: 12.581818181818pt;" aria-label="Sports (2 items)">Sports</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/steve-jobs/" class="tag-cloud-link tag-link-372 tag-link-position-38" style="font-size: 12.581818181818pt;" aria-label="Steve Jobs (2 items)">Steve Jobs</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technology/" class="tag-cloud-link tag-link-312 tag-link-position-39" style="font-size: 18.181818181818pt;" aria-label="Technology (4 items)">Technology</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/technologys-impact/" class="tag-cloud-link tag-link-93964 tag-link-position-40" style="font-size: 8pt;" aria-label="Technology&#039;s impact (1 item)">Technology&#039;s impact</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/tumblr/" class="tag-cloud-link tag-link-93944 tag-link-position-41" style="font-size: 8pt;" aria-label="tumblr (1 item)">tumblr</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/twitter/" class="tag-cloud-link tag-link-405 tag-link-position-42" style="font-size: 20.218181818182pt;" aria-label="twitter (5 items)">twitter</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/wiki/" class="tag-cloud-link tag-link-93984 tag-link-position-43" style="font-size: 12.581818181818pt;" aria-label="Wiki (2 items)">Wiki</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/writing/" class="tag-cloud-link tag-link-9073 tag-link-position-44" style="font-size: 18.181818181818pt;" aria-label="Writing (4 items)">Writing</a></li>
+	<li><a href="http://fys142f15.blogs.muhlenberg.edu/tag/yikyak/" class="tag-cloud-link tag-link-93955 tag-link-position-45" style="font-size: 8pt;" aria-label="yikyak (1 item)">yikyak</a></li>
+</ul>
+</div>
+</li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title">#fys142 Twitter feed</h3>			<div class="textwidget">            <a class="twitter-timeline"  href="https://twitter.com/hashtag/fys142" data-widget-id="510425781265133568">#fys142 Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          </div>
+		</li>			</ul>
+		</div><!-- #primary .widget-area -->
+
+	</div><!-- #main -->
+
+	<div id="footer" role="contentinfo">
+		<div id="colophon">
+
+
+
+			<div id="site-info">
+				<a href="http://fys142f15.blogs.muhlenberg.edu/" title="Who Controls Your Digital World?" rel="home">
+					Who Controls Your Digital World?				</a>
+							</div><!-- #site-info -->
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" class="imprint" title="Semantic Personal Publishing Platform">
+					Proudly powered by WordPress.				</a>
+			</div><!-- #site-generator -->
+
+		</div><!-- #colophon -->
+	</div><!-- #footer -->
+
+</div><!-- #wrapper -->
+
+<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script><script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/hoverintent-js.min.js?ver=2.2.1'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/admin-bar.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-content/plugins/jquery-collapse-o-matic/js/collapse.js?ver=1.6.23'></script>
+<script type='text/javascript' src='http://fys142f15.blogs.muhlenberg.edu/wp-includes/js/wp-embed.js?ver=a53ced0a4e7746787c23520c6012a8e7'></script>
+		<div id="wpadminbar" class="nojq nojs">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Skip to toolbar</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Toolbar">
+				<ul id='wp-admin-bar-root-default' class="ab-top-menu"><li id='wp-admin-bar-wp-logo' class="menupop"><a class='ab-item' aria-haspopup="true" href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'><span class="ab-icon"></span><span class="screen-reader-text">About WordPress</span></a><div class="ab-sub-wrapper"><ul id='wp-admin-bar-wp-logo-default' class="ab-submenu"><li id='wp-admin-bar-about'><a class='ab-item' href='http://blogs.muhlenberg.edu/wp-admin/user/about.php'>About WordPress</a></li></ul><ul id='wp-admin-bar-wp-logo-external' class="ab-sub-secondary ab-submenu"><li id='wp-admin-bar-wporg'><a class='ab-item' href='https://wordpress.org/'>WordPress.org</a></li><li id='wp-admin-bar-documentation'><a class='ab-item' href='https://codex.wordpress.org/'>Documentation</a></li><li id='wp-admin-bar-support-forums'><a class='ab-item' href='https://wordpress.org/support/'>Support</a></li><li id='wp-admin-bar-feedback'><a class='ab-item' href='https://wordpress.org/support/forum/requests-and-feedback'>Feedback</a></li></ul></div></li><li id='wp-admin-bar-bp-login'><a class='ab-item' href='http://fys142f15.blogs.muhlenberg.edu/wp-login.php?redirect_to=http%3A%2F%2Ffys142f15.blogs.muhlenberg.edu%2Fpage%2F5%2F'>Log In</a></li></ul><ul id='wp-admin-bar-top-secondary' class="ab-top-secondary ab-top-menu"><li id='wp-admin-bar-search' class="admin-bar-search"><div class="ab-item ab-empty-item" tabindex="-1"><form action="http://fys142f15.blogs.muhlenberg.edu/" method="get" id="adminbarsearch"><input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150" /><label for="adminbar-search" class="screen-reader-text">Search</label><input type="submit" class="adminbar-button" value="Search"/></form></div></li></ul>			</div>
+					</div>
+
+		</body>
+</html>
