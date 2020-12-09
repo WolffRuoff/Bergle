@@ -10,7 +10,7 @@ class CosSimCalc():
 
     @param {dict} invIndex The inverted index of the files being searched
     '''
-    def __init__(self, invIndex):
+    def __init__(self, invIndex=None):
         self.invIndex = invIndex
         self.maxFreq = {}
         self.docs = {}
@@ -30,9 +30,9 @@ class CosSimCalc():
 
         #Remove any words not in any docs
         text2 = []
-        for k in text:
-            if len([x for x in self.invIndex.keys() if x == k]) > 0:
-                text2.append(k)
+        for k in range(len(text)):
+            if text[k] in self.invIndex.keys():
+                text2.append(text[k])
         text = text2
         
         #If no results
@@ -46,18 +46,18 @@ class CosSimCalc():
             for id in ids:
                 if id not in idsWithWords:
                     idsWithWords.append(id)
-        
         #Get query weight
         qVect = []
         for k in text:
             w = self.getWeight(k, text, True)
             qVect.append(w)
-
         vect = {}
         cosSims = []
         for i in idsWithWords:
             if i not in self.docs.keys():
-                self.docs[i] = cleaner.cleanFile("file" + str(i) + ".txt", False)
+                self.docs[i] = cleaner.cleanFile("cranfield" + str(i) + ".txt", False)
+            if len(self.docs[i][2]) == 0:
+                continue
             vect[i] = []
             for k in text:
                 w = self.getWeight(k, i)
@@ -65,9 +65,9 @@ class CosSimCalc():
             #calc cosSim
             cossim = self.getCosSim(qVect, vect[i])
             if cossim != 0:
-                cosSims.append([self.docs[i][0], self.docs[i][1], self.docs[i][3], cossim])
+                cosSims.append([self.docs[i][0], self.docs[i][1], cossim])
         cosSims.sort(key = lambda x: x[2], reverse=True)
-        return cosSims
+        return cosSims[:10]
 
     '''
     Calculates weight of term using the following formula:
@@ -133,7 +133,7 @@ class CosSimCalc():
     '''
     def getIDF(self, k):
         df = len(self.invIndex[k])
-        n = len(os.listdir(os.getcwd() + "/sites"))
+        n = len(os.listdir(os.getcwd() + "/separated"))
         return math.log10(n/df)
 
     '''
