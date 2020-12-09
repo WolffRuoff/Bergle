@@ -1,4 +1,4 @@
-# Bergle
+# Bergle Search
 Welcome to Bergle, a user friendly searching experience for Muhlenberg.edu/
 
 ![Alt Text](berglegif.gif)
